@@ -1,0 +1,195 @@
+{
+  "slug": "grand-teton",
+  "name": "Grand Teton",
+  "tagline": "Half Marathon • 5K",
+  "dates": "June 5–6, 2026",
+  "heroImage": "/images/events/grand-teton-hero.jpg",
+  "heroImageAlt": "Grand Teton mountain range at sunrise",
+  "accentColor": "#313832",
+  "sections": {
+    "schedule": {
+      "enabled": true,
+      "days": [
+        {
+          "id": "friday",
+          "label": "Friday / 5K",
+          "date": "June 5, 2026",
+          "items": [
+            { "time": "12:00–5:00 PM", "label": "BIB PICK UP", "note": "5K participants must pick up bib by no later than 5:00 PM" },
+            { "time": "5:30 PM", "label": "5K RUNNERS BEGIN TO GATHER" },
+            { "time": "5:45 PM", "label": "5K RUNNERS LINE UP" },
+            { "time": "6:00 PM", "label": "5K RACE START" },
+            { "time": "6:45 PM", "label": "AWARDS CEREMONY" }
+          ]
+        },
+        {
+          "id": "saturday",
+          "label": "Saturday / Half Marathon",
+          "date": "June 6, 2026",
+          "items": [
+            { "time": "4:00 AM", "label": "PARKING LOTS OPEN" },
+            { "time": "4:30 AM", "label": "FIRST SHUTTLE LEAVES FROM JACKSON" },
+            { "time": "4:45 AM", "label": "FIRST PRIZE RAFFLE" },
+            { "time": "4:45 AM", "label": "RACE BIB MORNING PICK UP OPENS" },
+            { "time": "5:45 AM", "label": "LAST SHUTTLE LEAVES FROM RANCH LOT" },
+            { "time": "6:00 AM", "label": "LAST PRIZE RAFFLE + PACERS LINE UP" },
+            { "time": "6:15 AM", "label": "ALL RUNNERS LINE UP + LAST CALL FOR GEAR CHECK" },
+            { "time": "6:25 AM", "label": "NATIONAL ANTHEM" },
+            { "time": "6:30 AM", "label": "RACE STARTS — ALL DIVISIONS" },
+            { "time": "9:15 AM", "label": "AWARDS CEREMONY" }
+          ]
+        }
+      ]
+    },
+    "expo": {
+      "enabled": true,
+      "date": "Friday, June 5, 2026",
+      "locationName": "Stilson Ranch Lot",
+      "locationAddress": "Stilson Lot, Beckley Park Way, Jackson, WY",
+      "locationMapUrl": "https://www.google.com/maps/place/43%C2%B030'05.5%22N+110%C2%B050'55.5%22W/@43.5011799,-110.8501529,821m/data=!3m1!1e3!4m4!3m3!8m2!3d43.5015278!4d-110.84875",
+      "locationLat": 43.5015278,
+      "locationLng": -110.84875,
+      "hours": [
+        { "label": "Race Expo Hours", "time": "12:00 PM – 5:00 PM" },
+        { "label": "Merch Tent Hours", "time": "12:00 PM – 5:00 PM" },
+        { "label": "Bib Pick Up Hours", "time": "12:00 PM – 6:00 PM" }
+      ],
+      "notes": [
+        "Mobile IV will be onsite as an official recovery partner. You can prep for the race with an IV at the expo or meet them at the finish line.",
+        "This is a cup-free event — there will be no disposable cups on the course. Bring a handheld bottle or hydration vest.",
+        "Our expo is bag-free. Don't forget to Bring Your Own Bag (BYOB)!",
+        "We cannot accommodate runners before 12:00 PM."
+      ]
+    },
+    "raceMorning": {
+      "enabled": true,
+      "parkingOptions": [
+        {
+          "name": "Ranch Lot (Stilson Ranch)",
+          "details": "Opens at 4:00 AM. Shuttles run to the start line and back from the finish line. Last shuttle departs at 5:45 AM.",
+          "mapUrl": "https://www.google.com/maps/place/43%C2%B030'05.5%22N+110%C2%B050'55.5%22W/@43.5011799,-110.8501529,821m",
+          "lat": 43.5015278,
+          "lng": -110.84875
+        },
+        {
+          "name": "250 N Cache St, Jackson",
+          "details": "Opens at 4:00 AM. Single pickup shuttle at 4:30 AM. Walking or drop-off is strongly recommended as parking is very limited.",
+          "mapUrl": "https://www.google.com/maps/search/250+N+Cache+St+Jackson+WY",
+          "lat": 43.4799,
+          "lng": -110.7624
+        }
+      ],
+      "shuttleDetails": [
+        { "time": "4:00 AM", "label": "Parking lots open" },
+        { "time": "4:30–5:45 AM", "label": "Start line shuttles run" },
+        { "time": "7:00 AM–Post-Race", "label": "Return service to and from the finish line" }
+      ],
+      "dropOffNote": "There is a dedicated drop-off zone at the start line. Vehicles must drop off runners there, then proceed forward and take a left on Beckley Parkway to exit. Once runners begin lining up, drop-off diverts to the north lot. All runners must be dropped off before 5:30 AM."
+    },
+    "courseInfo": {
+      "enabled": true,
+      "distances": [
+        {
+          "name": "Half Marathon",
+          "mapImageUrl": "/images/events/grand-teton-course-half.jpg",
+          "mapUrl": "https://www.vacationraces.com/grand-teton"
+        },
+        {
+          "name": "5K",
+          "mapImageUrl": "/images/events/grand-teton-course-5k.jpg",
+          "mapUrl": "https://www.vacationraces.com/grand-teton"
+        }
+      ],
+      "strollerPolicy": "Jogging strollers are permitted in the Half Marathon and 5K. Please start at the back of your corral.",
+      "dogPolicy": "Dogs are not permitted on the course.",
+      "aidStations": "Aid stations are located approximately every 2 miles on the Half Marathon course. Each station is stocked with water and electrolyte drink. This is a cup-free event — bring your own vessel.",
+      "recoveryFood": "Post-race recovery food will be available at the finish line."
+    },
+    "spectators": {
+      "enabled": true,
+      "notes": "Because the course runs on the highway and a large portion on Spring Gulch Road, it is not a very spectator-friendly course. Spectators are welcome at the finish line by shuttle access only.",
+      "warnings": [
+        "There is NO parking at the finish line or along Spring Gulch Road.",
+        "Do not drive or park on Spring Gulch Rd — this creates a dangerous environment for runners and causes serious traffic problems."
+      ],
+      "shuttleAccess": "Spectators can access the finish line via shuttle from the Ranch Lot. Return service runs from 7:00 AM through post-race."
+    },
+    "postRace": {
+      "enabled": true,
+      "courseRecords": [
+        { "category": "Female", "name": "TBC", "time": "TBC", "year": "TBC" },
+        { "category": "Male", "name": "TBC", "time": "TBC", "year": "TBC" },
+        { "category": "Master Female", "name": "Joanna White", "time": "1:34:31", "year": "2021" },
+        { "category": "Master Male", "name": "Mike Wolf", "time": "1:19:03", "year": "2023" }
+      ],
+      "finishLineInfo": "The finish line is located near the Stilson Ranch area. Post-race food and celebrations will be available."
+    },
+    "experiences": {
+      "enabled": true,
+      "lodging": {
+        "partner": "HotelPlanner",
+        "description": "Our official lodging partner, offering exclusive rates for runners, friends, and family — plus 24/7 support if plans change.",
+        "url": "https://vacationraces.hotelplanner.com/"
+      },
+      "activities": [
+        {
+          "name": "Montana Whitewater",
+          "description": "10% off whitewater rafting and outdoor experiences during race weekend. The perfect post-race adventure.",
+          "discountCode": "RACE10",
+          "url": "https://www.montanawhitewater.com"
+        }
+      ],
+      "hikes": [
+        { "name": "Jenny Lake Loop", "distance": "7.1 Miles", "elevation": "449 ft", "difficulty": "Moderate", "url": "#" },
+        { "name": "Bradley Lake Loop", "distance": "5.8 Miles", "elevation": "767 ft", "difficulty": "Moderate", "url": "#" },
+        { "name": "Taggart Lake Loop", "distance": "3.8 Miles", "elevation": "419 ft", "difficulty": "Moderate", "url": "#" }
+      ],
+      "restaurants": [
+        {
+          "name": "Persephone Bakery",
+          "description": "A local favourite for fresh pastries and strong coffee — perfect for fuelling up before race day.",
+          "url": "https://www.persephonebakery.com"
+        },
+        {
+          "name": "Snake River Roasting Co.",
+          "description": "Locally roasted coffee with mountain views — a must-stop for a morning boost before hitting the trails.",
+          "url": "https://snakeriverroasting.com"
+        },
+        {
+          "name": "Sidewinders American Grill",
+          "description": "Because you've earned that beer and comfort food.",
+          "url": "https://sidewindersamericangrill.com"
+        }
+      ]
+    },
+    "faqs": {
+      "enabled": true,
+      "items": [
+        {
+          "question": "If I can't pick up my bib on Friday at the pre-race expo, can I pick it up race morning?",
+          "answer": "Yes — race morning bib pick up opens at 4:45 AM at the start line area. We strongly encourage all Half Marathon runners to pick up at the Friday expo if possible to avoid any delays on race morning."
+        },
+        {
+          "question": "This is a cup-free event — what does that mean?",
+          "answer": "There will be no disposable cups at aid stations. All runners must bring a handheld bottle, hydration vest, or collapsible cup. Water and electrolyte drink will still be available at all aid stations."
+        },
+        {
+          "question": "Where should I park on race morning?",
+          "answer": "The Ranch Lot (Stilson Ranch) is the primary parking option and opens at 4:00 AM. Shuttles run to the start from 4:30–5:45 AM. Parking is very limited at 250 N Cache St in Jackson — walking or drop-off is strongly recommended there."
+        },
+        {
+          "question": "Can spectators watch the race?",
+          "answer": "The course is not very spectator-friendly due to highway and Spring Gulch Rd sections. Spectators are welcome at the finish line by shuttle access only. There is absolutely no parking at the finish line — please use the shuttle from the Ranch Lot."
+        },
+        {
+          "question": "Are strollers and dogs allowed?",
+          "answer": "Jogging strollers are permitted in both the Half Marathon and 5K — please start at the back of your corral. Dogs are not permitted on the course."
+        },
+        {
+          "question": "What is the volunteer opportunity?",
+          "answer": "We're always looking for volunteers for expo and race day shifts. Perks include up to $100 off a future Vacation Races event. Credits are transferable and can be combined. Sign up via the link in your registration confirmation email."
+        }
+      ]
+    }
+  }
+}

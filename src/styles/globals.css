@@ -1,0 +1,127 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── VR Brand Fonts ─────────────────────────────────────────── */
+
+@font-face {
+  font-family: 'Scale Condensed';
+  src: url('/fonts/Scale-CondensedBold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Scale';
+  src: url('/fonts/Scale-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Scale Medium';
+  src: url('/fonts/Scale-Medium.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Forma DJR Text';
+  src: url('/fonts/FormaDJRText-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Forma DJR Text';
+  src: url('/fonts/FormaDJRText-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Forma DJR Micro';
+  src: url('/fonts/FormaDJRMicro-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Forma DJR Micro';
+  src: url('/fonts/FormaDJRMicro-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fraunces 72pt';
+  src: url('/fonts/Fraunces_72pt-BlackItalic.woff2') format('woff2');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Fraunces 72pt';
+  src: url('/fonts/Fraunces_72pt-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ─── CSS Custom Properties ──────────────────────────────────── */
+
+:root {
+  --vr-forest:   #313832;
+  --vr-cream:    #F4E2CC;
+  --vr-amber:    #C8873A;
+  --vr-white:    #FFFFFF;
+  --vr-offwhite: #FAF7F2;
+  --vr-mid:      #6B7068;
+
+  --font-display:  'Scale Condensed', 'Oswald', sans-serif;
+  --font-heading:  'Scale', 'Arial Black', sans-serif;
+  --font-label:    'Scale Medium', 'Arial', sans-serif;
+  --font-body:     'Forma DJR Text', 'DM Sans', sans-serif;
+  --font-micro:    'Forma DJR Micro', 'DM Sans', sans-serif;
+  --font-accent:   'Fraunces 72pt', 'Georgia', serif;
+}
+
+/* ─── Base ───────────────────────────────────────────────────── */
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  color: var(--vr-forest);
+  background: var(--vr-white);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── Typography Utilities ───────────────────────────────────── */
+
+.font-display    { font-family: var(--font-display); }
+.font-heading    { font-family: var(--font-heading); }
+.font-label      { font-family: var(--font-label); }
+.font-body       { font-family: var(--font-body); }
+.font-micro      { font-family: var(--font-micro); }
+.font-accent     { font-family: var(--font-accent); font-style: italic; }
+
+/* ─── Section scroll-margin (offset for sticky nav) ─────────── */
+[id] {
+  scroll-margin-top: 64px;
+}

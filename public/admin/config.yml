@@ -1,0 +1,199 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Media uploads go here
+media_folder: public/images/events
+public_folder: /images/events
+
+# Editorial workflow: Save as Draft → Review → Publish
+publish_mode: editorial_workflow
+
+collections:
+  - name: events
+    label: Race Events
+    folder: content/events
+    create: true
+    slug: "{{fields.slug}}"
+    identifier_field: name
+    summary: "{{name}} — {{dates}}"
+    fields:
+
+      # ── Identity ────────────────────────────────────────────────
+      - { label: "Event Name",   name: name,     widget: string,  hint: "e.g. Grand Teton" }
+      - { label: "URL Slug",     name: slug,     widget: string,  hint: "e.g. grand-teton (no spaces, lowercase)" }
+      - { label: "Tagline",      name: tagline,  widget: string,  hint: "e.g. Half Marathon • 5K" }
+      - { label: "Dates",        name: dates,    widget: string,  hint: "e.g. June 5–6, 2026" }
+      - { label: "Hero Image",   name: heroImage,   widget: image,   required: false }
+      - { label: "Hero Image Alt Text", name: heroImageAlt, widget: string, required: false }
+
+      # ── Sections ────────────────────────────────────────────────
+      - label: Sections
+        name: sections
+        widget: object
+        fields:
+
+          # Schedule
+          - label: Schedule
+            name: schedule
+            widget: object
+            fields:
+              - { label: "Enabled", name: enabled, widget: boolean, default: true }
+              - label: Days
+                name: days
+                widget: list
+                fields:
+                  - { label: "Tab ID",    name: id,    widget: string, hint: "e.g. friday" }
+                  - { label: "Tab Label", name: label, widget: string, hint: "e.g. Friday / 5K" }
+                  - { label: "Date",      name: date,  widget: string, hint: "e.g. June 5, 2026" }
+                  - label: Schedule Items
+                    name: items
+                    widget: list
+                    fields:
+                      - { label: "Time",  name: time,  widget: string, hint: "e.g. 6:30 AM" }
+                      - { label: "Label", name: label, widget: string, hint: "e.g. RACE STARTS" }
+                      - { label: "Note (optional)", name: note, widget: string, required: false }
+
+          # Expo
+          - label: Expo
+            name: expo
+            widget: object
+            fields:
+              - { label: "Enabled",          name: enabled,         widget: boolean, default: true }
+              - { label: "Date",             name: date,            widget: string }
+              - { label: "Location Name",    name: locationName,    widget: string }
+              - { label: "Location Address", name: locationAddress, widget: string }
+              - { label: "Google Maps URL",  name: locationMapUrl,  widget: string }
+              - { label: "Latitude",         name: locationLat,     widget: number, value_type: float }
+              - { label: "Longitude",        name: locationLng,     widget: number, value_type: float }
+              - label: Hours
+                name: hours
+                widget: list
+                fields:
+                  - { label: "Label", name: label, widget: string }
+                  - { label: "Time",  name: time,  widget: string }
+              - label: Notes
+                name: notes
+                widget: list
+                field: { label: Note, name: note, widget: text }
+
+          # Race Morning
+          - label: Race Morning
+            name: raceMorning
+            widget: object
+            fields:
+              - { label: "Enabled", name: enabled, widget: boolean, default: true }
+              - label: Parking Options
+                name: parkingOptions
+                widget: list
+                fields:
+                  - { label: "Name",         name: name,    widget: string }
+                  - { label: "Details",      name: details, widget: text }
+                  - { label: "Google Maps URL", name: mapUrl, widget: string }
+                  - { label: "Latitude",     name: lat,     widget: number, value_type: float }
+                  - { label: "Longitude",    name: lng,     widget: number, value_type: float }
+              - label: Shuttle Details
+                name: shuttleDetails
+                widget: list
+                fields:
+                  - { label: "Time",  name: time,  widget: string }
+                  - { label: "Label", name: label, widget: string }
+              - { label: "Drop-Off Note", name: dropOffNote, widget: text, required: false }
+
+          # Course Info
+          - label: Course Info
+            name: courseInfo
+            widget: object
+            fields:
+              - { label: "Enabled", name: enabled, widget: boolean, default: true }
+              - label: Distances
+                name: distances
+                widget: list
+                fields:
+                  - { label: "Distance Name", name: name,         widget: string }
+                  - { label: "Course Map Image", name: mapImageUrl, widget: image,  required: false }
+                  - { label: "Course Map URL",   name: mapUrl,      widget: string }
+              - { label: "Aid Stations",    name: aidStations,    widget: text }
+              - { label: "Recovery Food",   name: recoveryFood,   widget: text }
+              - { label: "Stroller Policy", name: strollerPolicy, widget: text }
+              - { label: "Dog Policy",      name: dogPolicy,      widget: text }
+
+          # Spectators
+          - label: Spectators
+            name: spectators
+            widget: object
+            fields:
+              - { label: "Enabled",        name: enabled,       widget: boolean, default: true }
+              - { label: "Notes",          name: notes,         widget: text }
+              - { label: "Shuttle Access", name: shuttleAccess, widget: text, required: false }
+              - label: Warnings
+                name: warnings
+                widget: list
+                field: { label: Warning, name: warning, widget: string }
+
+          # Post-Race
+          - label: Post-Race
+            name: postRace
+            widget: object
+            fields:
+              - { label: "Enabled",          name: enabled,        widget: boolean, default: true }
+              - { label: "Finish Line Info",  name: finishLineInfo, widget: text, required: false }
+              - label: Course Records
+                name: courseRecords
+                widget: list
+                fields:
+                  - { label: "Category", name: category, widget: string, hint: "e.g. Female, Male, Master Female" }
+                  - { label: "Name",     name: name,     widget: string }
+                  - { label: "Time",     name: time,     widget: string }
+                  - { label: "Year",     name: year,     widget: string }
+
+          # Experiences
+          - label: Experiences
+            name: experiences
+            widget: object
+            fields:
+              - { label: "Enabled", name: enabled, widget: boolean, default: true }
+              - label: Lodging Partner
+                name: lodging
+                widget: object
+                fields:
+                  - { label: "Partner Name",  name: partner,     widget: string }
+                  - { label: "Description",   name: description, widget: text }
+                  - { label: "Booking URL",   name: url,         widget: string }
+              - label: Activities
+                name: activities
+                widget: list
+                fields:
+                  - { label: "Name",          name: name,         widget: string }
+                  - { label: "Description",   name: description,  widget: text }
+                  - { label: "Discount Code", name: discountCode, widget: string, required: false }
+                  - { label: "URL",           name: url,          widget: string }
+              - label: Hikes
+                name: hikes
+                widget: list
+                fields:
+                  - { label: "Name",       name: name,       widget: string }
+                  - { label: "Distance",   name: distance,   widget: string }
+                  - { label: "Elevation",  name: elevation,  widget: string }
+                  - { label: "Difficulty", name: difficulty, widget: string }
+                  - { label: "URL",        name: url,        widget: string }
+              - label: Restaurants
+                name: restaurants
+                widget: list
+                fields:
+                  - { label: "Name",        name: name,        widget: string }
+                  - { label: "Description", name: description, widget: text }
+                  - { label: "URL",         name: url,         widget: string }
+
+          # FAQs
+          - label: FAQs
+            name: faqs
+            widget: object
+            fields:
+              - { label: "Enabled", name: enabled, widget: boolean, default: true }
+              - label: FAQ Items
+                name: items
+                widget: list
+                fields:
+                  - { label: "Question", name: question, widget: string }
+                  - { label: "Answer",   name: answer,   widget: text }
