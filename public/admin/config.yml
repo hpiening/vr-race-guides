@@ -7,6 +7,8 @@ public_folder: /images/events
 
 publish_mode: editorial_workflow
 
+site_url: https://vr-race-guides.netlify.app
+
 collections:
   - name: events
     label: Race Events
@@ -17,6 +19,7 @@ collections:
     slug: "{{fields.slug}}"
     identifier_field: name
     summary: "{{name}} - {{dates}}"
+    preview_path: "{{slug}}"
     fields:
 
       - { label: "Event Name",        name: name,         widget: string }

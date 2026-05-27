@@ -7,9 +7,104 @@
     <title>Race Guide Admin | Vacation Races</title>
   </head>
   <body>
-    <!-- Netlify Identity widget -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-    <!-- Decap CMS -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+      CMS.registerPreviewStyle('https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=DM+Sans:wght@400;700&display=swap', { raw: false });
+
+      CMS.registerPreviewStyle([
+        'body { font-family: "DM Sans", sans-serif; margin: 0; background: #FAF7F2; color: #313832; }',
+        '.hero { background: #313832; color: #f3e2cc; padding: 48px 32px; position: relative; overflow: hidden; min-height: 200px; }',
+        '.hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.5; }',
+        '.hero-content { position: relative; z-index: 1; }',
+        '.hero-label { font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; opacity: 0.7; margin: 0 0 8px; }',
+        '.hero-name { font-family: "Oswald", sans-serif; font-size: 56px; text-transform: uppercase; line-height: 1; margin: 0 0 12px; color: #fff; }',
+        '.hero-meta { font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; opacity: 0.8; }',
+        '.section { padding: 40px 32px; border-bottom: 1px solid rgba(49,56,50,0.1); }',
+        '.section.dark { background: #313832; color: #f3e2cc; }',
+        '.section-label { font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; opacity: 0.5; margin: 0 0 4px; }',
+        '.section-title { font-family: "Oswald", sans-serif; font-size: 36px; text-transform: uppercase; margin: 0 0 24px; }',
+        '.item { display: flex; gap: 16px; padding-bottom: 20px; }',
+        '.dot { width: 8px; height: 8px; border-radius: 50%; background: #da8165; margin-top: 6px; flex-shrink: 0; }',
+        '.item-time { font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: #da8165; margin: 0 0 2px; }',
+        '.item-label { font-size: 16px; text-transform: uppercase; font-weight: 700; margin: 0; }',
+        '.item-note { font-size: 13px; opacity: 0.6; margin: 4px 0 0; }',
+        '.tabs { display: flex; gap: 0; border-bottom: 1px solid rgba(243,226,204,0.15); margin-bottom: 24px; }',
+        '.tab { font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; padding: 10px 20px; border-bottom: 2px solid #f3e2cc; color: #f3e2cc; }',
+        '.row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid rgba(49,56,50,0.1); font-size: 14px; }',
+        '.row.light-row { border-color: rgba(243,226,204,0.1); }',
+        '.row-label { opacity: 0.6; }',
+        '.faq-q { font-weight: 700; font-size: 15px; margin: 0 0 6px; }',
+        '.faq-a { font-size: 14px; opacity: 0.75; margin: 0 0 20px; }',
+      ].join('\n'), { raw: true });
+
+      var EventPreview = createClass({
+        render: function() {
+          var e = this.props.entry;
+          var d = e.get('data').toJS ? e.get('data').toJS() : {};
+          var s = d.sections || {};
+          var schedule = s.schedule || {};
+          var expo = s.expo || {};
+          var faqs = s.faqs || {};
+
+          return h('div', {},
+            h('div', { className: 'hero' },
+              d.heroImage && h('img', { src: d.heroImage, alt: '' }),
+              h('div', { className: 'hero-content' },
+                h('p', { className: 'hero-label' }, 'Race Day Guide'),
+                h('h1', { className: 'hero-name' }, d.name || 'Event Name'),
+                h('p', { className: 'hero-meta' }, [d.tagline, d.dates].filter(Boolean).join(' · '))
+              )
+            ),
+
+            schedule.enabled && h('div', { className: 'section dark' },
+              h('p', { className: 'section-label' }, 'Schedule'),
+              h('h2', { className: 'section-title' }, 'Schedule'),
+              (schedule.days || []).slice(0,1).map(function(day) {
+                return h('div', { key: day.id },
+                  h('div', { className: 'tabs' }, h('div', { className: 'tab' }, day.label)),
+                  h('p', { style: { fontSize: '11px', letterSpacing: '0.2em', textTransform: 'uppercase', opacity: 0.4, marginBottom: '16px' } }, day.date),
+                  (day.items || []).map(function(item, i) {
+                    return h('div', { key: i, className: 'item' },
+                      h('div', { className: 'dot' }),
+                      h('div', {},
+                        h('p', { className: 'item-time' }, item.time),
+                        h('p', { className: 'item-label' }, item.label),
+                        item.note && h('p', { className: 'item-note' }, item.note)
+                      )
+                    );
+                  })
+                );
+              })
+            ),
+
+            expo.enabled && h('div', { className: 'section' },
+              h('p', { className: 'section-label' }, 'Pre-Race Expo'),
+              h('h2', { className: 'section-title' }, 'Expo'),
+              h('p', { style: { fontWeight: 700, marginBottom: '16px' } }, expo.locationName),
+              (expo.hours || []).map(function(row, i) {
+                return h('div', { key: i, className: 'row' },
+                  h('span', { className: 'row-label' }, row.label),
+                  h('span', {}, row.time)
+                );
+              })
+            ),
+
+            faqs.enabled && (faqs.items || []).length > 0 && h('div', { className: 'section' },
+              h('p', { className: 'section-label' }, 'FAQs'),
+              h('h2', { className: 'section-title' }, 'FAQs'),
+              (faqs.items || []).map(function(faq, i) {
+                return h('div', { key: i },
+                  h('p', { className: 'faq-q' }, faq.question),
+                  h('p', { className: 'faq-a' }, faq.answer)
+                );
+              })
+            )
+          );
+        }
+      });
+
+      CMS.registerPreviewTemplate('events', EventPreview);
+    </script>
   </body>
 </html>
