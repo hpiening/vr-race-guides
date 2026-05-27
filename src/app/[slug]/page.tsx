@@ -46,7 +46,6 @@ export default async function EventPage({ params }: { params: { slug: string } }
 
   const { sections } = event
 
-  // Build nav items from enabled sections
   const navItems = [
     sections.schedule.enabled    && { id: 'schedule',    label: 'Schedule' },
     sections.expo.enabled        && { id: 'expo',        label: 'Expo' },
@@ -74,7 +73,7 @@ export default async function EventPage({ params }: { params: { slug: string } }
       </main>
       <footer className="bg-vr-forest text-vr-cream py-12 px-6 text-center">
         <p className="font-micro text-sm tracking-widest uppercase opacity-60">
-          © {new Date().getFullYear()} Vacation Races · All Rights Reserved
+          &copy; {new Date().getFullYear()} Vacation Races &middot; All Rights Reserved
         </p>
       </footer>
     </>

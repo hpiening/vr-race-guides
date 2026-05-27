@@ -6,7 +6,6 @@ export default function HeroSection({ event }: { event: EventData }) {
   return (
     <header className="relative min-h-[80vh] flex flex-col justify-between bg-vr-forest overflow-hidden">
 
-      {/* Background scenery photo */}
       {event.heroImage && (
         <div className="absolute inset-0">
           <Image
@@ -19,10 +18,8 @@ export default function HeroSection({ event }: { event: EventData }) {
         </div>
       )}
 
-      {/* Gradient overlay — dark at bottom for text legibility */}
       <div className="absolute inset-0 bg-gradient-to-t from-vr-forest via-vr-forest/50 to-vr-forest/20" />
 
-      {/* Top bar — VR logo */}
       <div className="relative z-10 px-6 pt-7 md:px-12 flex items-center justify-between">
         <Image
           src="/images/vr-logo.png"
@@ -33,7 +30,6 @@ export default function HeroSection({ event }: { event: EventData }) {
         />
       </div>
 
-      {/* Bottom content — event name */}
       <div className="relative z-10 px-6 pb-12 md:px-12 md:pb-20 max-w-5xl">
         <p className="font-label text-vr-cream/70 text-xs tracking-[0.3em] uppercase mb-3">
           Race Day Guide
@@ -48,7 +44,7 @@ export default function HeroSection({ event }: { event: EventData }) {
           <span className="font-label text-vr-cream text-base md:text-lg tracking-widest uppercase">
             {event.tagline}
           </span>
-          <span className="text-vr-cream/40">·</span>
+          <span className="text-vr-cream/40">&#183;</span>
           <span className="font-label text-vr-cream text-base md:text-lg tracking-widest uppercase">
             {event.dates}
           </span>

@@ -11,7 +11,6 @@ export default function ScheduleSection({ data, eventSlug }: Props) {
   return (
     <section id="schedule" className="relative py-16 md:py-24 px-6 md:px-12 bg-vr-forest text-vr-cream overflow-hidden">
 
-      {/* Grand Teton icon watermark */}
       <div
         className="absolute right-0 bottom-0 w-[55%] max-w-2xl opacity-[0.06] pointer-events-none select-none translate-x-[10%] translate-y-[5%]"
         aria-hidden="true"
@@ -27,7 +26,6 @@ export default function ScheduleSection({ data, eventSlug }: Props) {
         <p className="font-micro text-xs tracking-[0.25em] uppercase text-vr-cream/40 mb-2">Schedule</p>
         <h2 className="font-display text-5xl md:text-6xl uppercase mb-8 text-vr-cream">Schedule</h2>
 
-        {/* Day tabs */}
         {data.days.length > 1 && (
           <div className="flex gap-0 mb-10 border-b border-vr-cream/15">
             {data.days.map(d => (
@@ -56,15 +54,12 @@ export default function ScheduleSection({ data, eventSlug }: Props) {
             <ol className="space-y-0">
               {day.items.map((item, i) => (
                 <li key={i} className="flex gap-6 md:gap-10">
-                  {/* Timeline */}
                   <div className="flex flex-col items-center pt-1.5">
                     <div className="w-2 h-2 rounded-full bg-vr-floral shrink-0" />
                     {i < day.items.length - 1 && (
                       <div className="w-px flex-1 bg-vr-cream/15 mt-1 mb-1" style={{ minHeight: '2.5rem' }} />
                     )}
                   </div>
-
-                  {/* Content */}
                   <div className="pb-8 flex-1">
                     <p className="font-label text-xs tracking-[0.2em] uppercase text-vr-floral mb-1">
                       {item.time}
