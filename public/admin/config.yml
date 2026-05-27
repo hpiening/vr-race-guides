@@ -2,11 +2,9 @@ backend:
   name: git-gateway
   branch: main
 
-# Media uploads go here
 media_folder: public/images/events
 public_folder: /images/events
 
-# Editorial workflow: Save as Draft → Review → Publish
 publish_mode: editorial_workflow
 
 collections:
@@ -14,26 +12,26 @@ collections:
     label: Race Events
     folder: content/events
     create: true
+    extension: json
+    format: json
     slug: "{{fields.slug}}"
     identifier_field: name
-    summary: "{{name}} — {{dates}}"
+    summary: "{{name}} - {{dates}}"
     fields:
 
-      # ── Identity ────────────────────────────────────────────────
-      - { label: "Event Name",   name: name,     widget: string,  hint: "e.g. Grand Teton" }
-      - { label: "URL Slug",     name: slug,     widget: string,  hint: "e.g. grand-teton (no spaces, lowercase)" }
-      - { label: "Tagline",      name: tagline,  widget: string,  hint: "e.g. Half Marathon • 5K" }
-      - { label: "Dates",        name: dates,    widget: string,  hint: "e.g. June 5–6, 2026" }
-      - { label: "Hero Image",   name: heroImage,   widget: image,   required: false }
-      - { label: "Hero Image Alt Text", name: heroImageAlt, widget: string, required: false }
+      - { label: "Event Name",        name: name,         widget: string }
+      - { label: "URL Slug",          name: slug,         widget: string,  hint: "e.g. grand-teton (no spaces, lowercase)" }
+      - { label: "Tagline",           name: tagline,      widget: string,  hint: "e.g. Half Marathon - 5K" }
+      - { label: "Dates",             name: dates,        widget: string,  hint: "e.g. June 5-6, 2026" }
+      - { label: "Hero Image",        name: heroImage,    widget: image,   required: false }
+      - { label: "Hero Image Alt",    name: heroImageAlt, widget: string,  required: false }
+      - { label: "Accent Color",      name: accentColor,  widget: color,   required: false }
 
-      # ── Sections ────────────────────────────────────────────────
       - label: Sections
         name: sections
         widget: object
         fields:
 
-          # Schedule
           - label: Schedule
             name: schedule
             widget: object
@@ -43,18 +41,17 @@ collections:
                 name: days
                 widget: list
                 fields:
-                  - { label: "Tab ID",    name: id,    widget: string, hint: "e.g. friday" }
+                  - { label: "Tab ID",    name: id,    widget: string, hint: "friday or saturday" }
                   - { label: "Tab Label", name: label, widget: string, hint: "e.g. Friday / 5K" }
                   - { label: "Date",      name: date,  widget: string, hint: "e.g. June 5, 2026" }
                   - label: Schedule Items
                     name: items
                     widget: list
                     fields:
-                      - { label: "Time",  name: time,  widget: string, hint: "e.g. 6:30 AM" }
-                      - { label: "Label", name: label, widget: string, hint: "e.g. RACE STARTS" }
-                      - { label: "Note (optional)", name: note, widget: string, required: false }
+                      - { label: "Time",            name: time,  widget: string }
+                      - { label: "Label",           name: label, widget: string }
+                      - { label: "Note (optional)", name: note,  widget: string, required: false }
 
-          # Expo
           - label: Expo
             name: expo
             widget: object
@@ -75,9 +72,8 @@ collections:
               - label: Notes
                 name: notes
                 widget: list
-                field: { label: Note, name: note, widget: text }
+                field: { label: Note, name: note, widget: string }
 
-          # Race Morning
           - label: Race Morning
             name: raceMorning
             widget: object
@@ -87,11 +83,11 @@ collections:
                 name: parkingOptions
                 widget: list
                 fields:
-                  - { label: "Name",         name: name,    widget: string }
-                  - { label: "Details",      name: details, widget: text }
-                  - { label: "Google Maps URL", name: mapUrl, widget: string }
-                  - { label: "Latitude",     name: lat,     widget: number, value_type: float }
-                  - { label: "Longitude",    name: lng,     widget: number, value_type: float }
+                  - { label: "Name",           name: name,    widget: string }
+                  - { label: "Details",        name: details, widget: text }
+                  - { label: "Google Maps URL",name: mapUrl,  widget: string }
+                  - { label: "Latitude",       name: lat,     widget: number, value_type: float }
+                  - { label: "Longitude",      name: lng,     widget: number, value_type: float }
               - label: Shuttle Details
                 name: shuttleDetails
                 widget: list
@@ -100,7 +96,6 @@ collections:
                   - { label: "Label", name: label, widget: string }
               - { label: "Drop-Off Note", name: dropOffNote, widget: text, required: false }
 
-          # Course Info
           - label: Course Info
             name: courseInfo
             widget: object
@@ -110,15 +105,14 @@ collections:
                 name: distances
                 widget: list
                 fields:
-                  - { label: "Distance Name", name: name,         widget: string }
-                  - { label: "Course Map Image", name: mapImageUrl, widget: image,  required: false }
+                  - { label: "Distance Name",    name: name,       widget: string }
+                  - { label: "Course Map Image", name: mapImageUrl, widget: image, required: false }
                   - { label: "Course Map URL",   name: mapUrl,      widget: string }
               - { label: "Aid Stations",    name: aidStations,    widget: text }
               - { label: "Recovery Food",   name: recoveryFood,   widget: text }
               - { label: "Stroller Policy", name: strollerPolicy, widget: text }
               - { label: "Dog Policy",      name: dogPolicy,      widget: text }
 
-          # Spectators
           - label: Spectators
             name: spectators
             widget: object
@@ -131,23 +125,21 @@ collections:
                 widget: list
                 field: { label: Warning, name: warning, widget: string }
 
-          # Post-Race
           - label: Post-Race
             name: postRace
             widget: object
             fields:
-              - { label: "Enabled",          name: enabled,        widget: boolean, default: true }
-              - { label: "Finish Line Info",  name: finishLineInfo, widget: text, required: false }
+              - { label: "Enabled",         name: enabled,        widget: boolean, default: true }
+              - { label: "Finish Line Info", name: finishLineInfo, widget: text, required: false }
               - label: Course Records
                 name: courseRecords
                 widget: list
                 fields:
-                  - { label: "Category", name: category, widget: string, hint: "e.g. Female, Male, Master Female" }
+                  - { label: "Category", name: category, widget: string }
                   - { label: "Name",     name: name,     widget: string }
                   - { label: "Time",     name: time,     widget: string }
                   - { label: "Year",     name: year,     widget: string }
 
-          # Experiences
           - label: Experiences
             name: experiences
             widget: object
@@ -157,9 +149,9 @@ collections:
                 name: lodging
                 widget: object
                 fields:
-                  - { label: "Partner Name",  name: partner,     widget: string }
-                  - { label: "Description",   name: description, widget: text }
-                  - { label: "Booking URL",   name: url,         widget: string }
+                  - { label: "Partner Name", name: partner,     widget: string }
+                  - { label: "Description",  name: description, widget: text }
+                  - { label: "Booking URL",  name: url,         widget: string }
               - label: Activities
                 name: activities
                 widget: list
@@ -185,7 +177,6 @@ collections:
                   - { label: "Description", name: description, widget: text }
                   - { label: "URL",         name: url,         widget: string }
 
-          # FAQs
           - label: FAQs
             name: faqs
             widget: object
