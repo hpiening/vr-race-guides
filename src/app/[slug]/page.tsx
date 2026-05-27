@@ -63,7 +63,7 @@ export default async function EventPage({ params }: { params: { slug: string } }
       <HeroSection event={event} />
       <StickyNav items={navItems} />
       <main>
-        {sections.schedule.enabled    && <ScheduleSection    data={sections.schedule} />}
+        {sections.schedule.enabled    && <ScheduleSection    data={sections.schedule} eventSlug={event.slug} />}
         {sections.expo.enabled        && <ExpoSection        data={sections.expo} />}
         {sections.courseInfo.enabled  && <CourseInfoSection  data={sections.courseInfo} />}
         {sections.raceMorning.enabled && <RaceMorningSection data={sections.raceMorning} />}
