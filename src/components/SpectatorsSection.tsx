@@ -1,28 +1,11 @@
-'use client'
 import SectionWrapper from './SectionWrapper'
 import { EventData } from '@/types/event'
 
-type Props = { data: EventData['sections']['spectators']; eventSlug?: string }
+type Props = { data: EventData['sections']['spectators'] }
 
-export default function SpectatorsSection({ data, eventSlug }: Props) {
+export default function SpectatorsSection({ data }: Props) {
   return (
     <SectionWrapper id="spectators" label="Spectators" dark>
-
-      {/* Tree watermark — same treatment as ScheduleSection */}
-      {eventSlug && (
-        <div
-          className="absolute right-0 bottom-0 w-[55%] max-w-2xl opacity-[0.06] pointer-events-none select-none translate-x-[10%] translate-y-[5%]"
-          aria-hidden="true"
-        >
-          <img
-            src={`/images/events/${eventSlug}-icon.png`}
-            alt=""
-            className="w-full h-auto"
-            onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
-          />
-        </div>
-      )}
-
       <h2 className="font-display text-5xl md:text-6xl uppercase mb-8 text-vr-cream">Spectators</h2>
 
       <p className="font-body text-base text-vr-cream/70 leading-relaxed mb-8 max-w-2xl">

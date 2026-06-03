@@ -164,11 +164,11 @@ export default async function EventPage({ params }: { params: { slug: string } }
         {sections.expo.enabled            && <ExpoSection        data={sections.expo} />}
         {sections.courseInfo.enabled      && <CourseInfoSection  data={sections.courseInfo} />}
         {sections.raceMorning.enabled     && <RaceMorningSection data={sections.raceMorning} />}
-        {sections.spectators.enabled      && <SpectatorsSection  data={sections.spectators} eventSlug={event.slug} />}
+        {sections.spectators.enabled      && <SpectatorsSection  data={sections.spectators} />}
         {sections.postRace.enabled        && <PostRaceSection    data={sections.postRace} />}
         {sections.wineFestival?.enabled   && <WineFestivalSection data={sections.wineFestival!} />}
         {sections.challengeEvents?.enabled && <ChallengeEventsSection data={sections.challengeEvents!} />}
-        {sections.experiences.enabled     && <ExperiencesSection data={sections.experiences} eventSlug={event.slug} />}
+        {sections.experiences.enabled     && <ExperiencesSection data={sections.experiences} />}
         {sections.faqs.enabled            && <FAQSection         data={sections.faqs} />}
       </main>
       <PrintButton />
