@@ -96,6 +96,8 @@ export interface EventData {
   heroOverlayImage?: string
   heroBgColor?: string
   accentColor: string
+  favicon?: string
+  hidden?: boolean
   brand?: 'vr' | 'n2s'
   logo?: string
   logoAlt?: string

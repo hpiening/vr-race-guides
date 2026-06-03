@@ -3,11 +3,11 @@
   "name": "Rocky Mountain",
   "tagline": "Half Marathon • 5K",
   "dates": "July 31 – August 1, 2026",
-  "heroImage": "https://static.wixstatic.com/media/425c17_483e8c48b5d645278e791dcc0ca2157f~mv2.jpg",
+  "heroImage": "https://static.wixstatic.com/media/2f9bfd_6b062e3665c946788cd846d3f3ad42b2~mv2.png/v1/fill/w_1435,h_759,al_c,q_90,enc_avif,quality_auto/STAT%20CUTOUT.png",
   "heroImageAlt": "Rocky Mountain peaks above Lake Estes in Estes Park, Colorado",
-  "heroOverlayImage": "https://static.wixstatic.com/media/2f9bfd_6b062e3665c946788cd846d3f3ad42b2~mv2.png/v1/fill/w_1708,h_759,al_c,q_90,enc_avif,quality_auto/STAT%20CUTOUT.png",
   "heroBgColor": "#1B3A24",
   "accentColor": "#1B3A24",
+  "favicon": "/images/events/rocky-mountain-favicon.png",
   "logo": "/images/vr-logo.png",
   "sections": {
     "schedule": {

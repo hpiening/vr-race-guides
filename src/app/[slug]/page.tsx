@@ -41,6 +41,14 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       ? `${event.name} | Race Day Guide`
       : `${event.name} Race Day Guide | Vacation Races`,
     description: `Everything you need for the ${event.name} ${event.tagline} on ${event.dates}.`,
+    ...(event.favicon && {
+      icons: {
+        icon: [
+          { url: event.favicon, type: 'image/png' },
+        ],
+        apple: event.favicon,
+      },
+    }),
   }
 }
 

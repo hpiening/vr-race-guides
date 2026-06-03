@@ -68,7 +68,7 @@ export default function HeroSection({ event }: { event: EventData }) {
         />
       </div>
 
-      <div className={`relative z-10 px-6 md:px-12 max-w-5xl ${event.heroOverlayImage ? 'pb-52 md:pb-64' : 'pb-12 md:pb-20'}`}>
+      <div className="relative z-10 px-6 pb-12 md:px-12 md:pb-20 max-w-5xl">
         <p
           className="text-vr-cream/70 text-xs tracking-[0.3em] uppercase mb-3"
           style={labelStyle}

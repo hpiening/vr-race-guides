@@ -7,10 +7,9 @@ import { EventData } from '@/types/event'
 function getEvents(): EventData[] {
   const contentDir = path.join(process.cwd(), 'content', 'events')
   const files = fs.readdirSync(contentDir).filter(f => f.endsWith('.json'))
-  return files.map(f => {
-    const raw = fs.readFileSync(path.join(contentDir, f), 'utf-8')
-    return JSON.parse(raw) as EventData
-  })
+  return files
+    .map(f => JSON.parse(fs.readFileSync(path.join(contentDir, f), 'utf-8')) as EventData)
+    .filter(e => !e.hidden)
 }
 
 export default function Home() {
