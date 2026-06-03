@@ -10,6 +10,15 @@
   "favicon": "/images/events/rocky-mountain-favicon.png",
   "logo": "/images/vr-logo.png",
   "sections": {
+    "welcome": {
+      "enabled": true,
+      "heading": "Welcome to the Rockies!",
+      "body": "We hope your visit to Estes Park is enjoyable, and we also hope you make the time to visit Rocky Mountain National Park! We really try to capture the essence and experience of visiting a national park. We hope you have fun while you're here! Please respect and follow the guidelines and restrictions of our race, the National Park Service, and other local authorities.",
+      "quote": "Climb the mountains and get their good tidings.",
+      "quoteAttribution": "John Muir",
+      "closing": "Rocky Mountain and its trails and lakes and peaks and flowers and wildlife and trees and rocks and rivers are filled with good tidings. Take this chance to get away from the hustle and bustle to listen to them. Whether you are hiking the trails or running the race, there is peace and nourishment here for you. How amazing that we have the privilege to run, hike, and explore here. Every visitor is a steward and has a responsibility to protect and respect the area for future generations. As a race participant we trust in your support to promote the ecology and sustainability of this unparalleled location.\n\nHappy exploring!\n– The Vacation Races Team",
+      "note": "Note to runners: All of the following information is subject to change. If changes do occur due to unforeseen circumstances, adjustments will be made that will satisfy local permitting requirements while still delivering a top-tier running experience. We will inform our runners of any changes as soon as they are finalized so participants can comfortably prepare for their Vacation Races experience."
+    },
     "schedule": {
       "enabled": true,
       "days": [
@@ -58,14 +67,37 @@
       "notes": [
         "5K and Elk Double runners must pick up their bib by 5:00 PM on Friday.",
         "This is a cup-free event — no disposable cups on course. Bring a handheld bottle, hydration vest, or reusable cup.",
-        "Our expo is bag-free. Don't forget to Bring Your Own Bag (BYOB)! Reusable bags also available at the merch tent.",
-        "Pre-order merch? Pick it up at the merch booth during expo or race day — just show your order confirmation."
+        "Our expo is bag-free. Don't forget to Bring Your Own Bag (BYOB)!"
+      ],
+      "infoBlocks": [
+        {
+          "heading": "BYOB",
+          "body": "Our expo is bag-free, so don't forget to Bring Your Own Bag! Reusable bags will also be available for purchase at the merch tent."
+        },
+        {
+          "heading": "Race Merchandise",
+          "body": "We'll have various options to commemorate your race accomplishment! Beach hoodies, t-shirts, sweatshirts, tank tops, water bottles, stickers, hats, bags, and posters will all be available to browse and buy. Leftover merchandise can be purchased online after the event."
+        },
+        {
+          "heading": "Merch Pre-Orders",
+          "body": "Snagged some pre-order merch? Swing by the merch booth during the expo or on race day to pick it up — just show your order number or confirmation email! Can't grab it that weekend? No worries — we'll refund you within 2 weeks or ship it for $7. Just let us know!"
+        },
+        {
+          "heading": "Volunteers",
+          "body": "We're looking for fantastic volunteers to join the fun during race weekend! It's the perfect way for friends and family to get in on the action without running. Volunteer shifts are open for the expo and race days and come with sweet perks: up to $100 off a future Vacation Races event. Race credits vary by role, are transferable, and can even be combined. Sign up to volunteer at the registration link."
+        }
       ]
     },
     "courseInfo": {
       "enabled": true,
       "heading": "5K Info",
       "navLabel": "5K Info",
+      "schedule": [
+        { "time": "12:00–5:00 PM", "label": "RACE EXPO & BIB PICKUP", "note": "Must pick up by 5:00 PM" },
+        { "time": "5:45 PM", "label": "5K RUNNERS LINE UP" },
+        { "time": "6:00 PM", "label": "5K RACE START" },
+        { "time": "7:00 PM", "label": "5K AWARDS CEREMONY" }
+      ],
       "distances": [
         {
           "name": "5K Course",
@@ -74,13 +106,44 @@
           "embedUrl": "https://ridewithgps.com/embeds?type=route&id=51714103&sampleGraph=true"
         }
       ],
-      "aidStations": "One aid station near the halfway point (approximately mile 1.5–1.8) with water, electrolytes, and bathrooms. Cup-free — bring your own vessel.",
-      "recoveryFood": "Post-race recovery food available at the finish line. Stick around for the awards ceremony at 7:00 PM!",
-      "strollerPolicy": "The 5K course is on paved roads and is stroller- and wheelchair-friendly. Please be mindful of other participants and stay to the right.",
-      "dogPolicy": "Dogs are not allowed on the course. They're welcome to cheer you on from the finish line!"
+      "aidStations": "",
+      "recoveryFood": "",
+      "strollerPolicy": "",
+      "dogPolicy": "",
+      "infoBlocks": [
+        {
+          "heading": "5K Bib Pick-Up",
+          "body": "The 5K race starts at 6:00 PM sharp on Friday. Runners may pick up their bib beginning at 12:00 PM at the race expo, located at the Stanley Park Ball Field. Bib pickup will end at 5:00 PM. Please be parked by 5:15 PM and make your way to the ball fields, ready to run once you've got your bib."
+        },
+        {
+          "heading": "5K Parking",
+          "body": "We will have plenty of parking to accommodate all of our runners. There are three designated parking areas near the fairgrounds and park, all within a short walk to both the start and finish lines. Volunteers will be on-site to direct traffic and guide runners and spectators to available parking. Lots will be filled in a specific order. You can approach via S St Vrain Ave (Hwy 7) turning onto Manford Avenue toward the fairgrounds where you'll be directed by crew and volunteers, or via Community Dr off of N St Vrain Ave (Hwy 36)."
+        },
+        {
+          "heading": "Spectator Info",
+          "body": "To help reduce vehicle traffic on the course, spectators are discouraged from driving or stopping along the race route to cheer on runners. Spectators are welcome to watch the race start and join us at the finish line on the south shore of Lake Estes. Please park in an official event lot and walk toward the Stanley Ball Fields. From there, walk through the center of the ball fields and continue on the sidewalk past the dog park to access the pedestrian tunnel.\n\nDo not cross over Highway 36. Use the tunnel that goes underneath the highway to safely reach the finish area."
+        },
+        {
+          "heading": "Rolling Start / Wave Start",
+          "body": "A wave start will help us organize the race and prevent overcrowding on the course. Please line up according to speed with faster competitors in the front and slower competitors toward the back. We will have crew members that will hold up signs helping runners loosely organize themselves according to per/mile pace and projected finishing time.\n\nPlease note that masters and overall awards are based on gun time, so if you're competing for an overall top spot, you must start at the front of the line. All other age group awards are based on chip time and therefore do not need to toe the line at the start.\n\nFrom the runner staging area, we will send waves toward the 5K start line in groups, spaced out a few minutes at a time. Keep in mind, it's about a half-mile walk from the staging area along the south shore of Lake Estes to get to the start line."
+        },
+        {
+          "heading": "Aid Stations",
+          "body": "There will be one aid station on the course near the halfway point (approximately mile 1.5–1.8). The aid station will have water, electrolytes, and bathrooms. Like the half marathon, this race will be cup-free!"
+        },
+        {
+          "heading": "Awards",
+          "body": "There will be finisher medals for everyone who finishes the race. Stick around for the 5K awards ceremony Friday night at 7:00 PM! Place medals will be given to the top 5 male, female, and non-binary runners overall, as well as the top 5 male and female Masters 40+ runners.\n\nAdditionally, the top 5 in each of the following age groups will also receive a place medal: 11 and younger, 12–14, 15–19, 20–24, 25–29, 30–34, 35–39, 40–44, 45–49, 50–54, 55–59, 60–64, 65–69, 70–74, 75 and older. We do not yet offer age-specific awards in a non-binary category."
+        },
+        {
+          "heading": "5K Course Details",
+          "body": "This course loops around Lake Estes and is primarily flat with light stretches of downhill and then uphill terrain. You'll get beautiful waterfront views as well as glimpses of the Stanley Hotel and the Rocky Mountains in the distance! The course is 3.1 miles with approximately +156 ft / -168 ft of elevation change."
+        }
+      ]
     },
     "raceMorning": {
       "enabled": true,
+      "navLabel": "Half Marathon Info",
       "timelineLabel": "Morning Schedule",
       "parkingMapImageUrl": "https://static.wixstatic.com/media/2f9bfd_5eaaf0df0b284d6c901608d1b15581ee~mv2.webp/v1/fill/w_760,h_304,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Rocky_Parking-Map.webp",
       "parkingOptions": [
@@ -121,6 +184,60 @@
           "mapUrl": "https://ridewithgps.com/routes/46375145",
           "embedUrl": "https://ridewithgps.com/embeds?type=route&id=46375145&sampleGraph=true"
         }
+      ],
+      "infoBlocks": [
+        {
+          "heading": "Course Details",
+          "body": "The Rocky Mountain Half Marathon is a scenic loop through Estes Park on paved roads and trails, starting and finishing near Lake Estes. Please note: this is an open course. You'll be sharing the road with vehicles, especially on busier stretches like Big Thompson Ave and narrower sections like McGregor Ave. Stay alert, run against traffic, and always be courteous to drivers, fellow runners, and trail users. Stepping into active traffic is grounds for disqualification. The course will be well marked. Your safety is our priority!"
+        },
+        {
+          "heading": "Elevation",
+          "body": "The first half of the course includes a steady climb up Dry Gulch Road, gaining elevation gradually over the first few miles. Once runners crest the climb, Devil's Gulch offers rolling hills with a rewarding descent that opens into flatter miles through town. While the course isn't mountainous, the early climb will challenge your legs, followed by a fast, scenic finish around Lake Estes. Total elevation: 13.1 miles, approximately +780 ft / -775 ft."
+        },
+        {
+          "heading": "Timing",
+          "body": "All masters and overall awards will be based on gun time. If you plan to compete for an overall award, you will need to be close to the start line at the beginning of the race. Age division and team awards will be based on chip time. Your chip time does not officially start until you cross the starting line, so please be courteous to others as we start the race and give each other space. If you will be walking, please start towards the back to avoid congestion at the start."
+        },
+        {
+          "heading": "Pacers",
+          "body": "There will be pacers pacing the race in 10-minute intervals starting at a 1:40 pace up to 2:30. We will also have a 2:45, 3:00, and 3:30 pacer. Please seed yourself near the time you expect to finish."
+        },
+        {
+          "heading": "Wave Start",
+          "body": "A wave start will help us organize the race and prevent overcrowding on the course. When you line up to start the race, find a pacer with a time which closest represents your projected finishing time and line up near this group."
+        },
+        {
+          "heading": "Gear Check",
+          "body": "You can pick up a Gear Check bag at the starting line if you wish to use one. It will be a white plastic bag that you can fill with anything you want transported to the finish line. Permanent markers will be available for you to write your name and bib number. Avoid putting valuables or car keys in your bag. Gear check bags will be available once the first person finishes. We will hold on to gear check bags for one week only, so please contact us to claim your bag promptly after the event."
+        },
+        {
+          "heading": "Clothing on Course",
+          "body": "We will have a clothing bin to dump items in at the first aid station at approximately mile 2.3. Clothing dropped off at this aid station will be picked up and transported to the finish line after the last runner has passed. Keep in mind if you are one of the first runners to finish, you may need to wait a little bit for the clothing drop items to arrive. Clothing not collected at the end of the race will be donated.\n\nPlease do NOT drop clothing that you are uncomfortable donating if you are not willing to wait for clothing drop to be transported to the finish line. Please do NOT drop trash or personal items anywhere along the course except for designated aid station trash cans and this singular clothing drop location. Anything else found along the course will not be brought to the finish.\n\nPLEASE NO LITTERING."
+        },
+        {
+          "heading": "Aid Stations",
+          "body": "We will have 5 aid stations at approximately miles 2.3, 4.5, 7.9, 9.6, and 11.9. All aid stations will have bathrooms, water, electrolytes, and Honey Stinger gels. Miles 4.5 and 7.9 will also have oranges and bananas. There will be basic first aid kits at each aid station, and the EMT will be near the aid station at mile 7.9."
+        },
+        {
+          "heading": "Cup-Free Racing",
+          "body": "There will be no disposable cups on the course. Use your Nathan reusable cup (option for purchase during registration) or your own reusable cup or bottle. At each aid station, you have the choice between water (in the BLUE COOLERS) and Gnarly Hydrate electrolyte drink (in the RED COOLERS). Both will have the same speed valves attached. Please remember, we are in a dry climate — hydrate well!\n\nThere will be water at the finish line, but no cups. Please use your reusable cup or water bottle to fill up at the finish line."
+        },
+        {
+          "heading": "Time Limit",
+          "body": "This course has a 4-hour time limit, which equals about 18 minutes per mile. Walkers are welcome and should keep this pace in mind to finish on time. We ask for understanding and immediate cooperation if we deem it unsafe and need to pull a runner off the course. Failure to comply will result in being banned from future events."
+        },
+        {
+          "heading": "Recovery Food Bag",
+          "body": "At the finish line we will have a food bag full of recovery snacks, bananas, and chocolate milk, as well as water and electrolytes. Please help yourself to one food box, a chocolate milk, and a banana per runner."
+        },
+        {
+          "heading": "No Dogs",
+          "body": "Dogs are not allowed on the course, as our insurance does not cover them. However, they're welcome to cheer you on from the finish line with the rest of your crew!"
+        },
+        {
+          "heading": "Strollers and Wheelchairs",
+          "body": "This course is entirely on paved roads and trails, making it stroller and wheelchair friendly. Just be mindful of other participants and stay to the right when possible."
+        }
       ]
     },
     "spectators": {
@@ -134,7 +251,7 @@
     },
     "postRace": {
       "enabled": true,
-      "finishLineInfo": "The finish line is on the south shore of Lake Estes near the Stanley Ball Fields. Post-race recovery bags include snacks, bananas, and chocolate milk. Merch tent opens at 8:00 AM. Gear check bags available once the first runner finishes. Course record holders receive a free race entry every year their record stands!",
+      "finishLineInfo": "The finish line is on the south shore of Lake Estes near the Stanley Ball Fields. Post-race recovery bags include snacks, bananas, and chocolate milk. Merch tent opens at 8:00 AM. Course record holders receive a free race entry every year their record stands!",
       "courseRecords": [
         { "category": "Overall Male", "name": "David Cardenas", "time": "1:14:53", "year": "2021" },
         { "category": "Overall Female", "name": "Chelsea Bennis", "time": "1:29:03", "year": "2016" },
@@ -151,12 +268,39 @@
           "body": "Place medals will be given to the top 5 male, female, and non-binary runners overall, as well as the Masters 40+ group.\n\nAdditionally, the top 5 in each of the following age groups will also receive a place medal: 11 and younger, 12–14, 15–19, 20–24, 25–29, 30–34, 35–39, 40–44, 45–49, 50–54, 55–59, 60–64, 65–69, 70–74, 75 and older. We do not currently offer non-binary age group awards.\n\nThere will be finisher medals for everyone who finishes the race."
         },
         {
+          "heading": "Live Tracking",
+          "body": "We've teamed up with Laurel's innovative tracking system to ensure your friends and family can follow your race in real-time — no phone or watch needed. Laurel estimates your position between checkpoints based on pacing data, providing accurate, real-time updates and predicted finish times. Want text updates? Supporters can opt in for free text notifications when you reach key points along the course."
+        },
+        {
           "heading": "Results & Photos",
-          "body": "Live results will be hosted online by Laurel. Results are not official until all runners have crossed the finish line and been reviewed by the event director. Questions about placement? Email timing@brooksee.com.\n\nTop finisher but missed the awards ceremony? You can request to have your place medal shipped to you.\n\nNew for 2026 — FinisherPix will be at each event to capture your race memories. Photos are available within 24–48 hours post-event. The FinisherPix Photo Pack includes all photos in all digital formats. Search for your photos by last name or bib number.",
+          "body": "Live results will be hosted online by Laurel. Results are not official until all runners have crossed the finish line and been reviewed by the event director. Questions about your placement? Email timing@brooksee.com.\n\nTop finisher but missed the awards ceremony? You can request to have your place medal shipped to you.\n\nNew for 2026 — FinisherPix will be at each event to capture your race memories. Photos are available within 24–48 hours post-event. The FinisherPix Photo Pack includes all photos in all digital formats. Search for your photos by last name or bib number.",
           "links": [
             { "label": "2026 Race Photos", "url": "http://finisherpix.com/en/event/10680" },
             { "label": "Results", "url": "https://www.brooksee.com/vrm/results" }
           ]
+        },
+        {
+          "heading": "iTab — Personalize Your Medal",
+          "body": "Our partner iTab provides custom-engraved plates with your name and finishing time that clip onto your medal ribbon. You can pre-order before race day — they will be sent to you automatically after you finish. If you missed out, you can still order one later for just $15, including shipping.",
+          "links": [
+            { "label": "Order iTab", "url": "https://www.itab.us.com/product/vacation-races/" }
+          ]
+        },
+        {
+          "heading": "Lost & Found",
+          "body": "There is no official lost and found. If we find lost items, we will hold onto them for 14 days. Unclaimed items will be donated. Submit the online form to check if we have found your item."
+        },
+        {
+          "heading": "Medical Area",
+          "body": "The medical area at the finish line is for athletes only — family members are not allowed. Overcrowding in the medical area prevents medical staff from doing their job. If you need information on an athlete receiving medical attention, please wait outside the area for updates."
+        },
+        {
+          "heading": "Timing Specifics",
+          "body": "Before the race: Your timing chip is found on the back of your bib. The chip looks like a sticker — do not fold your bib. NO CHIP = NO TIME!\n\nAfter the race: The bib chip is disposable and can be thrown away or left on your bib. If you're participating in more than one event this weekend, plan to keep your bib for each race! All masters and overall awards will be based on gun time. If you plan to compete for these top spots you will need to line up at the front of the line with the first wave. Age group and team awards are based on chip time."
+        },
+        {
+          "heading": "Post-Race Survey",
+          "body": "You are the backbone to every event we host, and the best way for us to improve our events is with your feedback. We'd love to hear from you in our post-race survey, which will be emailed after the event. Thank you!"
         }
       ]
     },
@@ -178,7 +322,7 @@
           ],
           "bibPickup": "Pick up your Elk Double bib (used for both races), race shirt, and swag item at the race expo on Friday, July 31 between 12:00 PM and 5:00 PM. If your shirt doesn't fit, exchange it at the finish line after the half marathon on Saturday.",
           "medals": "Once you've completed the Elk Double, collect your special finisher medal just outside the runner recovery area. A clearly marked table will be waiting for you — show your bib and a volunteer will hand you your Elk Double medal.",
-          "swag": "Your pre-chosen swag item will be ready at the expo. Additional items may be purchased only after your final race to ensure all participants receive their requested item. If you opted out, additional items can be purchased at the end of the second race."
+          "swag": "Your pre-chosen swag item will be ready at the expo. Additional items may be purchased only after your final race to ensure all participants receive their requested item."
         }
       ]
     },
@@ -186,13 +330,13 @@
       "enabled": true,
       "lodging": {
         "partner": "HotelPlanner",
-        "description": "Our official lodging partner, offering exclusive rates for runners, friends, and family near the Expo, Start Line, and Finish Line — plus 24/7 support if plans change.",
-        "url": "https://vacationraces.hotelplanner.com/Search/?seid=2D076CC97B6248BFA68534519E4AD110&city=Stanley+Park%2C+Estes+Park%2C+CO+80517&indate=07/31/2026&outdate=08/02/2026&numrooms=1"
+        "description": "You're officially in for the Rocky Mountain race weekend — now lock in your home base. HotelPlanner is our official lodging partner, offering exclusive rates for runners, friends, and family, plus 24/7 support if plans change. The page is set up with race weekend dates and lodging near the Expo, Start Line, and Finish Line. Book early to snag the best rates and make the most of your time in Estes Park.",
+        "url": "https://vacationraces.hotelplanner.com/evt/2D076CC97B6248BFA68534519E4AD110"
       },
       "activities": [
         {
           "name": "Rocky Mountain National Park",
-          "description": "All visitors need a park pass to enter — pick one up at the entrance or at recreation.gov. Use the timed entry reservation system to avoid crowds. Visit nps.gov/romo for trail conditions and planning info.",
+          "description": "All visitors are required to purchase a pass to enter — pick one up at the park entrance or at recreation.gov. Rocky Mountain NP uses a timed entry reservation system to avoid overcrowding. Reserve your spot online before you arrive. Visit nps.gov/romo for trail conditions, planning info, and park ranger updates. Leave nothing but footprints.",
           "url": "https://www.nps.gov/romo/"
         },
         {
@@ -208,15 +352,40 @@
         },
         {
           "name": "Personalize Your Medal — iTab",
-          "description": "Make your medal last forever with an iTab: a custom engraved plate with your name and finishing time that clips onto your medal ribbon. Pre-order before race day and it ships automatically after you finish. Just $15 including postage.",
+          "description": "Make your medal last forever with a custom engraved iTab plate with your name and finishing time that clips onto your medal ribbon. Pre-order before race day and it ships automatically after you finish. Just $15 including postage.",
           "url": "https://www.itab.us.com/product/vacation-races/"
         }
       ],
       "hikes": [
         { "name": "Emerald Lake Trail", "distance": "3.5 Miles RT", "elevation": "700+ ft", "difficulty": "Moderate", "url": "https://www.alltrails.com/trail/us/colorado/emerald-lake-trail" },
-        { "name": "Bear Lake Loop", "distance": "0.8 Miles", "elevation": "Easy", "difficulty": "Easy", "url": "https://www.nps.gov/romo/planyourvisit/bearlake.htm" },
-        { "name": "Deer Mountain Trail", "distance": "6.0 Miles RT", "elevation": "1,083 ft", "difficulty": "Moderate", "url": "https://www.alltrails.com/trail/us/colorado/deer-mountain-trail" },
-        { "name": "Nymph Lake", "distance": "0.9 Miles RT", "elevation": "225 ft", "difficulty": "Easy", "url": "https://www.nps.gov/romo/planyourvisit/nymphlake.htm" }
+        { "name": "Bear Lake Loop", "distance": "0.8 Miles", "elevation": "Minimal", "difficulty": "Easy", "url": "https://www.nps.gov/romo/planyourvisit/bearlake.htm" },
+        { "name": "Nymph Lake", "distance": "0.9 Miles RT", "elevation": "225 ft", "difficulty": "Easy", "url": "https://www.nps.gov/romo/planyourvisit/nymphlake.htm" },
+        { "name": "Lumpy Ridge Loop", "distance": "11 Miles", "elevation": "Sweeping views", "difficulty": "Moderate", "url": "https://www.alltrails.com/trail/us/colorado/lumpy-ridge-loop" },
+        { "name": "Hallett Peak", "distance": "10.5 Miles RT", "elevation": "2,838 ft", "difficulty": "Strenuous", "url": "https://www.alltrails.com/trail/us/colorado/hallett-peak-trail" }
+      ],
+      "sights": [
+        {
+          "name": "Bear Lake",
+          "description": "One of the most photographed spots in Rocky Mountain NP — reflections of the Continental Divide peaks make this a must-see.",
+          "url": "https://www.nps.gov/romo/planyourvisit/bearlake.htm"
+        },
+        {
+          "name": "Trail Ridge Road",
+          "description": "The highest continuous paved road in the U.S. Drive above the treeline for sweeping tundra views."
+        },
+        {
+          "name": "Old Fall River Road",
+          "description": "Historic unpaved road winding up to the Alpine Visitor Center with dramatic tundra and mountain views."
+        },
+        {
+          "name": "Estes Park Riverwalk",
+          "description": "A stroll through the heart of downtown along the Big Thompson River — shops, restaurants, and mountain scenery all in one."
+        },
+        {
+          "name": "The Stanley Hotel",
+          "description": "The legendary hotel that inspired Stephen King's The Shining, founded in 1909. Tours available. A must-visit piece of Estes Park history.",
+          "url": "https://www.stanleyhotel.com"
+        }
       ],
       "restaurants": [
         {
@@ -238,6 +407,11 @@
           "name": "Estes Park Distilling Co.",
           "description": "Small-batch whiskey and spirits in a cozy setting — perfect for a post-race drink with mountain views.",
           "url": "https://estesparkdistillingco.com"
+        },
+        {
+          "name": "Hunters Chophouse",
+          "description": "Casual steakhouse serving upscale American dishes. A solid choice for a post-race meal.",
+          "url": "https://hunterschophouse.com"
         }
       ]
     },
@@ -245,8 +419,8 @@
       "enabled": true,
       "items": [
         {
-          "question": "If I can't pick up my bib on Friday at the expo, can I pick it up race morning?",
-          "answer": "Yes, for the Half Marathon only. Morning bib pickup opens at 4:15 AM at the start line. 5K and Elk Double runners must pick up at the Friday expo — no race morning option for those events."
+          "question": "If I can't pick up my bib on Friday at the pre-race expo, can I pick it up race morning?",
+          "answer": "Yes, for the Half Marathon only. There will be a bib pickup tent near the start line. It will open at 4:15 AM race morning. 5K and Elk Double runners must pick up their bib at the expo on Friday."
         },
         {
           "question": "Can someone else pick up my race packet?",
@@ -254,27 +428,39 @@
         },
         {
           "question": "Are dogs, strollers, or wheelchairs allowed on course?",
-          "answer": "Dogs are not permitted on course but are welcome at the finish line. Both the Half Marathon and 5K courses are on paved roads and are stroller- and wheelchair-friendly. Stay to the right and be mindful of other participants."
+          "answer": "We love dogs but they are not allowed on course. The Half Marathon and 5K courses are on paved roads and trails and are stroller- and wheelchair-friendly. Just be mindful of other participants and stay to the right when possible."
         },
         {
-          "question": "This is a cup-free event — what does that mean?",
-          "answer": "There are no disposable cups on course. Bring a handheld bottle, hydration vest, or your Nathan reusable cup (available as a registration add-on). Water and Gnarly Hydrate electrolytes will be available at all aid stations."
+          "question": "If my friend is in a different color wave, can I switch to their wave?",
+          "answer": "Yes. We want you to be able to run together. Please note that masters and overall awards are based on gun time. If you're competing for one of those spots, make sure you start in the Blue Wave."
         },
         {
-          "question": "Where should I park on race morning?",
-          "answer": "Three designated lots are near the fairgrounds, all within a short walk to the start and finish lines. Approach via Hwy 7 and turn east onto Manford Avenue — volunteers will direct you. Lots fill in order: Ball Fields first, then High School & Observatory, then Fairgrounds. Arrive by 5:15 AM."
+          "question": "Is there official race parking near the start line?",
+          "answer": "Yes. There are three designated parking areas near the fairgrounds and park, all within a short walk to both the start and finish lines. Approach via Highway 7 and turn onto Manford Avenue to be directed to available lots. We recommend arriving early to avoid congestion, especially on race morning."
+        },
+        {
+          "question": "If my race shirt doesn't fit the way I'd like, can I exchange it for a different size?",
+          "answer": "Yes, but not until after the race. We pre-order race shirts based on registration sizing requests. To ensure that all participants can get the size they originally requested, we don't offer exchanges until post-race at the finish line area."
+        },
+        {
+          "question": "How can I defer my entry?",
+          "answer": "You may defer your entry to any Vacation Races Half Marathon, Ultra, or Trailfest event. Deferrals are processed on the Let's Do This registration platform. An administration fee of 50% of the 2026 registration fee will be charged. You will pay this fee when you register for the 2027 race. The deferral will expire after the 2027 event, and you will not be able to defer your registration again."
+        },
+        {
+          "question": "How can I transfer my entry to another participant?",
+          "answer": "You can transfer your race entry to another person online until the Wednesday before the event or in person at the expo. The original runner pays a $30 transfer fee. Only the race entry transfers; add-ons such as merchandise or photos do not transfer and are non-refundable. The new runner will pay the current race price."
+        },
+        {
+          "question": "How can I get a refund?",
+          "answer": "All registration fees are non-refundable. This race, in accordance with management executives, city officials, and local law enforcement, has the authority to cancel any of the events for emergency purposes, such as inclement weather, a pandemic, or a threat of terrorism. If such emergency conditions force cancellation, refunds cannot be provided. We offer Refund Protect. When selected, it covers refunds if you're unable to run due to qualifying reasons."
         },
         {
           "question": "Do I need a National Park pass to attend the race?",
-          "answer": "The race start and finish area is in Estes Park and does not require a park pass. If you plan to visit Rocky Mountain National Park before or after the race, you'll need a pass and should reserve a timed entry permit at recreation.gov."
+          "answer": "The race start and finish area is in Estes Park and does not require a National Park pass. However, if you plan to visit Rocky Mountain National Park before or after the race, you will need a park pass and should reserve a timed entry permit in advance at recreation.gov."
         },
         {
-          "question": "How can I defer or transfer my entry?",
-          "answer": "Deferrals to any Vacation Races Half Marathon or Trailfest are processed on Let's Do This — a 50% admin fee applies. Entry transfers to another participant are available online until the Wednesday before the event or in person at expo. A $30 transfer fee applies to the original runner."
-        },
-        {
-          "question": "What happens if the race is cancelled?",
-          "answer": "All registration fees are non-refundable. In the event of a cancellation for emergency reasons (weather, pandemic, etc.), refunds cannot be provided. We offer Refund Protect at registration for qualifying personal circumstances."
+          "question": "What happens if I start in the back but want to compete for an overall award?",
+          "answer": "All masters and overall awards are based on gun time. If you intend to compete for these awards, you should be in the first (Blue) wave. If you start further back, your time does not officially start until you cross the starting line, but overall placement is still based on gun time, which may disqualify you from overall awards."
         }
       ]
     }

@@ -79,6 +79,27 @@ export default function ExperiencesSection({ data }: Props) {
         </div>
       )}
 
+      {/* Iconic Sights */}
+      {data.sights && data.sights.length > 0 && (
+        <div className="mb-10">
+          <h3 className="font-heading text-xl uppercase mb-6 tracking-wide">Iconic Views & Sights</h3>
+          <div className="grid sm:grid-cols-2 gap-4">
+            {data.sights.map((s, i) => (
+              <div key={i} className="border border-vr-forest/10 rounded-lg p-5">
+                <p className="font-heading text-base uppercase mb-2">{s.name}</p>
+                <p className="font-body text-sm text-vr-mid leading-relaxed">{s.description}</p>
+                {s.url && (
+                  <a href={s.url} target="_blank" rel="noopener noreferrer"
+                    className="inline-block mt-2 font-micro text-xs tracking-widest uppercase text-vr-sandstone hover:text-vr-forest transition-colors">
+                    Learn More ↗
+                  </a>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
       {/* Restaurants */}
       {data.restaurants.length > 0 && (
         <div>

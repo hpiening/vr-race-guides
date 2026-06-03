@@ -27,13 +27,11 @@ export default function FAQSection({ data }: Props) {
                 </span>
               </button>
             </dt>
-            {open === i && (
-              <dd className="pb-6 -mt-1">
-                <p className="font-body text-sm text-vr-mid leading-relaxed max-w-2xl">
-                  {item.answer}
-                </p>
-              </dd>
-            )}
+            <dd className={`pb-6 -mt-1 ${open === i ? '' : 'hidden print:block'}`}>
+              <p className="font-body text-sm text-vr-mid leading-relaxed max-w-2xl">
+                {item.answer}
+              </p>
+            </dd>
           </div>
         ))}
       </dl>

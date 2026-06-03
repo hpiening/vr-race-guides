@@ -35,7 +35,7 @@ export default function ExpoSection({ data }: Props) {
             </div>
 
             {data.notes.length > 0 && (
-              <ul className="space-y-3">
+              <ul className="space-y-3 mb-8">
                 {data.notes.map((note, i) => (
                   <li key={i} className="flex gap-3">
                     <span className="text-vr-floral mt-1 shrink-0">&#9658;</span>
@@ -43,6 +43,31 @@ export default function ExpoSection({ data }: Props) {
                   </li>
                 ))}
               </ul>
+            )}
+
+            {data.infoBlocks && data.infoBlocks.length > 0 && (
+              <div className="space-y-6 border-t border-vr-forest/10 pt-6">
+                {data.infoBlocks.map((block, i) => (
+                  <div key={i}>
+                    <h3 className="font-heading text-sm uppercase tracking-wide text-vr-forest mb-2">
+                      {block.heading}
+                    </h3>
+                    <p className="font-body text-sm text-vr-forest/80 leading-relaxed whitespace-pre-line">
+                      {block.body}
+                    </p>
+                    {block.linkLabel && block.linkUrl && (
+                      <a
+                        href={block.linkUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block mt-2 font-micro text-xs tracking-widest uppercase text-vr-sandstone hover:text-vr-forest transition-colors"
+                      >
+                        {block.linkLabel} ↗
+                      </a>
+                    )}
+                  </div>
+                ))}
+              </div>
             )}
           </div>
 

@@ -164,6 +164,32 @@ body {
   scroll-margin-top: 64px;
 }
 
+/* ─── Print / PDF Export ─────────────────────────────────────── */
+
+@media print {
+  /* Hide interactive chrome */
+  nav,
+  button,
+  .print\:hidden { display: none !important; }
+
+  /* Full-width, no margins */
+  body { font-size: 11pt; }
+  section { padding: 24pt 36pt !important; break-inside: avoid; }
+
+  /* Show all FAQ answers */
+  .hidden.print\:block { display: block !important; }
+
+  /* Expand iframe placeholders */
+  iframe { display: none !important; }
+
+  /* Keep colours readable — browsers strip backgrounds by default, override */
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+
+  /* Prevent orphaned headings */
+  h2, h3 { break-after: avoid; }
+  li, dd { break-inside: avoid; }
+}
+
 /* ─── N2S Brand Overrides ────────────────────────────────────── */
 
 /* Fonts */

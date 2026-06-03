@@ -6,8 +6,56 @@ type Props = { data: EventData['sections']['raceMorning'] }
 
 export default function RaceMorningSection({ data }: Props) {
   return (
-    <SectionWrapper id="race-morning" label="Race Morning">
-      <h2 className="font-display text-5xl md:text-6xl uppercase mb-8">Race Morning</h2>
+    <SectionWrapper id="race-morning" label={data.navLabel || 'Race Morning'}>
+      <h2 className="font-display text-5xl md:text-6xl uppercase mb-8">{data.navLabel || 'Race Morning'}</h2>
+
+      {/* Course route maps — shown first so runners can review the route */}
+      {data.courses && data.courses.length > 0 && (
+        <div className="mb-12">
+          <h3 className="font-heading text-xl uppercase mb-6 tracking-wide">Course Map</h3>
+          <div className="space-y-6">
+            {data.courses.map((c, i) => (
+              <div key={i} className="bg-vr-offwhite rounded-lg overflow-hidden border border-vr-forest/10">
+                <div className="px-5 py-4 flex justify-between items-center border-b border-vr-forest/10">
+                  <div>
+                    <span className="font-heading text-lg uppercase">{c.name}</span>
+                    {c.stats && (
+                      <span className="font-micro text-xs text-vr-mid ml-3 tracking-wider">{c.stats}</span>
+                    )}
+                  </div>
+                  <a
+                    href={c.mapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-micro text-xs tracking-widest uppercase text-vr-sandstone hover:text-vr-forest transition-colors shrink-0 ml-4"
+                  >
+                    View Full Route ↗
+                  </a>
+                </div>
+                {c.embedUrl && (
+                  <>
+                    <iframe
+                      src={c.embedUrl}
+                      title={`${c.name} route map`}
+                      style={{ width: '100%', height: '500px', border: 'none', display: 'block' }}
+                      loading="lazy"
+                      scrolling="no"
+                      className="print:hidden"
+                    />
+                    <div className="hidden print:block px-5 py-4 text-sm font-body text-vr-mid">
+                      View route at: {c.mapUrl}
+                    </div>
+                  </>
+                )}
+                {!c.embedUrl && c.mapImageUrl && (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img src={c.mapImageUrl} alt={`${c.name} course map`} className="w-full h-auto" />
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* Timeline */}
       <div className="mb-12">
@@ -64,45 +112,19 @@ export default function RaceMorningSection({ data }: Props) {
         </div>
       )}
 
-      {/* Course route maps */}
-      {data.courses && data.courses.length > 0 && (
-        <div>
-          <h3 className="font-heading text-xl uppercase mb-6 tracking-wide">Course Map</h3>
-          <div className="space-y-6">
-            {data.courses.map((c, i) => (
-              <div key={i} className="bg-vr-offwhite rounded-lg overflow-hidden border border-vr-forest/10">
-                <div className="px-5 py-4 flex justify-between items-center border-b border-vr-forest/10">
-                  <div>
-                    <span className="font-heading text-lg uppercase">{c.name}</span>
-                    {c.stats && (
-                      <span className="font-micro text-xs text-vr-mid ml-3 tracking-wider">{c.stats}</span>
-                    )}
-                  </div>
-                  <a
-                    href={c.mapUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="font-micro text-xs tracking-widest uppercase text-vr-sandstone hover:text-vr-forest transition-colors shrink-0 ml-4"
-                  >
-                    View Full Route ↗
-                  </a>
-                </div>
-                {c.embedUrl && (
-                  <iframe
-                    src={c.embedUrl}
-                    title={`${c.name} route map`}
-                    style={{ width: '100%', height: '500px', border: 'none', display: 'block' }}
-                    loading="lazy"
-                    scrolling="no"
-                  />
-                )}
-                {!c.embedUrl && c.mapImageUrl && (
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img src={c.mapImageUrl} alt={`${c.name} course map`} className="w-full h-auto" />
-                )}
-              </div>
-            ))}
-          </div>
+      {/* Detailed info blocks */}
+      {data.infoBlocks && data.infoBlocks.length > 0 && (
+        <div className="space-y-8 border-t border-vr-forest/10 pt-10 mt-4">
+          {data.infoBlocks.map((block, i) => (
+            <div key={i} className="border-b border-vr-forest/10 pb-8 last:border-0">
+              <h3 className="font-heading text-base uppercase text-vr-forest mb-3 tracking-wide">
+                {block.heading}
+              </h3>
+              <p className="font-body text-sm text-vr-mid leading-relaxed whitespace-pre-line">
+                {block.body}
+              </p>
+            </div>
+          ))}
         </div>
       )}
     </SectionWrapper>

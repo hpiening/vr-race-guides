@@ -32,12 +32,25 @@ export interface CourseDistance {
   stats?: string
 }
 
+export interface InfoBlock {
+  heading: string
+  body: string
+  linkLabel?: string
+  linkUrl?: string
+}
+
 export interface Hike {
   name: string
   distance: string
   elevation: string
   difficulty: string
   url: string
+}
+
+export interface Sight {
+  name: string
+  description: string
+  url?: string
 }
 
 export interface Restaurant {
@@ -88,6 +101,16 @@ export interface ChallengeEventsData {
   events: ChallengeEvent[]
 }
 
+export interface WelcomeData {
+  enabled: boolean
+  heading: string
+  body: string
+  quote?: string
+  quoteAttribution?: string
+  closing?: string
+  note?: string
+}
+
 export interface EventData {
   slug: string
   name: string
@@ -104,6 +127,7 @@ export interface EventData {
   logo?: string
   logoAlt?: string
   sections: {
+    welcome?: WelcomeData
     schedule: {
       enabled: boolean
       days: ScheduleDay[]
@@ -119,25 +143,30 @@ export interface EventData {
       mapImageUrl?: string
       hours: ExpoHour[]
       notes: string[]
+      infoBlocks?: InfoBlock[]
     }
     raceMorning: {
       enabled: boolean
+      navLabel?: string
       timelineLabel?: string
       parkingOptions: ParkingOption[]
       parkingMapImageUrl?: string
       shuttleDetails: ScheduleItem[]
       dropOffNote: string
       courses?: CourseDistance[]
+      infoBlocks?: InfoBlock[]
     }
     courseInfo: {
       enabled: boolean
       heading?: string
       navLabel?: string
+      schedule?: ScheduleItem[]
       distances: CourseDistance[]
       strollerPolicy: string
       dogPolicy: string
       aidStations: string
       recoveryFood: string
+      infoBlocks?: InfoBlock[]
     }
     spectators: {
       enabled: boolean
@@ -160,6 +189,7 @@ export interface EventData {
       lodging: { partner: string; description: string; url: string }
       activities: Array<{ name: string; description: string; discountCode?: string; url: string }>
       hikes: Hike[]
+      sights?: Sight[]
       restaurants: Restaurant[]
     }
     faqs: {
