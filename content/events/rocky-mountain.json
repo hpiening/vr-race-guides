@@ -49,6 +49,7 @@
       "locationMapUrl": "https://www.google.com/maps/place/380+Community+Dr,+Estes+Park,+CO+80517/@40.3710761,-105.498488,17z",
       "locationLat": 40.3710761,
       "locationLng": -105.498488,
+      "mapImageUrl": "https://static.wixstatic.com/media/2f9bfd_7c7e62b7369f4b6cbe4b18b4486141d3~mv2.webp/v1/fill/w_534,h_329,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Rocky_Expo-Map.webp",
       "hours": [
         { "label": "Race Expo Hours", "time": "12:00 PM – 5:00 PM" },
         { "label": "Merch Tent Hours", "time": "12:00 PM – 5:00 PM (Friday) / Opens 8:00 AM Saturday" },
@@ -79,6 +80,7 @@
     "raceMorning": {
       "enabled": true,
       "timelineLabel": "Morning Schedule",
+      "parkingMapImageUrl": "https://static.wixstatic.com/media/2f9bfd_5eaaf0df0b284d6c901608d1b15581ee~mv2.webp/v1/fill/w_760,h_304,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Rocky_Parking-Map.webp",
       "parkingOptions": [
         {
           "name": "Ball Fields (Primary Lot)",
@@ -113,11 +115,11 @@
     },
     "spectators": {
       "enabled": true,
-      "notes": "Spectators are welcome at the finish line on the south shore of Lake Estes! Park in an official event lot and walk toward the Stanley Ball Fields. Continue through the ball fields and past the dog park to reach the pedestrian tunnel under Highway 36 — use the tunnel to safely reach the finish area.",
+      "notes": "We welcome spectators to Rocky Mountain this year! Spectators are welcome at the finish line and may park according to the main parking locations and schedule. The finish line is walking distance from town, which has many shops and restaurants to pass the time until your runner finishes!",
       "warnings": [
-        "Do not cross over Highway 36. Use the pedestrian tunnel underneath the highway.",
-        "Please only park in designated event lots — this keeps us compliant with local authorities and ensures future events.",
-        "The runner recovery area, finish line food, and medical tent are for athletes only. Please respect this boundary."
+        "Please only park in designated areas. There should be plenty of parking for everyone. Following this guideline allows us to continue putting on successful events compliant with local authorities.",
+        "Once your runner has finished their race, please stay outside of the runner recovery area to avoid crowding.",
+        "Finish line drinks, supplies, and the medical tent are there for runners only. Please respect this."
       ]
     },
     "postRace": {
@@ -128,6 +130,24 @@
         { "category": "Overall Female", "name": "Chelsea Bennis", "time": "1:29:03", "year": "2016" },
         { "category": "Masters Male", "name": "Gerald Romera", "time": "1:26:59", "year": "2015" },
         { "category": "Masters Female", "name": "Ruby Bode", "time": "1:37:16", "year": "2022" }
+      ],
+      "infoSections": [
+        {
+          "heading": "Zero Waste",
+          "body": "Our events take place in and around protected national park landscapes, and we are deeply committed to minimizing waste while preserving the natural beauty of the places we run — without compromising safety, efficiency, or hydration on course.\n\nTo achieve this, we've implemented cup-free racing across the series: runners may add a lightweight, foldable reusable cup during registration or bring any personal hydration system that doesn't produce trash. Self-serve aid stations are placed throughout the course with water and electrolytes for quick, efficient refills, allowing athletes to hydrate as needed without waste, congestion, or mess. The system keeps courses clean, stations moving smoothly, and hydration reliable."
+        },
+        {
+          "heading": "Awards",
+          "body": "Place medals will be given to the top 5 male, female, and non-binary runners overall, as well as the Masters 40+ group.\n\nAdditionally, the top 5 in each of the following age groups will also receive a place medal: 11 and younger, 12–14, 15–19, 20–24, 25–29, 30–34, 35–39, 40–44, 45–49, 50–54, 55–59, 60–64, 65–69, 70–74, 75 and older. We do not currently offer non-binary age group awards.\n\nThere will be finisher medals for everyone who finishes the race."
+        },
+        {
+          "heading": "Results & Photos",
+          "body": "Live results will be hosted online by Laurel. Results are not official until all runners have crossed the finish line and been reviewed by the event director. Questions about placement? Email timing@brooksee.com.\n\nTop finisher but missed the awards ceremony? You can request to have your place medal shipped to you.\n\nNew for 2026 — FinisherPix will be at each event to capture your race memories. Photos are available within 24–48 hours post-event. The FinisherPix Photo Pack includes all photos in all digital formats. Search for your photos by last name or bib number.",
+          "links": [
+            { "label": "2026 Race Photos", "url": "http://finisherpix.com/en/event/10680" },
+            { "label": "Results", "url": "https://www.brooksee.com/vrm/results" }
+          ]
+        }
       ]
     },
     "challengeEvents": {
@@ -170,6 +190,16 @@
           "description": "Personalized training for your next Vacation Races event. Download now and unlock two free weeks with code VACATIONRUNNA.",
           "discountCode": "VACATIONRUNNA",
           "url": "https://web.runna.com/en-GB/welcome?utm_source=Vacation%20Races%20New"
+        },
+        {
+          "name": "Race Swag & Merchandise",
+          "description": "The official race shirt is picked up at expo upon check-in, and your finisher medal is awarded at the finish line. Exclusive race merchandise — beach hoodies, t-shirts, hats, bottles, and more — will be available at expo and near the finish line. Leftover merch will be available in the online store after the event.",
+          "url": "https://store.vacationraces.com/collections/rocky-mountain-half"
+        },
+        {
+          "name": "Personalize Your Medal — iTab",
+          "description": "Make your medal last forever with an iTab: a custom engraved plate with your name and finishing time that clips onto your medal ribbon. Pre-order before race day and it ships automatically after you finish. Just $15 including postage.",
+          "url": "https://www.itab.us.com/product/vacation-races/"
         }
       ],
       "hikes": [

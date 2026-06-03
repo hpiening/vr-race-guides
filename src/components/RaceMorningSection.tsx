@@ -44,6 +44,18 @@ export default function RaceMorningSection({ data }: Props) {
         </div>
       </div>
 
+      {/* Parking map image */}
+      {data.parkingMapImageUrl && (
+        <div className="mb-12 rounded-lg overflow-hidden border border-vr-forest/10">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={data.parkingMapImageUrl}
+            alt="Parking map"
+            className="w-full h-auto"
+          />
+        </div>
+      )}
+
       {/* Drop-off note */}
       {data.dropOffNote && (
         <div className="bg-vr-cream/50 rounded-lg p-6 border-l-4 border-vr-amber">

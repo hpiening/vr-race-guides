@@ -47,13 +47,34 @@ export default function ExpoSection({ data }: Props) {
           </div>
 
           <div>
-            <MapEmbed
-              lat={data.locationLat}
-              lng={data.locationLng}
-              label={data.locationName}
-              mapsUrl={data.locationMapUrl}
-              dark={false}
-            />
+            {data.mapImageUrl ? (
+              <div className="rounded-lg overflow-hidden border border-vr-forest/10">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={data.mapImageUrl}
+                  alt={`${data.locationName} map`}
+                  className="w-full h-auto"
+                />
+                <div className="px-4 py-3 bg-vr-offwhite border-t border-vr-forest/10">
+                  <a
+                    href={data.locationMapUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-micro text-xs tracking-widest uppercase text-vr-sandstone hover:text-vr-forest transition-colors"
+                  >
+                    Get Directions — {data.locationName} ↗
+                  </a>
+                </div>
+              </div>
+            ) : (
+              <MapEmbed
+                lat={data.locationLat}
+                lng={data.locationLng}
+                label={data.locationName}
+                mapsUrl={data.locationMapUrl}
+                dark={false}
+              />
+            )}
           </div>
         </div>
       </div>

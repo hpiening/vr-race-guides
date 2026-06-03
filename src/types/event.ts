@@ -112,6 +112,7 @@ export interface EventData {
       locationMapUrl: string
       locationLat: number
       locationLng: number
+      mapImageUrl?: string
       hours: ExpoHour[]
       notes: string[]
     }
@@ -119,6 +120,7 @@ export interface EventData {
       enabled: boolean
       timelineLabel?: string
       parkingOptions: ParkingOption[]
+      parkingMapImageUrl?: string
       shuttleDetails: ScheduleItem[]
       dropOffNote: string
     }
@@ -142,6 +144,11 @@ export interface EventData {
       enabled: boolean
       courseRecords: CourseRecord[]
       finishLineInfo: string
+      infoSections?: Array<{
+        heading: string
+        body: string
+        links?: Array<{ label: string; url: string }>
+      }>
     }
     experiences: {
       enabled: boolean
