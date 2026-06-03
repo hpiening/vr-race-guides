@@ -9,6 +9,11 @@
   "accentColor": "#1B3A24",
   "favicon": "/images/events/rocky-mountain-favicon.png",
   "logo": "/images/vr-logo.png",
+  "sectionBreaks": {
+    "afterRaceMorning": {},
+    "afterChallengeEvents": {},
+    "afterExperiences": {}
+  },
   "sections": {
     "welcome": {
       "enabled": true,

@@ -101,6 +101,11 @@ export interface ChallengeEventsData {
   events: ChallengeEvent[]
 }
 
+export interface SectionBreakConfig {
+  bgImage?: string
+  bgColor?: string
+}
+
 export interface WelcomeData {
   enabled: boolean
   heading: string
@@ -126,6 +131,11 @@ export interface EventData {
   brand?: 'vr' | 'n2s'
   logo?: string
   logoAlt?: string
+  sectionBreaks?: {
+    afterRaceMorning?: SectionBreakConfig
+    afterChallengeEvents?: SectionBreakConfig
+    afterExperiences?: SectionBreakConfig
+  }
   sections: {
     welcome?: WelcomeData
     schedule: {

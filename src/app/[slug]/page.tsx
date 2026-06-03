@@ -18,6 +18,7 @@ import WineFestivalSection from '@/components/WineFestivalSection'
 import ChallengeEventsSection from '@/components/ChallengeEventsSection'
 import PrintButton from '@/components/PrintButton'
 import SearchBar from '@/components/SearchBar'
+import SectionBreak from '@/components/SectionBreak'
 
 export async function generateStaticParams() {
   const contentDir = path.join(process.cwd(), 'content', 'events')
@@ -164,12 +165,39 @@ export default async function EventPage({ params }: { params: { slug: string } }
         {sections.expo.enabled            && <ExpoSection        data={sections.expo} />}
         {sections.courseInfo.enabled      && <CourseInfoSection  data={sections.courseInfo} />}
         {sections.raceMorning.enabled     && <RaceMorningSection data={sections.raceMorning} />}
-        {sections.spectators.enabled      && <SpectatorsSection  data={sections.spectators} />}
+        {sections.spectators.enabled      && (
+          <>
+            <SectionBreak
+              eventSlug={event.slug}
+              bgImage={event.sectionBreaks?.afterRaceMorning?.bgImage}
+              bgColor={event.sectionBreaks?.afterRaceMorning?.bgColor}
+            />
+            <SpectatorsSection data={sections.spectators} />
+          </>
+        )}
         {sections.postRace.enabled        && <PostRaceSection    data={sections.postRace} />}
         {sections.wineFestival?.enabled   && <WineFestivalSection data={sections.wineFestival!} />}
         {sections.challengeEvents?.enabled && <ChallengeEventsSection data={sections.challengeEvents!} />}
-        {sections.experiences.enabled     && <ExperiencesSection data={sections.experiences} />}
-        {sections.faqs.enabled            && <FAQSection         data={sections.faqs} />}
+        {sections.experiences.enabled     && (
+          <>
+            <SectionBreak
+              eventSlug={event.slug}
+              bgImage={event.sectionBreaks?.afterChallengeEvents?.bgImage}
+              bgColor={event.sectionBreaks?.afterChallengeEvents?.bgColor}
+            />
+            <ExperiencesSection data={sections.experiences} />
+          </>
+        )}
+        {sections.faqs.enabled            && (
+          <>
+            <SectionBreak
+              eventSlug={event.slug}
+              bgImage={event.sectionBreaks?.afterExperiences?.bgImage}
+              bgColor={event.sectionBreaks?.afterExperiences?.bgColor}
+            />
+            <FAQSection data={sections.faqs} />
+          </>
+        )}
       </main>
       <PrintButton />
       <SearchBar index={searchIndex} />
