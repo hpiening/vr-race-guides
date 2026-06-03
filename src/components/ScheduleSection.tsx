@@ -19,6 +19,7 @@ export default function ScheduleSection({ data, eventSlug }: Props) {
           src={`/images/events/${eventSlug}-icon.png`}
           alt=""
           className="w-full h-auto"
+          onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
         />
       </div>
 

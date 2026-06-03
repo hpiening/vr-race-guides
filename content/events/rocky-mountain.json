@@ -1,0 +1,242 @@
+{
+  "slug": "rocky-mountain",
+  "name": "Rocky Mountain",
+  "tagline": "Half Marathon • 5K",
+  "dates": "July 31 – August 1, 2026",
+  "heroImage": "https://static.wixstatic.com/media/425c17_483e8c48b5d645278e791dcc0ca2157f~mv2.jpg",
+  "heroImageAlt": "Rocky Mountain peaks above Lake Estes in Estes Park, Colorado",
+  "heroOverlayImage": "https://static.wixstatic.com/media/2f9bfd_6b062e3665c946788cd846d3f3ad42b2~mv2.png/v1/fill/w_1708,h_759,al_c,q_90,enc_avif,quality_auto/STAT%20CUTOUT.png",
+  "heroBgColor": "#1B3A24",
+  "accentColor": "#1B3A24",
+  "logo": "/images/vr-logo.png",
+  "sections": {
+    "schedule": {
+      "enabled": true,
+      "days": [
+        {
+          "id": "friday",
+          "label": "Friday / 5K",
+          "date": "July 31, 2026",
+          "items": [
+            { "time": "12:00–5:00 PM", "label": "RACE EXPO & BIB PICKUP", "note": "5K and Elk Double runners must pick up bib by 5:00 PM" },
+            { "time": "5:45 PM", "label": "5K RUNNERS LINE UP" },
+            { "time": "6:00 PM", "label": "5K RACE START" },
+            { "time": "7:00 PM", "label": "5K AWARDS CEREMONY" }
+          ]
+        },
+        {
+          "id": "saturday",
+          "label": "Saturday / Half Marathon",
+          "date": "August 1, 2026",
+          "items": [
+            { "time": "4:00 AM", "label": "PARKING LOTS OPEN" },
+            { "time": "4:15 AM", "label": "MORNING BIB PICKUP OPENS" },
+            { "time": "4:30 AM", "label": "RAFFLES BEGIN", "note": "Every 5 minutes until 5:30 AM" },
+            { "time": "5:15 AM", "label": "ALL CARS SHOULD BE PARKED" },
+            { "time": "5:45 AM", "label": "RUNNERS LINE UP + LAST CALL FOR GEAR CHECK" },
+            { "time": "6:00 AM", "label": "HALF MARATHON STARTS" },
+            { "time": "8:00 AM", "label": "MERCH TENT OPENS" },
+            { "time": "8:45 AM", "label": "AWARDS CEREMONY" }
+          ]
+        }
+      ]
+    },
+    "expo": {
+      "enabled": true,
+      "date": "Friday, July 31, 2026",
+      "locationName": "Stanley Park Ball Field",
+      "locationAddress": "380 Community Dr, Estes Park, CO 80517",
+      "locationMapUrl": "https://www.google.com/maps/place/380+Community+Dr,+Estes+Park,+CO+80517/@40.3710761,-105.498488,17z",
+      "locationLat": 40.3710761,
+      "locationLng": -105.498488,
+      "hours": [
+        { "label": "Race Expo Hours", "time": "12:00 PM – 5:00 PM" },
+        { "label": "Merch Tent Hours", "time": "12:00 PM – 5:00 PM (Friday) / Opens 8:00 AM Saturday" },
+        { "label": "Bib Pick Up Hours", "time": "12:00 PM – 5:00 PM" }
+      ],
+      "notes": [
+        "5K and Elk Double runners must pick up their bib by 5:00 PM on Friday.",
+        "This is a cup-free event — no disposable cups on course. Bring a handheld bottle, hydration vest, or reusable cup.",
+        "Our expo is bag-free. Don't forget to Bring Your Own Bag (BYOB)! Reusable bags also available at the merch tent.",
+        "Pre-order merch? Pick it up at the merch booth during expo or race day — just show your order confirmation."
+      ]
+    },
+    "courseInfo": {
+      "enabled": true,
+      "heading": "5K Info",
+      "navLabel": "5K Info",
+      "distances": [
+        {
+          "name": "5K Course",
+          "mapUrl": "https://ridewithgps.com/routes/51714103"
+        }
+      ],
+      "aidStations": "One aid station near the halfway point (approximately mile 1.5–1.8) with water, electrolytes, and bathrooms. Cup-free — bring your own vessel.",
+      "recoveryFood": "Post-race recovery food available at the finish line. Stick around for the awards ceremony at 7:00 PM!",
+      "strollerPolicy": "The 5K course is on paved roads and is stroller- and wheelchair-friendly. Please be mindful of other participants and stay to the right.",
+      "dogPolicy": "Dogs are not allowed on the course. They're welcome to cheer you on from the finish line!"
+    },
+    "raceMorning": {
+      "enabled": true,
+      "timelineLabel": "Morning Schedule",
+      "parkingOptions": [
+        {
+          "name": "Ball Fields (Primary Lot)",
+          "details": "First lot to fill. Located east of Community Drive near the start and finish lines. Approach via Hwy 7, turn east onto Manford Avenue toward the fairgrounds. Volunteers on-site to direct traffic.",
+          "mapUrl": "https://www.google.com/maps/place/380+Community+Dr,+Estes+Park,+CO+80517/@40.3710761,-105.498488,17z",
+          "lat": 40.3710761,
+          "lng": -105.498488
+        },
+        {
+          "name": "High School & Observatory (Second Lot)",
+          "details": "Second lot to fill. Short walk to start/finish lines. Follow volunteer direction from Manford Avenue.",
+          "mapUrl": "https://www.google.com/maps/place/Estes+Park+High+School,+1600+Manford+Ave,+Estes+Park,+CO+80517",
+          "lat": 40.3693,
+          "lng": -105.5015
+        },
+        {
+          "name": "Fairgrounds (Third Lot)",
+          "details": "Overflow parking. Please only park in designated areas marked on the event map. Follow volunteer direction.",
+          "mapUrl": "https://www.google.com/maps/place/Estes+Park+Fairgrounds,+1209+Manford+Ave,+Estes+Park,+CO+80517",
+          "lat": 40.3672,
+          "lng": -105.5005
+        }
+      ],
+      "shuttleDetails": [
+        { "time": "4:00 AM", "label": "Parking lots open" },
+        { "time": "5:15 AM", "label": "All cars should be parked" },
+        { "time": "5:45 AM", "label": "Runners line up, last call for gear check" },
+        { "time": "6:00 AM", "label": "Half Marathon starts" },
+        { "time": "8:45 AM", "label": "Awards Ceremony" }
+      ],
+      "dropOffNote": "Approach via S St Vrain Ave (Hwy 7) and turn onto Manford Avenue toward the fairgrounds. Follow crew to the drop-off area, then exit the parking lot back onto Community Drive heading south toward N St Vrain Ave. Please move quickly to keep traffic flowing for other runners."
+    },
+    "spectators": {
+      "enabled": true,
+      "notes": "Spectators are welcome at the finish line on the south shore of Lake Estes! Park in an official event lot and walk toward the Stanley Ball Fields. Continue through the ball fields and past the dog park to reach the pedestrian tunnel under Highway 36 — use the tunnel to safely reach the finish area.",
+      "warnings": [
+        "Do not cross over Highway 36. Use the pedestrian tunnel underneath the highway.",
+        "Please only park in designated event lots — this keeps us compliant with local authorities and ensures future events.",
+        "The runner recovery area, finish line food, and medical tent are for athletes only. Please respect this boundary."
+      ]
+    },
+    "postRace": {
+      "enabled": true,
+      "finishLineInfo": "The finish line is on the south shore of Lake Estes near the Stanley Ball Fields. Post-race recovery bags include snacks, bananas, and chocolate milk. Merch tent opens at 8:00 AM. Gear check bags available once the first runner finishes. Course record holders receive a free race entry every year their record stands!",
+      "courseRecords": [
+        { "category": "Overall Male", "name": "David Cardenas", "time": "1:14:53", "year": "2021" },
+        { "category": "Overall Female", "name": "Chelsea Bennis", "time": "1:29:03", "year": "2016" },
+        { "category": "Masters Male", "name": "Gerald Romera", "time": "1:26:59", "year": "2015" },
+        { "category": "Masters Female", "name": "Ruby Bode", "time": "1:37:16", "year": "2022" }
+      ]
+    },
+    "challengeEvents": {
+      "enabled": true,
+      "intro": "Looking to push further? Take on both races in one weekend and earn exclusive finisher swag.",
+      "events": [
+        {
+          "name": "Elk Double",
+          "tagline": "5K + Half Marathon · July 31 – August 1, 2026",
+          "description": "The Elk Double is for runners who want to take on two distances in one weekend. Run the 5K on Friday evening and the Half Marathon on Saturday morning. Finishers earn a special Elk Double medal (in addition to each race medal) and one exclusive swag item of their choice. You'll use the same bib for both events.",
+          "totalMileage": "16.2 miles",
+          "dates": "July 31 – August 1, 2026",
+          "includes": [
+            "Race medal and shirt for each event (5K and Half Marathon)",
+            "Special Elk Double finisher medal",
+            "Your choice of one exclusive Elk Double swag item: hat, unisex t-shirt, beach hoodie, or Nalgene bottle",
+            "One bib used for both races"
+          ],
+          "bibPickup": "Pick up your Elk Double bib (used for both races), race shirt, and swag item at the race expo on Friday, July 31 between 12:00 PM and 5:00 PM. If your shirt doesn't fit, exchange it at the finish line after the half marathon on Saturday.",
+          "medals": "Once you've completed the Elk Double, collect your special finisher medal just outside the runner recovery area. A clearly marked table will be waiting for you — show your bib and a volunteer will hand you your Elk Double medal.",
+          "swag": "Your pre-chosen swag item will be ready at the expo. Additional items may be purchased only after your final race to ensure all participants receive their requested item. If you opted out, additional items can be purchased at the end of the second race."
+        }
+      ]
+    },
+    "experiences": {
+      "enabled": true,
+      "lodging": {
+        "partner": "HotelPlanner",
+        "description": "Our official lodging partner, offering exclusive rates for runners, friends, and family near the Expo, Start Line, and Finish Line — plus 24/7 support if plans change.",
+        "url": "https://vacationraces.hotelplanner.com/Search/?seid=2D076CC97B6248BFA68534519E4AD110&city=Stanley+Park%2C+Estes+Park%2C+CO+80517&indate=07/31/2026&outdate=08/02/2026&numrooms=1"
+      },
+      "activities": [
+        {
+          "name": "Rocky Mountain National Park",
+          "description": "All visitors need a park pass to enter — pick one up at the entrance or at recreation.gov. Use the timed entry reservation system to avoid crowds. Visit nps.gov/romo for trail conditions and planning info.",
+          "url": "https://www.nps.gov/romo/"
+        },
+        {
+          "name": "Train with Runna",
+          "description": "Personalized training for your next Vacation Races event. Download now and unlock two free weeks with code VACATIONRUNNA.",
+          "discountCode": "VACATIONRUNNA",
+          "url": "https://web.runna.com/en-GB/welcome?utm_source=Vacation%20Races%20New"
+        }
+      ],
+      "hikes": [
+        { "name": "Emerald Lake Trail", "distance": "3.5 Miles RT", "elevation": "700+ ft", "difficulty": "Moderate", "url": "https://www.alltrails.com/trail/us/colorado/emerald-lake-trail" },
+        { "name": "Bear Lake Loop", "distance": "0.8 Miles", "elevation": "Easy", "difficulty": "Easy", "url": "https://www.nps.gov/romo/planyourvisit/bearlake.htm" },
+        { "name": "Deer Mountain Trail", "distance": "6.0 Miles RT", "elevation": "1,083 ft", "difficulty": "Moderate", "url": "https://www.alltrails.com/trail/us/colorado/deer-mountain-trail" },
+        { "name": "Nymph Lake", "distance": "0.9 Miles RT", "elevation": "225 ft", "difficulty": "Easy", "url": "https://www.nps.gov/romo/planyourvisit/nymphlake.htm" }
+      ],
+      "restaurants": [
+        {
+          "name": "The Bird's Nest",
+          "description": "Extremely popular local café with pastries, pizza, and sandwiches. Perfect pre-race fuel.",
+          "url": "https://thebirdsnest.com"
+        },
+        {
+          "name": "Bird & Jim",
+          "description": "Highly rated modern American with clean ingredients — the victory dinner spot.",
+          "url": "https://www.birdandjim.com"
+        },
+        {
+          "name": "Inkwell & Brew",
+          "description": "Fantastic spot for a morning coffee before you hit the trail or the start line.",
+          "url": "https://inkwellbrew.com"
+        },
+        {
+          "name": "Estes Park Distilling Co.",
+          "description": "Small-batch whiskey and spirits in a cozy setting — perfect for a post-race drink with mountain views.",
+          "url": "https://estesparkdistillingco.com"
+        }
+      ]
+    },
+    "faqs": {
+      "enabled": true,
+      "items": [
+        {
+          "question": "If I can't pick up my bib on Friday at the expo, can I pick it up race morning?",
+          "answer": "Yes, for the Half Marathon only. Morning bib pickup opens at 4:15 AM at the start line. 5K and Elk Double runners must pick up at the Friday expo — no race morning option for those events."
+        },
+        {
+          "question": "Can someone else pick up my race packet?",
+          "answer": "Yes, as long as they have a photo of your ID."
+        },
+        {
+          "question": "Are dogs, strollers, or wheelchairs allowed on course?",
+          "answer": "Dogs are not permitted on course but are welcome at the finish line. Both the Half Marathon and 5K courses are on paved roads and are stroller- and wheelchair-friendly. Stay to the right and be mindful of other participants."
+        },
+        {
+          "question": "This is a cup-free event — what does that mean?",
+          "answer": "There are no disposable cups on course. Bring a handheld bottle, hydration vest, or your Nathan reusable cup (available as a registration add-on). Water and Gnarly Hydrate electrolytes will be available at all aid stations."
+        },
+        {
+          "question": "Where should I park on race morning?",
+          "answer": "Three designated lots are near the fairgrounds, all within a short walk to the start and finish lines. Approach via Hwy 7 and turn east onto Manford Avenue — volunteers will direct you. Lots fill in order: Ball Fields first, then High School & Observatory, then Fairgrounds. Arrive by 5:15 AM."
+        },
+        {
+          "question": "Do I need a National Park pass to attend the race?",
+          "answer": "The race start and finish area is in Estes Park and does not require a park pass. If you plan to visit Rocky Mountain National Park before or after the race, you'll need a pass and should reserve a timed entry permit at recreation.gov."
+        },
+        {
+          "question": "How can I defer or transfer my entry?",
+          "answer": "Deferrals to any Vacation Races Half Marathon or Trailfest are processed on Let's Do This — a 50% admin fee applies. Entry transfers to another participant are available online until the Wednesday before the event or in person at expo. A $30 transfer fee applies to the original runner."
+        },
+        {
+          "question": "What happens if the race is cancelled?",
+          "answer": "All registration fees are non-refundable. In the event of a cancellation for emergency reasons (weather, pandemic, etc.), refunds cannot be provided. We offer Refund Protect at registration for qualifying personal circumstances."
+        }
+      ]
+    }
+  }
+}

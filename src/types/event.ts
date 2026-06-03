@@ -56,6 +56,36 @@ export interface FaqItem {
   answer: string
 }
 
+export interface WineFestivalData {
+  enabled: boolean
+  date: string
+  hours: string
+  location: string
+  description: string
+  tips: string[]
+  guestPasses: string
+  finishLineVIP?: string
+  wineries?: string[]
+}
+
+export interface ChallengeEvent {
+  name: string
+  tagline?: string
+  description: string
+  totalMileage?: string
+  dates: string
+  includes: string[]
+  bibPickup: string
+  medals: string
+  swag?: string
+}
+
+export interface ChallengeEventsData {
+  enabled: boolean
+  intro?: string
+  events: ChallengeEvent[]
+}
+
 export interface EventData {
   slug: string
   name: string
@@ -63,7 +93,12 @@ export interface EventData {
   dates: string
   heroImage: string
   heroImageAlt: string
+  heroOverlayImage?: string
+  heroBgColor?: string
   accentColor: string
+  brand?: 'vr' | 'n2s'
+  logo?: string
+  logoAlt?: string
   sections: {
     schedule: {
       enabled: boolean
@@ -82,12 +117,15 @@ export interface EventData {
     }
     raceMorning: {
       enabled: boolean
+      timelineLabel?: string
       parkingOptions: ParkingOption[]
       shuttleDetails: ScheduleItem[]
       dropOffNote: string
     }
     courseInfo: {
       enabled: boolean
+      heading?: string
+      navLabel?: string
       distances: CourseDistance[]
       strollerPolicy: string
       dogPolicy: string
@@ -98,7 +136,7 @@ export interface EventData {
       enabled: boolean
       notes: string
       warnings: string[]
-      shuttleAccess: string
+      shuttleAccess?: string
     }
     postRace: {
       enabled: boolean
@@ -116,5 +154,7 @@ export interface EventData {
       enabled: boolean
       items: FaqItem[]
     }
+    wineFestival?: WineFestivalData
+    challengeEvents?: ChallengeEventsData
   }
 }

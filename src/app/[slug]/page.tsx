@@ -12,6 +12,8 @@ import SpectatorsSection from '@/components/SpectatorsSection'
 import PostRaceSection from '@/components/PostRaceSection'
 import ExperiencesSection from '@/components/ExperiencesSection'
 import FAQSection from '@/components/FAQSection'
+import WineFestivalSection from '@/components/WineFestivalSection'
+import ChallengeEventsSection from '@/components/ChallengeEventsSection'
 
 export async function generateStaticParams() {
   const contentDir = path.join(process.cwd(), 'content', 'events')
@@ -35,7 +37,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const event = await getEvent(params.slug)
   if (!event) return {}
   return {
-    title: `${event.name} Race Day Guide | Vacation Races`,
+    title: event.brand === 'n2s'
+      ? `${event.name} | Race Day Guide`
+      : `${event.name} Race Day Guide | Vacation Races`,
     description: `Everything you need for the ${event.name} ${event.tagline} on ${event.dates}.`,
   }
 }
@@ -47,18 +51,22 @@ export default async function EventPage({ params }: { params: { slug: string } }
   const { sections } = event
 
   const navItems = [
-    sections.schedule.enabled    && { id: 'schedule',    label: 'Schedule' },
-    sections.expo.enabled        && { id: 'expo',        label: 'Expo' },
-    sections.courseInfo.enabled  && { id: 'course-info', label: 'Course Info' },
-    sections.raceMorning.enabled && { id: 'race-morning',label: 'Race Morning' },
-    sections.spectators.enabled  && { id: 'spectators',  label: 'Spectators' },
-    sections.postRace.enabled    && { id: 'post-race',   label: 'Post-Race' },
-    sections.experiences.enabled && { id: 'experiences', label: 'Experiences' },
-    sections.faqs.enabled        && { id: 'faqs',        label: 'FAQs' },
+    sections.schedule.enabled             && { id: 'schedule',          label: 'Schedule' },
+    sections.expo.enabled                 && { id: 'expo',              label: 'Expo' },
+    sections.courseInfo.enabled           && { id: 'course-info',       label: sections.courseInfo.navLabel || 'Course Info' },
+    sections.raceMorning.enabled          && { id: 'race-morning',      label: 'Race Morning' },
+    sections.spectators.enabled           && { id: 'spectators',        label: 'Spectators' },
+    sections.postRace.enabled             && { id: 'post-race',         label: 'Post-Race' },
+    sections.wineFestival?.enabled        && { id: 'wine-festival',     label: 'Wine Festival' },
+    sections.challengeEvents?.enabled     && { id: 'challenge-events',  label: 'Challenge Events' },
+    sections.experiences.enabled          && { id: 'experiences',       label: 'Experiences' },
+    sections.faqs.enabled                 && { id: 'faqs',              label: 'FAQs' },
   ].filter(Boolean) as { id: string; label: string }[]
 
+  const brandClass = event.brand === 'n2s' ? 'brand-n2s' : ''
+
   return (
-    <>
+    <div className={brandClass}>
       <HeroSection event={event} />
       <StickyNav items={navItems} />
       <main>
@@ -67,15 +75,19 @@ export default async function EventPage({ params }: { params: { slug: string } }
         {sections.courseInfo.enabled  && <CourseInfoSection  data={sections.courseInfo} />}
         {sections.raceMorning.enabled && <RaceMorningSection data={sections.raceMorning} />}
         {sections.spectators.enabled  && <SpectatorsSection  data={sections.spectators} />}
-        {sections.postRace.enabled    && <PostRaceSection    data={sections.postRace} />}
-        {sections.experiences.enabled && <ExperiencesSection data={sections.experiences} />}
+        {sections.postRace.enabled           && <PostRaceSection    data={sections.postRace} />}
+        {sections.wineFestival?.enabled      && <WineFestivalSection data={sections.wineFestival!} />}
+        {sections.challengeEvents?.enabled   && <ChallengeEventsSection data={sections.challengeEvents!} />}
+        {sections.experiences.enabled        && <ExperiencesSection data={sections.experiences} />}
         {sections.faqs.enabled        && <FAQSection         data={sections.faqs} />}
       </main>
       <footer className="bg-vr-forest text-vr-cream py-12 px-6 text-center">
         <p className="font-micro text-sm tracking-widest uppercase opacity-60">
-          &copy; {new Date().getFullYear()} Vacation Races &middot; All Rights Reserved
+          {event.brand === 'n2s'
+            ? `© ${new Date().getFullYear()} Motiv Sports · Napa to Sonoma Wine Country Half Marathon & Rosé 5K`
+            : `© ${new Date().getFullYear()} Vacation Races · All Rights Reserved`}
         </p>
       </footer>
-    </>
+    </div>
   )
 }

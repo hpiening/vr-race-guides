@@ -6,7 +6,7 @@ type Props = { data: EventData['sections']['courseInfo'] }
 export default function CourseInfoSection({ data }: Props) {
   return (
     <SectionWrapper id="course-info" label="Course" dark>
-      <h2 className="font-display text-5xl md:text-6xl uppercase mb-8 text-vr-cream">Course Info</h2>
+      <h2 className="font-display text-5xl md:text-6xl uppercase mb-8 text-vr-cream">{data.heading || 'Course Info'}</h2>
 
       {/* Course maps */}
       {data.distances.length > 0 && (

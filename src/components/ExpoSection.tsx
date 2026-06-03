@@ -25,11 +25,11 @@ export default function ExpoSection({ data }: Props) {
               {data.locationName}
             </a>
 
-            <div className="space-y-3 mb-8">
+            <div className="space-y-0 mb-8 border-t border-vr-forest/10">
               {data.hours.map((h, i) => (
-                <div key={i} className="flex justify-between border-b border-vr-forest/10 pb-3">
-                  <span className="font-micro text-sm text-vr-mid">{h.label}</span>
-                  <span className="font-label text-sm text-vr-forest tracking-wider">{h.time}</span>
+                <div key={i} className="border-b border-vr-forest/10 py-3">
+                  <p className="font-micro text-xs tracking-[0.15em] uppercase text-vr-mid mb-0.5">{h.label}</p>
+                  <p className="font-label text-sm text-vr-forest tracking-wider">{h.time}</p>
                 </div>
               ))}
             </div>

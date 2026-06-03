@@ -9,9 +9,9 @@ export default function RaceMorningSection({ data }: Props) {
     <SectionWrapper id="race-morning" label="Race Morning">
       <h2 className="font-display text-5xl md:text-6xl uppercase mb-8">Race Morning</h2>
 
-      {/* Shuttle timeline */}
+      {/* Timeline */}
       <div className="mb-12">
-        <h3 className="font-heading text-xl uppercase mb-6 tracking-wide">Shuttle Schedule</h3>
+        <h3 className="font-heading text-xl uppercase mb-6 tracking-wide">{data.timelineLabel || 'Shuttle Schedule'}</h3>
         <div className="grid sm:grid-cols-3 gap-4">
           {data.shuttleDetails.map((item, i) => (
             <div key={i} className="bg-vr-offwhite rounded-lg p-5">
