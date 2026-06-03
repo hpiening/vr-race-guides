@@ -28,6 +28,8 @@ export interface CourseDistance {
   name: string
   mapImageUrl?: string
   mapUrl: string
+  embedUrl?: string
+  stats?: string
 }
 
 export interface Hike {
@@ -125,6 +127,7 @@ export interface EventData {
       parkingMapImageUrl?: string
       shuttleDetails: ScheduleItem[]
       dropOffNote: string
+      courses?: CourseDistance[]
     }
     courseInfo: {
       enabled: boolean

@@ -10,27 +10,46 @@ export default function CourseInfoSection({ data }: Props) {
 
       {/* Course maps */}
       {data.distances.length > 0 && (
-        <div className="grid md:grid-cols-2 gap-6 mb-12">
+        <div className="space-y-6 mb-12">
           {data.distances.map((d, i) => (
             <div key={i} className="bg-vr-cream/5 rounded-lg overflow-hidden border border-vr-cream/10">
-              {d.mapImageUrl && (
+              {/* Header row */}
+              <div className="px-5 py-4 flex justify-between items-center border-b border-vr-cream/10">
+                <div>
+                  <span className="font-heading text-lg uppercase text-vr-cream">{d.name}</span>
+                  {d.stats && (
+                    <span className="font-micro text-xs text-vr-cream/50 ml-3 tracking-wider">{d.stats}</span>
+                  )}
+                </div>
+                <a
+                  href={d.mapUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-micro text-xs tracking-widest uppercase text-vr-amber hover:text-vr-cream transition-colors shrink-0 ml-4"
+                >
+                  View Full Route ↗
+                </a>
+              </div>
+
+              {/* RideWithGPS embed */}
+              {d.embedUrl && (
+                <iframe
+                  src={d.embedUrl}
+                  title={`${d.name} route map`}
+                  style={{ width: '100%', height: '500px', border: 'none', display: 'block' }}
+                  loading="lazy"
+                  scrolling="no"
+                />
+              )}
+
+              {/* Static image fallback */}
+              {!d.embedUrl && d.mapImageUrl && (
                 <img
                   src={d.mapImageUrl}
                   alt={`${d.name} course map`}
                   className="w-full object-cover aspect-[16/9]"
                 />
               )}
-              <div className="p-4 flex justify-between items-center">
-                <span className="font-heading text-base uppercase text-vr-cream">{d.name}</span>
-                <a
-                  href={d.mapUrl}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-micro text-xs tracking-widest uppercase text-vr-amber hover:text-vr-cream transition-colors"
-                >
-                  View Course ↗
-                </a>
-              </div>
             </div>
           ))}
         </div>

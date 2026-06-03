@@ -69,7 +69,9 @@
       "distances": [
         {
           "name": "5K Course",
-          "mapUrl": "https://ridewithgps.com/routes/51714103"
+          "stats": "3.1 mi · +156 ft / -168 ft · Paved loop",
+          "mapUrl": "https://ridewithgps.com/routes/51714103",
+          "embedUrl": "https://ridewithgps.com/embeds?type=route&id=51714103&sampleGraph=true"
         }
       ],
       "aidStations": "One aid station near the halfway point (approximately mile 1.5–1.8) with water, electrolytes, and bathrooms. Cup-free — bring your own vessel.",
@@ -111,7 +113,15 @@
         { "time": "6:00 AM", "label": "Half Marathon starts" },
         { "time": "8:45 AM", "label": "Awards Ceremony" }
       ],
-      "dropOffNote": "Approach via S St Vrain Ave (Hwy 7) and turn onto Manford Avenue toward the fairgrounds. Follow crew to the drop-off area, then exit the parking lot back onto Community Drive heading south toward N St Vrain Ave. Please move quickly to keep traffic flowing for other runners."
+      "dropOffNote": "Approach via S St Vrain Ave (Hwy 7) and turn onto Manford Avenue toward the fairgrounds. Follow crew to the drop-off area, then exit the parking lot back onto Community Drive heading south toward N St Vrain Ave. Please move quickly to keep traffic flowing for other runners.",
+      "courses": [
+        {
+          "name": "Half Marathon Course",
+          "stats": "13.1 mi · +780 ft / -775 ft · Paved road loop",
+          "mapUrl": "https://ridewithgps.com/routes/46375145",
+          "embedUrl": "https://ridewithgps.com/embeds?type=route&id=46375145&sampleGraph=true"
+        }
+      ]
     },
     "spectators": {
       "enabled": true,
