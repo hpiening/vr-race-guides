@@ -2,51 +2,43 @@
 
 interface Props {
   bgImage?: string
-  bgColor?: string
   eventSlug?: string
 }
 
-export default function SectionBreak({ bgImage, bgColor, eventSlug }: Props) {
-  const bg = bgColor || '#1B3A24'
-
+export default function SectionBreak({ bgImage, eventSlug }: Props) {
   return (
     <div
-      className="relative h-28 md:h-36 overflow-hidden flex items-end justify-start"
-      style={{
-        backgroundColor: bg,
-        ...(bgImage && {
-          backgroundImage: `url(${bgImage})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-        }),
-      }}
+      className="relative py-12 md:py-16 px-6 md:px-12 bg-vr-forest overflow-hidden"
+      style={bgImage ? {
+        backgroundImage: `url(${bgImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      } : undefined}
     >
-      {/* Gradient overlay — always present, stronger when there's a bg image */}
-      <div
-        className="absolute inset-0"
-        style={{
-          background: bgImage
-            ? `linear-gradient(to top, ${bg} 0%, ${bg}cc 40%, ${bg}66 100%)`
-            : `linear-gradient(to bottom right, ${bg}ee, ${bg}88)`,
-        }}
-      />
+      {/* Same gradient overlay as hero when a bg image is set */}
+      {bgImage && (
+        <div className="absolute inset-0 bg-vr-forest/70" />
+      )}
 
-      {/* Event illustration — faint watermark */}
+      {/* Pine tree watermark — identical treatment to ScheduleSection */}
       {eventSlug && (
-        <div className="absolute right-0 bottom-0 h-full flex items-end pointer-events-none" aria-hidden="true">
+        <div
+          className="absolute right-0 bottom-0 w-[55%] max-w-2xl opacity-[0.06] pointer-events-none select-none translate-x-[10%] translate-y-[5%]"
+          aria-hidden="true"
+        >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src={`/images/events/${eventSlug}-icon.png`}
             alt=""
-            className="h-full w-auto object-contain object-bottom opacity-[0.08] brightness-0 invert"
+            className="w-full h-auto"
             onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
           />
         </div>
       )}
 
-      {/* Horizontal rule line */}
-      <div className="relative z-10 w-full px-6 md:px-12 pb-4">
-        <div className="h-px w-full opacity-20" style={{ backgroundColor: '#f3e2cc' }} />
+      {/* Subtle cream divider line */}
+      <div className="relative z-10 max-w-4xl mx-auto">
+        <div className="h-px w-full bg-vr-cream opacity-10" />
       </div>
     </div>
   )

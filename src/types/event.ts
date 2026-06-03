@@ -103,7 +103,6 @@ export interface ChallengeEventsData {
 
 export interface SectionBreakConfig {
   bgImage?: string
-  bgColor?: string
 }
 
 export interface WelcomeData {
