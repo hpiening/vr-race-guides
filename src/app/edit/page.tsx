@@ -6,7 +6,13 @@ import { getIdentity, readJson, commitJson } from '@/lib/gitGateway'
 import HeroSection from '@/components/HeroSection'
 import WelcomeSection from '@/components/WelcomeSection'
 import ScheduleSection from '@/components/ScheduleSection'
+import ExpoSection from '@/components/ExpoSection'
+import CourseInfoSection from '@/components/CourseInfoSection'
+import RaceMorningSection from '@/components/RaceMorningSection'
 import SpectatorsSection from '@/components/SpectatorsSection'
+import PostRaceSection from '@/components/PostRaceSection'
+import ChallengeEventsSection from '@/components/ChallengeEventsSection'
+import ExperiencesSection from '@/components/ExperiencesSection'
 import FAQSection from '@/components/FAQSection'
 
 // Guides VR can edit. Y11 scaffolds new guides; add the slug + name here.
@@ -145,15 +151,20 @@ export default function EditPage() {
         <HeroSection event={data} />
         {data.sections.welcome && <WelcomeSection data={data.sections.welcome} basePath="sections.welcome" />}
         {data.sections.schedule && <ScheduleSection data={data.sections.schedule} eventSlug={slug} basePath="sections.schedule" />}
+        {data.sections.expo && <ExpoSection data={data.sections.expo} basePath="sections.expo" />}
+        {data.sections.courseInfo && <CourseInfoSection data={data.sections.courseInfo} basePath="sections.courseInfo" />}
+        {data.sections.raceMorning && <RaceMorningSection data={data.sections.raceMorning} basePath="sections.raceMorning" />}
         {data.sections.spectators && <SpectatorsSection data={data.sections.spectators} basePath="sections.spectators" />}
+        {data.sections.postRace && <PostRaceSection data={data.sections.postRace} basePath="sections.postRace" />}
+        {data.sections.challengeEvents && <ChallengeEventsSection data={data.sections.challengeEvents} basePath="sections.challengeEvents" />}
+        {data.sections.experiences && <ExperiencesSection data={data.sections.experiences} basePath="sections.experiences" />}
         {data.sections.faqs && <FAQSection data={data.sections.faqs} basePath="sections.faqs" />}
       </EditProvider>
 
       <div className="bg-vr-offwhite text-center py-10 px-6">
         <p className="font-body text-sm text-vr-mid max-w-lg mx-auto">
-          Inline editor (beta). Editable sections so far: <strong>Hero, Welcome, Schedule, Spectators, FAQs</strong>.
-          Click any highlighted text to edit; use ↑ ↓ ✕ and “+ Add” to manage lists.
-          More sections are rolling out. Changes go live ~1–2 minutes after you Save.
+          Inline editor. Click any highlighted text to edit; use ↑ ↓ ✕ and “+ Add” to manage lists.
+          Maps, route embeds and the hero image are locked by design. Changes go live ~1–2 minutes after you Save.
         </p>
       </div>
     </div>
