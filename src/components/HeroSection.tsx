@@ -3,28 +3,14 @@ import Image from 'next/image'
 import { EventData } from '@/types/event'
 
 export default function HeroSection({ event }: { event: EventData }) {
-  const isN2S = event.brand === 'n2s'
+  const gradientFrom = 'from-vr-forest'
+  const gradientVia  = 'via-vr-forest/50'
+  const gradientTo   = 'to-vr-forest/20'
 
-  const heroBg       = isN2S ? '#2d1a26' : undefined
-  const gradientFrom = isN2S ? 'from-[#2d1a26]' : 'from-vr-forest'
-  const gradientVia  = isN2S ? 'via-[#2d1a26]/60' : 'via-vr-forest/50'
-  const gradientTo   = isN2S ? 'to-transparent' : 'to-vr-forest/20'
+  const h1Style = { fontSize: 'clamp(4rem, 12vw, 9rem)' }
+  const labelStyle = {}
 
-  const h1Style = isN2S
-    ? {
-        fontFamily: "'Hubiron', 'Georgia', serif",
-        fontWeight: 400,
-        fontSize: 'clamp(3.5rem, 10vw, 8rem)',
-        letterSpacing: '0.02em',
-        lineHeight: 1.05,
-      }
-    : { fontSize: 'clamp(4rem, 12vw, 9rem)' }
-
-  const labelStyle = isN2S
-    ? { fontFamily: "'Avenir', 'Helvetica Neue', sans-serif", fontWeight: 900 }
-    : {}
-
-  const customBg = event.heroBgColor || heroBg
+  const customBg = event.heroBgColor
 
   return (
     <header
@@ -64,7 +50,7 @@ export default function HeroSection({ event }: { event: EventData }) {
           alt={event.logoAlt || 'Race Series Logo'}
           width={160}
           height={60}
-          className={`w-auto brightness-0 invert ${isN2S ? 'h-14' : 'h-8'}`}
+          className="w-auto brightness-0 invert h-8"
         />
       </div>
 

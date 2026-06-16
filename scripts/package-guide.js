@@ -1,6 +1,6 @@
 /**
  * Usage: node scripts/package-guide.js <slug>
- * Example: node scripts/package-guide.js napa-to-sonoma
+ * Example: node scripts/package-guide.js rocky-mountain
  *
  * Takes the shared out/ build and creates a self-contained deploy/<slug>/ folder
  * that can be dragged straight to its own Netlify site.
@@ -12,7 +12,7 @@ const path = require('path')
 const slug = process.argv[2]
 
 if (!slug) {
-  console.error('Error: provide a guide slug. Example: node scripts/package-guide.js napa-to-sonoma')
+  console.error('Error: provide a guide slug. Example: node scripts/package-guide.js rocky-mountain')
   process.exit(1)
 }
 
@@ -70,4 +70,4 @@ fs.writeFileSync(
 
 console.log(`\n✓ deploy/${slug}/ is ready`)
 console.log(`  Drag the deploy/${slug}/ folder to Netlify`)
-console.log(`  Then set the custom domain: racedayguide.runnapatosonoma.com\n`)
+console.log(`  Then set the custom domain for the guide\n`)

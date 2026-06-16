@@ -74,9 +74,9 @@ collections:
             collapsed: true
             required: false
             fields:
-              - { label: "Show this section", name: enabled, widget: boolean, default: false }
-              - { label: "Heading", name: heading, widget: string }
-              - { label: "Body", name: body, widget: text }
+              - { label: "Show this section", name: enabled, widget: boolean, default: false, required: false }
+              - { label: "Heading", name: heading, widget: string, required: false }
+              - { label: "Body", name: body, widget: text, required: false }
               - { label: "Quote", name: quote, widget: text, required: false }
               - { label: "Quote Attribution", name: quoteAttribution, widget: string, required: false }
               - { label: "Closing", name: closing, widget: text, required: false }
@@ -365,30 +365,6 @@ collections:
                   - { label: "Question", name: question, widget: string }
                   - { label: "Answer", name: answer, widget: text }
 
-          # ── Wine Festival (optional — used by Napa to Sonoma) ───────────
-          - label: "Wine Festival"
-            name: wineFestival
-            widget: object
-            collapsed: true
-            required: false
-            fields:
-              - { label: "Show this section", name: enabled, widget: boolean, default: false }
-              - { label: "Date", name: date, widget: string }
-              - { label: "Hours", name: hours, widget: string }
-              - { label: "Location", name: location, widget: string }
-              - { label: "Description", name: description, widget: text }
-              - label: "Tips"
-                name: tips
-                widget: list
-                field: { label: "Tip", name: tip, widget: string }
-              - { label: "Guest Passes", name: guestPasses, widget: string }
-              - { label: "Finish Line VIP", name: finishLineVIP, widget: string, required: false }
-              - label: "Wineries"
-                name: wineries
-                widget: list
-                required: false
-                field: { label: "Winery", name: winery, widget: string }
-
           # ── Challenge Events (optional — used by Rocky Mountain) ────────
           - label: "Challenge Events"
             name: challengeEvents
@@ -396,7 +372,7 @@ collections:
             collapsed: true
             required: false
             fields:
-              - { label: "Show this section", name: enabled, widget: boolean, default: false }
+              - { label: "Show this section", name: enabled, widget: boolean, default: false, required: false }
               - { label: "Intro", name: intro, widget: text, required: false }
               - label: "Events"
                 name: events

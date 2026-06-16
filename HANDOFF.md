@@ -31,7 +31,6 @@ A Next.js 14 static site that renders digital Race Day Guides for Vacation Races
 |---|---|---|
 | `content/events/grand-teton.json` | `grand-teton` | Live, complete |
 | `content/events/rocky-mountain.json` | `rocky-mountain` | Live, complete |
-| `content/events/napa-to-sonoma.json` | `napa-to-sonoma` | Hidden (`"hidden": true`) |
 
 Events with `"hidden": true` are excluded from the homepage index (`src/app/page.tsx` filters them).
 
@@ -60,7 +59,6 @@ content/events/{slug}.json
 {sections.raceMorning.enabled  && <RaceMorningSection data={sections.raceMorning} />}
 {sections.spectators.enabled   && <SpectatorsSection  data={sections.spectators} />}
 {sections.postRace.enabled     && <PostRaceSection    data={sections.postRace} />}
-{sections.wineFestival?.enabled && <WineFestivalSection ... />}
 {sections.challengeEvents?.enabled && <ChallengeEventsSection ... />}
 {sections.experiences.enabled  && <ExperiencesSection data={sections.experiences} />}
 {sections.faqs.enabled         && <FAQSection         data={sections.faqs} />}
@@ -149,7 +147,7 @@ Renders Half Marathon Info. Supports `navLabel`, `parkingMapImageUrl`, RideWithG
 4. Set `"hidden": false` when ready to show on homepage
 5. `git add . && git commit -m "Add {event name}" && git push`
 
-To add optional sections (`challengeEvents`, `wineFestival`, `welcome`), check `src/types/event.ts` for the full type definitions.
+To add optional sections (`challengeEvents`, `welcome`), check `src/types/event.ts` for the full type definitions.
 
 ---
 

@@ -71,18 +71,6 @@ export interface FaqItem {
   answer: string
 }
 
-export interface WineFestivalData {
-  enabled: boolean
-  date: string
-  hours: string
-  location: string
-  description: string
-  tips: string[]
-  guestPasses: string
-  finishLineVIP?: string
-  wineries?: string[]
-}
-
 export interface ChallengeEvent {
   name: string
   tagline?: string
@@ -127,7 +115,6 @@ export interface EventData {
   accentColor: string
   favicon?: string
   hidden?: boolean
-  brand?: 'vr' | 'n2s'
   logo?: string
   logoAlt?: string
   sectionBreaks?: {
@@ -205,7 +192,6 @@ export interface EventData {
       enabled: boolean
       items: FaqItem[]
     }
-    wineFestival?: WineFestivalData
     challengeEvents?: ChallengeEventsData
   }
 }
