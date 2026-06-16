@@ -1,12 +1,17 @@
 'use client'
 import { useState } from 'react'
 import { EventData } from '@/types/event'
+import { useEditOptional } from '@/lib/editContext'
+import EditableText from './edit/EditableText'
+import { ListControls, AddButton } from './edit/ListControls'
 
-type Props = { data: EventData['sections']['schedule']; eventSlug: string }
+type Props = { data: EventData['sections']['schedule']; eventSlug: string; basePath?: string }
 
-export default function ScheduleSection({ data, eventSlug }: Props) {
+export default function ScheduleSection({ data, eventSlug, basePath = 'sections.schedule' }: Props) {
   const [activeDay, setActiveDay] = useState(data.days[0]?.id ?? '')
   const day = data.days.find(d => d.id === activeDay) ?? data.days[0]
+  const editing = !!useEditOptional()?.editing
+  const dp = `${basePath}.days`
 
   return (
     <section id="schedule" className="relative py-16 md:py-24 px-6 md:px-12 bg-vr-forest text-vr-cream overflow-hidden">
@@ -27,7 +32,35 @@ export default function ScheduleSection({ data, eventSlug }: Props) {
         <p className="font-micro text-xs tracking-[0.25em] uppercase text-vr-cream/40 mb-2">Schedule</p>
         <h2 className="font-display text-5xl md:text-6xl uppercase mb-8 text-vr-cream">Schedule</h2>
 
-        {data.days.length > 1 && (
+        {editing && (
+          <div>
+            {data.days.map((d, di) => (
+              <div key={di} className="mb-10 border-b border-vr-cream/10 pb-6">
+                <div className="flex items-center gap-2 mb-1">
+                  <EditableText as="div" className="font-heading text-lg uppercase text-vr-cream flex-1" value={d.label} path={`${dp}.${di}.label`} />
+                  <ListControls path={dp} index={di} count={data.days.length} />
+                </div>
+                <EditableText as="div" className="font-micro text-xs tracking-[0.2em] uppercase text-vr-cream/40 mb-4" value={d.date} path={`${dp}.${di}.date`} />
+                <ol className="space-y-3">
+                  {d.items.map((item, ii) => (
+                    <li key={ii} className="flex gap-4 items-start">
+                      <div className="flex-1">
+                        <EditableText as="div" className="font-label text-xs tracking-[0.2em] uppercase text-vr-floral mb-1" value={item.time} path={`${dp}.${di}.items.${ii}.time`} />
+                        <EditableText as="div" className="font-heading text-base uppercase leading-tight text-vr-cream" value={item.label} path={`${dp}.${di}.items.${ii}.label`} />
+                        <EditableText as="div" className="font-body text-sm text-vr-cream/55 mt-1" value={item.note ?? ''} path={`${dp}.${di}.items.${ii}.note`} />
+                      </div>
+                      <ListControls path={`${dp}.${di}.items`} index={ii} count={d.items.length} />
+                    </li>
+                  ))}
+                </ol>
+                <AddButton path={`${dp}.${di}.items`} item={{ time: '', label: 'New item' }} label="Add item" />
+              </div>
+            ))}
+            <AddButton path={dp} item={{ id: `day-${data.days.length + 1}`, label: 'New Day', date: '', items: [] }} label="Add day" />
+          </div>
+        )}
+
+        {!editing && data.days.length > 1 && (
           <div className="flex gap-0 mb-10 border-b border-vr-cream/15 print:hidden">
             {data.days.map(d => (
               <button
@@ -48,7 +81,7 @@ export default function ScheduleSection({ data, eventSlug }: Props) {
         )}
 
         {/* On screen: the selected day (tabbed) */}
-        {day && (
+        {!editing && day && (
           <div className="print:hidden">
             <p className="font-micro text-xs tracking-[0.2em] uppercase text-vr-cream/40 mb-8">
               {day.date}

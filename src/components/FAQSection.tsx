@@ -4,6 +4,7 @@ import SectionWrapper from './SectionWrapper'
 import { EventData } from '@/types/event'
 import { useEditOptional } from '@/lib/editContext'
 import EditableText from './edit/EditableText'
+import { ListControls, AddButton } from './edit/ListControls'
 
 type Props = { data: EventData['sections']['faqs']; basePath?: string }
 
@@ -33,7 +34,7 @@ export default function FAQSection({ data, basePath = 'sections.faqs' }: Props) 
                     )}
                   </span>
                   {editing ? (
-                    <ListControls ctx={ctx!} path={itemsPath} index={i} count={data.items.length} />
+                    <ListControls path={itemsPath} index={i} count={data.items.length} />
                   ) : (
                     <span
                       className={`shrink-0 text-vr-floral text-xl leading-none transition-transform duration-200 mt-0.5 print:hidden ${open === i ? 'rotate-45' : ''}`}
@@ -57,35 +58,7 @@ export default function FAQSection({ data, basePath = 'sections.faqs' }: Props) 
         })}
       </dl>
 
-      {editing && (
-        <button
-          onClick={() => ctx!.listAdd(itemsPath, { question: 'New question', answer: 'New answer' })}
-          className="mt-6 font-label text-xs tracking-[0.15em] uppercase text-vr-floral border border-vr-floral/40 rounded-full px-4 py-2 hover:bg-vr-floral/10"
-        >
-          + Add FAQ
-        </button>
-      )}
+      <AddButton path={itemsPath} item={{ question: 'New question', answer: 'New answer' }} label="Add FAQ" />
     </SectionWrapper>
-  )
-}
-
-function ListControls({
-  ctx,
-  path,
-  index,
-  count,
-}: {
-  ctx: NonNullable<ReturnType<typeof useEditOptional>>
-  path: string
-  index: number
-  count: number
-}) {
-  const btn = 'text-vr-cream/60 hover:text-vr-cream disabled:opacity-20 px-1.5 text-sm leading-none'
-  return (
-    <span className="shrink-0 flex items-center gap-0.5">
-      <button className={btn} disabled={index === 0} onClick={() => ctx.listMove(path, index, -1)} aria-label="Move up" title="Move up">↑</button>
-      <button className={btn} disabled={index === count - 1} onClick={() => ctx.listMove(path, index, 1)} aria-label="Move down" title="Move down">↓</button>
-      <button className="text-vr-floral/70 hover:text-vr-floral px-1.5 text-sm leading-none" onClick={() => ctx.listRemove(path, index)} aria-label="Remove" title="Remove">✕</button>
-    </span>
   )
 }
