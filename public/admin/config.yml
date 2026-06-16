@@ -22,7 +22,7 @@ public_folder: /images/events
 
 publish_mode: editorial_workflow
 
-site_url: https://vr-race-guides.netlify.app
+site_url: https://guides.vacationraces.com
 
 collections:
   - name: events

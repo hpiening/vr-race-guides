@@ -3,7 +3,7 @@
 **Date:** June 2026  
 **Project owner:** Heather (hpiening@motivsports.co.uk)  
 **Repo:** `hpiening/vr-race-guides` (GitHub)  
-**Live site:** https://vr-race-guides.netlify.app  
+**Live site:** https://guides.vacationraces.com (Netlify; was vr-race-guides.netlify.app)  
 **Local path:** `C:\Users\User\Documents\Claude\Projects\Vacation Races\vr-race-guides`
 
 ---
@@ -154,7 +154,7 @@ To add optional sections (`challengeEvents`, `welcome`), check `src/types/event.
 ## Self-serve CMS (Decap) — `public/admin/`
 
 The VR team edits guide **content** themselves via Decap CMS at
-`https://vr-race-guides.netlify.app/admin` (no code, no JSON). Editing flow:
+`https://guides.vacationraces.com/admin` (no code, no JSON). Editing flow:
 form → Save (draft) → editorial review → publish → Netlify rebuild → live.
 
 - `public/admin/config.yml` — the form definition (one collection: `events`).

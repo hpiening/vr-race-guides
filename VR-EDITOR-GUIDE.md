@@ -9,7 +9,7 @@ designers, no waiting. This page walks you through everything in about five minu
 
 1. You'll receive an email invitation from **Vacation Races Race Guides**. Click the
    link and set a password. (One-time only.)
-2. From then on, go to **https://vr-race-guides.netlify.app/admin** and log in with
+2. From then on, go to **https://guides.vacationraces.com/admin** and log in with
    your email and password.
 
 > Lost the invite or can't log in? Contact the Y11 team and we'll re-send it.
