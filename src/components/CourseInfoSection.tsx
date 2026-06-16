@@ -3,6 +3,8 @@ import SectionWrapper from './SectionWrapper'
 import { EventData } from '@/types/event'
 import { useEditOptional } from '@/lib/editContext'
 import EditableText from './edit/EditableText'
+import EditableUrl from './edit/EditableUrl'
+import RideWithGpsField from './edit/RideWithGpsField'
 import { ListControls, AddButton } from './edit/ListControls'
 
 type Props = { data: EventData['sections']['courseInfo']; basePath?: string }
@@ -52,16 +54,17 @@ export default function CourseInfoSection({ data, basePath = 'sections.courseInf
                   </a>
                 )}
               </div>
-              {!editing && d.embedUrl && (
+              {d.embedUrl && (
                 <>
                   <iframe src={d.embedUrl} title={`${d.name} route map`} style={{ width: '100%', height: '500px', border: 'none', display: 'block' }} loading="lazy" scrolling="no" className="print:hidden" />
-                  <div className="hidden print:block px-5 py-4 text-sm font-body text-vr-cream/70">View route at: {d.mapUrl}</div>
+                  {!editing && <div className="hidden print:block px-5 py-4 text-sm font-body text-vr-cream/70">View route at: {d.mapUrl}</div>}
                 </>
               )}
-              {!editing && !d.embedUrl && d.mapImageUrl && (
+              {!d.embedUrl && d.mapImageUrl && (
                 /* eslint-disable-next-line @next/next/no-img-element */
                 <img src={d.mapImageUrl} alt={`${d.name} course map`} className="w-full object-cover aspect-[16/9]" />
               )}
+              <RideWithGpsField itemPath={`${basePath}.distances.${i}`} />
             </div>
           ))}
         </div>
@@ -94,6 +97,17 @@ export default function CourseInfoSection({ data, basePath = 'sections.courseInf
                 <ListControls path={`${basePath}.infoBlocks`} index={i} count={data.infoBlocks!.length} />
               </div>
               <EditableText as="div" className="font-body text-sm text-vr-cream/80 leading-relaxed whitespace-pre-line" value={block.body} path={`${basePath}.infoBlocks.${i}.body`} />
+              {!editing && block.linkLabel && block.linkUrl && (
+                <a href={block.linkUrl} target="_blank" rel="noopener noreferrer" className="inline-block mt-3 font-label text-xs tracking-[0.2em] uppercase px-5 py-2.5 border border-vr-cream/30 text-vr-cream rounded hover:bg-vr-cream/10 transition-colors">
+                  {block.linkLabel}
+                </a>
+              )}
+              {editing && (
+                <div className="mt-2">
+                  <EditableText as="div" className="font-label text-xs uppercase text-vr-cream/70" value={block.linkLabel ?? ''} path={`${basePath}.infoBlocks.${i}.linkLabel`} placeholder="Button label (optional)" />
+                  <EditableUrl path={`${basePath}.infoBlocks.${i}.linkUrl`} label="Button URL" />
+                </div>
+              )}
             </div>
           ))}
           <AddButton path={`${basePath}.infoBlocks`} item={{ heading: 'Heading', body: 'Body text' }} label="Add info block" />

@@ -18,6 +18,7 @@ type EditCtx = {
   editing: boolean
   value: (path: string) => unknown
   setValue: (path: string, v: unknown) => void
+  setValues: (entries: [string, unknown][]) => void
   listAdd: (path: string, item: unknown) => void
   listRemove: (path: string, index: number) => void
   listMove: (path: string, index: number, dir: -1 | 1) => void
@@ -64,6 +65,17 @@ export function EditProvider({
     [data, onChange],
   )
 
+  // Apply several path/value writes in one update (avoids stale-data clobbering
+  // when two related fields must change together, e.g. a route link + its embed).
+  const setValues = useCallback(
+    (entries: [string, unknown][]) => {
+      let next = data
+      for (const [path, v] of entries) next = setIn(next, parse(path), v)
+      onChange(next)
+    },
+    [data, onChange],
+  )
+
   const listAdd = useCallback(
     (path: string, item: unknown) => {
       const keys = parse(path)
@@ -96,7 +108,7 @@ export function EditProvider({
   )
 
   return (
-    <Ctx.Provider value={{ editing, value, setValue, listAdd, listRemove, listMove }}>
+    <Ctx.Provider value={{ editing, value, setValue, setValues, listAdd, listRemove, listMove }}>
       {children}
     </Ctx.Provider>
   )

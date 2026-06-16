@@ -3,6 +3,7 @@ import MapEmbed from './MapEmbed'
 import { EventData } from '@/types/event'
 import { useEditOptional } from '@/lib/editContext'
 import EditableText from './edit/EditableText'
+import EditableUrl from './edit/EditableUrl'
 import { ListControls, AddButton } from './edit/ListControls'
 
 type Props = { data: EventData['sections']['expo']; basePath?: string }
@@ -38,6 +39,8 @@ export default function ExpoSection({ data, basePath = 'sections.expo' }: Props)
                 {data.locationName}
               </a>
             )}
+            <EditableUrl path={`${basePath}.locationMapUrl`} label="Directions link" />
+            <div className="h-4" />
 
             <div className="space-y-0 mb-2 border-t border-vr-forest/10">
               {data.hours.map((h, i) => (
@@ -76,6 +79,17 @@ export default function ExpoSection({ data, basePath = 'sections.expo' }: Props)
                       <ListControls path={`${basePath}.infoBlocks`} index={i} count={data.infoBlocks!.length} />
                     </div>
                     <EditableText as="div" className="font-body text-sm text-vr-forest/80 leading-relaxed whitespace-pre-line" value={block.body} path={`${basePath}.infoBlocks.${i}.body`} />
+                    {!editing && block.linkLabel && block.linkUrl && (
+                      <a href={block.linkUrl} target="_blank" rel="noopener noreferrer" className="inline-block mt-2 font-micro text-xs tracking-widest uppercase text-vr-sandstone hover:text-vr-forest transition-colors">
+                        {block.linkLabel} ↗
+                      </a>
+                    )}
+                    {editing && (
+                      <div className="mt-2">
+                        <EditableText as="div" className="font-micro text-xs uppercase text-vr-sandstone" value={block.linkLabel ?? ''} path={`${basePath}.infoBlocks.${i}.linkLabel`} placeholder="Link label (optional)" />
+                        <EditableUrl path={`${basePath}.infoBlocks.${i}.linkUrl`} label="Link URL" />
+                      </div>
+                    )}
                   </div>
                 ))}
                 <AddButton path={`${basePath}.infoBlocks`} item={{ heading: 'Heading', body: 'Body text' }} label="Add info block" />
@@ -97,6 +111,7 @@ export default function ExpoSection({ data, basePath = 'sections.expo' }: Props)
             ) : (
               <MapEmbed lat={data.locationLat} lng={data.locationLng} label={data.locationName} mapsUrl={data.locationMapUrl} dark={false} />
             )}
+            <EditableUrl path={`${basePath}.mapImageUrl`} label="Map image URL (optional)" />
           </div>
         </div>
       </div>

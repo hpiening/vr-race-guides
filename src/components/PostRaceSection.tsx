@@ -3,6 +3,7 @@ import SectionWrapper from './SectionWrapper'
 import { EventData } from '@/types/event'
 import { useEditOptional } from '@/lib/editContext'
 import EditableText from './edit/EditableText'
+import EditableUrl from './edit/EditableUrl'
 import { ListControls, AddButton } from './edit/ListControls'
 
 type Props = { data: EventData['sections']['postRace']; basePath?: string }
@@ -52,21 +53,28 @@ export default function PostRaceSection({ data, basePath = 'sections.postRace' }
                 <ListControls path={`${basePath}.infoSections`} index={i} count={data.infoSections!.length} />
               </div>
               <EditableText as="div" className="font-body text-sm text-vr-forest/80 leading-relaxed mb-4 max-w-2xl whitespace-pre-line" value={section.body} path={`${basePath}.infoSections.${i}.body`} />
-              {section.links && section.links.length > 0 && (
+              {editing ? (
+                <div className="mt-4 space-y-2">
+                  {(section.links ?? []).map((link, j) => (
+                    <div key={j} className="flex items-start gap-2 border border-vr-forest/15 rounded p-2">
+                      <div className="flex-1">
+                        <EditableText as="div" className="font-label text-xs uppercase text-vr-forest" value={link.label} path={`${basePath}.infoSections.${i}.links.${j}.label`} placeholder="Button label" />
+                        <EditableUrl path={`${basePath}.infoSections.${i}.links.${j}.url`} />
+                      </div>
+                      <ListControls path={`${basePath}.infoSections.${i}.links`} index={j} count={section.links!.length} />
+                    </div>
+                  ))}
+                  <AddButton path={`${basePath}.infoSections.${i}.links`} item={{ label: 'Button', url: '' }} label="Add link button" />
+                </div>
+              ) : section.links && section.links.length > 0 ? (
                 <div className="flex flex-wrap gap-3 mt-4">
                   {section.links.map((link, j) => (
-                    editing ? (
-                      <span key={j} className="font-label text-xs tracking-[0.2em] uppercase px-4 py-2 border border-vr-forest/20 text-vr-forest rounded">
-                        <EditableText as="span" value={link.label} path={`${basePath}.infoSections.${i}.links.${j}.label`} />
-                      </span>
-                    ) : (
-                      <a key={j} href={link.url} target="_blank" rel="noopener noreferrer" className="font-label text-xs tracking-[0.2em] uppercase px-5 py-2.5 border border-vr-forest/20 text-vr-forest rounded hover:bg-vr-offwhite transition-colors">
-                        {link.label}
-                      </a>
-                    )
+                    <a key={j} href={link.url} target="_blank" rel="noopener noreferrer" className="font-label text-xs tracking-[0.2em] uppercase px-5 py-2.5 border border-vr-forest/20 text-vr-forest rounded hover:bg-vr-offwhite transition-colors">
+                      {link.label}
+                    </a>
                   ))}
                 </div>
-              )}
+              ) : null}
             </div>
           ))}
           <AddButton path={`${basePath}.infoSections`} item={{ heading: 'Heading', body: 'Body text' }} label="Add info section" />

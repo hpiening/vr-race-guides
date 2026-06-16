@@ -4,6 +4,8 @@ import MapEmbed from './MapEmbed'
 import { EventData } from '@/types/event'
 import { useEditOptional } from '@/lib/editContext'
 import EditableText from './edit/EditableText'
+import EditableUrl from './edit/EditableUrl'
+import RideWithGpsField from './edit/RideWithGpsField'
 import { ListControls, AddButton } from './edit/ListControls'
 
 type Props = { data: EventData['sections']['raceMorning']; basePath?: string }
@@ -33,16 +35,17 @@ export default function RaceMorningSection({ data, basePath = 'sections.raceMorn
                     </a>
                   )}
                 </div>
-                {!editing && c.embedUrl && (
+                {c.embedUrl && (
                   <>
                     <iframe src={c.embedUrl} title={`${c.name} route map`} style={{ width: '100%', height: '500px', border: 'none', display: 'block' }} loading="lazy" scrolling="no" className="print:hidden" />
-                    <div className="hidden print:block px-5 py-4 text-sm font-body text-vr-mid">View route at: {c.mapUrl}</div>
+                    {!editing && <div className="hidden print:block px-5 py-4 text-sm font-body text-vr-mid">View route at: {c.mapUrl}</div>}
                   </>
                 )}
-                {!editing && !c.embedUrl && c.mapImageUrl && (
+                {!c.embedUrl && c.mapImageUrl && (
                   /* eslint-disable-next-line @next/next/no-img-element */
                   <img src={c.mapImageUrl} alt={`${c.name} course map`} className="w-full h-auto" />
                 )}
+                <RideWithGpsField itemPath={`${basePath}.courses.${i}`} />
               </div>
             ))}
           </div>
@@ -78,21 +81,25 @@ export default function RaceMorningSection({ data, basePath = 'sections.raceMorn
                   <ListControls path={`${basePath}.parkingOptions`} index={i} count={data.parkingOptions.length} />
                 </div>
                 <EditableText as="div" className="font-body text-sm text-vr-mid leading-relaxed" value={option.details} path={`${basePath}.parkingOptions.${i}.details`} />
+                <EditableUrl path={`${basePath}.parkingOptions.${i}.mapUrl`} label="Directions link" />
               </div>
-              {!editing && (
-                <MapEmbed lat={option.lat} lng={option.lng} label={option.name} mapsUrl={option.mapUrl} zoom={14} />
-              )}
+              <MapEmbed lat={option.lat} lng={option.lng} label={option.name} mapsUrl={option.mapUrl} zoom={14} />
             </div>
           ))}
         </div>
         <AddButton path={`${basePath}.parkingOptions`} item={{ name: 'New lot', details: '', mapUrl: '', lat: 0, lng: 0 }} label="Add parking option" />
       </div>
 
-      {/* Parking map image (display only) */}
-      {!editing && data.parkingMapImageUrl && (
-        <div className="mb-12 rounded-lg overflow-hidden border border-vr-forest/10">
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={data.parkingMapImageUrl} alt="Parking map" className="w-full h-auto" />
+      {/* Parking map image */}
+      {(data.parkingMapImageUrl || editing) && (
+        <div className="mb-12">
+          {data.parkingMapImageUrl && (
+            <div className="rounded-lg overflow-hidden border border-vr-forest/10">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={data.parkingMapImageUrl} alt="Parking map" className="w-full h-auto" />
+            </div>
+          )}
+          <EditableUrl path={`${basePath}.parkingMapImageUrl`} label="Parking map image URL" />
         </div>
       )}
 
