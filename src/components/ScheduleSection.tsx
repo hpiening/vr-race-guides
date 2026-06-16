@@ -28,7 +28,7 @@ export default function ScheduleSection({ data, eventSlug }: Props) {
         <h2 className="font-display text-5xl md:text-6xl uppercase mb-8 text-vr-cream">Schedule</h2>
 
         {data.days.length > 1 && (
-          <div className="flex gap-0 mb-10 border-b border-vr-cream/15">
+          <div className="flex gap-0 mb-10 border-b border-vr-cream/15 print:hidden">
             {data.days.map(d => (
               <button
                 key={d.id}
@@ -47,8 +47,9 @@ export default function ScheduleSection({ data, eventSlug }: Props) {
           </div>
         )}
 
+        {/* On screen: the selected day (tabbed) */}
         {day && (
-          <>
+          <div className="print:hidden">
             <p className="font-micro text-xs tracking-[0.2em] uppercase text-vr-cream/40 mb-8">
               {day.date}
             </p>
@@ -75,8 +76,31 @@ export default function ScheduleSection({ data, eventSlug }: Props) {
                 </li>
               ))}
             </ol>
-          </>
+          </div>
         )}
+
+        {/* In print/PDF: every day expanded — tabs can't be clicked on paper */}
+        <div className="hidden print:block">
+          {data.days.map(d => (
+            <div key={d.id} className="mb-8">
+              <p className="font-heading text-lg uppercase leading-tight text-vr-cream mb-1">{d.label}</p>
+              <p className="font-micro text-xs tracking-[0.2em] uppercase text-vr-cream/40 mb-4">{d.date}</p>
+              <ol className="space-y-0">
+                {d.items.map((item, i) => (
+                  <li key={i} className="flex gap-6">
+                    <div className="pb-4 flex-1">
+                      <p className="font-label text-xs tracking-[0.2em] uppercase text-vr-floral mb-1">{item.time}</p>
+                      <p className="font-heading text-base uppercase leading-tight text-vr-cream">{item.label}</p>
+                      {item.note && (
+                        <p className="font-body text-sm text-vr-cream/55 mt-1 leading-relaxed">{item.note}</p>
+                      )}
+                    </div>
+                  </li>
+                ))}
+              </ol>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )
