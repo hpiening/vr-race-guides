@@ -32,10 +32,23 @@
           "label": "Friday / 5K",
           "date": "July 31, 2026",
           "items": [
-            { "time": "12:00–5:00 PM", "label": "RACE EXPO & BIB PICKUP", "note": "5K and Elk Double runners must pick up bib by 5:00 PM" },
-            { "time": "5:45 PM", "label": "5K RUNNERS LINE UP" },
-            { "time": "6:00 PM", "label": "5K RACE START" },
-            { "time": "7:00 PM", "label": "5K AWARDS CEREMONY" }
+            {
+              "time": "12:00–5:00 PM",
+              "label": "RACE EXPO & BIB PICKUP",
+              "note": "5K and Elk Double runners must pick up bib by 5:00 PM"
+            },
+            {
+              "time": "5:45 PM",
+              "label": "5K RUNNERS LINE UP"
+            },
+            {
+              "time": "6:00 PM",
+              "label": "5K RACE START"
+            },
+            {
+              "time": "7:00 PM",
+              "label": "5K AWARDS CEREMONY"
+            }
           ]
         },
         {
@@ -43,14 +56,39 @@
           "label": "Saturday / Half Marathon",
           "date": "August 1, 2026",
           "items": [
-            { "time": "4:00 AM", "label": "PARKING LOTS OPEN" },
-            { "time": "4:15 AM", "label": "MORNING BIB PICKUP OPENS" },
-            { "time": "4:30 AM", "label": "RAFFLES BEGIN", "note": "Every 5 minutes until 5:30 AM" },
-            { "time": "5:15 AM", "label": "ALL CARS SHOULD BE PARKED" },
-            { "time": "5:45 AM", "label": "RUNNERS LINE UP + LAST CALL FOR GEAR CHECK" },
-            { "time": "6:00 AM", "label": "HALF MARATHON STARTS" },
-            { "time": "8:00 AM", "label": "MERCH TENT OPENS" },
-            { "time": "8:45 AM", "label": "AWARDS CEREMONY" }
+            {
+              "time": "4:00 AM",
+              "label": "PARKING LOTS OPEN"
+            },
+            {
+              "time": "4:15 AM",
+              "label": "MORNING BIB PICKUP OPENS"
+            },
+            {
+              "time": "4:30 AM",
+              "label": "RAFFLES BEGIN",
+              "note": "Every 5 minutes until 5:30 AM"
+            },
+            {
+              "time": "5:15 AM",
+              "label": "ALL CARS SHOULD BE PARKED"
+            },
+            {
+              "time": "5:45 AM",
+              "label": "RUNNERS LINE UP + LAST CALL FOR GEAR CHECK"
+            },
+            {
+              "time": "6:00 AM",
+              "label": "HALF MARATHON STARTS"
+            },
+            {
+              "time": "8:00 AM",
+              "label": "MERCH TENT OPENS"
+            },
+            {
+              "time": "8:45 AM",
+              "label": "AWARDS CEREMONY"
+            }
           ]
         }
       ]
@@ -65,9 +103,18 @@
       "locationLng": -105.498488,
       "mapImageUrl": "https://static.wixstatic.com/media/2f9bfd_7c7e62b7369f4b6cbe4b18b4486141d3~mv2.webp/v1/fill/w_534,h_329,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/Rocky_Expo-Map.webp",
       "hours": [
-        { "label": "Race Expo Hours", "time": "12:00 PM – 5:00 PM" },
-        { "label": "Merch Tent Hours", "time": "12:00 PM – 5:00 PM (Friday) / Opens 8:00 AM Saturday" },
-        { "label": "Bib Pick Up Hours", "time": "12:00 PM – 5:00 PM" }
+        {
+          "label": "Race Expo Hours",
+          "time": "12:00 PM – 5:00 PM"
+        },
+        {
+          "label": "Merch Tent Hours",
+          "time": "12:00 PM – 5:00 PM (Friday) / Opens 8:00 AM Saturday"
+        },
+        {
+          "label": "Bib Pick Up Hours",
+          "time": "12:00 PM – 5:00 PM"
+        }
       ],
       "notes": [
         "5K and Elk Double runners must pick up their bib by 5:00 PM on Friday.",
@@ -98,10 +145,23 @@
       "heading": "5K Info",
       "navLabel": "5K Info",
       "schedule": [
-        { "time": "12:00–5:00 PM", "label": "RACE EXPO & BIB PICKUP", "note": "Must pick up by 5:00 PM" },
-        { "time": "5:45 PM", "label": "5K RUNNERS LINE UP" },
-        { "time": "6:00 PM", "label": "5K RACE START" },
-        { "time": "7:00 PM", "label": "5K AWARDS CEREMONY" }
+        {
+          "time": "12:00–5:00 PM",
+          "label": "RACE EXPO & BIB PICKUP",
+          "note": "Must pick up by 5:00 PM"
+        },
+        {
+          "time": "5:45 PM",
+          "label": "5K RUNNERS LINE UP"
+        },
+        {
+          "time": "6:00 PM",
+          "label": "5K RACE START"
+        },
+        {
+          "time": "7:00 PM",
+          "label": "5K AWARDS CEREMONY"
+        }
       ],
       "distances": [
         {
@@ -175,11 +235,26 @@
         }
       ],
       "shuttleDetails": [
-        { "time": "4:00 AM", "label": "Parking lots open" },
-        { "time": "5:15 AM", "label": "All cars should be parked" },
-        { "time": "5:45 AM", "label": "Runners line up, last call for gear check" },
-        { "time": "6:00 AM", "label": "Half Marathon starts" },
-        { "time": "8:45 AM", "label": "Awards Ceremony" }
+        {
+          "time": "4:00 AM",
+          "label": "Parking lots open"
+        },
+        {
+          "time": "5:15 AM",
+          "label": "All cars should be parked"
+        },
+        {
+          "time": "5:45 AM",
+          "label": "Runners line up, last call for gear check"
+        },
+        {
+          "time": "6:00 AM",
+          "label": "Half Marathon starts"
+        },
+        {
+          "time": "8:45 AM",
+          "label": "Awards Ceremony"
+        }
       ],
       "dropOffNote": "Approach via S St Vrain Ave (Hwy 7) and turn onto Manford Avenue toward the fairgrounds. Follow crew to the drop-off area, then exit the parking lot back onto Community Drive heading south toward N St Vrain Ave. Please move quickly to keep traffic flowing for other runners.",
       "courses": [
@@ -258,10 +333,30 @@
       "enabled": true,
       "finishLineInfo": "The finish line is on the south shore of Lake Estes near the Stanley Ball Fields. Post-race recovery bags include snacks, bananas, and chocolate milk. Merch tent opens at 8:00 AM. Course record holders receive a free race entry every year their record stands!",
       "courseRecords": [
-        { "category": "Overall Male", "name": "David Cardenas", "time": "1:14:53", "year": "2021" },
-        { "category": "Overall Female", "name": "Chelsea Bennis", "time": "1:29:03", "year": "2016" },
-        { "category": "Masters Male", "name": "Gerald Romera", "time": "1:26:59", "year": "2015" },
-        { "category": "Masters Female", "name": "Ruby Bode", "time": "1:37:16", "year": "2022" }
+        {
+          "category": "Overall Male",
+          "name": "David Cardenas",
+          "time": "1:14:53",
+          "year": "2021"
+        },
+        {
+          "category": "Overall Female",
+          "name": "Chelsea Bennis",
+          "time": "1:29:03",
+          "year": "2016"
+        },
+        {
+          "category": "Masters Male",
+          "name": "Gerald Romera",
+          "time": "1:26:59",
+          "year": "2015"
+        },
+        {
+          "category": "Masters Female",
+          "name": "Ruby Bode",
+          "time": "1:37:16",
+          "year": "2022"
+        }
       ],
       "infoSections": [
         {
@@ -280,15 +375,24 @@
           "heading": "Results & Photos",
           "body": "Live results will be hosted online by Laurel. Results are not official until all runners have crossed the finish line and been reviewed by the event director. Questions about your placement? Email timing@brooksee.com.\n\nTop finisher but missed the awards ceremony? You can request to have your place medal shipped to you.\n\nNew for 2026 — FinisherPix will be at each event to capture your race memories. Photos are available within 24–48 hours post-event. The FinisherPix Photo Pack includes all photos in all digital formats. Search for your photos by last name or bib number.",
           "links": [
-            { "label": "2026 Race Photos", "url": "http://finisherpix.com/en/event/10680" },
-            { "label": "Results", "url": "https://www.brooksee.com/vrm/results" }
+            {
+              "label": "2026 Race Photos",
+              "url": "http://finisherpix.com/en/event/10680"
+            },
+            {
+              "label": "Results",
+              "url": "https://www.brooksee.com/vrm/results"
+            }
           ]
         },
         {
           "heading": "iTab — Personalize Your Medal",
           "body": "Our partner iTab provides custom-engraved plates with your name and finishing time that clip onto your medal ribbon. You can pre-order before race day — they will be sent to you automatically after you finish. If you missed out, you can still order one later for just $15, including shipping.",
           "links": [
-            { "label": "Order iTab", "url": "https://www.itab.us.com/product/vacation-races/" }
+            {
+              "label": "Order iTab",
+              "url": "https://www.itab.us.com/product/vacation-races/"
+            }
           ]
         },
         {
@@ -362,11 +466,41 @@
         }
       ],
       "hikes": [
-        { "name": "Emerald Lake Trail", "distance": "3.5 Miles RT", "elevation": "700+ ft", "difficulty": "Moderate", "url": "https://www.alltrails.com/trail/us/colorado/emerald-lake-trail" },
-        { "name": "Bear Lake Loop", "distance": "0.8 Miles", "elevation": "Minimal", "difficulty": "Easy", "url": "https://www.nps.gov/romo/planyourvisit/bearlake.htm" },
-        { "name": "Nymph Lake", "distance": "0.9 Miles RT", "elevation": "225 ft", "difficulty": "Easy", "url": "https://www.nps.gov/romo/planyourvisit/nymphlake.htm" },
-        { "name": "Lumpy Ridge Loop", "distance": "11 Miles", "elevation": "Sweeping views", "difficulty": "Moderate", "url": "https://www.alltrails.com/trail/us/colorado/lumpy-ridge-loop" },
-        { "name": "Hallett Peak", "distance": "10.5 Miles RT", "elevation": "2,838 ft", "difficulty": "Strenuous", "url": "https://www.alltrails.com/trail/us/colorado/hallett-peak-trail" }
+        {
+          "name": "Emerald Lake Trail",
+          "distance": "3.5 Miles RT",
+          "elevation": "700+ ft",
+          "difficulty": "Moderate",
+          "url": "https://www.alltrails.com/trail/us/colorado/emerald-lake-trail"
+        },
+        {
+          "name": "Bear Lake Loop",
+          "distance": "0.8 Miles",
+          "elevation": "Minimal",
+          "difficulty": "Easy",
+          "url": "https://www.nps.gov/romo/planyourvisit/bearlake.htm"
+        },
+        {
+          "name": "Nymph Lake",
+          "distance": "0.9 Miles RT",
+          "elevation": "225 ft",
+          "difficulty": "Easy",
+          "url": "https://www.nps.gov/romo/planyourvisit/nymphlake.htm"
+        },
+        {
+          "name": "Lumpy Ridge Loop",
+          "distance": "11 Miles",
+          "elevation": "Sweeping views",
+          "difficulty": "Moderate",
+          "url": "https://www.alltrails.com/trail/us/colorado/lumpy-ridge-loop"
+        },
+        {
+          "name": "Hallett Peak",
+          "distance": "10.5 Miles RT",
+          "elevation": "2,838 ft",
+          "difficulty": "Strenuous",
+          "url": "https://www.alltrails.com/trail/us/colorado/hallett-peak-trail"
+        }
       ],
       "sights": [
         {
@@ -424,7 +558,7 @@
       "enabled": true,
       "items": [
         {
-          "question": "If I can't pick up my bib on Friday at the pre-race expo, can I pick it up race morning?",
+          "question": "If I can't pick up my bib on Friday at the pre-race expo, can I pick it up race morning? YES NOW",
           "answer": "Yes, for the Half Marathon only. There will be a bib pickup tent near the start line. It will open at 4:15 AM race morning. 5K and Elk Double runners must pick up their bib at the expo on Friday."
         },
         {
