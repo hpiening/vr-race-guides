@@ -16,13 +16,13 @@ export default function FAQSection({ data }: Props) {
           <div key={i}>
             <dt>
               <button
-                className="w-full flex justify-between items-start gap-4 py-5 text-left"
+                className="faq-q-btn w-full flex justify-between items-start gap-4 py-5 text-left"
                 onClick={() => setOpen(open === i ? null : i)}
               >
                 <span className="font-heading text-base md:text-lg uppercase leading-tight text-vr-cream">
                   {item.question}
                 </span>
-                <span className={`shrink-0 text-vr-floral text-xl leading-none transition-transform duration-200 mt-0.5 ${open === i ? 'rotate-45' : ''}`}>
+                <span className={`shrink-0 text-vr-floral text-xl leading-none transition-transform duration-200 mt-0.5 print:hidden ${open === i ? 'rotate-45' : ''}`}>
                   +
                 </span>
               </button>

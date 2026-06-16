@@ -179,6 +179,10 @@ body {
   /* Show all FAQ answers */
   .hidden.print\:block { display: block !important; }
 
+  /* FAQ questions are rendered inside <button>, which the rule above hides.
+     Re-show them so the exported PDF includes the questions, not just the answers. */
+  .faq-q-btn { display: flex !important; }
+
   /* Expand iframe placeholders */
   iframe { display: none !important; }
 
