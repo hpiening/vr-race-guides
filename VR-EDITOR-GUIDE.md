@@ -1,93 +1,76 @@
 # Editing Your Race Guides — A Quick Guide for the VR Team
 
-Welcome! You can now edit the content of your race guides yourself — no code, no
-designers, no waiting. This page walks you through everything in about five minutes.
+You can edit your race guides **directly on the page** — see the guide as it really
+looks, click the text you want to change, and hit Save. No code, no designers, no
+waiting. Here's everything in about five minutes.
 
 ---
 
-## 1. Logging in
+## 1. Signing in
 
-1. You'll receive an email invitation from **Vacation Races Race Guides**. Click the
-   link and set a password. (One-time only.)
-2. From then on, go to **https://guides.vacationraces.com/admin** and log in with
-   your email and password.
+1. You'll get an email invitation from **Vacation Races Race Guides**. Click the link
+   and set a password (one time only).
+2. After that, go to **https://guides.vacationraces.com/edit** and you'll be signed in
+   automatically.
 
-> Lost the invite or can't log in? Contact the Y11 team and we'll re-send it.
-
----
-
-## 2. Finding a guide
-
-After logging in you'll see a list of **Race Guides** (Rocky Mountain, etc.).
-Click any guide to open it. Each guide is one long form, broken into collapsible
-sections that mirror the live page:
-
-```
-Welcome · Schedule · Expo · Course Info · Race Morning ·
-Spectators · Post-Race · Challenge Events · Experiences · FAQs
-```
-
-Click a section heading to expand or collapse it. As you type, the **preview pane on
-the right** updates so you can see your changes immediately.
+> Can't sign in? Contact the Y11 team and we'll re-send your invite.
 
 ---
 
-## 3. Making an edit
+## 2. Opening a guide
 
-Everything is plain text fields. A few examples:
+- Go to **https://guides.vacationraces.com/edit** and pick a guide, **or**
+- Go straight to one, e.g. **/edit/?slug=rocky-mountain**
 
-| To change… | Do this |
-|---|---|
-| A schedule time | Open **Schedule → Days → (a day) → Schedule Items**, edit the Time/Label |
-| An FAQ answer | Open **FAQs → FAQ Items**, edit the Answer |
-| Course details | Open **Course Info** or **Race Morning → Info Blocks** |
-| Add an item to a list | Scroll to the list, click **"Add"** at the bottom |
-| Reorder list items | Drag them by the handle on the left |
-| Hide a whole section | Turn off its **"Show this section"** toggle |
+The guide opens in edit mode — it looks just like the live page, with editable areas
+gently highlighted.
 
-Tip: lists (schedule items, FAQs, info blocks) are collapsed by default and show a
-short summary. Click one to expand it.
+---
+
+## 3. Editing
+
+- **Text:** click any highlighted text (headings, schedule items, FAQs, course info,
+  descriptions…) and type. The page updates as you go.
+- **Lists** (FAQs, schedule items, parking, course records, hikes, restaurants, etc.):
+  - **+ Add** button adds a new item
+  - **↑ / ↓** reorder
+  - **✕** removes an item
+- **Course route maps:** under each map there's a **"RideWithGPS route link"** box.
+  Paste a route link (e.g. `ridewithgps.com/routes/51714103`) and the map updates.
+- **Buttons / links:** in edit mode each button shows a small **"Link URL"** box —
+  change where it points.
+- **Parking map:** paste a new **"Parking map image URL"** to swap the parking map.
 
 ---
 
 ## 4. Saving & publishing
 
-This system uses a simple review flow so nothing goes live by accident:
+1. Make your edits (the bar shows **Unsaved** while you have changes).
+2. Click **Save & publish** (top-right).
+3. Your changes go **live within 1–2 minutes**.
 
-1. Make your edits.
-2. Click **Save** — this stores your changes as a **draft**.
-3. When you're happy, set the status to **"Ready"** (top of the editor).
-4. The **Y11 team gives the final publish**. Once published, your changes are **live
-   within 1–2 minutes** at the guide's web address.
-
-You can leave something as a draft and come back to it later — drafts are saved.
+If you see **Error** on save, it usually means someone else changed the guide while you
+had it open — just reload and re-apply your edit, or contact Y11.
 
 ---
 
 ## 5. What you can edit vs. what's locked
 
-- ✅ **You can edit:** all content — schedules, FAQs, course info, expo details,
-  experiences, links, and copy throughout.
-- 🔒 **Locked (on purpose):** the design and branding — hero image, colours, logo,
-  fonts, layout, the page address (URL), and map coordinates. These are kept
-  consistent across every guide so they always look right and on-brand. You won't see
-  these fields in the editor.
+- ✅ **You can edit:** all text, all lists, course route links, button links, and the
+  parking map image.
+- 🔒 **Locked (on purpose):** the hero image, brand, colours, fonts, layout, and the
+  page address. These keep every guide consistent and on-brand.
 
-Need a design change, a brand-new guide created, or a new section type? That's a quick
-job for the Y11 team — just send us a note (see below).
+Need a locked item changed, a brand-new guide created, or a new section type? That's a
+quick job for the Y11 team — just send us a note.
 
 ---
 
 ## 6. Reporting a problem or requesting a change
 
-- **Content you can fix yourself** → just edit it here.
-- **A bug, a design change, or a new guide** → contact the Y11 team with:
-  - which guide,
-  - which section,
-  - and what you'd like changed.
-
-We'll triage it and turn fixes around quickly (critical display issues within a day or
-two). Because every guide runs off one shared system, a fix applies everywhere at once.
+- **Content you can fix yourself** → edit it here.
+- **A bug, a locked-item change, or a new guide** → contact the Y11 team with the guide
+  name, the section, and what you'd like changed. Fixes apply across all guides at once.
 
 ---
 

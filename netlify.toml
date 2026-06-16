@@ -8,9 +8,10 @@
 [build.environment]
   NODE_VERSION = "20"
 
-# Netlify Identity + Git Gateway for Decap CMS
-[[headers]]
-  for = "/admin/*"
-  [headers.values]
-    X-Frame-Options = "SAMEORIGIN"
-    X-Content-Type-Options = "nosniff"
+# The old Decap CMS at /admin was replaced by the inline editor at /edit.
+# Redirect any old /admin links to the editor.
+[[redirects]]
+  from = "/admin/*"
+  to = "/edit/"
+  status = 301
+  force = true

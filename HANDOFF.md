@@ -151,34 +151,42 @@ To add optional sections (`challengeEvents`, `welcome`), check `src/types/event.
 
 ---
 
-## Self-serve CMS (Decap) — `public/admin/`
+## Self-serve inline editor — `/edit`
 
-The VR team edits guide **content** themselves via Decap CMS at
-`https://guides.vacationraces.com/admin` (no code, no JSON). Editing flow:
-form → Save (draft) → editorial review → publish → Netlify rebuild → live.
+VR edits guide content **on the real page** at `https://guides.vacationraces.com/edit`
+(`/edit/?slug=<slug>`). Flow: sign in (Netlify Identity, email invite) → click text /
+manage lists → **Save & publish** → commit to GitHub via Git Gateway → Netlify rebuild
+→ live in ~1–2 min. No GitHub accounts needed for editors. (The old Decap CMS at
+`/admin` was retired; `netlify.toml` 301-redirects `/admin/*` → `/edit/`.)
 
-- `public/admin/config.yml` — the form definition (one collection: `events`).
-- `public/admin/index.html` — loads Decap + a branded live-preview template.
-- `VR-EDITOR-GUIDE.md` (repo root) — the one-page guide for VR editors.
+### How it works
+- `src/lib/gitGateway.ts` — reads/commits a guide's JSON via Git Gateway using the
+  editor's Identity JWT (relative `/.netlify/git/...`, so it's domain-agnostic). Handles
+  the 409 conflict (someone else committed) with a clear "reload" error.
+- `src/lib/editContext.tsx` — controlled `EditProvider`; `value`/`setValue`/`setValues`
+  (atomic multi-field) + list `add`/`remove`/`move` by dotted path.
+- `src/components/edit/` — `EditableText` (inline auto-grow field), `ListControls`,
+  `AddButton`, `EditableUrl`, `RideWithGpsField` (paste a route link → rebuilds embed).
+- `src/app/edit/page.tsx` — login gate, guide picker, Save bar, renders every section
+  inside the provider.
+- `src/components/NetlifyIdentityRedirect.tsx` — loads the Identity widget site-wide so
+  invite links (`/#invite_token=…`) work; sends fresh logins to `/edit`.
 
-**⚠️ CRITICAL maintenance rule — schema parity.** Decap **strips any field not
-declared in `config.yml`** when an editor saves. `config.yml` must therefore cover
-**every** field in `src/types/event.ts`. When you add/rename a field in `event.ts`,
-update `config.yml` in the **same change**, or VR edits will silently delete data.
-Design/identity fields VR must not touch (hero, colours, brand, logo, slug,
-coordinates, embed URLs, `sectionBreaks`) are declared as `widget: hidden` — this
-hides them from the UI while preserving their values on save.
+### Key property — public pages are unaffected
+Each section component takes an optional `basePath` and wraps editable text in
+`<EditableText>`. **Outside an `EditProvider` (i.e. on the public guide pages),
+`useEditOptional()` returns null and everything renders as plain read-only text.** So
+editing support adds zero behaviour to the live guides.
 
-Verify parity by walking each `content/events/*.json` and confirming every key is
-either declared or nested under a `hidden` widget (all three guides pass as of this
-writing).
+**⚠️ Maintenance rule:** when you add a field to `src/types/event.ts` and want VR to edit
+it, wrap it in `<EditableText path="…">` (and add list controls if it's a list) in the
+relevant section, using a path relative to the section's `basePath`. Locked-by-design
+fields (hero image, slug, brand) simply have no editable wrapper.
 
-Setup still required to go live for VR:
-1. Enable **Netlify Identity** (invite-only) + **Git Gateway** on the Netlify site.
-   ⚠️ If Identity isn't available, swap to **Sveltia CMS** (same `config.yml`, GitHub auth).
-2. Invite VR users via Netlify Identity.
-3. `create`/`delete` are currently `false` — VR edits existing guides only. Y11
-   scaffolds new guides (hero art, brand assets, icons), then VR populates content.
+### Setup state
+Netlify Identity (invite-only) + Git Gateway are enabled. Editors are invited via the
+Netlify **Identity** tab. New guides are scaffolded by Y11 (hero art, brand assets,
+icons), then VR fills in content via `/edit`.
 
 ## RideWithGPS embeds
 
