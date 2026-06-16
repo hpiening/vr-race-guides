@@ -1,6 +1,7 @@
 'use client'
 import Image from 'next/image'
 import { EventData } from '@/types/event'
+import EditableText from './edit/EditableText'
 
 export default function HeroSection({ event }: { event: EventData }) {
   const gradientFrom = 'from-vr-forest'
@@ -65,21 +66,21 @@ export default function HeroSection({ event }: { event: EventData }) {
           className="font-display text-vr-white uppercase leading-none"
           style={h1Style}
         >
-          {event.name}
+          <EditableText as="span" value={event.name} path="name" />
         </h1>
         <div className="flex items-center gap-3 mt-4 flex-wrap">
           <span
             className="text-vr-cream text-base md:text-lg tracking-widest uppercase"
             style={labelStyle}
           >
-            {event.tagline}
+            <EditableText as="span" value={event.tagline} path="tagline" />
           </span>
           <span className="text-vr-cream/40">&#183;</span>
           <span
             className="text-vr-cream text-base md:text-lg tracking-widest uppercase"
             style={labelStyle}
           >
-            {event.dates}
+            <EditableText as="span" value={event.dates} path="dates" />
           </span>
         </div>
       </div>
