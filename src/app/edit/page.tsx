@@ -26,15 +26,34 @@ export default function EditPage() {
   const [saveErr, setSaveErr] = useState('')
 
   // ── Netlify Identity ──────────────────────────────────────────────────
+  // The widget script is loaded site-wide and may not be ready (or finished
+  // initialising) the instant this page mounts, so poll for it, then resolve
+  // the session via the init event, currentUser(), and a fallback read.
   useEffect(() => {
-    const id = getIdentity()
-    if (!id) { setUser(null); return }
-    const refresh = () => setUser(id.currentUser() ?? null)
-    id.on('init', () => refresh())
-    id.on('login', () => { refresh(); id.close() })
-    id.on('logout', () => setUser(null))
-    const cur = id.currentUser()
-    if (cur) setUser(cur)
+    let cancelled = false
+    let fallback: ReturnType<typeof setTimeout>
+
+    const attach = (id: NonNullable<ReturnType<typeof getIdentity>>) => {
+      const refresh = () => { if (!cancelled) setUser(id.currentUser() ?? null) }
+      id.on('init', (u?: unknown) => { if (!cancelled) setUser((u as { email?: string }) ?? null) })
+      id.on('login', () => { refresh(); id.close() })
+      id.on('logout', () => { if (!cancelled) setUser(null) })
+      // If init already fired before we attached, currentUser() is reliable;
+      // resolve the logged-out-already-initialised case after a short settle.
+      if (id.currentUser()) refresh()
+      else fallback = setTimeout(refresh, 1200)
+    }
+
+    const existing = getIdentity()
+    if (existing) { attach(existing); return () => { cancelled = true; clearTimeout(fallback) } }
+
+    let tries = 0
+    const poll = setInterval(() => {
+      const id = getIdentity()
+      if (id) { clearInterval(poll); attach(id) }
+      else if (++tries > 40) { clearInterval(poll); if (!cancelled) setUser(null) }
+    }, 250)
+    return () => { cancelled = true; clearInterval(poll); clearTimeout(fallback) }
   }, [])
 
   // ── read ?slug= ───────────────────────────────────────────────────────
