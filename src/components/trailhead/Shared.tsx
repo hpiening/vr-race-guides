@@ -1,4 +1,5 @@
 import { ReactNode } from 'react'
+import { StatTile } from '@/types/event'
 
 /**
  * Shared presentational pieces for the Trailhead theme's public (view-mode)
@@ -53,6 +54,55 @@ export function StatChips({ stats, dark = true }: { stats?: string; dark?: boole
           {p}
         </span>
       ))}
+    </div>
+  )
+}
+
+/** Big-number stat tile grid (2 cols, hairline dividers) — the design's signature stat block. */
+export function StatTiles({ tiles, className = '' }: { tiles?: StatTile[]; className?: string }) {
+  if (!tiles || tiles.length === 0) return null
+  return (
+    <div className={`grid grid-cols-2 gap-px bg-vr-cream/[0.16] border border-vr-cream/[0.16] rounded-lg overflow-hidden ${className}`}>
+      {tiles.map((t, i) => (
+        <div key={i} className="bg-vr-deep px-5 py-6">
+          <div className="font-display text-vr-cream leading-none" style={{ fontSize: '38px' }}>{t.value}</div>
+          <div className="font-micro uppercase text-vr-sky mt-2" style={{ fontSize: '10px', letterSpacing: '0.12em' }}>{t.label}</div>
+        </div>
+      ))}
+    </div>
+  )
+}
+
+/** Image frame — renders a real image if `src` is set, else a hatched photo placeholder (design comp style). */
+export function PhotoFrame({
+  src,
+  alt,
+  label,
+  ratio = '4 / 3',
+  dark = false,
+  className = '',
+}: {
+  src?: string
+  alt?: string
+  label: string
+  ratio?: string
+  dark?: boolean
+  className?: string
+}) {
+  if (src) {
+    return (
+      <div className={`overflow-hidden ${className}`} style={{ aspectRatio: ratio }}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={src} alt={alt || label} className="w-full h-full object-cover block" />
+      </div>
+    )
+  }
+  const hatch = dark
+    ? 'repeating-linear-gradient(135deg,#2c4d3a,#2c4d3a 14px,#284635 14px,#284635 28px)'
+    : 'repeating-linear-gradient(135deg,#ece0cd,#ece0cd 12px,#e4d5be 12px,#e4d5be 24px)'
+  return (
+    <div className={`tl-photoph flex items-center justify-center ${className}`} style={{ aspectRatio: ratio, background: hatch }}>
+      <span className="font-micro uppercase" style={{ fontSize: '11px', letterSpacing: '0.14em', color: dark ? 'var(--vr-sky)' : '#313832' }}>{label}</span>
     </div>
   )
 }

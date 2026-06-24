@@ -13,9 +13,23 @@ export default function WelcomeSection({ data, basePath = 'sections.welcome', th
     return (
       <section className="bg-vr-offwhite px-6 md:px-12 py-20 md:py-[100px]">
         <div className="max-w-[1180px] mx-auto grid gap-12 md:gap-16 md:grid-cols-[0.95fr_1.25fr] items-start">
-          <h2 className="font-display uppercase text-vr-forest m-0 leading-[0.9]" style={{ fontSize: 'clamp(40px,5.4vw,76px)' }}>
-            <EditableText as="span" value={data.heading} path={`${basePath}.heading`} />
-          </h2>
+          {(() => {
+            const words = data.heading.trim().split(/\s+/)
+            const last = words.length > 1 ? words.pop()! : ''
+            const eyebrow = words.join(' ')
+            return (
+              <div>
+                {last && (
+                  <div className="leading-[0.9] mb-0.5">
+                    <span className="font-accent text-vr-sky" style={{ fontSize: 'clamp(22px,2.4vw,30px)' }}>{eyebrow}</span>
+                  </div>
+                )}
+                <h2 className="font-display uppercase text-vr-forest m-0 leading-[0.9]" style={{ fontSize: 'clamp(40px,5.4vw,76px)' }}>
+                  {last || data.heading}
+                </h2>
+              </div>
+            )
+          })()}
 
           <div>
             <div className="font-body text-vr-forest leading-[1.7] mb-6 whitespace-pre-line" style={{ fontSize: '18px' }}>

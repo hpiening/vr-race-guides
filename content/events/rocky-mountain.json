@@ -15,6 +15,25 @@
     "afterChallengeEvents": {},
     "afterExperiences": {}
   },
+  "partners": {
+    "enabled": true,
+    "items": [
+      "Honey Stinger",
+      "That's It",
+      "Runna",
+      "Kate's Real Food",
+      "Runseek",
+      "Rowdy Trails",
+      "Laurel Timing",
+      "FinisherPix",
+      "Wander Project",
+      "Grüns",
+      "Hotel Planner",
+      "Siete",
+      "Neuma",
+      "Dip"
+    ]
+  },
   "sections": {
     "welcome": {
       "enabled": true,
@@ -169,7 +188,13 @@
           "name": "5K Course",
           "stats": "3.1 mi · +156 ft / -168 ft · Paved loop",
           "mapUrl": "https://ridewithgps.com/routes/51714103",
-          "embedUrl": "https://ridewithgps.com/embeds?type=route&id=51714103&sampleGraph=true"
+          "embedUrl": "https://ridewithgps.com/embeds?type=route&id=51714103&sampleGraph=true",
+          "statTiles": [
+            { "value": "3.1", "label": "Miles" },
+            { "value": "+156 ft", "label": "Elevation" },
+            { "value": "1", "label": "Aid Station" },
+            { "value": "6:00 PM", "label": "Friday Start" }
+          ]
         }
       ],
       "aidStations": "",
@@ -187,7 +212,7 @@
         },
         {
           "heading": "Spectator Info",
-          "body": "To help reduce vehicle traffic on the course, spectators are discouraged from driving or stopping along the race route to cheer on runners. Spectators are welcome to watch the race start and join us at the finish line on the south shore of Lake Estes. Please park in an official event lot and walk toward the Stanley Ball Fields. From there, walk through the center of the ball fields and continue on the sidewalk past the dog park to access the pedestrian tunnel.\n\nDo not cross over Highway 36. Use the tunnel that goes underneath the highway to safely reach the finish area. Test Test "
+          "body": "To help reduce vehicle traffic on the course, spectators are discouraged from driving or stopping along the race route to cheer on runners. Spectators are welcome to watch the race start and join us at the finish line on the south shore of Lake Estes. Please park in an official event lot and walk toward the Stanley Ball Fields. From there, walk through the center of the ball fields and continue on the sidewalk past the dog park to access the pedestrian tunnel.\n\nDo not cross over Highway 36. Use the tunnel that goes underneath the highway to safely reach the finish area."
         },
         {
           "heading": "Rolling Start / Wave Start",
@@ -263,7 +288,13 @@
           "name": "Half Marathon Course",
           "stats": "13.1 mi · +780 ft / -775 ft · Paved road loop",
           "mapUrl": "https://ridewithgps.com/routes/46375145",
-          "embedUrl": "https://ridewithgps.com/embeds?type=route&id=46375145&sampleGraph=true"
+          "embedUrl": "https://ridewithgps.com/embeds?type=route&id=46375145&sampleGraph=true",
+          "statTiles": [
+            { "value": "13.1", "label": "Miles · Half" },
+            { "value": "+780 ft", "label": "Elevation Gain" },
+            { "value": "5", "label": "Aid Stations" },
+            { "value": "4 hr", "label": "Time Limit" }
+          ]
         }
       ],
       "infoBlocks": [
@@ -423,6 +454,11 @@
           "tagline": "5K + Half Marathon · July 31 – August 1, 2026",
           "description": "The Elk Double is for runners who want to take on two distances in one weekend. Run the 5K on Friday evening and the Half Marathon on Saturday morning. Finishers earn a special Elk Double medal (in addition to each race medal) and one exclusive swag item of their choice. You'll use the same bib for both events.",
           "totalMileage": "16.2 miles",
+          "statTiles": [
+            { "value": "16.2", "label": "Total Miles" },
+            { "value": "3", "label": "Medals" },
+            { "value": "1", "label": "Bib · Both Races" }
+          ],
           "dates": "July 31 – August 1, 2026",
           "includes": [
             "Race medal and shirt for each event (5K and Half Marathon)",
@@ -559,7 +595,7 @@
       "enabled": true,
       "items": [
         {
-          "question": "If I can't pick up my bib on Friday at the pre-race expo, can I pick it up race morning? YES NOW",
+          "question": "If I can't pick up my bib on Friday at the pre-race expo, can I pick it up race morning?",
           "answer": "Yes, for the Half Marathon only. There will be a bib pickup tent near the start line. It will open at 4:15 AM race morning. 5K and Elk Double runners must pick up their bib at the expo on Friday."
         },
         {
@@ -601,10 +637,6 @@
         {
           "question": "What happens if I start in the back but want to compete for an overall award?",
           "answer": "All masters and overall awards are based on gun time. If you intend to compete for these awards, you should be in the first (Blue) wave. If you start further back, your time does not officially start until you cross the starting line, but overall placement is still based on gun time, which may disqualify you from overall awards."
-        },
-        {
-          "question": "NEW FAW 1",
-          "answer": "New answer 1"
         }
       ]
     }

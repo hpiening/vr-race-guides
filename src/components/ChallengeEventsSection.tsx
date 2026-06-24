@@ -55,6 +55,20 @@ export default function ChallengeEventsSection({ data, basePath = 'sections.chal
 
                 <EditableText as="div" className="font-body text-sm text-vr-cream/80 leading-relaxed mb-8" value={evt.description} path={`${ep}.description`} />
 
+                {editing && (
+                  <div className="mb-8 space-y-1">
+                    <p className="font-micro text-[10px] tracking-[0.2em] uppercase text-vr-cream/40">Stat tiles (Trailhead)</p>
+                    {(evt.statTiles ?? []).map((t, ti) => (
+                      <div key={ti} className="flex items-center gap-2">
+                        <EditableText as="span" className="font-heading text-vr-cream text-sm w-20" value={t.value} path={`${ep}.statTiles.${ti}.value`} placeholder="16.2" />
+                        <EditableText as="span" className="font-micro text-xs text-vr-cream/60 flex-1" value={t.label} path={`${ep}.statTiles.${ti}.label`} placeholder="Total Miles" />
+                        <ListControls path={`${ep}.statTiles`} index={ti} count={evt.statTiles!.length} />
+                      </div>
+                    ))}
+                    <AddButton path={`${ep}.statTiles`} item={{ value: '', label: '' }} label="Add stat tile" />
+                  </div>
+                )}
+
                 {(evt.includes.length > 0 || editing) && (
                   <div className="mb-8">
                     <h4 className="font-heading text-base uppercase text-vr-cream mb-4 tracking-wide">What&apos;s Included</h4>
@@ -120,18 +134,18 @@ function ChallengeEventsTrailhead({ data }: { data: ChallengeEventsData }) {
                 )}
                 <p className="font-body text-vr-cream/85 leading-[1.7] max-w-[560px] mb-6" style={{ fontSize: '16px' }}>{evt.description}</p>
                 <div className="flex gap-9 flex-wrap">
-                  {evt.totalMileage && (
-                    <div>
-                      <div className="font-display text-vr-sky leading-none" style={{ fontSize: '44px' }}>{evt.totalMileage.replace(/\s*miles?/i, '')}</div>
-                      <div className="font-micro uppercase text-vr-cream/60 mt-1.5" style={{ fontSize: '10px', letterSpacing: '0.12em' }}>Total Miles</div>
+                  {(evt.statTiles && evt.statTiles.length > 0
+                    ? evt.statTiles
+                    : [
+                        ...(evt.totalMileage ? [{ value: evt.totalMileage.replace(/\s*miles?/i, ''), label: 'Total Miles' }] : []),
+                        ...(evt.dates ? [{ value: '2', label: 'Races · 1 Weekend' }] : []),
+                      ]
+                  ).map((t, k) => (
+                    <div key={k}>
+                      <div className="font-display text-vr-sky leading-none" style={{ fontSize: '44px' }}>{t.value}</div>
+                      <div className="font-micro uppercase text-vr-cream/60 mt-1.5" style={{ fontSize: '10px', letterSpacing: '0.12em' }}>{t.label}</div>
                     </div>
-                  )}
-                  {evt.dates && (
-                    <div>
-                      <div className="font-display text-vr-sky leading-none" style={{ fontSize: '44px' }}>2</div>
-                      <div className="font-micro uppercase text-vr-cream/60 mt-1.5" style={{ fontSize: '10px', letterSpacing: '0.12em' }}>Races · 1 Weekend</div>
-                    </div>
-                  )}
+                  ))}
                 </div>
               </div>
 

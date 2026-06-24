@@ -15,6 +15,7 @@ import PostRaceSection from '@/components/PostRaceSection'
 import ExperiencesSection from '@/components/ExperiencesSection'
 import FAQSection from '@/components/FAQSection'
 import ChallengeEventsSection from '@/components/ChallengeEventsSection'
+import PartnersSection from '@/components/PartnersSection'
 import PrintButton from '@/components/PrintButton'
 import SearchBar from '@/components/SearchBar'
 
@@ -186,6 +187,7 @@ export default async function EventPage({ params }: { params: { slug: string } }
         {sections.challengeEvents?.enabled && <ChallengeEventsSection data={sections.challengeEvents!} theme={theme} />}
         {sections.experiences.enabled     && <ExperiencesSection data={sections.experiences} theme={theme} />}
         {sections.faqs.enabled            && <FAQSection         data={sections.faqs} theme={theme} />}
+        {event.partners?.enabled          && <PartnersSection    data={event.partners} theme={theme} />}
       </main>
       <PrintButton />
       <SearchBar index={searchIndex} />

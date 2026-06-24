@@ -14,6 +14,7 @@ import PostRaceSection from '@/components/PostRaceSection'
 import ChallengeEventsSection from '@/components/ChallengeEventsSection'
 import ExperiencesSection from '@/components/ExperiencesSection'
 import FAQSection from '@/components/FAQSection'
+import PartnersSection from '@/components/PartnersSection'
 
 // Guides VR can edit. Y11 scaffolds new guides; add the slug + name here.
 const GUIDES = [
@@ -159,6 +160,7 @@ export default function EditPage() {
         {data.sections.challengeEvents && <ChallengeEventsSection data={data.sections.challengeEvents} basePath="sections.challengeEvents" />}
         {data.sections.experiences && <ExperiencesSection data={data.sections.experiences} basePath="sections.experiences" />}
         {data.sections.faqs && <FAQSection data={data.sections.faqs} basePath="sections.faqs" />}
+        {data.partners && <PartnersSection data={data.partners} basePath="partners" />}
       </EditProvider>
 
       <div className="bg-vr-offwhite text-center py-10 px-6">

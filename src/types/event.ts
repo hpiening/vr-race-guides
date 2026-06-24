@@ -24,12 +24,18 @@ export interface ParkingOption {
   lng: number
 }
 
+export interface StatTile {
+  value: string
+  label: string
+}
+
 export interface CourseDistance {
   name: string
   mapImageUrl?: string
   mapUrl: string
   embedUrl?: string
   stats?: string
+  statTiles?: StatTile[]
 }
 
 export interface InfoBlock {
@@ -45,6 +51,7 @@ export interface Hike {
   elevation: string
   difficulty: string
   url: string
+  imageUrl?: string
 }
 
 export interface Sight {
@@ -76,6 +83,7 @@ export interface ChallengeEvent {
   tagline?: string
   description: string
   totalMileage?: string
+  statTiles?: StatTile[]
   dates: string
   includes: string[]
   bibPickup: string
@@ -128,6 +136,10 @@ export interface EventData {
     afterRaceMorning?: SectionBreakConfig
     afterChallengeEvents?: SectionBreakConfig
     afterExperiences?: SectionBreakConfig
+  }
+  partners?: {
+    enabled: boolean
+    items: string[]
   }
   sections: {
     welcome?: WelcomeData
@@ -189,7 +201,7 @@ export interface EventData {
     }
     experiences: {
       enabled: boolean
-      lodging: { partner: string; description: string; url: string }
+      lodging: { partner: string; description: string; url: string; imageUrl?: string }
       activities: Array<{ name: string; description: string; discountCode?: string; url: string }>
       hikes: Hike[]
       sights?: Sight[]

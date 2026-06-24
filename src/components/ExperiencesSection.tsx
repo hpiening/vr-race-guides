@@ -3,8 +3,9 @@ import SectionWrapper from './SectionWrapper'
 import { EventData } from '@/types/event'
 import { useEditOptional } from '@/lib/editContext'
 import EditableText from './edit/EditableText'
+import EditableUrl from './edit/EditableUrl'
 import { ListControls, AddButton } from './edit/ListControls'
-import { TrailHeader } from './trailhead/Shared'
+import { TrailHeader, PhotoFrame } from './trailhead/Shared'
 
 type Props = { data: EventData['sections']['experiences']; basePath?: string; theme?: 'classic' | 'trailhead' }
 
@@ -24,6 +25,7 @@ export default function ExperiencesSection({ data, basePath = 'sections.experien
           <EditableText as="div" className="font-heading text-2xl uppercase mb-2" value={data.lodging.partner} path={`${basePath}.lodging.partner`} />
           <EditableText as="div" className="font-body text-sm text-vr-cream/80 max-w-md leading-relaxed" value={data.lodging.description} path={`${basePath}.lodging.description`} />
           {editing && <EditableText as="div" className="font-micro text-xs text-vr-cream/50 mt-2" value={data.lodging.url} path={`${basePath}.lodging.url`} placeholder="Booking URL" />}
+          {editing && <EditableUrl path={`${basePath}.lodging.imageUrl`} label="Lodging image URL (optional)" />}
         </div>
         {!editing && (
           <a href={data.lodging.url} target="_blank" rel="noopener noreferrer" className="shrink-0 font-label text-xs tracking-[0.2em] uppercase px-6 py-3 bg-vr-cream text-vr-forest rounded hover:bg-vr-cream/90 transition-colors">
@@ -81,6 +83,7 @@ export default function ExperiencesSection({ data, basePath = 'sections.experien
                     <EditableText as="div" className="font-micro text-xs text-vr-mid" value={hike.elevation} path={`${hp}.elevation`} />
                     <EditableText as="div" className="font-micro text-xs text-vr-mid" value={hike.difficulty} path={`${hp}.difficulty`} />
                     {editing && <EditableText as="div" className="font-micro text-xs text-vr-sandstone mt-1" value={hike.url} path={`${hp}.url`} placeholder="URL" />}
+                    {editing && <EditableUrl path={`${hp}.imageUrl`} label="Photo URL (optional)" />}
                   </div>
                 </>
               )
@@ -163,15 +166,18 @@ function ExperiencesTrailhead({ data }: { data: EventData['sections']['experienc
         <TrailHeader eyebrow="Beyond the race" title="Experiences" className="mb-9" />
 
         {/* Lodging banner */}
-        <div className="border border-vr-line rounded-lg bg-vr-white p-9 mb-9" style={{ borderLeft: '3px solid var(--vr-sky)' }}>
-          <span className="font-micro uppercase text-vr-sky block mb-2" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>
-            Official lodging partner · {data.lodging.partner}
-          </span>
-          <h3 className="font-heading uppercase text-vr-forest mb-3" style={{ fontSize: '24px', letterSpacing: '0.02em' }}>Book your weekend stay</h3>
-          <p className="font-body text-vr-forest/85 leading-[1.6] max-w-[640px] mb-5" style={{ fontSize: '15px' }}>{data.lodging.description}</p>
-          <a href={data.lodging.url} target="_blank" rel="noopener noreferrer" className="inline-block font-label text-xs tracking-[0.12em] uppercase px-6 py-3 rounded-full bg-vr-forest text-vr-cream hover:opacity-90 transition-opacity">
-            Book lodging ↗
-          </a>
+        <div className="grid md:grid-cols-[1.3fr_1fr] border border-vr-line rounded-lg overflow-hidden bg-vr-white mb-9">
+          <div className="p-9 flex flex-col justify-center">
+            <span className="font-micro uppercase text-vr-sky block mb-2" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>
+              Official lodging partner · {data.lodging.partner}
+            </span>
+            <h3 className="font-heading uppercase text-vr-forest mb-3" style={{ fontSize: '24px', letterSpacing: '0.02em' }}>Book your weekend stay</h3>
+            <p className="font-body text-vr-forest/85 leading-[1.6] max-w-[460px] mb-5" style={{ fontSize: '15px' }}>{data.lodging.description}</p>
+            <a href={data.lodging.url} target="_blank" rel="noopener noreferrer" className="self-start font-label text-xs tracking-[0.12em] uppercase px-6 py-3 rounded-full bg-vr-forest text-vr-cream hover:opacity-90 transition-opacity">
+              Book lodging ↗
+            </a>
+          </div>
+          <PhotoFrame src={data.lodging.imageUrl} label="Lodging photo" ratio="16 / 10" className="min-h-[200px] h-full" />
         </div>
 
         {/* Activities */}
@@ -201,12 +207,15 @@ function ExperiencesTrailhead({ data }: { data: EventData['sections']['experienc
             <h3 className={subhead} style={subStyle}>Hikes</h3>
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 mb-11">
               {data.hikes.map((hike, i) => (
-                <a key={i} href={hike.url} target="_blank" rel="noopener noreferrer" className="border border-vr-line bg-vr-white rounded-lg p-6 transition-shadow hover:shadow-[0_14px_30px_rgba(38,69,51,0.14)] block">
-                  <div className="font-micro uppercase text-vr-sky mb-1.5" style={{ fontSize: '10px', letterSpacing: '0.12em' }}>
-                    {[hike.distance, hike.difficulty].filter(Boolean).join(' · ')}
+                <a key={i} href={hike.url} target="_blank" rel="noopener noreferrer" className="border border-vr-line bg-vr-white rounded-lg overflow-hidden transition-shadow hover:shadow-[0_14px_30px_rgba(38,69,51,0.14)] block">
+                  <PhotoFrame src={hike.imageUrl} label={`${hike.name} photo`} ratio="4 / 3" />
+                  <div className="p-6">
+                    <div className="font-micro uppercase text-vr-sky mb-1.5" style={{ fontSize: '10px', letterSpacing: '0.12em' }}>
+                      {[hike.distance, hike.difficulty].filter(Boolean).join(' · ')}
+                    </div>
+                    <h4 className="font-heading uppercase text-vr-forest mb-1.5" style={{ fontSize: '17px', letterSpacing: '0.02em' }}>{hike.name}</h4>
+                    {hike.elevation && <p className="font-body text-vr-forest/70" style={{ fontSize: '13px' }}>{hike.elevation}</p>}
                   </div>
-                  <h4 className="font-heading uppercase text-vr-forest mb-1.5" style={{ fontSize: '17px', letterSpacing: '0.02em' }}>{hike.name}</h4>
-                  {hike.elevation && <p className="font-body text-vr-forest/70" style={{ fontSize: '13px' }}>{hike.elevation}</p>}
                 </a>
               ))}
             </div>

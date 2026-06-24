@@ -7,7 +7,7 @@ import EditableText from './edit/EditableText'
 import EditableUrl from './edit/EditableUrl'
 import RideWithGpsField from './edit/RideWithGpsField'
 import { ListControls, AddButton } from './edit/ListControls'
-import { TrailHeader, StatChips, Accordion } from './trailhead/Shared'
+import { TrailHeader, StatChips, StatTiles, Accordion } from './trailhead/Shared'
 
 type Props = { data: EventData['sections']['raceMorning']; basePath?: string; theme?: 'classic' | 'trailhead' }
 
@@ -31,6 +31,19 @@ export default function RaceMorningSection({ data, basePath = 'sections.raceMorn
                   <div className="flex-1">
                     <EditableText as="div" className="font-heading text-lg uppercase" value={c.name} path={`${basePath}.courses.${i}.name`} />
                     <EditableText as="div" className="font-micro text-xs text-vr-mid tracking-wider" value={c.stats ?? ''} path={`${basePath}.courses.${i}.stats`} />
+                    {editing && (
+                      <div className="mt-2 space-y-1">
+                        <p className="font-micro text-[10px] tracking-[0.2em] uppercase text-vr-mid">Stat tiles (Trailhead)</p>
+                        {(c.statTiles ?? []).map((t, ti) => (
+                          <div key={ti} className="flex items-center gap-2">
+                            <EditableText as="span" className="font-heading text-vr-forest text-sm w-20" value={t.value} path={`${basePath}.courses.${i}.statTiles.${ti}.value`} placeholder="13.1" />
+                            <EditableText as="span" className="font-micro text-xs text-vr-mid flex-1" value={t.label} path={`${basePath}.courses.${i}.statTiles.${ti}.label`} placeholder="Miles" />
+                            <ListControls path={`${basePath}.courses.${i}.statTiles`} index={ti} count={c.statTiles!.length} />
+                          </div>
+                        ))}
+                        <AddButton path={`${basePath}.courses.${i}.statTiles`} item={{ value: '', label: '' }} label="Add stat tile" />
+                      </div>
+                    )}
                   </div>
                   {!editing && (
                     <a href={c.mapUrl} target="_blank" rel="noopener noreferrer" className="font-micro text-xs tracking-widest uppercase text-vr-sandstone hover:text-vr-forest transition-colors shrink-0 ml-4">
@@ -133,31 +146,31 @@ export default function RaceMorningSection({ data, basePath = 'sections.raceMorn
   )
 }
 
-/* ── Trailhead view (display-only; keeps RideWithGPS + MapEmbed functional) ── */
+/* ── Trailhead view (display-only; dark, keeps RideWithGPS + MapEmbed functional) ── */
 function RaceMorningTrailhead({ data }: { data: EventData['sections']['raceMorning'] }) {
   return (
-    <section id="race-morning" className="bg-vr-offwhite px-6 md:px-12 py-20 md:py-[104px]">
+    <section id="race-morning" className="bg-vr-deep px-6 md:px-12 py-20 md:py-[104px]">
       <div className="max-w-[1180px] mx-auto">
-        <TrailHeader eyebrow="Getting to the" title={data.navLabel || 'Race Morning'} className="mb-10" />
+        <TrailHeader dark eyebrow="Getting to the" title={data.navLabel || 'Race Morning'} className="mb-10" />
 
         {/* Course route + stats */}
         {data.courses && data.courses.length > 0 && data.courses.map((c, i) => (
           <div key={i} className="grid gap-6 md:grid-cols-[1.5fr_1fr] items-start mb-10">
-            <div className="border border-vr-line rounded-lg overflow-hidden bg-vr-white">
+            <div className="border border-vr-cream/20 rounded-lg overflow-hidden">
               {c.embedUrl ? (
                 <>
                   <iframe src={c.embedUrl} title={`${c.name} route map`} style={{ width: '100%', height: '440px', border: 'none', display: 'block' }} loading="lazy" scrolling="no" className="print:hidden" />
-                  <div className="hidden print:block px-5 py-4 text-sm font-body text-vr-mid">View route at: {c.mapUrl}</div>
+                  <div className="hidden print:block px-5 py-4 text-sm font-body text-vr-cream/70">View route at: {c.mapUrl}</div>
                 </>
               ) : c.mapImageUrl ? (
                 /* eslint-disable-next-line @next/next/no-img-element */
                 <img src={c.mapImageUrl} alt={`${c.name} course map`} className="w-full object-cover aspect-[16/10]" />
               ) : null}
             </div>
-            <div className="flex flex-col gap-5">
-              <div className="font-heading uppercase text-vr-forest" style={{ fontSize: '20px', letterSpacing: '0.02em' }}>{c.name}</div>
-              <StatChips stats={c.stats} dark={false} />
-              <a href={c.mapUrl} target="_blank" rel="noopener noreferrer" className="self-start font-label text-xs tracking-[0.12em] uppercase text-vr-sandstone hover:text-vr-forest transition-colors">
+            <div className="flex flex-col gap-4">
+              <div className="font-heading uppercase text-vr-cream" style={{ fontSize: '20px', letterSpacing: '0.02em' }}>{c.name}</div>
+              {c.statTiles && c.statTiles.length > 0 ? <StatTiles tiles={c.statTiles} /> : <StatChips stats={c.stats} dark />}
+              <a href={c.mapUrl} target="_blank" rel="noopener noreferrer" className="self-start font-label text-xs tracking-[0.12em] uppercase text-vr-sky hover:text-vr-cream transition-colors">
                 View full route ↗
               </a>
             </div>
@@ -167,12 +180,12 @@ function RaceMorningTrailhead({ data }: { data: EventData['sections']['raceMorni
         {/* Morning schedule tiles */}
         {data.shuttleDetails.length > 0 && (
           <>
-            <h3 className="font-heading uppercase text-vr-forest mb-4" style={{ fontSize: '16px', letterSpacing: '0.06em' }}>{data.timelineLabel || 'Morning Schedule'}</h3>
+            <h3 className="font-heading uppercase text-vr-cream mb-4" style={{ fontSize: '16px', letterSpacing: '0.06em' }}>{data.timelineLabel || 'Morning Schedule'}</h3>
             <div className="grid sm:grid-cols-3 lg:grid-cols-5 gap-4 mb-12">
               {data.shuttleDetails.map((item, i) => (
-                <div key={i} className="border border-vr-line bg-vr-white rounded-lg p-5">
-                  <div className="font-label text-xs tracking-[0.16em] uppercase text-vr-sandstone mb-2">{item.time}</div>
-                  <div className="font-heading text-sm uppercase leading-tight text-vr-forest">{item.label}</div>
+                <div key={i} className="border border-vr-cream/10 bg-vr-cream/5 rounded-lg p-5">
+                  <div className="font-label text-xs tracking-[0.16em] uppercase text-vr-sky mb-2">{item.time}</div>
+                  <div className="font-heading text-sm uppercase leading-tight text-vr-cream">{item.label}</div>
                 </div>
               ))}
             </div>
@@ -180,22 +193,22 @@ function RaceMorningTrailhead({ data }: { data: EventData['sections']['raceMorni
         )}
 
         {/* Parking */}
-        <h3 className="font-heading uppercase text-vr-forest mb-4" style={{ fontSize: '16px', letterSpacing: '0.06em' }}>Parking</h3>
+        <h3 className="font-heading uppercase text-vr-cream mb-4" style={{ fontSize: '16px', letterSpacing: '0.06em' }}>Parking</h3>
         {data.parkingMapImageUrl && (
-          <div className="border border-vr-line rounded-lg overflow-hidden mb-6">
+          <div className="border border-vr-cream/20 rounded-lg overflow-hidden mb-6">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={data.parkingMapImageUrl} alt="Parking map" className="w-full h-auto block" />
           </div>
         )}
         <div className="grid gap-6 md:grid-cols-2 mb-6">
           {data.parkingOptions.map((option, i) => (
-            <div key={i} className="border border-vr-line bg-vr-white rounded-lg overflow-hidden flex flex-col">
-              <div className="border-b border-vr-line">
-                <MapEmbed lat={option.lat} lng={option.lng} label={option.name} mapsUrl={option.mapUrl} zoom={14} dark={false} />
+            <div key={i} className="border border-vr-cream/20 rounded-lg overflow-hidden flex flex-col">
+              <div className="border-b border-vr-cream/20">
+                <MapEmbed lat={option.lat} lng={option.lng} label={option.name} mapsUrl={option.mapUrl} zoom={14} dark />
               </div>
-              <div className="p-6 flex-1">
-                <h4 className="font-heading uppercase text-vr-forest mb-2" style={{ fontSize: '17px', letterSpacing: '0.02em' }}>{option.name}</h4>
-                <p className="font-body text-sm text-vr-forest/80 leading-relaxed">{option.details}</p>
+              <div className="p-6 flex-1 bg-vr-cream/5">
+                <h4 className="font-heading uppercase text-vr-cream mb-2" style={{ fontSize: '17px', letterSpacing: '0.02em' }}>{option.name}</h4>
+                <p className="font-body text-sm text-vr-cream/75 leading-relaxed">{option.details}</p>
               </div>
             </div>
           ))}
@@ -203,15 +216,15 @@ function RaceMorningTrailhead({ data }: { data: EventData['sections']['raceMorni
 
         {/* Drop-off callout */}
         {data.dropOffNote && (
-          <div className="bg-vr-white border border-vr-line rounded-lg px-6 py-5 mb-10" style={{ borderLeft: '3px solid var(--vr-sky)' }}>
+          <div className="bg-vr-night rounded-lg px-6 py-5 mb-10" style={{ borderLeft: '3px solid var(--vr-sky)' }}>
             <p className="font-label text-xs tracking-[0.16em] uppercase text-vr-sky mb-2">Runner Drop-Off</p>
-            <p className="font-body text-sm text-vr-forest/85 leading-relaxed">{data.dropOffNote}</p>
+            <p className="font-body text-sm text-vr-cream/85 leading-relaxed">{data.dropOffNote}</p>
           </div>
         )}
 
         {/* Course detail accordions */}
         {data.infoBlocks && data.infoBlocks.length > 0 && (
-          <Accordion variant="white" items={data.infoBlocks.map(b => ({ heading: b.heading, body: b.body }))} />
+          <Accordion items={data.infoBlocks.map(b => ({ heading: b.heading, body: b.body }))} />
         )}
       </div>
     </section>

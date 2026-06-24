@@ -178,6 +178,7 @@ body {
   [data-theme='trailhead'] .tl-plus { display: none !important; }
   /* Photo-band placeholders & decorative watermarks add nothing on paper. */
   [data-theme='trailhead'] .tl-photoband,
+  [data-theme='trailhead'] .tl-photoph,
   [data-theme='trailhead'] .tl-watermark { display: none !important; }
 }
 

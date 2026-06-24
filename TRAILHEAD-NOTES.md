@@ -33,26 +33,33 @@ Mountain page shows the new design. Every `EditableText` `path`, `ListControls`,
 Shared Trailhead view pieces live in `src/components/trailhead/Shared.tsx`
 (`TrailHeader`, `StatChips`, `Accordion`, `InfoCard`) — presentational only.
 
-## Notable decisions (please review)
+## Data-shape additions (all editable at /edit, per the contract)
 
-1. **No data-shape changes beyond `theme`.** The 5K/Half "stat tiles" render by
-   presentationally splitting the existing `distances[].stats` string on `·` (see
-   `StatChips`). The editor still edits one string. If you want the big number-over-label
-   tiles from the mockup, that needs a small structured field — happy to add it.
-2. **Hero image stays data/locked.** The mockup showed a separate event "shield" PNG
-   (`rocky-mountain-shield.png`) that isn't in the repo, so I did **not** add a broken
-   reference. The Trailhead hero uses the existing `heroImage` + the radial-gradient
-   treatment + inset frame + the existing `events/rocky-mountain-icon.png` watermark.
-   Drop a shield into `public/images/events/` later if you want it.
-3. **Photo bands** ("On the Course", "Race Morning", "Post Race") are decorative titled
-   bands (textured, no real photos were provided) and are **hidden in print**. They can be
-   backed by real images later.
-4. **Partners logo grid — NOT implemented.** The mockup ends with an "Our Partners" logo
-   wall. There's no partners field in the data model and no logo assets in the repo, so
-   adding it would be a data-shape change + asset drop. Flagged as an easy follow-up if you
-   want it (new `partners` array + logo files).
-5. **Content untouched.** Existing copy — including in-progress VR test strings like
-   "NEW FAW 1" / "YES NOW" in the JSON — was left as-is (out of scope for a design pass).
+To match the design file closely, these fields were added to `event.ts` + the JSON + the
+editor wrappers, together:
+
+1. **`theme`** on `EventData` — opt-in design switch (locked config, not editable content).
+2. **`statTiles?: {value,label}[]`** on `CourseDistance` and `ChallengeEvent` — drives the
+   big-number stat grids on the 5K / Half / Elk Double (e.g. `13.1 / Miles · Half`).
+   Editable as compact value+label rows in the editor; falls back to the `stats` string
+   chips when absent.
+3. **`partners?: {enabled, items[]}`** on `EventData` — the "Our Partners" section. Seeded
+   with the sponsor names from the brief; editable list (add/remove/reorder).
+4. **`imageUrl?`** on `Hike` and on `experiences.lodging` — optional photo. When empty, a
+   hatched **placeholder** renders (matching the mockup); paste a URL at /edit to show a
+   real image. Placeholders are hidden in print.
+
+## Notable decisions
+
+- **Hero shield** added: `public/images/events/rocky-mountain-shield.png` (copied from your
+  Assets "Combined Shield"). Has an `onError` fallback so a missing shield never breaks layout.
+- **Photo placeholders are intentional stand-ins.** Hike cards + lodging show hatched
+  "photo" boxes until real image URLs are added — they will look like comps on the live
+  site until then. Same for the **photo bands** ("On the Course", etc.). All hidden in print.
+- **Half-marathon section is now dark** (deep green) to match the design's "Course Info"
+  treatment, even though your data folds half-course + parking into one `race-morning` section.
+- **Test content removed** from `rocky-mountain.json`: the "NEW FAW 1" FAQ, the "…YES NOW"
+  suffix, and the "Test Test" in the 5K spectator info.
 
 ## Contract checklist
 
@@ -63,7 +70,8 @@ Shared Trailhead view pieces live in `src/components/trailhead/Shared.tsx`
 - [x] RideWithGPS route iframes + Google `MapEmbed`s preserved (restyled containers only).
 - [x] Print/PDF: `<details>` accordions force-open and photo bands/watermarks hide via `@media print` (scoped to `[data-theme='trailhead']`).
 - [x] Static & light: no new runtime, no new deps; accordions are native `<details>` (work without JS). First-load JS unchanged (~110 kB).
-- [x] Data shape: only `theme` added (event.ts + JSON); no editable-content fields changed.
+- [x] Data shape: `theme`, `statTiles`, `partners`, and `imageUrl` added across event.ts +
+      JSON + editor wrappers together (see "Data-shape additions" above).
 
 ## Files touched
 

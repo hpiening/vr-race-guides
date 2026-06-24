@@ -6,7 +6,7 @@ import EditableText from './edit/EditableText'
 import EditableUrl from './edit/EditableUrl'
 import RideWithGpsField from './edit/RideWithGpsField'
 import { ListControls, AddButton } from './edit/ListControls'
-import { TrailHeader, StatChips, Accordion } from './trailhead/Shared'
+import { TrailHeader, StatChips, StatTiles, Accordion } from './trailhead/Shared'
 
 type Props = { data: EventData['sections']['courseInfo']; basePath?: string; theme?: 'classic' | 'trailhead' }
 
@@ -50,6 +50,19 @@ export default function CourseInfoSection({ data, basePath = 'sections.courseInf
                 <div className="flex-1">
                   <EditableText as="div" className="font-heading text-lg uppercase text-vr-cream" value={d.name} path={`${basePath}.distances.${i}.name`} />
                   <EditableText as="div" className="font-micro text-xs text-vr-cream/50 tracking-wider" value={d.stats ?? ''} path={`${basePath}.distances.${i}.stats`} />
+                  {editing && (
+                    <div className="mt-2 space-y-1">
+                      <p className="font-micro text-[10px] tracking-[0.2em] uppercase text-vr-cream/40">Stat tiles (Trailhead)</p>
+                      {(d.statTiles ?? []).map((t, ti) => (
+                        <div key={ti} className="flex items-center gap-2">
+                          <EditableText as="span" className="font-heading text-vr-cream text-sm w-20" value={t.value} path={`${basePath}.distances.${i}.statTiles.${ti}.value`} placeholder="3.1" />
+                          <EditableText as="span" className="font-micro text-xs text-vr-cream/60 flex-1" value={t.label} path={`${basePath}.distances.${i}.statTiles.${ti}.label`} placeholder="Miles" />
+                          <ListControls path={`${basePath}.distances.${i}.statTiles`} index={ti} count={d.statTiles!.length} />
+                        </div>
+                      ))}
+                      <AddButton path={`${basePath}.distances.${i}.statTiles`} item={{ value: '', label: '' }} label="Add stat tile" />
+                    </div>
+                  )}
                 </div>
                 {!editing && (
                   <a href={d.mapUrl} target="_blank" rel="noopener noreferrer" className="font-micro text-xs tracking-widest uppercase text-vr-amber hover:text-vr-cream transition-colors shrink-0 ml-4">
@@ -140,9 +153,9 @@ function CourseInfoTrailhead({ data }: { data: EventData['sections']['courseInfo
                 <img src={d.mapImageUrl} alt={`${d.name} course map`} className="w-full object-cover aspect-[16/10]" />
               ) : null}
             </div>
-            <div className="flex flex-col gap-5">
+            <div className="flex flex-col gap-4">
               <div className="font-heading uppercase text-vr-cream" style={{ fontSize: '20px', letterSpacing: '0.02em' }}>{d.name}</div>
-              <StatChips stats={d.stats} dark />
+              {d.statTiles && d.statTiles.length > 0 ? <StatTiles tiles={d.statTiles} /> : <StatChips stats={d.stats} dark />}
               <a href={d.mapUrl} target="_blank" rel="noopener noreferrer" className="self-start font-label text-xs tracking-[0.12em] uppercase text-vr-sky hover:text-vr-cream transition-colors">
                 View full route ↗
               </a>
