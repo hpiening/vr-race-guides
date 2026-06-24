@@ -144,11 +144,11 @@ function ChallengeEventsTrailhead({ data, basePath, editing }: { data: Challenge
                   <EditableText as="div" className="font-body text-vr-cream/85 leading-[1.7] max-w-[560px] mb-6 text-[16px]" value={evt.description} path={`${ep}.description`} />
                   {editing ? (
                     <div className="space-y-1">
-                      <p className="font-micro text-[10px] tracking-[0.2em] uppercase text-vr-cream/40">Stat tiles</p>
+                      <p className="font-micro text-[10px] tracking-[0.2em] uppercase text-vr-cream/70">Stat tiles</p>
                       {(evt.statTiles ?? []).map((t, k) => (
                         <div key={k} className="flex items-center gap-2">
                           <EditableText as="span" className="font-heading text-vr-cream text-sm w-24" value={t.value} path={`${ep}.statTiles.${k}.value`} placeholder="16.2" />
-                          <EditableText as="span" className="font-micro text-xs text-vr-cream/60 flex-1" value={t.label} path={`${ep}.statTiles.${k}.label`} placeholder="Total Miles" />
+                          <EditableText as="span" className="font-micro text-xs text-vr-cream/85 flex-1" value={t.label} path={`${ep}.statTiles.${k}.label`} placeholder="Total Miles" />
                           <ListControls path={`${ep}.statTiles`} index={k} count={evt.statTiles!.length} />
                         </div>
                       ))}

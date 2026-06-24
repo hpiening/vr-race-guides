@@ -187,18 +187,21 @@ body {
 .editable-field {
   border-radius: 3px;
   box-shadow: inset 0 0 0 1px rgba(218, 129, 101, 0.35);
+  /* Neutral lift so fields are legible while editing on both dark and light
+     sections (invisible-ish on light cream, lifts text out of dark green). */
+  background-color: rgba(255, 255, 255, 0.09);
   transition: box-shadow 0.12s ease, background-color 0.12s ease;
 }
 .editable-field:hover {
-  background-color: rgba(218, 129, 101, 0.08);
+  background-color: rgba(255, 255, 255, 0.14);
 }
 .editable-field:focus {
   box-shadow: inset 0 0 0 2px rgba(218, 129, 101, 0.9);
-  background-color: rgba(218, 129, 101, 0.06);
+  background-color: rgba(255, 255, 255, 0.16);
 }
 .editable-field::placeholder {
   color: currentColor;
-  opacity: 0.4;
+  opacity: 0.55;
 }
 
 .btn-primary {

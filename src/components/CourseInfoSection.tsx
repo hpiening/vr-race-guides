@@ -163,12 +163,12 @@ function CourseInfoTrailhead({ data, basePath, editing }: { data: EventData['sec
               <EditableText as="div" className="font-heading uppercase text-vr-cream text-[20px] tracking-[0.02em]" value={d.name} path={`${basePath}.distances.${i}.name`} />
               {editing ? (
                 <div className="space-y-1">
-                  <EditableText as="div" className="font-micro text-xs text-vr-cream/50" value={d.stats ?? ''} path={`${basePath}.distances.${i}.stats`} placeholder="Fallback stats string" />
-                  <p className="font-micro text-[10px] tracking-[0.2em] uppercase text-vr-cream/40 pt-1">Stat tiles</p>
+                  <EditableText as="div" className="font-micro text-xs text-vr-cream/75" value={d.stats ?? ''} path={`${basePath}.distances.${i}.stats`} placeholder="Fallback stats string" />
+                  <p className="font-micro text-[10px] tracking-[0.2em] uppercase text-vr-cream/70 pt-1">Stat tiles</p>
                   {(d.statTiles ?? []).map((t, ti) => (
                     <div key={ti} className="flex items-center gap-2">
                       <EditableText as="span" className="font-heading text-vr-cream text-sm w-24" value={t.value} path={`${basePath}.distances.${i}.statTiles.${ti}.value`} placeholder="3.1" />
-                      <EditableText as="span" className="font-micro text-xs text-vr-cream/60 flex-1" value={t.label} path={`${basePath}.distances.${i}.statTiles.${ti}.label`} placeholder="Miles" />
+                      <EditableText as="span" className="font-micro text-xs text-vr-cream/85 flex-1" value={t.label} path={`${basePath}.distances.${i}.statTiles.${ti}.label`} placeholder="Miles" />
                       <ListControls path={`${basePath}.distances.${i}.statTiles`} index={ti} count={d.statTiles!.length} />
                     </div>
                   ))}
