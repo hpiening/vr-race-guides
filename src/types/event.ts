@@ -64,6 +64,9 @@ export interface Restaurant {
   name: string
   description: string
   url: string
+  icon?: string
+  address?: string
+  phone?: string
 }
 
 export interface CourseRecord {
@@ -206,6 +209,7 @@ export interface EventData {
       hikes: Hike[]
       sights?: Sight[]
       restaurants: Restaurant[]
+      parkNote?: string
     }
     faqs: {
       enabled: boolean

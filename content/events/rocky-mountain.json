@@ -567,29 +567,45 @@
         {
           "name": "The Bird's Nest",
           "description": "Extremely popular local café with pastries, pizza, and sandwiches. Perfect pre-race fuel.",
-          "url": "https://thebirdsnest.com"
+          "url": "https://thebirdsnest.com",
+          "icon": "🥞",
+          "address": "1221 High Dr, Estes Park, CO 80517",
+          "phone": "970-586-4707"
         },
         {
           "name": "Bird & Jim",
           "description": "Highly rated modern American with clean ingredients — the victory dinner spot.",
-          "url": "https://www.birdandjim.com"
+          "url": "https://www.birdandjim.com",
+          "icon": "🍴",
+          "address": "915 Moraine Ave, Estes Park, CO 80517",
+          "phone": "970-586-9832"
         },
         {
           "name": "Inkwell & Brew",
           "description": "Fantastic spot for a morning coffee before you hit the trail or the start line.",
-          "url": "https://inkwellbrew.com"
+          "url": "https://inkwellbrew.com",
+          "icon": "☕",
+          "address": "150 E Elkhorn Ave, Estes Park, CO 80517",
+          "phone": "970-342-1297"
         },
         {
           "name": "Estes Park Distilling Co.",
           "description": "Small-batch whiskey and spirits in a cozy setting — perfect for a post-race drink with mountain views.",
-          "url": "https://estesparkdistillingco.com"
+          "url": "https://estesparkdistillingco.com",
+          "icon": "🍺",
+          "address": "124 W Elkhorn Ave, Estes Park, CO 80517",
+          "phone": "970-586-2044"
         },
         {
           "name": "Hunters Chophouse",
           "description": "Casual steakhouse serving upscale American dishes. A solid choice for a post-race meal.",
-          "url": "https://hunterschophouse.com"
+          "url": "https://hunterschophouse.com",
+          "icon": "🥩",
+          "address": "1690 Big Thompson Ave, Estes Park, CO 80517",
+          "phone": "970-586-6962"
         }
-      ]
+      ],
+      "parkNote": "Rocky Mountain National Park requires a park pass and a timed-entry reservation — book ahead at recreation.gov. The race itself needs no park pass."
     },
     "faqs": {
       "enabled": true,

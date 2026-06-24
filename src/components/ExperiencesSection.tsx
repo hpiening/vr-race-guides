@@ -125,6 +125,14 @@ export default function ExperiencesSection({ data, basePath = 'sections.experien
         </div>
       )}
 
+      {/* Know Before You Go (park pass note) */}
+      {(editing || data.parkNote) && (
+        <div className="mt-8 mb-2 bg-vr-forest text-vr-cream rounded-lg p-5">
+          <p className="font-micro text-xs tracking-[0.2em] uppercase text-vr-cream/50 mb-1">Know Before You Go</p>
+          <EditableText as="div" className="font-body text-sm text-vr-cream/80 leading-relaxed" value={data.parkNote ?? ''} path={`${basePath}.parkNote`} placeholder="Park pass / timed-entry note" />
+        </div>
+      )}
+
       {/* Restaurants */}
       {(data.restaurants.length > 0 || editing) && (
         <div>
@@ -139,7 +147,14 @@ export default function ExperiencesSection({ data, basePath = 'sections.experien
                     {editing && <ListControls path={`${basePath}.restaurants`} index={i} count={data.restaurants.length} />}
                   </div>
                   <EditableText as="div" className="font-body text-sm text-vr-mid leading-relaxed" value={r.description} path={`${rp}.description`} />
-                  {editing && <EditableText as="div" className="font-micro text-xs text-vr-sandstone mt-1" value={r.url} path={`${rp}.url`} placeholder="URL" />}
+                  {editing && (
+                    <div className="mt-1 space-y-0.5">
+                      <EditableText as="div" className="font-micro text-xs text-vr-mid" value={r.url} path={`${rp}.url`} placeholder="Website URL" />
+                      <EditableText as="div" className="font-micro text-xs text-vr-mid" value={r.icon ?? ''} path={`${rp}.icon`} placeholder="Emoji (optional)" />
+                      <EditableText as="div" className="font-micro text-xs text-vr-mid" value={r.address ?? ''} path={`${rp}.address`} placeholder="Address (optional)" />
+                      <EditableText as="div" className="font-micro text-xs text-vr-mid" value={r.phone ?? ''} path={`${rp}.phone`} placeholder="Phone (optional)" />
+                    </div>
+                  )}
                 </>
               )
               return editing ? (
@@ -244,16 +259,38 @@ function ExperiencesTrailhead({ data }: { data: EventData['sections']['experienc
           </>
         )}
 
+        {/* Know before you go */}
+        {data.parkNote && (
+          <div className="mt-9 bg-vr-deep rounded-lg px-7 py-6 flex flex-wrap gap-3.5 items-center">
+            <span className="font-heading uppercase text-vr-sky shrink-0" style={{ fontSize: '14px', letterSpacing: '0.04em' }}>Know before you go</span>
+            <p className="font-body text-vr-cream/85 leading-[1.55] flex-1 min-w-[260px]" style={{ fontSize: '14px' }}>{data.parkNote}</p>
+          </div>
+        )}
+
         {/* Restaurants */}
         {data.restaurants.length > 0 && (
           <>
-            <h3 className={subhead} style={subStyle}>Where to Eat</h3>
-            <div className="grid gap-5" style={{ gridTemplateColumns: 'repeat(auto-fill,minmax(280px,1fr))' }}>
+            <div className="mt-16 mb-3.5">
+              <div className="leading-[0.9]"><span className="font-accent text-vr-sky" style={{ fontSize: 'clamp(20px,2.2vw,28px)' }}>Where to eat</span></div>
+              <h2 className="font-display uppercase text-vr-forest leading-[0.9] m-0" style={{ fontSize: 'clamp(34px,4.6vw,60px)' }}>Restaurants in Estes Park</h2>
+            </div>
+            <p className="font-body text-vr-forest/85 leading-[1.6] max-w-[620px] mb-8" style={{ fontSize: '17px' }}>A few of the popular local food and drink spots in and around Estes Park.</p>
+            <div className="grid gap-5" style={{ gridTemplateColumns: 'repeat(auto-fill,minmax(300px,1fr))' }}>
               {data.restaurants.map((r, i) => (
-                <a key={i} href={r.url} target="_blank" rel="noopener noreferrer" className="border border-vr-line bg-vr-white rounded-lg p-6 block transition-shadow hover:shadow-[0_14px_30px_rgba(38,69,51,0.14)]">
-                  <h4 className="font-heading uppercase text-vr-forest mb-2" style={{ fontSize: '17px', letterSpacing: '0.02em' }}>{r.name}</h4>
+                <div key={i} className="border border-vr-line bg-vr-white rounded-lg p-6">
+                  <div className="flex items-center gap-2.5 mb-2">
+                    {r.icon && <span style={{ fontSize: '20px' }}>{r.icon}</span>}
+                    <h4 className="font-heading uppercase text-vr-forest" style={{ fontSize: '17px', letterSpacing: '0.02em' }}>{r.name}</h4>
+                  </div>
+                  {r.address && <div className="font-micro text-vr-forest/60 mb-1" style={{ fontSize: '12px' }}>{r.address}</div>}
+                  {(r.phone || r.url) && (
+                    <div className="flex gap-3.5 mb-3 font-micro" style={{ fontSize: '12px' }}>
+                      {r.phone && <span className="text-vr-forest/60">{r.phone}</span>}
+                      {r.url && <a href={r.url} target="_blank" rel="noopener noreferrer" className="text-vr-sky hover:text-vr-forest transition-colors">{r.url.replace(/^https?:\/\//, '').replace(/\/$/, '')}</a>}
+                    </div>
+                  )}
                   <p className="font-body text-vr-forest/85 leading-[1.55]" style={{ fontSize: '14px' }}>{r.description}</p>
-                </a>
+                </div>
               ))}
             </div>
           </>
