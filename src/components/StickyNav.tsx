@@ -28,25 +28,41 @@ export default function StickyNav({ items, theme = 'classic' }: { items: NavItem
   }
 
   if (theme === 'trailhead') {
+    const openSearch = () => window.dispatchEvent(new KeyboardEvent('keydown', { key: 'k', ctrlKey: true, bubbles: true }))
     return (
       <nav className="sticky top-0 z-50 bg-vr-pine border-b border-vr-cream/[0.14] print:hidden">
-        <div className="overflow-x-auto scrollbar-none">
-          <ul className="flex min-w-max items-center gap-1 px-4 md:px-7 lg:justify-center">
+        <div className="flex items-center gap-4 md:gap-6 px-4 md:px-7 py-3">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src="/images/vr-shield.png" alt="Vacation Races" className="h-[26px] w-auto shrink-0" />
+          <div className="flex gap-4 md:gap-[22px] flex-1 overflow-x-auto scrollbar-none">
             {items.map(item => (
-              <li key={item.id}>
-                <button
-                  onClick={() => scrollTo(item.id)}
-                  className={`
-                    font-label text-[12px] tracking-[0.14em] uppercase whitespace-nowrap
-                    px-3 py-3.5 transition-colors duration-150
-                    ${active === item.id ? 'text-vr-sky' : 'text-vr-cream/80 hover:text-vr-sky'}
-                  `}
-                >
-                  {item.label}
-                </button>
-              </li>
+              <button
+                key={item.id}
+                onClick={() => scrollTo(item.id)}
+                className={`
+                  font-label text-[12px] tracking-[0.14em] uppercase whitespace-nowrap
+                  py-1 transition-colors duration-150
+                  ${active === item.id ? 'text-vr-sky' : 'text-vr-cream/80 hover:text-vr-sky'}
+                `}
+              >
+                {item.label}
+              </button>
             ))}
-          </ul>
+          </div>
+          <div className="hidden md:flex gap-2.5 shrink-0">
+            <button
+              onClick={openSearch}
+              className="flex items-center gap-1.5 bg-transparent border border-vr-cream/35 text-vr-cream font-label text-[11px] tracking-[0.12em] uppercase px-3 py-2 rounded-full hover:border-vr-sky hover:text-vr-sky transition-colors"
+            >
+              <span aria-hidden="true">⌕</span> Search
+            </button>
+            <button
+              onClick={() => window.print()}
+              className="bg-vr-forest border border-vr-forest text-vr-cream font-label text-[11px] tracking-[0.12em] uppercase px-4 py-2 rounded-full hover:opacity-90 transition-opacity"
+            >
+              Export PDF
+            </button>
+          </div>
         </div>
       </nav>
     )

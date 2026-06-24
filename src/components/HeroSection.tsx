@@ -94,7 +94,7 @@ export default function HeroSection({ event, theme = 'classic' }: { event: Event
 function HeroTrailhead({ event }: { event: EventData }) {
   return (
     <header
-      className="relative flex flex-col justify-between overflow-hidden min-h-[90vh]"
+      className="relative flex flex-col justify-end overflow-hidden min-h-[78vh] md:min-h-[82vh]"
       style={{ background: 'radial-gradient(125% 95% at 72% 8%,#3c5a45 0%,#264533 44%,#1a2f23 100%)' }}
     >
       {event.heroImage && (
@@ -127,16 +127,17 @@ function HeroTrailhead({ event }: { event: EventData }) {
       {/* inset cream frame */}
       <div className="absolute z-[2] pointer-events-none border border-vr-cream/30" style={{ inset: '22px' }} />
 
-      <div className="relative z-[3] flex items-start justify-between px-6 pt-9 md:px-12 md:pt-12">
-        {/* eslint-disable-next-line @next/next/no-img-element */}
-        <img
-          src={event.logo || '/images/vr-shield.png'}
-          alt={event.logoAlt || 'Vacation Races'}
-          className="h-9 md:h-[54px] w-auto"
-        />
-      </div>
+      {/* event shield, top-right */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={`/images/events/${event.slug}-shield.png`}
+        alt={event.name}
+        className="absolute z-[3] top-[10%] right-[5%] md:right-[6%] w-auto pointer-events-none drop-shadow-[0_14px_34px_rgba(0,0,0,0.4)]"
+        style={{ height: 'clamp(120px,22vh,260px)' }}
+        onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
+      />
 
-      <div className="relative z-[3] px-6 pb-16 md:px-12 md:pb-20 w-full max-w-[1180px] mx-auto">
+      <div className="relative z-[3] px-6 pb-16 md:px-12 md:pb-20 pt-28 w-full max-w-[1180px] mx-auto">
         <div className="max-w-[88%] md:max-w-[84%]">
           <p className="font-micro font-bold uppercase text-vr-cream/[0.78] mb-3.5" style={{ fontSize: '13px', letterSpacing: '0.32em' }}>
             Race Day Guide

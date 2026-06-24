@@ -168,8 +168,10 @@ export default async function EventPage({ params }: { params: { slug: string } }
 
   return (
     <div data-theme={theme}>
+      {/* Trailhead: nav sits above the hero. Classic: hero first, nav below. */}
+      {isTrail && <StickyNav items={navItems} theme={theme} />}
       <HeroSection event={event} theme={theme} />
-      <StickyNav items={navItems} theme={theme} />
+      {!isTrail && <StickyNav items={navItems} theme={theme} />}
       <main>
         {sections.welcome?.enabled        && <WelcomeSection     data={sections.welcome} theme={theme} />}
         {sections.schedule.enabled        && <ScheduleSection    data={sections.schedule} eventSlug={event.slug} theme={theme} />}
