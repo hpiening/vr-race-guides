@@ -117,7 +117,7 @@
       "enabled": true,
       "date": "Friday, July 31, 2026",
       "locationName": "Stanley Park Ball Field",
-      "locationAddress": "380 Community Dr, Estes Park, CO 80517",
+      "locationAddress": "The expo will be held at the Stanley Park Ball Field east of Community Drive in Estes Park, CO.",
       "locationMapUrl": "https://www.google.com/maps/place/380+Community+Dr,+Estes+Park,+CO+80517/@40.3710761,-105.498488,17z",
       "locationLat": 40.3710761,
       "locationLng": -105.498488,
@@ -148,7 +148,9 @@
         },
         {
           "heading": "Race Merchandise",
-          "body": "We'll have various options to commemorate your race accomplishment! Beach hoodies, t-shirts, sweatshirts, tank tops, water bottles, stickers, hats, bags, and posters will all be available to browse and buy. Leftover merchandise can be purchased online after the event."
+          "body": "We'll have various options to commemorate your race accomplishment! Beach hoodies, t-shirts, sweatshirts, tank tops, water bottles, stickers, hats, bags, and posters will all be available to browse and buy. Leftover merchandise can be purchased online after the event.",
+          "linkUrl": "https://store.vacationraces.com/",
+          "linkLabel": "Purchase race merchandise"
         },
         {
           "heading": "Merch Pre-Orders",
@@ -156,7 +158,9 @@
         },
         {
           "heading": "Volunteers",
-          "body": "We're looking for fantastic volunteers to join the fun during race weekend! It's the perfect way for friends and family to get in on the action without running. Volunteer shifts are open for the expo and race days and come with sweet perks: up to $100 off a future Vacation Races event. Race credits vary by role, are transferable, and can even be combined. Sign up to volunteer at the registration link."
+          "body": "We're looking for fantastic volunteers to join the fun during race weekend! It's the perfect way for friends and family to get in on the action without running. Volunteer shifts are open for the expo and race days and come with sweet perks: up to $100 off a future Vacation Races event. Race credits vary by role, are transferable, and can even be combined.",
+          "linkUrl": "https://www.vacationraces.com/volunteer",
+          "linkLabel": "Sign up to volunteer at the registration link."
         }
       ]
     },
@@ -190,10 +194,22 @@
           "mapUrl": "https://ridewithgps.com/routes/51714103",
           "embedUrl": "https://ridewithgps.com/embeds?type=route&id=51714103&sampleGraph=true",
           "statTiles": [
-            { "value": "3.1", "label": "Miles" },
-            { "value": "+156 ft", "label": "Elevation" },
-            { "value": "1", "label": "Aid Station" },
-            { "value": "6:00 PM", "label": "Friday Start" }
+            {
+              "value": "3.1",
+              "label": "Miles"
+            },
+            {
+              "value": "+156 ft",
+              "label": "Elevation"
+            },
+            {
+              "value": "1",
+              "label": "Aid Station"
+            },
+            {
+              "value": "6:00 PM",
+              "label": "Friday Start"
+            }
           ]
         }
       ],
@@ -290,10 +306,22 @@
           "mapUrl": "https://ridewithgps.com/routes/46375145",
           "embedUrl": "https://ridewithgps.com/embeds?type=route&id=46375145&sampleGraph=true",
           "statTiles": [
-            { "value": "13.1", "label": "Miles · Half" },
-            { "value": "+780 ft", "label": "Elevation Gain" },
-            { "value": "5", "label": "Aid Stations" },
-            { "value": "4 hr", "label": "Time Limit" }
+            {
+              "value": "13.1",
+              "label": "Miles · Half"
+            },
+            {
+              "value": "+780 ft",
+              "label": "Elevation Gain"
+            },
+            {
+              "value": "5",
+              "label": "Aid Stations"
+            },
+            {
+              "value": "4 hr",
+              "label": "Time Limit"
+            }
           ]
         }
       ],
@@ -455,9 +483,18 @@
           "description": "The Elk Double is for runners who want to take on two distances in one weekend. Run the 5K on Friday evening and the Half Marathon on Saturday morning. Finishers earn a special Elk Double medal (in addition to each race medal) and one exclusive swag item of their choice. You'll use the same bib for both events.",
           "totalMileage": "16.2 miles",
           "statTiles": [
-            { "value": "16.2", "label": "Total Miles" },
-            { "value": "3", "label": "Medals" },
-            { "value": "1", "label": "Bib · Both Races" }
+            {
+              "value": "16.2",
+              "label": "Total Miles"
+            },
+            {
+              "value": "3",
+              "label": "Medals"
+            },
+            {
+              "value": "1",
+              "label": "Bib · Both Races"
+            }
           ],
           "dates": "July 31 – August 1, 2026",
           "includes": [
