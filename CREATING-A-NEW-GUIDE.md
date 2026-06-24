@@ -97,7 +97,7 @@ Types live in `src/types/event.ts`. Everything below is editable at `/edit` unle
 | `heroImage`, `heroImageAlt` **(locked image)** | Hero background photo (URL or `/images/...`). |
 | `heroBgColor`, `accentColor` **(locked)** | Fallback/brand colors. |
 | `favicon`, `logo`, `logoAlt` | Tab icon + nav logo. |
-| `partners` | `{ enabled, items: string[] }` — the "Our Partners" wall. |
+| `partners` | `{ enabled, items: [{ name, logoUrl? }] }` — the "Our Partners" wall. Provide a `logoUrl` to show a logo image; falls back to the name text. |
 
 ### sections.welcome (optional)
 `enabled`, `heading` (renders as a two-part "Welcome to the / Rockies" split), `body`,

@@ -11,7 +11,7 @@ export default function EditableUrl({ path, label = 'Link URL' }: { path: string
   if (!ctx?.editing) return null
   return (
     <div className="mt-2 flex items-baseline gap-2">
-      <span className="font-micro text-[10px] tracking-widest uppercase opacity-40 shrink-0">{label}</span>
+      <span className="font-micro text-[10px] tracking-widest uppercase opacity-70 shrink-0">{label}</span>
       <EditableText
         as="span"
         value={(ctx.value(path) as string) ?? ''}

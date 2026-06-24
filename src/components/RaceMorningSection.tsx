@@ -176,8 +176,8 @@ function RaceMorningTrailhead({ data, basePath, editing }: { data: EventData['se
                   <p className="font-micro text-[10px] tracking-[0.2em] uppercase text-vr-cream/70 pt-1">Stat tiles</p>
                   {(c.statTiles ?? []).map((t, ti) => (
                     <div key={ti} className="flex items-center gap-2">
-                      <EditableText as="span" className="font-heading text-vr-cream text-sm w-24" value={t.value} path={`${basePath}.courses.${i}.statTiles.${ti}.value`} placeholder="13.1" />
-                      <EditableText as="span" className="font-micro text-xs text-vr-cream/85 flex-1" value={t.label} path={`${basePath}.courses.${i}.statTiles.${ti}.label`} placeholder="Miles" />
+                      <div className="w-24 shrink-0"><EditableText as="div" className="font-heading text-sm" value={t.value} path={`${basePath}.courses.${i}.statTiles.${ti}.value`} placeholder="13.1" /></div>
+                      <div className="flex-1"><EditableText as="div" className="font-micro text-xs" value={t.label} path={`${basePath}.courses.${i}.statTiles.${ti}.label`} placeholder="Miles" /></div>
                       <ListControls path={`${basePath}.courses.${i}.statTiles`} index={ti} count={c.statTiles!.length} />
                     </div>
                   ))}

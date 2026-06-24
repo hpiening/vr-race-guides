@@ -18,20 +18,20 @@
   "partners": {
     "enabled": true,
     "items": [
-      "Honey Stinger",
-      "That's It",
-      "Runna",
-      "Kate's Real Food",
-      "Runseek",
-      "Rowdy Trails",
-      "Laurel Timing",
-      "FinisherPix",
-      "Wander Project",
-      "Grüns",
-      "Hotel Planner",
-      "Siete",
-      "Neuma",
-      "Dip"
+      { "name": "Honey Stinger" },
+      { "name": "That's It" },
+      { "name": "Runna" },
+      { "name": "Kate's Real Food" },
+      { "name": "Runseek" },
+      { "name": "Rowdy Trails" },
+      { "name": "Laurel Timing" },
+      { "name": "FinisherPix" },
+      { "name": "Wander Project" },
+      { "name": "Grüns" },
+      { "name": "Hotel Planner" },
+      { "name": "Siete" },
+      { "name": "Neuma" },
+      { "name": "Dip" }
     ]
   },
   "sections": {
