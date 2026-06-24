@@ -18,20 +18,48 @@
   "partners": {
     "enabled": true,
     "items": [
-      { "name": "Honey Stinger" },
-      { "name": "That's It" },
-      { "name": "Runna" },
-      { "name": "Kate's Real Food" },
-      { "name": "Runseek" },
-      { "name": "Rowdy Trails" },
-      { "name": "Laurel Timing" },
-      { "name": "FinisherPix" },
-      { "name": "Wander Project" },
-      { "name": "Grüns" },
-      { "name": "Hotel Planner" },
-      { "name": "Siete" },
-      { "name": "Neuma" },
-      { "name": "Dip" }
+      {
+        "name": "Honey Stinger"
+      },
+      {
+        "name": "That's It"
+      },
+      {
+        "name": "Runna"
+      },
+      {
+        "name": "Kate's Real Food"
+      },
+      {
+        "name": "Runseek"
+      },
+      {
+        "name": "Rowdy Trails"
+      },
+      {
+        "name": "Laurel Timing"
+      },
+      {
+        "name": "FinisherPix"
+      },
+      {
+        "name": "Wander Project"
+      },
+      {
+        "name": "Grüns"
+      },
+      {
+        "name": "Hotel Planner"
+      },
+      {
+        "name": "Siete"
+      },
+      {
+        "name": "Neuma"
+      },
+      {
+        "name": "Dip"
+      }
     ]
   },
   "sections": {
@@ -41,7 +69,7 @@
       "body": "We hope your visit to Estes Park is enjoyable, and we also hope you make the time to visit Rocky Mountain National Park! We really try to capture the essence and experience of visiting a national park. We hope you have fun while you're here! Please respect and follow the guidelines and restrictions of our race, the National Park Service, and other local authorities.",
       "quote": "Climb the mountains and get their good tidings.",
       "quoteAttribution": "John Muir",
-      "closing": "Rocky Mountain and its trails and lakes and peaks and flowers and wildlife and trees and rocks and rivers are filled with good tidings. Take this chance to get away from the hustle and bustle to listen to them. Whether you are hiking the trails or running the race, there is peace and nourishment here for you. How amazing that we have the privilege to run, hike, and explore here. Every visitor is a steward and has a responsibility to protect and respect the area for future generations. As a race participant we trust in your support to promote the ecology and sustainability of this unparalleled location.\n\nHappy exploring!\n– The Vacation Races Team",
+      "closing": "The Rocky Mountains, with their peaks and trails, lakes and rivers, and foliage and wildlife, are filled with good tidings and hidden, natural treasures. Take this chance to get away from all the busyness and demands of life and explore the wonders and beauties of this area. Whether you are hiking the trails, exploring the town, or running the race, there is a chance to rejuvenate your energies and make lifelong memories here. How amazing that we have the privilege to run, hike, and explore this magical area. Every visitor is a steward and has a responsibility to work to preserve the purity of the area for future generations. As a race participant we trust in your support to protect the ecology and promote the sustainability of this unparalleled location.\n\nHappy exploring!\n– The Vacation Races Team",
       "note": "Note to runners: All of the following information is subject to change. If changes do occur due to unforeseen circumstances, adjustments will be made that will satisfy local permitting requirements while still delivering a top-tier running experience. We will inform our runners of any changes as soon as they are finalized so participants can comfortably prepare for their Vacation Races experience."
     },
     "schedule": {
@@ -53,9 +81,9 @@
           "date": "July 31, 2026",
           "items": [
             {
-              "time": "12:00–5:00 PM",
-              "label": "RACE EXPO & BIB PICKUP",
-              "note": "5K and Elk Double runners must pick up bib by 5:00 PM"
+              "time": "",
+              "label": "12:00–5:00 PM",
+              "note": "RACE EXPO & BIB PICKUP (5K and Elk Double runners must pick up bib by 5:00 PM)"
             },
             {
               "time": "5:45 PM",
