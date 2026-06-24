@@ -105,6 +105,13 @@ export interface WelcomeData {
 
 export interface EventData {
   slug: string
+  /**
+   * Visual theme. Absent or 'classic' renders the original guide design
+   * (used by all existing guides, e.g. grand-teton). 'trailhead' opts a guide
+   * into the elevated Trailhead design. Locked-by-design config (like
+   * accentColor / heroBgColor) — not inline-editable content.
+   */
+  theme?: 'classic' | 'trailhead'
   name: string
   tagline: string
   dates: string

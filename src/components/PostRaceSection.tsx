@@ -5,11 +5,14 @@ import { useEditOptional } from '@/lib/editContext'
 import EditableText from './edit/EditableText'
 import EditableUrl from './edit/EditableUrl'
 import { ListControls, AddButton } from './edit/ListControls'
+import { TrailHeader, Accordion } from './trailhead/Shared'
 
-type Props = { data: EventData['sections']['postRace']; basePath?: string }
+type Props = { data: EventData['sections']['postRace']; basePath?: string; theme?: 'classic' | 'trailhead' }
 
-export default function PostRaceSection({ data, basePath = 'sections.postRace' }: Props) {
+export default function PostRaceSection({ data, basePath = 'sections.postRace', theme = 'classic' }: Props) {
   const editing = !!useEditOptional()?.editing
+
+  if (theme === 'trailhead' && !editing) return <PostRaceTrailhead data={data} />
 
   return (
     <SectionWrapper id="post-race" label="Post-Race">
@@ -81,5 +84,71 @@ export default function PostRaceSection({ data, basePath = 'sections.postRace' }
         </div>
       )}
     </SectionWrapper>
+  )
+}
+
+/* ── Trailhead view (display-only) ── */
+function PostRaceTrailhead({ data }: { data: EventData['sections']['postRace'] }) {
+  return (
+    <section id="post-race" className="bg-vr-offwhite px-6 md:px-12 py-20 md:py-[104px]">
+      <div className="max-w-[1180px] mx-auto">
+        <TrailHeader eyebrow="Post-race" title="Information" className="mb-6" />
+        {data.finishLineInfo && (
+          <p className="font-body text-vr-forest leading-[1.7] max-w-[680px] mb-7" style={{ fontSize: '18px' }}>{data.finishLineInfo}</p>
+        )}
+        {data.infoSections && data.infoSections.length > 0 && (
+          <div className="flex flex-wrap gap-3 mb-14">
+            {data.infoSections.map((s, i) => (
+              <span key={i} className="font-label uppercase text-vr-forest border border-vr-forest/80 rounded-full px-4 py-2.5" style={{ fontSize: '12px', letterSpacing: '0.04em' }}>
+                {s.heading}
+              </span>
+            ))}
+          </div>
+        )}
+
+        {/* Course records — sky panel */}
+        {data.courseRecords.length > 0 && (
+          <div className="rounded-xl p-9 md:p-11 mb-6" style={{ background: 'var(--vr-sky)' }}>
+            <span className="font-accent text-vr-forest/75" style={{ fontSize: '18px' }}>Free race entry while the record stands</span>
+            <h3 className="font-display uppercase text-vr-forest leading-[0.92] m-0 mb-6" style={{ fontSize: 'clamp(28px,3.6vw,46px)' }}>Course Records</h3>
+            <div className="grid sm:grid-cols-2 gap-px rounded-lg overflow-hidden" style={{ background: 'rgba(49,56,50,0.2)', border: '1px solid rgba(49,56,50,0.2)' }}>
+              {data.courseRecords.map((r, i) => (
+                <div key={i} className="bg-vr-sky p-6">
+                  <div className="font-micro uppercase text-vr-forest/70 mb-2" style={{ fontSize: '11px', letterSpacing: '0.12em' }}>{r.category} · {r.year}</div>
+                  <div className="flex items-baseline justify-between gap-3">
+                    <span className="font-heading text-vr-forest" style={{ fontSize: '16px' }}>{r.name}</span>
+                    <span className="font-display text-vr-forest" style={{ fontSize: '30px' }}>{r.time}</span>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Detailed info accordions */}
+        {data.infoSections && data.infoSections.length > 0 && (
+          <Accordion
+            variant="white"
+            items={data.infoSections.map(s => ({
+              heading: s.heading,
+              body: (
+                <>
+                  {s.body}
+                  {s.links && s.links.length > 0 && (
+                    <span className="flex flex-wrap gap-3 mt-4">
+                      {s.links.map((link, j) => (
+                        <a key={j} href={link.url} target="_blank" rel="noopener noreferrer" className="font-label text-xs tracking-[0.16em] uppercase px-5 py-2.5 border border-vr-forest/25 text-vr-forest rounded-full hover:bg-vr-offwhite transition-colors">
+                          {link.label}
+                        </a>
+                      ))}
+                    </span>
+                  )}
+                </>
+              ),
+            }))}
+          />
+        )}
+      </div>
+    </section>
   )
 }

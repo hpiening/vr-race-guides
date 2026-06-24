@@ -5,14 +5,36 @@ import { EventData } from '@/types/event'
 import { useEditOptional } from '@/lib/editContext'
 import EditableText from './edit/EditableText'
 import { ListControls, AddButton } from './edit/ListControls'
+import { TrailHeader } from './trailhead/Shared'
 
-type Props = { data: EventData['sections']['faqs']; basePath?: string }
+type Props = { data: EventData['sections']['faqs']; basePath?: string; theme?: 'classic' | 'trailhead' }
 
-export default function FAQSection({ data, basePath = 'sections.faqs' }: Props) {
+export default function FAQSection({ data, basePath = 'sections.faqs', theme = 'classic' }: Props) {
   const [open, setOpen] = useState<number | null>(null)
   const ctx = useEditOptional()
   const editing = !!ctx?.editing
   const itemsPath = `${basePath}.items`
+
+  if (theme === 'trailhead' && !editing) {
+    return (
+      <section id="faqs" className="bg-vr-forest px-6 md:px-12 py-20 md:py-[104px]">
+        <div className="max-w-[880px] mx-auto">
+          <TrailHeader dark eyebrow="Good to know" title="FAQs" className="mb-10" />
+          <div className="flex flex-col">
+            {data.items.map((item, i) => (
+              <details key={i} className="border-t border-vr-cream/[0.18] last:border-b last:border-vr-cream/[0.18]">
+                <summary className="flex justify-between items-center gap-5 py-6">
+                  <span className="font-heading uppercase text-vr-cream" style={{ fontSize: '17px', letterSpacing: '0.02em' }}>{item.question}</span>
+                  <span className="tl-plus text-vr-sky font-light shrink-0 transition-transform duration-200" style={{ fontSize: '24px' }}>+</span>
+                </summary>
+                <p className="m-0 pb-6 font-body text-vr-cream/[0.78] leading-[1.65] max-w-[680px]" style={{ fontSize: '15px' }}>{item.answer}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
 
   return (
     <SectionWrapper id="faqs" label="FAQs" dark>

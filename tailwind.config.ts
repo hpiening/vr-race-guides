@@ -19,6 +19,9 @@ const config: Config = {
         'vr-white':      '#FFFFFF',
         'vr-offwhite':   '#FAF7F2',
         'vr-mid':        '#6B7068',
+        'vr-pine':       '#003F2D',  // Trailhead: deep nav green
+        'vr-night':      '#1a2f23',  // Trailhead: deepest green (photo bands, footer)
+        'vr-line':       '#d8c9b3',  // Trailhead: hairline border on light cards
       },
       fontFamily: {
         'scale-condensed': ['Scale Condensed', 'Oswald', 'sans-serif'],

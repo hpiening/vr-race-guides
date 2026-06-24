@@ -4,11 +4,14 @@ import { EventData } from '@/types/event'
 import { useEditOptional } from '@/lib/editContext'
 import EditableText from './edit/EditableText'
 import { ListControls, AddButton } from './edit/ListControls'
+import { TrailHeader } from './trailhead/Shared'
 
-type Props = { data: EventData['sections']['experiences']; basePath?: string }
+type Props = { data: EventData['sections']['experiences']; basePath?: string; theme?: 'classic' | 'trailhead' }
 
-export default function ExperiencesSection({ data, basePath = 'sections.experiences' }: Props) {
+export default function ExperiencesSection({ data, basePath = 'sections.experiences', theme = 'classic' }: Props) {
   const editing = !!useEditOptional()?.editing
+
+  if (theme === 'trailhead' && !editing) return <ExperiencesTrailhead data={data} />
 
   return (
     <SectionWrapper id="experiences" label="Experiences">
@@ -147,5 +150,106 @@ export default function ExperiencesSection({ data, basePath = 'sections.experien
         </div>
       )}
     </SectionWrapper>
+  )
+}
+
+/* ── Trailhead view (display-only) ── */
+function ExperiencesTrailhead({ data }: { data: EventData['sections']['experiences'] }) {
+  const subhead = 'font-heading uppercase text-vr-forest mb-[18px]'
+  const subStyle = { fontSize: '16px', letterSpacing: '0.06em' }
+  return (
+    <section id="experiences" className="bg-vr-offwhite px-6 md:px-12 py-20 md:py-[104px]">
+      <div className="max-w-[1180px] mx-auto">
+        <TrailHeader eyebrow="Beyond the race" title="Experiences" className="mb-9" />
+
+        {/* Lodging banner */}
+        <div className="border border-vr-line rounded-lg bg-vr-white p-9 mb-9" style={{ borderLeft: '3px solid var(--vr-sky)' }}>
+          <span className="font-micro uppercase text-vr-sky block mb-2" style={{ fontSize: '11px', letterSpacing: '0.14em' }}>
+            Official lodging partner · {data.lodging.partner}
+          </span>
+          <h3 className="font-heading uppercase text-vr-forest mb-3" style={{ fontSize: '24px', letterSpacing: '0.02em' }}>Book your weekend stay</h3>
+          <p className="font-body text-vr-forest/85 leading-[1.6] max-w-[640px] mb-5" style={{ fontSize: '15px' }}>{data.lodging.description}</p>
+          <a href={data.lodging.url} target="_blank" rel="noopener noreferrer" className="inline-block font-label text-xs tracking-[0.12em] uppercase px-6 py-3 rounded-full bg-vr-forest text-vr-cream hover:opacity-90 transition-opacity">
+            Book lodging ↗
+          </a>
+        </div>
+
+        {/* Activities */}
+        {data.activities.length > 0 && (
+          <div className="grid gap-6 md:grid-cols-2 mb-12">
+            {data.activities.map((act, i) => (
+              <div key={i} className="border border-vr-line bg-vr-white rounded-lg p-7 flex flex-col">
+                <h3 className="font-heading uppercase text-vr-forest mb-3" style={{ fontSize: '18px', letterSpacing: '0.02em' }}>{act.name}</h3>
+                <p className="font-body text-vr-forest/85 leading-[1.6] mb-4 flex-1" style={{ fontSize: '15px' }}>{act.description}</p>
+                {act.discountCode && (
+                  <p className="font-micro text-sm mb-3">
+                    Use code{' '}
+                    <span className="font-label tracking-widest bg-vr-forest text-vr-cream px-2 py-0.5 rounded text-xs inline-block">{act.discountCode}</span>
+                  </p>
+                )}
+                <a href={act.url} target="_blank" rel="noopener noreferrer" className="self-start font-label text-xs tracking-[0.12em] uppercase text-vr-sandstone hover:text-vr-forest transition-colors">
+                  Learn more ↗
+                </a>
+              </div>
+            ))}
+          </div>
+        )}
+
+        {/* Hikes */}
+        {data.hikes.length > 0 && (
+          <>
+            <h3 className={subhead} style={subStyle}>Hikes</h3>
+            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 mb-11">
+              {data.hikes.map((hike, i) => (
+                <a key={i} href={hike.url} target="_blank" rel="noopener noreferrer" className="border border-vr-line bg-vr-white rounded-lg p-6 transition-shadow hover:shadow-[0_14px_30px_rgba(38,69,51,0.14)] block">
+                  <div className="font-micro uppercase text-vr-sky mb-1.5" style={{ fontSize: '10px', letterSpacing: '0.12em' }}>
+                    {[hike.distance, hike.difficulty].filter(Boolean).join(' · ')}
+                  </div>
+                  <h4 className="font-heading uppercase text-vr-forest mb-1.5" style={{ fontSize: '17px', letterSpacing: '0.02em' }}>{hike.name}</h4>
+                  {hike.elevation && <p className="font-body text-vr-forest/70" style={{ fontSize: '13px' }}>{hike.elevation}</p>}
+                </a>
+              ))}
+            </div>
+          </>
+        )}
+
+        {/* Sights */}
+        {data.sights && data.sights.length > 0 && (
+          <>
+            <h3 className={subhead} style={subStyle}>Iconic Views &amp; Sights</h3>
+            <div className="grid gap-4 mb-11" style={{ gridTemplateColumns: 'repeat(auto-fill,minmax(210px,1fr))' }}>
+              {data.sights.map((s, i) => {
+                const body = (
+                  <>
+                    <h4 className="font-heading uppercase text-vr-forest mb-1.5" style={{ fontSize: '16px', letterSpacing: '0.02em' }}>{s.name}</h4>
+                    <p className="font-body text-vr-forest/85 leading-[1.55]" style={{ fontSize: '14px' }}>{s.description}</p>
+                  </>
+                )
+                return s.url ? (
+                  <a key={i} href={s.url} target="_blank" rel="noopener noreferrer" className="border border-vr-line bg-vr-white rounded-lg p-6 block transition-shadow hover:shadow-[0_14px_30px_rgba(38,69,51,0.14)]">{body}</a>
+                ) : (
+                  <div key={i} className="border border-vr-line bg-vr-white rounded-lg p-6">{body}</div>
+                )
+              })}
+            </div>
+          </>
+        )}
+
+        {/* Restaurants */}
+        {data.restaurants.length > 0 && (
+          <>
+            <h3 className={subhead} style={subStyle}>Where to Eat</h3>
+            <div className="grid gap-5" style={{ gridTemplateColumns: 'repeat(auto-fill,minmax(280px,1fr))' }}>
+              {data.restaurants.map((r, i) => (
+                <a key={i} href={r.url} target="_blank" rel="noopener noreferrer" className="border border-vr-line bg-vr-white rounded-lg p-6 block transition-shadow hover:shadow-[0_14px_30px_rgba(38,69,51,0.14)]">
+                  <h4 className="font-heading uppercase text-vr-forest mb-2" style={{ fontSize: '17px', letterSpacing: '0.02em' }}>{r.name}</h4>
+                  <p className="font-body text-vr-forest/85 leading-[1.55]" style={{ fontSize: '14px' }}>{r.description}</p>
+                </a>
+              ))}
+            </div>
+          </>
+        )}
+      </div>
+    </section>
   )
 }

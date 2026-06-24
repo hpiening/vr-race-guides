@@ -4,11 +4,14 @@ import { ChallengeEventsData } from '@/types/event'
 import { useEditOptional } from '@/lib/editContext'
 import EditableText from './edit/EditableText'
 import { ListControls, AddButton } from './edit/ListControls'
+import { TrailHeader, Accordion } from './trailhead/Shared'
 
-type Props = { data: ChallengeEventsData; basePath?: string }
+type Props = { data: ChallengeEventsData; basePath?: string; theme?: 'classic' | 'trailhead' }
 
-export default function ChallengeEventsSection({ data, basePath = 'sections.challengeEvents' }: Props) {
+export default function ChallengeEventsSection({ data, basePath = 'sections.challengeEvents', theme = 'classic' }: Props) {
   const editing = !!useEditOptional()?.editing
+
+  if (theme === 'trailhead' && !editing) return <ChallengeEventsTrailhead data={data} />
 
   return (
     <SectionWrapper id="challenge-events" label="Challenge Events" dark>
@@ -94,5 +97,71 @@ export default function ChallengeEventsSection({ data, basePath = 'sections.chal
 
       <AddButton path={`${basePath}.events`} item={{ name: 'New Challenge', description: '', dates: '', includes: [], bibPickup: '', medals: '' }} label="Add challenge event" />
     </SectionWrapper>
+  )
+}
+
+/* ── Trailhead view (display-only) ── */
+function ChallengeEventsTrailhead({ data }: { data: ChallengeEventsData }) {
+  return (
+    <section id="challenge-events" className="bg-vr-night px-6 md:px-12 py-20 md:py-[104px]">
+      <div className="max-w-[1180px] mx-auto">
+        <TrailHeader dark eyebrow="Go further · Challenge event" title="Challenge Events" className="mb-10" />
+        {data.intro && (
+          <p className="font-body text-vr-cream/[0.82] leading-[1.7] max-w-[720px] mb-10" style={{ fontSize: '17px' }}>{data.intro}</p>
+        )}
+
+        {data.events.map((evt, i) => (
+          <div key={i} className="mb-12 last:mb-0">
+            <div className="grid gap-6 md:grid-cols-[1.3fr_1fr] items-stretch">
+              <div className="border border-vr-cream/20 rounded-lg p-9" style={{ background: 'linear-gradient(140deg,#264533,#1a2f23)' }}>
+                <h3 className="font-display uppercase text-vr-cream leading-none m-0" style={{ fontSize: 'clamp(30px,4vw,46px)' }}>{evt.name}</h3>
+                {evt.tagline && (
+                  <div className="font-label uppercase text-vr-cream/60 mt-2 mb-5" style={{ fontSize: '13px', letterSpacing: '0.1em' }}>{evt.tagline}</div>
+                )}
+                <p className="font-body text-vr-cream/85 leading-[1.7] max-w-[560px] mb-6" style={{ fontSize: '16px' }}>{evt.description}</p>
+                <div className="flex gap-9 flex-wrap">
+                  {evt.totalMileage && (
+                    <div>
+                      <div className="font-display text-vr-sky leading-none" style={{ fontSize: '44px' }}>{evt.totalMileage.replace(/\s*miles?/i, '')}</div>
+                      <div className="font-micro uppercase text-vr-cream/60 mt-1.5" style={{ fontSize: '10px', letterSpacing: '0.12em' }}>Total Miles</div>
+                    </div>
+                  )}
+                  {evt.dates && (
+                    <div>
+                      <div className="font-display text-vr-sky leading-none" style={{ fontSize: '44px' }}>2</div>
+                      <div className="font-micro uppercase text-vr-cream/60 mt-1.5" style={{ fontSize: '10px', letterSpacing: '0.12em' }}>Races · 1 Weekend</div>
+                    </div>
+                  )}
+                </div>
+              </div>
+
+              {evt.includes.length > 0 && (
+                <div className="border border-vr-cream/20 rounded-lg p-8 bg-vr-deep">
+                  <h4 className="font-heading uppercase text-vr-cream mb-4" style={{ fontSize: '15px', letterSpacing: '0.06em' }}>Includes</h4>
+                  <div className="flex flex-col gap-3.5">
+                    {evt.includes.map((it, j) => (
+                      <div key={j} className="flex gap-3 items-start">
+                        <span className="text-vr-sky font-extrabold shrink-0">✦</span>
+                        <span className="font-body text-vr-cream/85 leading-[1.5]" style={{ fontSize: '15px' }}>{it}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
+            </div>
+
+            <div className="mt-6">
+              <Accordion
+                items={[
+                  { heading: 'Bib Pickup', body: evt.bibPickup },
+                  { heading: 'Medals', body: evt.medals },
+                  ...(evt.swag ? [{ heading: 'Swag', body: evt.swag }] : []),
+                ]}
+              />
+            </div>
+          </div>
+        ))}
+      </div>
+    </section>
   )
 }

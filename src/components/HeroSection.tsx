@@ -3,7 +3,9 @@ import Image from 'next/image'
 import { EventData } from '@/types/event'
 import EditableText from './edit/EditableText'
 
-export default function HeroSection({ event }: { event: EventData }) {
+export default function HeroSection({ event, theme = 'classic' }: { event: EventData; theme?: 'classic' | 'trailhead' }) {
+  if (theme === 'trailhead') return <HeroTrailhead event={event} />
+
   const gradientFrom = 'from-vr-forest'
   const gradientVia  = 'via-vr-forest/50'
   const gradientTo   = 'to-vr-forest/20'
@@ -82,6 +84,82 @@ export default function HeroSection({ event }: { event: EventData }) {
           >
             <EditableText as="span" value={event.dates} path="dates" />
           </span>
+        </div>
+      </div>
+    </header>
+  )
+}
+
+/* ── Trailhead hero — cinematic radial gradient, inset frame, editorial type ── */
+function HeroTrailhead({ event }: { event: EventData }) {
+  return (
+    <header
+      className="relative flex flex-col justify-between overflow-hidden min-h-[90vh]"
+      style={{ background: 'radial-gradient(125% 95% at 72% 8%,#3c5a45 0%,#264533 44%,#1a2f23 100%)' }}
+    >
+      {event.heroImage && (
+        <div className="absolute inset-0">
+          <Image
+            src={event.heroImage}
+            alt={event.heroImageAlt || event.name}
+            fill
+            priority
+            className="object-cover object-center"
+          />
+        </div>
+      )}
+
+      {/* faint event-mark watermark */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={`/images/events/${event.slug}-icon.png`}
+        alt=""
+        aria-hidden="true"
+        className="tl-watermark absolute right-[4%] bottom-[-4%] h-[104%] w-auto opacity-[0.07] pointer-events-none"
+        onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
+      />
+
+      {/* bottom scrim for legibility over photo/gradient */}
+      <div
+        className="absolute inset-0 z-[1] pointer-events-none"
+        style={{ background: 'linear-gradient(180deg,rgba(26,47,35,0.12) 0%,rgba(26,47,35,0) 38%,rgba(26,47,35,0.6) 100%)' }}
+      />
+      {/* inset cream frame */}
+      <div className="absolute z-[2] pointer-events-none border border-vr-cream/30" style={{ inset: '22px' }} />
+
+      <div className="relative z-[3] flex items-start justify-between px-6 pt-9 md:px-12 md:pt-12">
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src={event.logo || '/images/vr-shield.png'}
+          alt={event.logoAlt || 'Vacation Races'}
+          className="h-9 md:h-[54px] w-auto"
+        />
+      </div>
+
+      <div className="relative z-[3] px-6 pb-16 md:px-12 md:pb-20 w-full max-w-[1180px] mx-auto">
+        <div className="max-w-[88%] md:max-w-[84%]">
+          <p className="font-micro font-bold uppercase text-vr-cream/[0.78] mb-3.5" style={{ fontSize: '13px', letterSpacing: '0.32em' }}>
+            Race Day Guide
+          </p>
+          <h1
+            className="font-display uppercase text-vr-cream m-0"
+            style={{ lineHeight: 0.84, letterSpacing: '0.005em', fontSize: 'clamp(48px,8.2vw,116px)' }}
+          >
+            <EditableText as="span" value={event.name} path="name" />
+          </h1>
+          <p
+            className="font-accent text-vr-sky mt-5"
+            style={{ fontSize: 'clamp(20px,2.7vw,34px)', letterSpacing: '-0.01em' }}
+          >
+            <EditableText as="span" value={event.tagline} path="tagline" />
+          </p>
+          <div
+            className="flex items-center gap-4 mt-7 flex-wrap font-label uppercase text-vr-cream"
+            style={{ fontSize: 'clamp(13px,1.3vw,16px)', letterSpacing: '0.16em' }}
+          >
+            <span className="bg-vr-sky inline-block" style={{ width: 5, height: 5, transform: 'rotate(45deg)' }} />
+            <EditableText as="span" value={event.dates} path="dates" />
+          </div>
         </div>
       </div>
     </header>

@@ -129,12 +129,28 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 }
 
+/** Full-bleed titled band between sections (Trailhead only; hidden in print). */
+function PhotoBand({ title }: { title: string }) {
+  return (
+    <div className="tl-photoband relative bg-vr-night px-6 md:px-12 py-16 md:py-[74px] text-center overflow-hidden border-y border-vr-cream/10">
+      <div
+        className="absolute inset-0 opacity-50 pointer-events-none"
+        style={{ background: 'repeating-linear-gradient(135deg,#22402f,#22402f 16px,#1e3a2a 16px,#1e3a2a 32px)' }}
+      />
+      <h2 className="relative font-display uppercase tracking-[0.02em] text-vr-cream m-0" style={{ fontSize: 'clamp(34px,5vw,64px)' }}>
+        {title}
+      </h2>
+    </div>
+  )
+}
+
 export default async function EventPage({ params }: { params: { slug: string } }) {
   const event = await getEvent(params.slug)
   if (!event) notFound()
 
   const { sections } = event
   const searchIndex = buildSearchIndex(event)
+  const theme: 'classic' | 'trailhead' = event.theme === 'trailhead' ? 'trailhead' : 'classic'
 
   const navItems = [
     sections.schedule.enabled             && { id: 'schedule',          label: 'Schedule' },
@@ -148,29 +164,52 @@ export default async function EventPage({ params }: { params: { slug: string } }
     sections.faqs.enabled                 && { id: 'faqs',              label: 'FAQs' },
   ].filter(Boolean) as { id: string; label: string }[]
 
+  const isTrail = theme === 'trailhead'
+
   return (
-    <div>
-      <HeroSection event={event} />
-      <StickyNav items={navItems} />
+    <div data-theme={theme}>
+      <HeroSection event={event} theme={theme} />
+      <StickyNav items={navItems} theme={theme} />
       <main>
-        {sections.welcome?.enabled        && <WelcomeSection     data={sections.welcome} />}
-        {sections.schedule.enabled        && <ScheduleSection    data={sections.schedule} eventSlug={event.slug} />}
-        {sections.expo.enabled            && <ExpoSection        data={sections.expo} />}
-        {sections.courseInfo.enabled      && <CourseInfoSection  data={sections.courseInfo} />}
-        {sections.raceMorning.enabled     && <RaceMorningSection data={sections.raceMorning} />}
-        {sections.spectators.enabled      && <SpectatorsSection  data={sections.spectators} />}
-        {sections.postRace.enabled        && <PostRaceSection    data={sections.postRace} />}
-        {sections.challengeEvents?.enabled && <ChallengeEventsSection data={sections.challengeEvents!} />}
-        {sections.experiences.enabled     && <ExperiencesSection data={sections.experiences} />}
-        {sections.faqs.enabled            && <FAQSection         data={sections.faqs} />}
+        {sections.welcome?.enabled        && <WelcomeSection     data={sections.welcome} theme={theme} />}
+        {sections.schedule.enabled        && <ScheduleSection    data={sections.schedule} eventSlug={event.slug} theme={theme} />}
+        {sections.expo.enabled            && <ExpoSection        data={sections.expo} theme={theme} />}
+        {isTrail && sections.courseInfo.enabled && <PhotoBand title="On the Course" />}
+        {sections.courseInfo.enabled      && <CourseInfoSection  data={sections.courseInfo} theme={theme} />}
+        {isTrail && sections.raceMorning.enabled && <PhotoBand title="Race Morning" />}
+        {sections.raceMorning.enabled     && <RaceMorningSection data={sections.raceMorning} theme={theme} />}
+        {sections.spectators.enabled      && <SpectatorsSection  data={sections.spectators} theme={theme} />}
+        {isTrail && sections.postRace.enabled && <PhotoBand title="Post Race" />}
+        {sections.postRace.enabled        && <PostRaceSection    data={sections.postRace} theme={theme} />}
+        {sections.challengeEvents?.enabled && <ChallengeEventsSection data={sections.challengeEvents!} theme={theme} />}
+        {sections.experiences.enabled     && <ExperiencesSection data={sections.experiences} theme={theme} />}
+        {sections.faqs.enabled            && <FAQSection         data={sections.faqs} theme={theme} />}
       </main>
       <PrintButton />
       <SearchBar index={searchIndex} />
-      <footer className="bg-vr-forest text-vr-cream py-12 px-6 text-center">
-        <p className="font-micro text-sm tracking-widest uppercase opacity-60">
-          © {new Date().getFullYear()} Vacation Races · All Rights Reserved
-        </p>
-      </footer>
+      {isTrail ? (
+        <footer className="relative bg-vr-night overflow-hidden border-t border-vr-cream/10 px-6 md:px-12 py-20">
+          <div className="relative z-10 max-w-5xl mx-auto text-center">
+            <div className="leading-[0.9] mb-1.5">
+              <span className="font-accent text-vr-sky" style={{ fontSize: 'clamp(22px,2.6vw,34px)' }}>Chase the</span>
+            </div>
+            <h2 className="font-display uppercase leading-[0.9] text-vr-cream m-0 mb-9" style={{ fontSize: 'clamp(44px,7vw,104px)' }}>
+              Extraordinary
+            </h2>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/vr-shield.png" alt="Vacation Races" className="h-10 w-auto mx-auto" />
+            <p className="font-micro text-xs tracking-[0.12em] uppercase text-vr-cream/50 mt-4">
+              © {new Date().getFullYear()} Vacation Races · Run wild · Run national parks
+            </p>
+          </div>
+        </footer>
+      ) : (
+        <footer className="bg-vr-forest text-vr-cream py-12 px-6 text-center">
+          <p className="font-micro text-sm tracking-widest uppercase opacity-60">
+            © {new Date().getFullYear()} Vacation Races · All Rights Reserved
+          </p>
+        </footer>
+      )}
     </div>
   )
 }

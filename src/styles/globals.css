@@ -160,6 +160,27 @@ body {
   li, dd { break-inside: avoid; }
 }
 
+/* ─── Trailhead theme — native <details> accordions ─────────────── */
+/* Progressive enhancement: works with zero JS / in SSR. Scoped so the
+   classic theme (grand-teton) is untouched. */
+[data-theme='trailhead'] summary {
+  list-style: none;
+  cursor: pointer;
+}
+[data-theme='trailhead'] summary::-webkit-details-marker { display: none; }
+[data-theme='trailhead'] details[open] .tl-plus { transform: rotate(45deg); }
+[data-theme='trailhead'] ::selection { background: var(--vr-sky); color: var(--vr-forest); }
+
+@media print {
+  /* Reveal every accordion answer for the exported PDF, regardless of
+     open/closed state, and drop the +/× affordance. */
+  [data-theme='trailhead'] details > *:not(summary) { display: block !important; }
+  [data-theme='trailhead'] .tl-plus { display: none !important; }
+  /* Photo-band placeholders & decorative watermarks add nothing on paper. */
+  [data-theme='trailhead'] .tl-photoband,
+  [data-theme='trailhead'] .tl-watermark { display: none !important; }
+}
+
 /* ─── Inline editor affordances (only present in /edit edit mode) ───── */
 
 .editable-field {

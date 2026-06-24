@@ -5,11 +5,14 @@ import { useEditOptional } from '@/lib/editContext'
 import EditableText from './edit/EditableText'
 import EditableUrl from './edit/EditableUrl'
 import { ListControls, AddButton } from './edit/ListControls'
+import { TrailHeader, InfoCard } from './trailhead/Shared'
 
-type Props = { data: EventData['sections']['expo']; basePath?: string }
+type Props = { data: EventData['sections']['expo']; basePath?: string; theme?: 'classic' | 'trailhead' }
 
-export default function ExpoSection({ data, basePath = 'sections.expo' }: Props) {
+export default function ExpoSection({ data, basePath = 'sections.expo', theme = 'classic' }: Props) {
   const editing = !!useEditOptional()?.editing
+
+  if (theme === 'trailhead' && !editing) return <ExpoTrailhead data={data} />
 
   return (
     <section id="expo" className="py-16 md:py-24 px-6 md:px-12 bg-vr-offwhite text-vr-forest">
@@ -114,6 +117,90 @@ export default function ExpoSection({ data, basePath = 'sections.expo' }: Props)
             <EditableUrl path={`${basePath}.mapImageUrl`} label="Map image URL (optional)" />
           </div>
         </div>
+      </div>
+    </section>
+  )
+}
+
+/* ── Trailhead view (display-only) ── */
+function ExpoTrailhead({ data }: { data: EventData['sections']['expo'] }) {
+  return (
+    <section id="expo" className="bg-vr-offwhite px-6 md:px-12 py-20 md:py-[104px]">
+      <div className="max-w-[1180px] mx-auto">
+        <TrailHeader eyebrow="Pre-race" title="Expo" className="mb-12" />
+        {data.locationAddress && (
+          <p className="font-body text-vr-forest leading-[1.65] max-w-[680px] mb-10" style={{ fontSize: '18px' }}>
+            {data.locationAddress}
+          </p>
+        )}
+
+        <div className="grid gap-6 md:grid-cols-[1.4fr_1fr] items-start">
+          {/* location card */}
+          <div className="border border-vr-line bg-vr-white rounded-lg overflow-hidden">
+            {data.mapImageUrl ? (
+              <a href={data.locationMapUrl} target="_blank" rel="noopener noreferrer" className="block border-b border-vr-line">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={data.mapImageUrl} alt={`${data.locationName} map`} className="w-full h-auto block" />
+              </a>
+            ) : (
+              <div className="border-b border-vr-line">
+                <MapEmbed lat={data.locationLat} lng={data.locationLng} label={data.locationName} mapsUrl={data.locationMapUrl} dark={false} />
+              </div>
+            )}
+            <div className="p-7">
+              <a
+                href={data.locationMapUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-heading uppercase text-vr-forest hover:text-vr-sky transition-colors"
+                style={{ fontSize: '22px', letterSpacing: '0.02em' }}
+              >
+                {data.locationName} ↗
+              </a>
+              {data.hours.length > 0 && (
+                <div className="flex flex-wrap gap-x-8 gap-y-4 mt-5">
+                  {data.hours.map((h, i) => (
+                    <div key={i}>
+                      <div className="font-micro uppercase text-vr-sky mb-1" style={{ fontSize: '10px', letterSpacing: '0.14em' }}>{h.label}</div>
+                      <div className="font-heading text-vr-forest" style={{ fontSize: '17px' }}>{h.time}</div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+
+          {/* notes as a side card */}
+          {data.notes.length > 0 && (
+            <div className="border border-vr-line bg-vr-white rounded-lg p-7" style={{ borderLeft: '3px solid var(--vr-sky)' }}>
+              <h3 className="font-heading uppercase text-vr-forest mb-4" style={{ fontSize: '15px', letterSpacing: '0.04em' }}>Good to know</h3>
+              <ul className="flex flex-col gap-3">
+                {data.notes.map((note, i) => (
+                  <li key={i} className="flex gap-3 items-start font-body text-vr-forest/85 leading-relaxed" style={{ fontSize: '14px' }}>
+                    <span className="text-vr-sky mt-0.5 shrink-0">✦</span>
+                    <span>{note}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+        </div>
+
+        {/* info blocks as cards */}
+        {data.infoBlocks && data.infoBlocks.length > 0 && (
+          <div className="grid gap-6 md:grid-cols-2 mt-6">
+            {data.infoBlocks.map((b, i) => (
+              <InfoCard key={i} heading={b.heading}>
+                {b.body}
+                {b.linkLabel && b.linkUrl && (
+                  <a href={b.linkUrl} target="_blank" rel="noopener noreferrer" className="block mt-2 font-micro text-xs tracking-widest uppercase text-vr-sky hover:text-vr-forest transition-colors">
+                    {b.linkLabel} ↗
+                  </a>
+                )}
+              </InfoCard>
+            ))}
+          </div>
+        )}
       </div>
     </section>
   )

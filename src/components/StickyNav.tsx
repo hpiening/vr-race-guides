@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 
 interface NavItem { id: string; label: string }
 
-export default function StickyNav({ items }: { items: NavItem[] }) {
+export default function StickyNav({ items, theme = 'classic' }: { items: NavItem[]; theme?: 'classic' | 'trailhead' }) {
   const [active, setActive] = useState(items[0]?.id ?? '')
 
   useEffect(() => {
@@ -25,6 +25,31 @@ export default function StickyNav({ items }: { items: NavItem[] }) {
   const scrollTo = (id: string) => {
     const el = document.getElementById(id)
     if (el) el.scrollIntoView({ behavior: 'smooth' })
+  }
+
+  if (theme === 'trailhead') {
+    return (
+      <nav className="sticky top-0 z-50 bg-vr-pine border-b border-vr-cream/[0.14] print:hidden">
+        <div className="overflow-x-auto scrollbar-none">
+          <ul className="flex min-w-max items-center gap-1 px-4 md:px-7 lg:justify-center">
+            {items.map(item => (
+              <li key={item.id}>
+                <button
+                  onClick={() => scrollTo(item.id)}
+                  className={`
+                    font-label text-[12px] tracking-[0.14em] uppercase whitespace-nowrap
+                    px-3 py-3.5 transition-colors duration-150
+                    ${active === item.id ? 'text-vr-sky' : 'text-vr-cream/80 hover:text-vr-sky'}
+                  `}
+                >
+                  {item.label}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </nav>
+    )
   }
 
   return (

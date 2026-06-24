@@ -6,11 +6,14 @@ import EditableText from './edit/EditableText'
 import EditableUrl from './edit/EditableUrl'
 import RideWithGpsField from './edit/RideWithGpsField'
 import { ListControls, AddButton } from './edit/ListControls'
+import { TrailHeader, StatChips, Accordion } from './trailhead/Shared'
 
-type Props = { data: EventData['sections']['courseInfo']; basePath?: string }
+type Props = { data: EventData['sections']['courseInfo']; basePath?: string; theme?: 'classic' | 'trailhead' }
 
-export default function CourseInfoSection({ data, basePath = 'sections.courseInfo' }: Props) {
+export default function CourseInfoSection({ data, basePath = 'sections.courseInfo', theme = 'classic' }: Props) {
   const editing = !!useEditOptional()?.editing
+
+  if (theme === 'trailhead' && !editing) return <CourseInfoTrailhead data={data} />
 
   return (
     <SectionWrapper id="course-info" label={data.navLabel || data.heading || 'Course Info'} dark>
@@ -114,5 +117,69 @@ export default function CourseInfoSection({ data, basePath = 'sections.courseInf
         </div>
       )}
     </SectionWrapper>
+  )
+}
+
+/* ── Trailhead view (display-only) ── */
+function CourseInfoTrailhead({ data }: { data: EventData['sections']['courseInfo'] }) {
+  return (
+    <section id="course-info" className="relative bg-vr-deep overflow-hidden px-6 md:px-12 py-20 md:py-[104px]">
+      <div className="max-w-[1180px] mx-auto">
+        <TrailHeader dark eyebrow="The course" title={data.heading || 'Course Info'} className="mb-10" />
+
+        {data.distances.map((d, i) => (
+          <div key={i} className="grid gap-6 md:grid-cols-[1.5fr_1fr] items-start mb-10">
+            <div className="border border-vr-cream/20 rounded-lg overflow-hidden">
+              {d.embedUrl ? (
+                <>
+                  <iframe src={d.embedUrl} title={`${d.name} route map`} style={{ width: '100%', height: '440px', border: 'none', display: 'block' }} loading="lazy" scrolling="no" className="print:hidden" />
+                  <div className="hidden print:block px-5 py-4 text-sm font-body text-vr-cream/70">View route at: {d.mapUrl}</div>
+                </>
+              ) : d.mapImageUrl ? (
+                /* eslint-disable-next-line @next/next/no-img-element */
+                <img src={d.mapImageUrl} alt={`${d.name} course map`} className="w-full object-cover aspect-[16/10]" />
+              ) : null}
+            </div>
+            <div className="flex flex-col gap-5">
+              <div className="font-heading uppercase text-vr-cream" style={{ fontSize: '20px', letterSpacing: '0.02em' }}>{d.name}</div>
+              <StatChips stats={d.stats} dark />
+              <a href={d.mapUrl} target="_blank" rel="noopener noreferrer" className="self-start font-label text-xs tracking-[0.12em] uppercase text-vr-sky hover:text-vr-cream transition-colors">
+                View full route ↗
+              </a>
+            </div>
+          </div>
+        ))}
+
+        {data.schedule && data.schedule.length > 0 && (
+          <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 mb-10">
+            {data.schedule.map((item, i) => (
+              <div key={i} className="bg-vr-cream/5 border border-vr-cream/10 rounded-lg p-5">
+                <div className="font-label text-xs tracking-[0.16em] uppercase text-vr-sky mb-2">{item.time}</div>
+                <div className="font-heading text-sm uppercase leading-tight text-vr-cream">{item.label}</div>
+                {item.note && <div className="font-body text-xs text-vr-cream/60 mt-1">{item.note}</div>}
+              </div>
+            ))}
+          </div>
+        )}
+
+        {data.infoBlocks && data.infoBlocks.length > 0 && (
+          <Accordion
+            items={data.infoBlocks.map(b => ({
+              heading: b.heading,
+              body: (
+                <>
+                  {b.body}
+                  {b.linkLabel && b.linkUrl && (
+                    <a href={b.linkUrl} target="_blank" rel="noopener noreferrer" className="block mt-2 font-micro text-xs tracking-widest uppercase text-vr-sky hover:text-vr-forest transition-colors">
+                      {b.linkLabel} ↗
+                    </a>
+                  )}
+                </>
+              ),
+            }))}
+          />
+        )}
+      </div>
+    </section>
   )
 }
