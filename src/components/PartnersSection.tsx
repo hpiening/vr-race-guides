@@ -11,8 +11,8 @@ export default function PartnersSection({ data, basePath = 'partners', theme = '
   const editing = !!useEditOptional()?.editing
   const items = data.items ?? []
 
-  // ── Trailhead view (display-only) ──
-  if (theme === 'trailhead' && !editing) {
+  // ── Trailhead view (renders in both view + edit mode) ──
+  if (theme === 'trailhead') {
     return (
       <section className="bg-vr-offwhite px-6 md:px-12 py-20 md:py-24 border-t border-[#e6dccb]">
         <div className="max-w-[1180px] mx-auto text-center">
@@ -21,13 +21,14 @@ export default function PartnersSection({ data, basePath = 'partners', theme = '
             {items.map((p, i) => (
               <div
                 key={i}
-                className="h-[86px] bg-vr-white border border-[#e0d4c0] rounded-lg flex items-center justify-center text-center px-2 font-micro uppercase text-vr-forest/40"
-                style={{ fontSize: '12px', letterSpacing: '0.06em' }}
+                className="min-h-[86px] bg-vr-white border border-[#e0d4c0] rounded-lg flex items-center justify-center text-center px-2 gap-1 font-micro uppercase text-vr-forest/40 text-[12px] tracking-[0.06em]"
               >
-                {p}
+                <EditableText as="span" value={p} path={`${basePath}.items.${i}`} />
+                <ListControls path={`${basePath}.items`} index={i} count={items.length} />
               </div>
             ))}
           </div>
+          <div className="mt-4"><AddButton path={`${basePath}.items`} item="New partner" label="Add partner" /></div>
         </div>
       </section>
     )

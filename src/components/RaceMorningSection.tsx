@@ -14,7 +14,7 @@ type Props = { data: EventData['sections']['raceMorning']; basePath?: string; th
 export default function RaceMorningSection({ data, basePath = 'sections.raceMorning', theme = 'classic' }: Props) {
   const editing = !!useEditOptional()?.editing
 
-  if (theme === 'trailhead' && !editing) return <RaceMorningTrailhead data={data} />
+  if (theme === 'trailhead') return <RaceMorningTrailhead data={data} basePath={basePath} editing={editing} />
 
   return (
     <SectionWrapper id="race-morning" label={data.navLabel || 'Race Morning'}>
@@ -146,8 +146,8 @@ export default function RaceMorningSection({ data, basePath = 'sections.raceMorn
   )
 }
 
-/* ── Trailhead view (display-only; dark, keeps RideWithGPS + MapEmbed functional) ── */
-function RaceMorningTrailhead({ data }: { data: EventData['sections']['raceMorning'] }) {
+/* ── Trailhead view (renders in both view + edit mode; keeps RideWithGPS + MapEmbed functional) ── */
+function RaceMorningTrailhead({ data, basePath, editing }: { data: EventData['sections']['raceMorning']; basePath: string; editing: boolean }) {
   return (
     <section id="race-morning" className="bg-vr-deep px-6 md:px-12 py-20 md:py-[104px]">
       <div className="max-w-[1180px] mx-auto">
@@ -166,29 +166,49 @@ function RaceMorningTrailhead({ data }: { data: EventData['sections']['raceMorni
                 /* eslint-disable-next-line @next/next/no-img-element */
                 <img src={c.mapImageUrl} alt={`${c.name} course map`} className="w-full object-cover aspect-[16/10]" />
               ) : null}
+              <RideWithGpsField itemPath={`${basePath}.courses.${i}`} />
             </div>
             <div className="flex flex-col gap-4">
-              <div className="font-heading uppercase text-vr-cream" style={{ fontSize: '20px', letterSpacing: '0.02em' }}>{c.name}</div>
-              {c.statTiles && c.statTiles.length > 0 ? <StatTiles tiles={c.statTiles} /> : <StatChips stats={c.stats} dark />}
-              <a href={c.mapUrl} target="_blank" rel="noopener noreferrer" className="self-start font-label text-xs tracking-[0.12em] uppercase text-vr-sky hover:text-vr-cream transition-colors">
-                View full route ↗
-              </a>
+              <EditableText as="div" className="font-heading uppercase text-vr-cream text-[20px] tracking-[0.02em]" value={c.name} path={`${basePath}.courses.${i}.name`} />
+              {editing ? (
+                <div className="space-y-1">
+                  <EditableText as="div" className="font-micro text-xs text-vr-cream/50" value={c.stats ?? ''} path={`${basePath}.courses.${i}.stats`} placeholder="Fallback stats string" />
+                  <p className="font-micro text-[10px] tracking-[0.2em] uppercase text-vr-cream/40 pt-1">Stat tiles</p>
+                  {(c.statTiles ?? []).map((t, ti) => (
+                    <div key={ti} className="flex items-center gap-2">
+                      <EditableText as="span" className="font-heading text-vr-cream text-sm w-24" value={t.value} path={`${basePath}.courses.${i}.statTiles.${ti}.value`} placeholder="13.1" />
+                      <EditableText as="span" className="font-micro text-xs text-vr-cream/60 flex-1" value={t.label} path={`${basePath}.courses.${i}.statTiles.${ti}.label`} placeholder="Miles" />
+                      <ListControls path={`${basePath}.courses.${i}.statTiles`} index={ti} count={c.statTiles!.length} />
+                    </div>
+                  ))}
+                  <AddButton path={`${basePath}.courses.${i}.statTiles`} item={{ value: '', label: '' }} label="Add stat tile" />
+                </div>
+              ) : c.statTiles && c.statTiles.length > 0 ? <StatTiles tiles={c.statTiles} /> : <StatChips stats={c.stats} dark />}
+              {!editing && (
+                <a href={c.mapUrl} target="_blank" rel="noopener noreferrer" className="self-start font-label text-xs tracking-[0.12em] uppercase text-vr-sky hover:text-vr-cream transition-colors">
+                  View full route ↗
+                </a>
+              )}
             </div>
           </div>
         ))}
 
         {/* Morning schedule tiles */}
-        {data.shuttleDetails.length > 0 && (
+        {(data.shuttleDetails.length > 0 || editing) && (
           <>
             <h3 className="font-heading uppercase text-vr-cream mb-4" style={{ fontSize: '16px', letterSpacing: '0.06em' }}>{data.timelineLabel || 'Morning Schedule'}</h3>
-            <div className="grid sm:grid-cols-3 lg:grid-cols-5 gap-4 mb-12">
+            <div className="grid sm:grid-cols-3 lg:grid-cols-5 gap-4 mb-4">
               {data.shuttleDetails.map((item, i) => (
                 <div key={i} className="border border-vr-cream/10 bg-vr-cream/5 rounded-lg p-5">
-                  <div className="font-label text-xs tracking-[0.16em] uppercase text-vr-sky mb-2">{item.time}</div>
-                  <div className="font-heading text-sm uppercase leading-tight text-vr-cream">{item.label}</div>
+                  <div className="flex items-start gap-1">
+                    <EditableText as="div" className="font-label text-xs tracking-[0.16em] uppercase text-vr-sky mb-2 flex-1" value={item.time} path={`${basePath}.shuttleDetails.${i}.time`} />
+                    <ListControls path={`${basePath}.shuttleDetails`} index={i} count={data.shuttleDetails.length} />
+                  </div>
+                  <EditableText as="div" className="font-heading text-sm uppercase leading-tight text-vr-cream" value={item.label} path={`${basePath}.shuttleDetails.${i}.label`} />
                 </div>
               ))}
             </div>
+            <div className="mb-12"><AddButton path={`${basePath}.shuttleDetails`} item={{ time: '', label: 'New item' }} label="Add timeline item" /></div>
           </>
         )}
 
@@ -200,6 +220,7 @@ function RaceMorningTrailhead({ data }: { data: EventData['sections']['raceMorni
             <img src={data.parkingMapImageUrl} alt="Parking map" className="w-full h-auto block" />
           </div>
         )}
+        {editing && <div className="mb-6"><EditableUrl path={`${basePath}.parkingMapImageUrl`} label="Parking map image URL" /></div>}
         <div className="grid gap-6 md:grid-cols-2 mb-6">
           {data.parkingOptions.map((option, i) => (
             <div key={i} className="border border-vr-cream/20 rounded-lg overflow-hidden flex flex-col">
@@ -207,25 +228,43 @@ function RaceMorningTrailhead({ data }: { data: EventData['sections']['raceMorni
                 <MapEmbed lat={option.lat} lng={option.lng} label={option.name} mapsUrl={option.mapUrl} zoom={14} dark />
               </div>
               <div className="p-6 flex-1 bg-vr-cream/5">
-                <h4 className="font-heading uppercase text-vr-cream mb-2" style={{ fontSize: '17px', letterSpacing: '0.02em' }}>{option.name}</h4>
-                <p className="font-body text-sm text-vr-cream/75 leading-relaxed">{option.details}</p>
+                <div className="flex items-start gap-2">
+                  <EditableText as="h4" className="font-heading uppercase text-vr-cream mb-2 flex-1" value={option.name} path={`${basePath}.parkingOptions.${i}.name`} />
+                  <ListControls path={`${basePath}.parkingOptions`} index={i} count={data.parkingOptions.length} />
+                </div>
+                <EditableText as="div" className="font-body text-sm text-vr-cream/75 leading-relaxed" value={option.details} path={`${basePath}.parkingOptions.${i}.details`} />
+                {editing && <EditableUrl path={`${basePath}.parkingOptions.${i}.mapUrl`} label="Directions link" />}
               </div>
             </div>
           ))}
         </div>
+        <div className="mb-6"><AddButton path={`${basePath}.parkingOptions`} item={{ name: 'New lot', details: '', mapUrl: '', lat: 0, lng: 0 }} label="Add parking option" /></div>
 
         {/* Drop-off callout */}
-        {data.dropOffNote && (
+        {(data.dropOffNote || editing) && (
           <div className="bg-vr-night rounded-lg px-6 py-5 mb-10" style={{ borderLeft: '3px solid var(--vr-sky)' }}>
             <p className="font-label text-xs tracking-[0.16em] uppercase text-vr-sky mb-2">Runner Drop-Off</p>
-            <p className="font-body text-sm text-vr-cream/85 leading-relaxed">{data.dropOffNote}</p>
+            <EditableText as="div" className="font-body text-sm text-vr-cream/85 leading-relaxed" value={data.dropOffNote ?? ''} path={`${basePath}.dropOffNote`} />
           </div>
         )}
 
         {/* Course detail accordions */}
-        {data.infoBlocks && data.infoBlocks.length > 0 && (
+        {editing ? (
+          <div className="flex flex-col gap-3">
+            {(data.infoBlocks ?? []).map((b, i) => (
+              <div key={i} className="bg-vr-cream rounded-lg p-5">
+                <div className="flex items-start gap-2">
+                  <EditableText as="h3" className="font-heading uppercase text-vr-forest flex-1" value={b.heading} path={`${basePath}.infoBlocks.${i}.heading`} />
+                  <ListControls path={`${basePath}.infoBlocks`} index={i} count={data.infoBlocks!.length} />
+                </div>
+                <EditableText as="div" className="font-body text-vr-forest/85 mt-2 whitespace-pre-line" value={b.body} path={`${basePath}.infoBlocks.${i}.body`} />
+              </div>
+            ))}
+            <AddButton path={`${basePath}.infoBlocks`} item={{ heading: 'Heading', body: 'Body text' }} label="Add info block" />
+          </div>
+        ) : data.infoBlocks && data.infoBlocks.length > 0 ? (
           <Accordion items={data.infoBlocks.map(b => ({ heading: b.heading, body: b.body }))} />
-        )}
+        ) : null}
       </div>
     </section>
   )

@@ -11,7 +11,7 @@ type Props = { data: EventData['sections']['spectators']; basePath?: string; the
 export default function SpectatorsSection({ data, basePath = 'sections.spectators', theme = 'classic' }: Props) {
   const editing = !!useEditOptional()?.editing
 
-  if (theme === 'trailhead' && !editing) return <SpectatorsTrailhead data={data} />
+  if (theme === 'trailhead') return <SpectatorsTrailhead data={data} basePath={basePath} editing={editing} />
 
   return (
     <SectionWrapper id="spectators" label="Spectators" dark>
@@ -48,34 +48,38 @@ export default function SpectatorsSection({ data, basePath = 'sections.spectator
   )
 }
 
-/* ── Trailhead view (display-only) ── */
-function SpectatorsTrailhead({ data }: { data: EventData['sections']['spectators'] }) {
+/* ── Trailhead view (renders in both view + edit mode) ── */
+function SpectatorsTrailhead({ data, basePath, editing }: { data: EventData['sections']['spectators']; basePath: string; editing: boolean }) {
   return (
     <section id="spectators" className="bg-vr-deep px-6 md:px-12 py-20 md:py-[104px]">
       <div className="max-w-[1180px] mx-auto">
         <TrailHeader dark eyebrow="For" title="Spectators" className="mb-10" />
 
-        {data.notes && (
-          <p className="font-body text-vr-cream/[0.82] leading-[1.65] max-w-[760px] mb-9" style={{ fontSize: '17px' }}>
-            {data.notes}
-          </p>
-        )}
+        <div className="font-body text-vr-cream/[0.82] leading-[1.65] max-w-[760px] mb-9" style={{ fontSize: '17px' }}>
+          <EditableText as="div" value={data.notes} path={`${basePath}.notes`} />
+        </div>
 
-        {data.warnings.length > 0 && (
+        {(data.warnings.length > 0 || editing) && (
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 mb-6">
             {data.warnings.map((w, i) => (
               <div key={i} className="border border-vr-cream/20 rounded-lg p-7 bg-vr-forest">
-                <div className="font-display text-vr-sky mb-3" style={{ fontSize: '26px' }}>{String(i + 1).padStart(2, '0')}</div>
-                <p className="font-body text-vr-cream/75 leading-[1.6]" style={{ fontSize: '14px' }}>{w}</p>
+                <div className="flex items-start gap-1">
+                  <div className="font-display text-vr-sky mb-3 flex-1" style={{ fontSize: '26px' }}>{String(i + 1).padStart(2, '0')}</div>
+                  <ListControls path={`${basePath}.warnings`} index={i} count={data.warnings.length} />
+                </div>
+                <EditableText as="div" className="font-body text-vr-cream/75 leading-[1.6]" value={w} path={`${basePath}.warnings.${i}`} />
               </div>
             ))}
           </div>
         )}
+        <div className="mb-6"><AddButton path={`${basePath}.warnings`} item="New note" label="Add note" /></div>
 
-        {data.shuttleAccess && (
+        {(data.shuttleAccess || editing) && (
           <div className="bg-vr-night rounded-lg px-7 py-6 flex flex-wrap gap-3.5 items-start">
             <span className="font-heading uppercase text-vr-sky shrink-0" style={{ fontSize: '14px', letterSpacing: '0.04em' }}>Shuttle access</span>
-            <p className="font-body text-vr-cream/85 leading-[1.55] flex-1 min-w-[260px]" style={{ fontSize: '14px' }}>{data.shuttleAccess}</p>
+            <div className="font-body text-vr-cream/85 leading-[1.55] flex-1 min-w-[260px]" style={{ fontSize: '14px' }}>
+              <EditableText as="div" value={data.shuttleAccess ?? ''} path={`${basePath}.shuttleAccess`} />
+            </div>
           </div>
         )}
       </div>

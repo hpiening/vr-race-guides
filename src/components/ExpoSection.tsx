@@ -5,14 +5,14 @@ import { useEditOptional } from '@/lib/editContext'
 import EditableText from './edit/EditableText'
 import EditableUrl from './edit/EditableUrl'
 import { ListControls, AddButton } from './edit/ListControls'
-import { TrailHeader, InfoCard } from './trailhead/Shared'
+import { TrailHeader } from './trailhead/Shared'
 
 type Props = { data: EventData['sections']['expo']; basePath?: string; theme?: 'classic' | 'trailhead' }
 
 export default function ExpoSection({ data, basePath = 'sections.expo', theme = 'classic' }: Props) {
   const editing = !!useEditOptional()?.editing
 
-  if (theme === 'trailhead' && !editing) return <ExpoTrailhead data={data} />
+  if (theme === 'trailhead') return <ExpoTrailhead data={data} basePath={basePath} editing={editing} />
 
   return (
     <section id="expo" className="py-16 md:py-24 px-6 md:px-12 bg-vr-offwhite text-vr-forest">
@@ -122,17 +122,15 @@ export default function ExpoSection({ data, basePath = 'sections.expo', theme = 
   )
 }
 
-/* ── Trailhead view (display-only) ── */
-function ExpoTrailhead({ data }: { data: EventData['sections']['expo'] }) {
+/* ── Trailhead view (renders in both view + edit mode) ── */
+function ExpoTrailhead({ data, basePath, editing }: { data: EventData['sections']['expo']; basePath: string; editing: boolean }) {
   return (
     <section id="expo" className="bg-vr-offwhite px-6 md:px-12 py-20 md:py-[104px]">
       <div className="max-w-[1180px] mx-auto">
         <TrailHeader eyebrow="Pre-race" title="Expo" className="mb-12" />
-        {data.locationAddress && (
-          <p className="font-body text-vr-forest leading-[1.65] max-w-[680px] mb-10" style={{ fontSize: '18px' }}>
-            {data.locationAddress}
-          </p>
-        )}
+        <div className="font-body text-vr-forest leading-[1.65] max-w-[680px] mb-10" style={{ fontSize: '18px' }}>
+          <EditableText as="div" value={data.locationAddress} path={`${basePath}.locationAddress`} />
+        </div>
 
         <div className="grid gap-6 md:grid-cols-[1.4fr_1fr] items-start">
           {/* location card */}
@@ -148,57 +146,80 @@ function ExpoTrailhead({ data }: { data: EventData['sections']['expo'] }) {
               </div>
             )}
             <div className="p-7">
-              <a
-                href={data.locationMapUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-heading uppercase text-vr-forest hover:text-vr-sky transition-colors"
-                style={{ fontSize: '22px', letterSpacing: '0.02em' }}
-              >
-                {data.locationName} ↗
-              </a>
-              {data.hours.length > 0 && (
+              {editing ? (
+                <div className="font-heading uppercase text-vr-forest" style={{ fontSize: '22px', letterSpacing: '0.02em' }}>
+                  <EditableText as="div" value={data.locationName} path={`${basePath}.locationName`} />
+                </div>
+              ) : (
+                <a href={data.locationMapUrl} target="_blank" rel="noopener noreferrer" className="font-heading uppercase text-vr-forest hover:text-vr-sky transition-colors" style={{ fontSize: '22px', letterSpacing: '0.02em' }}>
+                  {data.locationName} ↗
+                </a>
+              )}
+              {editing && (
+                <>
+                  <EditableUrl path={`${basePath}.locationMapUrl`} label="Directions link" />
+                  <EditableUrl path={`${basePath}.mapImageUrl`} label="Map image URL (optional)" />
+                </>
+              )}
+              {(data.hours.length > 0 || editing) && (
                 <div className="flex flex-wrap gap-x-8 gap-y-4 mt-5">
                   {data.hours.map((h, i) => (
-                    <div key={i}>
-                      <div className="font-micro uppercase text-vr-sky mb-1" style={{ fontSize: '10px', letterSpacing: '0.14em' }}>{h.label}</div>
-                      <div className="font-heading text-vr-forest" style={{ fontSize: '17px' }}>{h.time}</div>
+                    <div key={i} className="flex items-start gap-1">
+                      <div>
+                        <EditableText as="div" className="font-micro uppercase text-vr-sky mb-1" value={h.label} path={`${basePath}.hours.${i}.label`} />
+                        <EditableText as="div" className="font-heading text-vr-forest" value={h.time} path={`${basePath}.hours.${i}.time`} />
+                      </div>
+                      <ListControls path={`${basePath}.hours`} index={i} count={data.hours.length} />
                     </div>
                   ))}
                 </div>
               )}
+              <AddButton path={`${basePath}.hours`} item={{ label: 'Label', time: 'Time' }} label="Add hours row" />
             </div>
           </div>
 
           {/* notes as a side card */}
-          {data.notes.length > 0 && (
+          {(data.notes.length > 0 || editing) && (
             <div className="border border-vr-line bg-vr-white rounded-lg p-7" style={{ borderLeft: '3px solid var(--vr-sky)' }}>
               <h3 className="font-heading uppercase text-vr-forest mb-4" style={{ fontSize: '15px', letterSpacing: '0.04em' }}>Good to know</h3>
               <ul className="flex flex-col gap-3">
                 {data.notes.map((note, i) => (
                   <li key={i} className="flex gap-3 items-start font-body text-vr-forest/85 leading-relaxed" style={{ fontSize: '14px' }}>
                     <span className="text-vr-sky mt-0.5 shrink-0">✦</span>
-                    <span>{note}</span>
+                    <div className="flex-1"><EditableText as="div" value={note} path={`${basePath}.notes.${i}`} /></div>
+                    <ListControls path={`${basePath}.notes`} index={i} count={data.notes.length} />
                   </li>
                 ))}
               </ul>
+              <AddButton path={`${basePath}.notes`} item="New note" label="Add note" />
             </div>
           )}
         </div>
 
         {/* info blocks as cards */}
-        {data.infoBlocks && data.infoBlocks.length > 0 && (
+        {((data.infoBlocks && data.infoBlocks.length > 0) || editing) && (
           <div className="grid gap-6 md:grid-cols-2 mt-6">
-            {data.infoBlocks.map((b, i) => (
-              <InfoCard key={i} heading={b.heading}>
-                {b.body}
-                {b.linkLabel && b.linkUrl && (
+            {(data.infoBlocks ?? []).map((b, i) => (
+              <div key={i} className="border border-vr-line bg-vr-white rounded-lg p-7">
+                <div className="flex items-start gap-2">
+                  <EditableText as="h3" className="font-heading uppercase text-vr-forest mb-3 flex-1" value={b.heading} path={`${basePath}.infoBlocks.${i}.heading`} />
+                  <ListControls path={`${basePath}.infoBlocks`} index={i} count={data.infoBlocks!.length} />
+                </div>
+                <EditableText as="div" className="font-body text-vr-forest/85 leading-[1.65] whitespace-pre-line" value={b.body} path={`${basePath}.infoBlocks.${i}.body`} />
+                {!editing && b.linkLabel && b.linkUrl && (
                   <a href={b.linkUrl} target="_blank" rel="noopener noreferrer" className="block mt-2 font-micro text-xs tracking-widest uppercase text-vr-sky hover:text-vr-forest transition-colors">
                     {b.linkLabel} ↗
                   </a>
                 )}
-              </InfoCard>
+                {editing && (
+                  <div className="mt-2">
+                    <EditableText as="div" className="font-micro text-xs uppercase text-vr-sky" value={b.linkLabel ?? ''} path={`${basePath}.infoBlocks.${i}.linkLabel`} placeholder="Link label (optional)" />
+                    <EditableUrl path={`${basePath}.infoBlocks.${i}.linkUrl`} label="Link URL" />
+                  </div>
+                )}
+              </div>
             ))}
+            <AddButton path={`${basePath}.infoBlocks`} item={{ heading: 'Heading', body: 'Body text' }} label="Add info block" />
           </div>
         )}
       </div>

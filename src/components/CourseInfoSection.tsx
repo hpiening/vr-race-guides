@@ -6,14 +6,14 @@ import EditableText from './edit/EditableText'
 import EditableUrl from './edit/EditableUrl'
 import RideWithGpsField from './edit/RideWithGpsField'
 import { ListControls, AddButton } from './edit/ListControls'
-import { TrailHeader, StatChips, StatTiles, Accordion } from './trailhead/Shared'
+import { StatChips, StatTiles, Accordion } from './trailhead/Shared'
 
 type Props = { data: EventData['sections']['courseInfo']; basePath?: string; theme?: 'classic' | 'trailhead' }
 
 export default function CourseInfoSection({ data, basePath = 'sections.courseInfo', theme = 'classic' }: Props) {
   const editing = !!useEditOptional()?.editing
 
-  if (theme === 'trailhead' && !editing) return <CourseInfoTrailhead data={data} />
+  if (theme === 'trailhead') return <CourseInfoTrailhead data={data} basePath={basePath} editing={editing} />
 
   return (
     <SectionWrapper id="course-info" label={data.navLabel || data.heading || 'Course Info'} dark>
@@ -133,12 +133,17 @@ export default function CourseInfoSection({ data, basePath = 'sections.courseInf
   )
 }
 
-/* ── Trailhead view (display-only) ── */
-function CourseInfoTrailhead({ data }: { data: EventData['sections']['courseInfo'] }) {
+/* ── Trailhead view (renders in both view + edit mode) ── */
+function CourseInfoTrailhead({ data, basePath, editing }: { data: EventData['sections']['courseInfo']; basePath: string; editing: boolean }) {
   return (
     <section id="course-info" className="relative bg-vr-deep overflow-hidden px-6 md:px-12 py-20 md:py-[104px]">
       <div className="max-w-[1180px] mx-auto">
-        <TrailHeader dark eyebrow="The course" title={data.heading || 'Course Info'} className="mb-10" />
+        <div className="mb-10">
+          <div className="leading-[0.9]"><span className="font-accent text-vr-sky" style={{ fontSize: 'clamp(20px,2.2vw,28px)' }}>The course</span></div>
+          <h2 className="font-display uppercase text-vr-cream leading-[0.9] mt-0.5 m-0" style={{ fontSize: 'clamp(40px,5.6vw,76px)' }}>
+            <EditableText as="span" value={data.heading || 'Course Info'} path={`${basePath}.heading`} />
+          </h2>
+        </div>
 
         {data.distances.map((d, i) => (
           <div key={i} className="grid gap-6 md:grid-cols-[1.5fr_1fr] items-start mb-10">
@@ -152,30 +157,63 @@ function CourseInfoTrailhead({ data }: { data: EventData['sections']['courseInfo
                 /* eslint-disable-next-line @next/next/no-img-element */
                 <img src={d.mapImageUrl} alt={`${d.name} course map`} className="w-full object-cover aspect-[16/10]" />
               ) : null}
+              <RideWithGpsField itemPath={`${basePath}.distances.${i}`} />
             </div>
             <div className="flex flex-col gap-4">
-              <div className="font-heading uppercase text-vr-cream" style={{ fontSize: '20px', letterSpacing: '0.02em' }}>{d.name}</div>
-              {d.statTiles && d.statTiles.length > 0 ? <StatTiles tiles={d.statTiles} /> : <StatChips stats={d.stats} dark />}
-              <a href={d.mapUrl} target="_blank" rel="noopener noreferrer" className="self-start font-label text-xs tracking-[0.12em] uppercase text-vr-sky hover:text-vr-cream transition-colors">
-                View full route ↗
-              </a>
+              <EditableText as="div" className="font-heading uppercase text-vr-cream text-[20px] tracking-[0.02em]" value={d.name} path={`${basePath}.distances.${i}.name`} />
+              {editing ? (
+                <div className="space-y-1">
+                  <EditableText as="div" className="font-micro text-xs text-vr-cream/50" value={d.stats ?? ''} path={`${basePath}.distances.${i}.stats`} placeholder="Fallback stats string" />
+                  <p className="font-micro text-[10px] tracking-[0.2em] uppercase text-vr-cream/40 pt-1">Stat tiles</p>
+                  {(d.statTiles ?? []).map((t, ti) => (
+                    <div key={ti} className="flex items-center gap-2">
+                      <EditableText as="span" className="font-heading text-vr-cream text-sm w-24" value={t.value} path={`${basePath}.distances.${i}.statTiles.${ti}.value`} placeholder="3.1" />
+                      <EditableText as="span" className="font-micro text-xs text-vr-cream/60 flex-1" value={t.label} path={`${basePath}.distances.${i}.statTiles.${ti}.label`} placeholder="Miles" />
+                      <ListControls path={`${basePath}.distances.${i}.statTiles`} index={ti} count={d.statTiles!.length} />
+                    </div>
+                  ))}
+                  <AddButton path={`${basePath}.distances.${i}.statTiles`} item={{ value: '', label: '' }} label="Add stat tile" />
+                </div>
+              ) : d.statTiles && d.statTiles.length > 0 ? <StatTiles tiles={d.statTiles} /> : <StatChips stats={d.stats} dark />}
+              {!editing && (
+                <a href={d.mapUrl} target="_blank" rel="noopener noreferrer" className="self-start font-label text-xs tracking-[0.12em] uppercase text-vr-sky hover:text-vr-cream transition-colors">
+                  View full route ↗
+                </a>
+              )}
             </div>
           </div>
         ))}
 
-        {data.schedule && data.schedule.length > 0 && (
+        {(data.schedule && data.schedule.length > 0 || editing) && (
           <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-            {data.schedule.map((item, i) => (
+            {(data.schedule ?? []).map((item, i) => (
               <div key={i} className="bg-vr-cream/5 border border-vr-cream/10 rounded-lg p-5">
-                <div className="font-label text-xs tracking-[0.16em] uppercase text-vr-sky mb-2">{item.time}</div>
-                <div className="font-heading text-sm uppercase leading-tight text-vr-cream">{item.label}</div>
-                {item.note && <div className="font-body text-xs text-vr-cream/60 mt-1">{item.note}</div>}
+                <div className="flex items-start gap-1">
+                  <EditableText as="div" className="font-label text-xs tracking-[0.16em] uppercase text-vr-sky mb-2 flex-1" value={item.time} path={`${basePath}.schedule.${i}.time`} />
+                  <ListControls path={`${basePath}.schedule`} index={i} count={data.schedule!.length} />
+                </div>
+                <EditableText as="div" className="font-heading text-sm uppercase leading-tight text-vr-cream" value={item.label} path={`${basePath}.schedule.${i}.label`} />
+                <EditableText as="div" className="font-body text-xs text-vr-cream/60 mt-1" value={item.note ?? ''} path={`${basePath}.schedule.${i}.note`} />
               </div>
             ))}
+            <div className="col-span-full"><AddButton path={`${basePath}.schedule`} item={{ time: '', label: 'New item' }} label="Add schedule item" /></div>
           </div>
         )}
 
-        {data.infoBlocks && data.infoBlocks.length > 0 && (
+        {editing ? (
+          <div className="flex flex-col gap-3">
+            {(data.infoBlocks ?? []).map((b, i) => (
+              <div key={i} className="bg-vr-cream rounded-lg p-5">
+                <div className="flex items-start gap-2">
+                  <EditableText as="h3" className="font-heading uppercase text-vr-forest flex-1" value={b.heading} path={`${basePath}.infoBlocks.${i}.heading`} />
+                  <ListControls path={`${basePath}.infoBlocks`} index={i} count={data.infoBlocks!.length} />
+                </div>
+                <EditableText as="div" className="font-body text-vr-forest/85 mt-2 whitespace-pre-line" value={b.body} path={`${basePath}.infoBlocks.${i}.body`} />
+              </div>
+            ))}
+            <AddButton path={`${basePath}.infoBlocks`} item={{ heading: 'Heading', body: 'Body text' }} label="Add info block" />
+          </div>
+        ) : data.infoBlocks && data.infoBlocks.length > 0 ? (
           <Accordion
             items={data.infoBlocks.map(b => ({
               heading: b.heading,
@@ -191,7 +229,7 @@ function CourseInfoTrailhead({ data }: { data: EventData['sections']['courseInfo
               ),
             }))}
           />
-        )}
+        ) : null}
       </div>
     </section>
   )

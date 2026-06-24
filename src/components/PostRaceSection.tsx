@@ -12,7 +12,7 @@ type Props = { data: EventData['sections']['postRace']; basePath?: string; theme
 export default function PostRaceSection({ data, basePath = 'sections.postRace', theme = 'classic' }: Props) {
   const editing = !!useEditOptional()?.editing
 
-  if (theme === 'trailhead' && !editing) return <PostRaceTrailhead data={data} />
+  if (theme === 'trailhead') return <PostRaceTrailhead data={data} basePath={basePath} editing={editing} />
 
   return (
     <SectionWrapper id="post-race" label="Post-Race">
@@ -87,16 +87,16 @@ export default function PostRaceSection({ data, basePath = 'sections.postRace', 
   )
 }
 
-/* ── Trailhead view (display-only) ── */
-function PostRaceTrailhead({ data }: { data: EventData['sections']['postRace'] }) {
+/* ── Trailhead view (renders in both view + edit mode) ── */
+function PostRaceTrailhead({ data, basePath, editing }: { data: EventData['sections']['postRace']; basePath: string; editing: boolean }) {
   return (
     <section id="post-race" className="bg-vr-offwhite px-6 md:px-12 py-20 md:py-[104px]">
       <div className="max-w-[1180px] mx-auto">
         <TrailHeader eyebrow="Post-race" title="Information" className="mb-6" />
-        {data.finishLineInfo && (
-          <p className="font-body text-vr-forest leading-[1.7] max-w-[680px] mb-7" style={{ fontSize: '18px' }}>{data.finishLineInfo}</p>
-        )}
-        {data.infoSections && data.infoSections.length > 0 && (
+        <div className="font-body text-vr-forest leading-[1.7] max-w-[680px] mb-7" style={{ fontSize: '18px' }}>
+          <EditableText as="div" value={data.finishLineInfo} path={`${basePath}.finishLineInfo`} />
+        </div>
+        {!editing && data.infoSections && data.infoSections.length > 0 && (
           <div className="flex flex-wrap gap-3 mb-14">
             {data.infoSections.map((s, i) => (
               <span key={i} className="font-label uppercase text-vr-forest border border-vr-forest/80 rounded-full px-4 py-2.5" style={{ fontSize: '12px', letterSpacing: '0.04em' }}>
@@ -107,26 +107,59 @@ function PostRaceTrailhead({ data }: { data: EventData['sections']['postRace'] }
         )}
 
         {/* Course records — sky panel */}
-        {data.courseRecords.length > 0 && (
+        {(data.courseRecords.length > 0 || editing) && (
           <div className="rounded-xl p-9 md:p-11 mb-6" style={{ background: 'var(--vr-sky)' }}>
             <span className="font-accent text-vr-forest/75" style={{ fontSize: '18px' }}>Free race entry while the record stands</span>
             <h3 className="font-display uppercase text-vr-forest leading-[0.92] m-0 mb-6" style={{ fontSize: 'clamp(28px,3.6vw,46px)' }}>Course Records</h3>
             <div className="grid sm:grid-cols-2 gap-px rounded-lg overflow-hidden" style={{ background: 'rgba(49,56,50,0.2)', border: '1px solid rgba(49,56,50,0.2)' }}>
               {data.courseRecords.map((r, i) => (
                 <div key={i} className="bg-vr-sky p-6">
-                  <div className="font-micro uppercase text-vr-forest/70 mb-2" style={{ fontSize: '11px', letterSpacing: '0.12em' }}>{r.category} · {r.year}</div>
+                  <div className="flex items-start gap-1 mb-2">
+                    <div className="flex gap-1.5 font-micro uppercase text-vr-forest/70 flex-1" style={{ fontSize: '11px', letterSpacing: '0.12em' }}>
+                      <EditableText as="span" value={r.category} path={`${basePath}.courseRecords.${i}.category`} />
+                      <span>·</span>
+                      <EditableText as="span" value={r.year} path={`${basePath}.courseRecords.${i}.year`} />
+                    </div>
+                    <ListControls path={`${basePath}.courseRecords`} index={i} count={data.courseRecords.length} />
+                  </div>
                   <div className="flex items-baseline justify-between gap-3">
-                    <span className="font-heading text-vr-forest" style={{ fontSize: '16px' }}>{r.name}</span>
-                    <span className="font-display text-vr-forest" style={{ fontSize: '30px' }}>{r.time}</span>
+                    <EditableText as="span" className="font-heading text-vr-forest text-[16px]" value={r.name} path={`${basePath}.courseRecords.${i}.name`} />
+                    <EditableText as="span" className="font-display text-vr-forest text-[30px]" value={r.time} path={`${basePath}.courseRecords.${i}.time`} />
                   </div>
                 </div>
               ))}
             </div>
+            <AddButton path={`${basePath}.courseRecords`} item={{ category: 'Category', name: 'Name', time: '0:00:00', year: '2026' }} label="Add course record" />
           </div>
         )}
 
-        {/* Detailed info accordions */}
-        {data.infoSections && data.infoSections.length > 0 && (
+        {/* Detailed info — editable list when editing, accordion when viewing */}
+        {editing ? (
+          <div className="flex flex-col gap-3">
+            {(data.infoSections ?? []).map((s, i) => (
+              <div key={i} className="bg-vr-white border border-vr-line rounded-lg p-5">
+                <div className="flex items-start gap-2">
+                  <EditableText as="h3" className="font-heading uppercase text-vr-forest flex-1" value={s.heading} path={`${basePath}.infoSections.${i}.heading`} />
+                  <ListControls path={`${basePath}.infoSections`} index={i} count={data.infoSections!.length} />
+                </div>
+                <EditableText as="div" className="font-body text-vr-forest/85 mt-2 whitespace-pre-line" value={s.body} path={`${basePath}.infoSections.${i}.body`} />
+                <div className="mt-2 space-y-2">
+                  {(s.links ?? []).map((link, j) => (
+                    <div key={j} className="flex items-start gap-2 border border-vr-forest/15 rounded p-2">
+                      <div className="flex-1">
+                        <EditableText as="div" className="font-label text-xs uppercase text-vr-forest" value={link.label} path={`${basePath}.infoSections.${i}.links.${j}.label`} placeholder="Button label" />
+                        <EditableUrl path={`${basePath}.infoSections.${i}.links.${j}.url`} />
+                      </div>
+                      <ListControls path={`${basePath}.infoSections.${i}.links`} index={j} count={s.links!.length} />
+                    </div>
+                  ))}
+                  <AddButton path={`${basePath}.infoSections.${i}.links`} item={{ label: 'Button', url: '' }} label="Add link button" />
+                </div>
+              </div>
+            ))}
+            <AddButton path={`${basePath}.infoSections`} item={{ heading: 'Heading', body: 'Body text' }} label="Add info section" />
+          </div>
+        ) : data.infoSections && data.infoSections.length > 0 ? (
           <Accordion
             variant="white"
             items={data.infoSections.map(s => ({
@@ -147,7 +180,7 @@ function PostRaceTrailhead({ data }: { data: EventData['sections']['postRace'] }
               ),
             }))}
           />
-        )}
+        ) : null}
       </div>
     </section>
   )

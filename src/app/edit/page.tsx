@@ -122,6 +122,8 @@ export default function EditPage() {
   if (loadErr) return <Centered><p className="text-red-600 font-body">Couldn’t load this guide: {loadErr}</p></Centered>
   if (!data) return <Centered>Loading {slug}…</Centered>
 
+  const theme: 'classic' | 'trailhead' = data.theme === 'trailhead' ? 'trailhead' : 'classic'
+
   return (
     <div className="pt-14">
       {/* Save bar */}
@@ -149,18 +151,20 @@ export default function EditPage() {
       )}
 
       <EditProvider data={data} editing onChange={next => { setData(next); setDirty(true) }}>
-        <HeroSection event={data} />
-        {data.sections.welcome && <WelcomeSection data={data.sections.welcome} basePath="sections.welcome" />}
-        {data.sections.schedule && <ScheduleSection data={data.sections.schedule} eventSlug={slug} basePath="sections.schedule" />}
-        {data.sections.expo && <ExpoSection data={data.sections.expo} basePath="sections.expo" />}
-        {data.sections.courseInfo && <CourseInfoSection data={data.sections.courseInfo} basePath="sections.courseInfo" />}
-        {data.sections.raceMorning && <RaceMorningSection data={data.sections.raceMorning} basePath="sections.raceMorning" />}
-        {data.sections.spectators && <SpectatorsSection data={data.sections.spectators} basePath="sections.spectators" />}
-        {data.sections.postRace && <PostRaceSection data={data.sections.postRace} basePath="sections.postRace" />}
-        {data.sections.challengeEvents && <ChallengeEventsSection data={data.sections.challengeEvents} basePath="sections.challengeEvents" />}
-        {data.sections.experiences && <ExperiencesSection data={data.sections.experiences} basePath="sections.experiences" />}
-        {data.sections.faqs && <FAQSection data={data.sections.faqs} basePath="sections.faqs" />}
-        {data.partners && <PartnersSection data={data.partners} basePath="partners" />}
+        <div data-theme={theme}>
+        <HeroSection event={data} theme={theme} />
+        {data.sections.welcome && <WelcomeSection data={data.sections.welcome} basePath="sections.welcome" theme={theme} />}
+        {data.sections.schedule && <ScheduleSection data={data.sections.schedule} eventSlug={slug} basePath="sections.schedule" theme={theme} />}
+        {data.sections.expo && <ExpoSection data={data.sections.expo} basePath="sections.expo" theme={theme} />}
+        {data.sections.courseInfo && <CourseInfoSection data={data.sections.courseInfo} basePath="sections.courseInfo" theme={theme} />}
+        {data.sections.raceMorning && <RaceMorningSection data={data.sections.raceMorning} basePath="sections.raceMorning" theme={theme} />}
+        {data.sections.spectators && <SpectatorsSection data={data.sections.spectators} basePath="sections.spectators" theme={theme} />}
+        {data.sections.postRace && <PostRaceSection data={data.sections.postRace} basePath="sections.postRace" theme={theme} />}
+        {data.sections.challengeEvents && <ChallengeEventsSection data={data.sections.challengeEvents} basePath="sections.challengeEvents" theme={theme} />}
+        {data.sections.experiences && <ExperiencesSection data={data.sections.experiences} basePath="sections.experiences" theme={theme} />}
+        {data.sections.faqs && <FAQSection data={data.sections.faqs} basePath="sections.faqs" theme={theme} />}
+        {data.partners && <PartnersSection data={data.partners} basePath="partners" theme={theme} />}
+        </div>
       </EditProvider>
 
       <div className="bg-vr-offwhite text-center py-10 px-6">
