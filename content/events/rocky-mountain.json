@@ -280,26 +280,26 @@
       "enabled": true,
       "navLabel": "Half Marathon Info",
       "timelineLabel": "Morning Schedule",
-      "parkingMapImageUrl": "https://motivsports.sharepoint.com/:i:/s/vacationracesevents/IQAycwhjVYbZR7jYDy5uDCWiATdBHOZ0U_8tG-QjCLJFfK8?e=uaOdwI",
+      "parkingMapImageUrl": "https://motivsports.sharepoint.com/:i:/s/vacationracesevents/IQAycwhjVYbZR7jYDy5uDCWiATdBHOZ0U_8tG-QjCLJFfK8?e=QCcIEt",
       "parkingOptions": [
         {
           "name": "Ball Fields (Primary Lot)",
           "details": "First lot to fill. Located east of Community Drive near the start and finish lines. Approach via Hwy 7, turn east onto Manford Avenue toward the fairgrounds. Volunteers on-site to direct traffic.",
-          "mapUrl": "https://www.google.com/maps/place/380+Community+Dr,+Estes+Park,+CO+80517/@40.3710761,-105.498488,17z",
+          "mapUrl": "https://www.google.com/maps/place/40%C2%B022'18.6%22N+105%C2%B029'52.4%22W/@40.3718301,-105.5004619,532m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d40.371826!4d-105.497887?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D",
           "lat": 40.3710761,
           "lng": -105.498488
         },
         {
           "name": "High School & Observatory (Second Lot)",
           "details": "Second lot to fill. Short walk to start/finish lines. Follow volunteer direction from Manford Avenue.",
-          "mapUrl": "https://www.google.com/maps/place/Estes+Park+High+School,+1600+Manford+Ave,+Estes+Park,+CO+80517",
+          "mapUrl": "https://www.google.com/maps/place/40%C2%B022'12.8%22N+105%C2%B029'49.9%22W/@40.3702358,-105.4989489,532m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d40.370233!4d-105.4972?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D",
           "lat": 40.3693,
           "lng": -105.5015
         },
         {
           "name": "Fairgrounds (Third Lot)",
           "details": "Overflow parking. Please only park in designated areas marked on the event map. Follow volunteer direction.",
-          "mapUrl": "https://www.google.com/maps/place/Estes+Park+Fairgrounds,+1209+Manford+Ave,+Estes+Park,+CO+80517",
+          "mapUrl": "https://www.google.com/maps/place/40%C2%B022'20.0%22N+105%C2%B030'13.1%22W/@40.372227,-105.5061525,532m/data=!3m2!1e3!4b1!4m10!1m5!3m4!2zNDDCsDIyJzE4LjYiTiAxMDXCsDI5JzUyLjQiVw!8m2!3d40.371826!4d-105.497887!3m3!8m2!3d40.372223!4d-105.503634?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D",
           "lat": 40.3672,
           "lng": -105.5005
         }
