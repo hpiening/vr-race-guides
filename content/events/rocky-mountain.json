@@ -153,11 +153,11 @@
       "hours": [
         {
           "label": "Race Expo Hours",
-          "time": "12:00 PM – 5:00 PM"
+          "time": "11:00 AM – 4:00 PM"
         },
         {
           "label": "Merch Tent Hours",
-          "time": "12:00 PM – 5:00 PM (Friday) / Opens 8:00 AM Saturday"
+          "time": "11:00M – 4:00 PM (Friday) / Opens 8:00 AM Saturday"
         },
         {
           "label": "Bib Pick Up Hours",
@@ -198,9 +198,9 @@
       "navLabel": "5K Info",
       "schedule": [
         {
-          "time": "12:00–5:00 PM",
-          "label": "RACE EXPO & BIB PICKUP",
-          "note": "Must pick up by 5:00 PM"
+          "time": "11:00AM–4:00 PM",
+          "label": "RACE EXPO ",
+          "note": "BIB PICK-UP CLOSES AT 5:00 PM"
         },
         {
           "time": "5:45 PM",
@@ -248,7 +248,7 @@
       "infoBlocks": [
         {
           "heading": "5K Bib Pick-Up",
-          "body": "The 5K race starts at 6:00 PM sharp on Friday. Runners may pick up their bib beginning at 12:00 PM at the race expo, located at the Stanley Park Ball Field. Bib pickup will end at 5:00 PM. Please be parked by 5:15 PM and make your way to the ball fields, ready to run once you've got your bib."
+          "body": "The 5K race starts at 6:00 PM sharp on Friday. Runners may pick up their bib beginning at 11:00 AM at the race expo, located at the Stanley Park Ball Field. Bib pickup will end at 5:00 PM. Please be parked by 5:15 PM and make your way to the ball fields, ready to run once you've got your bib."
         },
         {
           "heading": "5K Parking",
@@ -264,7 +264,7 @@
         },
         {
           "heading": "Aid Stations",
-          "body": "There will be one aid station on the course near the halfway point (approximately mile 1.5–1.8). The aid station will have water, electrolytes, and bathrooms. Like the half marathon, this race will be cup-free!"
+          "body": "There will be one aid station on the course near the halfway point (approximately mile 1.8). The aid station will have water, electrolytes, and bathrooms. Like the half marathon, this race will be cup-free!"
         },
         {
           "heading": "Awards",
