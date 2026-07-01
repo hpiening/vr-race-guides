@@ -66,7 +66,7 @@
     "welcome": {
       "enabled": true,
       "heading": "Welcome to the Rockies!",
-      "body": "We hope your visit to Estes Park is enjoyable, and we also hope you make the time to visit Rocky Mountain National Park! We really try to capture the essence and experience of visiting a national park. We hope you have fun while you're here! Please respect and follow the guidelines and restrictions of our race, the National Park Service, and other local authorities.",
+      "body": "We hope your visit to Estes Park is enjoyable, and we also hope you make the time to visit Rocky Mountain National Park! We strive to capture the essence and experience of visiting a national park. We hope you have fun while you're here! Please respect and follow the guidelines and restrictions of our race, the National Park Service, and other local authorities.",
       "quote": "Climb the mountains and get their good tidings.",
       "quoteAttribution": "John Muir",
       "closing": "The Rocky Mountains, with their peaks and trails, lakes and rivers, and foliage and wildlife, are filled with good tidings and hidden, natural treasures. Take this chance to get away from all the busyness and demands of life and explore the wonders and beauties of this area. Whether you are hiking the trails, exploring the town, or running the race, there is a chance to rejuvenate your energies and make lifelong memories here. How amazing that we have the privilege to run, hike, and explore this magical area. Every visitor is a steward and has a responsibility to work to preserve the purity of the area for future generations. As a race participant we trust in your support to protect the ecology and promote the sustainability of this unparalleled location.\n\nHappy exploring!\n– The Vacation Races Team",
@@ -182,7 +182,7 @@
         },
         {
           "heading": "Merch Pre-Orders",
-          "body": "Snagged some pre-order merch? Swing by the merch booth during the expo or on race day to pick it up — just show your order number or confirmation email! Can't grab it that weekend? No worries — we'll refund you within 2 weeks or ship it for $7. Just let us know!"
+          "body": "Snagged some pre-order merch? Swing by the merch tent during the expo or on race day to pick it up — just show your order number or confirmation email! Can't grab it that weekend? No worries — we'll refund you within 2 weeks or ship it for $7. Just let us know!"
         },
         {
           "heading": "Volunteers",
@@ -485,7 +485,13 @@
         },
         {
           "heading": "Lost & Found",
-          "body": "There is no official lost and found. If we find lost items, we will hold onto them for 14 days. Unclaimed items will be donated. Submit the online form to check if we have found your item."
+          "body": "There is no official lost and found. If we find lost items, we will hold onto them for 14 days. Unclaimed items will be donated. Submit the online form to check if we have found your item.",
+          "links": [
+            {
+              "label": "Fill out the Lost and Found Form",
+              "url": "https://vacationraces.fillout.com/t/dmnGubJfxtus?id="
+            }
+          ]
         },
         {
           "heading": "Medical Area",
