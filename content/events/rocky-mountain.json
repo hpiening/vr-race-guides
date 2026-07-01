@@ -618,19 +618,22 @@
         {
           "name": "Bear Lake",
           "description": "One of the most photographed spots in Rocky Mountain NP — reflections of the Continental Divide peaks make this a must-see.",
-          "url": "https://www.nps.gov/romo/planyourvisit/bearlake.htm"
+          "url": "https://www.nps.gov/romo/planyourvisit/exploring-the-bear-lake-road-corridor.htm"
         },
         {
           "name": "Trail Ridge Road",
-          "description": "The highest continuous paved road in the U.S. Drive above the treeline for sweeping tundra views."
+          "description": "The highest continuous paved road in the U.S. Drive above the treeline for sweeping tundra views.",
+          "url": "https://www.nps.gov/romo/planyourvisit/trail_ridge_road.htm"
         },
         {
           "name": "Old Fall River Road",
-          "description": "Historic unpaved road winding up to the Alpine Visitor Center with dramatic tundra and mountain views."
+          "description": "Historic unpaved road winding up to the Alpine Visitor Center with dramatic tundra and mountain views.",
+          "url": "https://www.nps.gov/romo/planyourvisit/old_fall_river_road.htm"
         },
         {
           "name": "Estes Park Riverwalk",
-          "description": "A stroll through the heart of downtown along the Big Thompson River — shops, restaurants, and mountain scenery all in one."
+          "description": "A stroll through the heart of downtown along the Big Thompson River — shops, restaurants, and mountain scenery all in one.",
+          "url": "https://estes-park.com/river-walk/"
         },
         {
           "name": "The Stanley Hotel",
