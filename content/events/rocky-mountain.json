@@ -81,9 +81,9 @@
           "date": "July 31, 2026",
           "items": [
             {
-              "time": "",
-              "label": "12:00–5:00 PM",
-              "note": "RACE EXPO & BIB PICKUP (5K and Elk Double runners must pick up bib by 5:00 PM)"
+              "time": "12:00–5:00 PM",
+              "label": "RACE EXPO & BIB PICKUP (5K and Elk Double runners must pick up bib by 5:00 PM)",
+              "note": ""
             },
             {
               "time": "5:45 PM",
