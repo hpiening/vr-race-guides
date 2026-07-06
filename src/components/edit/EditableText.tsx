@@ -1,6 +1,7 @@
 'use client'
 import { useLayoutEffect, useRef, ElementType } from 'react'
 import { useEditOptional } from '@/lib/editContext'
+import { hasMarkdown, renderMarkdown } from '@/lib/markdown'
 
 /**
  * Renders `value` as plain text normally. Inside an EditProvider in edit mode,
@@ -34,6 +35,11 @@ export default function EditableText({
 
   if (!ctx || !ctx.editing) {
     const Tag = as
+    // Body copy can use [text](url|#anchor) and **bold**; render it as HTML when
+    // present (headings/times never contain the syntax, so they stay plain).
+    if (hasMarkdown(value)) {
+      return <Tag className={className} dangerouslySetInnerHTML={{ __html: renderMarkdown(value) }} />
+    }
     return <Tag className={className}>{value}</Tag>
   }
 
