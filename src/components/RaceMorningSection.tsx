@@ -1,10 +1,10 @@
 'use client'
 import SectionWrapper from './SectionWrapper'
-import MapEmbed from './MapEmbed'
 import { EventData } from '@/types/event'
 import { useEditOptional } from '@/lib/editContext'
 import EditableText from './edit/EditableText'
 import EditableUrl from './edit/EditableUrl'
+import EditableImage from './edit/EditableImage'
 import RideWithGpsField from './edit/RideWithGpsField'
 import { ListControls, AddButton } from './edit/ListControls'
 import { TrailHeader, StatChips, StatTiles, Accordion } from './trailhead/Shared'
@@ -85,39 +85,35 @@ export default function RaceMorningSection({ data, basePath = 'sections.raceMorn
         <AddButton path={`${basePath}.shuttleDetails`} item={{ time: '', label: 'New item' }} label="Add timeline item" />
       </div>
 
-      {/* Parking options (map embeds left as-is; name + details editable) */}
+      {/* Parking */}
       <div className="mb-12">
         <h3 className="font-heading text-xl uppercase mb-6 tracking-wide">Parking</h3>
-        <div className="space-y-8">
+        {editing ? (
+          <div className="mb-6"><EditableImage path={`${basePath}.parkingMapImageUrl`} label="Parking map" /></div>
+        ) : data.parkingMapImageUrl ? (
+          <div className="rounded-lg overflow-hidden border border-vr-forest/10 mb-6">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={data.parkingMapImageUrl} alt="Parking map" className="w-full h-auto" />
+          </div>
+        ) : null}
+        <div className="space-y-6">
           {data.parkingOptions.map((option, i) => (
-            <div key={i} className="grid md:grid-cols-2 gap-6 border-t border-vr-forest/10 pt-6">
-              <div>
-                <div className="flex items-start gap-2">
-                  <EditableText as="div" className="font-heading text-lg uppercase mb-2 flex-1" value={option.name} path={`${basePath}.parkingOptions.${i}.name`} />
-                  <ListControls path={`${basePath}.parkingOptions`} index={i} count={data.parkingOptions.length} />
-                </div>
-                <EditableText as="div" className="font-body text-sm text-vr-mid leading-relaxed" value={option.details} path={`${basePath}.parkingOptions.${i}.details`} />
-                <EditableUrl path={`${basePath}.parkingOptions.${i}.mapUrl`} label="Directions link" />
+            <div key={i} className="border-t border-vr-forest/10 pt-6">
+              <div className="flex items-start gap-2">
+                <EditableText as="div" className="font-heading text-lg uppercase mb-2 flex-1" value={option.name} path={`${basePath}.parkingOptions.${i}.name`} />
+                <ListControls path={`${basePath}.parkingOptions`} index={i} count={data.parkingOptions.length} />
               </div>
-              <MapEmbed lat={option.lat} lng={option.lng} label={option.name} mapsUrl={option.mapUrl} zoom={14} />
+              <EditableText as="div" className="font-body text-sm text-vr-mid leading-relaxed" value={option.details} path={`${basePath}.parkingOptions.${i}.details`} />
+              {editing ? (
+                <EditableUrl path={`${basePath}.parkingOptions.${i}.mapUrl`} label="Directions link" />
+              ) : option.mapUrl ? (
+                <a href={option.mapUrl} target="_blank" rel="noopener noreferrer" className="inline-block mt-2 font-label text-xs tracking-[0.12em] uppercase text-vr-sandstone hover:text-vr-forest transition-colors">Directions ↗</a>
+              ) : null}
             </div>
           ))}
         </div>
-        <AddButton path={`${basePath}.parkingOptions`} item={{ name: 'New lot', details: '', mapUrl: '', lat: 0, lng: 0 }} label="Add parking option" />
+        <AddButton path={`${basePath}.parkingOptions`} item={{ name: 'New lot', details: '', mapUrl: '' }} label="Add parking option" />
       </div>
-
-      {/* Parking map image */}
-      {(data.parkingMapImageUrl || editing) && (
-        <div className="mb-12">
-          {data.parkingMapImageUrl && (
-            <div className="rounded-lg overflow-hidden border border-vr-forest/10">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={data.parkingMapImageUrl} alt="Parking map" className="w-full h-auto" />
-            </div>
-          )}
-          <EditableUrl path={`${basePath}.parkingMapImageUrl`} label="Parking map image URL" />
-        </div>
-      )}
 
       {/* Drop-off note */}
       {(editing || data.dropOffNote) && (
@@ -214,31 +210,31 @@ function RaceMorningTrailhead({ data, basePath, editing }: { data: EventData['se
 
         {/* Parking */}
         <h3 className="font-heading uppercase text-vr-cream mb-4" style={{ fontSize: '16px', letterSpacing: '0.06em' }}>Parking</h3>
-        {data.parkingMapImageUrl && (
+        {editing ? (
+          <div className="mb-6"><EditableImage path={`${basePath}.parkingMapImageUrl`} label="Parking map" /></div>
+        ) : data.parkingMapImageUrl ? (
           <div className="border border-vr-cream/20 rounded-lg overflow-hidden mb-6">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img src={data.parkingMapImageUrl} alt="Parking map" className="w-full h-auto block" />
           </div>
-        )}
-        {editing && <div className="mb-6"><EditableUrl path={`${basePath}.parkingMapImageUrl`} label="Parking map image URL" /></div>}
+        ) : null}
         <div className="grid gap-6 md:grid-cols-2 mb-6">
           {data.parkingOptions.map((option, i) => (
-            <div key={i} className="border border-vr-cream/20 rounded-lg overflow-hidden flex flex-col">
-              <div className="border-b border-vr-cream/20">
-                <MapEmbed lat={option.lat} lng={option.lng} label={option.name} mapsUrl={option.mapUrl} zoom={14} dark />
+            <div key={i} className="border border-vr-cream/20 rounded-lg p-6 bg-vr-cream/5">
+              <div className="flex items-start gap-2">
+                <EditableText as="h4" className="font-heading uppercase text-vr-cream mb-2 flex-1" value={option.name} path={`${basePath}.parkingOptions.${i}.name`} />
+                <ListControls path={`${basePath}.parkingOptions`} index={i} count={data.parkingOptions.length} />
               </div>
-              <div className="p-6 flex-1 bg-vr-cream/5">
-                <div className="flex items-start gap-2">
-                  <EditableText as="h4" className="font-heading uppercase text-vr-cream mb-2 flex-1" value={option.name} path={`${basePath}.parkingOptions.${i}.name`} />
-                  <ListControls path={`${basePath}.parkingOptions`} index={i} count={data.parkingOptions.length} />
-                </div>
-                <EditableText as="div" className="font-body text-sm text-vr-cream/75 leading-relaxed" value={option.details} path={`${basePath}.parkingOptions.${i}.details`} />
-                {editing && <EditableUrl path={`${basePath}.parkingOptions.${i}.mapUrl`} label="Directions link" />}
-              </div>
+              <EditableText as="div" className="font-body text-sm text-vr-cream/75 leading-relaxed" value={option.details} path={`${basePath}.parkingOptions.${i}.details`} />
+              {editing ? (
+                <EditableUrl path={`${basePath}.parkingOptions.${i}.mapUrl`} label="Directions link" />
+              ) : option.mapUrl ? (
+                <a href={option.mapUrl} target="_blank" rel="noopener noreferrer" className="inline-block mt-3 font-label text-xs tracking-[0.12em] uppercase text-vr-sky hover:text-vr-cream transition-colors">Directions ↗</a>
+              ) : null}
             </div>
           ))}
         </div>
-        <div className="mb-6"><AddButton path={`${basePath}.parkingOptions`} item={{ name: 'New lot', details: '', mapUrl: '', lat: 0, lng: 0 }} label="Add parking option" /></div>
+        <div className="mb-6"><AddButton path={`${basePath}.parkingOptions`} item={{ name: 'New lot', details: '', mapUrl: '' }} label="Add parking option" /></div>
 
         {/* Drop-off callout */}
         {(data.dropOffNote || editing) && (

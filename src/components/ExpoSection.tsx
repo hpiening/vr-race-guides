@@ -4,6 +4,7 @@ import { EventData } from '@/types/event'
 import { useEditOptional } from '@/lib/editContext'
 import EditableText from './edit/EditableText'
 import EditableUrl from './edit/EditableUrl'
+import EditableImage from './edit/EditableImage'
 import { ListControls, AddButton } from './edit/ListControls'
 import { TrailHeader } from './trailhead/Shared'
 
@@ -83,7 +84,7 @@ export default function ExpoSection({ data, basePath = 'sections.expo', theme = 
                     </div>
                     <EditableText as="div" className="font-body text-sm text-vr-forest/80 leading-relaxed whitespace-pre-line" value={block.body} path={`${basePath}.infoBlocks.${i}.body`} />
                     {!editing && block.linkLabel && block.linkUrl && (
-                      <a href={block.linkUrl} target="_blank" rel="noopener noreferrer" className="inline-block mt-2 font-micro text-xs tracking-widest uppercase text-vr-sandstone hover:text-vr-forest transition-colors">
+                      <a href={block.linkUrl} target="_blank" rel="noopener noreferrer" className="inline-block mt-3 font-label text-sm font-bold tracking-[0.1em] uppercase text-vr-forest bg-vr-sandstone/15 hover:bg-vr-sandstone/25 border border-vr-sandstone/30 rounded-lg px-5 py-2.5 transition-colors">
                         {block.linkLabel} ↗
                       </a>
                     )}
@@ -101,7 +102,9 @@ export default function ExpoSection({ data, basePath = 'sections.expo', theme = 
           </div>
 
           <div>
-            {data.mapImageUrl ? (
+            {editing ? (
+              <EditableImage path={`${basePath}.mapImageUrl`} label="Expo map" />
+            ) : data.mapImageUrl ? (
               <div className="rounded-lg overflow-hidden border border-vr-forest/10">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={data.mapImageUrl} alt={`${data.locationName} map`} className="w-full h-auto" />
@@ -114,7 +117,6 @@ export default function ExpoSection({ data, basePath = 'sections.expo', theme = 
             ) : (
               <MapEmbed lat={data.locationLat} lng={data.locationLng} label={data.locationName} mapsUrl={data.locationMapUrl} dark={false} />
             )}
-            <EditableUrl path={`${basePath}.mapImageUrl`} label="Map image URL (optional)" />
           </div>
         </div>
       </div>
@@ -135,7 +137,9 @@ function ExpoTrailhead({ data, basePath, editing }: { data: EventData['sections'
         <div className="grid gap-6 md:grid-cols-[1.4fr_1fr] items-start">
           {/* location card */}
           <div className="border border-vr-line bg-vr-white rounded-lg overflow-hidden">
-            {data.mapImageUrl ? (
+            {editing ? (
+              <div className="border-b border-vr-line p-4"><EditableImage path={`${basePath}.mapImageUrl`} label="Expo map" /></div>
+            ) : data.mapImageUrl ? (
               <a href={data.locationMapUrl} target="_blank" rel="noopener noreferrer" className="block border-b border-vr-line">
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img src={data.mapImageUrl} alt={`${data.locationName} map`} className="w-full h-auto block" />
@@ -155,12 +159,7 @@ function ExpoTrailhead({ data, basePath, editing }: { data: EventData['sections'
                   {data.locationName} ↗
                 </a>
               )}
-              {editing && (
-                <>
-                  <EditableUrl path={`${basePath}.locationMapUrl`} label="Directions link" />
-                  <EditableUrl path={`${basePath}.mapImageUrl`} label="Map image URL (optional)" />
-                </>
-              )}
+              {editing && <EditableUrl path={`${basePath}.locationMapUrl`} label="Directions link" />}
               {(data.hours.length > 0 || editing) && (
                 <div className="flex flex-wrap gap-x-8 gap-y-4 mt-5">
                   {data.hours.map((h, i) => (
@@ -207,7 +206,7 @@ function ExpoTrailhead({ data, basePath, editing }: { data: EventData['sections'
                 </div>
                 <EditableText as="div" className="font-body text-vr-forest/85 leading-[1.65] whitespace-pre-line" value={b.body} path={`${basePath}.infoBlocks.${i}.body`} />
                 {!editing && b.linkLabel && b.linkUrl && (
-                  <a href={b.linkUrl} target="_blank" rel="noopener noreferrer" className="block mt-2 font-micro text-xs tracking-widest uppercase text-vr-sky hover:text-vr-forest transition-colors">
+                  <a href={b.linkUrl} target="_blank" rel="noopener noreferrer" className="inline-block mt-4 font-label text-sm font-bold tracking-[0.1em] uppercase text-vr-forest bg-vr-sky/20 hover:bg-vr-sky/35 border border-vr-sky/40 rounded-lg px-5 py-2.5 transition-colors">
                     {b.linkLabel} ↗
                   </a>
                 )}

@@ -37,6 +37,29 @@ async function authHeader(): Promise<Record<string, string>> {
   return { Authorization: `Bearer ${token}` }
 }
 
+/**
+ * Upload an image file into the repo (public/images/uploads/) via Git Gateway
+ * and return its public path (/images/uploads/…). New file each time (timestamped
+ * name), so no sha needed. The guide's JSON still needs saving afterwards to point
+ * at the returned path.
+ */
+export async function uploadImage(file: File): Promise<string> {
+  const headers = { ...(await authHeader()), 'Content-Type': 'application/json' }
+  const bytes = new Uint8Array(await file.arrayBuffer())
+  let binary = ''
+  bytes.forEach(b => { binary += String.fromCharCode(b) })
+  const base64 = btoa(binary)
+  const clean = file.name.toLowerCase().replace(/[^a-z0-9.]+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '')
+  const name = `${Date.now()}-${clean || 'image'}`
+  const res = await fetch(`${BASE}/public/images/uploads/${name}`, {
+    method: 'PUT',
+    headers,
+    body: JSON.stringify({ message: `Upload image ${name}`, content: base64, branch: BRANCH }),
+  })
+  if (!res.ok) throw new Error(`Upload failed (${res.status})`)
+  return `/images/uploads/${name}`
+}
+
 /** UTF-8 safe base64 encode (btoa alone mangles non-ASCII). */
 function toBase64(str: string): string {
   const bytes = new TextEncoder().encode(str)
