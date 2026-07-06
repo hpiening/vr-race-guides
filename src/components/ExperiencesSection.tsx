@@ -4,6 +4,7 @@ import { EventData } from '@/types/event'
 import { useEditOptional } from '@/lib/editContext'
 import EditableText from './edit/EditableText'
 import EditableUrl from './edit/EditableUrl'
+import EditableImage from './edit/EditableImage'
 import { ListControls, AddButton } from './edit/ListControls'
 import { TrailHeader, PhotoFrame } from './trailhead/Shared'
 
@@ -25,7 +26,7 @@ export default function ExperiencesSection({ data, basePath = 'sections.experien
           <EditableText as="div" className="font-heading text-2xl uppercase mb-2" value={data.lodging.partner} path={`${basePath}.lodging.partner`} />
           <EditableText as="div" className="font-body text-sm text-vr-cream/80 max-w-md leading-relaxed" value={data.lodging.description} path={`${basePath}.lodging.description`} />
           {editing && <EditableText as="div" className="font-micro text-xs text-vr-cream/50 mt-2" value={data.lodging.url} path={`${basePath}.lodging.url`} placeholder="Booking URL" />}
-          {editing && <EditableUrl path={`${basePath}.lodging.imageUrl`} label="Lodging image URL (optional)" />}
+          {editing && <EditableImage path={`${basePath}.lodging.imageUrl`} label="Lodging photo" className="mt-2" />}
         </div>
         {!editing && (
           <a href={data.lodging.url} target="_blank" rel="noopener noreferrer" className="shrink-0 font-label text-xs tracking-[0.2em] uppercase px-6 py-3 bg-vr-cream text-vr-forest rounded hover:bg-vr-cream/90 transition-colors">
@@ -83,7 +84,7 @@ export default function ExperiencesSection({ data, basePath = 'sections.experien
                     <EditableText as="div" className="font-micro text-xs text-vr-mid" value={hike.elevation} path={`${hp}.elevation`} />
                     <EditableText as="div" className="font-micro text-xs text-vr-mid" value={hike.difficulty} path={`${hp}.difficulty`} />
                     {editing && <EditableText as="div" className="font-micro text-xs text-vr-sandstone mt-1" value={hike.url} path={`${hp}.url`} placeholder="URL" />}
-                    {editing && <EditableUrl path={`${hp}.imageUrl`} label="Photo URL (optional)" />}
+                    {editing && <EditableImage path={`${hp}.imageUrl`} label="Trail photo" className="mt-1" />}
                   </div>
                 </>
               )
@@ -192,7 +193,7 @@ function ExperiencesTrailhead({ data, basePath, editing }: { data: EventData['se
             {editing ? (
               <>
                 <EditableUrl path={`${basePath}.lodging.url`} label="Booking URL" />
-                <EditableUrl path={`${basePath}.lodging.imageUrl`} label="Lodging image URL (optional)" />
+                <EditableImage path={`${basePath}.lodging.imageUrl`} label="Lodging photo" className="mt-2" />
               </>
             ) : (
               <a href={data.lodging.url} target="_blank" rel="noopener noreferrer" className="self-start font-label text-xs tracking-[0.12em] uppercase px-6 py-3 rounded-full bg-vr-forest text-vr-cream hover:opacity-90 transition-opacity">
@@ -258,7 +259,7 @@ function ExperiencesTrailhead({ data, basePath, editing }: { data: EventData['se
                       {editing && (
                         <div className="mt-2">
                           <EditableUrl path={`${hp}.url`} label="Trail URL" />
-                          <EditableUrl path={`${hp}.imageUrl`} label="Photo URL (optional)" />
+                          <EditableImage path={`${hp}.imageUrl`} label="Trail photo" className="mt-2" />
                         </div>
                       )}
                     </div>

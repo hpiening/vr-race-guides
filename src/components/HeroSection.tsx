@@ -2,6 +2,8 @@
 import Image from 'next/image'
 import { EventData } from '@/types/event'
 import EditableText from './edit/EditableText'
+import EditableImage from './edit/EditableImage'
+import { useEditOptional } from '@/lib/editContext'
 
 export default function HeroSection({ event, theme = 'classic' }: { event: EventData; theme?: 'classic' | 'trailhead' }) {
   if (theme === 'trailhead') return <HeroTrailhead event={event} />
@@ -92,6 +94,7 @@ export default function HeroSection({ event, theme = 'classic' }: { event: Event
 
 /* ── Trailhead hero — cinematic radial gradient, inset frame, editorial type ── */
 function HeroTrailhead({ event }: { event: EventData }) {
+  const editing = !!useEditOptional()?.editing
   return (
     <header
       className="relative flex flex-col justify-end overflow-hidden min-h-[78vh] md:min-h-[82vh]"
@@ -130,7 +133,7 @@ function HeroTrailhead({ event }: { event: EventData }) {
       {/* event shield, top-right */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src={`/images/events/${event.slug}-shield.png`}
+        src={event.shieldImage || `/images/events/${event.slug}-shield.png`}
         alt={event.name}
         className="absolute z-[3] top-[10%] right-[5%] md:right-[6%] w-auto pointer-events-none drop-shadow-[0_14px_34px_rgba(0,0,0,0.4)]"
         style={{ height: 'clamp(120px,22vh,260px)' }}
@@ -161,6 +164,13 @@ function HeroTrailhead({ event }: { event: EventData }) {
             <span className="bg-vr-sky inline-block" style={{ width: 5, height: 5, transform: 'rotate(45deg)' }} />
             <EditableText as="span" value={event.dates} path="dates" />
           </div>
+
+          {editing && (
+            <div className="mt-8 max-w-md grid gap-4 rounded-lg bg-vr-night/70 border border-vr-cream/20 p-4">
+              <EditableImage path="heroImage" label="Hero background photo" compact />
+              <EditableImage path="shieldImage" label="Event badge (top-right)" compact />
+            </div>
+          )}
         </div>
       </div>
     </header>

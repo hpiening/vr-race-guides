@@ -15,17 +15,19 @@ export default function EditableImage({
   label = 'Photo',
   ratio,
   className = '',
+  compact = false,
 }: {
   path: string
   label?: string
   ratio?: string
   className?: string
+  compact?: boolean
 }) {
   const ctx = useEditOptional()
   const [preview, setPreview] = useState<string | null>(null)
   const [status, setStatus] = useState<'idle' | 'uploading' | 'error'>('idle')
   const [err, setErr] = useState('')
-  if (!ctx) return null
+  if (!ctx?.editing) return null
 
   const value = (ctx.value(path) as string) ?? ''
   const shown = preview ?? value
@@ -46,14 +48,18 @@ export default function EditableImage({
 
   return (
     <div className={className}>
-      <div className="rounded-lg overflow-hidden border border-current/20 bg-black/5" style={ratio ? { aspectRatio: ratio } : undefined}>
-        {shown ? (
-          // eslint-disable-next-line @next/next/no-img-element
-          <img src={shown} alt={label} className="w-full h-full object-cover block" />
-        ) : (
-          <div className="py-10 text-center font-micro text-xs uppercase tracking-widest opacity-50">No photo yet</div>
-        )}
-      </div>
+      {compact ? (
+        <p className="font-micro text-[10px] uppercase tracking-widest opacity-60 mb-1">{label}</p>
+      ) : (
+        <div className="rounded-lg overflow-hidden border border-current/20 bg-black/5" style={ratio ? { aspectRatio: ratio } : undefined}>
+          {shown ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={shown} alt={label} className="w-full h-full object-cover block" />
+          ) : (
+            <div className="py-10 text-center font-micro text-xs uppercase tracking-widest opacity-50">No photo yet</div>
+          )}
+        </div>
+      )}
       <div className="mt-2 flex items-center gap-3 flex-wrap">
         <label className="cursor-pointer font-label text-xs tracking-[0.15em] uppercase text-vr-floral border border-vr-floral/40 rounded-full px-4 py-2 hover:bg-vr-floral/10">
           {status === 'uploading' ? 'Uploading…' : shown ? 'Replace photo' : 'Upload photo'}

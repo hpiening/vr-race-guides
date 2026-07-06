@@ -133,6 +133,7 @@ export interface EventData {
   accentColor: string
   favicon?: string
   hidden?: boolean
+  shieldImage?: string
   logo?: string
   logoAlt?: string
   sectionBreaks?: {
