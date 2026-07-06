@@ -140,7 +140,8 @@ body {
 
   /* Full-width, no margins */
   body { font-size: 11pt; }
-  section { padding: 24pt 36pt !important; break-inside: avoid; }
+  /* Let long sections flow across pages, but keep their inner blocks intact. */
+  section { padding: 24pt 36pt !important; }
 
   /* Show all FAQ answers */
   .hidden.print\:block { display: block !important; }
@@ -155,9 +156,10 @@ body {
   /* Keep colours readable — browsers strip backgrounds by default, override */
   * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 
-  /* Prevent orphaned headings */
-  h2, h3 { break-after: avoid; }
-  li, dd { break-inside: avoid; }
+  /* Prevent orphaned headings and keep cards/blocks from splitting mid-page */
+  h2, h3, h4 { break-after: avoid; }
+  li, dd, figure, blockquote, details, .rounded-lg, .rounded-xl { break-inside: avoid; }
+  img { break-inside: avoid; max-width: 100% !important; height: auto !important; }
 }
 
 /* ─── Trailhead theme — native <details> accordions ─────────────── */
