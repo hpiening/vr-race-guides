@@ -603,35 +603,40 @@
           "distance": "3.5 Miles RT",
           "elevation": "700+ ft",
           "difficulty": "Moderate",
-          "url": "https://www.alltrails.com/trail/us/colorado/emerald-lake-trail"
+          "url": "https://www.alltrails.com/trail/us/colorado/emerald-lake-trail",
+          "imageUrl": "/images/uploads/1783446512235-images.jpeg"
         },
         {
           "name": "Bear Lake Loop",
           "distance": "0.8 Miles",
           "elevation": "Minimal",
           "difficulty": "Easy",
-          "url": "https://www.alltrails.com/trail/us/colorado/bear-lake-nature-trail--3"
+          "url": "https://www.alltrails.com/trail/us/colorado/bear-lake-nature-trail--3",
+          "imageUrl": "/images/uploads/1783446530469-images-1.jpeg"
         },
         {
           "name": "Nymph Lake",
           "distance": "1 Mile  RT",
           "elevation": "225 ft",
           "difficulty": "Easy",
-          "url": "https://www.alltrails.com/trail/us/colorado/nymph-lake-trail"
+          "url": "https://www.alltrails.com/trail/us/colorado/nymph-lake-trail",
+          "imageUrl": "/images/uploads/1783446555947-images-2.jpeg"
         },
         {
           "name": "Lumpy Ridge Loop",
           "distance": "11 Miles",
           "elevation": "Sweeping views",
           "difficulty": "Moderate",
-          "url": "https://www.cmc.org/education-adventure/trips/routes-places/rmnp-lumpy-ridge-loop"
+          "url": "https://www.cmc.org/education-adventure/trips/routes-places/rmnp-lumpy-ridge-loop",
+          "imageUrl": "/images/uploads/1783446575474-images-3.jpeg"
         },
         {
           "name": "Hallett Peak",
           "distance": "10.5 Miles RT",
           "elevation": "2,838 ft",
           "difficulty": "Strenuous",
-          "url": "https://www.alltrails.com/trail/us/colorado/hallett-peak"
+          "url": "https://www.alltrails.com/trail/us/colorado/hallett-peak",
+          "imageUrl": "/images/uploads/1783446589904-images-4.jpeg"
         }
       ],
       "sights": [
