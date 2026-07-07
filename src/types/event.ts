@@ -143,7 +143,7 @@ export interface EventData {
   }
   partners?: {
     enabled: boolean
-    items: Array<{ name: string; logoUrl?: string }>
+    items: Array<{ name: string; logoUrl?: string; url?: string }>
   }
   sections: {
     welcome?: WelcomeData
