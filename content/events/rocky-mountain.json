@@ -49,14 +49,18 @@
         "url": "https://www.rowdytrails.com"
       },
       {
-        "name": "Laurel Timing"
+        "name": "Laurel Timing",
+        "url": "https://laurelt.com"
       },
       {
-        "name": "FinisherPix"
+        "name": "FinisherPix",
+        "url": "https://www.finisherpix.com",
+        "logoUrl": "/images/uploads/1783459451886-unknown-1.png"
       },
       {
         "name": "Wander Project",
-        "logoUrl": "https://www.wanderproject.org/"
+        "logoUrl": "/images/uploads/1783459294335-unknown.png",
+        "url": "https://www.wanderproject.org"
       },
       {
         "name": "Grüns",
@@ -64,7 +68,9 @@
         "url": "https://gruns.co"
       },
       {
-        "name": "Hotel Planner"
+        "name": "Hotel Planner",
+        "logoUrl": "/images/uploads/1783459296194-unknown.jpeg",
+        "url": "https://vacationraces.hotelplanner.com"
       },
       {
         "name": "Siete",
