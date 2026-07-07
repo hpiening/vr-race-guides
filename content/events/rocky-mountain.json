@@ -19,22 +19,34 @@
     "enabled": true,
     "items": [
       {
-        "name": "Honey Stinger"
+        "name": "Honey Stinger",
+        "logoUrl": "/images/uploads/1783445311591-hs-logosheet-rgb-black.png",
+        "url": "https://honeystinger.com"
       },
       {
-        "name": "That's It"
+        "name": "That's It",
+        "logoUrl": "/images/uploads/1783445844993-tin-primary-logo-full-color.jpg",
+        "url": "https://www.thatsitfruit.com"
       },
       {
-        "name": "Runna"
+        "name": "Runna",
+        "logoUrl": "/images/uploads/1783446020684-runna-by-strava-black-.png",
+        "url": "https://web.runna.com/en-GB/welcome?redirectUrl=https%3A%2F%2Fweb.runna.com%2Fredeem%3Fcode%3DVACATIONRUNNA"
       },
       {
-        "name": "Kate's Real Food"
+        "name": "Kate's Real Food",
+        "logoUrl": "/images/uploads/1783445928460-katesrealfood-logos-6.png",
+        "url": "https://katesrealfood.com"
       },
       {
-        "name": "Runseek"
+        "name": "Runseek",
+        "logoUrl": "/images/uploads/1783446082812-runseeklogo.png",
+        "url": "https://www.runseekadventures.com"
       },
       {
-        "name": "Rowdy Trails"
+        "name": "Rowdy Trails",
+        "logoUrl": "/images/uploads/1783446123652-rowdylegend.png",
+        "url": "https://www.rowdytrails.com"
       },
       {
         "name": "Laurel Timing"
@@ -47,19 +59,26 @@
         "logoUrl": "https://www.wanderproject.org/"
       },
       {
-        "name": "Grüns"
+        "name": "Grüns",
+        "logoUrl": "/images/uploads/1783446169877-gruns-yellow.png",
+        "url": "https://gruns.co"
       },
       {
         "name": "Hotel Planner"
       },
       {
-        "name": "Siete"
+        "name": "Siete",
+        "logoUrl": "/images/uploads/1783445217625-siete-logo.png",
+        "url": "https://sietefoods.com"
       },
       {
-        "name": "Neuma"
+        "name": "Neuma",
+        "logoUrl": "/images/uploads/1783444860053-neuma-poweredby-lockup1-blue.png"
       },
       {
-        "name": "Dip"
+        "name": "Dip",
+        "logoUrl": "/images/uploads/1783444700983-logo-dip-tri-color.png",
+        "url": "https://dipalready.com"
       }
     ]
   },
