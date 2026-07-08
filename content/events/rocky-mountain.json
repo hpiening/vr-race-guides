@@ -44,11 +44,6 @@
         "url": "https://www.runseekadventures.com"
       },
       {
-        "name": "Rowdy Trails",
-        "logoUrl": "/images/uploads/1783446123652-rowdylegend.png",
-        "url": "https://www.rowdytrails.com"
-      },
-      {
         "name": "Laurel Timing",
         "url": "https://laurelt.com"
       },
@@ -56,6 +51,11 @@
         "name": "FinisherPix",
         "url": "https://www.finisherpix.com",
         "logoUrl": "/images/uploads/1783459451886-unknown-1.png"
+      },
+      {
+        "name": "Dip",
+        "logoUrl": "/images/uploads/1783444700983-logo-dip-tri-color.png",
+        "url": "https://dipalready.com"
       },
       {
         "name": "Wander Project",
@@ -80,11 +80,6 @@
       {
         "name": "Neuma",
         "logoUrl": "/images/uploads/1783444860053-neuma-poweredby-lockup1-blue.png"
-      },
-      {
-        "name": "Dip",
-        "logoUrl": "/images/uploads/1783444700983-logo-dip-tri-color.png",
-        "url": "https://dipalready.com"
       }
     ]
   },
