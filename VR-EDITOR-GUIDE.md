@@ -31,15 +31,22 @@ gently highlighted.
 
 - **Text:** click any highlighted text (headings, schedule items, FAQs, course info,
   descriptions…) and type. The page updates as you go.
-- **Lists** (FAQs, schedule items, parking, course records, hikes, restaurants, etc.):
-  - **+ Add** button adds a new item
-  - **↑ / ↓** reorder
-  - **✕** removes an item
-- **Course route maps:** under each map there's a **"RideWithGPS route link"** box.
-  Paste a route link (e.g. `ridewithgps.com/routes/51714103`) and the map updates.
-- **Buttons / links:** in edit mode each button shows a small **"Link URL"** box —
-  change where it points.
-- **Parking map:** paste a new **"Parking map image URL"** to swap the parking map.
+- **Formatting (bold / italic / links):** select some text in a paragraph and a small
+  **B / I / Link** bar pops up. **Link** can point to a website *or* jump to another
+  section on the same page (e.g. select "parking" and link it to the Race Morning
+  section).
+- **Photos:** click a photo area and either **Upload photo** (choose a file from your
+  computer) or paste an image URL. Works for the hero background, the event badge,
+  lodging, trail photos, partner logos, and the parking / expo maps. A preview shows
+  straight away; it appears on the live page after you Save.
+- **Lists** (FAQs, schedule items, parking, course records, hikes, restaurants,
+  partners, etc.):
+  - **+ Add** adds an item · **↑ / ↓** reorder · **✕** removes
+- **Course route maps:** paste a **"RideWithGPS route link"** and the map updates.
+- **Buttons / links:** each button shows a small **"Link URL"** box — change where it points.
+
+> **Export PDF:** the guide has an "Export PDF" button (and Ctrl/Cmd+P works too). It
+> automatically expands every section into a clean printable version.
 
 ---
 
@@ -56,10 +63,11 @@ had it open — just reload and re-apply your edit, or contact Y11.
 
 ## 5. What you can edit vs. what's locked
 
-- ✅ **You can edit:** all text, all lists, course route links, button links, and the
-  parking map image.
-- 🔒 **Locked (on purpose):** the hero image, brand, colours, fonts, layout, and the
-  page address. These keep every guide consistent and on-brand.
+- ✅ **You can edit:** all text (with bold / italic / links), all lists, photos (upload
+  or paste) including the hero background and event badge, course route links, button
+  links, and partner logos.
+- 🔒 **Locked (on purpose):** brand, colours, fonts, layout, and the page address (URL).
+  These keep every guide consistent and on-brand.
 
 Need a locked item changed, a brand-new guide created, or a new section type? That's a
 quick job for the Y11 team — just send us a note.
