@@ -141,10 +141,6 @@
               "label": "5K RACE START"
             },
             {
-              "time": "6:00 PM ",
-              "label": "BIB PICKUP ENDS"
-            },
-            {
               "time": "7:00 PM",
               "label": "5K AWARDS CEREMONY"
             }
@@ -532,7 +528,7 @@
         },
         {
           "heading": "Lost & Found",
-          "body": "There is no official lost and found. If we find lost items, we will hold onto them for 14 days. Unclaimed items will be donated. Submit the online form to check if we have found your item.",
+          "body": "Lost and found items can be found at the Merchandise Booth. If you have lost an item, please submit a request here. We will hold onto lost items and unclaimed gear check bags for one week only, so be sure to reach out as soon as possible. \n \nA bin for extra clothing will be available at the first aid station. Again, this is the only official clothing drop and any clothing left scattered along the course will be considered trash which may be discarded or donated. **Unclaimed clothing from aid station 1 drop (near mile 3) will be donated immediately after the race.**",
           "links": [
             {
               "label": "Fill out the Lost and Found Form",
