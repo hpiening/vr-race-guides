@@ -17,6 +17,7 @@ import FAQSection from '@/components/FAQSection'
 import ChallengeEventsSection from '@/components/ChallengeEventsSection'
 import PartnersSection from '@/components/PartnersSection'
 import PrintButton from '@/components/PrintButton'
+import PrintExpand from '@/components/PrintExpand'
 import SearchBar from '@/components/SearchBar'
 
 export async function generateStaticParams() {
@@ -190,6 +191,7 @@ export default async function EventPage({ params }: { params: { slug: string } }
         {event.partners?.enabled          && <PartnersSection    data={event.partners} theme={theme} />}
       </main>
       <PrintButton />
+      <PrintExpand />
       <SearchBar index={searchIndex} />
       {isTrail ? (
         <footer className="relative bg-vr-night overflow-hidden border-t border-vr-cream/10 px-6 md:px-12 py-20">

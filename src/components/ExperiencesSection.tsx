@@ -191,17 +191,18 @@ function ExperiencesTrailhead({ data, basePath, editing }: { data: EventData['se
               <EditableText as="span" value={data.lodging.description} path={`${basePath}.lodging.description`} />
             </p>
             {editing ? (
-              <>
-                <EditableUrl path={`${basePath}.lodging.url`} label="Booking URL" />
-                <EditableImage path={`${basePath}.lodging.imageUrl`} label="Lodging photo" className="mt-2" />
-              </>
+              <EditableUrl path={`${basePath}.lodging.url`} label="Booking URL" />
             ) : (
               <a href={data.lodging.url} target="_blank" rel="noopener noreferrer" className="self-start font-label text-xs tracking-[0.12em] uppercase px-6 py-3 rounded-full bg-vr-forest text-vr-cream hover:opacity-90 transition-opacity">
                 Book lodging ↗
               </a>
             )}
           </div>
-          <PhotoFrame src={data.lodging.imageUrl} label="Lodging photo" ratio="16 / 10" className="min-h-[200px] h-full" />
+          {editing ? (
+            <div className="p-5 flex items-center"><EditableImage path={`${basePath}.lodging.imageUrl`} label="Lodging photo" ratio="16 / 10" className="w-full" /></div>
+          ) : (
+            <PhotoFrame src={data.lodging.imageUrl} label="Lodging photo" ratio="16 / 10" className="min-h-[200px] h-full" />
+          )}
         </div>
 
         {/* Activities */}

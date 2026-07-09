@@ -96,16 +96,6 @@ function PostRaceTrailhead({ data, basePath, editing }: { data: EventData['secti
         <div className="font-body text-vr-forest leading-[1.7] max-w-[680px] mb-7" style={{ fontSize: '18px' }}>
           <EditableText as="div" value={data.finishLineInfo} path={`${basePath}.finishLineInfo`} />
         </div>
-        {!editing && data.infoSections && data.infoSections.length > 0 && (
-          <div className="flex flex-wrap gap-3 mb-14">
-            {data.infoSections.map((s, i) => (
-              <span key={i} className="font-label uppercase text-vr-forest border border-vr-forest/80 rounded-full px-4 py-2.5" style={{ fontSize: '12px', letterSpacing: '0.04em' }}>
-                {s.heading}
-              </span>
-            ))}
-          </div>
-        )}
-
         {/* Course records — sky panel */}
         {(data.courseRecords.length > 0 || editing) && (
           <div className="rounded-xl p-9 md:p-11 mb-6" style={{ background: 'var(--vr-sky)' }}>
