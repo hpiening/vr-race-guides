@@ -118,11 +118,11 @@ export default function ScheduleSection({ data, eventSlug, basePath = 'sections.
           {/* print: every day expanded */}
           <div className="hidden print:block text-left max-w-[580px] mx-auto">
             {data.days.map(d => (
-              <div key={d.id} className="mb-6">
+              <div key={d.id} className="tl-print-day mb-6">
                 <p className="font-heading text-lg uppercase text-vr-cream mb-1">{d.label}</p>
                 <p className="font-micro text-xs tracking-[0.2em] uppercase text-vr-cream/40 mb-3">{d.date}</p>
                 {d.items.map((item, i) => (
-                  <div key={i} className="grid grid-cols-[104px_1fr] gap-6 py-2 border-b border-vr-cream/[0.12]">
+                  <div key={i} className="tl-print-row grid grid-cols-[104px_1fr] gap-6 py-2 border-b border-vr-cream/[0.12]">
                     <span className="font-label text-vr-sky text-right text-sm">{item.time}</span>
                     <div>
                       <div className="font-heading uppercase text-vr-cream text-sm">{item.label}</div>

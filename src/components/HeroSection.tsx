@@ -135,7 +135,7 @@ function HeroTrailhead({ event }: { event: EventData }) {
       <img
         src={event.shieldImage || `/images/events/${event.slug}-shield.png`}
         alt={event.name}
-        className="absolute z-[3] top-[10%] right-[5%] md:right-[6%] w-auto pointer-events-none drop-shadow-[0_14px_34px_rgba(0,0,0,0.4)]"
+        className="tl-hero-shield absolute z-[3] top-[10%] right-[5%] md:right-[6%] w-auto pointer-events-none drop-shadow-[0_14px_34px_rgba(0,0,0,0.4)]"
         style={{ height: 'clamp(120px,22vh,260px)' }}
         onError={(e) => { (e.target as HTMLImageElement).style.display = 'none' }}
       />

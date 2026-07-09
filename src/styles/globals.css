@@ -160,6 +160,13 @@ body {
   h2, h3, h4 { break-after: avoid; }
   li, dd, figure, blockquote, details, .rounded-lg, .rounded-xl { break-inside: avoid; }
   img { break-inside: avoid; max-width: 100% !important; height: auto !important; }
+
+  /* Shrink the oversized hero badge on the cover page */
+  .tl-hero-shield { height: 110px !important; }
+
+  /* Keep each schedule day (and each row) from splitting across pages */
+  .tl-print-day { break-inside: avoid; }
+  .tl-print-row { break-inside: avoid; }
 }
 
 /* ─── Trailhead theme — native <details> accordions ─────────────── */
