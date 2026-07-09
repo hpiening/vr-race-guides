@@ -10,11 +10,11 @@
  * `whitespace-pre-line`.
  */
 
-const LINK_OR_BOLD = /\[[^\]]+\]\([^)\s]+\)|\*\*[^*]+\*\*/
+const MD_SYNTAX = /\[[^\]]+\]\([^)\s]+\)|\*\*[^*]+\*\*|\*[^*\n]+\*|_[^_\n]+_/
 
-/** True if the text uses link or bold syntax and should be rendered as HTML. */
+/** True if the text uses link/bold/italic syntax and should be rendered as HTML. */
 export function hasMarkdown(src: string): boolean {
-  return LINK_OR_BOLD.test(src)
+  return MD_SYNTAX.test(src)
 }
 
 function escapeHtml(s: string): string {
@@ -34,7 +34,10 @@ export function renderMarkdown(src: string): string {
     const attrs = external ? ' target="_blank" rel="noopener noreferrer"' : ''
     return `<a href="${safe}"${attrs} class="tl-link">${text}</a>`
   })
-  // **bold**
+  // **bold** (before italic so the double-asterisks aren't caught by it)
   s = s.replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+  // *italic* or _italic_
+  s = s.replace(/\*([^*\n]+)\*/g, '<em>$1</em>')
+  s = s.replace(/_([^_\n]+)_/g, '<em>$1</em>')
   return s
 }

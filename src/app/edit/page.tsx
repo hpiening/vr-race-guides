@@ -2,6 +2,7 @@
 import { useEffect, useState, useCallback } from 'react'
 import { EventData } from '@/types/event'
 import { EditProvider } from '@/lib/editContext'
+import FormatToolbar from '@/components/edit/FormatToolbar'
 import { getIdentity, readJson, commitJson } from '@/lib/gitGateway'
 import HeroSection from '@/components/HeroSection'
 import WelcomeSection from '@/components/WelcomeSection'
@@ -150,6 +151,7 @@ export default function EditPage() {
         <p className="bg-red-50 text-red-700 text-sm px-6 py-2 font-body">{saveErr}</p>
       )}
 
+      <FormatToolbar />
       <EditProvider data={data} editing onChange={next => { setData(next); setDirty(true) }}>
         <div data-theme={theme}>
         <HeroSection event={data} theme={theme} />
