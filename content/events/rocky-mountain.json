@@ -500,7 +500,13 @@
         },
         {
           "heading": "Live Tracking",
-          "body": "We've teamed up with Laurel's innovative tracking system to ensure your friends and family can follow your race in real-time — no phone or watch needed. Laurel estimates your position between checkpoints based on pacing data, providing accurate, real-time updates and predicted finish times. Want text updates? Supporters can opt in for free text notifications when you reach key points along the course."
+          "body": "We've teamed up with Laurel's innovative tracking system to ensure your friends and family can follow your race in real-time — no phone or watch needed. Laurel estimates your position between checkpoints based on pacing data, providing accurate, real-time updates and predicted finish times. \n**TRACKING IS SIMPLE **Spectators can follow your progress here. \nWant text updates? Supporters can opt in for free text notifications when you reach key points along the course.",
+          "links": [
+            {
+              "label": "Tracking Link",
+              "url": "https://track.brooksee.com/track?h=vrm"
+            }
+          ]
         },
         {
           "heading": "Results & Photos",
