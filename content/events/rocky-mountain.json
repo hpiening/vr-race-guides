@@ -19,6 +19,35 @@
     "enabled": true,
     "items": [
       {
+        "name": "Hotel Planner",
+        "logoUrl": "/images/uploads/1783459296194-unknown.jpeg",
+        "url": "https://vacationraces.hotelplanner.com"
+      },
+      {
+        "name": "Grüns",
+        "logoUrl": "/images/uploads/1783446169877-gruns-yellow.png",
+        "url": "https://gruns.co"
+      },
+      {
+        "name": "Runna",
+        "logoUrl": "/images/uploads/1783446020684-runna-by-strava-black-.png",
+        "url": "https://web.runna.com/en-GB/welcome?redirectUrl=https%3A%2F%2Fweb.runna.com%2Fredeem%3Fcode%3DVACATIONRUNNA"
+      },
+      {
+        "name": "Dip",
+        "logoUrl": "/images/uploads/1783444700983-logo-dip-tri-color.png",
+        "url": "https://dipalready.com"
+      },
+      {
+        "name": "Make It Personal",
+        "logoUrl": "/images/uploads/1783561948680-69a6f9f5dc9a0a5ad188a8dc-offblack-logo.svg",
+        "url": "https://makeitpersonal.io/"
+      },
+      {
+        "name": "Neuma",
+        "logoUrl": "/images/uploads/1783444860053-neuma-poweredby-lockup1-blue.png"
+      },
+      {
         "name": "Honey Stinger",
         "logoUrl": "/images/uploads/1783445311591-hs-logosheet-rgb-black.png",
         "url": "https://honeystinger.com"
@@ -29,14 +58,9 @@
         "url": "https://www.thatsitfruit.com"
       },
       {
-        "name": "Runna",
-        "logoUrl": "/images/uploads/1783446020684-runna-by-strava-black-.png",
-        "url": "https://web.runna.com/en-GB/welcome?redirectUrl=https%3A%2F%2Fweb.runna.com%2Fredeem%3Fcode%3DVACATIONRUNNA"
-      },
-      {
-        "name": "Kate's Real Food",
-        "logoUrl": "/images/uploads/1783445928460-katesrealfood-logos-6.png",
-        "url": "https://katesrealfood.com"
+        "name": "Zico",
+        "logoUrl": "/images/uploads/1783562152168-zico-logo-deep-green-1-1-.png",
+        "url": "https://zico.com/"
       },
       {
         "name": "Runseek",
@@ -44,8 +68,29 @@
         "url": "https://www.runseekadventures.com"
       },
       {
+        "name": "Siete",
+        "logoUrl": "/images/uploads/1783445217625-siete-logo.png",
+        "url": "https://sietefoods.com"
+      },
+      {
+        "name": "Kate's Real Food",
+        "logoUrl": "/images/uploads/1783445928460-katesrealfood-logos-6.png",
+        "url": "https://katesrealfood.com"
+      },
+      {
+        "name": "Aloe Up",
+        "logoUrl": "",
+        "url": "https://aloeup.com/"
+      },
+      {
+        "name": "Sawyer",
+        "logoUrl": "/images/uploads/1783562330348-sawyer-logo-dark-1-.png",
+        "url": "https://www.sawyer.com/"
+      },
+      {
         "name": "Laurel Timing",
-        "url": "https://laurelt.com"
+        "url": "https://laurelt.com",
+        "logoUrl": "/images/uploads/1783561785255-laurellogo-01.svg"
       },
       {
         "name": "FinisherPix",
@@ -53,33 +98,9 @@
         "logoUrl": "/images/uploads/1783459451886-unknown-1.png"
       },
       {
-        "name": "Dip",
-        "logoUrl": "/images/uploads/1783444700983-logo-dip-tri-color.png",
-        "url": "https://dipalready.com"
-      },
-      {
         "name": "Wander Project",
         "logoUrl": "/images/uploads/1783459294335-unknown.png",
         "url": "https://www.wanderproject.org"
-      },
-      {
-        "name": "Grüns",
-        "logoUrl": "/images/uploads/1783446169877-gruns-yellow.png",
-        "url": "https://gruns.co"
-      },
-      {
-        "name": "Hotel Planner",
-        "logoUrl": "/images/uploads/1783459296194-unknown.jpeg",
-        "url": "https://vacationraces.hotelplanner.com"
-      },
-      {
-        "name": "Siete",
-        "logoUrl": "/images/uploads/1783445217625-siete-logo.png",
-        "url": "https://sietefoods.com"
-      },
-      {
-        "name": "Neuma",
-        "logoUrl": "/images/uploads/1783444860053-neuma-poweredby-lockup1-blue.png"
       }
     ]
   },
