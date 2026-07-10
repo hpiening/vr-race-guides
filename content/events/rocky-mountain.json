@@ -338,14 +338,29 @@
           "lng": -105.498488
         },
         {
-          "name": "High School & Observatory (Second Lot)",
+          "name": "High School (Second Lot)",
           "details": "Second lot to fill. Short walk to start/finish lines. Follow volunteer direction from Manford Avenue.",
           "mapUrl": "https://www.google.com/maps/place/40%C2%B022'12.8%22N+105%C2%B029'49.9%22W/@40.3702358,-105.4989489,532m/data=!3m2!1e3!4b1!4m4!3m3!8m2!3d40.370233!4d-105.4972?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D",
           "lat": 40.3693,
           "lng": -105.5015
         },
         {
-          "name": "Fairgrounds (Third Lot)",
+          "name": "Tennis Court (Third Lot)",
+          "details": "Third lot to fill.  Short walk to start/finish lines. Follow volunteer direction from Manford Avenue.",
+          "mapUrl": "https://maps.app.goo.gl/LM5XeiAe19d42V1K9"
+        },
+        {
+          "name": "Community Center North Lot",
+          "details": "Fourth lot to fill.  Short walk to start/finish lines. Follow volunteer direction from Manford Avenue. Do not park in large lot east of the building.",
+          "mapUrl": "https://maps.app.goo.gl/qHxDWkNo8Bz9BuXP7"
+        },
+        {
+          "name": "Observatory Lot (fifth lot)",
+          "details": "Fifth lot to fill.  Short walk to start/finish lines. Follow volunteer direction from Manford Avenue.",
+          "mapUrl": "https://maps.app.goo.gl/pn42Yuf1JnHoYKMt6"
+        },
+        {
+          "name": "Fairgrounds (Sixth Lot)",
           "details": "Overflow parking. Please only park in designated areas marked on the event map. Follow volunteer direction.",
           "mapUrl": "https://www.google.com/maps/place/40%C2%B022'20.0%22N+105%C2%B030'13.1%22W/@40.372227,-105.5061525,532m/data=!3m2!1e3!4b1!4m10!1m5!3m4!2zNDDCsDIyJzE4LjYiTiAxMDXCsDI5JzUyLjQiVw!8m2!3d40.371826!4d-105.497887!3m3!8m2!3d40.372223!4d-105.503634?entry=ttu&g_ep=EgoyMDI2MDYyNC4wIKXMDSoASAFQAw%3D%3D",
           "lat": 40.3672,
@@ -374,7 +389,7 @@
           "label": "Awards Ceremony"
         }
       ],
-      "dropOffNote": "Approach via S St Vrain Ave (Hwy 7) and turn onto Manford Avenue toward the fairgrounds. Follow crew to the drop-off area, then exit the parking lot back onto Community Drive heading south toward N St Vrain Ave. Please move quickly to keep traffic flowing for other runners.",
+      "dropOffNote": "Approach via S St Vrain Ave (Hwy 7) and turn onto Manford Avenue toward the fairgrounds. Follow crew to the drop-off area, then exit the parking lot back onto Community Drive heading south toward N St Vrain Ave. Please unload in the clearly marked runner drop-off zone only. Move quickly to keep traffic flowing for other runners. ",
       "courses": [
         {
           "name": "Half Marathon Course",
