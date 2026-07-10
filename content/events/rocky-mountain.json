@@ -201,7 +201,7 @@
       "locationMapUrl": "https://www.google.com/maps/place/380+Community+Dr,+Estes+Park,+CO+80517/@40.3710761,-105.498488,17z",
       "locationLat": 40.3710761,
       "locationLng": -105.498488,
-      "mapImageUrl": "https://motivsports.sharepoint.com/:i:/s/vacationracesevents/IQCL_Or_Nm57S5TE58I4G5LyAfBMEBsQ8uVfsroipn7QVKI?e=UsVxn3",
+      "mapImageUrl": "/images/uploads/1783714877851-rocky-expo-parking-and-5k-staging.jpg",
       "hours": [
         {
           "label": "Race Expo Hours",
@@ -328,7 +328,7 @@
       "enabled": true,
       "navLabel": "Half Marathon Info",
       "timelineLabel": "Morning Schedule",
-      "parkingMapImageUrl": "https://motivsports.sharepoint.com/:i:/s/vacationracesevents/IQCL_Or_Nm57S5TE58I4G5LyAfBMEBsQ8uVfsroipn7QVKI?e=Yc53lR",
+      "parkingMapImageUrl": "/images/uploads/1783714915261-rocky-parking-layout-2026.jpg",
       "parkingOptions": [
         {
           "name": "Ball Fields (Primary Lot)",
