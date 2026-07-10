@@ -328,7 +328,7 @@
       "enabled": true,
       "navLabel": "Half Marathon Info",
       "timelineLabel": "Morning Schedule",
-      "parkingMapImageUrl": "/images/events/rocky-mountain-parking.jpg",
+      "parkingMapImageUrl": "https://motivsports.sharepoint.com/:i:/s/vacationracesevents/IQCL_Or_Nm57S5TE58I4G5LyAfBMEBsQ8uVfsroipn7QVKI?e=Yc53lR",
       "parkingOptions": [
         {
           "name": "Ball Fields (Primary Lot)",
