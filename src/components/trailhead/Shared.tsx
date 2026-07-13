@@ -1,5 +1,14 @@
 import { ReactNode } from 'react'
 import { StatTile } from '@/types/event'
+import { hasMarkdown, renderMarkdown } from '@/lib/markdown'
+
+/** Render a body value: parse inline Markdown (links/bold/italic) for strings. */
+export function RichBody({ value }: { value: ReactNode }) {
+  if (typeof value === 'string' && hasMarkdown(value)) {
+    return <span dangerouslySetInnerHTML={{ __html: renderMarkdown(value) }} />
+  }
+  return <>{value}</>
+}
 
 /**
  * Shared presentational pieces for the Trailhead theme's public (view-mode)
@@ -125,7 +134,7 @@ export function Accordion({
             <span className="tl-plus text-vr-sky font-light transition-transform duration-200" style={{ fontSize: '22px' }}>+</span>
           </summary>
           <div className="px-6 pb-5 font-body text-vr-forest/85 leading-[1.65] whitespace-pre-line" style={{ fontSize: '15px' }}>
-            {it.body}
+            <RichBody value={it.body} />
           </div>
         </details>
       ))}
@@ -138,7 +147,7 @@ export function InfoCard({ heading, children, className = '' }: { heading: strin
   return (
     <div className={`border border-vr-line bg-vr-white rounded-lg p-7 ${className}`}>
       <h3 className="font-heading uppercase text-vr-forest mb-3" style={{ fontSize: '18px', letterSpacing: '0.04em' }}>{heading}</h3>
-      <div className="font-body text-vr-forest/85 leading-[1.65] whitespace-pre-line" style={{ fontSize: '15px' }}>{children}</div>
+      <div className="font-body text-vr-forest/85 leading-[1.65] whitespace-pre-line" style={{ fontSize: '15px' }}><RichBody value={children} /></div>
     </div>
   )
 }

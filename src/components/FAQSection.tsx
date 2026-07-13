@@ -4,6 +4,7 @@ import SectionWrapper from './SectionWrapper'
 import { EventData } from '@/types/event'
 import { useEditOptional } from '@/lib/editContext'
 import EditableText from './edit/EditableText'
+import { RichBody } from './trailhead/Shared'
 import { ListControls, AddButton } from './edit/ListControls'
 import { TrailHeader } from './trailhead/Shared'
 
@@ -41,7 +42,7 @@ export default function FAQSection({ data, basePath = 'sections.faqs', theme = '
                     <span className="font-heading uppercase text-vr-cream" style={{ fontSize: '17px', letterSpacing: '0.02em' }}>{item.question}</span>
                     <span className="tl-plus text-vr-sky font-light shrink-0 transition-transform duration-200" style={{ fontSize: '24px' }}>+</span>
                   </summary>
-                  <p className="m-0 pb-6 font-body text-vr-cream/[0.78] leading-[1.65] max-w-[680px]" style={{ fontSize: '15px' }}>{item.answer}</p>
+                  <p className="m-0 pb-6 font-body text-vr-cream/[0.78] leading-[1.65] max-w-[680px]" style={{ fontSize: '15px' }}><RichBody value={item.answer} /></p>
                 </details>
               ))}
             </div>
@@ -86,7 +87,7 @@ export default function FAQSection({ data, basePath = 'sections.faqs', theme = '
                   {editing ? (
                     <EditableText as="div" value={item.answer} path={`${itemsPath}.${i}.answer`} />
                   ) : (
-                    <p>{item.answer}</p>
+                    <p><RichBody value={item.answer} /></p>
                   )}
                 </div>
               </dd>

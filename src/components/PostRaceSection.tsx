@@ -5,7 +5,7 @@ import { useEditOptional } from '@/lib/editContext'
 import EditableText from './edit/EditableText'
 import EditableUrl from './edit/EditableUrl'
 import { ListControls, AddButton } from './edit/ListControls'
-import { TrailHeader, Accordion } from './trailhead/Shared'
+import { TrailHeader, Accordion, RichBody } from './trailhead/Shared'
 
 type Props = { data: EventData['sections']['postRace']; basePath?: string; theme?: 'classic' | 'trailhead' }
 
@@ -156,7 +156,7 @@ function PostRaceTrailhead({ data, basePath, editing }: { data: EventData['secti
               heading: s.heading,
               body: (
                 <>
-                  {s.body}
+                  <RichBody value={s.body} />
                   {s.links && s.links.length > 0 && (
                     <span className="flex flex-wrap gap-3 mt-4">
                       {s.links.map((link, j) => (

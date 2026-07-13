@@ -6,7 +6,7 @@ import EditableText from './edit/EditableText'
 import EditableUrl from './edit/EditableUrl'
 import RideWithGpsField from './edit/RideWithGpsField'
 import { ListControls, AddButton } from './edit/ListControls'
-import { StatChips, StatTiles, Accordion } from './trailhead/Shared'
+import { StatChips, StatTiles, Accordion, RichBody } from './trailhead/Shared'
 
 type Props = { data: EventData['sections']['courseInfo']; basePath?: string; theme?: 'classic' | 'trailhead' }
 
@@ -219,7 +219,7 @@ function CourseInfoTrailhead({ data, basePath, editing }: { data: EventData['sec
               heading: b.heading,
               body: (
                 <>
-                  {b.body}
+                  <RichBody value={b.body} />
                   {b.linkLabel && b.linkUrl && (
                     <a href={b.linkUrl} target="_blank" rel="noopener noreferrer" className="block mt-2 font-micro text-xs tracking-widest uppercase text-vr-sky hover:text-vr-forest transition-colors">
                       {b.linkLabel} ↗
