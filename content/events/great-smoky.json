@@ -1,0 +1,671 @@
+{
+  "slug": "great-smoky",
+  "theme": "trailhead",
+  "brand": "smoky",
+  "name": "Great Smoky Mountains",
+  "tagline": "Run where the mist meets the mountains.",
+  "dates": "August 28 – 29, 2026",
+  "heroImage": "",
+  "heroImageAlt": "Misty ridgelines of the Great Smoky Mountains at sunrise near Townsend, Tennessee",
+  "heroBgColor": "#0E2033",
+  "accentColor": "#0E2033",
+  "favicon": "/images/events/great-smoky-favicon.png",
+  "shieldImage": "/images/events/great-smoky-shield.png",
+  "logo": "/images/vr-logo.png",
+  "sectionBreaks": {
+    "afterRaceMorning": {},
+    "afterChallengeEvents": {},
+    "afterExperiences": {}
+  },
+  "partners": {
+    "enabled": true,
+    "items": [
+      {
+        "name": "Honey Stinger",
+        "logoUrl": "/images/uploads/1783445311591-hs-logosheet-rgb-black.png",
+        "url": "https://honeystinger.com"
+      },
+      {
+        "name": "Gnarly Hydrate",
+        "url": "https://www.gognarly.com"
+      },
+      {
+        "name": "Nathan",
+        "url": "https://nathansports.com"
+      },
+      {
+        "name": "Brooksee Timing",
+        "url": "https://www.brooksee.com"
+      },
+      {
+        "name": "iTab",
+        "url": "https://www.itab.us.com/product/vacation-races/"
+      },
+      {
+        "name": "Hotel Planner",
+        "logoUrl": "/images/uploads/1783459296194-unknown.jpeg",
+        "url": "https://vacationraces.hotelplanner.com"
+      },
+      {
+        "name": "Runna",
+        "logoUrl": "/images/uploads/1783446020684-runna-by-strava-black-.png",
+        "url": "https://web.runna.com/en-GB/welcome?redirectUrl=https%3A%2F%2Fweb.runna.com%2Fredeem%3Fcode%3DVACATIONRUNNA"
+      },
+      {
+        "name": "Wander Project",
+        "logoUrl": "/images/uploads/1783459294335-unknown.png",
+        "url": "https://www.wanderproject.org"
+      },
+      {
+        "name": "FinisherPix",
+        "logoUrl": "/images/uploads/1783459451886-unknown-1.png",
+        "url": "https://www.finisherpix.com"
+      }
+    ]
+  },
+  "sections": {
+    "welcome": {
+      "enabled": true,
+      "heading": "Welcome to the Smokies!",
+      "body": "We hope your visit to Townsend is a memorable one — and that you make the time to explore Great Smoky Mountains National Park, America's most-visited national park, right on our doorstep. We try to capture the essence of visiting a national park on foot, and we want you to have fun while you're here. Please respect and follow the guidelines of our race, the National Park Service, and other local authorities.",
+      "quote": "The clearest way into the Universe is through a forest wilderness.",
+      "quoteAttribution": "John Muir",
+      "closing": "The Smokies breathe in color — rich green forest, cool mist, and hazy ridgelines fading into blue as they climb. Running through this world feels instinctive, almost meditative: the road winds gently, mountains appear and disappear in layered silhouettes, and the experience feels calm and immersive. Every visitor is a steward with a responsibility to protect and respect the area for future generations. As a participant, we trust in your support to promote the ecology and sustainability of this unparalleled location.\n\nHappy exploring!\n– The Vacation Races Team",
+      "note": "Note to runners: All of the following information is subject to change. If changes occur due to unforeseen circumstances, adjustments will be made to satisfy local permitting requirements while still delivering a top-tier running experience. We will inform runners of any changes as soon as they are finalized so participants can comfortably prepare for their Vacation Races experience."
+    },
+    "schedule": {
+      "enabled": true,
+      "days": [
+        {
+          "id": "friday",
+          "label": "Friday / Expo & 5K",
+          "date": "August 28, 2026",
+          "items": [
+            {
+              "time": "12:00–5:00 PM",
+              "label": "RACE EXPO OPEN"
+            },
+            {
+              "time": "12:00–6:00 PM",
+              "label": "BIB PICKUP",
+              "note": "5K and Black Bear Double runners must pick up by 5:00 PM"
+            },
+            {
+              "time": "5:30 PM",
+              "label": "5K RUNNERS PARKED"
+            },
+            {
+              "time": "5:50 PM",
+              "label": "5K RUNNERS LINE UP"
+            },
+            {
+              "time": "6:00 PM",
+              "label": "5K RACE STARTS"
+            },
+            {
+              "time": "7:30 PM",
+              "label": "5K AWARDS CEREMONY"
+            }
+          ]
+        },
+        {
+          "id": "saturday",
+          "label": "Saturday / Half Marathon",
+          "date": "August 29, 2026",
+          "items": [
+            {
+              "time": "4:30 AM",
+              "label": "PARKING OPENS & BIB PICKUP BEGINS"
+            },
+            {
+              "time": "4:50 AM",
+              "label": "FIRST SHUTTLE LOADS"
+            },
+            {
+              "time": "6:00 AM",
+              "label": "LAST SHUTTLE TO START"
+            },
+            {
+              "time": "6:45 AM",
+              "label": "LINE UP & LAST GEAR CHECK"
+            },
+            {
+              "time": "6:50 AM",
+              "label": "NATIONAL ANTHEM"
+            },
+            {
+              "time": "7:00 AM",
+              "label": "HALF MARATHON STARTS"
+            },
+            {
+              "time": "7:11 AM",
+              "label": "SUNRISE"
+            },
+            {
+              "time": "9:45 AM",
+              "label": "AWARDS CEREMONY"
+            }
+          ]
+        }
+      ]
+    },
+    "expo": {
+      "enabled": true,
+      "date": "Friday, August 28, 2026",
+      "locationName": "The Parkman Hotel",
+      "locationAddress": "The race expo and bib pickup are held at The Parkman Hotel, 8314 TN-73, Townsend, TN 37882 — the same location as the 5K start and finish line. Our expo is bag-free, so don't forget to Bring Your Own Bag (reusable bags are also for sale at the merch tent). Bring a photo ID to pick up your bib.",
+      "locationMapUrl": "https://www.google.com/maps/search/?api=1&query=The+Parkman+Hotel+8314+TN-73+Townsend+TN+37882",
+      "locationLat": 35.6749,
+      "locationLng": -83.753,
+      "hours": [
+        {
+          "label": "Race Expo",
+          "time": "12:00 PM – 5:00 PM"
+        },
+        {
+          "label": "Bib Pickup",
+          "time": "12:00 PM – 6:00 PM"
+        },
+        {
+          "label": "Bring",
+          "time": "Photo ID"
+        }
+      ],
+      "notes": [
+        "All 5K and Black Bear Double runners must pick up their bib by 5:00 PM on Friday.",
+        "This is a cup-free event — bring a reusable bottle, hydration pack, or reusable cup.",
+        "Our expo is bag-free — don't forget to Bring Your Own Bag (BYOB)!"
+      ],
+      "infoBlocks": [
+        {
+          "heading": "Bib Pickup Options",
+          "body": "→ At the expo (recommended) — Friday of race weekend, 12:00 PM – 6:00 PM at The Parkman Hotel.\n→ Race morning (please avoid) — Half Marathon only, at the start-line area.\n→ Shipped to your house — $30 fee, available as an add-on until 2 months before the event."
+        },
+        {
+          "heading": "What to Pack",
+          "body": "This is a cup-free race in a humid mountain climate, so a hydration system is required, and temperatures shift between the Friday evening 5K and the early Saturday start.\n\nRequired: a hydration system (reusable bottle, collapsible cup, or hydration pack); your bib, worn on the front of your body and clearly visible.\n\nRecommended: sun protection, personal nutrition, layers as temps shift, and an offline course map on your device."
+        },
+        {
+          "heading": "Race Merchandise",
+          "body": "The official race shirt is picked up at the expo on check-in; the finisher medal is awarded at the finish line. Exclusive race merch — hoodies, tees, water bottles, stickers, hats, and posters — will be available to browse and buy at the expo and near the finish. Leftover merch can be purchased online after the event.",
+          "linkUrl": "https://store.vacationraces.com",
+          "linkLabel": "Shop race merchandise"
+        },
+        {
+          "heading": "Earn Race Credits",
+          "body": "We're looking for fantastic volunteers to join the fun during race weekend! Sign up for a shift to support runners and earn a $50 / $100 race credit toward a future Vacation Races event. We'll reach out before the race to help you choose a shift. Credits vary by role, are transferable, and can be combined.",
+          "linkUrl": "https://www.vacationraces.com",
+          "linkLabel": "Learn about volunteering"
+        }
+      ]
+    },
+    "courseInfo": {
+      "enabled": true,
+      "heading": "Great Smoky 5K",
+      "navLabel": "5K Info",
+      "schedule": [
+        {
+          "time": "12:00–5:00 PM",
+          "label": "RACE EXPO & BIB PICKUP",
+          "note": "Bib pickup closes at 6:00 PM"
+        },
+        {
+          "time": "5:30 PM",
+          "label": "5K RUNNERS PARKED"
+        },
+        {
+          "time": "5:50 PM",
+          "label": "5K RUNNERS LINE UP"
+        },
+        {
+          "time": "6:00 PM",
+          "label": "5K RACE STARTS"
+        },
+        {
+          "time": "7:30 PM",
+          "label": "5K AWARDS CEREMONY"
+        }
+      ],
+      "distances": [
+        {
+          "name": "5K Course",
+          "stats": "3.1 mi · +107 ft · Rolling road loop",
+          "mapUrl": "",
+          "embedUrl": "",
+          "statTiles": [
+            {
+              "value": "3.1",
+              "label": "Miles"
+            },
+            {
+              "value": "+107 ft",
+              "label": "Elevation"
+            },
+            {
+              "value": "1",
+              "label": "Aid Station"
+            },
+            {
+              "value": "6:00 PM",
+              "label": "Friday Start"
+            }
+          ]
+        }
+      ],
+      "aidStations": "",
+      "recoveryFood": "",
+      "strollerPolicy": "",
+      "dogPolicy": "",
+      "infoBlocks": [
+        {
+          "heading": "5K Course Details",
+          "body": "A 3.1-mile road race that runs mostly along the Townsend Historical Trail — relatively flat with gentle, rolling terrain. You'll enjoy views of the surrounding Smoky Mountains along a peaceful, tree-lined path that starts and finishes at The Parkman Hotel. A scenic, approachable route for runners of all levels, with about +107 ft of elevation change."
+        },
+        {
+          "heading": "Bib Pickup & Parking",
+          "body": "The 5K starts at 6:00 PM sharp on Friday. The expo and start line are in the same place, so pick up your bib beginning at 12:00 PM — 5K runners have until 30 minutes before the race to collect their bib. There are three designated parking areas, all a short walk to the start and finish; volunteers will direct you, and lots fill in a set order. Please be parked by 5:30 PM. 5K and Black Bear Double runners must collect their bib at Friday's expo."
+        },
+        {
+          "heading": "Wave Start",
+          "body": "We'll break runners into three starting waves to allow vehicle traffic, so please be patient as it takes a little while to get everyone going. Fastest runners competing for overall awards start in the first wave; the slowest runners and walkers start in the last wave. Everyone else can seed themselves among the pack — just be courteous to the front runners. We stage everyone near the expo and then cross the highway together before the start."
+        },
+        {
+          "heading": "Aid Station",
+          "body": "There will be one aid station on the course near mile 2, with water and Gnarly Hydrate. Like the half marathon, this race is cup-free — bring your own reusable bottle or cup."
+        },
+        {
+          "heading": "Awards",
+          "body": "Finisher medals for everyone who finishes. Stick around for the 5K awards ceremony Friday at 7:30 PM. Place medals go to the top 5 male, female, and non-binary runners overall, plus the top 5 Masters 40+ male and female. The top 5 in each age group also receive a place medal: 11 and younger, 12–14, 15–19, 20–24, 25–29, 30–34, 35–39, 40–44, 45–49, 50–54, 55–59, 60–64, 65–69, 70–74, 75 and older. We do not yet offer non-binary age-group awards."
+        }
+      ]
+    },
+    "raceMorning": {
+      "enabled": true,
+      "navLabel": "Half Marathon Info",
+      "timelineLabel": "Morning Schedule",
+      "parkingOptions": [
+        {
+          "name": "Finish-Area Lots (Park & Ride)",
+          "details": "There is no parking at the start line. Half Marathon runners park in the designated lots near the finish in Townsend — parking opens at 4:30 AM. From there, walk to E Lamar Alexander Parkway to meet the shuttles to the start. To avoid congestion, arrive early: we'll have coffee and hot chocolate waiting at the start line.",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=The+Parkman+Hotel+Townsend+TN",
+          "lat": 35.6749,
+          "lng": -83.753
+        },
+        {
+          "name": "Runner Drop-Off — Heritage High School",
+          "details": "Being dropped off? Head to Heritage High School, 3741 E Lamar Alexander Pkwy, Maryville, TN. Enter the parking area behind the school (best approached via Tuckaleechee Pike) and use the designated drop-off area — quick unloading only, not parking. Drop your runner and exit promptly to keep traffic flowing.",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Heritage+High+School+3741+E+Lamar+Alexander+Pkwy+Maryville+TN",
+          "lat": 35.7136,
+          "lng": -83.8979
+        }
+      ],
+      "shuttleDetails": [
+        {
+          "time": "4:30 AM",
+          "label": "Parking opens & bib pickup begins"
+        },
+        {
+          "time": "4:50 AM",
+          "label": "First shuttle loads"
+        },
+        {
+          "time": "6:00 AM",
+          "label": "Last shuttle to start"
+        },
+        {
+          "time": "6:45 AM",
+          "label": "Line up & last gear check"
+        },
+        {
+          "time": "6:50 AM",
+          "label": "National anthem"
+        },
+        {
+          "time": "7:00 AM",
+          "label": "Half Marathon starts"
+        },
+        {
+          "time": "9:45 AM",
+          "label": "Awards ceremony"
+        }
+      ],
+      "dropOffNote": "Dropping a runner off? Head to Heritage High School (3741 E Lamar Alexander Pkwy, Maryville, TN). Enter the parking area behind the school and drop your runner in the designated drop-off area — the best approach to the back of the school is via Tuckaleechee Pike. Drop-off is for quick unloading only, not for parking. Drop your runner and exit promptly to avoid traffic jams.",
+      "courses": [
+        {
+          "name": "Half Marathon Course",
+          "stats": "13.1 mi · +727 ft · Point-to-point",
+          "mapUrl": "",
+          "embedUrl": "",
+          "statTiles": [
+            {
+              "value": "13.1",
+              "label": "Miles · Point-to-Point"
+            },
+            {
+              "value": "+727 ft",
+              "label": "Uphill Course"
+            },
+            {
+              "value": "5",
+              "label": "Aid Stations"
+            },
+            {
+              "value": "4 hr",
+              "label": "Time Limit"
+            }
+          ]
+        }
+      ],
+      "infoBlocks": [
+        {
+          "heading": "Course Details",
+          "body": "The Great Smoky Mountains Half Marathon is a beautiful point-to-point course along the edge of Great Smoky Mountains National Park, starting near Heritage High School and finishing at The Parkman Hotel in Townsend, TN. Please note: this is an open course, so you'll be sharing the road with local traffic at times, especially on narrow stretches and during busier morning hours. Stay alert, keep to the right when running with traffic, and be courteous to drivers, volunteers, fellow runners, and park visitors. Stepping into active traffic is grounds for disqualification. The course will be well marked and supported — your safety is our top priority!"
+        },
+        {
+          "heading": "Elevation",
+          "body": "This is a gradual uphill course that gains 727 feet over 13.1 miles, with the high point near mile 11. While the profile may look intimidating on paper, the gradual grades, scenic route, and beautiful Smoky Mountain surroundings help ease the burn. Save some legs for the steady climb, then enjoy the ridgeline views the whole way in."
+        },
+        {
+          "heading": "Aid Stations",
+          "body": "We'll have aid stations near miles 3, 5, 7, 9, and 11. All aid stations have bathrooms, water + Gnarly Hydrate, and Honey Stinger energy gels. Miles 5 and 7 will also have oranges and bananas. There will be basic first aid at each aid station, and the EMT will be stationed at mile 9. Because this race is cup-free, bring a reusable bottle or cup to fill up."
+        },
+        {
+          "heading": "Cup-Free Racing",
+          "body": "There are no disposable cups on course. Every aid station has BLUE COOLERS with water and RED COOLERS with Gnarly Hydrate (electrolyte drink), both fitted with the same speed valves — so at each stop you choose water or Gnarly Hydrate. Bring a reusable water bottle, a Nathan reusable cup (an option at registration, given to you at bib pickup), or a hydration pack. It can be humid in the Southern Appalachians — hydrate well! There's water at the finish too, but no cups: use your reusable bottle to refill."
+        },
+        {
+          "heading": "Shuttles",
+          "body": "Shuttles run from the designated parking lots to the start line between 4:50 AM and 6:00 AM. The first shuttle loads at 4:50 AM and the last heads to the start at 6:00 AM. Please note: there are no shuttles back after the race — the finish is in Townsend near where you parked."
+        },
+        {
+          "heading": "Wave Start",
+          "body": "A wave start keeps the course from overcrowding. Anyone hoping to compete for overall awards must start in the Blue wave at the very beginning, within the first 15 minutes of the starting gun. Line up according to your projected finishing pace; walkers should start toward the back."
+        },
+        {
+          "heading": "Starting Waves",
+          "body": "Line up with the wave color on your bib, based on your expected finish time. Running with a friend in another wave? Line up with the slower wave to keep the course clear.\n\nBlue — 1:00–1:55\nGreen — 1:55–2:05\nOrange — 2:05–2:15\nYellow — 2:15–2:25\nLight Blue — 2:25–2:35\nPurple — 2:35–2:45\nRed — 2:45–3:00\nPink — 3:00–3:30\nDark Green — 3:30–4:00"
+        },
+        {
+          "heading": "Timing",
+          "body": "Overall Male, Female, Non-Binary and Masters awards are based on chip time, but competitors must begin in the first wave within 15 minutes of the gun. Any athlete crossing the start line after the first wave will be considered for age-group awards only. Your chip time doesn't officially start until you cross the line, so please give each other space at the start."
+        },
+        {
+          "heading": "Gear Check",
+          "body": "Gear check is available at the start line — the last call for gear check is at 6:45 AM. Fill a gear-check bag with anything you'd like transported to the finish; write your name and bib number on it. Avoid putting valuables or car keys in your bag. Bags will be available for pickup near the finish line."
+        },
+        {
+          "heading": "Pacers",
+          "body": "Pacers will run in 10-minute intervals from a 1:40 pace up to 2:30, plus 2:45, 3:00, and 3:30 pacers. Seed yourself near the time you expect to finish and follow your pacer's sign."
+        },
+        {
+          "heading": "Time Limit",
+          "body": "The half marathon has a 4-hour time limit, which equals about 18 minutes per mile. Walkers are welcome and should keep this pace in mind to finish on time. We ask for understanding and immediate cooperation if we deem it unsafe and need to pull a runner from the course."
+        },
+        {
+          "heading": "Recovery Food Box",
+          "body": "At the finish line we'll have a food box with recovery snacks (think nutri-grain and nature-valley bars), bananas, chocolate milk, water, and Gnarly Hydrate. Please help yourself to one food box, one chocolate milk, and one banana per runner. Use your reusable bottle to refill and help us reduce waste."
+        },
+        {
+          "heading": "Strollers, Wheelchairs & Dogs",
+          "body": "The course is fully paved and is wheelchair and stroller accessible — just be mindful of other participants and stay to the right when possible. Dogs are not allowed on course, as our insurance does not cover them, but they're welcome to cheer you on from the finish line with the rest of your crew."
+        }
+      ]
+    },
+    "spectators": {
+      "enabled": true,
+      "notes": "We welcome spectators to the Great Smoky Mountains Half Marathon! Because much of the course is open to local traffic, spectators are asked to cheer from the start and the finish line rather than along the highway.",
+      "warnings": [
+        "Watch & Cheer — spectators are welcome to watch the start and gather at the finish line to cheer runners across.",
+        "Finish line only — park in an official event lot and meet your runner at the finish. Please do not stand or park along the highway.",
+        "Off the course — to reduce vehicle traffic, spectators are discouraged from driving or stopping along the race route to cheer.",
+        "Park ahead — only park in designated areas. This keeps us compliant with local guidelines and helps us keep putting on this race.",
+        "Runners only — the runner recovery area and its food and recovery supplies are for runners only, and the medical tent is for athletes only. Family members are not allowed inside."
+      ]
+    },
+    "postRace": {
+      "enabled": true,
+      "finishLineInfo": "Cross the line, grab your victory snacks and a refill, and collect your finisher medal — awarded to everyone who finishes. Stick around for the Overall & Masters awards at 9:15 AM and age-group awards at 10:00 AM. Course-record holders receive a free race entry every year their record stands!",
+      "courseRecords": [
+        {
+          "category": "Overall Male",
+          "name": "Glen Burkhardt",
+          "time": "1:09:11",
+          "year": "2019"
+        },
+        {
+          "category": "Overall Female",
+          "name": "Cassidy Heaton",
+          "time": "1:21:37",
+          "year": "2021"
+        },
+        {
+          "category": "Overall Non-Binary",
+          "name": "Marcus Carmicle",
+          "time": "1:52:52",
+          "year": "2024"
+        },
+        {
+          "category": "Masters Male",
+          "name": "Orinthal Striggles",
+          "time": "1:19:54",
+          "year": "2021"
+        },
+        {
+          "category": "Masters Female",
+          "name": "Shanda Warren",
+          "time": "1:31:21",
+          "year": "2019"
+        },
+        {
+          "category": "Masters Non-Binary",
+          "name": "Record open",
+          "time": "N/A",
+          "year": ""
+        }
+      ],
+      "infoSections": [
+        {
+          "heading": "Awards & Age Divisions",
+          "body": "Finisher medals for everyone. Place medals go to the top 5 male, female, and non-binary runners overall and the top 5 Masters 40+ male and female. Place medals also go to the top 3 teams. The top 5 in each age group also receive a place medal: 11 and younger, 12–14, 15–19, 20–24, 25–29, 30–34, 35–39, 40–44, 45–49, 50–54, 55–59, 60–64, 65–69, 70–74, 75 and older. We do not yet offer non-binary age-group awards. Top finishers who miss the ceremony can request to have their place medal shipped."
+        },
+        {
+          "heading": "Race Swag & Shirt Exchange",
+          "body": "The official race shirt is picked up at the expo on check-in, and the finisher medal is awarded at the finish. Exclusive merch is available at the expo and near the finish. If your shirt doesn't fit, we'll have a shirt exchange at the finish line — sizes and quantities may be limited."
+        },
+        {
+          "heading": "Race Photos",
+          "body": "New for 2026, FinisherPix will capture your race memories at each event. Your photos will be available 24–48 hours post-event; a download link is emailed to you when they're ready. Buy a photo pack ahead of race day during registration or directly through FinisherPix. Keep your bib visible on the front of your body so we can identify you.",
+          "links": [
+            {
+              "label": "FinisherPix",
+              "url": "https://www.finisherpix.com"
+            }
+          ]
+        },
+        {
+          "heading": "Live Tracking & Results",
+          "body": "Live tracking is powered by Brooksee's system, so friends and family can follow your race in real time — no phone or watch needed. Brooksee estimates your position between checkpoints from pacing data for accurate updates and predicted finish times. Results are hosted online and are not official until all runners have finished and the event director has reviewed them. Questions about your placement? Email timing@brooksee.com.",
+          "links": [
+            {
+              "label": "Results",
+              "url": "https://www.brooksee.com/vrm/results"
+            }
+          ]
+        },
+        {
+          "heading": "Personalize Your Medal · iTab",
+          "body": "Make it last forever with an iTab — a custom engraved plate with your name and finishing time that clips onto your medal ribbon. Pre-order before race day and it's sent automatically after you finish. Missed the pre-order? Order later for just $15, including postage & packaging.",
+          "links": [
+            {
+              "label": "Order iTab",
+              "url": "https://www.itab.us.com/product/vacation-races/"
+            }
+          ]
+        },
+        {
+          "heading": "Zero Waste",
+          "body": "We're committed to keeping our events sustainable and minimizing our impact on the environment. Here's how you can help us protect the wild places that host our races.\n\nCup-Free Racing: single-use plastic is a huge source of waste, so our races are cup-free. Coolers of water and electrolyte drink are at every aid station and the finish, but cups are not provided. To stay hydrated, bring a reusable water bottle, a reusable collapsible cup (request one when you register), or a refillable hydration pack.\n\nSort Your Waste: you'll see three containers at our events — please sort disposable items into the right one. Green Lid = compostables (banana and orange peels, uneaten food, other organic items). Blue Lid = recyclables (#1–7 plastics, aluminum and steel cans, paper, cardboard, glass — empty containers first). Black Lid = everything else (food wrappers, used gel packets, styrofoam, non-recyclable waste).\n\nLeave No Trace: please do not drop trash or personal items along the course except at designated aid-station bins. Anything else found on course will not be brought to the finish. Help us keep the Smokies pristine — no littering."
+        }
+      ]
+    },
+    "challengeEvents": {
+      "enabled": true,
+      "intro": "Up for an extra challenge? Take on both races in one weekend and earn exclusive finisher swag.",
+      "events": [
+        {
+          "name": "The Black Bear Double",
+          "tagline": "5K + Half Marathon · August 28 – 29, 2026",
+          "description": "Run the 5K on Friday evening and the Half Marathon on Saturday morning — two races within the span of 24 hours. Finishers earn a special Black Bear Double medal plus extra swag. You'll use the same bib for both events.",
+          "totalMileage": "16.2 miles",
+          "statTiles": [
+            {
+              "value": "16.2",
+              "label": "Total Miles"
+            },
+            {
+              "value": "3",
+              "label": "Medals"
+            },
+            {
+              "value": "1",
+              "label": "Bib · Both Races"
+            }
+          ],
+          "dates": "August 28 – 29, 2026",
+          "includes": [
+            "One standard Great Smoky race shirt",
+            "One special Black Bear Double swag item — hat, unisex tee, beach hoodie, or Nalgene bottle",
+            "Two finisher medals — one for each race",
+            "One special Black Bear Double medal"
+          ],
+          "bibPickup": "Check in before the 5K and use this bib for both races. You'll pick up your bib, race shirt, and your chosen Black Bear Double swag item at the race expo on Friday between 12:00 PM and 5:00 PM. During registration you'll choose between a hat, unisex t-shirt, beach hoodie, or Nalgene bottle.",
+          "medals": "You'll receive a finisher medal for each race, plus your special Black Bear Double medal after you complete both. The Double medal will be waiting just outside the runner recovery area — head to the clearly marked table with your bib and a volunteer will hand you the correct medal.",
+          "swag": "Additional items can be purchased at the end of your second race, once all Double participants have received their requested swag item. All Black Bear Double participants receive one bib, used for both races — please keep track of it."
+        }
+      ]
+    },
+    "experiences": {
+      "enabled": true,
+      "lodging": {
+        "partner": "HotelPlanner",
+        "description": "You're officially in for Great Smoky race weekend — now lock in your home base. HotelPlanner is our official lodging partner, offering exclusive runner rates near the Expo, Start, and Finish, plus 24/7 support if plans change. Book early to snag the best rates and make the most of your time in Townsend, TN.",
+        "url": "https://vacationraces.hotelplanner.com"
+      },
+      "activities": [
+        {
+          "name": "Great Smoky Mountains National Park",
+          "description": "America's most-visited national park is right on the doorstep. Some areas now require a paid parking tag — check nps.gov/grsm for trail conditions, planning info, and ranger updates before you go. Leave nothing but footprints.",
+          "url": "https://www.nps.gov/grsm/"
+        },
+        {
+          "name": "Train with Runna",
+          "description": "Personalized training for your next Vacation Races event. Download now and unlock two free weeks with code VACATIONRUNNA.",
+          "discountCode": "VACATIONRUNNA",
+          "url": "https://web.runna.com/en-GB/welcome?utm_source=Vacation%20Races%20New"
+        }
+      ],
+      "hikes": [
+        {
+          "name": "Abrams Falls",
+          "distance": "5.7 mi RT",
+          "elevation": "",
+          "difficulty": "Hard",
+          "url": "https://www.alltrails.com/trail/us/tennessee/abrams-falls-trail"
+        },
+        {
+          "name": "Cades Cove Loop",
+          "distance": "11 mi loop",
+          "elevation": "",
+          "difficulty": "Easy drive",
+          "url": "https://www.alltrails.com/trail/us/tennessee/cades-cove-loop-road"
+        },
+        {
+          "name": "Chimney Tops",
+          "distance": "3.6 mi RT",
+          "elevation": "",
+          "difficulty": "Challenging",
+          "url": "https://www.alltrails.com/trail/us/tennessee/chimney-tops-trail"
+        },
+        {
+          "name": "Laurel Falls",
+          "distance": "2.4 mi RT",
+          "elevation": "",
+          "difficulty": "Easy",
+          "url": "https://www.alltrails.com/trail/us/tennessee/laurel-falls-trail"
+        },
+        {
+          "name": "Clingmans Dome",
+          "distance": "1 mi RT",
+          "elevation": "",
+          "difficulty": "Moderate",
+          "url": "https://www.alltrails.com/trail/us/tennessee/clingmans-dome-observation-tower"
+        },
+        {
+          "name": "Cataract Falls",
+          "distance": "1 mi RT",
+          "elevation": "",
+          "difficulty": "Easy",
+          "url": "https://www.alltrails.com/trail/us/tennessee/cataract-falls-trail"
+        }
+      ],
+      "restaurants": [
+        {
+          "name": "Peaceful Side Social",
+          "description": "Townsend's go-to spot for a relaxed post-adventure hang — cold craft brews, great food, and a sunny patio with mountain views.",
+          "url": "https://www.peacefulsidesocial.com",
+          "icon": "🍺"
+        },
+        {
+          "name": "Towns End Coffee Co.",
+          "description": "A cozy mountain-town coffee stop that feels like a breath of fresh forest air — perfect before or after a morning out on the trails.",
+          "url": "https://www.google.com/search?q=Towns+End+Coffee+Co+Townsend+TN",
+          "icon": "☕"
+        },
+        {
+          "name": "The Townsend \"Y\"",
+          "description": "Where the Little River forks — a favorite local spot to wade, tube, and cool off after race weekend.",
+          "url": "https://www.google.com/maps/search/?api=1&query=Townsend+Y+Little+River+Townsend+TN",
+          "icon": "🏞️"
+        }
+      ],
+      "parkNote": "The race start and finish are in Townsend and do not require a park pass. If you plan to visit Great Smoky Mountains National Park, note that some areas require a parking tag — check nps.gov before you go."
+    },
+    "faqs": {
+      "enabled": true,
+      "items": [
+        {
+          "question": "If I can't pick up my bib on Friday, can I get it race morning?",
+          "answer": "For the Half Marathon only. A bib-pickup area opens near the start line at 4:30 AM race morning, though we recommend picking up at the Friday expo. 5K and Black Bear Double runners must pick up their bib at the expo on Friday."
+        },
+        {
+          "question": "Is there parking at the start line?",
+          "answer": "No. There is no parking at the start line. Half Marathon runners park in the designated lots near the finish (open 4:30 AM) and take the race shuttle to the start between 4:50 and 6:00 AM, or arrange a drop-off at Heritage High School. There are no shuttles back after the race."
+        },
+        {
+          "question": "Why is the race cup-free, and what should I bring?",
+          "answer": "To cut single-use plastic waste, we don't provide cups on course or at the finish. Bring a reusable bottle, a collapsible reusable cup (request one at registration), or a hydration pack. Coolers of water and electrolyte drink are available at every aid station."
+        },
+        {
+          "question": "Are dogs, strollers, or wheelchairs allowed on course?",
+          "answer": "The fully paved course is wheelchair and stroller accessible — just be mindful of others and stay to the right. We love dogs, but they aren't allowed on course; they're welcome to cheer you on from the finish line."
+        },
+        {
+          "question": "How do I compete for an overall or Masters award?",
+          "answer": "Overall and Masters awards are based on chip time, but you must start in the Blue wave within the first 15 minutes of the starting gun. Anyone crossing the start after the first wave will be considered for age-group awards only."
+        },
+        {
+          "question": "Can someone else pick up my race packet?",
+          "answer": "Yes, as long as they have a photo of your ID."
+        },
+        {
+          "question": "If my race shirt doesn't fit, can I exchange it?",
+          "answer": "Yes, but not until after the race. We pre-order shirts based on registration sizing, so to ensure everyone gets their requested size, exchanges happen post-race at the finish line — sizes and quantities may be limited."
+        },
+        {
+          "question": "Do I need a National Park pass to run?",
+          "answer": "No — the race start and finish are in Townsend and do not require a park pass. If you plan to visit Great Smoky Mountains National Park before or after the race, check nps.gov, as some areas require a parking tag."
+        }
+      ]
+    }
+  }
+}

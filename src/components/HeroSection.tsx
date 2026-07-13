@@ -98,7 +98,7 @@ function HeroTrailhead({ event }: { event: EventData }) {
   return (
     <header
       className="relative flex flex-col justify-end overflow-hidden min-h-[78vh] md:min-h-[82vh]"
-      style={{ background: 'radial-gradient(125% 95% at 72% 8%,#3c5a45 0%,#264533 44%,#1a2f23 100%)' }}
+      style={{ background: 'var(--tl-hero-grad)' }}
     >
       {event.heroImage && (
         <div className="absolute inset-0">

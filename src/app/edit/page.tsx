@@ -20,6 +20,7 @@ import PartnersSection from '@/components/PartnersSection'
 // Guides VR can edit. Y11 scaffolds new guides; add the slug + name here.
 const GUIDES = [
   { slug: 'rocky-mountain', name: 'Rocky Mountain' },
+  { slug: 'great-smoky', name: 'Great Smoky' },
   { slug: 'grand-teton', name: 'Grand Teton' },
 ]
 
@@ -153,7 +154,7 @@ export default function EditPage() {
 
       <FormatToolbar />
       <EditProvider data={data} editing onChange={next => { setData(next); setDirty(true) }}>
-        <div data-theme={theme}>
+        <div data-theme={theme} data-brand={data.brand || undefined}>
         <HeroSection event={data} theme={theme} />
         {data.sections.welcome && <WelcomeSection data={data.sections.welcome} basePath="sections.welcome" theme={theme} />}
         {data.sections.schedule && <ScheduleSection data={data.sections.schedule} eventSlug={slug} basePath="sections.schedule" theme={theme} />}

@@ -131,7 +131,7 @@ function ChallengeEventsTrailhead({ data, basePath, editing }: { data: Challenge
           return (
             <div key={i} className="mb-12 last:mb-0">
               <div className="grid gap-6 md:grid-cols-[1.3fr_1fr] items-stretch">
-                <div className="border border-vr-cream/20 rounded-lg p-9" style={{ background: 'linear-gradient(140deg,#264533,#1a2f23)' }}>
+                <div className="border border-vr-cream/20 rounded-lg p-9" style={{ background: 'var(--tl-challenge-grad)' }}>
                   <div className="flex items-start gap-2">
                     <h3 className="font-display uppercase text-vr-cream leading-none m-0 flex-1" style={{ fontSize: 'clamp(30px,4vw,46px)' }}>
                       <EditableText as="span" value={evt.name} path={`${ep}.name`} />

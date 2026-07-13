@@ -137,7 +137,7 @@ function PhotoBand({ title }: { title: string }) {
     <div className="tl-photoband relative bg-vr-night px-6 md:px-12 py-16 md:py-[74px] text-center overflow-hidden border-y border-vr-cream/10">
       <div
         className="absolute inset-0 opacity-50 pointer-events-none"
-        style={{ background: 'repeating-linear-gradient(135deg,#22402f,#22402f 16px,#1e3a2a 16px,#1e3a2a 32px)' }}
+        style={{ background: 'var(--tl-band-stripe)' }}
       />
       <h2 className="relative font-display uppercase tracking-[0.02em] text-vr-cream m-0" style={{ fontSize: 'clamp(34px,5vw,64px)' }}>
         {title}
@@ -169,7 +169,7 @@ export default async function EventPage({ params }: { params: { slug: string } }
   const isTrail = theme === 'trailhead'
 
   return (
-    <div data-theme={theme}>
+    <div data-theme={theme} data-brand={event.brand || undefined}>
       {/* Trailhead: nav sits above the hero. Classic: hero first, nav below. */}
       {isTrail && <StickyNav items={navItems} theme={theme} />}
       <HeroSection event={event} theme={theme} />

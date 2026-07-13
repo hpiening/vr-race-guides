@@ -90,12 +90,74 @@
   --vr-offwhite:  #FAF7F2;
   --vr-mid:       #6B7068;
 
+  /* Channel triples consumed by the Tailwind `rgb(var(--x-rgb) / <alpha>)`
+     colors. Defaults MUST equal the hex values above so all existing guides
+     render unchanged. A per-event `[data-brand='…']` scope overrides these. */
+  --vr-forest-rgb:    49 56 50;    /* #313832 */
+  --vr-deep-rgb:      38 69 51;    /* #264533 */
+  --vr-cream-rgb:     243 226 204; /* #f3e2cc */
+  --vr-earth-rgb:     117 99 86;   /* #756356 */
+  --vr-sky-rgb:       123 173 172; /* #7BADAC */
+  --vr-sandstone-rgb: 139 68 17;   /* #8B4411 */
+  --vr-floral-rgb:    218 129 101; /* #da8165 */
+  --vr-white-rgb:     255 255 255; /* #FFFFFF */
+  --vr-offwhite-rgb:  250 247 242; /* #FAF7F2 */
+  --vr-mid-rgb:       107 112 104; /* #6B7068 */
+  --vr-pine-rgb:      0 63 45;     /* #003F2D — Trailhead nav */
+  --vr-night-rgb:     26 47 35;    /* #1a2f23 — Trailhead deepest */
+  --vr-line-rgb:      216 201 179; /* #d8c9b3 — Trailhead hairline */
+
+  /* Trailhead decorative gradients/hatches (themeable per event). Defaults =
+     Rocky Mountain green; overridden under a brand scope below. */
+  --tl-hero-grad:      radial-gradient(125% 95% at 72% 8%,#3c5a45 0%,#264533 44%,#1a2f23 100%);
+  --tl-band-stripe:    repeating-linear-gradient(135deg,#22402f,#22402f 16px,#1e3a2a 16px,#1e3a2a 32px);
+  --tl-hatch-dark:     repeating-linear-gradient(135deg,#2c4d3a,#2c4d3a 14px,#284635 14px,#284635 28px);
+  --tl-challenge-grad: linear-gradient(140deg,#264533,#1a2f23);
+
   --font-display:  'Scale Condensed', 'Oswald', sans-serif;
   --font-heading:  'Scale', 'Arial Black', sans-serif;
   --font-label:    'Scale Medium', 'Arial', sans-serif;
   --font-body:     'Forma DJR Text', 'DM Sans', sans-serif;
   --font-micro:    'Forma DJR Micro', 'DM Sans', sans-serif;
   --font-accent:   'Fraunces 72pt', 'Georgia', serif;
+}
+
+/* ─── Great Smoky brand (navy / cornflower-blue / gold) ──────────
+   Re-themes the Trailhead engine per event. Applied via `data-brand="smoky"`
+   on the guide wrapper (set from EventData.brand). Only the color CHANNELS and
+   the decorative gradients change — the layout/components are identical to
+   Rocky Mountain. Dark-token role map (green → navy):
+     vr-night  #1a2f23 → #0E2033  deepest (bands, footer, 5K, challenge)
+     vr-deep   #264533 → #16324D  mid navy (expo, spectators, course, headers)
+     vr-forest #313832 → #1C2A3A  panel/ink (schedule/FAQ bg + body ink on light)
+     vr-pine   #003F2D → #0B1B2C  sticky nav
+     vr-sky    #7BADAC → #6E9BD1  accent blue (eyebrows, rules, stats, links)
+     vr-floral #da8165 → #6E9BD1  (no orange in this brand → accent blue)
+   Light tokens (cream/paper/white/line) are essentially the same values. */
+[data-brand='smoky'] {
+  --vr-night-rgb:     14 32 51;    /* #0E2033 */
+  --vr-deep-rgb:      22 50 77;    /* #16324D */
+  --vr-forest-rgb:    28 42 58;    /* #1C2A3A */
+  --vr-pine-rgb:      11 27 44;    /* #0B1B2C */
+  --vr-sky-rgb:       110 155 209; /* #6E9BD1 */
+  --vr-floral-rgb:    110 155 209; /* #6E9BD1 */
+  --vr-sandstone-rgb: 76 127 184;  /* #4C7FB8 (link hover) */
+  --vr-earth-rgb:     90 107 126;  /* muted navy-grey */
+  --vr-mid-rgb:       107 118 131; /* muted body grey (navy-cast) */
+  --vr-cream-rgb:     244 226 204; /* #F4E2CC */
+  --vr-offwhite-rgb:  250 247 242; /* #FAF7F2 */
+  --vr-line-rgb:      216 201 179; /* #d8c9b3 */
+
+  /* Keep the hex vars in sync for the few inline `var(--vr-*)` color usages. */
+  --vr-forest: #1C2A3A;
+  --vr-sky:    #6E9BD1;
+  --vr-floral: #6E9BD1;
+  --vr-cream:  #F4E2CC;
+
+  --tl-hero-grad:      radial-gradient(125% 95% at 72% 8%,#35597F 0%,#16324D 44%,#0E2033 100%);
+  --tl-band-stripe:    repeating-linear-gradient(135deg,#16324D,#16324D 16px,#0E2033 16px,#0E2033 32px);
+  --tl-hatch-dark:     repeating-linear-gradient(135deg,#234B6E,#234B6E 14px,#1E4062 14px,#1E4062 28px);
+  --tl-challenge-grad: linear-gradient(140deg,#16324D,#0E2033);
 }
 
 /* ─── Base ───────────────────────────────────────────────────── */

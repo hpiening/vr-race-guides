@@ -8,20 +8,26 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      // Colors are wired to CSS variables (channel triples) so a guide can be
+      // re-themed per event via a `[data-brand='…']` scope in globals.css
+      // WITHOUT touching any component. Defaults (in :root) equal the original
+      // hex values, so existing guides (Rocky Mountain, Grand Teton) render
+      // byte-identical. The `<alpha-value>` placeholder keeps `/opacity`
+      // modifiers (e.g. `text-vr-cream/70`) working.
       colors: {
-        'vr-forest':     '#313832',
-        'vr-deep':       '#264533',
-        'vr-cream':      '#f3e2cc',
-        'vr-earth':      '#756356',
-        'vr-sky':        '#7BADAC',
-        'vr-sandstone':  '#8B4411',
-        'vr-floral':     '#da8165',
-        'vr-white':      '#FFFFFF',
-        'vr-offwhite':   '#FAF7F2',
-        'vr-mid':        '#6B7068',
-        'vr-pine':       '#003F2D',  // Trailhead: deep nav green
-        'vr-night':      '#1a2f23',  // Trailhead: deepest green (photo bands, footer)
-        'vr-line':       '#d8c9b3',  // Trailhead: hairline border on light cards
+        'vr-forest':     'rgb(var(--vr-forest-rgb) / <alpha-value>)',
+        'vr-deep':       'rgb(var(--vr-deep-rgb) / <alpha-value>)',
+        'vr-cream':      'rgb(var(--vr-cream-rgb) / <alpha-value>)',
+        'vr-earth':      'rgb(var(--vr-earth-rgb) / <alpha-value>)',
+        'vr-sky':        'rgb(var(--vr-sky-rgb) / <alpha-value>)',
+        'vr-sandstone':  'rgb(var(--vr-sandstone-rgb) / <alpha-value>)',
+        'vr-floral':     'rgb(var(--vr-floral-rgb) / <alpha-value>)',
+        'vr-white':      'rgb(var(--vr-white-rgb) / <alpha-value>)',
+        'vr-offwhite':   'rgb(var(--vr-offwhite-rgb) / <alpha-value>)',
+        'vr-mid':        'rgb(var(--vr-mid-rgb) / <alpha-value>)',
+        'vr-pine':       'rgb(var(--vr-pine-rgb) / <alpha-value>)',  // Trailhead: nav bar
+        'vr-night':      'rgb(var(--vr-night-rgb) / <alpha-value>)', // Trailhead: deepest (bands, footer)
+        'vr-line':       'rgb(var(--vr-line-rgb) / <alpha-value>)',  // Trailhead: hairline on light cards
       },
       fontFamily: {
         'scale-condensed': ['Scale Condensed', 'Oswald', 'sans-serif'],

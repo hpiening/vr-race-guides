@@ -123,6 +123,14 @@ export interface EventData {
    * accentColor / heroBgColor) — not inline-editable content.
    */
   theme?: 'classic' | 'trailhead'
+  /**
+   * Optional per-event brand palette. Sets `data-brand` on the guide wrapper,
+   * which a `[data-brand='…']` scope in globals.css uses to re-theme the
+   * Trailhead engine's colors (e.g. 'smoky' = navy/blue/gold). Absent = the
+   * default Trailhead palette (Rocky Mountain green). Locked-by-design, not
+   * inline-editable.
+   */
+  brand?: string
   name: string
   tagline: string
   dates: string

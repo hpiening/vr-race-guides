@@ -98,7 +98,7 @@ export function PhotoFrame({
     )
   }
   const hatch = dark
-    ? 'repeating-linear-gradient(135deg,#2c4d3a,#2c4d3a 14px,#284635 14px,#284635 28px)'
+    ? 'var(--tl-hatch-dark)'
     : 'repeating-linear-gradient(135deg,#ece0cd,#ece0cd 12px,#e4d5be 12px,#e4d5be 24px)'
   return (
     <div className={`tl-photoph flex items-center justify-center ${className}`} style={{ aspectRatio: ratio, background: hatch }}>
