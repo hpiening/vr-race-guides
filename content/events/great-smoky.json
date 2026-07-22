@@ -230,8 +230,8 @@
         {
           "name": "5K Course",
           "stats": "3.1 mi · +107 ft · Rolling road loop",
-          "mapUrl": "",
-          "embedUrl": "",
+          "mapUrl": "https://ridewithgps.com/routes/51394068?_ga=2.112835268.1311739219.1784564163-746449431.1774446451",
+          "embedUrl": "https://ridewithgps.com/embeds?type=route&id=51394068&metricUnits=true&sampleGraph=true",
           "statTiles": [
             {
               "value": "3.1",
