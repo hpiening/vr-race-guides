@@ -75,24 +75,33 @@
           "items": [
             {
               "time": "12:00 PM",
-              "label": "RACE EXPO OPEN"
+              "label": "RACE EXPO & BIB PICKUP OPEN",
+              "note": "*We cannot accommodate runners before 12:00 pm\nBYOB: Our expo is bag-free, so don’t forget to Bring Your Own Bag!"
             },
             {
-              "time": "12:00–6:00 PM",
-              "label": "BIB PICKUP",
+              "time": "5:00 PM",
+              "label": "RACE EXPO CLOSES",
               "note": "5K and Black Bear Double runners must pick up by 5:00 PM"
             },
             {
               "time": "5:30 PM",
-              "label": "5K RUNNERS PARKED"
+              "label": "ALL 5K RUNNERS MUST BE PARKED"
+            },
+            {
+              "time": "5:40 PM",
+              "label": "5K RUNNERS WALK TO START LINE"
             },
             {
               "time": "5:50 PM",
-              "label": "5K RUNNERS LINE UP"
+              "label": "5K RUNNERS LINE UP AT START"
             },
             {
               "time": "6:00 PM",
               "label": "5K RACE STARTS"
+            },
+            {
+              "time": "6:00 PM",
+              "label": "BIB PICKUP CLOSES"
             },
             {
               "time": "7:30 PM",
