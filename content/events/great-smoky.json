@@ -334,8 +334,8 @@
         {
           "name": "Half Marathon Course",
           "stats": "13.1 mi · +727 ft · Point-to-point",
-          "mapUrl": "",
-          "embedUrl": "",
+          "mapUrl": "https://ridewithgps.com/routes/46375152?_ga=2.187871336.1311739219.1784564163-746449431.1774446451",
+          "embedUrl": "https://ridewithgps.com/embeds?type=route&id=46375152&metricUnits=true&sampleGraph=true",
           "statTiles": [
             {
               "value": "13.1",
