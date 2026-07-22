@@ -104,7 +104,7 @@
               "label": "BIB PICKUP CLOSES"
             },
             {
-              "time": "7:30 PM",
+              "time": "7:00 PM",
               "label": "5K AWARDS CEREMONY"
             }
           ]
@@ -154,7 +154,7 @@
       "enabled": true,
       "date": "Friday, August 28, 2026",
       "locationName": "The Parkman Hotel",
-      "locationAddress": "The race expo and bib pickup are held at The Parkman Hotel, 8314 TN-73, Townsend, TN 37882 — the same location as the 5K start and finish line. Our expo is bag-free, so don't forget to Bring Your Own Bag (reusable bags are also for sale at the merch tent). Bring a photo ID to pick up your bib.",
+      "locationAddress": "The race expo and bib pickup are held at The Parkman Hotel, 8314 TN-73, Townsend, TN 37882 — the same location as the 5K and half marathon finish lines. Our expo is bag-free, so don't forget to Bring Your Own Bag (reusable bags are also for sale at the merch tent). Bring a photo ID to pick up your bib.",
       "locationMapUrl": "https://www.google.com/maps/search/?api=1&query=The+Parkman+Hotel+8314+TN-73+Townsend+TN+37882",
       "locationLat": 35.6749,
       "locationLng": -83.753,
@@ -223,7 +223,7 @@
           "label": "5K RACE STARTS"
         },
         {
-          "time": "7:30 PM",
+          "time": "7:00 PM",
           "label": "5K AWARDS CEREMONY"
         }
       ],
@@ -268,7 +268,7 @@
         },
         {
           "heading": "Wave Start",
-          "body": "We'll break runners into three starting waves to allow vehicle traffic, so please be patient as it takes a little while to get everyone going. Fastest runners competing for overall awards start in the first wave; the slowest runners and walkers start in the last wave. Everyone else can seed themselves among the pack — just be courteous to the front runners. We stage everyone near the expo and then cross the highway together before the start."
+          "body": "We'll break runners into three starting waves in order to avoid major vehicle traffic congestion at an intersection in town; so, please be patient as it takes a little while to get everyone going. Fastest runners competing for overall awards start in the first wave; the slowest runners and walkers start in the last wave. Everyone else can seed themselves among the pack — just be courteous to the front runners. We stage everyone near the expo and then cross the highway together before the start."
         },
         {
           "heading": "Aid Station",
@@ -287,7 +287,7 @@
       "parkingOptions": [
         {
           "name": "Finish-Area Lots (Park & Ride)",
-          "details": "There is no parking at the start line. Half Marathon runners park in the designated lots near the finish in Townsend — parking opens at 4:30 AM. From there, walk to E Lamar Alexander Parkway to meet the shuttles to the start. To avoid congestion, arrive early: we'll have coffee and hot chocolate waiting at the start line.",
+          "details": "There is no parking at the start line. Half Marathon runners park in the designated lots near the finish in Townsend — parking opens at 4:30 AM. From there, walk to E Lamar Alexander Parkway to meet the shuttles to the start. To avoid congestion, arrive early; we'll have coffee and hot chocolate waiting at the start line.",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=The+Parkman+Hotel+Townsend+TN",
           "lat": 35.6749,
           "lng": -83.753
