@@ -546,7 +546,8 @@
       "lodging": {
         "partner": "HotelPlanner",
         "description": "You're officially in for Great Smoky race weekend — now lock in your home base. HotelPlanner is our official lodging partner, offering exclusive runner rates near the Expo, Start, and Finish, plus 24/7 support if plans change. Book early to snag the best rates and make the most of your time in Townsend, TN.",
-        "url": "https://vacationraces.hotelplanner.com"
+        "url": "https://vacationraces.hotelplanner.com",
+        "imageUrl": "/images/uploads/1784734989085-30a5be70567ff7729c75ead74e1f7981c2d48de2.jpg"
       },
       "activities": [
         {
