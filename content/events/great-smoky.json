@@ -470,8 +470,12 @@
           "body": "New for 2026, FinisherPix will capture your race memories at each event. Your photos will be available 24–48 hours post-event; a download link is emailed to you when they're ready. Buy a photo pack ahead of race day during registration or directly through FinisherPix. Keep your bib visible on the front of your body so we can identify you.",
           "links": [
             {
-              "label": "FinisherPix",
-              "url": "https://www.finisherpix.com"
+              "label": "5K Photos",
+              "url": "http://finisherpix.com/en/event/10720"
+            },
+            {
+              "label": "Half Marathon Photos",
+              "url": "http://finisherpix.com/en/event/10722"
             }
           ]
         },
