@@ -417,7 +417,7 @@
     },
     "postRace": {
       "enabled": true,
-      "finishLineInfo": "Cross the line, grab your victory snacks and a refill, and collect your finisher medal — awarded to everyone who finishes. Stick around for the Overall & Masters awards at 9:15 AM and age-group awards at 10:00 AM. Course-record holders receive a free race entry every year their record stands!",
+      "finishLineInfo": "Cross the line, grab your victory snacks, and collect your finisher medal — awarded to everyone who finishes. Stick around for the Overall & Masters awards at 9:15 AM and age-group awards at 10:00 AM. Course-record holders receive a free race entry every year their record stands!",
       "courseRecords": [
         {
           "category": "Overall Male",
