@@ -565,25 +565,25 @@
       "hikes": [
         {
           "name": "Abrams Falls",
-          "distance": "5.7 mi RT",
+          "distance": "5.1 mi RT",
           "elevation": "",
-          "difficulty": "Hard",
+          "difficulty": "Moderate",
           "url": "https://www.alltrails.com/trail/us/tennessee/abrams-falls-trail",
           "imageUrl": "/images/uploads/1784815584311-screenshot-2026-07-23-at-8.05.21-am.png"
         },
         {
           "name": "Cades Cove Loop",
-          "distance": "11 mi loop",
+          "distance": "10.5 mi loop",
           "elevation": "",
-          "difficulty": "Easy drive",
+          "difficulty": "Easy ",
           "url": "https://www.alltrails.com/trail/us/tennessee/cades-cove-loop-road",
           "imageUrl": "/images/uploads/1784815579617-screenshot-2026-07-23-at-8.05.44-am.png"
         },
         {
           "name": "Chimney Tops",
-          "distance": "3.6 mi RT",
+          "distance": "3.7 mi RT",
           "elevation": "",
-          "difficulty": "Challenging",
+          "difficulty": "Hard",
           "url": "https://www.alltrails.com/trail/us/tennessee/chimney-tops-trail",
           "imageUrl": "/images/uploads/1784815575885-screenshot-2026-07-23-at-8.06.02-am.png"
         },
