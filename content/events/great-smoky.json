@@ -41,18 +41,53 @@
         "url": "https://dipalready.com/"
       },
       {
+        "name": "Make It Personal",
+        "url": "https://www.itab.us.com/product/vacation-races/",
+        "logoUrl": "/images/uploads/1784816609917-full-stacked-horizontal-logo-black-1-.svg"
+      },
+      {
+        "name": "Neuma",
+        "logoUrl": "/images/uploads/1784816834457-neuma-poweredby-lockup1-blue.png",
+        "url": "https://www.neuma.health/"
+      },
+      {
         "name": "Honey Stinger",
         "logoUrl": "/images/uploads/1783445311591-hs-logosheet-rgb-black.png",
         "url": "https://honeystinger.com"
       },
       {
-        "name": "Brooksee Timing",
-        "url": "https://www.brooksee.com"
+        "name": "That's It",
+        "logoUrl": "/images/uploads/1784816876193-tin-primary-logo-full-color.jpg",
+        "url": "https://www.thatsitfruit.com/"
       },
       {
-        "name": "Make It Personal",
-        "url": "https://www.itab.us.com/product/vacation-races/",
-        "logoUrl": "/images/uploads/1784816609917-full-stacked-horizontal-logo-black-1-.svg"
+        "name": "Zico",
+        "logoUrl": "/images/uploads/1784817131241-zico-logo-deep-green-1-3-.png",
+        "url": "https://zico.com/"
+      },
+      {
+        "name": "Runseek",
+        "logoUrl": "/images/uploads/1784817127040-runseeklogo-1-.png",
+        "url": "https://www.runseekadventures.com/"
+      },
+      {
+        "name": "Siete",
+        "logoUrl": "/images/uploads/1784817123509-siete-logo-1-.png",
+        "url": "https://sietefoods.com/"
+      },
+      {
+        "name": "KRF",
+        "logoUrl": "/images/uploads/1784817137679-katesrealfood-logos-6-1-.png",
+        "url": "https://katesrealfood.com/"
+      },
+      {
+        "name": "Bobos",
+        "logoUrl": "/images/uploads/1784816691761-bobos-logo-wordmark-1-.png",
+        "url": "https://eatbobos.com/"
+      },
+      {
+        "name": "Brooksee Timing",
+        "url": "https://www.brooksee.com"
       },
       {
         "name": "Wander Project",
@@ -63,11 +98,6 @@
         "name": "FinisherPix",
         "logoUrl": "/images/uploads/1783459451886-unknown-1.png",
         "url": "https://www.finisherpix.com"
-      },
-      {
-        "name": "Bobos",
-        "logoUrl": "/images/uploads/1784816691761-bobos-logo-wordmark-1-.png",
-        "url": ""
       }
     ]
   },
