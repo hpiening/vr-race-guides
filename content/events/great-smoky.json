@@ -21,6 +21,26 @@
     "enabled": true,
     "items": [
       {
+        "name": "Hotel Planner",
+        "logoUrl": "/images/uploads/1783459296194-unknown.jpeg",
+        "url": "https://vacationraces.hotelplanner.com"
+      },
+      {
+        "name": "Gruns",
+        "logoUrl": "/images/uploads/1784816680715-gruns-yellow-2-.png",
+        "url": "https://gruns.co/?srsltid=AfmBOopGv6pHuL4yEgFpM0A6BVnp_lYSpE9zYwYfK9rxltfkDdtHBbRh&_ga=2.176706661.1311739219.1784564163-746449431.1774446451"
+      },
+      {
+        "name": "Runna",
+        "logoUrl": "/images/uploads/1783446020684-runna-by-strava-black-.png",
+        "url": "https://web.runna.com/en-GB/welcome?redirectUrl=https%3A%2F%2Fweb.runna.com%2Fredeem%3Fcode%3DVACATIONRUNNA"
+      },
+      {
+        "name": "Dip",
+        "logoUrl": "/images/uploads/1784816674902-logo-dip-tri-color-1-.png",
+        "url": "https://dipalready.com/"
+      },
+      {
         "name": "Honey Stinger",
         "logoUrl": "/images/uploads/1783445311591-hs-logosheet-rgb-black.png",
         "url": "https://honeystinger.com"
@@ -30,18 +50,9 @@
         "url": "https://www.brooksee.com"
       },
       {
-        "name": "iTab",
-        "url": "https://www.itab.us.com/product/vacation-races/"
-      },
-      {
-        "name": "Hotel Planner",
-        "logoUrl": "/images/uploads/1783459296194-unknown.jpeg",
-        "url": "https://vacationraces.hotelplanner.com"
-      },
-      {
-        "name": "Runna",
-        "logoUrl": "/images/uploads/1783446020684-runna-by-strava-black-.png",
-        "url": "https://web.runna.com/en-GB/welcome?redirectUrl=https%3A%2F%2Fweb.runna.com%2Fredeem%3Fcode%3DVACATIONRUNNA"
+        "name": "Make It Personal",
+        "url": "https://www.itab.us.com/product/vacation-races/",
+        "logoUrl": "/images/uploads/1784816609917-full-stacked-horizontal-logo-black-1-.svg"
       },
       {
         "name": "Wander Project",
@@ -52,6 +63,11 @@
         "name": "FinisherPix",
         "logoUrl": "/images/uploads/1783459451886-unknown-1.png",
         "url": "https://www.finisherpix.com"
+      },
+      {
+        "name": "Bobos",
+        "logoUrl": "/images/uploads/1784816691761-bobos-logo-wordmark-1-.png",
+        "url": ""
       }
     ]
   },
