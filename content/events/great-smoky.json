@@ -614,17 +614,17 @@
         {
           "name": "[Peaceful Side Social](https://www.peacefulsidesocial.com)",
           "description": "Townsend's go-to spot for a relaxed post-adventure hang — cold craft brews, great food, and a sunny patio with mountain views.",
-          "url": "https://www.peacefulsidesocial.com",
+          "url": "",
           "icon": "🍺"
         },
         {
-          "name": "Towns End Coffee Co.",
+          "name": "[Towns End Coffee Co.](https://www.google.com/search?q=Towns+End+Coffee+Co+Townsend+TN)",
           "description": "A cozy mountain-town coffee stop that feels like a breath of fresh forest air — perfect before or after a morning out on the trails.",
           "url": "https://www.google.com/search?q=Towns+End+Coffee+Co+Townsend+TN",
           "icon": "☕"
         },
         {
-          "name": "The Townsend \"Y\"",
+          "name": "[The Townsend \"Y\"](https://www.google.com/maps/search/?api=1&query=Townsend+Y+Little+River+Townsend+TN)",
           "description": "Where the Little River forks — a favorite local spot to wade, tube, and cool off after race weekend.",
           "url": "https://www.google.com/maps/search/?api=1&query=Townsend+Y+Little+River+Townsend+TN",
           "icon": "🏞️"
