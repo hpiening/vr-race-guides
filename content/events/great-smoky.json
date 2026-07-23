@@ -286,8 +286,8 @@
       "timelineLabel": "Morning Schedule",
       "parkingOptions": [
         {
-          "name": "Finish-Area Lots (Park & Ride)",
-          "details": "There is no parking at the start line. Half Marathon runners park in the designated lots near the finish in Townsend — parking opens at 4:30 AM. From there, walk to E Lamar Alexander Parkway to meet the shuttles to the start. To avoid congestion, arrive early; we'll have coffee and hot chocolate waiting at the start line.",
+          "name": "Parking & Shuttles ",
+          "details": "There is no parking at the start line. Half Marathon runners park in the designated lots near the finish at the Parkman Hotel in Townsend — parking opens at 4:30 AM. From there, walk to E Lamar Alexander Parkway to meet the shuttles to the start. To avoid congestion, arrive early; we'll have coffee and hot chocolate waiting at the start line.",
           "mapUrl": "https://www.google.com/maps/search/?api=1&query=The+Parkman+Hotel+Townsend+TN",
           "lat": 35.6749,
           "lng": -83.753
