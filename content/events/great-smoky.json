@@ -86,13 +86,24 @@
         "url": "https://eatbobos.com/"
       },
       {
-        "name": "Brooksee Timing",
-        "url": "https://www.brooksee.com"
+        "name": "AloeUp",
+        "logoUrl": "/images/uploads/1784817328674-aloe-black.webp",
+        "url": "https://aloeup.com/"
       },
       {
-        "name": "Wander Project",
-        "logoUrl": "/images/uploads/1783459294335-unknown.png",
-        "url": "https://www.wanderproject.org"
+        "name": "Sawyer",
+        "logoUrl": "/images/uploads/1784817354308-sawyer-logo-cyan-1-.png",
+        "url": "https://www.sawyer.com/"
+      },
+      {
+        "name": "Muscle Milk",
+        "logoUrl": "/images/uploads/1784817507089-screenshot-2026-07-23-at-8.38.19-am.png",
+        "url": "https://www.musclemilk.com/"
+      },
+      {
+        "name": "Mount to Coast",
+        "logoUrl": "/images/uploads/1784817463454-brandmark-black-4x-8-1-.png",
+        "url": "https://mounttocoast.com/"
       },
       {
         "name": "FinisherPix",
