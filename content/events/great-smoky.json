@@ -541,6 +541,10 @@
           "body": "Live tracking is powered by Laurel's system, so friends and family can follow your race in real time — no phone or watch needed. Laurel estimates your position between checkpoints from pacing data for accurate updates and predicted finish times. Results are hosted online and are not official until all runners have finished and the event director has reviewed them. \nQuestions about your placement? Email timing@brooksee.com.",
           "links": [
             {
+              "label": "Tracking",
+              "url": "https://track.brooksee.com/track?h=gsm"
+            },
+            {
               "label": "Results",
               "url": "https://www.brooksee.com/gsm/results"
             }
