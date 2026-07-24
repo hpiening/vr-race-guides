@@ -687,15 +687,15 @@
           "icon": "🍺"
         },
         {
-          "name": "[Towns End Coffee Co.](https://www.google.com/search?q=Towns+End+Coffee+Co+Townsend+TN)",
+          "name": "[Towns End Coffee Co.](https://www.townsendcoffee.com/)",
           "description": "A cozy mountain-town coffee stop that feels like a breath of fresh forest air — perfect before or after a morning out on the trails.",
-          "url": "https://www.google.com/search?q=Towns+End+Coffee+Co+Townsend+TN",
+          "url": "",
           "icon": "☕"
         },
         {
           "name": "[The Townsend \"Y\"](https://www.google.com/maps/search/?api=1&query=Townsend+Y+Little+River+Townsend+TN)",
           "description": "Where the Little River forks — a favorite local spot to wade, tube, and cool off after race weekend.",
-          "url": "https://www.google.com/maps/search/?api=1&query=Townsend+Y+Little+River+Townsend+TN",
+          "url": "",
           "icon": "🏞️"
         }
       ],
