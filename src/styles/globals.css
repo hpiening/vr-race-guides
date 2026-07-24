@@ -160,6 +160,46 @@
   --tl-challenge-grad: linear-gradient(140deg,#16324D,#0E2033);
 }
 
+/* ─── Mount Rushmore brand (Black Hills charcoal / granite / sky-blue) ──────
+   Re-themes the Trailhead engine per event. Applied via `data-brand="rushmore"`
+   on the guide wrapper (set from EventData.brand). Only the color CHANNELS and
+   the decorative gradients change — the layout/components are identical to
+   Rocky Mountain. Values lifted from the Mount Rushmore design handoff token
+   table (README) and confirmed against the event shield. Dark-token role map
+   (green → Rushmore):
+     vr-night  #1a2f23 → #1C1F18  deepest (photo bands, footer, challenge)
+     vr-deep   #264533 → #343A2E  mid olive-charcoal (expo, spectators, course, headers)
+     vr-forest #313832 → #2B2E27  charcoal panel/ink (schedule/FAQ bg + body ink on light)
+     vr-pine   #003F2D → #0B1B2C  sticky nav
+     vr-sky    #7BADAC → #5EA4C9  accent sky-blue (eyebrows, rules, stats, links)
+     vr-floral #da8165 → #5EA4C9  (no orange in this brand → accent blue)
+   Light tokens: paper #F5F1E8, cream #EFE7D3, hairline #D8CFBA. */
+[data-brand='rushmore'] {
+  --vr-night-rgb:     28 31 24;    /* #1C1F18 */
+  --vr-deep-rgb:      52 58 46;    /* #343A2E */
+  --vr-forest-rgb:    43 46 39;    /* #2B2E27 */
+  --vr-pine-rgb:      11 27 44;    /* #0B1B2C */
+  --vr-sky-rgb:       94 164 201;  /* #5EA4C9 */
+  --vr-floral-rgb:    94 164 201;  /* #5EA4C9 */
+  --vr-sandstone-rgb: 62 134 171;  /* #3E86AB (link hover) */
+  --vr-earth-rgb:     92 95 84;    /* muted olive-grey */
+  --vr-mid-rgb:       92 95 84;    /* #5C5F54 body grey on light */
+  --vr-cream-rgb:     239 231 211; /* #EFE7D3 */
+  --vr-offwhite-rgb:  245 241 232; /* #F5F1E8 paper */
+  --vr-line-rgb:      216 207 186; /* #D8CFBA */
+
+  /* Keep the hex vars in sync for the few inline `var(--vr-*)` color usages. */
+  --vr-forest: #2B2E27;
+  --vr-sky:    #5EA4C9;
+  --vr-floral: #5EA4C9;
+  --vr-cream:  #EFE7D3;
+
+  --tl-hero-grad:      radial-gradient(125% 95% at 72% 8%,#4C6470 0%,#343A2E 46%,#1C1F18 100%);
+  --tl-band-stripe:    repeating-linear-gradient(135deg,#343A2E,#343A2E 16px,#1C1F18 16px,#1C1F18 32px);
+  --tl-hatch-dark:     repeating-linear-gradient(135deg,#3E4635,#3E4635 14px,#343A2C 14px,#343A2C 28px);
+  --tl-challenge-grad: linear-gradient(140deg,#343A2E,#1C1F18);
+}
+
 /* ─── Base ───────────────────────────────────────────────────── */
 
 *, *::before, *::after {

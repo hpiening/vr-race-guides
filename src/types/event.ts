@@ -2,6 +2,12 @@ export interface ScheduleItem {
   time: string
   label: string
   note?: string
+  /**
+   * Whether this row gets the accent highlight band (Trailhead schedule).
+   * Unset = automatic: any row whose label contains the word "start" is
+   * highlighted. Set true/false in the editor to override per row.
+   */
+  highlight?: boolean
 }
 
 export interface ScheduleDay {
@@ -216,8 +222,14 @@ export interface EventData {
       lodging: { partner: string; description: string; url: string; imageUrl?: string }
       activities: Array<{ name: string; description: string; discountCode?: string; url: string }>
       hikes: Hike[]
+      /** Optional heading for the hikes card grid (Trailhead). Defaults to "Hikes". */
+      hikesHeading?: string
       sights?: Sight[]
       restaurants: Restaurant[]
+      /** Optional heading for the restaurants block (Trailhead). Defaults to "Restaurants in Estes Park". */
+      restaurantsHeading?: string
+      /** Optional intro line under the restaurants heading (Trailhead). */
+      restaurantsIntro?: string
       parkNote?: string
     }
     faqs: {

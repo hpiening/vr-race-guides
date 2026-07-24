@@ -31,6 +31,8 @@ A Next.js 14 static site that renders digital Race Day Guides for Vacation Races
 |---|---|---|
 | `content/events/grand-teton.json` | `grand-teton` | Live, complete |
 | `content/events/rocky-mountain.json` | `rocky-mountain` | Live, complete |
+| `content/events/great-smoky.json` | `great-smoky` | Live (`brand: smoky`) |
+| `content/events/mount-rushmore.json` | `mount-rushmore` | Built 2026-07-24 (`brand: rushmore`), `hidden:true` until race-ready — pending RideWithGPS route + photos |
 
 Events with `"hidden": true` are excluded from the homepage index (`src/app/page.tsx` filters them).
 

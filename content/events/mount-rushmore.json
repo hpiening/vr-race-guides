@@ -1,0 +1,392 @@
+{
+  "slug": "mount-rushmore",
+  "theme": "trailhead",
+  "brand": "rushmore",
+  "hidden": false,
+  "name": "Mount Rushmore Half Marathon",
+  "tagline": "Run in the shadow of giants.",
+  "dates": "Saturday, September 12, 2026 · Keystone, South Dakota",
+  "heroImage": "",
+  "heroImageAlt": "Granite spires and ponderosa pines of the Black Hills near Mount Rushmore, South Dakota",
+  "heroBgColor": "#1C1F18",
+  "accentColor": "#5EA4C9",
+  "favicon": "/images/events/mount-rushmore-favicon.png",
+  "shieldImage": "/images/events/mount-rushmore-shield.png",
+  "logo": "/images/vr-logo.png",
+  "partners": {
+    "enabled": true,
+    "items": [
+      { "name": "Hotel Planner", "logoUrl": "/images/uploads/1783459296194-unknown.jpeg", "url": "https://vacationraces.hotelplanner.com" },
+      { "name": "Honey Stinger", "logoUrl": "/images/uploads/1783445311591-hs-logosheet-rgb-black.png", "url": "https://honeystinger.com" },
+      { "name": "Gnarly Hydrate", "url": "https://www.gnarly.com" },
+      { "name": "Nathan", "url": "https://nathansports.com" },
+      { "name": "Brooksee Timing", "url": "https://www.brooksee.com" },
+      { "name": "Make It Personal", "logoUrl": "/images/uploads/1784816609917-full-stacked-horizontal-logo-black-1-.svg", "url": "https://www.itab.us.com/product/vacation-races/" },
+      { "name": "Runna", "logoUrl": "/images/uploads/1783446020684-runna-by-strava-black-.png", "url": "https://web.runna.com/en-GB/welcome?redirectUrl=https%3A%2F%2Fweb.runna.com%2Fredeem%3Fcode%3DVACATIONRUNNA" },
+      { "name": "Wander Project", "url": "https://www.wanderproject.org" },
+      { "name": "MarathonFoto", "url": "https://www.marathonfoto.com" }
+    ]
+  },
+  "sections": {
+    "welcome": {
+      "enabled": true,
+      "heading": "Welcome to the|Black Hills",
+      "body": "We hope your visit to the Black Hills is a memorable one — and that you make the time to explore Mount Rushmore National Memorial and the surrounding Black Hills National Forest, right on our doorstep. We try to capture the essence of running through a landscape of granite spires and towering ponderosa pines, and we want you to have fun while you're here. Please respect and follow the guidelines of our race, the National Park Service, and other local authorities.",
+      "quote": "There are no words that can tell the hidden spirit of the wilderness.",
+      "quoteAttribution": "Theodore Roosevelt",
+      "closing": "The Black Hills rise dark and forested out of the northern plains — winding granite canyons, ponderosa pines, and the four presidents watching over it all. Running this course feels like a pilgrimage: the road climbs steadily through the pines, Mount Rushmore appears in the distance more than once, and a long downhill carries you home to Keystone. Every visitor is a steward with a responsibility to protect and respect this area for future generations. As a participant, we trust in your support to promote the ecology and sustainability of this unparalleled location.\n\nHappy exploring!\n– The Vacation Races Team",
+      "note": "Note to runners: All of the following information is subject to change. If changes occur due to unforeseen circumstances, adjustments will be made to satisfy local permitting requirements while still delivering a top-tier running experience. We will inform runners of any changes as soon as they are finalized so participants can comfortably prepare for their Vacation Races experience."
+    },
+    "schedule": {
+      "enabled": true,
+      "days": [
+        {
+          "id": "friday",
+          "label": "Friday / Expo & Bib Pickup",
+          "date": "September 11, 2026",
+          "items": [
+            { "time": "12:00–5:00 PM", "label": "RACE EXPO OPEN" },
+            { "time": "12:00–6:00 PM", "label": "BIB PICKUP" },
+            { "time": "12:00–5:00 PM", "label": "MERCH TENT OPEN" }
+          ]
+        },
+        {
+          "id": "saturday",
+          "label": "Saturday / Half Marathon",
+          "date": "September 12, 2026",
+          "items": [
+            { "time": "5:00 AM", "label": "PARKING LOTS OPEN" },
+            { "time": "5:00 AM", "label": "FIRST SHUTTLE & BIB PICKUP" },
+            { "time": "6:00 AM", "label": "LAST SHUTTLE TO START" },
+            { "time": "6:45 AM", "label": "LINE UP & LAST GEAR CHECK" },
+            { "time": "7:00 AM", "label": "HALF MARATHON STARTS" },
+            { "time": "9:15 AM", "label": "HALF MARATHON AWARDS" },
+            { "time": "11:00 AM", "label": "OFF IRON MOUNTAIN RD · MILE 12" },
+            { "time": "11:30 AM", "label": "FINISH LINE CLOSES" }
+          ]
+        }
+      ]
+    },
+    "expo": {
+      "enabled": true,
+      "date": "Friday, September 11, 2026",
+      "locationName": "Baymont by Wyndham Keystone",
+      "locationAddress": "The race expo and bib pickup are held at the Baymont by Wyndham Keystone on Friday afternoon — a short drive from the race-morning shuttle pickup on Swanzey Street. Our expo is bag-free, so don't forget to Bring Your Own Bag (reusable bags are also for sale at the merch tent). Bring a photo ID to pick up your bib. We strongly recommend picking up at the expo — race-morning pickup is available at the start line but should be avoided.",
+      "locationMapUrl": "https://www.google.com/maps/search/?api=1&query=Baymont+by+Wyndham+Keystone+SD",
+      "locationLat": 43.8919,
+      "locationLng": -103.4258,
+      "hours": [
+        { "label": "Race Expo", "time": "12:00 – 5:00 PM" },
+        { "label": "Bib Pickup", "time": "12:00 – 5:00 PM" },
+        { "label": "Bring", "time": "Photo ID" }
+      ],
+      "notes": [
+        "We strongly recommend picking up your bib at the Friday expo — race-morning pickup is available for the Half Marathon at the start line but should be avoided.",
+        "This is a cup-free event — bring a reusable bottle, hydration pack, or reusable cup.",
+        "Our expo is bag-free — don't forget to Bring Your Own Bag (BYOB)!"
+      ],
+      "infoBlocks": [
+        {
+          "heading": "Bib Pickup Options",
+          "body": "→ At the expo (recommended) — Friday of race weekend at the Baymont by Wyndham Keystone\n→ Race morning (please avoid) — Half Marathon only, at the start-line area\n→ Shipped to your house — $30 fee, available as an add-on until 2 months before the event"
+        },
+        {
+          "heading": "What to Pack",
+          "body": "This is a cup-free race in a dry, high-altitude climate (over 4,000 ft), so a hydration system is required. Pack for a cool, early-morning start that warms quickly as the sun comes up over the Black Hills.\n\nRequired\nHydration system (reusable bottle, collapsible cup, or hydration pack). Race bib, worn on the front of your body and clearly visible at all times.\n\nRecommended\nSun protection (hat, sunglasses, sunscreen)\nPersonal nutrition (gels, chews, etc.)\nLayers for changing temperatures before and after your race\nAn offline course map on your device"
+        },
+        {
+          "heading": "Race Merchandise",
+          "body": "The official race shirt is picked up at the expo on check-in; the finisher medal is awarded at the finish line. Exclusive race merch — hoodies, tees, water bottles, stickers, hats, bags, and posters — will be available to browse and buy at the expo and near the finish. The merch tent reopens Saturday at 8:00 AM and closes shortly after the finish line. Leftover merch can be purchased online after the event.",
+          "linkUrl": "https://store.vacationraces.com/collections/mount-rushmore-half-marathon",
+          "linkLabel": "Shop race merchandise"
+        },
+        {
+          "heading": "Earn Race Credits",
+          "body": "We're looking for fantastic volunteers to join the fun during race weekend! Sign up for a shift to support runners and earn a $50 / $100 race credit toward a future Vacation Races event. We'll reach out before the race to help you choose a shift. Credits vary by role, are transferable, and can be combined."
+        }
+      ]
+    },
+    "courseInfo": {
+      "enabled": true,
+      "heading": "Course Info",
+      "navLabel": "Course Info",
+      "distances": [
+        {
+          "name": "Mount Rushmore Half Marathon",
+          "stats": "13.1 mi · +1,850 ft · Point-to-point",
+          "mapUrl": "https://www.vacationraces.com/half-marathons/mount-rushmore/",
+          "embedUrl": "",
+          "statTiles": [
+            { "value": "13.1", "label": "Miles · Point-to-Point" },
+            { "value": "+1,850 ft", "label": "Elevation Gain" },
+            { "value": "5", "label": "Aid Stations" },
+            { "value": "4 hr", "label": "Time Limit" }
+          ]
+        }
+      ],
+      "schedule": [],
+      "aidStations": "",
+      "recoveryFood": "",
+      "strollerPolicy": "",
+      "dogPolicy": "",
+      "infoBlocks": [
+        {
+          "heading": "Course Details",
+          "body": "The Mount Rushmore Half Marathon begins at Ghost Canyon Getaway on a well-packed dirt road for about 3 miles before turning to pavement, finishing at the Borglum Story Museum in the town of Keystone, SD. This is a challenging course with lots of climbing — and gorgeous views of Mount Rushmore and the surrounding Black Hills. Please note: this is a supported but partly open course, so stay alert, keep to the right, and be courteous to drivers, volunteers, and fellow runners. Iron Mountain Road will be closed to through traffic for the race. The course will be well marked and supported — your safety is our top priority!"
+        },
+        {
+          "heading": "Elevation",
+          "body": "The starting elevation is **4,054 ft**, with a total gain of about **1,850 ft**. The first 7.5 miles are almost entirely uphill (with a couple of downhills for relief), and nearly all of the final 5.5 miles is downhill (with a few short climbs to keep you honest). Save some legs for the climb, then let the descent through the pines carry you into Keystone. Remember you're at altitude — pace yourself early."
+        },
+        {
+          "heading": "Aid Stations",
+          "body": "We'll have 5 aid stations near **miles 3, 5, 7, 9, and 11**. All aid stations have bathrooms, water + Gnarly Hydrate, and Honey Stinger energy gels. Miles 5 and 7 will also have oranges and bananas. There will be basic first aid at each aid station, and the EMT will be stationed near the mile 7 aid station. A clothing bin sits at the **first aid station (mile 3)** — dropped layers are transported to the finish after the last runner passes. Because this race is cup-free, bring a reusable bottle or cup to fill up."
+        },
+        {
+          "heading": "Cup-Free Racing",
+          "body": "There are no disposable cups on course. Every aid station has **BLUE COOLERS with water** and **RED COOLERS with Gnarly Hydrate** (electrolyte drink), both fitted with the same speed valves — so at each stop you choose water or Gnarly Hydrate. Bring a reusable water bottle, a Nathan reusable cup (an option at registration, given to you at bib pickup), or a hydration pack. Remember, the Black Hills are a dry climate at over 4,000 ft — hydrate well! There's water at the finish too, but no cups: use your reusable bottle to refill."
+        },
+        {
+          "heading": "Time Limit",
+          "body": "This course has a 4-hour time limit, which equals about 18 minutes per mile. All runners must be off Iron Mountain Road (mile 12) by 11:00 AM, and the finish line closes at 11:30 AM. Walkers are welcome and should keep this pace in mind. We ask for understanding and immediate cooperation if we deem it unsafe and need to pull a runner from the course."
+        },
+        {
+          "heading": "Recovery Food Box",
+          "body": "At the finish line we'll have a food box with recovery snacks (think nutri-grain and nature-valley bars), bananas, chocolate milk, water, and Gnarly Hydrate. Please help yourself to one food box, one chocolate milk, and one banana per runner. Use your reusable bottle to refill and help us reduce waste."
+        },
+        {
+          "heading": "Strollers, Wheelchairs & Dogs",
+          "body": "The course runs on paved roads and packed trail and is stroller and wheelchair friendly — just be mindful of other participants, stay to the right, and take care on the final 5.5-mile downhill. Dogs are not allowed on course, as our insurance does not cover them, but they're welcome to cheer you on from the finish line with the rest of your crew."
+        }
+      ]
+    },
+    "raceMorning": {
+      "enabled": true,
+      "navLabel": "Race Morning",
+      "timelineLabel": "Morning Schedule",
+      "parkingOptions": [
+        {
+          "name": "Shuttle from Keystone (recommended)",
+          "details": "Free runner shuttles load in front of the Ramada Inn on Swanzey Street in Keystone from 5:00 to 6:00 AM. Most Keystone hotels are within walking distance, so leave your car at your hotel and ride to the start. There are no return shuttles for those who take the shuttle in — the finish is right in Keystone.",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ramada+Inn+Swanzey+St+Keystone+SD",
+          "lat": 43.8919,
+          "lng": -103.4258
+        },
+        {
+          "name": "Drive to the Start — Ghost Canyon Getaway",
+          "details": "Prefer to drive? Start-line parking at Ghost Canyon Getaway opens at 5:00 AM. After the race, return shuttles carry runners who parked at the start from the finish back to the start-line parking until 11:45 AM. Note Iron Mountain Road is closed for the race, so drivers must take the long way (via SD-40 West) between the start and Keystone.",
+          "mapUrl": "https://www.google.com/maps/search/?api=1&query=Ghost+Canyon+Getaway+Hermosa+SD",
+          "lat": 43.78,
+          "lng": -103.3
+        }
+      ],
+      "shuttleDetails": [
+        { "time": "5:00 AM", "label": "Parking lots open" },
+        { "time": "5:00 AM", "label": "First shuttle & bib pickup" },
+        { "time": "6:00 AM", "label": "Last shuttle to start" },
+        { "time": "6:45 AM", "label": "Line up & last gear check" },
+        { "time": "7:00 AM", "label": "Half Marathon starts" }
+      ],
+      "dropOffNote": "Dropping a runner off in Keystone? Do so in front of the Comfort Inn & Suites (321 Swanzey St), just east of the Ramada Inn shuttle pickup. Runners can also be dropped at the start-line parking area at Ghost Canyon Getaway — but note Iron Mountain Road will be closed, so drivers must take the long way down to Keystone to reach the finish. Drop-off is for quick unloading only.",
+      "infoBlocks": [
+        {
+          "heading": "Shuttles",
+          "body": "Free shuttles run from Keystone (in front of the Ramada Inn on Swanzey Street) to the start line between **5:00 AM and 6:00 AM**. After the race, return shuttles carry runners who parked at the start from the finish back to the start-line parking until **11:45 AM**."
+        },
+        {
+          "heading": "Wave Start",
+          "body": "A wave start keeps the course from overcrowding. Anyone competing for an overall or Masters award must line up in the first **Blue wave** (these awards are scored on gun time). Otherwise, line up according to your projected finishing pace; walkers should start toward the back to avoid congestion."
+        },
+        {
+          "heading": "Starting Waves",
+          "body": "Line up with the wave color on your bib, based on your expected finish time. Running with a friend in another wave? Line up with the slower wave to keep the course clear.\n\nBlue 1:00–1:55 · Green 1:55–2:05 · Orange 2:05–2:15 · Yellow 2:15–2:25 · Light Blue 2:25–2:35 · Purple 2:35–2:45 · Red 2:45–3:00 · Pink 3:00–3:30 · Dark Green 3:30–4:00"
+        },
+        {
+          "heading": "Timing",
+          "body": "Overall and Masters awards are based on **gun time**, so anyone competing for one must line up in the first Blue wave — even if your bib shows a different wave color. Age-division and team awards are based on **chip time**, so line up with your assigned wave. Your chip time doesn't officially start until you cross the line — please give each other space at the start."
+        },
+        {
+          "heading": "Gear Check",
+          "body": "Gear check is available at the start line — the last call for gear check is at 6:45 AM. Fill a gear-check bag with anything you'd like transported to the finish; write your name and bib number on it. Avoid putting valuables or car keys in your bag. Bags will be available for pickup near the finish line."
+        },
+        {
+          "heading": "Pacers",
+          "body": "Pacers will run in 10-minute intervals from a 1:40 pace up to 2:30, plus 2:45, 3:00, and 3:30 pacers. Seed yourself near the time you expect to finish and follow your pacer's sign."
+        }
+      ]
+    },
+    "spectators": {
+      "enabled": true,
+      "notes": "This is not a spectator-friendly course. Spectators are encouraged to head directly to the finish line after the race begins. Iron Mountain Road will be closed, so you must take the alternate route via SD-40 West to reach Keystone. There are no shuttles for spectators.",
+      "warnings": [
+        "Head to the Finish — after the race starts, drive to Keystone and gather at the Borglum Story finish line to cheer your runner across.",
+        "Watch the Start — if you want to see the start, you'll need to drive there yourself (there are no spectator shuttles), then head down to Keystone for the finish.",
+        "Roads Closed — Iron Mountain Road is closed for the race. From Ghost Canyon, take Box Canyon Rd, Bender Ridge Rd, Battle Creek Rd, then SD-40 West to Keystone.",
+        "Park in Keystone — use public parking near the finish: the lot at Reed & Winter St, the National Presidential Wax Museum, or Keystone Tramway Adventures. Do not park in private lots.",
+        "Runners only — the runner recovery area and its food and recovery supplies are for runners only, and the medical tent is for athletes only. Family members are not allowed inside."
+      ]
+    },
+    "postRace": {
+      "enabled": true,
+      "finishLineInfo": "Cross the line, grab your victory snacks and a refill, and collect your finisher medal — awarded to everyone who finishes. Stick around for the Overall & Masters awards at 9:15 AM and age-group awards at 10:00 AM. Course-record holders receive a free race entry every year their record stands!",
+      "courseRecords": [
+        { "category": "Overall Male", "name": "Phillip Duncan", "time": "1:14:58", "year": "2019" },
+        { "category": "Overall Female", "name": "Allie Oban", "time": "1:33:16", "year": "2019" },
+        { "category": "Overall Non-Binary", "name": "Record open", "time": "N/A", "year": "" },
+        { "category": "Masters Male", "name": "Michael Osterholt", "time": "1:38:04", "year": "2021" },
+        { "category": "Masters Female", "name": "Varinka Esminger", "time": "1:40:52", "year": "2021" },
+        { "category": "Masters Non-Binary", "name": "Record open", "time": "N/A", "year": "" }
+      ],
+      "infoSections": [
+        {
+          "heading": "Awards & Age Divisions",
+          "body": "Finisher medals for everyone. Place medals go to the top 5 male, female, and non-binary runners overall and the top 5 Masters 40+ male and female. Place medals also go to the top 3 teams. The top 5 in each age group also receive a place medal: 11 and younger, 12–14, 15–19, 20–24, 25–29, 30–34, 35–39, 40–44, 45–49, 50–54, 55–59, 60–64, 65–69, 70–74, 75 and older. Overall and Masters awards are based on gun time; age-group awards are based on chip time. We do not yet offer non-binary age-group awards. Top finishers who miss the ceremony can request to have their place medal shipped."
+        },
+        {
+          "heading": "Race Swag & Shirt Exchange",
+          "body": "The official race shirt is picked up at the expo on check-in, and the finisher medal is awarded at the finish. Exclusive merch is available at the expo and near the finish. If your shirt doesn't fit, we'll have a shirt exchange at the finish line — sizes and quantities may be limited."
+        },
+        {
+          "heading": "Race Photos",
+          "body": "Our race photographers capture runners on the course and at the finish, and MarathonFoto provides these photos to runners for free! Photos are usually available the week after the race, and we'll email you when they're ready. Keep your bib visible on the front of your body — bibs worn on legs are easily missed."
+        },
+        {
+          "heading": "Live Tracking & Results",
+          "body": "Live tracking is powered by Brooksee's system, so friends and family can follow your race in real time — no phone or watch needed. Brooksee estimates your position between checkpoints from pacing data for accurate updates and predicted finish times. Results are hosted online and are not official until all runners have finished and the event director has reviewed them. Questions about your placement? Email timing@brooksee.com."
+        },
+        {
+          "heading": "Personalize Your Medal · iTab",
+          "body": "Make it last forever with an iTab — a custom engraved plate with your name and finishing time that clips onto your medal ribbon. Pre-order before race day and it's sent automatically after you finish. Missed the pre-order? Order later for just $15, including postage & packaging.",
+          "links": [
+            { "label": "Order iTab", "url": "https://www.itab.us.com/product/vacation-races/" }
+          ]
+        },
+        {
+          "heading": "Zero Waste",
+          "body": "We're committed to keeping our events sustainable and minimizing our impact on the environment. Here's how you can help us protect the wild places that host our races.\n\nCup-Free Racing: single-use plastic is a huge source of waste, so our races are cup-free. Coolers of water and Gnarly Hydrate are at every aid station and the finish, but cups are not provided. To stay hydrated, bring a reusable water bottle, a reusable collapsible cup (request one when you register), or a refillable hydration pack.\n\nSort Your Waste: you'll see three containers at our events — please sort disposable items into the right one. Green Lid = compostables (banana and orange peels, uneaten food, other organic items). Blue Lid = recyclables (#1–7 plastics, aluminum and steel cans, paper, cardboard, glass — empty containers first). Black Lid = everything else (food wrappers, used gel packets, styrofoam, non-recyclable waste).\n\nLeave No Trace: please do not drop trash or personal items along the course except at designated aid-station bins. Anything else found on course will not be brought to the finish. Help us keep the Black Hills pristine — no littering."
+        }
+      ]
+    },
+    "experiences": {
+      "enabled": true,
+      "lodging": {
+        "partner": "HotelPlanner",
+        "description": "You're officially in for Mount Rushmore race weekend — now lock in your home base. HotelPlanner is our official lodging partner, offering exclusive runner rates near the Expo, Start, and Finish, plus 24/7 support if plans change. Book early to snag the best rates and make the most of your time in Keystone, SD.",
+        "url": "https://vacationraces.hotelplanner.com"
+      },
+      "activities": [
+        {
+          "name": "Train with Runna",
+          "description": "Personalized training for your next Vacation Races event. Download now and unlock two free weeks!",
+          "discountCode": "VACATIONRUNNA",
+          "url": "https://web.runna.com/en-GB/welcome?utm_source=Vacation%20Races%20New"
+        }
+      ],
+      "hikesHeading": "Sights & Adventures",
+      "hikes": [
+        {
+          "name": "Mount Rushmore",
+          "distance": "2 mi loop",
+          "difficulty": "Easy",
+          "elevation": "Walk the Presidential Trail beneath the 60-foot faces you glimpsed from the course — the closest views in the park.",
+          "url": "https://www.nps.gov/moru/"
+        },
+        {
+          "name": "Custer State Park",
+          "distance": "Wildlife loop",
+          "difficulty": "Scenic",
+          "elevation": "Bison herds, pronghorn, and wild burros roam this sprawling park just south of the course.",
+          "url": "https://gfp.sd.gov/parks/detail/custer-state-park/"
+        },
+        {
+          "name": "Needles Highway",
+          "distance": "14 mi",
+          "difficulty": "Scenic drive",
+          "elevation": "A jaw-dropping drive through granite spires and one-lane rock tunnels on SD-87.",
+          "url": "https://www.travelsouthdakota.com/trip-ideas/story/needles-highway-scenic-drive"
+        },
+        {
+          "name": "Sylvan Lake",
+          "distance": "1 mi loop",
+          "difficulty": "Easy",
+          "elevation": "Clear water ringed by granite in Custer State Park — the \"crown jewel\" and an easy post-race stroll.",
+          "url": "https://gfp.sd.gov/parks/detail/custer-state-park/"
+        },
+        {
+          "name": "Crazy Horse Memorial",
+          "distance": "Visit",
+          "difficulty": "Half day",
+          "elevation": "The world's largest mountain carving in progress, honoring the Lakota leader Crazy Horse.",
+          "url": "https://crazyhorsememorial.org/"
+        },
+        {
+          "name": "Badlands National Park",
+          "distance": "90 min drive",
+          "difficulty": "Day trip",
+          "elevation": "Otherworldly striped spires and buttes east of the Black Hills — a stunning day trip.",
+          "url": "https://www.nps.gov/badl/"
+        }
+      ],
+      "restaurantsHeading": "Eat & Drink in Keystone",
+      "restaurantsIntro": "A few local food, coffee, and scenic-drive picks in and around Keystone.",
+      "restaurants": [
+        {
+          "name": "Ruby House Restaurant",
+          "description": "A Keystone landmark on Winter Street — hearty plates and Old West charm a short walk from the finish.",
+          "url": "https://www.google.com/maps/search/?api=1&query=Ruby+House+Restaurant+Keystone+SD",
+          "icon": "🍽️"
+        },
+        {
+          "name": "Grapes & Grinds",
+          "description": "A cozy Winter Street stop for espresso before the drive out, or a glass of local wine to toast the finish.",
+          "url": "https://www.google.com/maps/search/?api=1&query=Grapes+and+Grinds+Keystone+SD",
+          "icon": "☕"
+        },
+        {
+          "name": "Iron Mountain Road",
+          "description": "The SD-16A engineering marvel — pigtail bridges and tunnels that frame Mount Rushmore. Closed race morning; drive it another day.",
+          "url": "https://www.google.com/maps/search/?api=1&query=Iron+Mountain+Road+SD-16A",
+          "icon": "🚗"
+        }
+      ],
+      "parkNote": "The race start and finish are in the Keystone area and do not require a park pass. Mount Rushmore National Memorial has no entrance fee but charges for parking — check nps.gov/moru before you go."
+    },
+    "faqs": {
+      "enabled": true,
+      "items": [
+        {
+          "question": "If I can't pick up my bib Friday, can I get it race morning?",
+          "answer": "We strongly recommend picking up at the Friday expo (Baymont by Wyndham Keystone, 12:00–6:00 PM). If you can't, a bib-pickup area opens at the start line at 5:00 AM on race morning."
+        },
+        {
+          "question": "Is there parking at the start line?",
+          "answer": "Yes — start-line parking at Ghost Canyon Getaway opens at 5:00 AM. We recommend Keystone runners take the free shuttle instead (it loads in front of the Ramada Inn on Swanzey Street, 5:00–6:00 AM). If you drive to the start, return shuttles run from the finish back to start-line parking until 11:45 AM."
+        },
+        {
+          "question": "Why is the race cup-free, and what should I bring?",
+          "answer": "To cut single-use plastic waste, we don't provide cups on course or at the finish. Bring a reusable bottle, a collapsible reusable cup (request one at registration), or a hydration pack. Coolers of water and Gnarly Hydrate are at every aid station — and remember, you're at altitude in a dry climate, so hydrate well."
+        },
+        {
+          "question": "Are dogs, strollers, or wheelchairs allowed on course?",
+          "answer": "The course runs on paved roads and packed trail and is stroller and wheelchair friendly — stay to the right and take care on the final 5.5-mile downhill. We love dogs, but they aren't allowed on course; they're welcome to cheer you on from the finish line."
+        },
+        {
+          "question": "How do I compete for an overall or Masters award?",
+          "answer": "Overall and Masters awards are scored on gun time, so you must line up in the first Blue wave — even if your bib shows a different wave color. Age-division and team awards are based on chip time, so line up with your assigned wave."
+        },
+        {
+          "question": "Can someone else pick up my race packet?",
+          "answer": "Yes, as long as they have a photo of your ID."
+        },
+        {
+          "question": "If my race shirt doesn't fit, can I exchange it?",
+          "answer": "Yes, but not until after the race. We pre-order shirts based on registration sizing, so to ensure everyone gets their requested size, exchanges happen post-race at the finish line — sizes and quantities may be limited."
+        },
+        {
+          "question": "Do I need a National Park pass to run?",
+          "answer": "No — the start and finish are in the Keystone area and don't require a park pass. Mount Rushmore National Memorial has no entrance fee but charges for parking; check nps.gov/moru if you plan to visit before or after the race."
+        }
+      ]
+    }
+  }
+}

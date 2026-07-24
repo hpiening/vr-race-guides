@@ -237,7 +237,7 @@ function ExperiencesTrailhead({ data, basePath, editing }: { data: EventData['se
         {/* Hikes */}
         {(data.hikes.length > 0 || editing) && (
           <>
-            <h3 className={subhead}>Hikes</h3>
+            <h3 className={subhead}>{data.hikesHeading || 'Hikes'}</h3>
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 mb-4">
               {data.hikes.map((hike, i) => {
                 const hp = `${basePath}.hikes.${i}`
@@ -321,9 +321,9 @@ function ExperiencesTrailhead({ data, basePath, editing }: { data: EventData['se
           <>
             <div className="mt-16 mb-3.5">
               <div className="leading-[0.9]"><span className="font-accent text-vr-sky" style={{ fontSize: 'clamp(20px,2.2vw,28px)' }}>Where to eat</span></div>
-              <h2 className="font-display uppercase text-vr-forest leading-[0.9] m-0" style={{ fontSize: 'clamp(34px,4.6vw,60px)' }}>Restaurants in Estes Park</h2>
+              <h2 className="font-display uppercase text-vr-forest leading-[0.9] m-0" style={{ fontSize: 'clamp(34px,4.6vw,60px)' }}>{data.restaurantsHeading || 'Restaurants in Estes Park'}</h2>
             </div>
-            <p className="font-body text-vr-forest/85 leading-[1.6] max-w-[620px] mb-8 text-[17px]">A few of the popular local food and drink spots in and around Estes Park.</p>
+            <p className="font-body text-vr-forest/85 leading-[1.6] max-w-[620px] mb-8 text-[17px]">{data.restaurantsIntro || 'A few of the popular local food and drink spots in and around Estes Park.'}</p>
             <div className="grid gap-5" style={{ gridTemplateColumns: 'repeat(auto-fill,minmax(300px,1fr))' }}>
               {data.restaurants.map((r, i) => {
                 const rp = `${basePath}.restaurants.${i}`

@@ -21,6 +21,7 @@ import PartnersSection from '@/components/PartnersSection'
 const GUIDES = [
   { slug: 'rocky-mountain', name: 'Rocky Mountain' },
   { slug: 'great-smoky', name: 'Great Smoky' },
+  { slug: 'mount-rushmore', name: 'Mount Rushmore' },
   { slug: 'grand-teton', name: 'Grand Teton' },
 ]
 

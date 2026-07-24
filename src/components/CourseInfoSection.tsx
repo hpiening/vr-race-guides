@@ -145,8 +145,13 @@ function CourseInfoTrailhead({ data, basePath, editing }: { data: EventData['sec
           </h2>
         </div>
 
-        {data.distances.map((d, i) => (
-          <div key={i} className="grid gap-6 md:grid-cols-[1.5fr_1fr] items-start mb-10">
+        {data.distances.map((d, i) => {
+          // Only reserve the map column when there's a route embed / image (or
+          // in the editor, so the RideWithGPS paste field is always reachable).
+          const hasMap = !!(d.embedUrl || d.mapImageUrl)
+          return (
+          <div key={i} className={`grid gap-6 items-start mb-10 ${(hasMap || editing) ? 'md:grid-cols-[1.5fr_1fr]' : ''}`}>
+            {(hasMap || editing) && (
             <div className="border border-vr-cream/20 rounded-lg overflow-hidden">
               {d.embedUrl ? (
                 <>
@@ -159,6 +164,7 @@ function CourseInfoTrailhead({ data, basePath, editing }: { data: EventData['sec
               ) : null}
               <RideWithGpsField itemPath={`${basePath}.distances.${i}`} />
             </div>
+            )}
             <div className="flex flex-col gap-4">
               <EditableText as="div" className="font-heading uppercase text-vr-cream text-[20px] tracking-[0.02em]" value={d.name} path={`${basePath}.distances.${i}.name`} />
               {editing ? (
@@ -175,14 +181,15 @@ function CourseInfoTrailhead({ data, basePath, editing }: { data: EventData['sec
                   <AddButton path={`${basePath}.distances.${i}.statTiles`} item={{ value: '', label: '' }} label="Add stat tile" />
                 </div>
               ) : d.statTiles && d.statTiles.length > 0 ? <StatTiles tiles={d.statTiles} /> : <StatChips stats={d.stats} dark />}
-              {!editing && (
+              {!editing && hasMap && (
                 <a href={d.mapUrl} target="_blank" rel="noopener noreferrer" className="self-start font-label text-xs tracking-[0.12em] uppercase text-vr-sky hover:text-vr-cream transition-colors">
                   View full route ↗
                 </a>
               )}
             </div>
           </div>
-        ))}
+          )
+        })}
 
         {(data.schedule && data.schedule.length > 0 || editing) && (
           <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 mb-10">
