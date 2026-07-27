@@ -10,8 +10,11 @@ type Props = { data: EventData['sections']['schedule']; eventSlug: string; baseP
 export default function ScheduleSection({ data, eventSlug, basePath = 'sections.schedule', theme = 'classic' }: Props) {
   const [activeDay, setActiveDay] = useState(data.days[0]?.id ?? '')
   const day = data.days.find(d => d.id === activeDay) ?? data.days[0]
-  const editing = !!useEditOptional()?.editing
+  const ctx = useEditOptional()
+  const editing = !!ctx?.editing
   const dp = `${basePath}.days`
+  const isHighlighted = (item: EventData['sections']['schedule']['days'][number]['items'][number]) =>
+    item.highlight ?? /\bstart/i.test(item.label)
 
   const watermark = (
     <div
@@ -45,16 +48,34 @@ export default function ScheduleSection({ data, eventSlug, basePath = 'sections.
                 </div>
                 <EditableText as="div" className="font-micro text-xs tracking-[0.2em] uppercase text-vr-cream/40 mb-4" value={d.date} path={`${dp}.${di}.date`} />
                 <ol className="space-y-3">
-                  {d.items.map((item, ii) => (
-                    <li key={ii} className="flex gap-4 items-start">
-                      <div className="flex-1">
-                        <EditableText as="div" className="font-label text-xs tracking-[0.2em] uppercase text-vr-floral mb-1" value={item.time} path={`${dp}.${di}.items.${ii}.time`} />
-                        <EditableText as="div" className="font-heading text-base uppercase leading-tight text-vr-cream" value={item.label} path={`${dp}.${di}.items.${ii}.label`} />
-                        <EditableText as="div" className="font-body text-sm text-vr-cream/55 mt-1" value={item.note ?? ''} path={`${dp}.${di}.items.${ii}.note`} />
-                      </div>
-                      <ListControls path={`${dp}.${di}.items`} index={ii} count={d.items.length} />
-                    </li>
-                  ))}
+                  {d.items.map((item, ii) => {
+                    const hl = isHighlighted(item)
+                    return (
+                      <li
+                        key={ii}
+                        className="flex gap-4 items-start rounded px-2 py-1.5"
+                        style={hl ? { background: 'rgba(123,173,172,0.14)' } : undefined}
+                      >
+                        <div className="flex-1">
+                          <EditableText as="div" className="font-label text-xs tracking-[0.2em] uppercase text-vr-floral mb-1" value={item.time} path={`${dp}.${di}.items.${ii}.time`} />
+                          <EditableText as="div" className="font-heading text-base uppercase leading-tight text-vr-cream" value={item.label} path={`${dp}.${di}.items.${ii}.label`} />
+                          <EditableText as="div" className="font-body text-sm text-vr-cream/55 mt-1" value={item.note ?? ''} path={`${dp}.${di}.items.${ii}.note`} />
+                        </div>
+                        <span className="shrink-0 inline-flex items-center gap-0.5 align-middle select-none">
+                          <button
+                            type="button"
+                            onClick={() => ctx?.setValue(`${dp}.${di}.items.${ii}.highlight`, !hl)}
+                            title={hl ? 'Highlighted — click to remove' : 'Not highlighted — click to highlight'}
+                            aria-label="Toggle highlight"
+                            className={`px-1.5 text-sm leading-none ${hl ? 'text-vr-sky opacity-100' : 'text-vr-cream opacity-40 hover:opacity-80'}`}
+                          >
+                            {hl ? '★' : '☆'}
+                          </button>
+                          <ListControls path={`${dp}.${di}.items`} index={ii} count={d.items.length} />
+                        </span>
+                      </li>
+                    )
+                  })}
                 </ol>
                 <AddButton path={`${dp}.${di}.items`} item={{ time: '', label: 'New item' }} label="Add item" />
               </div>
@@ -97,7 +118,7 @@ export default function ScheduleSection({ data, eventSlug, basePath = 'sections.
           {day && (
             <div className="max-w-[580px] mx-auto text-left flex flex-col print:hidden">
               {day.items.map((item, i) => {
-                const highlight = /\bstart/i.test(item.label)
+                const highlight = item.highlight ?? /\bstart/i.test(item.label)
                 return (
                   <div
                     key={i}
