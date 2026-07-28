@@ -798,12 +798,12 @@
     }
   },
   "alert": {
-    "enabled": false,
+    "enabled": true,
     "level": "urgent",
-    "title": "HP TEST UPDATE",
+    "title": "Rocky Runners",
     "updated": "Updated Tuesday 28th July",
-    "message": "This is an Update",
-    "linkUrl": "https://www.google.com/",
-    "linkLabel": "Check out more information here"
+    "message": "Weather can be unpredictable in the mountains, so we're keeping a close eye on conditions throughout race week. Thunderstorms are common this time of year, and runner safety is always our top priority — we've had to delay races in the past when conditions required it. If anything changes, we'll notify you immediately by email and text. Opt into race-specific text alerts here to make sure you're covered.",
+    "linkUrl": "https://mailchi.mp/11595892a452/39w2rs3hkx",
+    "linkLabel": "Sign up for SMS Alerts here"
   }
 }
