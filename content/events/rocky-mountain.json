@@ -796,5 +796,14 @@
         }
       ]
     }
+  },
+  "alert": {
+    "enabled": true,
+    "level": "urgent",
+    "title": "HP TEST UPDATE",
+    "updated": "Updated Tuesday 28th July",
+    "message": "This is an Update",
+    "linkUrl": "https://www.google.com/",
+    "linkLabel": "Check out more information here"
   }
 }
