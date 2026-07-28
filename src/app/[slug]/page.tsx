@@ -5,6 +5,7 @@ import { EventData } from '@/types/event'
 import type { SearchItem } from '@/components/SearchBar'
 import HeroSection from '@/components/HeroSection'
 import StickyNav from '@/components/StickyNav'
+import AlertBanner from '@/components/AlertBanner'
 import WelcomeSection from '@/components/WelcomeSection'
 import ScheduleSection from '@/components/ScheduleSection'
 import ExpoSection from '@/components/ExpoSection'
@@ -170,6 +171,7 @@ export default async function EventPage({ params }: { params: { slug: string } }
 
   return (
     <div data-theme={theme} data-brand={event.brand || undefined}>
+      <AlertBanner alert={event.alert} slug={event.slug} />
       {/* Trailhead: nav sits above the hero. Classic: hero first, nav below. */}
       {isTrail && <StickyNav items={navItems} theme={theme} />}
       <HeroSection event={event} theme={theme} />

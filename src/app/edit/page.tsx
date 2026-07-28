@@ -5,6 +5,7 @@ import { EditProvider } from '@/lib/editContext'
 import FormatToolbar from '@/components/edit/FormatToolbar'
 import { getIdentity, readJson, commitJson } from '@/lib/gitGateway'
 import HeroSection from '@/components/HeroSection'
+import AlertBanner from '@/components/AlertBanner'
 import WelcomeSection from '@/components/WelcomeSection'
 import ScheduleSection from '@/components/ScheduleSection'
 import ExpoSection from '@/components/ExpoSection'
@@ -156,6 +157,7 @@ export default function EditPage() {
       <FormatToolbar />
       <EditProvider data={data} editing onChange={next => { setData(next); setDirty(true) }}>
         <div data-theme={theme} data-brand={data.brand || undefined}>
+        <AlertBanner alert={data.alert} slug={slug} />
         <HeroSection event={data} theme={theme} />
         {data.sections.welcome && <WelcomeSection data={data.sections.welcome} basePath="sections.welcome" theme={theme} />}
         {data.sections.schedule && <ScheduleSection data={data.sections.schedule} eventSlug={slug} basePath="sections.schedule" theme={theme} />}

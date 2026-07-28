@@ -147,6 +147,20 @@ export interface EventData {
   accentColor: string
   favicon?: string
   hidden?: boolean
+  /**
+   * Optional race-weekend announcement banner (top of page, scrolls away).
+   * Toggled on/off and edited from /edit. `level` sets the colour: info (brand
+   * blue), weather (amber), urgent (red). Absent/`enabled:false` = no banner.
+   */
+  alert?: {
+    enabled: boolean
+    level?: 'info' | 'weather' | 'urgent'
+    title?: string
+    message: string
+    updated?: string
+    linkLabel?: string
+    linkUrl?: string
+  }
   shieldImage?: string
   logo?: string
   logoAlt?: string
