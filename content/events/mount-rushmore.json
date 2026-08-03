@@ -78,7 +78,8 @@
           "items": [
             {
               "time": "12:00–5:00 PM",
-              "label": "RACE EXPO "
+              "label": "RACE EXPO ",
+              "highlight": true
             },
             {
               "time": "12:00–6:00 PM",
