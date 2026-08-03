@@ -456,42 +456,48 @@
           "distance": "2 mi loop",
           "difficulty": "Easy",
           "elevation": "Walk the Presidential Trail beneath the 60-foot faces you glimpsed from the course — the closest views in the park.",
-          "url": "https://www.nps.gov/moru/"
+          "url": "https://www.nps.gov/moru/",
+          "imageUrl": "/images/uploads/1785776947591-screenshot-2026-08-03-at-11.08.55-am.png"
         },
         {
           "name": "Custer State Park",
-          "distance": "Wildlife loop",
+          "distance": "Wildlife Loop Road",
           "difficulty": "Scenic",
           "elevation": "Bison herds, pronghorn, and wild burros roam this sprawling park just south of the course.",
-          "url": "https://gfp.sd.gov/parks/detail/custer-state-park/"
+          "url": "https://www.custerresorts.com/activities/scenic-drives/wildlife-loop",
+          "imageUrl": "/images/uploads/1785777065400-screenshot-2026-08-03-at-11.10.57-am.png"
         },
         {
           "name": "Needles Highway",
           "distance": "14 mi",
           "difficulty": "Scenic drive",
           "elevation": "A jaw-dropping drive through granite spires and one-lane rock tunnels on SD-87.",
-          "url": "https://www.travelsouthdakota.com/trip-ideas/story/needles-highway-scenic-drive"
+          "url": "https://www.travelsouthdakota.com/trip-ideas/story/needles-highway-scenic-drive",
+          "imageUrl": "/images/uploads/1785777111071-screenshot-2026-08-03-at-11.11.44-am.png"
         },
         {
-          "name": "Sylvan Lake",
+          "name": "Sylvan Lake Shore trail",
           "distance": "1 mi loop",
           "difficulty": "Easy",
           "elevation": "Clear water ringed by granite in Custer State Park — the \"crown jewel\" and an easy post-race stroll.",
-          "url": "https://gfp.sd.gov/parks/detail/custer-state-park/"
+          "url": "https://www.alltrails.com/trail/us/south-dakota/sylvan-lake-shore-trail--4",
+          "imageUrl": "/images/uploads/1785777211398-screenshot-2026-08-03-at-11.13.23-am.png"
         },
         {
           "name": "Crazy Horse Memorial",
           "distance": "Visit",
           "difficulty": "Half day",
           "elevation": "The world's largest mountain carving in progress, honoring the Lakota leader Crazy Horse.",
-          "url": "https://crazyhorsememorial.org/"
+          "url": "https://crazyhorsememorial.org/",
+          "imageUrl": "/images/uploads/1785777269378-screenshot-2026-08-03-at-11.14.22-am.png"
         },
         {
           "name": "Badlands National Park",
           "distance": "90 min drive",
           "difficulty": "Day trip",
           "elevation": "Otherworldly striped spires and buttes east of the Black Hills — a stunning day trip.",
-          "url": "https://www.nps.gov/badl/"
+          "url": "https://www.nps.gov/badl/",
+          "imageUrl": "/images/uploads/1785777333138-badlands-national-park.jpg"
         }
       ],
       "restaurantsHeading": "Eat & Drink in Keystone",
