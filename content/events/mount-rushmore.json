@@ -87,7 +87,7 @@
             },
             {
               "time": "12:00–5:00 PM",
-              "label": "RACE MERCHANDISE"
+              "label": "RACE MERCH HOURS"
             }
           ]
         },
@@ -115,6 +115,11 @@
             {
               "time": "7:00 AM",
               "label": "HALF MARATHON STARTS"
+            },
+            {
+              "time": "8:00 AM",
+              "label": "RACE MERCH TENT OPENS",
+              "note": "Ends shortly after the finish line closes"
             },
             {
               "time": "9:15 AM",
