@@ -27,21 +27,14 @@
         "url": "https://gruns.co/"
       },
       {
-        "name": "Honey Stinger",
-        "logoUrl": "/images/uploads/1783445311591-hs-logosheet-rgb-black.png",
-        "url": "https://honeystinger.com"
+        "name": "Runna",
+        "logoUrl": "/images/uploads/1783446020684-runna-by-strava-black-.png",
+        "url": "https://web.runna.com/en-GB/welcome?redirectUrl=https%3A%2F%2Fweb.runna.com%2Fredeem%3Fcode%3DVACATIONRUNNA"
       },
       {
-        "name": "Gnarly Hydrate",
-        "url": "https://www.gnarly.com"
-      },
-      {
-        "name": "Nathan",
-        "url": "https://nathansports.com"
-      },
-      {
-        "name": "Brooksee Timing",
-        "url": "https://www.brooksee.com"
+        "name": "Dip",
+        "logoUrl": "/images/uploads/1785778081491-logo-dip-tri-color-1-.png",
+        "url": "https://dipalready.com/"
       },
       {
         "name": "Make It Personal",
@@ -49,9 +42,23 @@
         "url": "https://www.itab.us.com/product/vacation-races/"
       },
       {
-        "name": "Runna",
-        "logoUrl": "/images/uploads/1783446020684-runna-by-strava-black-.png",
-        "url": "https://web.runna.com/en-GB/welcome?redirectUrl=https%3A%2F%2Fweb.runna.com%2Fredeem%3Fcode%3DVACATIONRUNNA"
+        "name": "Honey Stinger",
+        "logoUrl": "/images/uploads/1783445311591-hs-logosheet-rgb-black.png",
+        "url": "https://honeystinger.com"
+      },
+      {
+        "name": "That's it",
+        "logoUrl": "/images/uploads/1785778161167-tin-primary-logo-full-color.jpg",
+        "url": "https://www.thatsitfruit.com/"
+      },
+      {
+        "name": "Zico",
+        "logoUrl": "/images/uploads/1785778166355-zico-logo-deep-green-1-3-.png",
+        "url": "https://zico.com/"
+      },
+      {
+        "name": "Brooksee Timing",
+        "url": "https://www.brooksee.com"
       },
       {
         "name": "Wander Project",
