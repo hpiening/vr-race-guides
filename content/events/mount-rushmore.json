@@ -77,9 +77,10 @@
           "date": "September 11, 2026",
           "items": [
             {
-              "time": "12:00–5:00 PM",
-              "label": "RACE EXPO ",
-              "highlight": true
+              "time": "12:00. PM",
+              "label": "RACE EXPO OPENS",
+              "highlight": true,
+              "note": "*We cannot accommodate runners before 12:00 PM BYOB: Our expo is bag-free, so don’t forget to Bring Your Own Bag!"
             },
             {
               "time": "12:00–6:00 PM",
@@ -88,6 +89,10 @@
             {
               "time": "12:00–5:00 PM",
               "label": "RACE MERCH HOURS"
+            },
+            {
+              "time": "5:00 PM",
+              "label": "RACE EXPO CLOSES"
             }
           ]
         },
