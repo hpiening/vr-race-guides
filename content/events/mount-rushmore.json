@@ -57,16 +57,44 @@
         "url": "https://zico.com/"
       },
       {
-        "name": "Brooksee Timing",
-        "url": "https://www.brooksee.com"
+        "name": "Runseek",
+        "logoUrl": "/images/uploads/1785778251130-runseeklogo-1-.png",
+        "url": "https://www.runseekadventures.com/"
       },
       {
-        "name": "Wander Project",
-        "url": "https://www.wanderproject.org"
+        "name": "Siete",
+        "logoUrl": "/images/uploads/1785778234298-siete-logo-1-.png",
+        "url": "https://sietefoods.com/"
       },
       {
-        "name": "MarathonFoto",
-        "url": "https://www.marathonfoto.com"
+        "name": "KRF",
+        "logoUrl": "/images/uploads/1785778229260-katesrealfood-logos-6-1-.png",
+        "url": "https://katesrealfood.com/"
+      },
+      {
+        "name": "Bobos",
+        "logoUrl": "/images/uploads/1785778399112-bobos-logo-wordmark-1-.png",
+        "url": "https://eatbobos.com/"
+      },
+      {
+        "name": "ALOE UP",
+        "logoUrl": "/images/uploads/1785778386259-aloe-black-1.webp",
+        "url": "https://aloeup.com/"
+      },
+      {
+        "name": "Sawyer",
+        "logoUrl": "/images/uploads/1785778391124-sawyer-logo-cyan-1-.png",
+        "url": "https://www.sawyer.com/"
+      },
+      {
+        "name": "Muscle Milk",
+        "logoUrl": "/images/uploads/1785778380114-full-logo.svg",
+        "url": "https://www.musclemilk.com/"
+      },
+      {
+        "name": "Mount to Coast",
+        "logoUrl": "/images/uploads/1785778351128-brandmark-black-4x-8-1-.png",
+        "url": "https://mounttocoast.com/"
       }
     ]
   },
