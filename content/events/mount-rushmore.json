@@ -204,8 +204,12 @@
               "label": "Miles · Point-to-Point"
             },
             {
-              "value": "+1,850 ft",
+              "value": "+1,742 ft",
               "label": "Elevation Gain"
+            },
+            {
+              "value": "-1,454 fr",
+              "label": "Elevation Loss"
             },
             {
               "value": "5",
