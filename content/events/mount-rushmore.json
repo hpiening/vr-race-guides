@@ -4,8 +4,8 @@
   "brand": "rushmore",
   "hidden": false,
   "name": "Mount Rushmore Half Marathon",
-  "tagline": "Run in the shadow of giants.",
-  "dates": "Saturday, September 12, 2026 · Keystone, South Dakota",
+  "tagline": "Saturday, September 12, 2026",
+  "dates": "· Keystone, South Dakota",
   "heroImage": "",
   "heroImageAlt": "Granite spires and ponderosa pines of the Black Hills near Mount Rushmore, South Dakota",
   "heroBgColor": "#1C1F18",
@@ -16,15 +16,46 @@
   "partners": {
     "enabled": true,
     "items": [
-      { "name": "Hotel Planner", "logoUrl": "/images/uploads/1783459296194-unknown.jpeg", "url": "https://vacationraces.hotelplanner.com" },
-      { "name": "Honey Stinger", "logoUrl": "/images/uploads/1783445311591-hs-logosheet-rgb-black.png", "url": "https://honeystinger.com" },
-      { "name": "Gnarly Hydrate", "url": "https://www.gnarly.com" },
-      { "name": "Nathan", "url": "https://nathansports.com" },
-      { "name": "Brooksee Timing", "url": "https://www.brooksee.com" },
-      { "name": "Make It Personal", "logoUrl": "/images/uploads/1784816609917-full-stacked-horizontal-logo-black-1-.svg", "url": "https://www.itab.us.com/product/vacation-races/" },
-      { "name": "Runna", "logoUrl": "/images/uploads/1783446020684-runna-by-strava-black-.png", "url": "https://web.runna.com/en-GB/welcome?redirectUrl=https%3A%2F%2Fweb.runna.com%2Fredeem%3Fcode%3DVACATIONRUNNA" },
-      { "name": "Wander Project", "url": "https://www.wanderproject.org" },
-      { "name": "MarathonFoto", "url": "https://www.marathonfoto.com" }
+      {
+        "name": "Hotel Planner",
+        "logoUrl": "/images/uploads/1783459296194-unknown.jpeg",
+        "url": "https://vacationraces.hotelplanner.com"
+      },
+      {
+        "name": "Honey Stinger",
+        "logoUrl": "/images/uploads/1783445311591-hs-logosheet-rgb-black.png",
+        "url": "https://honeystinger.com"
+      },
+      {
+        "name": "Gnarly Hydrate",
+        "url": "https://www.gnarly.com"
+      },
+      {
+        "name": "Nathan",
+        "url": "https://nathansports.com"
+      },
+      {
+        "name": "Brooksee Timing",
+        "url": "https://www.brooksee.com"
+      },
+      {
+        "name": "Make It Personal",
+        "logoUrl": "/images/uploads/1784816609917-full-stacked-horizontal-logo-black-1-.svg",
+        "url": "https://www.itab.us.com/product/vacation-races/"
+      },
+      {
+        "name": "Runna",
+        "logoUrl": "/images/uploads/1783446020684-runna-by-strava-black-.png",
+        "url": "https://web.runna.com/en-GB/welcome?redirectUrl=https%3A%2F%2Fweb.runna.com%2Fredeem%3Fcode%3DVACATIONRUNNA"
+      },
+      {
+        "name": "Wander Project",
+        "url": "https://www.wanderproject.org"
+      },
+      {
+        "name": "MarathonFoto",
+        "url": "https://www.marathonfoto.com"
+      }
     ]
   },
   "sections": {
@@ -45,9 +76,18 @@
           "label": "Friday / Expo & Bib Pickup",
           "date": "September 11, 2026",
           "items": [
-            { "time": "12:00–5:00 PM", "label": "RACE EXPO OPEN" },
-            { "time": "12:00–6:00 PM", "label": "BIB PICKUP" },
-            { "time": "12:00–5:00 PM", "label": "MERCH TENT OPEN" }
+            {
+              "time": "12:00–5:00 PM",
+              "label": "RACE EXPO OPEN"
+            },
+            {
+              "time": "12:00–6:00 PM",
+              "label": "BIB PICKUP"
+            },
+            {
+              "time": "12:00–5:00 PM",
+              "label": "MERCH TENT OPEN"
+            }
           ]
         },
         {
@@ -55,14 +95,38 @@
           "label": "Saturday / Half Marathon",
           "date": "September 12, 2026",
           "items": [
-            { "time": "5:00 AM", "label": "PARKING LOTS OPEN" },
-            { "time": "5:00 AM", "label": "FIRST SHUTTLE & BIB PICKUP" },
-            { "time": "6:00 AM", "label": "LAST SHUTTLE TO START" },
-            { "time": "6:45 AM", "label": "LINE UP & LAST GEAR CHECK" },
-            { "time": "7:00 AM", "label": "HALF MARATHON STARTS" },
-            { "time": "9:15 AM", "label": "HALF MARATHON AWARDS" },
-            { "time": "11:00 AM", "label": "OFF IRON MOUNTAIN RD · MILE 12" },
-            { "time": "11:30 AM", "label": "FINISH LINE CLOSES" }
+            {
+              "time": "5:00 AM",
+              "label": "PARKING LOTS OPEN"
+            },
+            {
+              "time": "5:00 AM",
+              "label": "FIRST SHUTTLE & BIB PICKUP"
+            },
+            {
+              "time": "6:00 AM",
+              "label": "LAST SHUTTLE TO START"
+            },
+            {
+              "time": "6:45 AM",
+              "label": "LINE UP & LAST GEAR CHECK"
+            },
+            {
+              "time": "7:00 AM",
+              "label": "HALF MARATHON STARTS"
+            },
+            {
+              "time": "9:15 AM",
+              "label": "HALF MARATHON AWARDS"
+            },
+            {
+              "time": "11:00 AM",
+              "label": "OFF IRON MOUNTAIN RD · MILE 12"
+            },
+            {
+              "time": "11:30 AM",
+              "label": "FINISH LINE CLOSES"
+            }
           ]
         }
       ]
@@ -76,9 +140,18 @@
       "locationLat": 43.8919,
       "locationLng": -103.4258,
       "hours": [
-        { "label": "Race Expo", "time": "12:00 – 5:00 PM" },
-        { "label": "Bib Pickup", "time": "12:00 – 5:00 PM" },
-        { "label": "Bring", "time": "Photo ID" }
+        {
+          "label": "Race Expo",
+          "time": "12:00 – 5:00 PM"
+        },
+        {
+          "label": "Bib Pickup",
+          "time": "12:00 – 5:00 PM"
+        },
+        {
+          "label": "Bring",
+          "time": "Photo ID"
+        }
       ],
       "notes": [
         "We strongly recommend picking up your bib at the Friday expo — race-morning pickup is available for the Half Marathon at the start line but should be avoided.",
@@ -117,10 +190,22 @@
           "mapUrl": "https://www.vacationraces.com/half-marathons/mount-rushmore/",
           "embedUrl": "",
           "statTiles": [
-            { "value": "13.1", "label": "Miles · Point-to-Point" },
-            { "value": "+1,850 ft", "label": "Elevation Gain" },
-            { "value": "5", "label": "Aid Stations" },
-            { "value": "4 hr", "label": "Time Limit" }
+            {
+              "value": "13.1",
+              "label": "Miles · Point-to-Point"
+            },
+            {
+              "value": "+1,850 ft",
+              "label": "Elevation Gain"
+            },
+            {
+              "value": "5",
+              "label": "Aid Stations"
+            },
+            {
+              "value": "4 hr",
+              "label": "Time Limit"
+            }
           ]
         }
       ],
@@ -181,11 +266,26 @@
         }
       ],
       "shuttleDetails": [
-        { "time": "5:00 AM", "label": "Parking lots open" },
-        { "time": "5:00 AM", "label": "First shuttle & bib pickup" },
-        { "time": "6:00 AM", "label": "Last shuttle to start" },
-        { "time": "6:45 AM", "label": "Line up & last gear check" },
-        { "time": "7:00 AM", "label": "Half Marathon starts" }
+        {
+          "time": "5:00 AM",
+          "label": "Parking lots open"
+        },
+        {
+          "time": "5:00 AM",
+          "label": "First shuttle & bib pickup"
+        },
+        {
+          "time": "6:00 AM",
+          "label": "Last shuttle to start"
+        },
+        {
+          "time": "6:45 AM",
+          "label": "Line up & last gear check"
+        },
+        {
+          "time": "7:00 AM",
+          "label": "Half Marathon starts"
+        }
       ],
       "dropOffNote": "Dropping a runner off in Keystone? Do so in front of the Comfort Inn & Suites (321 Swanzey St), just east of the Ramada Inn shuttle pickup. Runners can also be dropped at the start-line parking area at Ghost Canyon Getaway — but note Iron Mountain Road will be closed, so drivers must take the long way down to Keystone to reach the finish. Drop-off is for quick unloading only.",
       "infoBlocks": [
@@ -230,12 +330,42 @@
       "enabled": true,
       "finishLineInfo": "Cross the line, grab your victory snacks and a refill, and collect your finisher medal — awarded to everyone who finishes. Stick around for the Overall & Masters awards at 9:15 AM and age-group awards at 10:00 AM. Course-record holders receive a free race entry every year their record stands!",
       "courseRecords": [
-        { "category": "Overall Male", "name": "Phillip Duncan", "time": "1:14:58", "year": "2019" },
-        { "category": "Overall Female", "name": "Allie Oban", "time": "1:33:16", "year": "2019" },
-        { "category": "Overall Non-Binary", "name": "Record open", "time": "N/A", "year": "" },
-        { "category": "Masters Male", "name": "Michael Osterholt", "time": "1:38:04", "year": "2021" },
-        { "category": "Masters Female", "name": "Varinka Esminger", "time": "1:40:52", "year": "2021" },
-        { "category": "Masters Non-Binary", "name": "Record open", "time": "N/A", "year": "" }
+        {
+          "category": "Overall Male",
+          "name": "Phillip Duncan",
+          "time": "1:14:58",
+          "year": "2019"
+        },
+        {
+          "category": "Overall Female",
+          "name": "Allie Oban",
+          "time": "1:33:16",
+          "year": "2019"
+        },
+        {
+          "category": "Overall Non-Binary",
+          "name": "Record open",
+          "time": "N/A",
+          "year": ""
+        },
+        {
+          "category": "Masters Male",
+          "name": "Michael Osterholt",
+          "time": "1:38:04",
+          "year": "2021"
+        },
+        {
+          "category": "Masters Female",
+          "name": "Varinka Esminger",
+          "time": "1:40:52",
+          "year": "2021"
+        },
+        {
+          "category": "Masters Non-Binary",
+          "name": "Record open",
+          "time": "N/A",
+          "year": ""
+        }
       ],
       "infoSections": [
         {
@@ -258,7 +388,10 @@
           "heading": "Personalize Your Medal · iTab",
           "body": "Make it last forever with an iTab — a custom engraved plate with your name and finishing time that clips onto your medal ribbon. Pre-order before race day and it's sent automatically after you finish. Missed the pre-order? Order later for just $15, including postage & packaging.",
           "links": [
-            { "label": "Order iTab", "url": "https://www.itab.us.com/product/vacation-races/" }
+            {
+              "label": "Order iTab",
+              "url": "https://www.itab.us.com/product/vacation-races/"
+            }
           ]
         },
         {
