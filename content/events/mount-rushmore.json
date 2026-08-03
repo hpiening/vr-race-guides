@@ -504,22 +504,24 @@
       "restaurantsIntro": "A few local food, coffee, and scenic-drive picks in and around Keystone.",
       "restaurants": [
         {
-          "name": "Ruby House Restaurant",
+          "name": "[Ruby House Restaurant](https://www.google.com/maps/search/?api=1&query=Ruby+House+Restaurant+Keystone+SD)",
           "description": "A Keystone landmark on Winter Street — hearty plates and Old West charm a short walk from the finish.",
-          "url": "https://www.google.com/maps/search/?api=1&query=Ruby+House+Restaurant+Keystone+SD",
-          "icon": "🍽️"
+          "url": "",
+          "icon": "🍽️",
+          "address": "124 Winter St, Keystone, SD 57751"
         },
         {
-          "name": "Grapes & Grinds",
+          "name": "[Grapes & Grinds](https://www.google.com/maps/search/?api=1&query=Grapes+and+Grinds+Keystone+SD)",
           "description": "A cozy Winter Street stop for espresso before the drive out, or a glass of local wine to toast the finish.",
-          "url": "https://www.google.com/maps/search/?api=1&query=Grapes+and+Grinds+Keystone+SD",
-          "icon": "☕"
+          "url": "",
+          "icon": "☕",
+          "address": "609 US-16A, Keystone, SD 57751"
         },
         {
-          "name": "Iron Mountain Road",
-          "description": "The SD-16A engineering marvel — pigtail bridges and tunnels that frame Mount Rushmore. Closed race morning; drive it another day.",
-          "url": "https://www.google.com/maps/search/?api=1&query=Iron+Mountain+Road+SD-16A",
-          "icon": "🚗"
+          "name": "[Purple pie place](https://www.purplepieplace.com/)",
+          "description": "Grab a warm slice piled high with berries or rhubarb, add a scoop of homemade ice cream, and sink into that post-adventure bliss. ",
+          "url": "",
+          "icon": "🥧"
         }
       ],
       "parkNote": "The race start and finish are in the Keystone area and do not require a park pass. Mount Rushmore National Memorial has no entrance fee but charges for parking — check nps.gov/moru before you go."
