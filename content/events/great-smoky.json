@@ -316,7 +316,7 @@
         },
         {
           "heading": "Bib Pickup & Parking",
-          "body": "The expo and 5K start line are in the same place, so pick up your bib beginning at 12:00 PM — 5K runners have until 5:00PM to collect their bib. There are three designated parking areas, all a short walk to the start and finish; volunteers will direct you, and lots fill in a set order. Please be parked by 5:30 PM. 5K and Black Bear Double runners must collect their bib at Friday's expo. The 5K starts at 6:00 PM sharp on Friday. "
+          "body": "The expo and 5K start line staging are in the same place, so pick up your bib beginning at 12:00 PM — 5K runners have until 5:00PM to collect their bib. There are two designated parking areas, all a short walk to the start and finish; volunteers will direct you, and lots fill in a set order. Please be parked by 5:30 PM. 5K and Black Bear Double runners must collect their bib at Friday's expo. The 5K starts at 6:00 PM sharp on Friday. "
         },
         {
           "heading": "Wave Start",
@@ -458,7 +458,8 @@
           "heading": "Strollers, Wheelchairs & Dogs",
           "body": "The course is fully paved and is wheelchair and stroller accessible — just be mindful of other participants and stay to the right when possible. Dogs are not allowed on course, as our insurance does not cover them, but they're welcome to cheer you on from the finish line with the rest of your crew."
         }
-      ]
+      ],
+      "parkingMapImageUrl": "/images/uploads/1785863161349-2026-smoky-parking.jpg"
     },
     "spectators": {
       "enabled": true,
