@@ -471,10 +471,9 @@
     },
     "spectators": {
       "enabled": true,
-      "notes": "We welcome spectators to the Great Smoky Mountains Half Marathon! Because much of the course is open to local traffic, spectators are asked to cheer from the start and the finish line rather than along the highway.",
+      "notes": "We welcome spectators to the Great Smoky Mountains Half Marathon! Because much of the course is open to local traffic, spectators are asked to cheer from  the finish line rather than along the highway.",
       "warnings": [
-        "Watch & Cheer — spectators are welcome to watch the start and gather at the finish line to cheer runners across.",
-        "Finish line only — park in an official event lot and meet your runner at the finish. Please do not stand or park along the highway.",
+        "Spectators are welcome to park at The Parkman Hotel and meet their runners at the finish line ONLY - please do not stand or park along the highway.",
         "Off the course — to reduce vehicle traffic, spectators are discouraged from driving or stopping along the race route to cheer.",
         "Park ahead — only park in designated areas. This keeps us compliant with local guidelines and helps us keep putting on this race.",
         "Runners only — the runner recovery area and its food and recovery supplies are for runners only, and the medical tent is for athletes only. Family members are not allowed inside."
