@@ -123,6 +123,18 @@ export default function RaceMorningSection({ data, basePath = 'sections.raceMorn
         </div>
       )}
 
+      {/* Drop-off map (below the callout) */}
+      {(data.dropOffImageUrl || editing) && (
+        editing ? (
+          <div className="mb-12"><EditableImage path={`${basePath}.dropOffImageUrl`} label="Runner drop-off map" /></div>
+        ) : (
+          <div className="rounded-lg overflow-hidden border border-vr-forest/10 mb-12">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={data.dropOffImageUrl} alt="Runner drop-off map" className="w-full h-auto" />
+          </div>
+        )
+      )}
+
       {/* Detailed info blocks */}
       {((data.infoBlocks && data.infoBlocks.length > 0) || editing) && (
         <div className="space-y-8 border-t border-vr-forest/10 pt-10 mt-4">
@@ -242,6 +254,18 @@ function RaceMorningTrailhead({ data, basePath, editing }: { data: EventData['se
             <p className="font-label text-xs tracking-[0.16em] uppercase text-vr-sky mb-2">Runner Drop-Off</p>
             <EditableText as="div" className="font-body text-sm text-vr-cream/85 leading-relaxed" value={data.dropOffNote ?? ''} path={`${basePath}.dropOffNote`} />
           </div>
+        )}
+
+        {/* Drop-off map (below the callout) */}
+        {(data.dropOffImageUrl || editing) && (
+          editing ? (
+            <div className="mb-10"><EditableImage path={`${basePath}.dropOffImageUrl`} label="Runner drop-off map" /></div>
+          ) : (
+            <div className="border border-vr-cream/20 rounded-lg overflow-hidden mb-10">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={data.dropOffImageUrl} alt="Runner drop-off map" className="w-full h-auto block" />
+            </div>
+          )
         )}
 
         {/* Course detail accordions */}
