@@ -6,6 +6,7 @@ import FormatToolbar from '@/components/edit/FormatToolbar'
 import { getIdentity, readJson, commitJson } from '@/lib/gitGateway'
 import HeroSection from '@/components/HeroSection'
 import AlertBanner from '@/components/AlertBanner'
+import PhotoBand from '@/components/PhotoBand'
 import WelcomeSection from '@/components/WelcomeSection'
 import ScheduleSection from '@/components/ScheduleSection'
 import ExpoSection from '@/components/ExpoSection'
@@ -162,9 +163,12 @@ export default function EditPage() {
         {data.sections.welcome && <WelcomeSection data={data.sections.welcome} basePath="sections.welcome" theme={theme} />}
         {data.sections.schedule && <ScheduleSection data={data.sections.schedule} eventSlug={slug} basePath="sections.schedule" theme={theme} />}
         {data.sections.expo && <ExpoSection data={data.sections.expo} basePath="sections.expo" theme={theme} />}
+        {theme === 'trailhead' && data.sections.courseInfo && <PhotoBand title="On the Course" image={data.photoBands?.onCourse} imagePath="photoBands.onCourse" />}
         {data.sections.courseInfo && <CourseInfoSection data={data.sections.courseInfo} basePath="sections.courseInfo" theme={theme} />}
+        {theme === 'trailhead' && data.sections.raceMorning && <PhotoBand title="Race Morning" image={data.photoBands?.raceMorning} imagePath="photoBands.raceMorning" />}
         {data.sections.raceMorning && <RaceMorningSection data={data.sections.raceMorning} basePath="sections.raceMorning" theme={theme} />}
         {data.sections.spectators && <SpectatorsSection data={data.sections.spectators} basePath="sections.spectators" theme={theme} />}
+        {theme === 'trailhead' && data.sections.postRace && <PhotoBand title="Post Race" image={data.photoBands?.postRace} imagePath="photoBands.postRace" />}
         {data.sections.postRace && <PostRaceSection data={data.sections.postRace} basePath="sections.postRace" theme={theme} />}
         {data.sections.challengeEvents && <ChallengeEventsSection data={data.sections.challengeEvents} basePath="sections.challengeEvents" theme={theme} />}
         {data.sections.experiences && <ExperiencesSection data={data.sections.experiences} basePath="sections.experiences" theme={theme} />}

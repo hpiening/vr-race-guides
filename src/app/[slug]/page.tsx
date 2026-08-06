@@ -6,6 +6,7 @@ import type { SearchItem } from '@/components/SearchBar'
 import HeroSection from '@/components/HeroSection'
 import StickyNav from '@/components/StickyNav'
 import AlertBanner from '@/components/AlertBanner'
+import PhotoBand from '@/components/PhotoBand'
 import WelcomeSection from '@/components/WelcomeSection'
 import ScheduleSection from '@/components/ScheduleSection'
 import ExpoSection from '@/components/ExpoSection'
@@ -132,21 +133,6 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 }
 
-/** Full-bleed titled band between sections (Trailhead only; hidden in print). */
-function PhotoBand({ title }: { title: string }) {
-  return (
-    <div className="tl-photoband relative bg-vr-night px-6 md:px-12 py-16 md:py-[74px] text-center overflow-hidden border-y border-vr-cream/10">
-      <div
-        className="absolute inset-0 opacity-50 pointer-events-none"
-        style={{ background: 'var(--tl-band-stripe)' }}
-      />
-      <h2 className="relative font-display uppercase tracking-[0.02em] text-vr-cream m-0" style={{ fontSize: 'clamp(34px,5vw,64px)' }}>
-        {title}
-      </h2>
-    </div>
-  )
-}
-
 export default async function EventPage({ params }: { params: { slug: string } }) {
   const event = await getEvent(params.slug)
   if (!event) notFound()
@@ -180,12 +166,12 @@ export default async function EventPage({ params }: { params: { slug: string } }
         {sections.welcome?.enabled        && <WelcomeSection     data={sections.welcome} theme={theme} />}
         {sections.schedule.enabled        && <ScheduleSection    data={sections.schedule} eventSlug={event.slug} theme={theme} />}
         {sections.expo.enabled            && <ExpoSection        data={sections.expo} theme={theme} />}
-        {isTrail && sections.courseInfo.enabled && <PhotoBand title="On the Course" />}
+        {isTrail && sections.courseInfo.enabled && <PhotoBand title="On the Course" image={event.photoBands?.onCourse} />}
         {sections.courseInfo.enabled      && <CourseInfoSection  data={sections.courseInfo} theme={theme} />}
-        {isTrail && sections.raceMorning.enabled && <PhotoBand title="Race Morning" />}
+        {isTrail && sections.raceMorning.enabled && <PhotoBand title="Race Morning" image={event.photoBands?.raceMorning} />}
         {sections.raceMorning.enabled     && <RaceMorningSection data={sections.raceMorning} theme={theme} />}
         {sections.spectators.enabled      && <SpectatorsSection  data={sections.spectators} theme={theme} />}
-        {isTrail && sections.postRace.enabled && <PhotoBand title="Post Race" />}
+        {isTrail && sections.postRace.enabled && <PhotoBand title="Post Race" image={event.photoBands?.postRace} />}
         {sections.postRace.enabled        && <PostRaceSection    data={sections.postRace} theme={theme} />}
         {sections.challengeEvents?.enabled && <ChallengeEventsSection data={sections.challengeEvents!} theme={theme} />}
         {sections.experiences.enabled     && <ExperiencesSection data={sections.experiences} theme={theme} />}

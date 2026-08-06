@@ -18,15 +18,17 @@ export default function WelcomeSection({ data, basePath = 'sections.welcome', th
               <EditableText as="span" value={data.heading} path={`${basePath}.heading`} />
             </h2>
           ) : (() => {
-            // Explicit "eyebrow|headline" split lets the headline be multiple
-            // words (e.g. "Welcome to the|Black Hills"). Without a "|", fall
-            // back to the original behaviour: last word is the headline.
+            // Explicit "eyebrow|headline" (or a line break) split lets the
+            // headline be multiple words (e.g. "Welcome to the|Black Hills" or
+            // "Welcome to the\nBlack Hills"). Without a separator, fall back to
+            // the original behaviour: last word is the headline.
             const raw = data.heading.trim()
+            const sep = raw.includes('|') ? '|' : (/\r?\n/.test(raw) ? '\n' : '')
             let eyebrow: string, last: string
-            if (raw.includes('|')) {
-              const [head, ...rest] = raw.split('|')
+            if (sep) {
+              const [head, ...rest] = raw.split(/[|\n]/)
               eyebrow = head.trim()
-              last = rest.join('|').trim()
+              last = rest.join(' ').trim()
             } else {
               const words = raw.split(/\s+/)
               last = words.length > 1 ? words.pop()! : ''

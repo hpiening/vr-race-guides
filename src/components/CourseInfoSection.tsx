@@ -139,7 +139,11 @@ function CourseInfoTrailhead({ data, basePath, editing }: { data: EventData['sec
     <section id="course-info" className="relative bg-vr-deep overflow-hidden px-6 md:px-12 py-20 md:py-[104px]">
       <div className="max-w-[1180px] mx-auto">
         <div className="mb-10">
-          <div className="leading-[0.9]"><span className="font-accent text-vr-sky" style={{ fontSize: 'clamp(20px,2.2vw,28px)' }}>The course</span></div>
+          {/* Skip the "The course" eyebrow when the heading already says "course"
+              (redundant, e.g. "Course Info"); keep it for headings like "5K Info". */}
+          {!/course/i.test(data.heading || 'Course Info') && (
+            <div className="leading-[0.9]"><span className="font-accent text-vr-sky" style={{ fontSize: 'clamp(20px,2.2vw,28px)' }}>The course</span></div>
+          )}
           <h2 className="font-display uppercase text-vr-cream leading-[0.9] mt-0.5 m-0" style={{ fontSize: 'clamp(40px,5.6vw,76px)' }}>
             <EditableText as="span" value={data.heading || 'Course Info'} path={`${basePath}.heading`} />
           </h2>

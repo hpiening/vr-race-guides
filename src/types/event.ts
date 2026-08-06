@@ -169,6 +169,17 @@ export interface EventData {
     afterChallengeEvents?: SectionBreakConfig
     afterExperiences?: SectionBreakConfig
   }
+  /**
+   * Optional landscape background photos for the full-bleed section-divider
+   * bands (Trailhead). When a URL is set the band shows the photo (with a dark
+   * scrim for legibility) instead of the default diagonal-stripe texture.
+   * Editable per band in /edit.
+   */
+  photoBands?: {
+    onCourse?: string
+    raceMorning?: string
+    postRace?: string
+  }
   partners?: {
     enabled: boolean
     items: Array<{ name: string; logoUrl?: string; url?: string }>
@@ -200,6 +211,8 @@ export interface EventData {
       parkingMapImageUrl?: string
       shuttleDetails: ScheduleItem[]
       dropOffNote: string
+      /** Optional map/diagram shown directly below the Runner Drop-Off callout. */
+      dropOffImageUrl?: string
       courses?: CourseDistance[]
       infoBlocks?: InfoBlock[]
     }

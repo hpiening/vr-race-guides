@@ -175,13 +175,13 @@
      vr-floral #da8165 → #5EA4C9  (no orange in this brand → accent blue)
    Light tokens: paper #F5F1E8, cream #EFE7D3, hairline #D8CFBA. */
 [data-brand='rushmore'] {
-  --vr-night-rgb:     28 31 24;    /* #1C1F18 */
-  --vr-deep-rgb:      52 58 46;    /* #343A2E */
-  --vr-forest-rgb:    43 46 39;    /* #2B2E27 */
-  --vr-pine-rgb:      11 27 44;    /* #0B1B2C */
-  --vr-sky-rgb:       94 164 201;  /* #5EA4C9 */
-  --vr-floral-rgb:    94 164 201;  /* #5EA4C9 */
-  --vr-sandstone-rgb: 62 134 171;  /* #3E86AB (link hover) */
+  --vr-night-rgb:     28 31 24;    /* #1C1F18 deepest — photo bands, footer, callouts */
+  --vr-deep-rgb:      49 56 50;    /* #313832 dark green — course/expo/spectators + stat tiles */
+  --vr-forest-rgb:    49 56 50;    /* #313832 — schedule/FAQ bg + body ink + dropdown text */
+  --vr-pine-rgb:      48 68 71;    /* #304447 sticky nav */
+  --vr-sky-rgb:       123 173 172; /* #7BADAC accent (all blue text/elements + records block) */
+  --vr-floral-rgb:    123 173 172; /* #7BADAC */
+  --vr-sandstone-rgb: 123 173 172; /* #7BADAC (link hover — keep blue family uniform) */
   --vr-earth-rgb:     92 95 84;    /* muted olive-grey */
   --vr-mid-rgb:       92 95 84;    /* #5C5F54 body grey on light */
   --vr-cream-rgb:     239 231 211; /* #EFE7D3 */
@@ -189,9 +189,9 @@
   --vr-line-rgb:      216 207 186; /* #D8CFBA */
 
   /* Keep the hex vars in sync for the few inline `var(--vr-*)` color usages. */
-  --vr-forest: #2B2E27;
-  --vr-sky:    #5EA4C9;
-  --vr-floral: #5EA4C9;
+  --vr-forest: #313832;
+  --vr-sky:    #7BADAC;
+  --vr-floral: #7BADAC;
   --vr-cream:  #EFE7D3;
 
   --tl-hero-grad:      radial-gradient(125% 95% at 72% 8%,#4C6470 0%,#343A2E 46%,#1C1F18 100%);

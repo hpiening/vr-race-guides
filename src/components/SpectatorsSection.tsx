@@ -61,15 +61,30 @@ function SpectatorsTrailhead({ data, basePath, editing }: { data: EventData['sec
 
         {(data.warnings.length > 0 || editing) && (
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3 mb-6">
-            {data.warnings.map((w, i) => (
-              <div key={i} className="border border-vr-cream/20 rounded-lg p-7 bg-vr-forest">
-                <div className="flex items-start gap-1">
-                  <div className="font-display text-vr-sky mb-3 flex-1" style={{ fontSize: '26px' }}>{String(i + 1).padStart(2, '0')}</div>
-                  <ListControls path={`${basePath}.warnings`} index={i} count={data.warnings.length} />
+            {data.warnings.map((w, i) => {
+              // View mode: split "Lead-in — body" so the lead-in reads as a bold
+              // uppercase subheading. Edit mode keeps the single editable string.
+              const dash = w.indexOf('—')
+              const split = !editing && dash > -1
+              const head = split ? w.slice(0, dash).trim() : ''
+              const rest = split ? w.slice(dash + 1).trim() : ''
+              return (
+                <div key={i} className="border border-vr-cream/20 rounded-lg p-7 bg-vr-forest">
+                  <div className="flex items-start gap-1">
+                    <div className="font-display text-vr-sky mb-3 flex-1" style={{ fontSize: '26px' }}>{String(i + 1).padStart(2, '0')}</div>
+                    <ListControls path={`${basePath}.warnings`} index={i} count={data.warnings.length} />
+                  </div>
+                  {split ? (
+                    <>
+                      <h3 className="font-heading uppercase text-vr-cream mb-1.5" style={{ fontSize: '16px', letterSpacing: '0.03em' }}>{head}</h3>
+                      <p className="font-body text-vr-cream/75 leading-[1.6] m-0">{rest}</p>
+                    </>
+                  ) : (
+                    <EditableText as="div" className="font-body text-vr-cream/75 leading-[1.6]" value={w} path={`${basePath}.warnings.${i}`} />
+                  )}
                 </div>
-                <EditableText as="div" className="font-body text-vr-cream/75 leading-[1.6]" value={w} path={`${basePath}.warnings.${i}`} />
-              </div>
-            ))}
+              )
+            })}
           </div>
         )}
         <div className="mb-6"><AddButton path={`${basePath}.warnings`} item="New note" label="Add note" /></div>
