@@ -111,6 +111,7 @@
     },
     "schedule": {
       "enabled": true,
+      "backgroundImage": "/images/events/mount-rushmore-schedule-bg.jpg",
       "days": [
         {
           "id": "friday",

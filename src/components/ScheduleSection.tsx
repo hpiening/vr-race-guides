@@ -3,6 +3,7 @@ import { useState } from 'react'
 import { EventData } from '@/types/event'
 import { useEditOptional } from '@/lib/editContext'
 import EditableText from './edit/EditableText'
+import EditableImage from './edit/EditableImage'
 import { ListControls, AddButton } from './edit/ListControls'
 
 type Props = { data: EventData['sections']['schedule']; eventSlug: string; basePath?: string; theme?: 'classic' | 'trailhead' }
@@ -15,6 +16,15 @@ export default function ScheduleSection({ data, eventSlug, basePath = 'sections.
   const dp = `${basePath}.days`
   const isHighlighted = (item: EventData['sections']['schedule']['days'][number]['items'][number]) =>
     item.highlight ?? /\bstart/i.test(item.label)
+
+  // Optional faint full-section background photo (sits behind the corner
+  // watermark and the content; content is z-10 so text stays legible).
+  const bgPhoto = data.backgroundImage ? (
+    <div className="absolute inset-0 pointer-events-none select-none" aria-hidden="true">
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img src={data.backgroundImage} alt="" className="w-full h-full object-cover opacity-[0.15]" />
+    </div>
+  ) : null
 
   const watermark = (
     <div
@@ -35,10 +45,12 @@ export default function ScheduleSection({ data, eventSlug, basePath = 'sections.
   if (editing) {
     return (
       <section id="schedule" className="relative py-16 md:py-24 px-6 md:px-12 bg-vr-forest text-vr-cream overflow-hidden">
+        {bgPhoto}
         {watermark}
         <div className="relative z-10 max-w-4xl mx-auto">
           <p className="font-micro text-xs tracking-[0.25em] uppercase text-vr-cream/40 mb-2">Schedule</p>
           <h2 className="font-display text-5xl md:text-6xl uppercase mb-8 text-vr-cream">Schedule</h2>
+          <div className="mb-8"><EditableImage path={`${basePath}.backgroundImage`} label="Schedule background photo (shown faint)" /></div>
           <div>
             {data.days.map((d, di) => (
               <div key={di} className="mb-10 border-b border-vr-cream/10 pb-6">
@@ -91,6 +103,7 @@ export default function ScheduleSection({ data, eventSlug, basePath = 'sections.
   if (theme === 'trailhead') {
     return (
       <section id="schedule" className="relative bg-vr-forest overflow-hidden px-6 md:px-12 py-20 md:py-[104px]">
+        {bgPhoto}
         {watermark}
         <div className="relative z-10 max-w-[880px] mx-auto text-center">
           <div className="leading-[0.9]">

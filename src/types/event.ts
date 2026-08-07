@@ -191,6 +191,8 @@ export interface EventData {
     schedule: {
       enabled: boolean
       days: ScheduleDay[]
+      /** Optional faint full-section background photo (Trailhead). */
+      backgroundImage?: string
     }
     expo: {
       enabled: boolean
