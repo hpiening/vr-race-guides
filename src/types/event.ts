@@ -182,6 +182,8 @@ export interface EventData {
     raceMorning?: string
     postRace?: string
   }
+  /** Optional faint background photo behind the "Chase the Extraordinary" footer (Trailhead). */
+  footerImage?: string
   partners?: {
     enabled: boolean
     items: Array<{ name: string; logoUrl?: string; url?: string }>

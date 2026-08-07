@@ -18,6 +18,7 @@
     "raceMorning": "/images/events/mount-rushmore-band.jpg",
     "postRace": "/images/events/mount-rushmore-band.jpg"
   },
+  "footerImage": "/images/events/mount-rushmore-footer.jpg",
   "partners": {
     "enabled": true,
     "items": [

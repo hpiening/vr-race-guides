@@ -183,6 +183,10 @@ export default async function EventPage({ params }: { params: { slug: string } }
       <SearchBar index={searchIndex} />
       {isTrail ? (
         <footer className="relative bg-vr-night overflow-hidden border-t border-vr-cream/10 px-6 md:px-12 py-20">
+          {event.footerImage && (
+            /* eslint-disable-next-line @next/next/no-img-element */
+            <img src={event.footerImage} alt="" aria-hidden="true" className="absolute inset-0 w-full h-full object-cover opacity-[0.15] pointer-events-none" />
+          )}
           <div className="relative z-10 max-w-5xl mx-auto text-center">
             <div className="leading-[0.9] mb-1.5">
               <span className="font-accent text-vr-sky" style={{ fontSize: 'clamp(22px,2.6vw,34px)' }}>Chase the</span>
