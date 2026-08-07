@@ -13,6 +13,11 @@
   "favicon": "/images/events/mount-rushmore-favicon.png",
   "shieldImage": "/images/events/mount-rushmore-shield.png",
   "logo": "/images/vr-logo.png",
+  "photoBands": {
+    "onCourse": "/images/events/mount-rushmore-band.jpg",
+    "raceMorning": "/images/events/mount-rushmore-band.jpg",
+    "postRace": "/images/events/mount-rushmore-band.jpg"
+  },
   "partners": {
     "enabled": true,
     "items": [
