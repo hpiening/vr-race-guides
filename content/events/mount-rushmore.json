@@ -6,8 +6,8 @@
   "name": "Mount Rushmore Half Marathon",
   "tagline": "Saturday, September 12, 2026",
   "dates": "Keystone, South Dakota",
-  "heroImage": "",
-  "heroImageAlt": "Granite spires and ponderosa pines of the Black Hills near Mount Rushmore, South Dakota",
+  "heroImage": "/images/events/mount-rushmore-hero.jpg",
+  "heroImageAlt": "The Mount Rushmore carving of four presidents in the granite of the Black Hills, South Dakota",
   "heroBgColor": "#1C1F18",
   "accentColor": "#7BADAC",
   "favicon": "/images/events/mount-rushmore-favicon.png",
@@ -101,6 +101,7 @@
   "sections": {
     "welcome": {
       "enabled": true,
+      "imageUrl": "/images/events/mount-rushmore-hero.jpg",
       "heading": "Welcome to the \nBlack Hills",
       "body": "We hope your visit to the Black Hills is a memorable one — and that you make the time to explore Mount Rushmore National Memorial and the surrounding Black Hills National Forest, right on our doorstep. We try to capture the essence of running through a landscape of granite spires and towering ponderosa pines, and we want you to have fun while you're here. Please respect and follow the guidelines of our race, the National Park Service, and other local authorities.",
       "quote": "There are no words that can tell the hidden spirit of the wilderness.",

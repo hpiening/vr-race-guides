@@ -118,6 +118,8 @@ export interface WelcomeData {
   quoteAttribution?: string
   closing?: string
   note?: string
+  /** Optional image shown in the left column, under the heading (Trailhead). */
+  imageUrl?: string
 }
 
 export interface EventData {

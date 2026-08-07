@@ -2,6 +2,7 @@
 import { WelcomeData } from '@/types/event'
 import { useEditOptional } from '@/lib/editContext'
 import EditableText from './edit/EditableText'
+import EditableImage from './edit/EditableImage'
 
 type Props = { data: WelcomeData; basePath?: string; theme?: 'classic' | 'trailhead' }
 
@@ -13,6 +14,7 @@ export default function WelcomeSection({ data, basePath = 'sections.welcome', th
     return (
       <section className="guide-welcome bg-vr-offwhite px-6 md:px-12 py-20 md:py-[100px]">
         <div className="max-w-[1180px] mx-auto grid gap-12 md:gap-16 md:grid-cols-[0.95fr_1.25fr] items-start">
+          <div>
           {editing ? (
             <h2 className="font-display uppercase text-vr-forest m-0 leading-[0.9]" style={{ fontSize: 'clamp(40px,5.4vw,76px)' }}>
               <EditableText as="span" value={data.heading} path={`${basePath}.heading`} />
@@ -47,6 +49,15 @@ export default function WelcomeSection({ data, basePath = 'sections.welcome', th
               </div>
             )
           })()}
+          {(data.imageUrl || editing) && (
+            editing ? (
+              <div className="mt-8"><EditableImage path={`${basePath}.imageUrl`} label="Welcome image" /></div>
+            ) : (
+              /* eslint-disable-next-line @next/next/no-img-element */
+              <img src={data.imageUrl} alt="" className="mt-8 w-full rounded-lg object-cover aspect-square" />
+            )
+          )}
+          </div>
 
           <div>
             <div className="font-body text-vr-forest leading-[1.7] mb-6 whitespace-pre-line" style={{ fontSize: '18px' }}>
