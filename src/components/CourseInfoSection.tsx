@@ -4,6 +4,7 @@ import { EventData } from '@/types/event'
 import { useEditOptional } from '@/lib/editContext'
 import EditableText from './edit/EditableText'
 import EditableUrl from './edit/EditableUrl'
+import EditableImage from './edit/EditableImage'
 import RideWithGpsField from './edit/RideWithGpsField'
 import { ListControls, AddButton } from './edit/ListControls'
 import { StatChips, StatTiles, Accordion, RichBody } from './trailhead/Shared'
@@ -157,16 +158,26 @@ function CourseInfoTrailhead({ data, basePath, editing }: { data: EventData['sec
           <div key={i} className={`grid gap-6 items-start mb-10 ${(hasMap || editing) ? 'md:grid-cols-[1.5fr_1fr]' : ''}`}>
             {(hasMap || editing) && (
             <div className="border border-vr-cream/20 rounded-lg overflow-hidden">
-              {d.embedUrl ? (
-                <>
-                  <iframe src={d.embedUrl} title={`${d.name} route map`} style={{ width: '100%', height: '440px', border: 'none', display: 'block' }} loading="lazy" scrolling="no" className="print:hidden" />
-                  <div className="hidden print:block px-5 py-4 text-sm font-body text-vr-cream/70">View route at: {d.mapUrl}</div>
-                </>
-              ) : d.mapImageUrl ? (
+              {d.embedUrl && (
+                <iframe src={d.embedUrl} title={`${d.name} route map`} style={{ width: '100%', height: '440px', border: 'none', display: 'block' }} loading="lazy" scrolling="no" className="print:hidden" />
+              )}
+              {/* Static course map: on screen only when there's no live embed;
+                  in the PDF it's shown in place of the (unprintable) iframe. */}
+              {d.mapImageUrl && (
                 /* eslint-disable-next-line @next/next/no-img-element */
-                <img src={d.mapImageUrl} alt={`${d.name} course map`} className="w-full object-cover aspect-[16/10]" />
-              ) : null}
+                <img src={d.mapImageUrl} alt={`${d.name} course map`} className={`w-full object-cover aspect-[16/10] ${d.embedUrl ? 'hidden print:block' : ''}`} />
+              )}
+              {/* No static image yet: reserve the space in the PDF so a course
+                  map can be dropped in later (the live embed can't print). */}
+              {d.embedUrl && !d.mapImageUrl && (
+                <div className="hidden print:flex aspect-[16/10] items-center justify-center">
+                  <span className="font-micro uppercase tracking-[0.14em] text-vr-cream/45 text-[11px]">Course map</span>
+                </div>
+              )}
               <RideWithGpsField itemPath={`${basePath}.distances.${i}`} />
+              {editing && (
+                <div className="px-3 pb-3"><EditableImage path={`${basePath}.distances.${i}.mapImageUrl`} label="Course map image (shows in the PDF export)" /></div>
+              )}
             </div>
             )}
             <div className="flex flex-col gap-4">

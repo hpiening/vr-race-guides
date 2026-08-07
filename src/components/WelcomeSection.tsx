@@ -11,7 +11,7 @@ export default function WelcomeSection({ data, basePath = 'sections.welcome', th
 
   if (theme === 'trailhead') {
     return (
-      <section className="bg-vr-offwhite px-6 md:px-12 py-20 md:py-[100px]">
+      <section className="guide-welcome bg-vr-offwhite px-6 md:px-12 py-20 md:py-[100px]">
         <div className="max-w-[1180px] mx-auto grid gap-12 md:gap-16 md:grid-cols-[0.95fr_1.25fr] items-start">
           {editing ? (
             <h2 className="font-display uppercase text-vr-forest m-0 leading-[0.9]" style={{ fontSize: 'clamp(40px,5.4vw,76px)' }}>
@@ -86,7 +86,7 @@ export default function WelcomeSection({ data, basePath = 'sections.welcome', th
   }
 
   return (
-    <section className="py-14 md:py-20 px-6 md:px-12 bg-vr-offwhite border-b border-vr-forest/10">
+    <section className="guide-welcome py-14 md:py-20 px-6 md:px-12 bg-vr-offwhite border-b border-vr-forest/10">
       <div className="max-w-3xl mx-auto">
         <h2 className="font-display text-3xl md:text-4xl uppercase text-vr-forest mb-6 leading-tight">
           <EditableText as="span" value={data.heading} path={`${basePath}.heading`} />

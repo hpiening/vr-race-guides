@@ -165,16 +165,26 @@ function RaceMorningTrailhead({ data, basePath, editing }: { data: EventData['se
         {data.courses && data.courses.length > 0 && data.courses.map((c, i) => (
           <div key={i} className="grid gap-6 md:grid-cols-[1.5fr_1fr] items-start mb-10">
             <div className="border border-vr-cream/20 rounded-lg overflow-hidden">
-              {c.embedUrl ? (
-                <>
-                  <iframe src={c.embedUrl} title={`${c.name} route map`} style={{ width: '100%', height: '440px', border: 'none', display: 'block' }} loading="lazy" scrolling="no" className="print:hidden" />
-                  <div className="hidden print:block px-5 py-4 text-sm font-body text-vr-cream/70">View route at: {c.mapUrl}</div>
-                </>
-              ) : c.mapImageUrl ? (
+              {c.embedUrl && (
+                <iframe src={c.embedUrl} title={`${c.name} route map`} style={{ width: '100%', height: '440px', border: 'none', display: 'block' }} loading="lazy" scrolling="no" className="print:hidden" />
+              )}
+              {/* Static course map: on screen only when there's no live embed;
+                  in the PDF it's shown in place of the (unprintable) iframe. */}
+              {c.mapImageUrl && (
                 /* eslint-disable-next-line @next/next/no-img-element */
-                <img src={c.mapImageUrl} alt={`${c.name} course map`} className="w-full object-cover aspect-[16/10]" />
-              ) : null}
+                <img src={c.mapImageUrl} alt={`${c.name} course map`} className={`w-full object-cover aspect-[16/10] ${c.embedUrl ? 'hidden print:block' : ''}`} />
+              )}
+              {/* No static image yet: reserve the space in the PDF so a course
+                  map can be dropped in later (the live embed can't print). */}
+              {c.embedUrl && !c.mapImageUrl && (
+                <div className="hidden print:flex aspect-[16/10] items-center justify-center">
+                  <span className="font-micro uppercase tracking-[0.14em] text-vr-cream/45 text-[11px]">Course map</span>
+                </div>
+              )}
               <RideWithGpsField itemPath={`${basePath}.courses.${i}`} />
+              {editing && (
+                <div className="px-3 pb-3"><EditableImage path={`${basePath}.courses.${i}.mapImageUrl`} label="Course map image (shows in the PDF export)" /></div>
+              )}
             </div>
             <div className="flex flex-col gap-4">
               <EditableText as="div" className="font-heading uppercase text-vr-cream text-[20px] tracking-[0.02em]" value={c.name} path={`${basePath}.courses.${i}.name`} />

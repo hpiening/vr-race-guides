@@ -269,6 +269,14 @@ body {
   /* Keep each schedule day (and each row) from splitting across pages */
   .tl-print-day { break-inside: avoid; }
   .tl-print-row { break-inside: avoid; }
+
+  /* The OSM location map is an iframe (hidden above); drop its empty framed box
+     so the PDF doesn't show a big blank rectangle. The Google/Apple Maps links
+     and the address below it remain. */
+  .map-embed-frame { display: none !important; }
+
+  /* Give the Welcome note its own page in the exported PDF. */
+  .guide-welcome { break-before: page; break-after: page; }
 }
 
 /* ─── Trailhead theme — native <details> accordions ─────────────── */

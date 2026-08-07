@@ -35,7 +35,7 @@ export default function MapEmbed({ lat, lng, label, mapsUrl, zoom = 15, dark = t
 
   return (
     <div className="flex flex-col gap-3">
-      <div className="aspect-[4/3] w-full rounded-lg overflow-hidden border border-vr-forest/10">
+      <div className="map-embed-frame aspect-[4/3] w-full rounded-lg overflow-hidden border border-vr-forest/10">
         <iframe
           title={label}
           src={embedSrc}
