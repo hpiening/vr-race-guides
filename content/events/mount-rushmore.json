@@ -566,7 +566,7 @@
       "restaurantsIntro": "A few local food, coffee, and scenic-drive picks in and around Keystone.",
       "restaurants": [
         {
-          "name": "[Ruby House Restaurant](https://www.google.com/maps/search/?api=1&query=Ruby+House+Restaurant+Keystone+SD)",
+          "name": "[Ruby House Restaurant](https://rubyhousekeystone.com/)",
           "description": "A Keystone landmark on Winter Street — hearty plates and Old West charm a short walk from the finish.",
           "url": "",
           "icon": "🍽️",
