@@ -167,7 +167,8 @@
             },
             {
               "time": "6:50 AM ",
-              "label": "NATIONAL ANTHEM STARTS"
+              "label": "NATIONAL ANTHEM STARTS",
+              "highlight": false
             },
             {
               "time": "7:00 AM",
