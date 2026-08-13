@@ -128,7 +128,7 @@
             {
               "time": "12:00 PM",
               "label": "RACE EXPO & BIB PICKUP OPEN",
-              "note": "*We cannot accommodate runners before 12:00 PM\n\nBYOB: Our expo is bag-free, so don’t forget to Bring Your Own Bag!"
+              "note": "*We cannot accommodate runners before 12:00 PM.\n\nBYOB: Our expo is bag-free, so don’t forget to Bring Your Own Bag!"
             },
             {
               "time": "5:00 PM",
@@ -180,7 +180,7 @@
             },
             {
               "time": "6:45 AM",
-              "label": "LINE UP & LAST GEAR CHECK"
+              "label": "LINE UP & LAST CALL FOR GEAR CHECK"
             },
             {
               "time": "6:50 AM",
