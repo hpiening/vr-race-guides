@@ -326,7 +326,7 @@
     },
     "raceMorning": {
       "enabled": true,
-      "navLabel": "Race Morning",
+      "navLabel": "Start Line",
       "timelineLabel": "Morning Schedule",
       "parkingOptions": [
         {

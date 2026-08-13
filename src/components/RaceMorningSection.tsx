@@ -7,7 +7,7 @@ import EditableUrl from './edit/EditableUrl'
 import EditableImage from './edit/EditableImage'
 import RideWithGpsField from './edit/RideWithGpsField'
 import { ListControls, AddButton } from './edit/ListControls'
-import { TrailHeader, StatChips, StatTiles, Accordion } from './trailhead/Shared'
+import { StatChips, StatTiles, Accordion, rwgStaticMap } from './trailhead/Shared'
 
 type Props = { data: EventData['sections']['raceMorning']; basePath?: string; theme?: 'classic' | 'trailhead' }
 
@@ -159,7 +159,17 @@ function RaceMorningTrailhead({ data, basePath, editing }: { data: EventData['se
   return (
     <section id="race-morning" className="bg-vr-deep px-6 md:px-12 py-20 md:py-[104px]">
       <div className="max-w-[1180px] mx-auto">
-        <TrailHeader dark eyebrow="Getting to the" title={data.navLabel || 'Race Morning'} className="mb-10" />
+        {/* Editable header: eyebrow + title (title also drives the nav label). */}
+        <div className="mb-10">
+          <div className="leading-[0.9]">
+            <span className="font-accent text-vr-sky" style={{ fontSize: 'clamp(20px,2.2vw,28px)' }}>
+              <EditableText as="span" value={data.eyebrow || 'Getting to the'} path={`${basePath}.eyebrow`} />
+            </span>
+          </div>
+          <h2 className="font-display uppercase text-vr-cream leading-[0.9] mt-0.5 m-0" style={{ fontSize: 'clamp(40px,5.6vw,76px)' }}>
+            <EditableText as="span" value={data.navLabel || 'Race Morning'} path={`${basePath}.navLabel`} />
+          </h2>
+        </div>
 
         {/* Course route + stats */}
         {data.courses && data.courses.length > 0 && data.courses.map((c, i) => (
@@ -174,12 +184,17 @@ function RaceMorningTrailhead({ data, basePath, editing }: { data: EventData['se
                 /* eslint-disable-next-line @next/next/no-img-element */
                 <img src={c.mapImageUrl} alt={`${c.name} course map`} className={`w-full object-cover aspect-[16/10] ${c.embedUrl ? 'hidden print:block' : ''}`} />
               )}
-              {/* No static image yet: reserve the space in the PDF so a course
-                  map can be dropped in later (the live embed can't print). */}
+              {/* No manual static image: fall back to RideWithGPS's static route
+                  render so the PDF shows the same map as the live embed. */}
               {c.embedUrl && !c.mapImageUrl && (
-                <div className="hidden print:flex aspect-[16/10] items-center justify-center">
-                  <span className="font-micro uppercase tracking-[0.14em] text-vr-cream/45 text-[11px]">Course map</span>
-                </div>
+                rwgStaticMap(c.embedUrl) ? (
+                  /* eslint-disable-next-line @next/next/no-img-element */
+                  <img src={rwgStaticMap(c.embedUrl)} alt={`${c.name} course map`} className="hidden print:block w-full object-contain aspect-[16/10] bg-white" />
+                ) : (
+                  <div className="hidden print:flex aspect-[16/10] items-center justify-center">
+                    <span className="font-micro uppercase tracking-[0.14em] text-vr-cream/45 text-[11px]">Course map</span>
+                  </div>
+                )
               )}
               <RideWithGpsField itemPath={`${basePath}.courses.${i}`} />
               {editing && (

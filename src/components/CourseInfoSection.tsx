@@ -7,7 +7,7 @@ import EditableUrl from './edit/EditableUrl'
 import EditableImage from './edit/EditableImage'
 import RideWithGpsField from './edit/RideWithGpsField'
 import { ListControls, AddButton } from './edit/ListControls'
-import { StatChips, StatTiles, Accordion, RichBody } from './trailhead/Shared'
+import { StatChips, StatTiles, Accordion, RichBody, rwgStaticMap } from './trailhead/Shared'
 
 type Props = { data: EventData['sections']['courseInfo']; basePath?: string; theme?: 'classic' | 'trailhead' }
 
@@ -167,12 +167,19 @@ function CourseInfoTrailhead({ data, basePath, editing }: { data: EventData['sec
                 /* eslint-disable-next-line @next/next/no-img-element */
                 <img src={d.mapImageUrl} alt={`${d.name} course map`} className={`w-full object-cover aspect-[16/10] ${d.embedUrl ? 'hidden print:block' : ''}`} />
               )}
-              {/* No static image yet: reserve the space in the PDF so a course
-                  map can be dropped in later (the live embed can't print). */}
+              {/* No manual static image: fall back to RideWithGPS's own static
+                  render of the route so the PDF shows the same map as the live
+                  embed (which can't print). Keep a labelled placeholder only if
+                  the embed isn't a RideWithGPS route. */}
               {d.embedUrl && !d.mapImageUrl && (
-                <div className="hidden print:flex aspect-[16/10] items-center justify-center">
-                  <span className="font-micro uppercase tracking-[0.14em] text-vr-cream/45 text-[11px]">Course map</span>
-                </div>
+                rwgStaticMap(d.embedUrl) ? (
+                  /* eslint-disable-next-line @next/next/no-img-element */
+                  <img src={rwgStaticMap(d.embedUrl)} alt={`${d.name} course map`} className="hidden print:block w-full object-contain aspect-[16/10] bg-white" />
+                ) : (
+                  <div className="hidden print:flex aspect-[16/10] items-center justify-center">
+                    <span className="font-micro uppercase tracking-[0.14em] text-vr-cream/45 text-[11px]">Course map</span>
+                  </div>
+                )
               )}
               <RideWithGpsField itemPath={`${basePath}.distances.${i}`} />
               {editing && (

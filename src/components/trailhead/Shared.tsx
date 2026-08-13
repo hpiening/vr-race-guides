@@ -2,6 +2,18 @@ import { ReactNode } from 'react'
 import { StatTile } from '@/types/event'
 import { hasMarkdown, renderMarkdown } from '@/lib/markdown'
 
+/**
+ * Derive a static route map image (PNG) from a RideWithGPS embed URL. The live
+ * embed is an <iframe> that can't render in the PDF export, so the print view
+ * falls back to RideWithGPS's own static render of the same route. Returns
+ * undefined for non-RideWithGPS embeds (caller keeps its placeholder).
+ */
+export function rwgStaticMap(embedUrl?: string): string | undefined {
+  if (!embedUrl || !/ridewithgps\.com/.test(embedUrl)) return undefined
+  const m = embedUrl.match(/[?&]id=(\d+)/)
+  return m ? `https://ridewithgps.com/routes/${m[1]}/full.png` : undefined
+}
+
 /** Render a body value: parse inline Markdown (links/bold/italic) for strings. */
 export function RichBody({ value }: { value: ReactNode }) {
   if (typeof value === 'string' && hasMarkdown(value)) {

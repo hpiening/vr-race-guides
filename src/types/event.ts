@@ -211,7 +211,10 @@ export interface EventData {
     }
     raceMorning: {
       enabled: boolean
+      /** Header title (also the sticky-nav label). Editable in /edit. */
       navLabel?: string
+      /** Small italic eyebrow above the header title. Defaults to "Getting to the". */
+      eyebrow?: string
       timelineLabel?: string
       parkingOptions: ParkingOption[]
       parkingMapImageUrl?: string
