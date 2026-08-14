@@ -284,7 +284,7 @@
       "infoBlocks": [
         {
           "heading": "Pricing",
-          "body": "[Add campground pricing here — mirror the options and rates from vacationraces.com/rushmore (tent site, RV, rental tent, etc.). Editable in /edit.]"
+          "body": "Your reservation includes a campsite from 3:00 PM Thursday to 9:00 AM Sunday, even if you don't stay for the duration.\n\n**$110** — Campsite only (bring your own tent)\n**$135** — Campsite + 4-person tent rental\n**$155** — Campsite + 6-person tent rental\n**$175** — Trailer / RV / Car (no RV hookups, limited to 31')"
         },
         {
           "heading": "Check-In",
@@ -296,7 +296,7 @@
         },
         {
           "heading": "Rules",
-          "body": "[Add campground rules here — mirror the guidelines from vacationraces.com/rushmore (quiet hours, fires, pets, generators, leave-no-trace, etc.). Editable in /edit.]"
+          "body": "Quiet Time is observed from 10:00 PM to 6:00 AM nightly. Since we are in close quarters, it's important to keep noise levels down out of respect for our neighbors. We follow forest-service regulations and property-owner guidelines regarding fire safety. Our goal is to be responsible stewards of the environments and locations where we host races. At times, even propane stoves may not be allowed if they pose a risk for forest fires.\n\nCamping is a great way to experience Mount Rushmore! You should register for your campsite now and reserve your spot — sign up for the VR Campground when you register for the race!"
         }
       ]
     },
