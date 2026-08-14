@@ -120,6 +120,22 @@
       "backgroundImage": "/images/events/mount-rushmore-schedule-bg.jpg",
       "days": [
         {
+          "id": "day-3",
+          "label": "Thursday ",
+          "date": "September 10, 2026",
+          "items": [
+            {
+              "time": "3:00 PM ",
+              "label": "CAMPGROUND CHECK-IN OPENS"
+            },
+            {
+              "time": "7:00 PM ",
+              "label": "CAMPGROUND CHECK-IN CLOSES",
+              "note": "*Runners can still access their campsite if checking in after 7pm, customers renting tents should plan to arrive within the check-in hours"
+            }
+          ]
+        },
+        {
           "id": "friday",
           "label": "Friday / Expo & Bib Pickup",
           "date": "September 11, 2026",
@@ -190,6 +206,17 @@
             {
               "time": "11:30 AM",
               "label": "FINISH LINE CLOSES"
+            }
+          ]
+        },
+        {
+          "id": "day-4",
+          "label": "Sunday ",
+          "date": "September 13, 2026",
+          "items": [
+            {
+              "time": "9:00 AM",
+              "label": "CAMPGROUND CHECK OUT"
             }
           ]
         }
