@@ -10,6 +10,7 @@ import PhotoBand from '@/components/PhotoBand'
 import WelcomeSection from '@/components/WelcomeSection'
 import ScheduleSection from '@/components/ScheduleSection'
 import ExpoSection from '@/components/ExpoSection'
+import CampingSection from '@/components/CampingSection'
 import CourseInfoSection from '@/components/CourseInfoSection'
 import RaceMorningSection from '@/components/RaceMorningSection'
 import SpectatorsSection from '@/components/SpectatorsSection'
@@ -163,6 +164,7 @@ export default function EditPage() {
         {data.sections.welcome && <WelcomeSection data={data.sections.welcome} basePath="sections.welcome" theme={theme} />}
         {data.sections.schedule && <ScheduleSection data={data.sections.schedule} eventSlug={slug} basePath="sections.schedule" theme={theme} />}
         {data.sections.expo && <ExpoSection data={data.sections.expo} basePath="sections.expo" theme={theme} />}
+        {data.sections.camping && <CampingSection data={data.sections.camping} basePath="sections.camping" theme={theme} />}
         {theme === 'trailhead' && data.sections.courseInfo && <PhotoBand title="On the Course" image={data.photoBands?.onCourse} imagePath="photoBands.onCourse" />}
         {data.sections.courseInfo && <CourseInfoSection data={data.sections.courseInfo} basePath="sections.courseInfo" theme={theme} />}
         {theme === 'trailhead' && data.sections.raceMorning && <PhotoBand title="Race Morning" image={data.photoBands?.raceMorning} imagePath="photoBands.raceMorning" />}

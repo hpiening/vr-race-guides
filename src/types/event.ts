@@ -106,6 +106,23 @@ export interface ChallengeEventsData {
   events: ChallengeEvent[]
 }
 
+export interface CampingData {
+  enabled: boolean
+  /** Italic eyebrow above the heading. Defaults to "Stay with us". */
+  eyebrow?: string
+  /** Section heading. Defaults to "VR Campground". */
+  heading?: string
+  /** Intro / overview paragraphs (supports **bold** and [links](url); newlines kept). */
+  overview: string
+  /** Optional campground photo (right of the overview). */
+  imageUrl?: string
+  /** Optional reservation button. */
+  bookingUrl?: string
+  bookingLabel?: string
+  /** Reference cards: Pricing, Check-In, Check-Out, Rules, etc. */
+  infoBlocks?: InfoBlock[]
+}
+
 export interface SectionBreakConfig {
   bgImage?: string
 }
@@ -209,6 +226,8 @@ export interface EventData {
       notes: string[]
       infoBlocks?: InfoBlock[]
     }
+    /** Optional VR Campground section (renders between Expo and On-the-Course). */
+    camping?: CampingData
     raceMorning: {
       enabled: boolean
       /** Header title (also the sticky-nav label). Editable in /edit. */

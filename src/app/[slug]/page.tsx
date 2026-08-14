@@ -10,6 +10,7 @@ import PhotoBand from '@/components/PhotoBand'
 import WelcomeSection from '@/components/WelcomeSection'
 import ScheduleSection from '@/components/ScheduleSection'
 import ExpoSection from '@/components/ExpoSection'
+import CampingSection from '@/components/CampingSection'
 import RaceMorningSection from '@/components/RaceMorningSection'
 import CourseInfoSection from '@/components/CourseInfoSection'
 import SpectatorsSection from '@/components/SpectatorsSection'
@@ -62,6 +63,11 @@ function buildSearchIndex(event: EventData): SearchItem[] {
     sections.expo.notes.forEach(n => add('Expo', 'expo', n))
     sections.expo.infoBlocks?.forEach(b => add('Expo', 'expo', `${b.heading} ${b.body}`))
     add('Expo', 'expo', `${sections.expo.locationName} ${sections.expo.date}`)
+  }
+
+  if (sections.camping?.enabled) {
+    add('Campground', 'camping', `${sections.camping.heading ?? 'VR Campground'} ${sections.camping.overview}`)
+    sections.camping.infoBlocks?.forEach(b => add('Campground', 'camping', `${b.heading} ${b.body}`))
   }
 
   const ciLabel = sections.courseInfo.navLabel || 'Course Info'
@@ -144,6 +150,7 @@ export default async function EventPage({ params }: { params: { slug: string } }
   const navItems = [
     sections.schedule.enabled             && { id: 'schedule',          label: 'Schedule' },
     sections.expo.enabled                 && { id: 'expo',              label: 'Expo' },
+    sections.camping?.enabled             && { id: 'camping',           label: 'Campground' },
     sections.courseInfo.enabled           && { id: 'course-info',       label: sections.courseInfo.navLabel || 'Course Info' },
     sections.raceMorning.enabled          && { id: 'race-morning',      label: sections.raceMorning.navLabel || 'Race Morning' },
     sections.spectators.enabled           && { id: 'spectators',        label: 'Spectators' },
@@ -166,6 +173,7 @@ export default async function EventPage({ params }: { params: { slug: string } }
         {sections.welcome?.enabled        && <WelcomeSection     data={sections.welcome} theme={theme} />}
         {sections.schedule.enabled        && <ScheduleSection    data={sections.schedule} eventSlug={event.slug} theme={theme} />}
         {sections.expo.enabled            && <ExpoSection        data={sections.expo} theme={theme} />}
+        {sections.camping?.enabled        && <CampingSection     data={sections.camping} theme={theme} />}
         {isTrail && sections.courseInfo.enabled && <PhotoBand title="On the Course" image={event.photoBands?.onCourse} />}
         {sections.courseInfo.enabled      && <CourseInfoSection  data={sections.courseInfo} theme={theme} />}
         {isTrail && sections.raceMorning.enabled && <PhotoBand title="Race Morning" image={event.photoBands?.raceMorning} />}

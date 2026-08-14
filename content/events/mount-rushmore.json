@@ -273,6 +273,33 @@
       ],
       "mapImageUrl": "/images/uploads/1785775021635-51047-exterior-day-1.webp"
     },
+    "camping": {
+      "enabled": true,
+      "eyebrow": "Stay with us",
+      "heading": "VR Campground",
+      "overview": "The most fun place to stay during race weekend is the official Vacation Races Campground! The Vacation Races campground will be next door to the Ghost Canyon Getaway (the start of the race) in a large, open grassy field.\n\nAs luck would have it, we have found a property owner with a perfect location for the campground, as it is next to the start line, within only a few hundred yards with lots of space. If you'd like to see it for yourself, look up Ghost Canyon Getaway on Google Maps; it is the field immediately east of the primary venue. You'll be able to wake up just mere steps from your starting line, and then shuttles will return you from the finish back to the campground!\n\nThere is plenty of space for campers, but remember that this is primitive camping and will be treated like a large group site. You will have neighbors and make new friends.\n\nWe will provide toilets and water. You can sleep in your car, tent, hammock, an RV (no hookups), or rent a tent from us for an additional charge. Whichever you choose, you'll need to reserve a spot. Campsites do not include cots, sleeping bags, pillows, headlamps, cooking stoves, or supplies. Campfires are subject to local regulations and property owner rules — please check before lighting any fires.",
+      "imageUrl": "",
+      "bookingUrl": "https://www.vacationraces.com/rushmore",
+      "bookingLabel": "Reserve your campsite",
+      "infoBlocks": [
+        {
+          "heading": "Pricing",
+          "body": "[Add campground pricing here — mirror the options and rates from vacationraces.com/rushmore (tent site, RV, rental tent, etc.). Editable in /edit.]"
+        },
+        {
+          "heading": "Check-In",
+          "body": "**Thursday, September 10 — 3:00 PM to 7:00 PM**\n\nUpon arrival, you'll be able to pick the location you want (first come, first served). The price is for all days and times listed, even if you don't stay for the duration.\n\nAfter-hours check-in is allowed, but if you are renting a tent, please plan to arrive within the check-in hours. Anyone checking in after hours on Thursday, or on Friday anytime, should plan to check in at Runner Services at the Expo on Friday. If you need to make special arrangements for your arrival, please email us at info@vacationraces.com."
+        },
+        {
+          "heading": "Check-Out",
+          "body": "**Sunday, September 13 — 9:00 AM**\n\nIf you reserved a tent, you'll need to turn it in to the camp hosts before you leave. If there are no camp hosts around when you depart, please leave your tent on the ground in the same area where you picked it up. Damage due to neglect and/or failure to return your tent at check-out may result in an invoice to cover repairs or replacement."
+        },
+        {
+          "heading": "Rules",
+          "body": "[Add campground rules here — mirror the guidelines from vacationraces.com/rushmore (quiet hours, fires, pets, generators, leave-no-trace, etc.). Editable in /edit.]"
+        }
+      ]
+    },
     "courseInfo": {
       "enabled": true,
       "heading": "Course Info",
