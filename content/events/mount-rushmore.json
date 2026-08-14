@@ -448,7 +448,8 @@
         }
       ],
       "parkingMapImageUrl": "/images/uploads/1786648794991-rushmore-parking-and-shuttles.jpg",
-      "dropOffImageUrl": "/images/uploads/1786648808025-rushmore-runner-dropoff.jpg"
+      "dropOffImageUrl": "/images/uploads/1786648808025-rushmore-runner-dropoff.jpg",
+      "eyebrow": "Getting to the"
     },
     "spectators": {
       "enabled": true,
