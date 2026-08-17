@@ -460,6 +460,16 @@
         "Roads Closed — Iron Mountain Road is closed for the race. From Ghost Canyon, take Box Canyon Rd, Bender Ridge Rd, Battle Creek Rd, then SD-40 West to Keystone.",
         "Park in Keystone — use public parking near the finish: the lot at Reed & Winter St, the National Presidential Wax Museum, or Keystone Tramway Adventures. Do not park in private lots.",
         "Runners only — the runner recovery area and its food and recovery supplies are for runners only, and the medical tent is for athletes only. Family members are not allowed inside."
+      ],
+      "images": [
+        {
+          "title": "Spectator Parking",
+          "imageUrl": "/images/events/mount-rushmore-spectator-parking.jpg"
+        },
+        {
+          "title": "Finish Line",
+          "imageUrl": "/images/events/mount-rushmore-finish-line.jpg"
+        }
       ]
     },
     "postRace": {

@@ -3,8 +3,9 @@ import SectionWrapper from './SectionWrapper'
 import { EventData } from '@/types/event'
 import { useEditOptional } from '@/lib/editContext'
 import EditableText from './edit/EditableText'
+import EditableImage from './edit/EditableImage'
 import { ListControls, AddButton } from './edit/ListControls'
-import { TrailHeader } from './trailhead/Shared'
+import { TrailHeader, PhotoFrame } from './trailhead/Shared'
 
 type Props = { data: EventData['sections']['spectators']; basePath?: string; theme?: 'classic' | 'trailhead' }
 
@@ -95,6 +96,32 @@ function SpectatorsTrailhead({ data, basePath, editing }: { data: EventData['sec
             <div className="font-body text-vr-cream/85 leading-[1.55] flex-1 min-w-[260px]" style={{ fontSize: '14px' }}>
               <EditableText as="div" value={data.shuttleAccess ?? ''} path={`${basePath}.shuttleAccess`} />
             </div>
+          </div>
+        )}
+
+        {/* Titled photos (e.g. Spectator Parking, Finish Line). Each slot has an
+            editable image "add/change" control in /edit. */}
+        {((data.images && data.images.length > 0) || editing) && (
+          <div className="grid gap-6 sm:grid-cols-2 mt-8">
+            {(data.images ?? []).map((img, i) => {
+              const ip = `${basePath}.images.${i}`
+              return (
+                <div key={i}>
+                  <div className="flex items-start gap-2 mb-3">
+                    <EditableText as="h3" className="font-heading uppercase text-vr-cream flex-1 text-[16px] tracking-[0.04em]" value={img.title} path={`${ip}.title`} placeholder="Image title" />
+                    <ListControls path={`${basePath}.images`} index={i} count={data.images!.length} />
+                  </div>
+                  {editing ? (
+                    <EditableImage path={`${ip}.imageUrl`} label={`${img.title || 'Photo'} image`} ratio="4 / 3" />
+                  ) : (
+                    <div className="border border-vr-cream/20 rounded-lg overflow-hidden">
+                      <PhotoFrame src={img.imageUrl} label={img.title || 'Photo'} ratio="4 / 3" dark />
+                    </div>
+                  )}
+                </div>
+              )
+            })}
+            <div className="sm:col-span-2"><AddButton path={`${basePath}.images`} item={{ title: 'New image', imageUrl: '' }} label="Add image" /></div>
           </div>
         )}
       </div>

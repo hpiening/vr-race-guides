@@ -261,6 +261,8 @@ export interface EventData {
       notes: string
       warnings: string[]
       shuttleAccess?: string
+      /** Optional titled photos below the section (e.g. Spectator Parking, Finish Line). Editable in /edit. */
+      images?: Array<{ title: string; imageUrl?: string }>
     }
     postRace: {
       enabled: boolean
