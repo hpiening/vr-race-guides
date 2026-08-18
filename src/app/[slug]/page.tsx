@@ -11,6 +11,7 @@ import WelcomeSection from '@/components/WelcomeSection'
 import ScheduleSection from '@/components/ScheduleSection'
 import ExpoSection from '@/components/ExpoSection'
 import CampingSection from '@/components/CampingSection'
+import FestivalSection from '@/components/FestivalSection'
 import RaceMorningSection from '@/components/RaceMorningSection'
 import CourseInfoSection from '@/components/CourseInfoSection'
 import SpectatorsSection from '@/components/SpectatorsSection'
@@ -60,15 +61,26 @@ function buildSearchIndex(event: EventData): SearchItem[] {
   }
 
   if (sections.expo.enabled) {
-    sections.expo.notes.forEach(n => add('Expo', 'expo', n))
-    sections.expo.infoBlocks?.forEach(b => add('Expo', 'expo', `${b.heading} ${b.body}`))
-    add('Expo', 'expo', `${sections.expo.locationName} ${sections.expo.date}`)
+    const expoLabel = sections.expo.navLabel || 'Expo'
+    sections.expo.notes.forEach(n => add(expoLabel, 'expo', n))
+    sections.expo.infoBlocks?.forEach(b => add(expoLabel, 'expo', `${b.heading} ${b.body}`))
+    add(expoLabel, 'expo', `${sections.expo.locationName} ${sections.expo.date}`)
   }
 
   if (sections.camping?.enabled) {
     add('Campground', 'camping', `${sections.camping.heading ?? 'VR Campground'} ${sections.camping.overview}`)
     sections.camping.infoBlocks?.forEach(b => add('Campground', 'camping', `${b.heading} ${b.body}`))
   }
+
+  sections.festival?.forEach(f => {
+    if (!f.enabled) return
+    add(f.navLabel, f.id, `${f.heading} ${f.intro ?? ''}`)
+    f.groups?.forEach(g => {
+      add(f.navLabel, f.id, `${g.heading} ${g.intro ?? ''}`)
+      g.cards.forEach(c => add(f.navLabel, f.id, `${c.eyebrow ?? ''} ${c.title} ${c.body ?? ''}`))
+    })
+    f.infoBlocks?.forEach(b => add(f.navLabel, f.id, `${b.heading} ${b.body}`))
+  })
 
   const ciLabel = sections.courseInfo.navLabel || 'Course Info'
   if (sections.courseInfo.enabled) {
@@ -110,11 +122,12 @@ function buildSearchIndex(event: EventData): SearchItem[] {
   }
 
   if (sections.experiences.enabled) {
-    add('Experiences', 'experiences', sections.experiences.lodging.description)
-    sections.experiences.activities.forEach(a => add('Experiences', 'experiences', `${a.name} ${a.description}`))
-    sections.experiences.hikes.forEach(h => add('Experiences', 'experiences', `${h.name} ${h.distance} ${h.difficulty}`))
-    sections.experiences.sights?.forEach(s => add('Experiences', 'experiences', `${s.name} ${s.description}`))
-    sections.experiences.restaurants.forEach(r => add('Experiences', 'experiences', `${r.name} ${r.description}`))
+    const expLabel = sections.experiences.navLabel || 'Experiences'
+    add(expLabel, 'experiences', sections.experiences.lodging.description)
+    sections.experiences.activities.forEach(a => add(expLabel, 'experiences', `${a.name} ${a.description}`))
+    sections.experiences.hikes.forEach(h => add(expLabel, 'experiences', `${h.name} ${h.distance} ${h.difficulty}`))
+    sections.experiences.sights?.forEach(s => add(expLabel, 'experiences', `${s.name} ${s.description}`))
+    sections.experiences.restaurants.forEach(r => add(expLabel, 'experiences', `${r.name} ${r.description}`))
   }
 
   if (sections.faqs.enabled) {
@@ -149,14 +162,17 @@ export default async function EventPage({ params }: { params: { slug: string } }
 
   const navItems = [
     sections.schedule.enabled             && { id: 'schedule',          label: 'Schedule' },
-    sections.expo.enabled                 && { id: 'expo',              label: 'Expo' },
+    sections.expo.enabled                 && { id: 'expo',              label: sections.expo.navLabel || 'Expo' },
     sections.camping?.enabled             && { id: 'camping',           label: 'Campground' },
+    ...(sections.festival ?? [])
+      .filter(f => f.enabled)
+      .map(f => ({ id: f.id, label: f.navLabel })),
     sections.courseInfo.enabled           && { id: 'course-info',       label: sections.courseInfo.navLabel || 'Course Info' },
     sections.raceMorning.enabled          && { id: 'race-morning',      label: sections.raceMorning.navLabel || 'Race Morning' },
     sections.spectators.enabled           && { id: 'spectators',        label: 'Spectators' },
-    sections.postRace.enabled             && { id: 'post-race',         label: 'Post-Race' },
+    sections.postRace.enabled             && { id: 'post-race',         label: sections.postRace.navLabel || 'Post-Race' },
     sections.challengeEvents?.enabled     && { id: 'challenge-events',  label: 'Challenge Events' },
-    sections.experiences.enabled          && { id: 'experiences',       label: 'Experiences' },
+    sections.experiences.enabled          && { id: 'experiences',       label: sections.experiences.navLabel || 'Experiences' },
     sections.faqs.enabled                 && { id: 'faqs',              label: 'FAQs' },
   ].filter(Boolean) as { id: string; label: string }[]
 
@@ -174,6 +190,7 @@ export default async function EventPage({ params }: { params: { slug: string } }
         {sections.schedule.enabled        && <ScheduleSection    data={sections.schedule} eventSlug={event.slug} theme={theme} />}
         {sections.expo.enabled            && <ExpoSection        data={sections.expo} theme={theme} />}
         {sections.camping?.enabled        && <CampingSection     data={sections.camping} theme={theme} />}
+        {(sections.festival ?? []).map((f, i) => f.enabled && <FestivalSection key={f.id} data={f} index={i} theme={theme} />)}
         {isTrail && sections.courseInfo.enabled && <PhotoBand title="On the Course" image={event.photoBands?.onCourse} />}
         {sections.courseInfo.enabled      && <CourseInfoSection  data={sections.courseInfo} theme={theme} />}
         {isTrail && sections.raceMorning.enabled && <PhotoBand title="Race Morning" image={event.photoBands?.raceMorning} />}

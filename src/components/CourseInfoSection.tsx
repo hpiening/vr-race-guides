@@ -82,6 +82,21 @@ export default function CourseInfoSection({ data, basePath = 'sections.courseInf
                 <img src={d.mapImageUrl} alt={`${d.name} course map`} className="w-full object-cover aspect-[16/9]" />
               )}
               <RideWithGpsField itemPath={`${basePath}.distances.${i}`} />
+              {/* Per-course info blocks (multi-course events). */}
+              {((d.infoBlocks && d.infoBlocks.length > 0) || editing) && (
+                <div className="px-5 py-4 space-y-4 border-t border-vr-cream/10">
+                  {(d.infoBlocks ?? []).map((b, bi) => (
+                    <div key={bi}>
+                      <div className="flex items-start gap-2">
+                        <EditableText as="h4" className="font-heading text-sm uppercase text-vr-cream flex-1" value={b.heading} path={`${basePath}.distances.${i}.infoBlocks.${bi}.heading`} />
+                        <ListControls path={`${basePath}.distances.${i}.infoBlocks`} index={bi} count={d.infoBlocks!.length} />
+                      </div>
+                      <EditableText as="div" className="font-body text-sm text-vr-cream/75 mt-1 leading-relaxed whitespace-pre-line" value={b.body} path={`${basePath}.distances.${i}.infoBlocks.${bi}.body`} />
+                    </div>
+                  ))}
+                  <AddButton path={`${basePath}.distances.${i}.infoBlocks`} item={{ heading: 'Heading', body: 'Body text' }} label="Add course info block" />
+                </div>
+              )}
             </div>
           ))}
         </div>
@@ -150,6 +165,16 @@ function CourseInfoTrailhead({ data, basePath, editing }: { data: EventData['sec
           </h2>
         </div>
 
+        {(data.intro || editing) && (
+          <EditableText
+            as="div"
+            className="font-body text-vr-cream/85 leading-[1.7] text-[18px] max-w-3xl mb-10 whitespace-pre-line"
+            value={data.intro ?? ''}
+            path={`${basePath}.intro`}
+            placeholder="Intro (optional)"
+          />
+        )}
+
         {data.distances.map((d, i) => {
           // Only reserve the map column when there's a route embed / image (or
           // in the editor, so the RideWithGPS paste field is always reachable).
@@ -209,6 +234,46 @@ function CourseInfoTrailhead({ data, basePath, editing }: { data: EventData['sec
                 </a>
               )}
             </div>
+
+            {/* Per-course accordions (Course Details / Aid Station / Getting
+                There). Only rendered for courses that carry them; flattened to
+                cards while editing so the text stays reachable. */}
+            {((d.infoBlocks && d.infoBlocks.length > 0) || editing) && (
+              <div className="md:col-span-full">
+                {editing ? (
+                  <div className="flex flex-col gap-3">
+                    {(d.infoBlocks ?? []).map((b, bi) => (
+                      <div key={bi} className="bg-vr-cream rounded-lg p-5">
+                        <div className="flex items-start gap-2">
+                          <EditableText as="h4" className="font-heading uppercase text-vr-forest flex-1" value={b.heading} path={`${basePath}.distances.${i}.infoBlocks.${bi}.heading`} />
+                          <ListControls path={`${basePath}.distances.${i}.infoBlocks`} index={bi} count={d.infoBlocks!.length} />
+                        </div>
+                        <EditableText as="div" className="font-body text-vr-forest/85 mt-2 whitespace-pre-line" value={b.body} path={`${basePath}.distances.${i}.infoBlocks.${bi}.body`} />
+                        <EditableText as="div" className="font-micro text-xs uppercase text-vr-mid mt-2" value={b.linkLabel ?? ''} path={`${basePath}.distances.${i}.infoBlocks.${bi}.linkLabel`} placeholder="Button label (optional)" />
+                        <EditableUrl path={`${basePath}.distances.${i}.infoBlocks.${bi}.linkUrl`} label="Button URL (optional)" />
+                      </div>
+                    ))}
+                    <AddButton path={`${basePath}.distances.${i}.infoBlocks`} item={{ heading: 'Heading', body: 'Body text' }} label={`Add ${d.name} info block`} />
+                  </div>
+                ) : (
+                  <Accordion
+                    items={(d.infoBlocks ?? []).map(b => ({
+                      heading: b.heading,
+                      body: (
+                        <>
+                          <RichBody value={b.body} />
+                          {b.linkLabel && b.linkUrl && (
+                            <a href={b.linkUrl} target="_blank" rel="noopener noreferrer" className="block mt-2 font-micro text-xs tracking-widest uppercase text-vr-sky hover:text-vr-forest transition-colors">
+                              {b.linkLabel} ↗
+                            </a>
+                          )}
+                        </>
+                      ),
+                    }))}
+                  />
+                )}
+              </div>
+            )}
           </div>
           )
         })}

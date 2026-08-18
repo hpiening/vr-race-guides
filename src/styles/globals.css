@@ -200,6 +200,46 @@
   --tl-challenge-grad: linear-gradient(140deg,#343A2E,#1C1F18);
 }
 
+/* ─── Grand Circle Trailfest brand (red rock / desert sun) ─────────────────
+   Re-themes the Trailhead engine per event. Applied via `data-brand="grand-circle"`
+   on the guide wrapper (set from EventData.brand). Only the color CHANNELS and
+   the decorative gradients change — layout/components are identical to Rocky
+   Mountain. Values lifted from the Grand Circle Trailfest design comp's own
+   token values. Dark-token role map (green → Grand Circle):
+     vr-night  #1a2f23 → #22110A  deepest (schedule/FAQ bg, photo bands, footer)
+     vr-deep   #264533 → #351A0E  mid brown (expo, spectators, course, basecamp)
+     vr-forest #313832 → #2B1509  darkest brown panel/ink (body ink on paper)
+     vr-pine   #003F2D → #4A2718  sticky nav
+     vr-sky    #7BADAC → #F89F44  accent desert sun (eyebrows, rules, stats, links)
+     vr-floral #da8165 → #F89F44  (single accent across the brand)
+   Light tokens: paper #F2E9D7, cards #FAF4E8, hairline #DFD2BB. */
+[data-brand='grand-circle'] {
+  --vr-night-rgb:     34 17 10;    /* #22110A deepest — schedule/FAQ, bands, footer */
+  --vr-deep-rgb:      53 26 14;    /* #351A0E mid brown — course/expo + stat tiles */
+  --vr-forest-rgb:    43 21 9;     /* #2B1509 — dark panels + body ink on paper */
+  --vr-pine-rgb:      74 39 24;    /* #4A2718 sticky nav */
+  --vr-sky-rgb:       248 159 68;  /* #F89F44 accent (all accent text/elements) */
+  --vr-floral-rgb:    248 159 68;  /* #F89F44 */
+  --vr-sandstone-rgb: 248 159 68;  /* #F89F44 (link hover — keep the accent uniform) */
+  --vr-earth-rgb:     103 85 71;   /* muted desert brown */
+  --vr-mid-rgb:       103 85 71;   /* #675547 body grey on light */
+  --vr-cream-rgb:     242 233 215; /* #F2E9D7 */
+  --vr-white-rgb:     250 244 232; /* #FAF4E8 warm paper cards */
+  --vr-offwhite-rgb:  242 233 215; /* #F2E9D7 light section ground */
+  --vr-line-rgb:      223 210 187; /* #DFD2BB */
+
+  /* Keep the hex vars in sync for the few inline `var(--vr-*)` color usages. */
+  --vr-forest: #2B1509;
+  --vr-sky:    #F89F44;
+  --vr-floral: #F89F44;
+  --vr-cream:  #F2E9D7;
+
+  --tl-hero-grad:      radial-gradient(125% 95% at 72% 8%,#97521F 0%,#4A2718 46%,#22110A 100%);
+  --tl-band-stripe:    repeating-linear-gradient(135deg,#351A0E,#351A0E 16px,#22110A 16px,#22110A 32px);
+  --tl-hatch-dark:     repeating-linear-gradient(135deg,#4A2718,#4A2718 14px,#351A0E 14px,#351A0E 28px);
+  --tl-challenge-grad: linear-gradient(140deg,#351A0E,#22110A);
+}
+
 /* ─── Base ───────────────────────────────────────────────────── */
 
 *, *::before, *::after {

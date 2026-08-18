@@ -1,0 +1,1125 @@
+{
+  "slug": "grand-circle",
+  "theme": "trailhead",
+  "brand": "grand-circle",
+  "hidden": true,
+  "name": "Grand Circle Trailfest",
+  "tagline": "Three days. Three canyons. One basecamp.",
+  "dates": "Sep 30 – Oct 4, 2026 · Kanab, Utah · Bryce · Zion · Antelope Canyon",
+  "heroImage": "",
+  "heroImageAlt": "Red rock canyon country near Kanab, Utah",
+  "heroBgColor": "#22110A",
+  "accentColor": "#F89F44",
+  "favicon": "/images/events/grand-circle-favicon.png",
+  "shieldImage": "/images/events/grand-circle-shield.png",
+  "logo": "/images/vr-logo.png",
+  "logoAlt": "Vacation Races",
+  "photoBands": {
+    "onCourse": "",
+    "postRace": ""
+  },
+  "footerImage": "",
+  "partners": {
+    "enabled": true,
+    "items": [
+      {
+        "name": "Neuma"
+      },
+      {
+        "name": "Honey Stinger",
+        "url": "https://honeystinger.com"
+      },
+      {
+        "name": "Monster Brewing",
+        "url": "https://monsterbrewing.com"
+      },
+      {
+        "name": "Desert Healing",
+        "url": "https://deserthealing.org"
+      },
+      {
+        "name": "Elevated Legs",
+        "url": "https://elevatedlegs.com"
+      },
+      {
+        "name": "All Day Sauna"
+      },
+      {
+        "name": "Nathan",
+        "url": "https://www.nathansports.com"
+      },
+      {
+        "name": "Brooksee Timing",
+        "url": "https://brooksee.com/gct/results"
+      },
+      {
+        "name": "iTab",
+        "url": "https://www.itab.us.com/product/vacation-races/"
+      },
+      {
+        "name": "MarathonFoto"
+      },
+      {
+        "name": "Stellar Vista Observatory"
+      },
+      {
+        "name": "Wander Project",
+        "url": "https://www.wanderproject.org"
+      }
+    ]
+  },
+  "sections": {
+    "welcome": {
+      "enabled": true,
+      "heading": "Welcome to the|Grand Circle",
+      "imageUrl": "",
+      "body": "Festival HQ is at Jacob Hamblin Park in Kanab, Utah. You’ll check in here, pick up your race packet, find your tent, and settle in for three days of fun and finish lines. Each morning you head out to a different corner of the Colorado Plateau — the hoodoos of Bryce Canyon, the mesa rims above Zion, and the slot canyons near Antelope Canyon — and each afternoon you come back to the same basecamp for food, recovery, music, and films.",
+      "quote": "Be excellent to each other.",
+      "quoteAttribution": "The Trailfest camping rule",
+      "closing": "This is red rock country: dry air, big temperature swings, high exposure, and three consecutive days of running. Pace yourself, hydrate more than you think you need to, and take the time to look up. Three adjacent National Parks, two National Monuments, Navajo Tribal Park land, and Lake Powell all sit within a couple of hours of camp. Every visitor here is a steward with a responsibility to protect and respect this landscape for the people who come next.\n\nHappy exploring!\n— The Vacation Races Team",
+      "note": "Note to runners: All of the following information is subject to change. If changes occur due to unforeseen circumstances, adjustments will be made to satisfy local permitting requirements while still delivering a top-tier running experience. We will inform runners of any changes as soon as they are finalized so participants can comfortably prepare for their Vacation Races experience. All times shown are Mountain (MDT)."
+    },
+    "schedule": {
+      "enabled": true,
+      "backgroundImage": "",
+      "days": [
+        {
+          "id": "day-0",
+          "label": "Day 0 · Check-In",
+          "date": "Wednesday, September 30",
+          "items": [
+            {
+              "time": "12:00 – 7:00 PM",
+              "label": "Campground Check-In",
+              "note": "At the booth by the baseball fields on the east side of the park."
+            },
+            {
+              "time": "[CONFIRM] hours",
+              "label": "Expo & Bib Pickup",
+              "note": "2025 ran 12:00 – 6:00 PM — VR to confirm the 2026 hours."
+            },
+            {
+              "time": "5:00 PM",
+              "label": "Welcome Dinner Opens"
+            },
+            {
+              "time": "6:00 – 7:30 PM",
+              "label": "Keynote · Keira D’Amato"
+            },
+            {
+              "time": "Evening",
+              "label": "Welcome Orientation · All Runners",
+              "note": "New for 2026 — one orientation replaces the nightly RD reports."
+            },
+            {
+              "time": "8:30 – 10:00 PM",
+              "label": "Night Sky Viewing · Stellar Vista Observatory"
+            }
+          ]
+        },
+        {
+          "id": "day-1",
+          "label": "Day 1 · Bryce Canyon",
+          "date": "Thursday, October 1",
+          "items": [
+            {
+              "time": "5:00 – 5:30 AM",
+              "label": "Breakfast · Shuttles Load"
+            },
+            {
+              "time": "5:30 AM",
+              "label": "Final Shuttle Departs HQ"
+            },
+            {
+              "time": "7:00 AM",
+              "label": "Race Start · 15.7 Miles"
+            },
+            {
+              "time": "4:00 PM",
+              "label": "Festival Opens · Yoga"
+            },
+            {
+              "time": "5:00 – 6:00 PM",
+              "label": "Line Dancing · Donna Bronson"
+            },
+            {
+              "time": "6:00 – 7:00 PM",
+              "label": "Pueblo Enchantment Dancers"
+            },
+            {
+              "time": "7:00 – 8:00 PM",
+              "label": "Live Music · Fox & Bones"
+            },
+            {
+              "time": "8:30 – 10:00 PM",
+              "label": "Trail Running Film Festival"
+            }
+          ]
+        },
+        {
+          "id": "day-2",
+          "label": "Day 2 · Zion",
+          "date": "Friday, October 2",
+          "items": [
+            {
+              "time": "5:00 – 5:30 AM",
+              "label": "Breakfast · Shuttles Load"
+            },
+            {
+              "time": "5:30 AM",
+              "label": "Final Shuttle Departs HQ"
+            },
+            {
+              "time": "7:00 AM",
+              "label": "Race Start · 10.4 Miles"
+            },
+            {
+              "time": "4:00 PM",
+              "label": "Festival Opens · Yoga"
+            },
+            {
+              "time": "5:00 – 6:00 PM",
+              "label": "Tai Chi · Terri Henry"
+            },
+            {
+              "time": "6:00 – 7:00 PM",
+              "label": "Red Heritage"
+            },
+            {
+              "time": "7:00 – 8:00 PM",
+              "label": "Live Music · The Alpines"
+            },
+            {
+              "time": "Evening",
+              "label": "Awards · Tent Decorating Contest"
+            }
+          ]
+        },
+        {
+          "id": "day-3",
+          "label": "Day 3 · Antelope Canyon",
+          "date": "Saturday, October 3",
+          "items": [
+            {
+              "time": "5:00 – 5:30 AM",
+              "label": "Breakfast · Shuttles Load"
+            },
+            {
+              "time": "5:30 AM",
+              "label": "Final Shuttle Departs HQ"
+            },
+            {
+              "time": "7:00 AM",
+              "label": "Race Start · 13.2 Miles"
+            },
+            {
+              "time": "4:00 PM",
+              "label": "Festival Opens · Yoga"
+            },
+            {
+              "time": "5:00 – 6:00 PM",
+              "label": "Sound Bath · Pure Healing Resonance"
+            },
+            {
+              "time": "5:30 – 6:30 PM",
+              "label": "Sophia Rankin & The Sound"
+            },
+            {
+              "time": "6:30 – 7:30 PM",
+              "label": "Alicia Stockman"
+            },
+            {
+              "time": "Evening",
+              "label": "Awards · Raffle · Overall Finisher Awards"
+            },
+            {
+              "time": "8:30 – 10:00 PM",
+              "label": "RunNation Film Festival"
+            }
+          ]
+        },
+        {
+          "id": "day-4",
+          "label": "Day 4 · Departure",
+          "date": "Sunday, October 4",
+          "items": [
+            {
+              "time": "6:00 – 9:00 AM",
+              "label": "Campground Check-Out"
+            },
+            {
+              "time": "7:00 AM",
+              "label": "Breakfast"
+            }
+          ]
+        }
+      ]
+    },
+    "expo": {
+      "enabled": true,
+      "navLabel": "Check-In",
+      "eyebrow": "Arriving in Kanab",
+      "heading": "Festival HQ & Expo",
+      "date": "Wednesday, September 30, 2026",
+      "locationName": "Jacob Hamblin Park",
+      "locationAddress": "Everything starts at Jacob Hamblin Park in Kanab, UT. Wednesday is check-in day: pick up your bib at the expo, claim your campsite, and get settled before the welcome dinner. You’ll need your ID to collect your bib — picking up for a friend requires a copy of their ID (printed or on a phone) or their confirmation email with the QR code.",
+      "locationMapUrl": "https://maps.app.goo.gl/twREFW6h6C5bHFfb7",
+      "locationLat": 37.0521,
+      "locationLng": -112.5248,
+      "mapImageUrl": "",
+      "hours": [
+        {
+          "label": "Race Expo & Bib Pickup",
+          "time": "[CONFIRM] — 2025 ran 12:00 – 6:00 PM"
+        },
+        {
+          "label": "Campground Check-In",
+          "time": "12:00 – 7:00 PM"
+        }
+      ],
+      "notes": [
+        "Expo, race info, merchandise, camp check-in, and the festival village all share the park.",
+        "Bring a photo ID for bib pickup — and bring your own bag, our expo is bag-free.",
+        "[CONFIRM] Neuma Health electrolyte presentation — day and time still to be confirmed."
+      ],
+      "infoBlocks": [
+        {
+          "heading": "Bib Pickup Options",
+          "body": "**At the Wednesday expo** — recommended, at Festival HQ.\n\n**New for 2026:** can’t make Wednesday? Bib pickup is also available Thursday morning at the Bryce Canyon start line — you’ll still get your swag and shirt there.\n\n**For a friend** — bring a copy of their ID (printed or on a phone) or their QR-code confirmation email."
+        },
+        {
+          "heading": "Getting Here & Parking",
+          "body": "There’s plenty of parking at Festival HQ — along the length of the park and on the south side near the pool house.\n\nMost runners fly into St. George (1.5 hr), Las Vegas (3 hr), Salt Lake City (4.5 hr), or Phoenix (5.5 hr) and drive in. Coming from a specific airport? We’ve mapped the drive and the hikes worth stopping for along the way — see the road trip guides in Explore Kanab."
+        },
+        {
+          "heading": "Shuttles Are a Paid Upgrade",
+          "body": "Shuttles from Trailfest HQ up to the race sites are an **optional paid upgrade**. Capacity is limited and capped at **75 runners**, so buy your shuttle ticket ahead of time.\n\nShuttles load from 5:00 AM and the final one departs HQ at 5:30 AM sharp. Return shuttles depart as they fill with finished runners. HQ shuttles are reserved for pass holders; there is no parking at any start or finish line.\n\n[CONFIRM] link to add a shuttle pass to your registration."
+        },
+        {
+          "heading": "Volunteers",
+          "body": "All volunteers should check in at the expo on Wednesday to receive instructions for their shifts — especially anyone volunteering at a start or finish line. During the event, look for team members wearing shirts labelled VOLUNTEER, STAFF, or CREW if you need assistance.\n\n[CONFIRM] confirm the 2026 volunteer sign-up form (the 2025 link is below).",
+          "linkLabel": "Sign up to volunteer",
+          "linkUrl": "https://form.fillout.com/t/dmnGubJfxtus"
+        }
+      ]
+    },
+    "camping": {
+      "enabled": true,
+      "eyebrow": "Sleep at the start line",
+      "heading": "The Campground",
+      "overview": "Campground check-in is Wednesday, September 30 from 12:00 – 7:00 PM at the booth by the baseball fields on the east side of the park. After-hours check-in is available — look for instructions at the booth. Sites are first come, first served: you’ll be given a tag at check-in, then pick your tent or site and tag it to claim it.\n\n**Field 1** is for runners bringing their own tent. **Fields 2 & 3** hold pre-set 4-person and 6-person tents for those who reserved one in advance. Reserved an RV or car/van site? Signs and staff will direct you where to park — remember there are no hook-ups.\n\n**New for 2026:** rolling carts will be on hand to help move gear from your car into the campsite.",
+      "imageUrl": "",
+      "bookingUrl": "",
+      "bookingLabel": "",
+      "infoBlocks": [
+        {
+          "heading": "Camping Options & Pricing",
+          "body": "Bring your own tent, reserve a 4- or 6-person tent, or bring a car, van, or RV. Non-runners can share a tent with a runner, and extra camping spots can be added during or after registration.\n\n[CONFIRM] 2026 pricing tiers for tent / glamping / car / van / RV."
+        },
+        {
+          "heading": "Check-In & Check-Out",
+          "body": "Check-in is Wednesday, September 30, 12:00 – 7:00 PM at the booth by the baseball fields; after-hours instructions are posted there. Check-out is Sunday, October 4 from 6:00 – 9:00 AM.\n\nAnything you use to decorate your tent must come down completely and cannot damage the tent."
+        },
+        {
+          "heading": "Camping Etiquette",
+          "body": "Quiet hours begin at **10:00 PM**. Arriving at odd hours? Keep lights and noise down. Keep showers short and spread out the load so there’s hot water for everyone. Keep facilities clean, dispose of your trash, obey traffic laws and keep speeds down, don’t shine lights into other tents, and walk in the designated lanes rather than cutting between tents.\n\nBring ear plugs if you’re sensitive to noise."
+        },
+        {
+          "heading": "Showers, Chargers & Pavilions",
+          "body": "A shower truck, restrooms, and charging stations are on site, along with the North Pavilion for breakfast and dinner. A few small pavilions are available first-come, first-served — no reservations in 2026."
+        }
+      ]
+    },
+    "festival": [
+      {
+        "enabled": true,
+        "id": "basecamp",
+        "navLabel": "Basecamp",
+        "eyebrow": "Back at Basecamp",
+        "heading": "Festival Village",
+        "tone": "dark",
+        "intro": "The festival kicks off around **4:00 PM** with yoga. Get in line for a massage and lean into the festival, or go explore on your own for a few hours and come back for dinner, music, and films. All activities begin after 2:00 PM, so non-runners don’t need a festival pass to join in.",
+        "imageUrl": "",
+        "groups": [
+          {
+            "heading": "Wellness Clinics",
+            "layout": "cards",
+            "cards": [
+              {
+                "title": "Line Dancing",
+                "eyebrow": "Thu, Oct 1 · 5–6 PM · New",
+                "body": "With Donna Bronson. New for 2026 — no experience needed.",
+                "imageUrl": ""
+              },
+              {
+                "title": "Tai Chi",
+                "eyebrow": "Fri, Oct 2 · 5–6 PM",
+                "body": "With Terri Henry, board-certified through the Tai Chi for Health Institute. A moving meditation for balance and recovery.",
+                "imageUrl": ""
+              },
+              {
+                "title": "Sound Bath",
+                "eyebrow": "Sat, Oct 3 · 5–6 PM",
+                "body": "Pure Healing Resonance by Carmella — aromatherapy, grounding breathwork, and ten quartz crystal bowls.",
+                "imageUrl": ""
+              }
+            ]
+          },
+          {
+            "heading": "Recovery Services",
+            "layout": "cards",
+            "cards": [
+              {
+                "title": "Massage",
+                "eyebrow": "Free · 20 minutes",
+                "body": "Free 20-minute massages every day, with the option to pay for a longer session. First come, first served — hop on the waiting list.",
+                "imageUrl": ""
+              },
+              {
+                "title": "Compression",
+                "eyebrow": "Elevated Legs",
+                "body": "Hot/cold leg compression therapy to help you relax and recover. Additional sessions can be booked for a fee, subject to availability. @elevatedlegs",
+                "url": "https://elevatedlegs.com",
+                "imageUrl": ""
+              },
+              {
+                "title": "Sauna",
+                "eyebrow": "All Day Sauna · Free",
+                "body": "A mobile sauna on site all day, free to use. Bring a towel you don’t mind getting sweaty and keep sessions reasonable so everyone gets a turn.",
+                "imageUrl": ""
+              },
+              {
+                "title": "Yoga with Tiffany Smith",
+                "eyebrow": "Yoga · 45 minutes",
+                "body": "Two instructor-led sessions each afternoon, 4:00–4:45 PM and 5:00–5:45 PM. Mats and foam rollers are available in the recovery area for self-guided work.",
+                "imageUrl": ""
+              },
+              {
+                "title": "Medical Tent",
+                "eyebrow": "Self-serve",
+                "body": "Basic first aid at Festival HQ is self-serve. The medical area at each race finish is for athletes only.",
+                "imageUrl": ""
+              },
+              {
+                "title": "Contests & Raffle",
+                "eyebrow": "Nightly at HQ",
+                "body": "Running Outfit Awards and the Tent Decorating Contest are judged nightly alongside awards and the raffle. Every bib has a raffle ticket printed on it — be present Saturday evening to enter and claim prizes.",
+                "imageUrl": ""
+              }
+            ]
+          },
+          {
+            "heading": "IV Station · Desert Healing",
+            "intro": "Advance sign-up required. Desert Healing brings 20+ years of ER clinical experience to the desert: a precise, medically-backed blend of amino acids and vitamins to prime your engine before the race and repair it the moment you cross the line. Stop by the tent or book your pre-race session. [deserthealing.org](https://deserthealing.org/iv-infusions/)",
+            "layout": "rows",
+            "cards": [
+              {
+                "title": "Athletic Performance",
+                "eyebrow": "IV blend",
+                "body": "Fluids, B12, B Complex, Magnesium, Amino Blend, Vitamin C",
+                "meta": "$185",
+                "imageUrl": ""
+              },
+              {
+                "title": "Myers Cocktail",
+                "eyebrow": "IV blend",
+                "body": "Fluids, B12, B Complex, Magnesium, Calcium, Vitamin C",
+                "meta": "$185",
+                "imageUrl": ""
+              },
+              {
+                "title": "Immune Boost",
+                "eyebrow": "IV blend",
+                "body": "Fluids, B12, B Complex, Vitamin C, Zinc, Magnesium, Calcium",
+                "meta": "$185",
+                "imageUrl": ""
+              },
+              {
+                "title": "Muscle Recovery",
+                "eyebrow": "IV blend",
+                "body": "Fluids, Magnesium",
+                "meta": "$125",
+                "imageUrl": ""
+              },
+              {
+                "title": "Inflammation Relief",
+                "eyebrow": "IV blend",
+                "body": "Fluids, Amino Blend",
+                "meta": "$125",
+                "imageUrl": ""
+              },
+              {
+                "title": "Energy Boost",
+                "eyebrow": "IV blend",
+                "body": "Fluids, B12",
+                "meta": "$125",
+                "imageUrl": ""
+              }
+            ]
+          }
+        ],
+        "infoBlocks": [
+          {
+            "heading": "IV Discounts, Injections & Peptides",
+            "body": "**Discount:** $155 each for any IV when booking at least 2 IVs during the weekend.\n\n**Injections & infusions:** NAD+ infusion $455 · NAD+ injection $60 · Toradol (pain relief) $60 · Zofran (anti-nausea) $35 · Vitamin D $35.\n\n**Peptides:** BPC-157 $175 · Wolverine Stack (BPC-157 / TB-500) $250.",
+            "linkLabel": "Book with Desert Healing",
+            "linkUrl": "https://deserthealing.org/iv-infusions/"
+          }
+        ]
+      },
+      {
+        "enabled": true,
+        "id": "meals",
+        "navLabel": "Meals",
+        "eyebrow": "Catered every night",
+        "heading": "Meals & Dining",
+        "tone": "light",
+        "intro": "Dinner is served nightly at the Main Pavilion, breakfast every race morning, and there’s hot food waiting at each finish line. Lunch is on you — Kanab has more good food than a three-day weekend can cover.",
+        "imageUrl": "",
+        "groups": [
+          {
+            "heading": "Dining at a Glance",
+            "layout": "rows",
+            "cards": [
+              {
+                "title": "Breakfast · Thu–Sat",
+                "eyebrow": "5:00 AM",
+                "body": "7:00 AM on Sunday. Hot oatmeal, overnight oats, breakfast bars, muffins, whole fruit, coffee, hot tea, hot chocolate, water. No meal ticket required.",
+                "imageUrl": ""
+              },
+              {
+                "title": "Dinner · Wed–Sat",
+                "eyebrow": "5:00 PM",
+                "body": "At the Main Pavilion, Trailfest HQ. One dinner meal ticket per person, presented at the main buffet line. Registered runners get one ticket per event night.",
+                "imageUrl": ""
+              },
+              {
+                "title": "Fireside Treats",
+                "eyebrow": "Nightly",
+                "body": "The Elevated S’mores Station, Wed–Sat: s’mores, fresh-baked cookies, hot cider, coffee, teas, and hot chocolate.",
+                "imageUrl": ""
+              },
+              {
+                "title": "Runner Recovery Tent",
+                "eyebrow": "At each finish",
+                "body": "Thursday through Saturday: hot quesadillas, grilled cheese, sweet and salty snacks, and recovery beverages, while supplies last.",
+                "imageUrl": ""
+              },
+              {
+                "title": "Beer Garden · Monster Brewing",
+                "eyebrow": "Thu–Sat",
+                "body": "Tickets purchased separately and valid ID required, per the posted schedule.",
+                "imageUrl": ""
+              }
+            ]
+          },
+          {
+            "heading": "Dinner Menus",
+            "layout": "rows",
+            "cards": [
+              {
+                "title": "Welcome Dinner",
+                "eyebrow": "Wednesday",
+                "body": "Penne Bolognese (vegetarian and gluten-free options available, plus gluten-free penne) · Caesar Salad · Dinner Rolls (gluten-free available). Self-serve nonalcoholic beverage station: sparkling water, fruit-juice mocktails, watermelon juice, cherry juice, rotating fruit juices.",
+                "imageUrl": ""
+              },
+              {
+                "title": "Dinner",
+                "eyebrow": "Thursday",
+                "body": "Herb-Roasted Chicken, Roasted Potatoes, Sautéed Summer Squash, Pasta Salad, Fresh Garden Salad (gluten-free balsamic vinaigrette or ranch). Plant-based: Harvest Shepherd’s Pie (vegetarian, vegan, dairy-free, gluten-free).",
+                "imageUrl": ""
+              },
+              {
+                "title": "Dinner",
+                "eyebrow": "Friday",
+                "body": "Teriyaki Chicken Rice Bowls, Roasted Broccoli and Carrots, Asian Cucumber Salad, Fresh Garden Salad. Toppings: sliced green onions, sesame seeds, extra gluten-free teriyaki sauce. Plant-based: Plant-Based Teriyaki Rice Bowl.",
+                "imageUrl": ""
+              },
+              {
+                "title": "Dinner",
+                "eyebrow": "Saturday",
+                "body": "Cheeseburgers and Black Bean Burgers (gluten-free buns available), Baked Beans, Potato Salad, Assorted Chips, Fresh Garden Salad Bar. Toppings: lettuce, tomatoes, onions (raw or sautéed), relish, pico de gallo, assorted condiments. Plant-based: Black Bean Burger.",
+                "imageUrl": ""
+              }
+            ]
+          },
+          {
+            "heading": "Beer Garden · Monster Brewing",
+            "intro": "New for 2026, Monster Brewing takes over the beer garden. Tickets are purchased separately and valid ID is required. Open Thursday–Saturday per the posted schedule. [monsterbrewing.com](https://monsterbrewing.com)  \n[CONFIRM] beer garden ticket price and posted hours.",
+            "layout": "cards",
+            "cards": [
+              {
+                "title": "Last One Down Lager",
+                "eyebrow": "On draft",
+                "body": "The Trailfest custom event lager.",
+                "imageUrl": ""
+              },
+              {
+                "title": "Juicy IPA",
+                "eyebrow": "On draft",
+                "body": "The largest pour of the weekend — seven kegs.",
+                "imageUrl": ""
+              },
+              {
+                "title": "StarGazer IPA",
+                "eyebrow": "On draft",
+                "body": "Session West Coast style.",
+                "imageUrl": ""
+              },
+              {
+                "title": "Evolution Amber Ale",
+                "eyebrow": "On draft",
+                "body": "Malt-forward amber.",
+                "imageUrl": ""
+              },
+              {
+                "title": "Apricot Hefeweizen",
+                "eyebrow": "On draft",
+                "body": "Wheat beer with apricot.",
+                "imageUrl": ""
+              },
+              {
+                "title": "Salt Lime Cerveza",
+                "eyebrow": "On draft",
+                "body": "Light cerveza with salt and lime.",
+                "imageUrl": ""
+              },
+              {
+                "title": "Juicy Citrus Wheat",
+                "eyebrow": "On draft",
+                "body": "Citrus-forward wheat beer.",
+                "imageUrl": ""
+              },
+              {
+                "title": "Hard Teas, Seltzers & Sodas",
+                "eyebrow": "Non-draft",
+                "body": "Beast teas, Blind Lemonade variety, craft sodas, and non-alcoholic options.",
+                "imageUrl": ""
+              }
+            ]
+          }
+        ],
+        "infoBlocks": [
+          {
+            "heading": "How Meal Service Works",
+            "body": "Everyone begins in the same main buffet line — there’s no separate line for dietary needs. Present one dinner meal ticket to the attendant at the entrance and tell them if you need a vegetarian, vegan, gluten-free, dairy-free, or other available option; no advance request or preorder is needed. The attendant explains which buffet items fit your need and where the entrée is served, then you continue through the buffet for salads, vegetables, sides, and beverages."
+          },
+          {
+            "heading": "Allergen Notice",
+            "body": "We make reasonable efforts to keep designated menu items separate; however, all meals are prepared and served in a shared temporary event kitchen. Wheat, dairy, eggs, soy, sesame, nuts, and other allergens may be present. We cannot guarantee an allergen-free environment. Participants with serious food allergies should speak directly with the culinary team before selecting food.\n\nSelect your dietary restrictions at registration or edit your registration to include them — restrictions are printed on the back of your bib.\n\n[CONFIRM] link to edit your registration’s dietary restrictions."
+          },
+          {
+            "heading": "Non-Runner Meal Tickets",
+            "body": "Dinner tickets are **$12**, breakfast tickets **$5**, and a combo of both per day is **$15**. Buy them at the registration tent or at the buffet table, cash or credit."
+          },
+          {
+            "heading": "Evenings Around the Fire · The Elevated S’mores Station",
+            "body": "**7–9 PM · Wed–Sat.** Each day, after the running wraps up and the evening entertainment is in full swing, join us around the fire pits for the sweetest part of the day. We’re upgrading your traditional campfire snack with a nightly gourmet s’mores bar packed with fresh takes on the classic combo — from rich dark chocolates and flavoured spreads to unexpected crunches, with both sweet and savoury options.\n\nGrab a roasting stick, get creative with your concoctions, and relax with fellow runners as we wind down the day together."
+          },
+          {
+            "heading": "Runner Recovery Tent",
+            "body": "At each race finish Thursday through Saturday: hot quesadillas, grilled cheese, sweet and salty snacks, and recovery beverages, while supplies last. This is a separate runners-only station after the race — distinct from the on-course aid station."
+          },
+          {
+            "heading": "Lunch in Kanab",
+            "body": "Lunch is independent and not an official Trailfest meal. Food and beverage trucks may be at Trailfest HQ during select hours — vendors, menus, and times vary, so check posted signage; purchases aren’t included with registration or meal tickets. See Explore Kanab for local recommendations."
+          }
+        ]
+      },
+      {
+        "enabled": true,
+        "id": "entertainment",
+        "navLabel": "Entertainment",
+        "eyebrow": "Every night at HQ",
+        "heading": "Performers",
+        "tone": "darkest",
+        "intro": "Keynotes, live music, Indigenous performances, and two film festivals — all included with your registration.",
+        "imageUrl": "",
+        "groups": [
+          {
+            "heading": "Keynote & Indigenous Performances",
+            "layout": "photos",
+            "cards": [
+              {
+                "title": "Keira D’Amato",
+                "eyebrow": "Keynote · Wed, Sep 30 · 6:00–7:30 PM",
+                "body": "Our 2026 keynote speaker opens the festival on Wednesday evening, before the welcome orientation and night sky viewing.",
+                "imageUrl": ""
+              },
+              {
+                "title": "Pueblo Enchantment Dancers",
+                "eyebrow": "Thu, Oct 1 · 6–7 PM",
+                "body": "Traditional and contemporary dances of Acoma and Hopi Pueblo, directed by second-generation Johnathan Keyope. Together since 1981.",
+                "imageUrl": ""
+              },
+              {
+                "title": "Red Heritage",
+                "eyebrow": "Fri, Oct 2 · 6–7 PM",
+                "body": "A Native American performing arts company from Page, Arizona — Grass Dance, Jingle Dress Dance, Northern Traditional, and the world-famous Hoop Dance.",
+                "imageUrl": ""
+              }
+            ]
+          },
+          {
+            "heading": "Live Music",
+            "layout": "photos",
+            "cards": [
+              {
+                "title": "Fox & Bones",
+                "eyebrow": "Thu · 7–8 PM",
+                "url": "https://foxandbones.com/",
+                "imageUrl": ""
+              },
+              {
+                "title": "The Alpines",
+                "eyebrow": "Fri · 7–8 PM",
+                "imageUrl": ""
+              },
+              {
+                "title": "Sophia Rankin & The Sound",
+                "eyebrow": "Sat · 5:30–6:30 PM",
+                "imageUrl": ""
+              },
+              {
+                "title": "Alicia Stockman",
+                "eyebrow": "Sat · 6:30–7:30 PM",
+                "imageUrl": ""
+              }
+            ]
+          },
+          {
+            "heading": "Film Festivals",
+            "layout": "cards",
+            "cards": [
+              {
+                "title": "Trail Running Film Festival",
+                "eyebrow": "Thu, Oct 1 · 8:30–10 PM",
+                "body": "An evening of trail running films at Festival HQ, included with your registration.",
+                "imageUrl": ""
+              },
+              {
+                "title": "RunNation Film Festival",
+                "eyebrow": "Sat, Oct 3 · 8:30–10 PM",
+                "body": "The closing night film festival, included with your registration.",
+                "imageUrl": ""
+              }
+            ]
+          }
+        ],
+        "infoBlocks": []
+      }
+    ],
+    "courseInfo": {
+      "enabled": true,
+      "heading": "Course Info",
+      "navLabel": "Courses",
+      "intro": "All three courses and their supporting logistics are unchanged from 2025 — same distances, start times, and aid-station mileposts. Every race starts at 7:00 AM and has one aid station roughly halfway.",
+      "schedule": [],
+      "strollerPolicy": "",
+      "dogPolicy": "",
+      "aidStations": "",
+      "recoveryFood": "",
+      "distances": [
+        {
+          "name": "Day 1 · Bryce Canyon",
+          "mapUrl": "https://www.strava.com/routes/3400685255768323784",
+          "embedUrl": "",
+          "mapImageUrl": "",
+          "stats": "",
+          "statTiles": [
+            {
+              "value": "15.7",
+              "label": "Miles"
+            },
+            {
+              "value": "7:00 AM",
+              "label": "Thu, Oct 1"
+            },
+            {
+              "value": "Mile 10",
+              "label": "Aid Station"
+            },
+            {
+              "value": "5:20",
+              "label": "Cutoff (h:mm)"
+            }
+          ],
+          "infoBlocks": [
+            {
+              "heading": "Course Details",
+              "body": "This stunningly scenic course runs in, around, and through the colourful hoodoos as it links the Thunder Mountain and Golden Wall trails of Red Canyon. After the aid station there is some climbing during the final 5.7 miles before passing through the Red Canyon campground and finishing back at the Thunder Mountain trailhead.\n\nNowhere is the force of erosion more tangible than at Bryce Canyon — you’ll see all the beauty but avoid the crowds on remote trails through the hoodoos of the Paunsaugunt Plateau.\n\nNote: trail rides will likely be taking place during the race. Horses have the right of way; all runners must yield.\n\n[CONFIRM] RideWithGPS route link for the live map (the 2025 guide published this route on Strava).",
+              "linkLabel": "View the 2025 route on Strava",
+              "linkUrl": "https://www.strava.com/routes/3400685255768323784"
+            },
+            {
+              "heading": "Ten Mile Finish Option",
+              "body": "This course is beautifully brutal, and day one is the longest of the three. If you’re spent on arriving at the mile-10 aid station, you may continue about a quarter mile and finish your day by turning into the finish chute. Otherwise we encourage everyone to run the full distance.\n\nAnyone going for an overall top finisher award must complete the full 15.7 miles — additional timing mats are set up in the final section of the 5-mile loop to verify full-distance runners."
+            },
+            {
+              "heading": "Aid Station & Cutoff",
+              "body": "One aid station at **mile 10** — a long stretch for some, so refuel before the next major incline. It carries water, Neuma electrolyte drink, Honey Stinger gels, fresh fruit, and pretzels, plus portable toilets.\n\nThe cutoff is enforced at the aid station: based on a minimum 20-minute-per-mile pace, runners reaching mile 10 after 12:00 PM will be pulled from the course and directed to the finish."
+            },
+            {
+              "heading": "Getting There",
+              "body": "From Jacob Hamblin Park, head south on N 100 East, turn right onto E 300 North for 0.5 miles, right onto N 300 West (US-89) and follow US-89 for 59.5 miles. Turn right onto E Highway 12 for 13.6 miles, right onto N Main St (UT-63) for 1.2 miles, then left onto N 100 E. Parking areas are on the east side of the highway across from Ruby’s Inn. **Travel time: 1 hr 25 min.**\n\nThere are four lots — please fill them in the labelled order. Staff will direct traffic. All runners who drive themselves ride a provided shuttle (about 15 minutes) from the lots to the start, and are shuttled back after the race.",
+              "linkLabel": "Driving directions",
+              "linkUrl": "https://maps.app.goo.gl/BsU9jSKzZJUcCPPj6"
+            }
+          ]
+        },
+        {
+          "name": "Day 2 · Zion",
+          "mapUrl": "https://www.strava.com/routes/3382912643380797908",
+          "embedUrl": "",
+          "mapImageUrl": "",
+          "stats": "",
+          "statTiles": [
+            {
+              "value": "10.4",
+              "label": "Miles"
+            },
+            {
+              "value": "7:00 AM",
+              "label": "Fri, Oct 2"
+            },
+            {
+              "value": "Mile 7.3",
+              "label": "Aid Station"
+            },
+            {
+              "value": "3:30",
+              "label": "Cutoff (h:mm)"
+            }
+          ],
+          "infoBlocks": [
+            {
+              "heading": "Course Details",
+              "body": "Enjoy rim running on one of the most beautiful trail systems in America, from Smithsonian Butte to Wire Mesa, with panoramic views toward Zion. A little slick rock, towering views of Zion Canyon, and sweeping vistas make this one of our favourite trails.\n\nThe towering sandstone walls and deep slot canyons here are unique to anywhere else on earth — you’ll run remote trails along the edge of a mesa with commanding views of the sandstone towers that make Zion famous. Keep an eye out for petrified wood on the trail.\n\n[CONFIRM] RideWithGPS route link for the live map (the 2025 guide published this route on Strava).",
+              "linkLabel": "View the 2025 route on Strava",
+              "linkUrl": "https://www.strava.com/routes/3382912643380797908"
+            },
+            {
+              "heading": "Aid Station",
+              "body": "One aid station at **mile 7.3**, before the gradual climb on the back half of the Wire Mesa loop. It carries water, Neuma electrolyte drink, Honey Stinger gels, fresh fruit, and pretzels, plus portable toilets.\n\nCome prepared with a hydration pack — this single station is your only source of replenishment during the race."
+            },
+            {
+              "heading": "Getting There",
+              "body": "From Jacob Hamblin Park, head south on N 100 East, then turn left to stay on 100 East/US-89A toward Fredonia for 6.8 miles. Turn right onto Pratt Street (AZ-389 W) toward Apple Valley for 32.6 miles, continue on UT-59 N for 8.1 miles, then take a slight right onto Main Street and drive about 2 miles to the dirt parking lot on your left. **Travel time: 1 hr.**\n\nRunners who drive themselves park in the dirt lot near Apple Valley and walk over to the start. Staff will be on site directing traffic and parking.",
+              "linkLabel": "Driving directions",
+              "linkUrl": "https://maps.app.goo.gl/yyV4dyGNmqtM6uT26"
+            }
+          ]
+        },
+        {
+          "name": "Day 3 · Antelope Canyon",
+          "mapUrl": "https://www.strava.com/routes/3382913090028983764",
+          "embedUrl": "",
+          "mapImageUrl": "",
+          "stats": "",
+          "statTiles": [
+            {
+              "value": "13.2",
+              "label": "Miles · 14.2 w/ climb"
+            },
+            {
+              "value": "7:00 AM",
+              "label": "Sat, Oct 3"
+            },
+            {
+              "value": "Mile 5",
+              "label": "Aid Station"
+            },
+            {
+              "value": "4:30",
+              "label": "Cutoff (h:mm)"
+            }
+          ],
+          "infoBlocks": [
+            {
+              "heading": "Navajo Land",
+              "body": "This entire course is on Navajo land. Remember that we are guests here, and be respectful of the area."
+            },
+            {
+              "heading": "Course Details",
+              "body": "Run through a range of slot canyons on this impressive tour through Antelope Canyon’s famous sandstone corridors. It’s a loop, starting and finishing in the same location.\n\nWant 360-degree views? Add an optional mile to climb up to an overlook and see out as far as Bryce Canyon.\n\n[CONFIRM] RideWithGPS route link for the live map (the 2025 guide published this route on Strava).",
+              "linkLabel": "View the 2025 route on Strava",
+              "linkUrl": "https://www.strava.com/routes/3382913090028983764"
+            },
+            {
+              "heading": "Aid Station",
+              "body": "Runners hit the aid station around **mile 5**. It carries water, Neuma electrolyte drink, Honey Stinger gels, fresh fruit, and pretzels, plus portable toilets.\n\nCome prepared with a hydration pack or other water source, as this single station is the only refill opportunity on course."
+            },
+            {
+              "heading": "Getting There",
+              "body": "From Jacob Hamblin Park, head south on N 100 East, turn left to stay on 100 East/US-89A and head south for 0.3 miles. Turn left onto 300 South/US-89 toward Lake Powell/Page and continue on US-89 S for 75 miles. At the roundabout, take the 3rd turn east onto Haul Rd, follow it 1.6 miles, then turn right into the Page Sports Complex (477 Haul Rd). **Travel time: 1 hr 20 min.**\n\nRunners park at the Sports Complex and take a short shuttle to the start, then back to the lot from the finish.",
+              "linkLabel": "Driving directions",
+              "linkUrl": "https://maps.app.goo.gl/Gn6LPBCFYakSrUav9"
+            }
+          ]
+        }
+      ],
+      "infoBlocks": []
+    },
+    "raceMorning": {
+      "enabled": false,
+      "navLabel": "Race Morning",
+      "timelineLabel": "",
+      "parkingOptions": [],
+      "shuttleDetails": [],
+      "dropOffNote": "",
+      "courses": [],
+      "infoBlocks": []
+    },
+    "spectators": {
+      "enabled": false,
+      "notes": "",
+      "warnings": [],
+      "images": []
+    },
+    "postRace": {
+      "enabled": true,
+      "navLabel": "Race Info",
+      "eyebrow": "Awards, timing & the rules",
+      "heading": "Race Info",
+      "courseRecords": [],
+      "finishLineInfo": "Awards are handed out nightly at Festival HQ alongside contest judging and the raffle. Top three male and female overall awards are given each night based on gun time, so if you’re competing, start in the first wave. On the final day, Overall Finisher Awards go to the top three men and women with the best cumulative time across all three races.",
+      "infoSections": [
+        {
+          "heading": "Cup-Free Racing",
+          "body": "As with all Vacation Races events, there are no cups at aid stations or finish lines. Aid stations are stocked with water and Neuma electrolyte drink — bring your own cup, container, or bottle. Aid stations use **blue coolers for water** and **red coolers for Neuma**, both with the same speed valves.\n\nRunners who opted in at registration receive a Nathan reusable cup. Remember: this is a dry climate at elevation — hydrate well."
+        },
+        {
+          "heading": "Trail & Camp Etiquette",
+          "body": "**Respect quiet hours** — 10:00 PM nightly at camp. Runners are resting for tomorrow.\n\n**Keep HQ clean** — clean up the dining area after yourself and help keep the park tidy.\n\n**Watch your water usage** — keep showers short and consider off-peak hours.\n\n**Respect everyone’s space** — reduce vehicle speeds, don’t shine lights into tents, use marked walkways."
+        },
+        {
+          "heading": "Awards Ceremonies",
+          "body": "Held nightly at Festival HQ. Each ceremony covers daily contest judging, the raffle, and race awards for the day. Top three male and female overall awards are given out nightly based on gun time — plan to start in the first wave of each race if you’d like to compete.\n\nOn day three, Overall Finisher Awards go to the top three men and women with the best cumulative times across the three races. Current contests: Running Outfit Awards and the Tent Decorating Contest, with more to be added."
+        },
+        {
+          "heading": "Timing Specifics",
+          "body": "Your timing chip is on the back of your bib and looks like a sticker — do not fold your bib. No chip means no recorded time. The chip is disposable after the race.\n\nOverall awards are based on gun time, so top competitors should start at the front; if you start toward the back, expect a delay before crossing the start line and be courteous as the race begins."
+        },
+        {
+          "heading": "Live Tracking & Results",
+          "body": "Tracking is powered by Brooksee, so friends and family can follow your race in real time — no phone or watch needed. Brooksee estimates your position between checkpoints from pacing data for accurate updates and predicted finish times, and supporters can opt in to free text notifications at key points.\n\nResults are posted after each race and are not official until all runners have crossed the finish line.",
+          "links": [
+            {
+              "label": "Live tracking",
+              "url": "https://track.brooksee.com/track?h=gct"
+            },
+            {
+              "label": "Results",
+              "url": "https://brooksee.com/gct/results"
+            }
+          ]
+        },
+        {
+          "heading": "Finish Line & Recovery",
+          "body": "Each runner receives a food box, a banana, and chocolate milk after finishing, plus their finisher’s award. The runner recovery tent has hot food, snacks, fresh fruit, recovery beverages, and our signature finish-line mocktail, the Mana Freeze.\n\nThe recovery area and medical tent are for runners only — please don’t enter or take runners’ food and supplies."
+        },
+        {
+          "heading": "Spectators",
+          "body": "These courses are not very spectator friendly, but spectators are welcome to greet you at the finish. Friends and family should drive to the designated parking area for each race location and take the short shuttle ride to the finish.\n\nSpectators are responsible for their own transportation unless shuttle tickets have been purchased; when loading return shuttles, runners are given first priority."
+        },
+        {
+          "heading": "Race Photos, iTab & Lost + Found",
+          "body": "MarathonFoto provides course and finish-line photos to runners for free, usually the week after the event — keep your bib visible on your stomach so you can be found.\n\niTab offers custom engraved plates with your name and finishing time that clip onto your medal ribbon, $15 including shipping.\n\nThere is no official lost and found; found items are held for 14 days and then donated.",
+          "links": [
+            {
+              "label": "Order an iTab",
+              "url": "https://www.itab.us.com/product/vacation-races/"
+            }
+          ]
+        },
+        {
+          "heading": "Zero Waste",
+          "body": "At the heart of Vacation Races is a commitment to preserving the landscapes we run in. Unnecessary waste and trash can ruin the view and the experience, so every event has marked Zero Waste stations where you can sort your trash into the right container.\n\n**Green lid · Compostables** — banana and orange peels, uneaten food or drink items, and other organic material.\n\n**Blue lid · Recyclables** — plastics marked #1–7, aluminium and steel cans, paper, cardboard, and glass. Empty containers first.\n\n**Black lid · Everything else** — food wrappers, used gel packets, styrofoam, and all non-recyclable, non-compostable waste."
+        },
+        {
+          "heading": "Packing List",
+          "body": "You’re camping for four nights in the desert and running three days in a row. Nights and mornings are cold; afternoons are hot and exposed.\n\n**Highly recommended:** camp pillow · shower and sauna towels · jacket or vest · sleeping bag & pad · lounging blanket · snacks and food · soap and shampoo · extra clothing · socks for each race · running shoes · flashlight or headlamp · camp shoes · camera, phone, chargers · mask or buff · personal medication · running hydration pack · warm clothes for nights and mornings.\n\n**Recommended:** sunglasses · sunscreen · sun hat · toiletries · extra blanket · long underwear.\n\n**A few more things:** personal first aid kit · gloves · insect repellent · rain gear · ear plugs."
+        },
+        {
+          "heading": "Volunteers",
+          "body": "If you need assistance during the event, look for team members wearing shirts labelled VOLUNTEER, STAFF, or CREW. All volunteers should check in at the expo on Wednesday to receive instructions for their shifts — especially anyone volunteering at a start or finish line."
+        }
+      ]
+    },
+    "experiences": {
+      "enabled": true,
+      "navLabel": "Explore",
+      "eyebrow": "While you’re here",
+      "heading": "Explore Kanab",
+      "lodging": {
+        "partner": "",
+        "description": "",
+        "url": "",
+        "imageUrl": ""
+      },
+      "parkNote": "All festival activities begin after 2:00 PM, so mornings and early afternoons are yours. Non-runners don’t need an All Festival Pass — the speakers, films, and entertainment are free to join.",
+      "hikesHeading": "Road Trip In",
+      "hikes": [
+        {
+          "name": "St. George",
+          "distance": "SGU · ~80 mi",
+          "difficulty": "1.5 hr drive",
+          "elevation": "Snow Canyon · Red Cliffs · Zion · Belly of the Dragon",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=St+George+Regional+Airport,+Utah&destination=Jacob+Hamblin+Park,+Kanab,+UT",
+          "imageUrl": ""
+        },
+        {
+          "name": "Las Vegas",
+          "distance": "LAS · ~200 mi",
+          "difficulty": "3 hr drive",
+          "elevation": "Valley of Fire · Snow Canyon · Red Cliffs · Zion",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Harry+Reid+International+Airport,+Las+Vegas&destination=Jacob+Hamblin+Park,+Kanab,+UT",
+          "imageUrl": ""
+        },
+        {
+          "name": "Salt Lake City",
+          "distance": "SLC · ~300 mi",
+          "difficulty": "4.5 hr drive",
+          "elevation": "Meadow Hot Spring · Cedar Breaks · Coral Pink Sand Dunes",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Salt+Lake+City+International+Airport&destination=Jacob+Hamblin+Park,+Kanab,+UT",
+          "imageUrl": ""
+        },
+        {
+          "name": "Phoenix",
+          "distance": "PHX · ~350 mi",
+          "difficulty": "5.5 hr drive",
+          "elevation": "Sedona · Horseshoe Bend · Toadstool Hoodoos",
+          "url": "https://www.google.com/maps/dir/?api=1&origin=Phoenix+Sky+Harbor+International+Airport&destination=Jacob+Hamblin+Park,+Kanab,+UT",
+          "imageUrl": ""
+        }
+      ],
+      "activities": [],
+      "sights": [
+        {
+          "name": "Downtown Kanab",
+          "description": "Walkable and free — a couple of unique museums, a movie theater, a bar, and several historic sites, plus a trailhead to a great hike right behind the park."
+        },
+        {
+          "name": "Three National Parks",
+          "description": "A day trip in any direction: Kanab sits within reach of three adjacent National Parks, two National Monuments, a Navajo Tribal Park, and Lake Powell."
+        },
+        {
+          "name": "Stay at Camp",
+          "description": "At HQ after 2 PM — yoga classes, lawn games, massage therapists, local vendors and shops. Plenty to do for anyone not heading out on the trails."
+        }
+      ],
+      "restaurantsHeading": "Eat & Drink in Kanab",
+      "restaurantsIntro": "Lunch is on you each day, and each course sends you home a different way. A few crew favourites in town and along each return route. Confirm hours and reservations directly with each business before you go.",
+      "restaurants": [
+        {
+          "name": "Sego",
+          "description": "Featured · New American. Chef Shon Foster — Kanab local and former Amangiri executive chef — serves regional New American cuisine and social plates at Canyons Boutique Hotel. Reservations recommended.",
+          "phone": "435-644-5680",
+          "url": ""
+        },
+        {
+          "name": "Wild Thyme Bistro",
+          "description": "Lunch & dinner. Garden-to-table with Southwest and Cajun influences; vegetarian, vegan, and gluten-free options.",
+          "address": "198 S 100 E, Kanab",
+          "phone": "435-644-2848",
+          "url": ""
+        },
+        {
+          "name": "Peekaboo Canyon Wood Fired Kitchen",
+          "description": "Vegetarian · Pizza. All-vegetarian and vegan, wood-fired pizza, craft cocktails, live music on Fridays.",
+          "address": "233 W Center St, Kanab",
+          "phone": "435-689-1959",
+          "url": ""
+        },
+        {
+          "name": "Taro Coffee Bar",
+          "description": "Coffee. Espresso, cold brew, taro lattes, seasonal drinks, and pastries. @taro.coffeebar",
+          "phone": "435-535-1197",
+          "url": ""
+        },
+        {
+          "name": "Angel Village Café",
+          "description": "Plant-based lunch. A rotating plant-based buffet at Best Friends Animal Sanctuary. Confirm days, hours, and access before visiting.",
+          "url": ""
+        },
+        {
+          "name": "Archie’s Food to Die For",
+          "description": "After Bryce · Thursday. A food truck on your return to Kanab, on the north side of Orderville next to the ROAM Outdoor Adventures offices. A satellite location in Kanab is usually stationed outside Coral Hills Family Dentist.",
+          "url": ""
+        },
+        {
+          "name": "The Shop Coffee Co",
+          "description": "After Bryce · Thursday. In Orderville — awesome sandwiches, pastries, smoothies and drinks, caffeinated and otherwise.",
+          "url": ""
+        },
+        {
+          "name": "Edge of the World Brewery",
+          "description": "After Zion · Friday. Hidden brewery with a great food menu. Looking to reopen late summer 2026 after the new building is completed.",
+          "url": ""
+        },
+        {
+          "name": "Sweet Sage Coffee Co",
+          "description": "After Zion · Friday. Highly rated coffee and a straightforward breakfast and lunch menu.",
+          "url": ""
+        },
+        {
+          "name": "Water Canyon Wine Tasting",
+          "description": "After Zion · Friday. Charcuterie and wine tastings.",
+          "url": ""
+        },
+        {
+          "name": "BirdHouse",
+          "description": "After Antelope · Saturday. Crew favourite — awesome chicken.",
+          "url": ""
+        },
+        {
+          "name": "Grand Canyon Brewery",
+          "description": "After Antelope · Saturday. Great local brewery with a very large menu.",
+          "url": ""
+        },
+        {
+          "name": "Rustic Thistle",
+          "description": "After Antelope · Saturday. Southern cuisine with local Navajo flair. Vegan and gluten-free options available.",
+          "url": ""
+        }
+      ]
+    },
+    "faqs": {
+      "enabled": true,
+      "items": [
+        {
+          "question": "Do I have to run all three days?",
+          "answer": "Awards are given nightly for each race and cumulatively across all three, but the weekend is yours to run as you like. Day one at Bryce Canyon also offers a ten-mile finish option at the aid station if your legs need to save something for the next two days."
+        },
+        {
+          "question": "Do I need to buy a shuttle pass?",
+          "answer": "No — shuttles are an optional paid upgrade. You’re welcome to drive yourself to each start, which many runners prefer so they can explore the area afterwards on their own schedule. If you do want a shuttle, buy it in advance: capacity is capped at 75 runners per day."
+        },
+        {
+          "question": "Can I pick up my bib after Wednesday?",
+          "answer": "Yes. New for 2026: if you can’t make Wednesday’s expo, bib pickup is also available Thursday morning at the Bryce Canyon start line, and you’ll get your swag and shirt there. Bring your ID — or a copy of your friend’s ID if you’re picking up for someone else."
+        },
+        {
+          "question": "What’s included with registration?",
+          "answer": "Grab-and-go breakfast each race morning, one dinner ticket per event night, the runner recovery tent at each finish, fireside treats, all clinics and yoga, keynotes, live music, Indigenous performances, and both film festivals. Camping, shuttles, beer garden tickets, and IV services are separate."
+        },
+        {
+          "question": "I’m bringing a non-runner. What will they do?",
+          "answer": "They don’t need an All Festival Pass. Everything at camp begins after 2:00 PM — yoga, lawn games, massage, vendors, speakers, films, and entertainment are all free to join. While you’re on the trail they can explore Kanab’s museums and historic sites, or drive out to the parks. Non-runners can share a tent with a runner, and meal tickets are available separately."
+        },
+        {
+          "question": "Why is the race cup-free, and what should I bring?",
+          "answer": "To cut single-use plastic waste, we don’t provide cups on course or at the finish. Each course has only one aid station, so a hydration pack or bottle isn’t optional here — bring enough to cover the full distance. Coolers of water and Neuma electrolyte drink are at every aid station."
+        },
+        {
+          "question": "Can I get a meal if I have dietary restrictions?",
+          "answer": "Yes — vegetarian, vegan, gluten-free, and dairy-free options are available nightly, and no preorder is needed: tell the attendant at the buffet entrance. Select your restrictions at registration so they’re printed on the back of your bib. Meals are prepared in a shared temporary kitchen, so we can’t guarantee an allergen-free environment; anyone with serious allergies should speak with the culinary team directly."
+        },
+        {
+          "question": "Is there a lost and found?",
+          "answer": "There’s no official lost and found. If we find items, we hold them for 14 days and then donate what’s unclaimed. Submit the lost item form to check whether we have yours."
+        }
+      ]
+    }
+  }
+}

@@ -19,7 +19,8 @@ export default function ExperiencesSection({ data, basePath = 'sections.experien
     <SectionWrapper id="experiences" label="Experiences">
       <h2 className="font-display text-5xl md:text-6xl uppercase mb-12">Experiences</h2>
 
-      {/* Lodging */}
+      {/* Lodging — only for events with a lodging partner. */}
+      {(data.lodging.partner || editing) && (
       <div className="bg-vr-forest text-vr-cream rounded-lg p-6 md:p-8 mb-10 flex flex-col md:flex-row md:items-center justify-between gap-6">
         <div className="flex-1">
           <p className="font-micro text-xs tracking-[0.2em] uppercase text-vr-cream/50 mb-1">Official Lodging Partner</p>
@@ -34,6 +35,7 @@ export default function ExperiencesSection({ data, basePath = 'sections.experien
           </a>
         )}
       </div>
+      )}
 
       {/* Activities */}
       {data.activities.map((act, i) => {
@@ -178,9 +180,19 @@ function ExperiencesTrailhead({ data, basePath, editing }: { data: EventData['se
   return (
     <section id="experiences" className="bg-vr-offwhite px-6 md:px-12 py-20 md:py-[104px]">
       <div className="max-w-[1180px] mx-auto">
-        <TrailHeader eyebrow="Beyond the race" title="Experiences" className="mb-9" />
+        <div className="mb-9">
+          <div className="leading-[0.9]">
+            <span className="font-accent text-vr-sky" style={{ fontSize: 'clamp(20px,2.2vw,28px)' }}>
+              <EditableText as="span" value={data.eyebrow || 'Beyond the race'} path={`${basePath}.eyebrow`} />
+            </span>
+          </div>
+          <h2 className="font-display uppercase text-vr-forest leading-[0.9] mt-0.5 m-0" style={{ fontSize: 'clamp(40px,5.6vw,76px)' }}>
+            <EditableText as="span" value={data.heading || 'Experiences'} path={`${basePath}.heading`} />
+          </h2>
+        </div>
 
-        {/* Lodging banner */}
+        {/* Lodging banner — only for events with a lodging partner. */}
+        {(data.lodging.partner || editing) && (
         <div className="grid md:grid-cols-[1.3fr_1fr] border border-vr-line rounded-lg overflow-hidden bg-vr-white mb-9">
           <div className="p-9 flex flex-col justify-center">
             <span className="font-micro uppercase text-vr-sky block mb-2 text-[11px] tracking-[0.14em]">
@@ -204,6 +216,7 @@ function ExperiencesTrailhead({ data, basePath, editing }: { data: EventData['se
             <PhotoFrame src={data.lodging.imageUrl} label="Lodging photo" ratio="16 / 10" className="min-h-[200px] h-full" />
           )}
         </div>
+        )}
 
         {/* Activities */}
         {(data.activities.length > 0 || editing) && (

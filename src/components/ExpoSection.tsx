@@ -129,7 +129,16 @@ function ExpoTrailhead({ data, basePath, editing }: { data: EventData['sections'
   return (
     <section id="expo" className="bg-vr-offwhite px-6 md:px-12 py-20 md:py-[104px]">
       <div className="max-w-[1180px] mx-auto">
-        <TrailHeader eyebrow="Pre-race" title="Expo" className="mb-12" />
+        <div className="mb-12">
+          <div className="leading-[0.9]">
+            <span className="font-accent text-vr-sky" style={{ fontSize: 'clamp(20px,2.2vw,28px)' }}>
+              <EditableText as="span" value={data.eyebrow || 'Pre-race'} path={`${basePath}.eyebrow`} />
+            </span>
+          </div>
+          <h2 className="font-display uppercase text-vr-forest leading-[0.9] mt-0.5 m-0" style={{ fontSize: 'clamp(40px,5.6vw,76px)' }}>
+            <EditableText as="span" value={data.heading || 'Expo'} path={`${basePath}.heading`} />
+          </h2>
+        </div>
         <div className="font-body text-vr-forest leading-[1.65] max-w-[680px] mb-10" style={{ fontSize: '18px' }}>
           <EditableText as="div" value={data.locationAddress} path={`${basePath}.locationAddress`} />
         </div>

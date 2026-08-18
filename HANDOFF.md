@@ -57,6 +57,8 @@ content/events/{slug}.json
 {sections.welcome?.enabled     && <WelcomeSection     data={sections.welcome} />}
 {sections.schedule.enabled     && <ScheduleSection    data={sections.schedule} eventSlug={event.slug} />}
 {sections.expo.enabled         && <ExpoSection        data={sections.expo} />}
+{sections.camping?.enabled     && <CampingSection     data={sections.camping} />}
+{(sections.festival ?? []).map((f, i) => f.enabled && <FestivalSection data={f} index={i} />)}
 {sections.courseInfo.enabled   && <CourseInfoSection  data={sections.courseInfo} />}
 {sections.raceMorning.enabled  && <RaceMorningSection data={sections.raceMorning} />}
 {sections.spectators.enabled   && <SpectatorsSection  data={sections.spectators} />}
@@ -138,6 +140,32 @@ Renders 5K Info. Supports `navLabel`, custom `schedule` timeline cards, RideWith
 
 ### `RaceMorningSection.tsx`
 Renders Half Marathon Info. Supports `navLabel`, `parkingMapImageUrl`, RideWithGPS iframe embed, and `infoBlocks`. Course maps appear at the top (before the morning schedule).
+
+### `FestivalSection.tsx` — repeatable, for multi-day festival events
+Driven by an **optional array**, `sections.festival[]`. Each entry renders its own
+`<section>` between Camping and On-the-Course, with its own sticky-nav entry and
+search entries. Guides without a `festival` array are completely unaffected.
+
+Built for Grand Circle Trailfest, whose Basecamp / Meals & Dining / Performers content
+has no home in the single-race section set. Each entry is
+`{enabled, id, navLabel, eyebrow?, heading, intro?, tone?, imageUrl?, groups[], infoBlocks[]}`:
+
+- `tone` — `'light'` (default paper), `'dark'`, or `'darkest'`, so consecutive festival
+  sections can alternate grounds like the rest of the page.
+- `groups[]` — titled card groups, each `{heading, intro?, layout?, cards[]}`. Three layouts:
+  `cards` (text cards, default), `photos` (image-topped cards), `rows` (compact
+  eyebrow-left / title+body-right lines — used for meal times and the IV price list).
+- `cards[]` — `{eyebrow?, title, body?, meta?, imageUrl?, url?}`. `meta` is the
+  right-aligned trailing value on `rows` (e.g. a price).
+- `infoBlocks[]` — accordions at the foot of the section, as elsewhere.
+
+Fully editable in `/edit` (add/remove/reorder groups and cards, upload card photos).
+
+### Per-course accordions — `CourseDistance.infoBlocks`
+`courseInfo.distances[]` entries take an optional `infoBlocks[]`, rendered as accordions
+under that course's card. For multi-course events where each route has its own logistics
+(Grand Circle: Course Details / Aid Station & Cutoff / Getting There per day). Absent =
+the course card renders exactly as before.
 
 ---
 
