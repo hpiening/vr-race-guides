@@ -6,7 +6,7 @@ import EditableText from './edit/EditableText'
 import EditableUrl from './edit/EditableUrl'
 import EditableImage from './edit/EditableImage'
 import { ListControls, AddButton } from './edit/ListControls'
-import { TrailHeader } from './trailhead/Shared'
+import { TrailHeader, PhotoFrame } from './trailhead/Shared'
 
 type Props = { data: EventData['sections']['expo']; basePath?: string; theme?: 'classic' | 'trailhead' }
 
@@ -228,6 +228,53 @@ function ExpoTrailhead({ data, basePath, editing }: { data: EventData['sections'
               </div>
             ))}
             <AddButton path={`${basePath}.infoBlocks`} item={{ heading: 'Heading', body: 'Body text' }} label="Add info block" />
+          </div>
+        )}
+
+        {/* Titled images (e.g. the four "Road Trip" gateway-airport graphics).
+            Each slot is an editable image control in /edit. */}
+        {((data.images && data.images.length > 0) || editing) && (
+          <div className="mt-14">
+            <div className="leading-[0.9] mb-2">
+              <span className="font-accent text-vr-sky" style={{ fontSize: 'clamp(18px,2vw,24px)' }}>
+                <EditableText as="span" value={data.imagesHeading ?? ''} path={`${basePath}.imagesHeading`} placeholder="Images heading (optional)" />
+              </span>
+            </div>
+            <EditableText
+              as="p"
+              className="font-body text-vr-forest/85 leading-[1.6] max-w-[620px] mb-7 text-[16px]"
+              value={data.imagesIntro ?? ''}
+              path={`${basePath}.imagesIntro`}
+              placeholder="Images intro (optional)"
+            />
+            <div className="grid gap-6 sm:grid-cols-2">
+              {(data.images ?? []).map((img, i) => {
+                const ip = `${basePath}.images.${i}`
+                const ratio = img.ratio || '4 / 3'
+                const frame = (
+                  <div className="border border-vr-line rounded-lg overflow-hidden bg-vr-white">
+                    <PhotoFrame src={img.imageUrl} label={img.title || 'Photo'} ratio={ratio} />
+                  </div>
+                )
+                return (
+                  <div key={i}>
+                    <div className="flex items-start gap-2 mb-3">
+                      <EditableText as="h3" className="font-heading uppercase text-vr-forest flex-1 text-[16px] tracking-[0.04em]" value={img.title} path={`${ip}.title`} placeholder="Image title" />
+                      <ListControls path={`${basePath}.images`} index={i} count={data.images!.length} />
+                    </div>
+                    {editing ? (
+                      <>
+                        <EditableImage path={`${ip}.imageUrl`} label={`${img.title || 'Photo'} image`} ratio={ratio} />
+                        <EditableUrl path={`${ip}.url`} label="Full-size / link URL (optional)" />
+                      </>
+                    ) : img.url ? (
+                      <a href={img.url} target="_blank" rel="noopener noreferrer" className="block transition-opacity hover:opacity-90">{frame}</a>
+                    ) : frame}
+                  </div>
+                )
+              })}
+              <div className="sm:col-span-2"><AddButton path={`${basePath}.images`} item={{ title: 'New image', imageUrl: '' }} label="Add image" /></div>
+            </div>
           </div>
         )}
       </div>

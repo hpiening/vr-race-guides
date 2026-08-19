@@ -294,6 +294,17 @@ export interface EventData {
       hours: ExpoHour[]
       notes: string[]
       infoBlocks?: InfoBlock[]
+      /**
+       * Optional titled images below the section (e.g. Grand Circle's four
+       * "Road Trip" gateway-airport graphics). Each is an editable image slot in
+       * /edit. `ratio` overrides the default 4/3 frame (these are 4/5 portrait
+       * infographics); `url` makes the card open the full-size graphic.
+       */
+      images?: Array<{ title: string; imageUrl?: string; ratio?: string; url?: string }>
+      /** Optional heading above `images[]`. */
+      imagesHeading?: string
+      /** Optional lead line under `imagesHeading`. */
+      imagesIntro?: string
     }
     /** Optional VR Campground section (renders between Expo and On-the-Course). */
     camping?: CampingData

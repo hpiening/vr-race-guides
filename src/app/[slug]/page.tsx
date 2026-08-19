@@ -65,6 +65,7 @@ function buildSearchIndex(event: EventData): SearchItem[] {
     sections.expo.notes.forEach(n => add(expoLabel, 'expo', n))
     sections.expo.infoBlocks?.forEach(b => add(expoLabel, 'expo', `${b.heading} ${b.body}`))
     add(expoLabel, 'expo', `${sections.expo.locationName} ${sections.expo.date}`)
+    sections.expo.images?.forEach(i => add(expoLabel, 'expo', `${sections.expo.imagesHeading ?? ''} ${i.title}`))
   }
 
   if (sections.camping?.enabled) {

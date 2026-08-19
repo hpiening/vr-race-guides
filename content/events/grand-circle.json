@@ -110,10 +110,6 @@
               "time": "Evening",
               "label": "Welcome Orientation · All Runners",
               "note": "New for 2026 — one orientation replaces the nightly RD reports."
-            },
-            {
-              "time": "8:30 – 10:00 PM",
-              "label": "Night Sky Viewing · Stellar Vista Observatory"
             }
           ]
         },
@@ -192,6 +188,10 @@
             {
               "time": "Evening",
               "label": "Awards · Tent Decorating Contest"
+            },
+            {
+              "time": "8:30 – 10:00 PM",
+              "label": "Star Gazing · Stellar Vista Observatory"
             }
           ]
         },
@@ -282,6 +282,34 @@
         "Bring a photo ID for bib pickup — and bring your own bag, our expo is bag-free.",
         "[CONFIRM] Neuma Health electrolyte presentation — day and time still to be confirmed."
       ],
+      "imagesHeading": "Road Trip In",
+      "imagesIntro": "Four ways in, and every one of them is a good drive. Pick your airport and make a red rock day of the trip up to Kanab — tap a map for the full-size version.",
+      "images": [
+        {
+          "title": "St. George · SGU · ~80 mi",
+          "imageUrl": "/images/events/grand-circle-roadtrip-sgu.png",
+          "ratio": "4 / 5",
+          "url": "/images/events/grand-circle-roadtrip-sgu.png"
+        },
+        {
+          "title": "Las Vegas · LAS · ~200 mi",
+          "imageUrl": "/images/events/grand-circle-roadtrip-las.png",
+          "ratio": "4 / 5",
+          "url": "/images/events/grand-circle-roadtrip-las.png"
+        },
+        {
+          "title": "Salt Lake City · SLC · ~300 mi",
+          "imageUrl": "/images/events/grand-circle-roadtrip-slc.png",
+          "ratio": "4 / 5",
+          "url": "/images/events/grand-circle-roadtrip-slc.png"
+        },
+        {
+          "title": "Phoenix · PHX · ~350 mi",
+          "imageUrl": "/images/events/grand-circle-roadtrip-phx.png",
+          "ratio": "4 / 5",
+          "url": "/images/events/grand-circle-roadtrip-phx.png"
+        }
+      ],
       "infoBlocks": [
         {
           "heading": "Bib Pickup Options",
@@ -289,7 +317,7 @@
         },
         {
           "heading": "Getting Here & Parking",
-          "body": "There’s plenty of parking at Festival HQ — along the length of the park and on the south side near the pool house.\n\nMost runners fly into St. George (1.5 hr), Las Vegas (3 hr), Salt Lake City (4.5 hr), or Phoenix (5.5 hr) and drive in. Coming from a specific airport? We’ve mapped the drive and the hikes worth stopping for along the way — see the road trip guides in Explore Kanab."
+          "body": "There’s plenty of parking at Festival HQ — along the length of the park and on the south side near the pool house.\n\nMost runners fly into St. George (1.5 hr), Las Vegas (3 hr), Salt Lake City (4.5 hr), or Phoenix (5.5 hr) and drive in. Coming from a specific airport? We’ve mapped the drive and the hikes worth stopping for along the way — see the road trip guides below."
         },
         {
           "heading": "Shuttles Are a Paid Upgrade",
@@ -348,19 +376,26 @@
               {
                 "title": "Line Dancing",
                 "eyebrow": "Thu, Oct 1 · 5–6 PM · New",
-                "body": "With Donna Bronson. New for 2026 — no experience needed.",
+                "body": "With Donna Bronson of Bronco Entertainment. New for 2026 — no experience needed.",
+                "url": "https://www.broncoentertainment.com/",
                 "imageUrl": ""
               },
               {
                 "title": "Tai Chi",
                 "eyebrow": "Fri, Oct 2 · 5–6 PM",
-                "body": "With Terri Henry, board-certified through the Tai Chi for Health Institute. A moving meditation for balance and recovery.",
+                "body": "With Terri Henry of Vibration Oasis, board-certified through the Tai Chi for Health Institute. A moving meditation for balance and recovery.",
                 "imageUrl": ""
               },
               {
                 "title": "Sound Bath",
                 "eyebrow": "Sat, Oct 3 · 5–6 PM",
                 "body": "Pure Healing Resonance by Carmella — aromatherapy, grounding breathwork, and ten quartz crystal bowls.",
+                "imageUrl": ""
+              },
+              {
+                "title": "Star Gazing",
+                "eyebrow": "Fri, Oct 2 · 8:30–10 PM",
+                "body": "Stargazing with Stellar Vista Observatory. Bring your curiosity (and questions about the universe) and see the Andromeda Galaxy, Hercules Star Cluster, Saturn, and more through high-power telescopes. SVO’s astronomers are excited to share the sky with you.",
                 "imageUrl": ""
               }
             ]
@@ -371,14 +406,14 @@
             "cards": [
               {
                 "title": "Massage",
-                "eyebrow": "Free · 20 minutes",
+                "eyebrow": "Daily · 2–8 PM · Free",
                 "body": "Free 20-minute massages every day, with the option to pay for a longer session. First come, first served — hop on the waiting list.",
                 "imageUrl": ""
               },
               {
-                "title": "Compression",
-                "eyebrow": "Elevated Legs",
-                "body": "Hot/cold leg compression therapy to help you relax and recover. Additional sessions can be booked for a fee, subject to availability. @elevatedlegs",
+                "title": "Elevated Legs Compression",
+                "eyebrow": "Daily · 2–8 PM · Free",
+                "body": "Hot/cold leg compression therapy to help you relax and recover. **Ten minutes each day is free**, compliments of Vacation Races — need an extra boost? Add 10 more minutes for $10, 20 for $15, or 30 for $20. @elevatedlegs",
                 "url": "https://elevatedlegs.com",
                 "imageUrl": ""
               },
@@ -390,7 +425,7 @@
               },
               {
                 "title": "Yoga with Tiffany Smith",
-                "eyebrow": "Yoga · 45 minutes",
+                "eyebrow": "Thu–Sat · 45 minutes",
                 "body": "Two instructor-led sessions each afternoon, 4:00–4:45 PM and 5:00–5:45 PM. Mats and foam rollers are available in the recovery area for self-guided work.",
                 "imageUrl": ""
               },
@@ -410,7 +445,7 @@
           },
           {
             "heading": "IV Station · Desert Healing",
-            "intro": "Advance sign-up required. Desert Healing brings 20+ years of ER clinical experience to the desert: a precise, medically-backed blend of amino acids and vitamins to prime your engine before the race and repair it the moment you cross the line. Stop by the tent or book your pre-race session. [deserthealing.org](https://deserthealing.org/iv-infusions/)",
+            "intro": "Advance sign-up required. **IV tent hours: Wednesday 12–7 PM, Thursday–Saturday 3–7 PM.** Desert Healing brings 20+ years of ER clinical experience to the desert: a precise, medically-backed blend of amino acids and vitamins to prime your engine before the race and repair it the moment you cross the line. Stop by the tent or book your pre-race session. [deserthealing.org](https://deserthealing.org/iv-infusions/)",
             "layout": "rows",
             "cards": [
               {
@@ -461,7 +496,7 @@
         "infoBlocks": [
           {
             "heading": "IV Discounts, Injections & Peptides",
-            "body": "**Discount:** $155 each for any IV when booking at least 2 IVs during the weekend.\n\n**Injections & infusions:** NAD+ infusion $455 · NAD+ injection $60 · Toradol (pain relief) $60 · Zofran (anti-nausea) $35 · Vitamin D $35.\n\n**Peptides:** BPC-157 $175 · Wolverine Stack (BPC-157 / TB-500) $250.",
+            "body": "**Discount:** $155 each for any IV when booking at least 2 IVs during the weekend.\n\n**Injections & infusions:** NAD+ infusion $455 · NAD+ injection $60 · Toradol (pain relief) $60 · Zofran (anti-nausea) $35 · Vitamin D $35.\n\n**Peptides:** BPC-157 $175 · Wolverine Stack (BPC-157 / TB-500) $250.\n\n**In town:** Desert Healing’s downtown Kanab location also has a cold plunge and hot sauna, plus IV hydration 10:00 AM – 5:00 PM every day of the week.",
             "linkLabel": "Book with Desert Healing",
             "linkUrl": "https://deserthealing.org/iv-infusions/"
           }
@@ -591,9 +626,15 @@
                 "imageUrl": ""
               },
               {
+                "title": "Michelob Ultra",
+                "eyebrow": "Canned",
+                "body": "Plus **Michelob Ultra Zero**, an alcohol-free light lager.",
+                "imageUrl": ""
+              },
+              {
                 "title": "Hard Teas, Seltzers & Sodas",
-                "eyebrow": "Non-draft",
-                "body": "Beast teas, Blind Lemonade variety, craft sodas, and non-alcoholic options.",
+                "eyebrow": "Canned",
+                "body": "Beast teas, Blind Lemonade variety, and craft sodas.",
                 "imageUrl": ""
               }
             ]
@@ -643,19 +684,22 @@
               {
                 "title": "Keira D’Amato",
                 "eyebrow": "Keynote · Wed, Sep 30 · 6:00–7:30 PM",
-                "body": "Our 2026 keynote speaker opens the festival on Wednesday evening, before the welcome orientation and night sky viewing.",
+                "body": "Our 2026 keynote speaker opens the festival on Wednesday evening, before the welcome orientation.",
+                "url": "https://keiradamato.com/",
                 "imageUrl": ""
               },
               {
                 "title": "Pueblo Enchantment Dancers",
                 "eyebrow": "Thu, Oct 1 · 6–7 PM",
                 "body": "Traditional and contemporary dances of Acoma and Hopi Pueblo, directed by second-generation Johnathan Keyope. Together since 1981.",
+                "url": "https://www.facebook.com/puebloenchantment/",
                 "imageUrl": ""
               },
               {
                 "title": "Red Heritage",
                 "eyebrow": "Fri, Oct 2 · 6–7 PM",
                 "body": "A Native American performing arts company from Page, Arizona — Grass Dance, Jingle Dress Dance, Northern Traditional, and the world-famous Hoop Dance.",
+                "url": "https://red-heritage.com/",
                 "imageUrl": ""
               }
             ]
@@ -666,23 +710,26 @@
             "cards": [
               {
                 "title": "Fox & Bones",
-                "eyebrow": "Thu · 7–8 PM",
+                "eyebrow": "Thu, Oct 1 · 7–8 PM",
                 "url": "https://foxandbones.com/",
                 "imageUrl": ""
               },
               {
                 "title": "The Alpines",
-                "eyebrow": "Fri · 7–8 PM",
+                "eyebrow": "Fri, Oct 2 · 7–8 PM",
+                "url": "https://www.thealpinesmusic.com/",
                 "imageUrl": ""
               },
               {
                 "title": "Sophia Rankin & The Sound",
-                "eyebrow": "Sat · 5:30–6:30 PM",
+                "eyebrow": "Sat, Oct 3 · 5:30–6:30 PM",
+                "url": "https://www.sophiarankin.com/",
                 "imageUrl": ""
               },
               {
                 "title": "Alicia Stockman",
-                "eyebrow": "Sat · 6:30–7:30 PM",
+                "eyebrow": "Sat, Oct 3 · 6:30–7:30 PM",
+                "url": "https://aliciastockman.com/",
                 "imageUrl": ""
               }
             ]
@@ -695,6 +742,7 @@
                 "title": "Trail Running Film Festival",
                 "eyebrow": "Thu, Oct 1 · 8:30–10 PM",
                 "body": "An evening of trail running films at Festival HQ, included with your registration.",
+                "url": "https://trailfilmfest.com/",
                 "imageUrl": ""
               },
               {
@@ -958,56 +1006,35 @@
         "imageUrl": ""
       },
       "parkNote": "All festival activities begin after 2:00 PM, so mornings and early afternoons are yours. Non-runners don’t need an All Festival Pass — the speakers, films, and entertainment are free to join.",
-      "hikesHeading": "Road Trip In",
+      "hikesHeading": "Around Town & Beyond",
       "hikes": [
         {
-          "name": "St. George",
-          "distance": "SGU · ~80 mi",
-          "difficulty": "1.5 hr drive",
-          "elevation": "Snow Canyon · Red Cliffs · Zion · Belly of the Dragon",
-          "url": "https://www.google.com/maps/dir/?api=1&origin=St+George+Regional+Airport,+Utah&destination=Jacob+Hamblin+Park,+Kanab,+UT",
+          "name": "Downtown Kanab",
+          "distance": "Walkable · Free",
+          "difficulty": "",
+          "elevation": "A couple of unique museums, a movie theater, a bar, and several historic sites — plus a trailhead to a great hike right behind the park.",
+          "url": "",
           "imageUrl": ""
         },
         {
-          "name": "Las Vegas",
-          "distance": "LAS · ~200 mi",
-          "difficulty": "3 hr drive",
-          "elevation": "Valley of Fire · Snow Canyon · Red Cliffs · Zion",
-          "url": "https://www.google.com/maps/dir/?api=1&origin=Harry+Reid+International+Airport,+Las+Vegas&destination=Jacob+Hamblin+Park,+Kanab,+UT",
+          "name": "Three National Parks",
+          "distance": "Day trip",
+          "difficulty": "",
+          "elevation": "Kanab sits within reach of three adjacent National Parks, two National Monuments, a Navajo Tribal Park, and Lake Powell.",
+          "url": "",
           "imageUrl": ""
         },
         {
-          "name": "Salt Lake City",
-          "distance": "SLC · ~300 mi",
-          "difficulty": "4.5 hr drive",
-          "elevation": "Meadow Hot Spring · Cedar Breaks · Coral Pink Sand Dunes",
-          "url": "https://www.google.com/maps/dir/?api=1&origin=Salt+Lake+City+International+Airport&destination=Jacob+Hamblin+Park,+Kanab,+UT",
-          "imageUrl": ""
-        },
-        {
-          "name": "Phoenix",
-          "distance": "PHX · ~350 mi",
-          "difficulty": "5.5 hr drive",
-          "elevation": "Sedona · Horseshoe Bend · Toadstool Hoodoos",
-          "url": "https://www.google.com/maps/dir/?api=1&origin=Phoenix+Sky+Harbor+International+Airport&destination=Jacob+Hamblin+Park,+Kanab,+UT",
+          "name": "Stay at Camp",
+          "distance": "At HQ · After 2 PM",
+          "difficulty": "",
+          "elevation": "Yoga classes, lawn games, massage therapists, local vendors and shops — plenty to do for anyone not heading out on the trails.",
+          "url": "",
           "imageUrl": ""
         }
       ],
       "activities": [],
-      "sights": [
-        {
-          "name": "Downtown Kanab",
-          "description": "Walkable and free — a couple of unique museums, a movie theater, a bar, and several historic sites, plus a trailhead to a great hike right behind the park."
-        },
-        {
-          "name": "Three National Parks",
-          "description": "A day trip in any direction: Kanab sits within reach of three adjacent National Parks, two National Monuments, a Navajo Tribal Park, and Lake Powell."
-        },
-        {
-          "name": "Stay at Camp",
-          "description": "At HQ after 2 PM — yoga classes, lawn games, massage therapists, local vendors and shops. Plenty to do for anyone not heading out on the trails."
-        }
-      ],
+      "sights": [],
       "restaurantsHeading": "Eat & Drink in Kanab",
       "restaurantsIntro": "Lunch is on you each day, and each course sends you home a different way. A few crew favourites in town and along each return route. Confirm hours and reservations directly with each business before you go.",
       "restaurants": [
