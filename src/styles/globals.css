@@ -113,6 +113,10 @@
   --tl-band-stripe:    repeating-linear-gradient(135deg,#22402f,#22402f 16px,#1e3a2a 16px,#1e3a2a 32px);
   --tl-hatch-dark:     repeating-linear-gradient(135deg,#2c4d3a,#2c4d3a 14px,#284635 14px,#284635 28px);
   --tl-challenge-grad: linear-gradient(140deg,#264533,#1a2f23);
+  /* Hero photo scrim (bottom-of-hero darkening for text legibility). Default
+     matches the value HeroSection used to hardcode, so existing guides are
+     unchanged; a brand scope can retint/strengthen it for a bright hero photo. */
+  --tl-hero-scrim:     linear-gradient(180deg,rgba(26,47,35,0.12) 0%,rgba(26,47,35,0) 38%,rgba(26,47,35,0.6) 100%);
 
   --font-display:  'Scale Condensed', 'Oswald', sans-serif;
   --font-heading:  'Scale', 'Arial Black', sans-serif;
@@ -238,6 +242,10 @@
   --tl-band-stripe:    repeating-linear-gradient(135deg,#351A0E,#351A0E 16px,#22110A 16px,#22110A 32px);
   --tl-hatch-dark:     repeating-linear-gradient(135deg,#4A2718,#4A2718 14px,#351A0E 14px,#351A0E 28px);
   --tl-challenge-grad: linear-gradient(140deg,#351A0E,#22110A);
+  /* Warm-brown scrim, ramped harder than the default: the hero photo is a
+     bright, sunlit red-rock scene and the cream headline sits over the middle
+     of it, where the default 60% green scrim left the type washed out. */
+  --tl-hero-scrim:     linear-gradient(180deg,rgba(34,17,10,0.18) 0%,rgba(34,17,10,0) 30%,rgba(34,17,10,0.55) 66%,rgba(34,17,10,0.92) 100%);
 }
 
 /* ─── Base ───────────────────────────────────────────────────── */

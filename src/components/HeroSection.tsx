@@ -125,7 +125,7 @@ function HeroTrailhead({ event }: { event: EventData }) {
       {/* bottom scrim for legibility over photo/gradient */}
       <div
         className="absolute inset-0 z-[1] pointer-events-none"
-        style={{ background: 'linear-gradient(180deg,rgba(26,47,35,0.12) 0%,rgba(26,47,35,0) 38%,rgba(26,47,35,0.6) 100%)' }}
+        style={{ background: 'var(--tl-hero-scrim)' }}
       />
       {/* inset cream frame */}
       <div className="absolute z-[2] pointer-events-none border border-vr-cream/30" style={{ inset: '22px' }} />
