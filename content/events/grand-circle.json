@@ -555,14 +555,16 @@
               {
                 "title": "Welcome Dinner",
                 "eyebrow": "Wednesday",
-                "body": "Penne Bolognese (vegetarian and gluten-free options available, plus gluten-free penne) · Caesar Salad · Dinner Rolls (gluten-free available). Self-serve nonalcoholic beverage station: sparkling water, fruit-juice mocktails, watermelon juice, cherry juice, rotating fruit juices.",
-                "imageUrl": ""
+                "body": "· Caesar Salad · Dinner Rolls (gluten-free available)\nSelf-serve nonalcoholic beverage station: sparkling water, fruit-juice mocktails, watermelon juice, cherry juice, rotating fruit juices.",
+                "imageUrl": "",
+                "meta": "Penne Bolognese (vegetarian and gluten-free options available, plus gluten-free penne)"
               },
               {
                 "title": "Dinner",
                 "eyebrow": "Thursday",
-                "body": "Herb-Roasted Chicken, Roasted Potatoes, Sautéed Summer Squash, Pasta Salad, Fresh Garden Salad (gluten-free balsamic vinaigrette or ranch). Plant-based: Harvest Shepherd’s Pie (vegetarian, vegan, dairy-free, gluten-free).",
-                "imageUrl": ""
+                "body": "· Roasted Potatoes · Sautéed Summer Squash · Pasta Salad · Fresh Garden Salad (gluten-free balsamic vinaigrette or ranch). \nPlant-based: Harvest Shepherd’s Pie (vegetarian, vegan, dairy-free, gluten-free).",
+                "imageUrl": "",
+                "meta": "Herb-Roasted Chicken, "
               },
               {
                 "title": "Dinner",
