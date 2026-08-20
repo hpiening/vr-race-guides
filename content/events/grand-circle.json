@@ -1036,11 +1036,12 @@
       "activities": [],
       "sights": [],
       "restaurantsHeading": "Eat & Drink in Kanab",
-      "restaurantsIntro": "Lunch is on you each day, and each course sends you home a different way. A few crew favourites in town and along each return route. Confirm hours and reservations directly with each business before you go.",
+      "restaurantsIntro": "Lunch is on you each day, and each course sends you home a different way — so here are crew favourites in town, plus a pick or two along each return route. Hours, menus and availability change: confirm directly with each business before you go.",
       "restaurants": [
         {
           "name": "Sego",
           "description": "Featured · New American. Chef Shon Foster — Kanab local and former Amangiri executive chef — serves regional New American cuisine and social plates at Canyons Boutique Hotel. Reservations recommended.",
+          "address": "Canyons Boutique Hotel, Kanab",
           "phone": "435-644-5680",
           "url": ""
         },
@@ -1071,43 +1072,43 @@
         },
         {
           "name": "Archie’s Food to Die For",
-          "description": "After Bryce · Thursday. A food truck on your return to Kanab, on the north side of Orderville next to the ROAM Outdoor Adventures offices. A satellite location in Kanab is usually stationed outside Coral Hills Family Dentist.",
-          "url": ""
+          "description": "After Bryce · Thursday. A great stationary food truck on your return to Kanab, on the north side of Orderville next to the ROAM Outdoor Adventures offices. There’s also a satellite location in Kanab usually stationed outside Coral Hills Family Dentist — keep an eye out for that one too.",
+          "url": "https://maps.app.goo.gl/KB3Qi3JRgvR4q1z4A"
         },
         {
           "name": "The Shop Coffee Co",
           "description": "After Bryce · Thursday. In Orderville — awesome sandwiches, pastries, smoothies and drinks, caffeinated and otherwise.",
-          "url": ""
+          "url": "http://www.theshopcoffeeco.com/"
         },
         {
           "name": "Edge of the World Brewery",
           "description": "After Zion · Friday. Hidden brewery with a great food menu. Looking to reopen late summer 2026 after the new building is completed.",
-          "url": ""
+          "url": "https://www.facebook.com/edgeoftheworldbrewery/"
         },
         {
           "name": "Sweet Sage Coffee Co",
           "description": "After Zion · Friday. Highly rated coffee and a straightforward breakfast and lunch menu.",
-          "url": ""
+          "url": "https://www.sweetsagecoffee.com/"
         },
         {
           "name": "Water Canyon Wine Tasting",
           "description": "After Zion · Friday. Charcuterie and wine tastings.",
-          "url": ""
+          "url": "https://watercanyonwinery.com/hildale/"
         },
         {
           "name": "BirdHouse",
           "description": "After Antelope · Saturday. Crew favourite — awesome chicken.",
-          "url": ""
+          "url": "https://www.birdhouseaz.com/"
         },
         {
           "name": "Grand Canyon Brewery",
           "description": "After Antelope · Saturday. Great local brewery with a very large menu.",
-          "url": ""
+          "url": "https://www.grandcanyonbrewery.com/locations"
         },
         {
           "name": "Rustic Thistle",
           "description": "After Antelope · Saturday. Southern cuisine with local Navajo flair. Vegan and gluten-free options available.",
-          "url": ""
+          "url": "https://rusticthistleeats.com/"
         }
       ]
     },
