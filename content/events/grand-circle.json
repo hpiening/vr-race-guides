@@ -579,6 +579,69 @@
             ]
           },
           {
+            "heading": "On the Drive Back",
+            "intro": "Lunch is on you each day, and each course sends you home a different way. A few crew favourites along each return route — tap any of them for hours and menus, which change often enough to be worth checking before you go.",
+            "layout": "rows",
+            "cards": [
+              {
+                "eyebrow": "After Bryce · Thu",
+                "title": "Archie’s Food to Die For",
+                "body": "A great stationary food truck on the north side of Orderville, next to the ROAM Outdoor Adventures offices. There’s also a satellite location in Kanab usually stationed outside Coral Hills Family Dentist — keep an eye out for that one too.",
+                "url": "https://maps.app.goo.gl/KB3Qi3JRgvR4q1z4A",
+                "imageUrl": ""
+              },
+              {
+                "eyebrow": "After Bryce · Thu",
+                "title": "The Shop Coffee Co",
+                "body": "In Orderville — awesome sandwiches, pastries, smoothies and drinks, caffeinated and otherwise.",
+                "url": "http://www.theshopcoffeeco.com/",
+                "imageUrl": ""
+              },
+              {
+                "eyebrow": "After Zion · Fri",
+                "title": "Edge of the World Brewery",
+                "body": "Hidden brewery with a great food menu. Looking to reopen late summer 2026 once the new building is finished.",
+                "url": "https://www.facebook.com/edgeoftheworldbrewery/",
+                "imageUrl": ""
+              },
+              {
+                "eyebrow": "After Zion · Fri",
+                "title": "Sweet Sage Coffee Co",
+                "body": "Highly rated coffee and a straightforward breakfast and lunch menu.",
+                "url": "https://www.sweetsagecoffee.com/",
+                "imageUrl": ""
+              },
+              {
+                "eyebrow": "After Zion · Fri",
+                "title": "Water Canyon Wine Tasting",
+                "body": "Charcuterie and wine tastings.",
+                "url": "https://watercanyonwinery.com/hildale/",
+                "imageUrl": ""
+              },
+              {
+                "eyebrow": "After Antelope · Sat",
+                "title": "BirdHouse",
+                "body": "Crew favourite. Awesome chicken.",
+                "url": "https://www.birdhouseaz.com/",
+                "imageUrl": ""
+              },
+              {
+                "eyebrow": "After Antelope · Sat",
+                "title": "Grand Canyon Brewery",
+                "body": "Great local brewery with a very large menu.",
+                "url": "https://www.grandcanyonbrewery.com/locations",
+                "imageUrl": ""
+              },
+              {
+                "eyebrow": "After Antelope · Sat",
+                "title": "Rustic Thistle",
+                "body": "Southern cuisine with local Navajo flair. Vegan and gluten-free options available.",
+                "url": "https://rusticthistleeats.com/",
+                "imageUrl": ""
+              }
+            ]
+          },
+          {
             "heading": "Beer Garden · Monster Brewing",
             "intro": "New for 2026, Monster Brewing takes over the beer garden. Tickets are purchased separately and valid ID is required. Open Thursday–Saturday per the posted schedule. [monsterbrewing.com](https://monsterbrewing.com)  \n[CONFIRM] beer garden ticket price and posted hours.",
             "layout": "cards",
@@ -663,7 +726,7 @@
           },
           {
             "heading": "Lunch in Kanab",
-            "body": "Lunch is independent and not an official Trailfest meal. Food and beverage trucks may be at Trailfest HQ during select hours — vendors, menus, and times vary, so check posted signage; purchases aren’t included with registration or meal tickets. See Explore Kanab for local recommendations."
+            "body": "Lunch is independent and not an official Trailfest meal. Food and beverage trucks may be at Trailfest HQ during select hours — vendors, menus, and times vary, so check posted signage; purchases aren’t included with registration or meal tickets.\n\nFor spots on each day’s drive home see **On the Drive Back** above, and for places in town see [Explore Kanab](#experiences)."
           }
         ]
       },
@@ -1036,7 +1099,7 @@
       "activities": [],
       "sights": [],
       "restaurantsHeading": "Eat & Drink in Kanab",
-      "restaurantsIntro": "Lunch is on you each day, and each course sends you home a different way — so here are crew favourites in town, plus a pick or two along each return route. Hours, menus and availability change: confirm directly with each business before you go.",
+      "restaurantsIntro": "Where to eat in Kanab itself. For the spots along each day’s drive home, see On the Drive Back in Meals & Dining. Hours, menus and availability change: confirm directly with each business before you go.",
       "restaurants": [
         {
           "name": "Sego",
@@ -1069,46 +1132,6 @@
           "name": "Angel Village Café",
           "description": "Plant-based lunch. A rotating plant-based buffet at Best Friends Animal Sanctuary. Confirm days, hours, and access before visiting.",
           "url": ""
-        },
-        {
-          "name": "Archie’s Food to Die For",
-          "description": "After Bryce · Thursday. A great stationary food truck on your return to Kanab, on the north side of Orderville next to the ROAM Outdoor Adventures offices. There’s also a satellite location in Kanab usually stationed outside Coral Hills Family Dentist — keep an eye out for that one too.",
-          "url": "https://maps.app.goo.gl/KB3Qi3JRgvR4q1z4A"
-        },
-        {
-          "name": "The Shop Coffee Co",
-          "description": "After Bryce · Thursday. In Orderville — awesome sandwiches, pastries, smoothies and drinks, caffeinated and otherwise.",
-          "url": "http://www.theshopcoffeeco.com/"
-        },
-        {
-          "name": "Edge of the World Brewery",
-          "description": "After Zion · Friday. Hidden brewery with a great food menu. Looking to reopen late summer 2026 after the new building is completed.",
-          "url": "https://www.facebook.com/edgeoftheworldbrewery/"
-        },
-        {
-          "name": "Sweet Sage Coffee Co",
-          "description": "After Zion · Friday. Highly rated coffee and a straightforward breakfast and lunch menu.",
-          "url": "https://www.sweetsagecoffee.com/"
-        },
-        {
-          "name": "Water Canyon Wine Tasting",
-          "description": "After Zion · Friday. Charcuterie and wine tastings.",
-          "url": "https://watercanyonwinery.com/hildale/"
-        },
-        {
-          "name": "BirdHouse",
-          "description": "After Antelope · Saturday. Crew favourite — awesome chicken.",
-          "url": "https://www.birdhouseaz.com/"
-        },
-        {
-          "name": "Grand Canyon Brewery",
-          "description": "After Antelope · Saturday. Great local brewery with a very large menu.",
-          "url": "https://www.grandcanyonbrewery.com/locations"
-        },
-        {
-          "name": "Rustic Thistle",
-          "description": "After Antelope · Saturday. Southern cuisine with local Navajo flair. Vegan and gluten-free options available.",
-          "url": "https://rusticthistleeats.com/"
         }
       ]
     },

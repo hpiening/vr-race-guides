@@ -101,8 +101,8 @@ export default function FestivalSection({ data, index }: Props) {
           <div className="flex flex-col gap-2.5">
             {cards.map((card, ci) => {
               const cp = `${gp}.cards.${ci}`
-              return (
-                <div key={ci} className={`${cardShell} px-6 py-5 grid gap-4 sm:grid-cols-[150px_1fr] items-baseline`}>
+              const inner = (
+                <>
                   <EditableText
                     as="div"
                     className="font-label uppercase text-vr-sky text-[12px] tracking-[0.12em]"
@@ -111,22 +111,38 @@ export default function FestivalSection({ data, index }: Props) {
                     placeholder="When / label"
                   />
                   <div>
-                    <div className="flex items-baseline gap-3">
-                      <EditableText
-                        as="h4"
-                        className={`font-heading uppercase flex-1 text-[15px] tracking-[0.04em] ${headingColor}`}
-                        value={card.title}
-                        path={`${cp}.title`}
-                      />
-                      <EditableText
-                        as="div"
-                        className={`font-heading text-[15px] ${dark ? 'text-vr-cream' : 'text-vr-forest'}`}
-                        value={card.meta ?? ''}
-                        path={`${cp}.meta`}
-                        placeholder="Price (optional)"
-                      />
-                      {editing && <ListControls path={`${gp}.cards`} index={ci} count={cards.length} />}
-                    </div>
+                    {/* Title and meta share a row in view mode. While editing they
+                        stack: an auto-growing textarea is width:100%, so as a flex
+                        sibling it claimed the whole row and collapsed the flex-1
+                        title to zero width — which rendered the heading one
+                        character per line. */}
+                    {editing ? (
+                      <div className="space-y-1">
+                        <div className="flex items-start gap-2">
+                          <EditableText
+                            as="div"
+                            className={`font-heading uppercase flex-1 text-[15px] tracking-[0.04em] ${headingColor}`}
+                            value={card.title}
+                            path={`${cp}.title`}
+                          />
+                          <ListControls path={`${gp}.cards`} index={ci} count={cards.length} />
+                        </div>
+                        <EditableText
+                          as="div"
+                          className={`font-heading text-[15px] ${dark ? 'text-vr-cream' : 'text-vr-forest'}`}
+                          value={card.meta ?? ''}
+                          path={`${cp}.meta`}
+                          placeholder="Price (optional)"
+                        />
+                      </div>
+                    ) : (
+                      <div className="flex items-baseline gap-3">
+                        <h4 className={`font-heading uppercase flex-1 text-[15px] tracking-[0.04em] ${headingColor}`}>{card.title}</h4>
+                        {card.meta && (
+                          <div className={`font-heading text-[15px] shrink-0 ${dark ? 'text-vr-cream' : 'text-vr-forest'}`}>{card.meta}</div>
+                        )}
+                      </div>
+                    )}
                     <EditableText
                       as="div"
                       className={`font-body leading-[1.6] text-[14px] mt-1 whitespace-pre-line ${bodyColor}`}
@@ -134,9 +150,20 @@ export default function FestivalSection({ data, index }: Props) {
                       path={`${cp}.body`}
                       placeholder="Detail (optional)"
                     />
+                    {!editing && card.url && (
+                      <span className="inline-block mt-2 font-label text-xs tracking-[0.12em] uppercase text-vr-sky">Visit ↗</span>
+                    )}
                     {editing && <EditableUrl path={`${cp}.url`} label="Link URL (optional)" />}
                   </div>
-                </div>
+                </>
+              )
+              const shell = `${cardShell} px-6 py-5 grid gap-4 sm:grid-cols-[150px_1fr] items-baseline`
+              return !editing && card.url ? (
+                <a key={ci} href={card.url} target="_blank" rel="noopener noreferrer" className={`${shell} transition-opacity hover:opacity-90`}>
+                  {inner}
+                </a>
+              ) : (
+                <div key={ci} className={shell}>{inner}</div>
               )
             })}
           </div>
