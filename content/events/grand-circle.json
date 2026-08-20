@@ -15,8 +15,8 @@
   "logo": "/images/vr-logo.png",
   "logoAlt": "Vacation Races",
   "photoBands": {
-    "onCourse": "",
-    "postRace": ""
+    "onCourse": "/images/events/grand-circle-band.jpg",
+    "postRace": "/images/events/grand-circle-band.jpg"
   },
   "footerImage": "",
   "partners": {

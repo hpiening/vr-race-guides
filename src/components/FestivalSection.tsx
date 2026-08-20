@@ -233,7 +233,7 @@ export default function FestivalSection({ data, index }: Props) {
         {editing ? (
           <div className="flex flex-col gap-3">
             {blocks.map((b, i) => (
-              <div key={i} className="bg-vr-cream rounded-lg p-5">
+              <div key={i} className={`rounded-lg p-5 ${dark ? 'bg-vr-cream' : 'bg-vr-white border border-vr-line'}`}>
                 <div className="flex items-start gap-2">
                   <EditableText as="h3" className="font-heading uppercase text-vr-forest flex-1" value={b.heading} path={`${basePath}.infoBlocks.${i}.heading`} />
                   <ListControls path={`${basePath}.infoBlocks`} index={i} count={blocks.length} />
@@ -247,6 +247,7 @@ export default function FestivalSection({ data, index }: Props) {
           </div>
         ) : blocks.length > 0 ? (
           <Accordion
+            variant={dark ? 'cream' : 'white'}
             items={blocks.map(b => ({
               heading: b.heading,
               body: (

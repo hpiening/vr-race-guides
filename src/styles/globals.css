@@ -227,6 +227,11 @@
   --vr-sandstone-rgb: 248 159 68;  /* #F89F44 (link hover — keep the accent uniform) */
   --vr-earth-rgb:     103 85 71;   /* muted desert brown */
   --vr-mid-rgb:       103 85 71;   /* #675547 body grey on light */
+  /* NB: cream == offwhite in this brand (both #F2E9D7) because the comp uses the
+     same value for the light section ground and for cream text on dark. So a
+     `bg-vr-cream` panel is INVISIBLE on a light section here — use
+     `bg-vr-white border border-vr-line` for cards on light grounds, which is what
+     the comp specifies anyway (background:#fff; border:1px solid #DFD2BB). */
   --vr-cream-rgb:     242 233 215; /* #F2E9D7 */
   --vr-white-rgb:     250 244 232; /* #FAF4E8 warm paper cards */
   --vr-offwhite-rgb:  242 233 215; /* #F2E9D7 light section ground */
