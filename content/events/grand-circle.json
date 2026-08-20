@@ -553,29 +553,29 @@
             "layout": "rows",
             "cards": [
               {
-                "title": "Welcome Dinner",
+                "title": "Penne Bolognese ",
                 "eyebrow": "Wednesday",
-                "body": "Penne pasta served with a rich, slow-simmered meat sauce· Caesar Salad · Dinner Rolls (gluten-free available)\nSelf-serve nonalcoholic beverage station: sparkling water, fruit-juice mocktails, watermelon juice, cherry juice, rotating fruit juices.",
+                "body": "Penne pasta served with a rich, slow-simmered meat sauce (vegetarian and gluten-free options available, plus gluten-free penne) · Caesar Salad · Dinner Rolls (gluten-free available)\nSelf-serve nonalcoholic beverage station: sparkling water, fruit-juice mocktails, watermelon juice, cherry juice, rotating fruit juices.",
                 "imageUrl": "",
-                "meta": "Penne Bolognese (vegetarian and gluten-free options available, plus gluten-free penne)"
+                "meta": ""
               },
               {
-                "title": "Dinner",
+                "title": "Herb-Roasted Chicken",
                 "eyebrow": "Thursday",
                 "body": "· Roasted Potatoes · Sautéed Summer Squash · Pasta Salad · Fresh Garden Salad (gluten-free balsamic vinaigrette or ranch). \nPlant-based: Harvest Shepherd’s Pie (vegetarian, vegan, dairy-free, gluten-free).",
                 "imageUrl": "",
-                "meta": "Herb-Roasted Chicken, "
+                "meta": ""
               },
               {
-                "title": "Dinner",
+                "title": "Teriyaki Chicken Rice Bowls",
                 "eyebrow": "Friday",
-                "body": "Teriyaki Chicken Rice Bowls, Roasted Broccoli and Carrots, Asian Cucumber Salad, Fresh Garden Salad. Toppings: sliced green onions, sesame seeds, extra gluten-free teriyaki sauce. Plant-based: Plant-Based Teriyaki Rice Bowl.",
+                "body": "Roasted Broccoli and Carrots, Asian Cucumber Salad, Fresh Garden Salad. Toppings: sliced green onions, sesame seeds, extra gluten-free teriyaki sauce. Plant-based: Plant-Based Teriyaki Rice Bowl.",
                 "imageUrl": ""
               },
               {
-                "title": "Dinner",
+                "title": "Cheeseburgers and Black Bean Burgers",
                 "eyebrow": "Saturday",
-                "body": "Cheeseburgers and Black Bean Burgers (gluten-free buns available), Baked Beans, Potato Salad, Assorted Chips, Fresh Garden Salad Bar. Toppings: lettuce, tomatoes, onions (raw or sautéed), relish, pico de gallo, assorted condiments. Plant-based: Black Bean Burger.",
+                "body": "Gluten-free buns available, Baked Beans, Potato Salad, Assorted Chips, Fresh Garden Salad Bar. Toppings: lettuce, tomatoes, onions (raw or sautéed), relish, pico de gallo, assorted condiments. Plant-based: Black Bean Burger.",
                 "imageUrl": ""
               }
             ]
