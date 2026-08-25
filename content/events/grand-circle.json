@@ -85,7 +85,7 @@
       "days": [
         {
           "id": "day-0",
-          "label": "Day 0 · Check-In",
+          "label": "Day 1 · Expo",
           "date": "Wednesday, September 30",
           "items": [
             {
@@ -99,8 +99,12 @@
               "note": ""
             },
             {
+              "time": "5:00 -8:00 PM",
+              "label": "Welcome Dinner "
+            },
+            {
               "time": "5:00 PM",
-              "label": "Welcome Dinner Opens"
+              "label": "Beer Garden Open"
             },
             {
               "time": "6:00 – 7:30 PM",
