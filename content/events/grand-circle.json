@@ -131,13 +131,14 @@
               "label": "Grab & Go Breakfast Service "
             },
             {
-              "time": "5:00 AM",
-              "label": "Shuttle Loading Begins ",
+              "time": "5:00 AM - 5:30 AM",
+              "label": "Shuttle Loading",
               "note": "Shuttles from HQ require an upgraded shuttle pass"
             },
             {
-              "time": "5:30 AM",
-              "label": "Final Shuttle Departs HQ"
+              "time": "6:30AM ",
+              "label": "Runners who drive themselves should be at the parking area for Bryce",
+              "note": "[Directions](#course-info)"
             },
             {
               "time": "7:00 AM",
