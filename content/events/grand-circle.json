@@ -193,7 +193,7 @@
           "date": "Friday, October 2",
           "items": [
             {
-              "time": "5:00 – 5:30 AM",
+              "time": "5:00 - 5:30 AM",
               "label": "Grab & Go Breakfast Service"
             },
             {
@@ -254,16 +254,22 @@
         },
         {
           "id": "day-3",
-          "label": "Day 3 · Antelope Canyon",
+          "label": "Day 4 · Antelope Canyon",
           "date": "Saturday, October 3",
           "items": [
             {
-              "time": "5:00 – 5:30 AM",
-              "label": "Breakfast · Shuttles Load"
+              "time": "5:00 - 5:30 AM",
+              "label": "Grab & Go Breakfast Service "
             },
             {
-              "time": "5:30 AM",
-              "label": "Final Shuttle Departs HQ"
+              "time": "5:00 - 5:30 AM",
+              "label": "Shuttles Load",
+              "note": "Shuttles from HQ require an upgraded shuttle pass"
+            },
+            {
+              "time": "6:30 AM",
+              "label": "Runners who drive themselves should be at the parking area for Antelope Canyon",
+              "note": "[Directions](https://maps.app.goo.gl/a1xvL5BCi1k4oJt17)"
             },
             {
               "time": "7:00 AM",
@@ -297,7 +303,7 @@
         },
         {
           "id": "day-4",
-          "label": "Day 4 · Departure",
+          "label": "Day 5 · Departure",
           "date": "Sunday, October 4",
           "items": [
             {
