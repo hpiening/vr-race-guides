@@ -764,5 +764,14 @@
         }
       ]
     }
+  },
+  "alert": {
+    "enabled": true,
+    "level": "info",
+    "message": "Weather can be unpredictable in the mountains, so we're keeping a close eye on conditions throughout race week. Thunderstorms are common this time of year, and runner safety is always our top priority — we've had to delay races in the past when conditions required it. If anything changes, we'll notify you immediately by email and text. Opt into race-specific text alerts here to make sure you're covered.",
+    "title": "SMOKY RUNNERS",
+    "updated": "Updated Tuesday 25th August",
+    "linkLabel": "SIGN UP FOR SMS ALERTS HERE",
+    "linkUrl": "https://mailchi.mp/vacationraces/1ih05frywl"
   }
 }
