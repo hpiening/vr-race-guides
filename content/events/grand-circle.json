@@ -89,7 +89,7 @@
           "date": "Wednesday, September 30",
           "items": [
             {
-              "time": "12:00 – 7:00 PM",
+              "time": "12:00 - 7:00 PM",
               "label": "Campground Check-In",
               "note": "At the booth by the baseball fields on the east side of the park."
             },
@@ -99,11 +99,11 @@
               "note": ""
             },
             {
-              "time": "5:00 -8:00 PM",
+              "time": "5:00 - 8:00 PM",
               "label": "Welcome Dinner "
             },
             {
-              "time": "5:00 -9:00 PM",
+              "time": "5:00 - 9:00 PM",
               "label": "Beer Garden Hours"
             },
             {
