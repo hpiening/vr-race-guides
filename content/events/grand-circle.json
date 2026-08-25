@@ -123,12 +123,17 @@
         },
         {
           "id": "day-1",
-          "label": "Day 1 · Bryce Canyon",
+          "label": "Day 2 · Bryce Canyon",
           "date": "Thursday, October 1",
           "items": [
             {
               "time": "5:00 – 5:30 AM",
-              "label": "Breakfast · Shuttles Load"
+              "label": "Grab & Go Breakfast Service "
+            },
+            {
+              "time": "5:00 AM",
+              "label": "Shuttle Loading Begins ",
+              "note": "Shuttles from HQ require an upgraded shuttle pass"
             },
             {
               "time": "5:30 AM",
