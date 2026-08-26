@@ -1,7 +1,7 @@
 'use client'
 import { useState } from 'react'
 import { RichBody } from './trailhead/Shared'
-import { EventData } from '@/types/event'
+import { EventData, ScheduleKind } from '@/types/event'
 import { useEditOptional } from '@/lib/editContext'
 import EditableText from './edit/EditableText'
 import EditableImage from './edit/EditableImage'
@@ -19,9 +19,43 @@ function keepMeridiem(time: string): string {
   return time.replace(/\s+(AM|PM)\b/gi, '\u00a0$1')
 }
 
+
+/**
+ * Schedule categories. Each row can carry a `kind`, which colours a left rule
+ * and shows an icon, so a five-day festival timetable can be scanned for "where
+ * are the races / the clinics / the food" without reading every line. Colour is
+ * never the only cue: every category has an icon and a legend entry, and the
+ * colours come from CSS vars so a brand can retint them.
+ */
+const KINDS: Record<ScheduleKind, { label: string; color: string; path: string }> = {
+  race:          { label: 'Race',          color: 'var(--tl-kind-race)',          path: 'M4 2v20M4 3h11l-1.5 3.5L15 10H4' },
+  clinic:        { label: 'Clinics',       color: 'var(--tl-kind-clinic)',        path: 'M12 21c0-6 3-9 8-10-1 6-4 9-8 10zM12 21C12 15 9 12 4 11c1 6 4 9 8 10z' },
+  entertainment: { label: 'Entertainment', color: 'var(--tl-kind-entertainment)', path: 'M12 3l2.6 5.6 6.1.8-4.5 4.2 1.2 6-5.4-3-5.4 3 1.2-6L3.3 9.4l6.1-.8z' },
+  food:          { label: 'Food & drink',  color: 'var(--tl-kind-food)',          path: 'M6 3v8a2 2 0 004 0V3M8 11v10M18 3c-1.5 0-2.5 1.5-2.5 4s1 3.5 2.5 3.5 2.5-1 2.5-3.5S19.5 3 18 3zM18 11v10' },
+  essential:     { label: 'Essentials',    color: 'var(--tl-kind-essential)',     path: 'M12 21a9 9 0 100-18 9 9 0 000 18zM12 7.5V12l3.5 2' },
+}
+
+const KIND_ORDER: ScheduleKind[] = ['race', 'clinic', 'entertainment', 'food', 'essential']
+
+function KindIcon({ kind, size = 15 }: { kind: ScheduleKind; size?: number }) {
+  const k = KINDS[kind]
+  return (
+    <svg
+      width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden="true"
+      stroke={k.color} strokeWidth="1.9" strokeLinecap="round" strokeLinejoin="round"
+      className="shrink-0"
+      style={{ marginTop: 1 }}
+    >
+      <path d={k.path} />
+    </svg>
+  )
+}
+
 export default function ScheduleSection({ data, eventSlug, basePath = 'sections.schedule', theme = 'classic' }: Props) {
   const [activeDay, setActiveDay] = useState(data.days[0]?.id ?? '')
   const day = data.days.find(d => d.id === activeDay) ?? data.days[0]
+  // Only show the legend for categories this guide actually uses.
+  const usedKinds = KIND_ORDER.filter(k => data.days.some(d => d.items.some(i => i.kind === k)))
   const ctx = useEditOptional()
   const editing = !!ctx?.editing
   const dp = `${basePath}.days`
@@ -77,14 +111,24 @@ export default function ScheduleSection({ data, eventSlug, basePath = 'sections.
                       <li
                         key={ii}
                         className="flex gap-4 items-start rounded px-2 py-1.5"
-                        style={hl ? { background: 'rgba(123,173,172,0.14)' } : undefined}
+                        style={hl ? { background: 'var(--tl-row-highlight)' } : undefined}
                       >
                         <div className="flex-1">
                           <EditableText as="div" className="font-label text-xs tracking-[0.2em] uppercase text-vr-floral mb-1" value={item.time} path={`${dp}.${di}.items.${ii}.time`} />
                           <EditableText as="div" className="font-heading text-base uppercase leading-tight text-vr-cream" value={item.label} path={`${dp}.${di}.items.${ii}.label`} />
                           <EditableText as="div" className="font-body text-sm text-vr-cream/55 mt-1" value={item.note ?? ''} path={`${dp}.${di}.items.${ii}.note`} />
                         </div>
-                        <span className="shrink-0 inline-flex items-center gap-0.5 align-middle select-none">
+                        <span className="shrink-0 inline-flex items-center gap-1 align-middle select-none">
+                          <select
+                            value={item.kind ?? ''}
+                            onChange={e => ctx?.setValue(`${dp}.${di}.items.${ii}.kind`, e.target.value || undefined)}
+                            title="Category — colours the row and adds an icon on the published page"
+                            aria-label="Schedule category"
+                            className="bg-vr-cream/10 border border-vr-cream/25 rounded text-vr-cream font-micro text-[10px] uppercase tracking-wider px-1.5 py-1"
+                          >
+                            <option value="">No category</option>
+                            {KIND_ORDER.map(k => <option key={k} value={k}>{KINDS[k].label}</option>)}
+                          </select>
                           <button
                             type="button"
                             onClick={() => ctx?.setValue(`${dp}.${di}.items.${ii}.highlight`, !hl)}
@@ -122,8 +166,20 @@ export default function ScheduleSection({ data, eventSlug, basePath = 'sections.
           </div>
           <h2 className="font-display uppercase text-vr-cream leading-[0.9] mt-0.5 mb-10" style={{ fontSize: 'clamp(40px,6vw,80px)' }}>Schedule</h2>
 
+          {usedKinds.length > 0 && (
+            <div className="flex flex-wrap justify-center gap-x-5 gap-y-2 mb-7">
+              {usedKinds.map(k => (
+                <span key={k} className="inline-flex items-center gap-2 font-micro uppercase text-vr-cream/70"
+                      style={{ fontSize: '11px', letterSpacing: '0.14em' }}>
+                  <KindIcon kind={k} size={13} />
+                  {KINDS[k].label}
+                </span>
+              ))}
+            </div>
+          )}
+
           {data.days.length > 1 && (
-            <div className="inline-flex gap-1.5 p-1.5 mb-12 rounded-full bg-vr-cream/[0.08] border border-vr-cream/[0.16] print:hidden">
+            <div className="inline-flex flex-wrap justify-center gap-1.5 p-1.5 mb-12 rounded-full bg-vr-cream/[0.08] border border-vr-cream/[0.16] print:hidden">
               {data.days.map(d => (
                 <button
                   key={d.id}
@@ -146,12 +202,18 @@ export default function ScheduleSection({ data, eventSlug, basePath = 'sections.
                 return (
                   <div
                     key={i}
-                    className="grid grid-cols-[100px_1fr] md:grid-cols-[132px_1fr] gap-4 md:gap-6 px-2 py-[18px] border-b border-vr-cream/[0.12]"
-                    style={highlight ? { background: 'rgba(123,173,172,0.14)' } : undefined}
+                    className="grid grid-cols-[112px_1fr] md:grid-cols-[136px_1fr] gap-3 md:gap-5 pl-3 pr-2 py-[18px] border-b border-vr-cream/[0.12] border-l-[3px]"
+                    style={{
+                      background: highlight ? 'var(--tl-row-highlight)' : undefined,
+                      borderLeftColor: item.kind ? KINDS[item.kind].color : 'transparent',
+                    }}
                   >
-                    <span className="font-label text-vr-sky text-right" style={{ fontSize: '15px', letterSpacing: '0.04em' }}>{keepMeridiem(item.time)}</span>
+                    <span className="font-label text-vr-sky text-right text-[13px] md:text-[15px]" style={{ letterSpacing: '0.02em' }}>{keepMeridiem(item.time)}</span>
                     <div>
-                      <div className="font-heading uppercase text-vr-cream leading-tight" style={{ fontSize: '15px', letterSpacing: '0.04em' }}>{item.label}</div>
+                      <div className="flex items-start gap-2">
+                        {item.kind && <KindIcon kind={item.kind} />}
+                        <div className="font-heading uppercase text-vr-cream leading-tight flex-1" style={{ fontSize: '15px', letterSpacing: '0.04em' }}>{item.label}</div>
+                      </div>
                       {item.note && <div className="text-vr-cream/60 mt-1 whitespace-pre-line break-words" style={{ fontSize: '13px' }}><RichBody value={item.note} /></div>}
                     </div>
                   </div>
@@ -170,7 +232,10 @@ export default function ScheduleSection({ data, eventSlug, basePath = 'sections.
                   <div key={i} className="tl-print-row grid grid-cols-[132px_1fr] gap-6 py-2 border-b border-vr-cream/[0.12]">
                     <span className="font-label text-vr-sky text-right text-sm">{keepMeridiem(item.time)}</span>
                     <div>
-                      <div className="font-heading uppercase text-vr-cream text-sm">{item.label}</div>
+                      <div className="flex items-start gap-2">
+                        {item.kind && <KindIcon kind={item.kind} size={13} />}
+                        <div className="font-heading uppercase text-vr-cream text-sm flex-1">{item.label}</div>
+                      </div>
                       {item.note && <div className="text-vr-cream/60 text-xs mt-0.5 whitespace-pre-line break-words"><RichBody value={item.note} /></div>}
                     </div>
                   </div>

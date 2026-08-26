@@ -1,7 +1,16 @@
+/**
+ * Optional category for a schedule row, so a long festival timetable can be
+ * scanned at a glance. Drives a colour + icon in the Trailhead schedule and a
+ * legend above the day tabs. Absent = no colour coding (existing guides).
+ */
+export type ScheduleKind = 'race' | 'clinic' | 'entertainment' | 'food' | 'essential'
+
 export interface ScheduleItem {
   time: string
   label: string
   note?: string
+  /** Category for colour/icon coding — see ScheduleKind. */
+  kind?: ScheduleKind
   /**
    * Whether this row gets the accent highlight band (Trailhead schedule).
    * Unset = automatic: any row whose label contains the word "start" is

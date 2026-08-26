@@ -91,33 +91,40 @@
             {
               "time": "12:00 - 7:00 PM",
               "label": "Campground Check-In",
-              "note": "At the booth by the baseball fields on the east side of the park."
+              "note": "At the booth by the baseball fields on the east side of the park.",
+              "kind": "essential"
             },
             {
               "time": "12:00 - 6:00 PM ",
               "label": "Expo & Bib Pickup",
-              "note": ""
+              "note": "",
+              "kind": "essential"
             },
             {
               "time": "5:00 - 8:00 PM",
-              "label": "Welcome Dinner "
+              "label": "Welcome Dinner ",
+              "kind": "food"
             },
             {
               "time": "5:00 - 9:00 PM",
-              "label": "Beer Garden Hours"
+              "label": "Beer Garden Hours",
+              "kind": "food"
             },
             {
               "time": "6:00 – 7:30 PM",
-              "label": "Keynote · Keira D’Amato"
+              "label": "Keynote · Keira D’Amato",
+              "kind": "entertainment"
             },
             {
               "time": "7:30 - 8:30 PM",
               "label": "Welcome Orientation · All Runners",
-              "note": "New for 2026 — one orientation replaces the nightly RD reports. Time is subject to change and will be held after Q& A with Keira D'Amato."
+              "note": "New for 2026 — one orientation replaces the nightly RD reports. Time is subject to change and will be held after Q& A with Keira D'Amato.",
+              "kind": "essential"
             },
             {
               "time": "10:00 PM ",
-              "label": "Quiet Hours Begin "
+              "label": "Quiet Hours Begin ",
+              "kind": "essential"
             }
           ]
         },
@@ -128,62 +135,76 @@
           "items": [
             {
               "time": "5:00 – 5:30 AM",
-              "label": "Grab & Go Breakfast Service "
+              "label": "Grab & Go Breakfast Service ",
+              "kind": "food"
             },
             {
               "time": "5:00 - 5:30 AM",
               "label": "Shuttle Loading",
-              "note": "Shuttles from HQ require an upgraded shuttle pass"
+              "note": "Shuttles from HQ require an upgraded shuttle pass",
+              "kind": "essential"
             },
             {
               "time": "6:30AM ",
               "label": "Runners who drive themselves should be at the parking area for Bryce",
-              "note": "The parking areas are in Bryce Canyon City, on the East side of the highway across from Ruby’s Inn: [Directions](https://www.google.com/maps/dir/Jacob+Hamblin+Park,+566+N+100+E,+Kanab,+UT+84741/N+100+E,+Bryce,+UT+84764/@37.6756181,-112.1566964,877m/data=!3m1!1e3!4m14!4m13!1m5!1m1!1s0x8734d427306efbd9:0xd7e60848d4b0f1c7!2m2!1d-112.5271543!2d37.0560207!1m5!1m1!1s0x8735661ccb444b8f:0xbbc04f70b222a7d0!2m2!1d-112.1549725!2d37.6757192!3e0!5m1!1e2?entry=ttu&g_ep=EgoyMDI2MDgxOS4wIKXMDSoASAFQAw%3D%3D)"
+              "note": "The parking areas are in Bryce Canyon City, on the East side of the highway across from Ruby’s Inn: [Directions](https://www.google.com/maps/dir/Jacob+Hamblin+Park,+566+N+100+E,+Kanab,+UT+84741/N+100+E,+Bryce,+UT+84764/@37.6756181,-112.1566964,877m/data=!3m1!1e3!4m14!4m13!1m5!1m1!1s0x8734d427306efbd9:0xd7e60848d4b0f1c7!2m2!1d-112.5271543!2d37.0560207!1m5!1m1!1s0x8735661ccb444b8f:0xbbc04f70b222a7d0!2m2!1d-112.1549725!2d37.6757192!3e0!5m1!1e2?entry=ttu&g_ep=EgoyMDI2MDgxOS4wIKXMDSoASAFQAw%3D%3D)",
+              "kind": "essential"
             },
             {
               "time": "7:00 AM",
               "label": "Bryce Canyon Race Start · 15.7 Miles",
-              "note": "**ROLLING START** - The first wave will start at 7:00 am. After that, runners will begin as they arrive off the shuttles.\nAll runners should be parked by 6:30 am for those driving to the parking area. The parking areas are in Bryce Canyon City, on the East side of the highway across from Ruby’s Inn: Directions"
+              "note": "**ROLLING START** - The first wave will start at 7:00 am. After that, runners will begin as they arrive off the shuttles.\nAll runners should be parked by 6:30 am for those driving to the parking area. The parking areas are in Bryce Canyon City, on the East side of the highway across from Ruby’s Inn: Directions",
+              "kind": "race"
             },
             {
               "time": "2:00 - 8:00 PM",
-              "label": "Massage Appointments "
+              "label": "Massage Appointments ",
+              "kind": "clinic"
             },
             {
               "time": "4:00 - 4:45 PM ",
-              "label": "Yoga Session 1"
+              "label": "Yoga Session 1",
+              "kind": "clinic"
             },
             {
               "time": "5:00 - 5:45 PM",
-              "label": "Yoga Session 2"
+              "label": "Yoga Session 2",
+              "kind": "clinic"
             },
             {
               "time": "5:00 – 6:00 PM",
-              "label": "Clinic: Learn to Line Dance with Donna Bronson"
+              "label": "Clinic: Learn to Line Dance with Donna Bronson",
+              "kind": "clinic"
             },
             {
               "time": "5:00 - 8:00 PM",
-              "label": "Dinner Service"
+              "label": "Dinner Service",
+              "kind": "food"
             },
             {
               "time": "5:00 - 9:00 PM",
-              "label": "Beer Garden Hours"
+              "label": "Beer Garden Hours",
+              "kind": "food"
             },
             {
               "time": "6:00 PM",
-              "label": "Native Performance: Pueblo Enchantment Dancers"
+              "label": "Native Performance: Pueblo Enchantment Dancers",
+              "kind": "entertainment"
             },
             {
               "time": "7:00 – 8:00 PM",
-              "label": "Live Music · Fox & Bones"
+              "label": "Live Music · Fox & Bones",
+              "kind": "entertainment"
             },
             {
               "time": "8:00 - 8:30 PM",
-              "label": "Bryce Overall Awards Ceremony"
+              "label": "Bryce Overall Awards Ceremony",
+              "kind": "entertainment"
             },
             {
               "time": "8:30 – 10:00 PM",
-              "label": "Film Screening: Trail Running Film Festival"
+              "label": "Film Screening: Trail Running Film Festival",
+              "kind": "entertainment"
             }
           ]
         },
@@ -194,61 +215,75 @@
           "items": [
             {
               "time": "5:00 - 5:30 AM",
-              "label": "Grab & Go Breakfast Service"
+              "label": "Grab & Go Breakfast Service",
+              "kind": "food"
             },
             {
               "time": "5:00 - 5: 30 AM",
               "label": "Shuttle Loading",
-              "note": "Shuttles from HQ require an upgraded shuttle pass"
+              "note": "Shuttles from HQ require an upgraded shuttle pass",
+              "kind": "essential"
             },
             {
               "time": "7:00 AM",
-              "label": "Runners who drive themselves should be at the parking area for Zion"
+              "label": "Runners who drive themselves should be at the parking area for Zion",
+              "kind": "essential"
             },
             {
               "time": "7:00 AM",
               "label": "Zion Race Start · 10.4 Miles",
-              "note": "ROLLING START - The first wave will start at 7am. After that, runners will begin as soon as they are ready\nafter parking in the dirt lot near the start line. All runners should be parked by 7am. There are no shuttles needed from the parking area today. Parking area is at Ruby Rider Ranch i Apple Valley, UT: [Directions](https://www.google.com/maps/dir/Jacob+Hamblin+Park,+566+N+100+E,+Kanab,+UT+84741/37.1125833,-113.1068333/@37.001003,-113.1454818,151099m/am=t/data=!3m2!1e3!4b1!4m8!4m7!1m5!1m1!1s0x8734d427306efbd9:0xd7e60848d4b0f1c7!2m2!1d-112.5271543!2d37.0560207!1m0!5m1!1e2?entry=tts&g_ep=EgoyMDI2MDgxOS4wIPu8ASoASAFQAw%3D%3D&skid=5b1cb4e3-c8f3-4542-add3-a80787392601)"
+              "note": "ROLLING START - The first wave will start at 7am. After that, runners will begin as soon as they are ready\nafter parking in the dirt lot near the start line. All runners should be parked by 7am. There are no shuttles needed from the parking area today. Parking area is at Ruby Rider Ranch i Apple Valley, UT: [Directions](https://www.google.com/maps/dir/Jacob+Hamblin+Park,+566+N+100+E,+Kanab,+UT+84741/37.1125833,-113.1068333/@37.001003,-113.1454818,151099m/am=t/data=!3m2!1e3!4b1!4m8!4m7!1m5!1m1!1s0x8734d427306efbd9:0xd7e60848d4b0f1c7!2m2!1d-112.5271543!2d37.0560207!1m0!5m1!1e2?entry=tts&g_ep=EgoyMDI2MDgxOS4wIPu8ASoASAFQAw%3D%3D&skid=5b1cb4e3-c8f3-4542-add3-a80787392601)",
+              "kind": "race"
             },
             {
               "time": "2:00 - 8:00 PM",
-              "label": "Massage Appointments "
+              "label": "Massage Appointments ",
+              "kind": "clinic"
             },
             {
               "time": "4:00 - 4:45 PM",
-              "label": "Yoga Session 1"
+              "label": "Yoga Session 1",
+              "kind": "clinic"
             },
             {
               "time": "5:00 - 5:45 PM",
-              "label": "Yoga Session 2"
+              "label": "Yoga Session 2",
+              "kind": "clinic"
             },
             {
               "time": "5:00 – 6:00 PM",
-              "label": "Clinic: Tai Chi with Terri Henry"
+              "label": "Clinic: Tai Chi with Terri Henry",
+              "kind": "clinic"
             },
             {
               "time": "5:00 - 8:00 PM",
-              "label": "Dinner Service"
+              "label": "Dinner Service",
+              "kind": "food"
             },
             {
               "time": "5:00 - 9:00 PM",
-              "label": "Beer Garden Hours"
+              "label": "Beer Garden Hours",
+              "kind": "food"
             },
             {
               "time": "6:00 PM",
-              "label": "Native Performance: Red Heritage"
+              "label": "Native Performance: Red Heritage",
+              "kind": "entertainment"
             },
             {
               "time": "7:00 – 8:00 PM",
-              "label": "Live Music · The Alpines"
+              "label": "Live Music · The Alpines",
+              "kind": "entertainment"
             },
             {
               "time": "8:00 - 8:30 PM",
-              "label": "Zion Overall Awards Ceremony "
+              "label": "Zion Overall Awards Ceremony ",
+              "kind": "entertainment"
             },
             {
               "time": "8:30 – 10:00 PM",
-              "label": "Star Gazing · Stellar Vista Observatory"
+              "label": "Star Gazing · Stellar Vista Observatory",
+              "kind": "entertainment"
             }
           ]
         },
@@ -259,62 +294,76 @@
           "items": [
             {
               "time": "5:00 - 5:30 AM",
-              "label": "Grab & Go Breakfast Service "
+              "label": "Grab & Go Breakfast Service ",
+              "kind": "food"
             },
             {
               "time": "5:00 - 5:30 AM",
               "label": "Shuttle Loading",
-              "note": "Shuttles from HQ require an upgraded shuttle pass"
+              "note": "Shuttles from HQ require an upgraded shuttle pass",
+              "kind": "essential"
             },
             {
               "time": "6:30 AM",
               "label": "Runners who drive themselves should be at the parking area for Antelope Canyon",
-              "note": "[Directions](https://maps.app.goo.gl/a1xvL5BCi1k4oJt17)"
+              "note": "[Directions](https://maps.app.goo.gl/a1xvL5BCi1k4oJt17)",
+              "kind": "essential"
             },
             {
               "time": "7:00 AM",
               "label": "Antelope Canyon Race Start · 13.2 Miles",
-              "note": "ROLLING START - The first wave will start at 7:00 am **(MDT)**. After that, runners will begin as they arrive off the shuttles. For those who drive to the parking area, and are shuttled to the start line. All runners should be parked by 6:30 am (last shuttle pickup from the parking area will be at 7:00 am). Parking is at the Page Sports Complex in Page, AZ: [Directions](https://maps.app.goo.gl/46A7YnrmmAZqvuRc7)"
+              "note": "ROLLING START - The first wave will start at 7:00 am **(MDT)**. After that, runners will begin as they arrive off the shuttles. For those who drive to the parking area, and are shuttled to the start line. All runners should be parked by 6:30 am (last shuttle pickup from the parking area will be at 7:00 am). Parking is at the Page Sports Complex in Page, AZ: [Directions](https://maps.app.goo.gl/46A7YnrmmAZqvuRc7)",
+              "kind": "race"
             },
             {
               "time": "2:00 - 8:00 PM",
-              "label": "Massage Appointments "
+              "label": "Massage Appointments ",
+              "kind": "clinic"
             },
             {
               "time": "4:00 - 4:45 PM",
-              "label": "Yoga Session 1"
+              "label": "Yoga Session 1",
+              "kind": "clinic"
             },
             {
               "time": "5:00 - 5:45 PM",
-              "label": "Yoga Session 2"
+              "label": "Yoga Session 2",
+              "kind": "clinic"
             },
             {
               "time": "5:00 – 6:00 PM",
-              "label": "Clinic: Sound Bath by Pure Healing Resonance"
+              "label": "Clinic: Sound Bath by Pure Healing Resonance",
+              "kind": "clinic"
             },
             {
               "time": "5:00 - 8:00 PM",
-              "label": "Dinner Service"
+              "label": "Dinner Service",
+              "kind": "food"
             },
             {
               "time": "5:00 - 9:00 PM",
-              "label": "Beer Garden Hours"
+              "label": "Beer Garden Hours",
+              "kind": "food"
             },
             {
               "time": "5:30 – 6:30 PM",
-              "label": "Live Music: Sophia Rankin & The Sound"
+              "label": "Live Music: Sophia Rankin & The Sound",
+              "kind": "entertainment"
             },
             {
               "time": "6:30 – 7:30 PM",
-              "label": "Live Music: Alicia Stockman"
+              "label": "Live Music: Alicia Stockman",
+              "kind": "entertainment"
             },
             {
               "time": "8:00 - 8:30 PM",
-              "label": "Antelope Canyon & Overall Event Awards Ceremony & Raffles"
+              "label": "Antelope Canyon & Overall Event Awards Ceremony & Raffles",
+              "kind": "entertainment"
             },
             {
               "time": "8:30 – 10:00 PM",
-              "label": "Film Screening: RunNation Film Festival"
+              "label": "Film Screening: RunNation Film Festival",
+              "kind": "entertainment"
             }
           ]
         },
@@ -325,11 +374,13 @@
           "items": [
             {
               "time": "6:00 – 9:00 AM",
-              "label": "Campground Check-Out"
+              "label": "Campground Check-Out",
+              "kind": "essential"
             },
             {
               "time": "7:00 AM",
-              "label": "Grab & Go Breakfast Service "
+              "label": "Grab & Go Breakfast Service ",
+              "kind": "food"
             }
           ]
         }

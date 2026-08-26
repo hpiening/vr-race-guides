@@ -118,6 +118,17 @@
      unchanged; a brand scope can retint/strengthen it for a bright hero photo. */
   --tl-hero-scrim:     linear-gradient(180deg,rgba(26,47,35,0.12) 0%,rgba(26,47,35,0) 38%,rgba(26,47,35,0.6) 100%);
 
+  /* Schedule category colours (opt-in per item via `kind`). Tuned to read on a
+     dark schedule ground; a brand scope can retint them. Colour is never the
+     only signal — every category also carries an icon and a legend label. */
+  --tl-kind-race:          #F89F44;
+  --tl-kind-clinic:        #8FC0A9;
+  --tl-kind-entertainment: #C79BD4;
+  --tl-kind-food:          #E3C567;
+  --tl-kind-essential:     #9FB3C8;
+  /* Tint behind a highlighted (race) row. */
+  --tl-row-highlight:      rgba(123,173,172,0.14);
+
   --font-display:  'Scale Condensed', 'Oswald', sans-serif;
   --font-heading:  'Scale', 'Arial Black', sans-serif;
   --font-label:    'Scale Medium', 'Arial', sans-serif;
@@ -251,6 +262,8 @@
      bright, sunlit red-rock scene and the cream headline sits over the middle
      of it, where the default 60% green scrim left the type washed out. */
   --tl-hero-scrim:     linear-gradient(180deg,rgba(34,17,10,0.18) 0%,rgba(34,17,10,0) 30%,rgba(34,17,10,0.55) 66%,rgba(34,17,10,0.92) 100%);
+  /* Race rows tinted in the brand's own accent rather than the default teal. */
+  --tl-row-highlight:      rgba(248,159,68,0.13);
 }
 
 /* ─── Base ───────────────────────────────────────────────────── */
