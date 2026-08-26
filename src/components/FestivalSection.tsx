@@ -244,17 +244,33 @@ export default function FestivalSection({ data, index }: Props) {
           </div>
         )}
 
-        {/* cards — text cards (default) */}
+        {/* cards — text cards (default). A photo is optional here: unlike the
+            `photos` layout it only appears once one is set, so a text-only group
+            stays text-only and there's no empty placeholder in every card. */}
         {layout === 'cards' && (
           <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {cards.map((card, ci) => {
-              const inner = <div className="p-7">{cardBody(card, gi, ci)}</div>
+              const inner = (
+                <>
+                  {card.imageUrl && !editing && (
+                    <PhotoFrame src={card.imageUrl} label={`${card.title} photo`} ratio="16 / 10" dark={dark} />
+                  )}
+                  <div className="p-7">
+                    {cardBody(card, gi, ci)}
+                    {editing && (
+                      <div className="mt-3">
+                        <EditableImage path={`${gp}.cards.${ci}.imageUrl`} label="Card photo (optional)" compact />
+                      </div>
+                    )}
+                  </div>
+                </>
+              )
               return !editing && card.url ? (
-                <a key={ci} href={card.url} target="_blank" rel="noopener noreferrer" className={`${cardShell} block transition-opacity hover:opacity-90`}>
+                <a key={ci} href={card.url} target="_blank" rel="noopener noreferrer" className={`${cardShell} block overflow-hidden transition-opacity hover:opacity-90`}>
                   {inner}
                 </a>
               ) : (
-                <div key={ci} className={cardShell}>{inner}</div>
+                <div key={ci} className={`${cardShell} overflow-hidden`}>{inner}</div>
               )
             })}
           </div>
