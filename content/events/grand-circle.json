@@ -443,21 +443,25 @@
       "infoBlocks": [
         {
           "heading": "Bib Pickup Options",
-          "body": "**At the Wednesday expo** — recommended, at Festival HQ.\n\n**Day 1 Start Line** can’t make Wednesday? Bib pickup is also available Thursday morning at the Bryce Canyon start line — Your swag and shirt can be picked up back at festival HQ after the Bryce race.\n\n**For a friend** — bring a copy of their ID (printed or on a phone) or their QR-code confirmation email."
+          "body": "**At the Wednesday expo** — recommended, at Festival HQ.\n\n**Day 1 Start Line** can’t make Wednesday? Bib pickup is also available Thursday morning at the Bryce Canyon start line — Your swag and shirt can be picked up back at festival HQ after the Bryce race.\n\n**For a friend** — bring a copy of their ID (printed or on a phone) or their QR-code confirmation email.",
+          "icon": "ticket"
         },
         {
           "heading": "Getting Here & Parking",
-          "body": "There’s plenty of parking at Festival HQ — along the length of the park and on the south side near the pool house. Please do not park in any spaces that are coned off as those are specifically reserved for Operations and Crew purposes.\n\nMost runners fly into St. George (1.5 hr), Las Vegas (3 hr), Salt Lake City (4.5 hr), or Phoenix (5.5 hr) and drive in. Coming from a specific airport? We’ve mapped the drive and the hikes worth stopping for along the way — see the road trip guides below."
+          "body": "There’s plenty of parking at Festival HQ — along the length of the park and on the south side near the pool house. Please do not park in any spaces that are coned off as those are specifically reserved for Operations and Crew purposes.\n\nMost runners fly into St. George (1.5 hr), Las Vegas (3 hr), Salt Lake City (4.5 hr), or Phoenix (5.5 hr) and drive in. Coming from a specific airport? We’ve mapped the drive and the hikes worth stopping for along the way — see the road trip guides below.",
+          "icon": "map"
         },
         {
           "heading": "Shuttles",
-          "body": "There are two types of shuttle access at Grand Circle Trailfest. \n1. Paid Shuttles from Trailfest HQ: This shuttle service brings participants from the Trailfest HQ in Kanab up to the start line each morning. These shuttles are a daily paid upgrade that was selected during registration. If you are interested in upgrading to this shuttle option for one or more days, you can add it on from within your registration in Let’s Do This. You may also have the option of buying a daily shuttle pass at the event. Please note that this option is limited and may sell out before the event begins. This shuttle costs $20/day. \n2. The Free Shuttles to the Start Line: This shuttle service brings participants and spectators from the satellite parking lots each day to the starting line. Usually these shuttles take about 10-15 minutes one-way. There are no upgrades or reservations needed for these shuttles. They will also return you back to your vehicle after you cross the finish line. \n\nTo add HQ shuttle tickets to your registration, follow the instructions [here](https://vacationraces1.zendesk.com/hc/en-us/articles/54820312808987-Registration-Add-Ons-Extras)."
+          "body": "There are two types of shuttle access at Grand Circle Trailfest. \n1. Paid Shuttles from Trailfest HQ: This shuttle service brings participants from the Trailfest HQ in Kanab up to the start line each morning. These shuttles are a daily paid upgrade that was selected during registration. If you are interested in upgrading to this shuttle option for one or more days, you can add it on from within your registration in Let’s Do This. You may also have the option of buying a daily shuttle pass at the event. Please note that this option is limited and may sell out before the event begins. This shuttle costs $20/day. \n2. The Free Shuttles to the Start Line: This shuttle service brings participants and spectators from the satellite parking lots each day to the starting line. Usually these shuttles take about 10-15 minutes one-way. There are no upgrades or reservations needed for these shuttles. They will also return you back to your vehicle after you cross the finish line. \n\nTo add HQ shuttle tickets to your registration, follow the instructions [here](https://vacationraces1.zendesk.com/hc/en-us/articles/54820312808987-Registration-Add-Ons-Extras).",
+          "icon": "bus"
         },
         {
           "heading": "Volunteers",
           "body": "All volunteers should check in at the expo on Wednesday to receive instructions for their shifts — especially anyone volunteering at a start or finish line. During the event, look for team members wearing shirts labelled VOLUNTEER, STAFF, or CREW if you need assistance.",
           "linkLabel": "Sign up to volunteer",
-          "linkUrl": "https://www.letsdothis.com/us/e/volunteer-at-grand-circle-trailfest-2026-268833"
+          "linkUrl": "https://www.letsdothis.com/us/e/volunteer-at-grand-circle-trailfest-2026-268833",
+          "icon": "person"
         }
       ]
     },
@@ -472,19 +476,23 @@
       "infoBlocks": [
         {
           "heading": "Camping Options & Pricing",
-          "body": "Tent camping is included in the price of registration. This includes registrants who will bring their own tent or 4-person and 6-person tent rentals. Folks who want to camp in their car, van or RV will pay a small upgrade fee of $30. This can be adjusted within registration. Please note that we cannot accommodate RVs greater that 30’ in length. Non-runners are more than welcome to camp with their running companions!"
+          "body": "Tent camping is included in the price of registration. This includes registrants who will bring their own tent or 4-person and 6-person tent rentals. Folks who want to camp in their car, van or RV will pay a small upgrade fee of $30. This can be adjusted within registration. Please note that we cannot accommodate RVs greater that 30’ in length. Non-runners are more than welcome to camp with their running companions!",
+          "icon": "ticket"
         },
         {
           "heading": "Check-In & Check-Out",
-          "body": "Check-in is Wednesday, September 30, 12:00 – 7:00 PM at the booth by the baseball fields; after-hours instructions are posted there. Check-out is on Sunday, October 4 by 9:00 AM.\n\nAnything you use to decorate your tent must come down completely and cannot damage the tent."
+          "body": "Check-in is Wednesday, September 30, 12:00 – 7:00 PM at the booth by the baseball fields; after-hours instructions are posted there. Check-out is on Sunday, October 4 by 9:00 AM.\n\nAnything you use to decorate your tent must come down completely and cannot damage the tent.",
+          "icon": "clock"
         },
         {
           "heading": "Camping Etiquette",
-          "body": "Quiet hours begin at **10:00 PM**. Arriving at odd hours? Keep lights and noise down. Keep showers short and spread out the load so there’s hot water for everyone. Keep facilities clean, dispose of your trash, obey traffic laws and keep speeds down, don’t shine lights into other tents, and walk in the designated lanes rather than cutting between tents.\n\nBring ear plugs if you’re sensitive to noise."
+          "body": "Quiet hours begin at **10:00 PM**. Arriving at odd hours? Keep lights and noise down. Keep showers short and spread out the load so there’s hot water for everyone. Keep facilities clean, dispose of your trash, obey traffic laws and keep speeds down, don’t shine lights into other tents, and walk in the designated lanes rather than cutting between tents.\n\nBring ear plugs if you’re sensitive to noise.",
+          "icon": "info"
         },
         {
           "heading": "Showers, Chargers & Pavilions",
-          "body": "Plenty of showers and changing rooms are available in the pool house and the shower truck. Please be mindful of shower duration to avoid long wait times for others. Both flushable and porto restrooms are available throughout the festival headquarters, including handwashing sinks. Phone charging stations will be set-up at HQ for use by everyone. A few small picnic pavilions with grills are available on a first-come, first-served basis."
+          "body": "Plenty of showers and changing rooms are available in the pool house and the shower truck. Please be mindful of shower duration to avoid long wait times for others. Both flushable and porto restrooms are available throughout the festival headquarters, including handwashing sinks. Phone charging stations will be set-up at HQ for use by everyone. A few small picnic pavilions with grills are available on a first-come, first-served basis.",
+          "icon": "shower"
         }
       ]
     },
@@ -508,27 +516,32 @@
                 "eyebrow": "Thu, Oct 1 · 5–6 PM · New",
                 "body": "With Donna Bronson of Bronco Entertainment. No experience needed.",
                 "url": "https://www.broncoentertainment.com/",
-                "imageUrl": ""
+                "imageUrl": "",
+                "icon": "music"
               },
               {
                 "title": "Tai Chi",
                 "eyebrow": "Fri, Oct 2 · 5–6 PM",
                 "body": "With Terri Henry of Vibration Oasis, board-certified through the Tai Chi for Health Institute. A moving meditation for balance and recovery.",
-                "imageUrl": ""
+                "imageUrl": "",
+                "icon": "person"
               },
               {
                 "title": "Sound Bath",
                 "eyebrow": "Sat, Oct 3 · 5–6 PM",
                 "body": "Pure Healing Resonance by Carmella — aromatherapy, grounding breathwork, and ten quartz crystal bowls.",
-                "imageUrl": ""
+                "imageUrl": "",
+                "icon": "sparkle"
               },
               {
                 "title": "Star Gazing",
                 "eyebrow": "Fri, Oct 2 · 8:30–10 PM",
                 "body": "Stargazing with Stellar Vista Observatory. Bring your curiosity (and questions about the universe) and see the Andromeda Galaxy, Hercules Star Cluster, Saturn, and more through high-power telescopes. SVO’s astronomers are excited to share the sky with you.",
-                "imageUrl": ""
+                "imageUrl": "",
+                "icon": "stars"
               }
-            ]
+            ],
+            "icon": "person"
           },
           {
             "heading": "Recovery, Services & More",
@@ -538,40 +551,47 @@
                 "title": "Massage",
                 "eyebrow": "Daily · 2–8 PM · Free",
                 "body": "Free 20-minute massages every day, with the option to pay for a longer session. First come, first served — hop on the waiting list.",
-                "imageUrl": ""
+                "imageUrl": "",
+                "icon": "hands"
               },
               {
                 "title": "Elevated Legs Compression",
                 "eyebrow": "Daily · 2–8 PM · Free",
                 "body": "Hot/cold leg compression therapy to help you relax and recover. **Ten minutes each day is free**, compliments of Vacation Races — need an extra boost? Add 10 more minutes for $10, 20 for $15, or 30 for $20. @elevatedlegs",
                 "url": "https://elevatedlegs.com",
-                "imageUrl": ""
+                "imageUrl": "",
+                "icon": "timer"
               },
               {
                 "title": "Sauna",
                 "eyebrow": "All Day Sauna · Free",
                 "body": "A mobile sauna on site all day, free to use. Bring a towel you don’t mind getting sweaty and keep sessions reasonable so everyone gets a turn.",
-                "imageUrl": ""
+                "imageUrl": "",
+                "icon": "flame"
               },
               {
                 "title": "Yoga with Tiffany Smith",
                 "eyebrow": "Thu–Sat · 45 minutes",
                 "body": "Two instructor-led sessions each afternoon, 4:00–4:45 PM and 5:00–5:45 PM. Mats and foam rollers are available in the recovery area for self-guided work.",
-                "imageUrl": ""
+                "imageUrl": "",
+                "icon": "person"
               },
               {
                 "title": "Medical Tent",
                 "eyebrow": "Self-serve",
                 "body": "Basic first aid supplies are available at Festival HQ. The medical area at each race finish is for athletes only.",
-                "imageUrl": ""
+                "imageUrl": "",
+                "icon": "firstaid"
               },
               {
                 "title": "Contests & Raffle",
                 "eyebrow": "Nightly at HQ",
                 "body": "Running Outfit Awards and the Tent Decorating Contest are judged nightly alongside awards and the raffle. Every bib has a raffle ticket printed on it — be present Saturday evening to enter and claim prizes.",
-                "imageUrl": ""
+                "imageUrl": "",
+                "icon": "award"
               }
-            ]
+            ],
+            "icon": "hands"
           },
           {
             "heading": "IV Station · Desert Healing",
@@ -620,7 +640,8 @@
                 "meta": "$125",
                 "imageUrl": ""
               }
-            ]
+            ],
+            "icon": "firstaid"
           }
         ],
         "infoBlocks": [
@@ -628,7 +649,8 @@
             "heading": "IV Discounts, Injections & Peptides",
             "body": "**Discount:** $155 each for any IV when booking at least 2 IVs during the weekend.\n\n**Injections & infusions:** NAD+ infusion $455 · NAD+ injection $60 · Toradol (pain relief) $60 · Zofran (anti-nausea) $35 · Vitamin D $35.\n\n**Peptides:** BPC-157 $175 · Wolverine Stack (BPC-157 / TB-500) $250.\n\n**In town:** Desert Healing’s downtown Kanab location also has a cold plunge and hot sauna, plus IV hydration 10:00 AM – 5:00 PM every day of the week.",
             "linkLabel": "Book with Desert Healing",
-            "linkUrl": "https://deserthealing.org/iv-infusions/"
+            "linkUrl": "https://deserthealing.org/iv-infusions/",
+            "icon": "firstaid"
           }
         ]
       },
@@ -682,7 +704,8 @@
                 "icon": "beer"
               }
             ],
-            "intro": "Dietary Restrictions: Runners who have selected a Vegetarian, Vegan or Gluten Free dietary restriction during registration will be given different color meal tickets to ensure they receive their special restriction-friendly meals. Please note that while we try our best, we cannot guarantee cross-contamination of gluten free surfaces. If you have a companion that needs a special dietary accommodation, please come speak to a staff member at the Runner Services tent."
+            "intro": "Dietary Restrictions: Runners who have selected a Vegetarian, Vegan or Gluten Free dietary restriction during registration will be given different color meal tickets to ensure they receive their special restriction-friendly meals. Please note that while we try our best, we cannot guarantee cross-contamination of gluten free surfaces. If you have a companion that needs a special dietary accommodation, please come speak to a staff member at the Runner Services tent.",
+            "icon": "clock"
           },
           {
             "heading": "Dinner Menus",
@@ -715,7 +738,8 @@
                 "imageUrl": ""
               }
             ],
-            "intro": ""
+            "intro": "",
+            "icon": "meal"
           },
           {
             "heading": "On the Drive Back",
@@ -786,7 +810,8 @@
                 "imageUrl": "",
                 "icon": "meal"
               }
-            ]
+            ],
+            "icon": "truck"
           },
           {
             "heading": "Beer Garden · Monster Brewing",
@@ -852,33 +877,40 @@
                 "body": "Michelob Ultra Zero & Craft Sodas will be available as non-alcoholic options",
                 "eyebrow": "Non-Alcoholic Options"
               }
-            ]
+            ],
+            "icon": "beer"
           }
         ],
         "infoBlocks": [
           {
             "heading": "How Meal Service Works",
-            "body": "Everyone begins in the same main dinner buffet line — there’s no separate line for dietary needs, but dietary restrictions will have a separate dinner ticket color. The attendant will explain which buffet items fit your needs and where the entrée is served, then you will continue through the buffet for salads, vegetables, sides, and beverages."
+            "body": "Everyone begins in the same main dinner buffet line — there’s no separate line for dietary needs, but dietary restrictions will have a separate dinner ticket color. The attendant will explain which buffet items fit your needs and where the entrée is served, then you will continue through the buffet for salads, vegetables, sides, and beverages.",
+            "icon": "meal"
           },
           {
             "heading": "Allergen Notice",
-            "body": "We make reasonable efforts to keep designated menu items separate; however, all meals are prepared and served in a shared temporary event kitchen. Wheat, dairy, eggs, soy, sesame, nuts, and other allergens may be present. We cannot guarantee an allergen-free environment. Participants with serious food allergies should speak directly with the culinary team before selecting food.\n\nSelect your dietary restrictions at registration or edit your registration to include them up to two weeks before the event — we will have a list of registrants with dietary restrictions to ensure everyone’s needs are met. If you did not sign up for a dietary restriction meal, please do not take one of those options as we prepare quantities in advance. If you need a different meal option than what you’ve selected, please come talk to a staff member at Runner Services."
+            "body": "We make reasonable efforts to keep designated menu items separate; however, all meals are prepared and served in a shared temporary event kitchen. Wheat, dairy, eggs, soy, sesame, nuts, and other allergens may be present. We cannot guarantee an allergen-free environment. Participants with serious food allergies should speak directly with the culinary team before selecting food.\n\nSelect your dietary restrictions at registration or edit your registration to include them up to two weeks before the event — we will have a list of registrants with dietary restrictions to ensure everyone’s needs are met. If you did not sign up for a dietary restriction meal, please do not take one of those options as we prepare quantities in advance. If you need a different meal option than what you’ve selected, please come talk to a staff member at Runner Services.",
+            "icon": "info"
           },
           {
             "heading": "Non-Runner Meal Tickets",
-            "body": "Dinner tickets are **$12**, breakfast tickets **$5**, and a combo of both per day is **$15**. Buy them at the registration tent or at the buffet table, cash or credit."
+            "body": "Dinner tickets are **$12**, breakfast tickets **$5**, and a combo of both per day is **$15**. Buy them at the registration tent or at the buffet table, cash or credit.",
+            "icon": "ticket"
           },
           {
             "heading": "Evenings Around the Fire · The Elevated S’mores Station",
-            "body": "**7–9 PM · Wed–Sat.** Each day, after the running wraps up and the evening entertainment is in full swing, join us around the fire pits for the sweetest part of the day. We’re upgrading your traditional campfire snack with a nightly gourmet s’mores bar packed with fresh takes on the classic combo — from rich dark chocolates and flavoured spreads to unexpected crunches, with both sweet and savoury options.\n\nGrab a roasting stick, get creative with your concoctions, and relax with fellow runners as we wind down the day together."
+            "body": "**7–9 PM · Wed–Sat.** Each day, after the running wraps up and the evening entertainment is in full swing, join us around the fire pits for the sweetest part of the day. We’re upgrading your traditional campfire snack with a nightly gourmet s’mores bar packed with fresh takes on the classic combo — from rich dark chocolates and flavoured spreads to unexpected crunches, with both sweet and savoury options.\n\nGrab a roasting stick, get creative with your concoctions, and relax with fellow runners as we wind down the day together.",
+            "icon": "flame"
           },
           {
             "heading": "Runner Recovery Tent",
-            "body": "At each race finish Thursday through Saturday: hot quesadillas, grilled cheese, sweet and salty snacks, and recovery beverages, while supplies last. This is a separate runners-only station after the race — distinct from the on-course aid station."
+            "body": "At each race finish Thursday through Saturday: hot quesadillas, grilled cheese, sweet and salty snacks, and recovery beverages, while supplies last. This is a separate runners-only station after the race — distinct from the on-course aid station.",
+            "icon": "snack"
           },
           {
             "heading": "Lunch in Kanab",
-            "body": "Lunch is independent and not an official Trailfest meal. Food and beverage trucks may be at Trailfest HQ during select hours — vendors, menus, and times vary, so check posted signage; purchases aren’t included with registration or meal tickets.\n\nFor spots on each day’s drive home see **On the Drive Back** above, and for places in town see [Explore Kanab](#experiences)."
+            "body": "Lunch is independent and not an official Trailfest meal. Food and beverage trucks may be at Trailfest HQ during select hours — vendors, menus, and times vary, so check posted signage; purchases aren’t included with registration or meal tickets.\n\nFor spots on each day’s drive home see **On the Drive Back** above, and for places in town see [Explore Kanab](#experiences).",
+            "icon": "pin"
           }
         ]
       },
@@ -917,7 +949,8 @@
                 "url": "https://red-heritage.com/",
                 "imageUrl": "/images/events/grand-circle-red-heritage.jpg"
               }
-            ]
+            ],
+            "icon": "person"
           },
           {
             "heading": "Live Music",
@@ -947,7 +980,8 @@
                 "url": "https://aliciastockman.com/",
                 "imageUrl": "/images/events/grand-circle-alicia-stockman.jpg"
               }
-            ]
+            ],
+            "icon": "music"
           },
           {
             "heading": "Film Festivals",
@@ -966,7 +1000,8 @@
                 "body": "The closing night film festival, included with your registration.",
                 "imageUrl": ""
               }
-            ]
+            ],
+            "icon": "film"
           }
         ],
         "infoBlocks": []
@@ -1012,21 +1047,25 @@
               "heading": "Course Details",
               "body": "This stunningly scenic course runs in, around, and through the colourful hoodoos as it links the Thunder Mountain and Golden Wall trails of Red Canyon. After the aid station there is some climbing during the final 5.7 miles before passing through the Red Canyon campground and finishing back at the Thunder Mountain trailhead.\n\nNowhere is the force of erosion more tangible than at Bryce Canyon — you’ll see all the beauty but avoid the crowds on remote trails through the hoodoos of the Paunsaugunt Plateau.\n\nNote: trail rides will likely be taking place during the race. Horses have the right of way; all runners must yield.\n\n[CONFIRM] RideWithGPS route link for the live map (the 2025 guide published this route on Strava).",
               "linkLabel": "View the 2025 route on Strava",
-              "linkUrl": "https://www.strava.com/routes/3400685255768323784"
+              "linkUrl": "https://www.strava.com/routes/3400685255768323784",
+              "icon": "map"
             },
             {
               "heading": "Ten Mile Finish Option",
-              "body": "This course is beautifully brutal, and day one is the longest of the three. If you’re spent on arriving at the mile-10 aid station, you may continue about a quarter mile and finish your day by turning into the finish chute. Otherwise we encourage everyone to run the full distance.\n\nAnyone going for an overall top finisher award must complete the full 15.7 miles — additional timing mats are set up in the final section of the 5-mile loop to verify full-distance runners."
+              "body": "This course is beautifully brutal, and day one is the longest of the three. If you’re spent on arriving at the mile-10 aid station, you may continue about a quarter mile and finish your day by turning into the finish chute. Otherwise we encourage everyone to run the full distance.\n\nAnyone going for an overall top finisher award must complete the full 15.7 miles — additional timing mats are set up in the final section of the 5-mile loop to verify full-distance runners.",
+              "icon": "pin"
             },
             {
               "heading": "Aid Station & Cutoff",
-              "body": "One aid station at **mile 10** — a long stretch for some, so refuel before the next major incline. It carries water, Neuma electrolyte drink, Honey Stinger gels, fresh fruit, and pretzels, plus portable toilets.\n\nThe cutoff is enforced at the aid station: based on a minimum 20-minute-per-mile pace, runners reaching mile 10 after 12:00 PM will be pulled from the course and directed to the finish."
+              "body": "One aid station at **mile 10** — a long stretch for some, so refuel before the next major incline. It carries water, Neuma electrolyte drink, Honey Stinger gels, fresh fruit, and pretzels, plus portable toilets.\n\nThe cutoff is enforced at the aid station: based on a minimum 20-minute-per-mile pace, runners reaching mile 10 after 12:00 PM will be pulled from the course and directed to the finish.",
+              "icon": "drop"
             },
             {
               "heading": "Getting There",
               "body": "From Jacob Hamblin Park, head south on N 100 East, turn right onto E 300 North for 0.5 miles, right onto N 300 West (US-89) and follow US-89 for 59.5 miles. Turn right onto E Highway 12 for 13.6 miles, right onto N Main St (UT-63) for 1.2 miles, then left onto N 100 E. Parking areas are on the east side of the highway across from Ruby’s Inn. **Travel time: 1 hr 25 min.**\n\nThere are four lots — please fill them in the labelled order. Staff will direct traffic. All runners who drive themselves ride a provided shuttle (about 15 minutes) from the lots to the start, and are shuttled back after the race.",
               "linkLabel": "Driving directions",
-              "linkUrl": "https://maps.app.goo.gl/BsU9jSKzZJUcCPPj6"
+              "linkUrl": "https://maps.app.goo.gl/BsU9jSKzZJUcCPPj6",
+              "icon": "bus"
             }
           ]
         },
@@ -1059,17 +1098,20 @@
               "heading": "Course Details",
               "body": "Enjoy rim running on one of the most beautiful trail systems in America, from Smithsonian Butte to Wire Mesa, with panoramic views toward Zion. A little slick rock, towering views of Zion Canyon, and sweeping vistas make this one of our favourite trails.\n\nThe towering sandstone walls and deep slot canyons here are unique to anywhere else on earth — you’ll run remote trails along the edge of a mesa with commanding views of the sandstone towers that make Zion famous. Keep an eye out for petrified wood on the trail.\n\n[CONFIRM] RideWithGPS route link for the live map (the 2025 guide published this route on Strava).",
               "linkLabel": "View the 2025 route on Strava",
-              "linkUrl": "https://www.strava.com/routes/3382912643380797908"
+              "linkUrl": "https://www.strava.com/routes/3382912643380797908",
+              "icon": "map"
             },
             {
               "heading": "Aid Station",
-              "body": "One aid station at **mile 7.3**, before the gradual climb on the back half of the Wire Mesa loop. It carries water, Neuma electrolyte drink, Honey Stinger gels, fresh fruit, and pretzels, plus portable toilets.\n\nCome prepared with a hydration pack — this single station is your only source of replenishment during the race."
+              "body": "One aid station at **mile 7.3**, before the gradual climb on the back half of the Wire Mesa loop. It carries water, Neuma electrolyte drink, Honey Stinger gels, fresh fruit, and pretzels, plus portable toilets.\n\nCome prepared with a hydration pack — this single station is your only source of replenishment during the race.",
+              "icon": "drop"
             },
             {
               "heading": "Getting There",
               "body": "From Jacob Hamblin Park, head south on N 100 East, then turn left to stay on 100 East/US-89A toward Fredonia for 6.8 miles. Turn right onto Pratt Street (AZ-389 W) toward Apple Valley for 32.6 miles, continue on UT-59 N for 8.1 miles, then take a slight right onto Main Street and drive about 2 miles to the dirt parking lot on your left. **Travel time: 1 hr.**\n\nRunners who drive themselves park in the dirt lot near Apple Valley and walk over to the start. Staff will be on site directing traffic and parking.",
               "linkLabel": "Driving directions",
-              "linkUrl": "https://maps.app.goo.gl/yyV4dyGNmqtM6uT26"
+              "linkUrl": "https://maps.app.goo.gl/yyV4dyGNmqtM6uT26",
+              "icon": "bus"
             }
           ]
         },
@@ -1100,23 +1142,27 @@
           "infoBlocks": [
             {
               "heading": "Navajo Land",
-              "body": "This entire course is on Navajo land. Remember that we are guests here, and be respectful of the area."
+              "body": "This entire course is on Navajo land. Remember that we are guests here, and be respectful of the area.",
+              "icon": "info"
             },
             {
               "heading": "Course Details",
               "body": "Run through a range of slot canyons on this impressive tour through Antelope Canyon’s famous sandstone corridors. It’s a loop, starting and finishing in the same location.\n\nWant 360-degree views? Add an optional mile to climb up to an overlook and see out as far as Bryce Canyon.\n\n[CONFIRM] RideWithGPS route link for the live map (the 2025 guide published this route on Strava).",
               "linkLabel": "View the 2025 route on Strava",
-              "linkUrl": "https://www.strava.com/routes/3382913090028983764"
+              "linkUrl": "https://www.strava.com/routes/3382913090028983764",
+              "icon": "map"
             },
             {
               "heading": "Aid Station",
-              "body": "Runners hit the aid station around **mile 5**. It carries water, Neuma electrolyte drink, Honey Stinger gels, fresh fruit, and pretzels, plus portable toilets.\n\nCome prepared with a hydration pack or other water source, as this single station is the only refill opportunity on course."
+              "body": "Runners hit the aid station around **mile 5**. It carries water, Neuma electrolyte drink, Honey Stinger gels, fresh fruit, and pretzels, plus portable toilets.\n\nCome prepared with a hydration pack or other water source, as this single station is the only refill opportunity on course.",
+              "icon": "drop"
             },
             {
               "heading": "Getting There",
               "body": "From Jacob Hamblin Park, head south on N 100 East, turn left to stay on 100 East/US-89A and head south for 0.3 miles. Turn left onto 300 South/US-89 toward Lake Powell/Page and continue on US-89 S for 75 miles. At the roundabout, take the 3rd turn east onto Haul Rd, follow it 1.6 miles, then turn right into the Page Sports Complex (477 Haul Rd). **Travel time: 1 hr 20 min.**\n\nRunners park at the Sports Complex and take a short shuttle to the start, then back to the lot from the finish.",
               "linkLabel": "Driving directions",
-              "linkUrl": "https://maps.app.goo.gl/Gn6LPBCFYakSrUav9"
+              "linkUrl": "https://maps.app.goo.gl/Gn6LPBCFYakSrUav9",
+              "icon": "bus"
             }
           ]
         }
@@ -1149,19 +1195,23 @@
       "infoSections": [
         {
           "heading": "Cup-Free Racing",
-          "body": "As with all Vacation Races events, there are no cups at aid stations or finish lines. Aid stations are stocked with water and Neuma electrolyte drink — bring your own cup, container, or bottle. Aid stations use **blue coolers for water** and **red coolers for Neuma**, both with the same speed valves.\n\nRunners who opted in at registration receive a Nathan reusable cup. Remember: this is a dry climate at elevation — hydrate well."
+          "body": "As with all Vacation Races events, there are no cups at aid stations or finish lines. Aid stations are stocked with water and Neuma electrolyte drink — bring your own cup, container, or bottle. Aid stations use **blue coolers for water** and **red coolers for Neuma**, both with the same speed valves.\n\nRunners who opted in at registration receive a Nathan reusable cup. Remember: this is a dry climate at elevation — hydrate well.",
+          "icon": "drop"
         },
         {
           "heading": "Trail & Camp Etiquette",
-          "body": "**Respect quiet hours** — 10:00 PM nightly at camp. Runners are resting for tomorrow.\n\n**Keep HQ clean** — clean up the dining area after yourself and help keep the park tidy.\n\n**Watch your water usage** — keep showers short and consider off-peak hours.\n\n**Respect everyone’s space** — reduce vehicle speeds, don’t shine lights into tents, use marked walkways."
+          "body": "**Respect quiet hours** — 10:00 PM nightly at camp. Runners are resting for tomorrow.\n\n**Keep HQ clean** — clean up the dining area after yourself and help keep the park tidy.\n\n**Watch your water usage** — keep showers short and consider off-peak hours.\n\n**Respect everyone’s space** — reduce vehicle speeds, don’t shine lights into tents, use marked walkways.",
+          "icon": "info"
         },
         {
           "heading": "Awards Ceremonies",
-          "body": "Held nightly at Festival HQ. Each ceremony covers daily contest judging, the raffle, and race awards for the day. Top three male and female overall awards are given out nightly based on gun time — plan to start in the first wave of each race if you’d like to compete.\n\nOn day three, Overall Finisher Awards go to the top three men and women with the best cumulative times across the three races. Current contests: Running Outfit Awards and the Tent Decorating Contest, with more to be added."
+          "body": "Held nightly at Festival HQ. Each ceremony covers daily contest judging, the raffle, and race awards for the day. Top three male and female overall awards are given out nightly based on gun time — plan to start in the first wave of each race if you’d like to compete.\n\nOn day three, Overall Finisher Awards go to the top three men and women with the best cumulative times across the three races. Current contests: Running Outfit Awards and the Tent Decorating Contest, with more to be added.",
+          "icon": "award"
         },
         {
           "heading": "Timing Specifics",
-          "body": "Your timing chip is on the back of your bib and looks like a sticker — do not fold your bib. No chip means no recorded time. The chip is disposable after the race.\n\nOverall awards are based on gun time, so top competitors should start at the front; if you start toward the back, expect a delay before crossing the start line and be courteous as the race begins."
+          "body": "Your timing chip is on the back of your bib and looks like a sticker — do not fold your bib. No chip means no recorded time. The chip is disposable after the race.\n\nOverall awards are based on gun time, so top competitors should start at the front; if you start toward the back, expect a delay before crossing the start line and be courteous as the race begins.",
+          "icon": "clock"
         },
         {
           "heading": "Live Tracking & Results",
@@ -1175,15 +1225,18 @@
               "label": "Results",
               "url": "https://brooksee.com/gct/results"
             }
-          ]
+          ],
+          "icon": "pin"
         },
         {
           "heading": "Finish Line & Recovery",
-          "body": "Each runner receives a food box, a banana, and chocolate milk after finishing, plus their finisher’s award. The runner recovery tent has hot food, snacks, fresh fruit, recovery beverages, and our signature finish-line mocktail, the Mana Freeze.\n\nThe recovery area and medical tent are for runners only — please don’t enter or take runners’ food and supplies."
+          "body": "Each runner receives a food box, a banana, and chocolate milk after finishing, plus their finisher’s award. The runner recovery tent has hot food, snacks, fresh fruit, recovery beverages, and our signature finish-line mocktail, the Mana Freeze.\n\nThe recovery area and medical tent are for runners only — please don’t enter or take runners’ food and supplies.",
+          "icon": "snack"
         },
         {
           "heading": "Spectators",
-          "body": "These courses are not very spectator friendly, but spectators are welcome to greet you at the finish. Friends and family should drive to the designated parking area for each race location and take the short shuttle ride to the finish.\n\nSpectators are responsible for their own transportation unless shuttle tickets have been purchased; when loading return shuttles, runners are given first priority."
+          "body": "These courses are not very spectator friendly, but spectators are welcome to greet you at the finish. Friends and family should drive to the designated parking area for each race location and take the short shuttle ride to the finish.\n\nSpectators are responsible for their own transportation unless shuttle tickets have been purchased; when loading return shuttles, runners are given first priority.",
+          "icon": "person"
         },
         {
           "heading": "Race Photos, iTab & Lost + Found",
@@ -1193,19 +1246,23 @@
               "label": "Order an iTab",
               "url": "https://www.itab.us.com/product/vacation-races/"
             }
-          ]
+          ],
+          "icon": "camera"
         },
         {
           "heading": "Zero Waste",
-          "body": "At the heart of Vacation Races is a commitment to preserving the landscapes we run in. Unnecessary waste and trash can ruin the view and the experience, so every event has marked Zero Waste stations where you can sort your trash into the right container.\n\n**Green lid · Compostables** — banana and orange peels, uneaten food or drink items, and other organic material.\n\n**Blue lid · Recyclables** — plastics marked #1–7, aluminium and steel cans, paper, cardboard, and glass. Empty containers first.\n\n**Black lid · Everything else** — food wrappers, used gel packets, styrofoam, and all non-recyclable, non-compostable waste."
+          "body": "At the heart of Vacation Races is a commitment to preserving the landscapes we run in. Unnecessary waste and trash can ruin the view and the experience, so every event has marked Zero Waste stations where you can sort your trash into the right container.\n\n**Green lid · Compostables** — banana and orange peels, uneaten food or drink items, and other organic material.\n\n**Blue lid · Recyclables** — plastics marked #1–7, aluminium and steel cans, paper, cardboard, and glass. Empty containers first.\n\n**Black lid · Everything else** — food wrappers, used gel packets, styrofoam, and all non-recyclable, non-compostable waste.",
+          "icon": "recycle"
         },
         {
           "heading": "Packing List",
-          "body": "You’re camping for four nights in the desert and running three days in a row. Nights and mornings are cold; afternoons are hot and exposed.\n\n**Highly recommended:** camp pillow · shower and sauna towels · jacket or vest · sleeping bag & pad · lounging blanket · snacks and food · soap and shampoo · extra clothing · socks for each race · running shoes · flashlight or headlamp · camp shoes · camera, phone, chargers · mask or buff · personal medication · running hydration pack · warm clothes for nights and mornings.\n\n**Recommended:** sunglasses · sunscreen · sun hat · toiletries · extra blanket · long underwear.\n\n**A few more things:** personal first aid kit · gloves · insect repellent · rain gear · ear plugs."
+          "body": "You’re camping for four nights in the desert and running three days in a row. Nights and mornings are cold; afternoons are hot and exposed.\n\n**Highly recommended:** camp pillow · shower and sauna towels · jacket or vest · sleeping bag & pad · lounging blanket · snacks and food · soap and shampoo · extra clothing · socks for each race · running shoes · flashlight or headlamp · camp shoes · camera, phone, chargers · mask or buff · personal medication · running hydration pack · warm clothes for nights and mornings.\n\n**Recommended:** sunglasses · sunscreen · sun hat · toiletries · extra blanket · long underwear.\n\n**A few more things:** personal first aid kit · gloves · insect repellent · rain gear · ear plugs.",
+          "icon": "bag"
         },
         {
           "heading": "Volunteers",
-          "body": "If you need assistance during the event, look for team members wearing shirts labelled VOLUNTEER, STAFF, or CREW. All volunteers should check in at the expo on Wednesday to receive instructions for their shifts — especially anyone volunteering at a start or finish line."
+          "body": "If you need assistance during the event, look for team members wearing shirts labelled VOLUNTEER, STAFF, or CREW. All volunteers should check in at the expo on Wednesday to receive instructions for their shifts — especially anyone volunteering at a start or finish line.",
+          "icon": "person"
         }
       ]
     },

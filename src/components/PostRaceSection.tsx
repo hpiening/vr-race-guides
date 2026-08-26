@@ -163,6 +163,7 @@ function PostRaceTrailhead({ data, basePath, editing }: { data: EventData['secti
             variant="white"
             items={data.infoSections.map(s => ({
               heading: s.heading,
+              icon: s.icon,
               body: (
                 <>
                   <RichBody value={s.body} />

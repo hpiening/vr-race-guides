@@ -1,17 +1,18 @@
 'use client'
 import MapEmbed from './MapEmbed'
-import { EventData } from '@/types/event'
+import { EventData, CardIcon } from '@/types/event'
 import { useEditOptional } from '@/lib/editContext'
 import EditableText from './edit/EditableText'
 import EditableUrl from './edit/EditableUrl'
 import EditableImage from './edit/EditableImage'
 import { ListControls, AddButton } from './edit/ListControls'
-import { TrailHeader, PhotoFrame, ActionLink } from './trailhead/Shared'
+import { TrailHeader, PhotoFrame, ActionLink, CardIconMark, CARD_ICONS } from './trailhead/Shared'
 
 type Props = { data: EventData['sections']['expo']; basePath?: string; theme?: 'classic' | 'trailhead' }
 
 export default function ExpoSection({ data, basePath = 'sections.expo', theme = 'classic' }: Props) {
-  const editing = !!useEditOptional()?.editing
+  const editCtx = useEditOptional()
+  const editing = !!editCtx?.editing
 
   if (theme === 'trailhead') return <ExpoTrailhead data={data} basePath={basePath} editing={editing} />
 
@@ -126,6 +127,7 @@ export default function ExpoSection({ data, basePath = 'sections.expo', theme = 
 
 /* ── Trailhead view (renders in both view + edit mode) ── */
 function ExpoTrailhead({ data, basePath, editing }: { data: EventData['sections']['expo']; basePath: string; editing: boolean }) {
+  const editCtx = useEditOptional()
   return (
     <section id="expo" className="bg-vr-offwhite px-6 md:px-12 py-20 md:py-[104px]">
       <div className="max-w-[1180px] mx-auto">
@@ -209,8 +211,9 @@ function ExpoTrailhead({ data, basePath, editing }: { data: EventData['sections'
           <div className="grid gap-6 md:grid-cols-2 mt-6">
             {(data.infoBlocks ?? []).map((b, i) => (
               <div key={i} className="border border-vr-line bg-vr-white rounded-lg p-7">
-                <div className="flex items-start gap-2">
-                  <EditableText as="h3" className="font-heading uppercase text-vr-forest mb-3 flex-1" value={b.heading} path={`${basePath}.infoBlocks.${i}.heading`} />
+                <div className="flex items-start gap-2 mb-3">
+                  {b.icon && <CardIconMark icon={b.icon} size={18} />}
+                  <EditableText as="h3" className="font-heading uppercase text-vr-forest flex-1" value={b.heading} path={`${basePath}.infoBlocks.${i}.heading`} />
                   <ListControls path={`${basePath}.infoBlocks`} index={i} count={data.infoBlocks!.length} />
                 </div>
                 <EditableText as="div" className="font-body text-vr-forest/85 leading-[1.65] whitespace-pre-line" value={b.body} path={`${basePath}.infoBlocks.${i}.body`} />
@@ -219,7 +222,19 @@ function ExpoTrailhead({ data, basePath, editing }: { data: EventData['sections'
                 )}
                 {editing && (
                   <div className="mt-2">
-                    <EditableText as="div" className="font-micro text-xs uppercase text-vr-sky" value={b.linkLabel ?? ''} path={`${basePath}.infoBlocks.${i}.linkLabel`} placeholder="Link label (optional)" />
+<div className="mt-2 flex items-center gap-2">
+                  <span className="font-micro text-[10px] uppercase tracking-wider text-vr-mid">Icon</span>
+                  <select
+                    value={b.icon ?? ''}
+                    onChange={e => editCtx?.setValue(`${basePath}.infoBlocks.${i}.icon`, e.target.value || undefined)}
+                    aria-label="Icon"
+                    className="bg-vr-forest/10 border border-vr-forest/25 rounded text-vr-forest font-micro text-[10px] uppercase tracking-wider px-1.5 py-1"
+                  >
+                    <option value="">No icon</option>
+                    {(Object.keys(CARD_ICONS) as CardIcon[]).map(k => <option key={k} value={k}>{k}</option>)}
+                  </select>
+                </div>
+                <EditableText as="div" className="font-micro text-xs uppercase text-vr-sky" value={b.linkLabel ?? ''} path={`${basePath}.infoBlocks.${i}.linkLabel`} placeholder="Link label (optional)" />
                     <EditableUrl path={`${basePath}.infoBlocks.${i}.linkUrl`} label="Link URL" />
                   </div>
                 )}

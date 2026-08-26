@@ -1,18 +1,19 @@
 'use client'
 import SectionWrapper from './SectionWrapper'
-import { EventData } from '@/types/event'
+import { EventData, CardIcon } from '@/types/event'
 import { useEditOptional } from '@/lib/editContext'
 import EditableText from './edit/EditableText'
 import EditableUrl from './edit/EditableUrl'
 import EditableImage from './edit/EditableImage'
 import RideWithGpsField from './edit/RideWithGpsField'
 import { ListControls, AddButton } from './edit/ListControls'
-import { StatChips, StatTiles, Accordion, RichBody, ActionLink, rwgStaticMap } from './trailhead/Shared'
+import { StatChips, StatTiles, Accordion, RichBody, ActionLink, CARD_ICONS, rwgStaticMap } from './trailhead/Shared'
 
 type Props = { data: EventData['sections']['courseInfo']; basePath?: string; theme?: 'classic' | 'trailhead' }
 
 export default function CourseInfoSection({ data, basePath = 'sections.courseInfo', theme = 'classic' }: Props) {
-  const editing = !!useEditOptional()?.editing
+  const editCtx = useEditOptional()
+  const editing = !!editCtx?.editing
 
   if (theme === 'trailhead') return <CourseInfoTrailhead data={data} basePath={basePath} editing={editing} />
 
@@ -151,6 +152,7 @@ export default function CourseInfoSection({ data, basePath = 'sections.courseInf
 
 /* ── Trailhead view (renders in both view + edit mode) ── */
 function CourseInfoTrailhead({ data, basePath, editing }: { data: EventData['sections']['courseInfo']; basePath: string; editing: boolean }) {
+  const editCtx = useEditOptional()
   return (
     <section id="course-info" className="relative bg-vr-deep overflow-hidden px-6 md:px-12 py-20 md:py-[104px]">
       <div className="max-w-[1180px] mx-auto">
@@ -249,7 +251,19 @@ function CourseInfoTrailhead({ data, basePath, editing }: { data: EventData['sec
                           <ListControls path={`${basePath}.distances.${i}.infoBlocks`} index={bi} count={d.infoBlocks!.length} />
                         </div>
                         <EditableText as="div" className="font-body text-vr-forest/85 mt-2 whitespace-pre-line" value={b.body} path={`${basePath}.distances.${i}.infoBlocks.${bi}.body`} />
-                        <EditableText as="div" className="font-micro text-xs uppercase text-vr-mid mt-2" value={b.linkLabel ?? ''} path={`${basePath}.distances.${i}.infoBlocks.${bi}.linkLabel`} placeholder="Button label (optional)" />
+<div className="mt-2 flex items-center gap-2">
+                  <span className="font-micro text-[10px] uppercase tracking-wider text-vr-mid">Icon</span>
+                  <select
+                    value={b.icon ?? ''}
+                    onChange={e => editCtx?.setValue(`${basePath}.distances.${i}.infoBlocks.${bi}.icon`, e.target.value || undefined)}
+                    aria-label="Icon"
+                    className="bg-vr-forest/10 border border-vr-forest/25 rounded text-vr-forest font-micro text-[10px] uppercase tracking-wider px-1.5 py-1"
+                  >
+                    <option value="">No icon</option>
+                    {(Object.keys(CARD_ICONS) as CardIcon[]).map(k => <option key={k} value={k}>{k}</option>)}
+                  </select>
+                </div>
+                <EditableText as="div" className="font-micro text-xs uppercase text-vr-mid mt-2" value={b.linkLabel ?? ''} path={`${basePath}.distances.${i}.infoBlocks.${bi}.linkLabel`} placeholder="Button label (optional)" />
                         <EditableUrl path={`${basePath}.distances.${i}.infoBlocks.${bi}.linkUrl`} label="Button URL (optional)" />
                       </div>
                     ))}
@@ -259,6 +273,7 @@ function CourseInfoTrailhead({ data, basePath, editing }: { data: EventData['sec
                   <Accordion
                     items={(d.infoBlocks ?? []).map(b => ({
                       heading: b.heading,
+                      icon: b.icon,
                       body: (
                         <>
                           <RichBody value={b.body} />
@@ -309,6 +324,7 @@ function CourseInfoTrailhead({ data, basePath, editing }: { data: EventData['sec
           <Accordion
             items={data.infoBlocks.map(b => ({
               heading: b.heading,
+              icon: b.icon,
               body: (
                 <>
                   <RichBody value={b.body} />

@@ -61,6 +61,8 @@ export interface CourseDistance {
 
 export interface InfoBlock {
   heading: string
+  /** Optional icon shown beside the heading (see CardIcon). */
+  icon?: CardIcon
   body: string
   linkLabel?: string
   linkUrl?: string
@@ -129,6 +131,9 @@ export interface ChallengeEventsData {
 export type CardIcon =
   | 'coffee' | 'meal' | 'flame' | 'beer' | 'wine'
   | 'truck' | 'pin' | 'snack' | 'ticket' | 'info'
+  | 'music' | 'person' | 'sparkle' | 'stars' | 'hands' | 'timer'
+  | 'firstaid' | 'award' | 'shower' | 'drop' | 'recycle' | 'bag'
+  | 'camera' | 'bus' | 'map' | 'tent' | 'film' | 'clock'
 
 /** A single card inside a Festival card group. */
 export interface FeatureCard {
@@ -148,6 +153,8 @@ export interface FeatureCard {
 /** A titled group of cards within a Festival section. */
 export interface CardGroup {
   heading: string
+  /** Optional pictogram shown in the group's label bar (see CardIcon). */
+  icon?: CardIcon
   /** Optional lead line under the group heading. */
   intro?: string
   /**
@@ -383,6 +390,8 @@ export interface EventData {
       finishLineInfo: string
       infoSections?: Array<{
         heading: string
+        /** Optional icon beside the heading (see CardIcon). */
+        icon?: CardIcon
         body: string
         links?: Array<{ label: string; url: string }>
       }>

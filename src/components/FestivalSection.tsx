@@ -5,7 +5,7 @@ import EditableText from './edit/EditableText'
 import EditableUrl from './edit/EditableUrl'
 import EditableImage from './edit/EditableImage'
 import { ListControls, AddButton } from './edit/ListControls'
-import { RichBody, PhotoFrame, Accordion, ActionLink } from './trailhead/Shared'
+import { RichBody, PhotoFrame, Accordion, ActionLink, CardIconMark, CARD_ICONS } from './trailhead/Shared'
 
 /**
  * Festival section — a repeatable content section for multi-day festival events
@@ -24,39 +24,6 @@ type Props = {
   theme?: 'classic' | 'trailhead'
 }
 
-
-/**
- * Line icons a card can opt into via `icon`. Deliberately a small, generic set:
- * the dining sections are long lists of similar-shaped rows, and one icon per
- * row makes them scannable ("where's coffee on the drive back?") without adding
- * any more copy. Only worth setting where it differentiates — eight identical
- * glasses help nobody.
- */
-const CARD_ICONS: Record<CardIcon, string> = {
-  coffee: 'M4 8h11v5a5 5 0 01-5 5H9a5 5 0 01-5-5V8zM15 9h2a2.5 2.5 0 010 5h-2M4 21h12',
-  meal:   'M5 3v8a2 2 0 004 0V3M7 11v10M17 3c-1.4 0-2.4 1.4-2.4 3.8S15.6 10 17 10s2.4-.8 2.4-3.2S18.4 3 17 3zM17 10v11',
-  flame:  'M12 22c3.6 0 6-2.3 6-5.5 0-4.2-4.5-5.9-3.4-10.5C11.8 7 9 9.6 9 12c0-1.2-.6-2.3-1.5-3C6.5 10.4 6 12.3 6 14c0 4 2.7 8 6 8z',
-  beer:   'M6 8h9v11a2 2 0 01-2 2H8a2 2 0 01-2-2V8zM15 10h3v7h-3M6 8c0-2 1.5-3.5 3.5-3.5S13 6 15 6',
-  wine:   'M8 3h8l-1 6a3 3 0 01-6 0L8 3zM12 15v6M9 21h6',
-  truck:  'M2 8h11v8H2zM13 11h5l3 3v2h-8M6.5 19a1.8 1.8 0 100-3.6 1.8 1.8 0 000 3.6zM17.5 19a1.8 1.8 0 100-3.6 1.8 1.8 0 000 3.6z',
-  pin:    'M12 22s7-6.1 7-11a7 7 0 10-14 0c0 4.9 7 11 7 11zM12 13a2.6 2.6 0 100-5.2 2.6 2.6 0 000 5.2z',
-  snack:  'M4 9h16l-1.4 10a2 2 0 01-2 1.8H7.4a2 2 0 01-2-1.8L4 9zM8 9V6a4 4 0 018 0v3',
-  ticket: 'M3 9V6h18v3a2.6 2.6 0 000 5.2V18H3v-3.8a2.6 2.6 0 000-5.2zM13 7v11',
-  info:   'M12 21a9 9 0 100-18 9 9 0 000 18zM12 11v6M12 7.6v.6',
-}
-
-function CardIconMark({ icon, size = 15 }: { icon: CardIcon; size?: number }) {
-  return (
-    <svg
-      width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden="true"
-      stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"
-      className="shrink-0 text-vr-sky"
-      style={{ marginTop: 2 }}
-    >
-      <path d={CARD_ICONS[icon]} />
-    </svg>
-  )
-}
 
 const EMPTY_CARD: FeatureCard = { title: 'New card', body: '' }
 const EMPTY_GROUP: CardGroup = { heading: 'New group', cards: [EMPTY_CARD] }
@@ -77,7 +44,12 @@ export default function FestivalSection({ data, index }: Props) {
   const cardShell = dark
     ? 'border border-vr-cream/20 bg-vr-cream/[0.04] rounded-lg'
     : 'border border-vr-line bg-vr-white rounded-lg'
-  const subhead = `font-heading uppercase mb-[18px] text-[16px] tracking-[0.06em] ${headingColor}`
+  // Filled label bar for group headings — the device both reference documents
+  // use (NPS Zion guide, VR's own 2024 Grand Circle guide): a solid bar with
+  // contrasting caps, optionally led by a pictogram. Far easier to scan past
+  // than the small caps heading this replaced.
+  const barBg = dark ? 'bg-vr-cream' : 'bg-vr-forest'
+  const barText = dark ? 'text-vr-forest' : 'text-vr-cream'
 
   /** eyebrow / title / body / optional link — the shared card innards. */
   const cardBody = (card: FeatureCard, gi: number, ci: number) => {
@@ -122,8 +94,28 @@ export default function FestivalSection({ data, index }: Props) {
 
     return (
       <div key={gi} className="mb-11">
-        <div className="flex items-start gap-2">
-          <EditableText as="h3" className={`${subhead} flex-1`} value={group.heading} path={`${gp}.heading`} />
+        <div className="flex items-stretch gap-2 mb-[18px]">
+          <div className={`flex items-center gap-2.5 flex-1 min-w-0 px-4 py-2.5 rounded ${barBg}`}>
+            {group.icon && <CardIconMark icon={group.icon} size={17} className={barText} />}
+            <EditableText
+              as="h3"
+              className={`font-heading uppercase flex-1 text-[16px] tracking-[0.08em] ${barText}`}
+              value={group.heading}
+              path={`${gp}.heading`}
+            />
+            {editing && (
+              <select
+                value={group.icon ?? ''}
+                onChange={e => editCtx?.setValue(`${gp}.icon`, e.target.value || undefined)}
+                title="Icon for this group heading"
+                aria-label="Group icon"
+                className="bg-black/20 border border-current/30 rounded font-micro text-[10px] uppercase tracking-wider px-1.5 py-1"
+              >
+                <option value="">No icon</option>
+                {(Object.keys(CARD_ICONS) as CardIcon[]).map(k => <option key={k} value={k}>{k}</option>)}
+              </select>
+            )}
+          </div>
           {editing && <ListControls path={`${basePath}.groups`} index={gi} count={groups.length} />}
         </div>
         <EditableText
@@ -331,6 +323,18 @@ export default function FestivalSection({ data, index }: Props) {
                   <ListControls path={`${basePath}.infoBlocks`} index={i} count={blocks.length} />
                 </div>
                 <EditableText as="div" className="font-body text-vr-forest/85 mt-2 whitespace-pre-line" value={b.body} path={`${basePath}.infoBlocks.${i}.body`} />
+                <div className="mt-2 flex items-center gap-2">
+                  <span className="font-micro text-[10px] uppercase tracking-wider text-vr-mid">Icon</span>
+                  <select
+                    value={b.icon ?? ''}
+                    onChange={e => editCtx?.setValue(`${basePath}.infoBlocks.${i}.icon`, e.target.value || undefined)}
+                    aria-label="Info block icon"
+                    className="bg-vr-forest/10 border border-vr-forest/25 rounded text-vr-forest font-micro text-[10px] uppercase tracking-wider px-1.5 py-1"
+                  >
+                    <option value="">No icon</option>
+                    {(Object.keys(CARD_ICONS) as CardIcon[]).map(k => <option key={k} value={k}>{k}</option>)}
+                  </select>
+                </div>
                 <EditableText as="div" className="font-micro text-xs uppercase text-vr-mid mt-2" value={b.linkLabel ?? ''} path={`${basePath}.infoBlocks.${i}.linkLabel`} placeholder="Button label (optional)" />
                 <EditableUrl path={`${basePath}.infoBlocks.${i}.linkUrl`} label="Button URL (optional)" />
               </div>
@@ -342,6 +346,7 @@ export default function FestivalSection({ data, index }: Props) {
             variant={dark ? 'cream' : 'white'}
             items={blocks.map(b => ({
               heading: b.heading,
+              icon: b.icon,
               body: (
                 <>
                   <RichBody value={b.body} />

@@ -1,11 +1,11 @@
 'use client'
-import { EventData } from '@/types/event'
+import { EventData, CardIcon } from '@/types/event'
 import { useEditOptional } from '@/lib/editContext'
 import EditableText from './edit/EditableText'
 import EditableUrl from './edit/EditableUrl'
 import EditableImage from './edit/EditableImage'
 import { ListControls, AddButton } from './edit/ListControls'
-import { RichBody, PhotoFrame } from './trailhead/Shared'
+import { RichBody, PhotoFrame, CardIconMark, CARD_ICONS } from './trailhead/Shared'
 
 /**
  * VR Campground section — overview + optional photo + a reservation button, then
@@ -20,7 +20,8 @@ type Props = {
 }
 
 export default function CampingSection({ data, basePath = 'sections.camping' }: Props) {
-  const editing = !!useEditOptional()?.editing
+  const editCtx = useEditOptional()
+  const editing = !!editCtx?.editing
   const blocks = data.infoBlocks ?? []
 
   return (
@@ -75,8 +76,9 @@ export default function CampingSection({ data, basePath = 'sections.camping' }: 
           <div className="grid gap-6 md:grid-cols-2">
             {blocks.map((b, i) => (
               <div key={i} className="border border-vr-line bg-vr-white rounded-lg p-7">
-                <div className="flex items-start gap-2">
-                  <EditableText as="h3" className="font-heading uppercase text-vr-forest mb-3 flex-1 text-[18px] tracking-[0.04em]" value={b.heading} path={`${basePath}.infoBlocks.${i}.heading`} />
+                <div className="flex items-start gap-2 mb-3">
+                  {b.icon && <CardIconMark icon={b.icon} size={18} />}
+                  <EditableText as="h3" className="font-heading uppercase text-vr-forest flex-1 text-[18px] tracking-[0.04em]" value={b.heading} path={`${basePath}.infoBlocks.${i}.heading`} />
                   <ListControls path={`${basePath}.infoBlocks`} index={i} count={blocks.length} />
                 </div>
                 <EditableText
@@ -92,7 +94,19 @@ export default function CampingSection({ data, basePath = 'sections.camping' }: 
                 )}
                 {editing && (
                   <div className="mt-2">
-                    <EditableText as="div" className="font-micro text-xs uppercase text-vr-mid" value={b.linkLabel ?? ''} path={`${basePath}.infoBlocks.${i}.linkLabel`} placeholder="Button label (optional)" />
+<div className="mt-2 flex items-center gap-2">
+                  <span className="font-micro text-[10px] uppercase tracking-wider text-vr-mid">Icon</span>
+                  <select
+                    value={b.icon ?? ''}
+                    onChange={e => editCtx?.setValue(`${basePath}.infoBlocks.${i}.icon`, e.target.value || undefined)}
+                    aria-label="Icon"
+                    className="bg-vr-forest/10 border border-vr-forest/25 rounded text-vr-forest font-micro text-[10px] uppercase tracking-wider px-1.5 py-1"
+                  >
+                    <option value="">No icon</option>
+                    {(Object.keys(CARD_ICONS) as CardIcon[]).map(k => <option key={k} value={k}>{k}</option>)}
+                  </select>
+                </div>
+                <EditableText as="div" className="font-micro text-xs uppercase text-vr-mid" value={b.linkLabel ?? ''} path={`${basePath}.infoBlocks.${i}.linkLabel`} placeholder="Button label (optional)" />
                     <EditableUrl path={`${basePath}.infoBlocks.${i}.linkUrl`} label="Button URL (optional)" />
                   </div>
                 )}
