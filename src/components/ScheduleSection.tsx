@@ -194,6 +194,16 @@ export default function ScheduleSection({ data, eventSlug, basePath = 'sections.
             </div>
           )}
 
+          {/* Selected day gets the same filled label bar as the group headings
+              elsewhere in the guide. It also carries the date, which the screen
+              schedule never showed - the pills only say "Day 2 · Bryce Canyon". */}
+          {day && (
+            <div className="tl-day-bar max-w-[580px] mx-auto mb-4 flex flex-wrap items-center justify-between gap-x-4 gap-y-1 px-4 py-2.5 rounded bg-vr-cream text-vr-forest print:hidden">
+              <span className="font-heading uppercase text-[15px] tracking-[0.08em]">{day.label}</span>
+              <span className="font-micro uppercase text-[11px] tracking-[0.16em] opacity-70">{day.date}</span>
+            </div>
+          )}
+
           {/* on screen: selected day */}
           {day && (
             <div className="max-w-[580px] mx-auto text-left flex flex-col print:hidden">
@@ -226,8 +236,10 @@ export default function ScheduleSection({ data, eventSlug, basePath = 'sections.
           <div className="hidden print:block text-left max-w-[580px] mx-auto">
             {data.days.map(d => (
               <div key={d.id} className="tl-print-day mb-6">
-                <p className="font-heading text-lg uppercase text-vr-cream mb-1">{d.label}</p>
-                <p className="font-micro text-xs tracking-[0.2em] uppercase text-vr-cream/40 mb-3">{d.date}</p>
+                <div className="tl-day-bar flex flex-wrap items-baseline justify-between gap-x-4 px-4 py-2 rounded bg-vr-cream text-vr-forest mb-3">
+                  <span className="font-heading text-lg uppercase">{d.label}</span>
+                  <span className="font-micro text-xs tracking-[0.2em] uppercase opacity-70">{d.date}</span>
+                </div>
                 {d.items.map((item, i) => (
                   <div key={i} className="tl-print-row grid grid-cols-[132px_1fr] gap-6 py-2 border-b border-vr-cream/[0.12]">
                     <span className="font-label text-vr-sky text-right text-sm">{keepMeridiem(item.time)}</span>

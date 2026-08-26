@@ -496,6 +496,15 @@ html { scroll-behavior: smooth; }
   /* Tighter margins than the on-screen 104px section padding. */
   section { padding: 18pt 30pt !important; }
 
+  /* Filled bars lose their fill on white paper, so the day header would read as
+     plain text. A rule under it keeps it working as a header. */
+  .tl-day-bar {
+    border-bottom: 1.5pt solid #191008 !important;
+    border-radius: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
   /* Each schedule row and card should survive a page break intact. */
   .tl-print-row, .tl-print-day, details, .rounded-lg { break-inside: avoid; }
 
