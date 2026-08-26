@@ -158,6 +158,16 @@ export default function EditPage() {
         <p className="bg-red-50 text-red-700 text-sm px-6 py-2 font-body">{saveErr}</p>
       )}
 
+      {/* Why the editor shows **bold** and [label](url) as typed: this is the
+          source text. It renders as real formatting on the published page, which
+          has confused reviewers into filing it as a bug twice. */}
+      <p className="bg-vr-offwhite border-b border-vr-line text-vr-forest/75 font-body text-[13px] px-4 md:px-6 py-2 leading-snug">
+        Formatting shows as typed here — <code className="font-micro">**bold**</code> and{' '}
+        <code className="font-micro">[label](url)</code> become real bold and links on the published
+        page. Select any text to get the <strong>B / I / Link</strong> buttons (the Link button can
+        pick a section for you). Use <em>Exit</em> to see the published version.
+      </p>
+
       <FormatToolbar />
       <EditProvider data={data} editing onChange={next => { setData(next); setDirty(true) }}>
         <div data-theme={theme} data-brand={data.brand || undefined}>
