@@ -9,6 +9,16 @@ import { ListControls, AddButton } from './edit/ListControls'
 
 type Props = { data: EventData['sections']['schedule']; eventSlug: string; basePath?: string; theme?: 'classic' | 'trailhead' }
 
+/**
+ * Keep the meridiem glued to the time it belongs to. The time column is a fixed
+ * width, so a range like "2:00 - 8:00 PM" wraps — and it was breaking before the
+ * "PM", orphaning it on its own line. A non-breaking space moves the break
+ * earlier instead, so it reads "2:00 -" / "8:00 PM".
+ */
+function keepMeridiem(time: string): string {
+  return time.replace(/\s+(AM|PM)\b/gi, '\u00a0$1')
+}
+
 export default function ScheduleSection({ data, eventSlug, basePath = 'sections.schedule', theme = 'classic' }: Props) {
   const [activeDay, setActiveDay] = useState(data.days[0]?.id ?? '')
   const day = data.days.find(d => d.id === activeDay) ?? data.days[0]
@@ -136,10 +146,10 @@ export default function ScheduleSection({ data, eventSlug, basePath = 'sections.
                 return (
                   <div
                     key={i}
-                    className="grid grid-cols-[84px_1fr] md:grid-cols-[104px_1fr] gap-5 md:gap-6 px-2 py-[18px] border-b border-vr-cream/[0.12]"
+                    className="grid grid-cols-[100px_1fr] md:grid-cols-[132px_1fr] gap-4 md:gap-6 px-2 py-[18px] border-b border-vr-cream/[0.12]"
                     style={highlight ? { background: 'rgba(123,173,172,0.14)' } : undefined}
                   >
-                    <span className="font-label text-vr-sky text-right" style={{ fontSize: '15px', letterSpacing: '0.04em' }}>{item.time}</span>
+                    <span className="font-label text-vr-sky text-right" style={{ fontSize: '15px', letterSpacing: '0.04em' }}>{keepMeridiem(item.time)}</span>
                     <div>
                       <div className="font-heading uppercase text-vr-cream leading-tight" style={{ fontSize: '15px', letterSpacing: '0.04em' }}>{item.label}</div>
                       {item.note && <div className="text-vr-cream/60 mt-1 whitespace-pre-line break-words" style={{ fontSize: '13px' }}><RichBody value={item.note} /></div>}
@@ -157,8 +167,8 @@ export default function ScheduleSection({ data, eventSlug, basePath = 'sections.
                 <p className="font-heading text-lg uppercase text-vr-cream mb-1">{d.label}</p>
                 <p className="font-micro text-xs tracking-[0.2em] uppercase text-vr-cream/40 mb-3">{d.date}</p>
                 {d.items.map((item, i) => (
-                  <div key={i} className="tl-print-row grid grid-cols-[104px_1fr] gap-6 py-2 border-b border-vr-cream/[0.12]">
-                    <span className="font-label text-vr-sky text-right text-sm">{item.time}</span>
+                  <div key={i} className="tl-print-row grid grid-cols-[132px_1fr] gap-6 py-2 border-b border-vr-cream/[0.12]">
+                    <span className="font-label text-vr-sky text-right text-sm">{keepMeridiem(item.time)}</span>
                     <div>
                       <div className="font-heading uppercase text-vr-cream text-sm">{item.label}</div>
                       {item.note && <div className="text-vr-cream/60 text-xs mt-0.5 whitespace-pre-line break-words"><RichBody value={item.note} /></div>}
@@ -218,7 +228,7 @@ export default function ScheduleSection({ data, eventSlug, basePath = 'sections.
                   </div>
                   <div className="pb-8 flex-1">
                     <p className="font-label text-xs tracking-[0.2em] uppercase text-vr-floral mb-1">
-                      {item.time}
+                      {keepMeridiem(item.time)}
                     </p>
                     <p className="font-heading text-lg md:text-xl uppercase leading-tight text-vr-cream">
                       {item.label}
@@ -243,7 +253,7 @@ export default function ScheduleSection({ data, eventSlug, basePath = 'sections.
                 {d.items.map((item, i) => (
                   <li key={i} className="flex gap-6">
                     <div className="pb-4 flex-1">
-                      <p className="font-label text-xs tracking-[0.2em] uppercase text-vr-floral mb-1">{item.time}</p>
+                      <p className="font-label text-xs tracking-[0.2em] uppercase text-vr-floral mb-1">{keepMeridiem(item.time)}</p>
                       <p className="font-heading text-base uppercase leading-tight text-vr-cream">{item.label}</p>
                       {item.note && (
                         <p className="font-body text-sm text-vr-cream/55 mt-1 leading-relaxed whitespace-pre-line break-words"><RichBody value={item.note} /></p>
