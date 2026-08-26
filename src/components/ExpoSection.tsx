@@ -6,7 +6,7 @@ import EditableText from './edit/EditableText'
 import EditableUrl from './edit/EditableUrl'
 import EditableImage from './edit/EditableImage'
 import { ListControls, AddButton } from './edit/ListControls'
-import { TrailHeader, PhotoFrame } from './trailhead/Shared'
+import { TrailHeader, PhotoFrame, ActionLink } from './trailhead/Shared'
 
 type Props = { data: EventData['sections']['expo']; basePath?: string; theme?: 'classic' | 'trailhead' }
 
@@ -215,9 +215,7 @@ function ExpoTrailhead({ data, basePath, editing }: { data: EventData['sections'
                 </div>
                 <EditableText as="div" className="font-body text-vr-forest/85 leading-[1.65] whitespace-pre-line" value={b.body} path={`${basePath}.infoBlocks.${i}.body`} />
                 {!editing && b.linkLabel && b.linkUrl && (
-                  <a href={b.linkUrl} target="_blank" rel="noopener noreferrer" className="inline-block mt-4 font-label text-sm font-bold tracking-[0.1em] uppercase text-vr-forest bg-vr-sky/20 hover:bg-vr-sky/35 border border-vr-sky/40 rounded-lg px-5 py-2.5 transition-colors">
-                    {b.linkLabel} ↗
-                  </a>
+                  <ActionLink href={b.linkUrl} label={b.linkLabel} />
                 )}
                 {editing && (
                   <div className="mt-2">

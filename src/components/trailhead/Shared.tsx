@@ -154,6 +154,29 @@ export function Accordion({
   )
 }
 
+/**
+ * Prominent outbound link for accordion bodies and info cards.
+ *
+ * This used to be small accent-coloured caps. That works on a cool accent, but
+ * Grand Circle's accent is a light desert orange and the cards are cream, so
+ * the "Driving Directions" link under each course was effectively invisible and
+ * people were missing it. A filled pill with dark ink reads at a glance, keeps
+ * its contrast when printed, and gives a proper tap target on a phone.
+ */
+export function ActionLink({ href, label }: { href: string; label: string }) {
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-1.5 mt-4 font-label text-sm font-bold tracking-[0.1em] uppercase text-vr-forest bg-vr-sky/25 hover:bg-vr-sky/40 border border-vr-sky/50 rounded-lg px-5 py-2.5 transition-colors"
+    >
+      {label}
+      <span aria-hidden="true">↗</span>
+    </a>
+  )
+}
+
 /** Light info card with heading + body. */
 export function InfoCard({ heading, children, className = '' }: { heading: string; children: ReactNode; className?: string }) {
   return (

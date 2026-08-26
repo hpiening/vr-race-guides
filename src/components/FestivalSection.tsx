@@ -5,7 +5,7 @@ import EditableText from './edit/EditableText'
 import EditableUrl from './edit/EditableUrl'
 import EditableImage from './edit/EditableImage'
 import { ListControls, AddButton } from './edit/ListControls'
-import { RichBody, PhotoFrame, Accordion } from './trailhead/Shared'
+import { RichBody, PhotoFrame, Accordion, ActionLink } from './trailhead/Shared'
 
 /**
  * Festival section — a repeatable content section for multi-day festival events
@@ -330,9 +330,7 @@ export default function FestivalSection({ data, index }: Props) {
                 <>
                   <RichBody value={b.body} />
                   {b.linkLabel && b.linkUrl && (
-                    <a href={b.linkUrl} target="_blank" rel="noopener noreferrer" className="block mt-2 font-micro text-xs tracking-widest uppercase text-vr-sky hover:text-vr-forest transition-colors">
-                      {b.linkLabel} ↗
-                    </a>
+                    <ActionLink href={b.linkUrl} label={b.linkLabel} />
                   )}
                 </>
               ),
