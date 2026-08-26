@@ -121,8 +121,19 @@ export interface ChallengeEventsData {
   events: ChallengeEvent[]
 }
 
+/**
+ * Optional line icon on a festival card, to break up a long list of similar
+ * rows (the dining sections especially). Only worth setting where it
+ * differentiates — eight identical glasses help nobody.
+ */
+export type CardIcon =
+  | 'coffee' | 'meal' | 'flame' | 'beer' | 'wine'
+  | 'truck' | 'pin' | 'snack' | 'ticket' | 'info'
+
 /** A single card inside a Festival card group. */
 export interface FeatureCard {
+  /** Small line icon shown before the title — see CardIcon. */
+  icon?: CardIcon
   /** Small accent line above the title (e.g. "Thu, Oct 1 · 5–6 PM", "Free · 20 minutes"). */
   eyebrow?: string
   title: string

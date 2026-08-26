@@ -1,5 +1,5 @@
 'use client'
-import { FestivalSectionData, CardGroup, FeatureCard } from '@/types/event'
+import { FestivalSectionData, CardGroup, FeatureCard, CardIcon } from '@/types/event'
 import { useEditOptional } from '@/lib/editContext'
 import EditableText from './edit/EditableText'
 import EditableUrl from './edit/EditableUrl'
@@ -24,11 +24,46 @@ type Props = {
   theme?: 'classic' | 'trailhead'
 }
 
+
+/**
+ * Line icons a card can opt into via `icon`. Deliberately a small, generic set:
+ * the dining sections are long lists of similar-shaped rows, and one icon per
+ * row makes them scannable ("where's coffee on the drive back?") without adding
+ * any more copy. Only worth setting where it differentiates — eight identical
+ * glasses help nobody.
+ */
+const CARD_ICONS: Record<CardIcon, string> = {
+  coffee: 'M4 8h11v5a5 5 0 01-5 5H9a5 5 0 01-5-5V8zM15 9h2a2.5 2.5 0 010 5h-2M4 21h12',
+  meal:   'M5 3v8a2 2 0 004 0V3M7 11v10M17 3c-1.4 0-2.4 1.4-2.4 3.8S15.6 10 17 10s2.4-.8 2.4-3.2S18.4 3 17 3zM17 10v11',
+  flame:  'M12 22c3.6 0 6-2.3 6-5.5 0-4.2-4.5-5.9-3.4-10.5C11.8 7 9 9.6 9 12c0-1.2-.6-2.3-1.5-3C6.5 10.4 6 12.3 6 14c0 4 2.7 8 6 8z',
+  beer:   'M6 8h9v11a2 2 0 01-2 2H8a2 2 0 01-2-2V8zM15 10h3v7h-3M6 8c0-2 1.5-3.5 3.5-3.5S13 6 15 6',
+  wine:   'M8 3h8l-1 6a3 3 0 01-6 0L8 3zM12 15v6M9 21h6',
+  truck:  'M2 8h11v8H2zM13 11h5l3 3v2h-8M6.5 19a1.8 1.8 0 100-3.6 1.8 1.8 0 000 3.6zM17.5 19a1.8 1.8 0 100-3.6 1.8 1.8 0 000 3.6z',
+  pin:    'M12 22s7-6.1 7-11a7 7 0 10-14 0c0 4.9 7 11 7 11zM12 13a2.6 2.6 0 100-5.2 2.6 2.6 0 000 5.2z',
+  snack:  'M4 9h16l-1.4 10a2 2 0 01-2 1.8H7.4a2 2 0 01-2-1.8L4 9zM8 9V6a4 4 0 018 0v3',
+  ticket: 'M3 9V6h18v3a2.6 2.6 0 000 5.2V18H3v-3.8a2.6 2.6 0 000-5.2zM13 7v11',
+  info:   'M12 21a9 9 0 100-18 9 9 0 000 18zM12 11v6M12 7.6v.6',
+}
+
+function CardIconMark({ icon, size = 15 }: { icon: CardIcon; size?: number }) {
+  return (
+    <svg
+      width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden="true"
+      stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"
+      className="shrink-0 text-vr-sky"
+      style={{ marginTop: 2 }}
+    >
+      <path d={CARD_ICONS[icon]} />
+    </svg>
+  )
+}
+
 const EMPTY_CARD: FeatureCard = { title: 'New card', body: '' }
 const EMPTY_GROUP: CardGroup = { heading: 'New group', cards: [EMPTY_CARD] }
 
 export default function FestivalSection({ data, index }: Props) {
-  const editing = !!useEditOptional()?.editing
+  const editCtx = useEditOptional()
+  const editing = !!editCtx?.editing
   const basePath = `sections.festival.${index}`
   const groups = data.groups ?? []
   const blocks = data.infoBlocks ?? []
@@ -59,12 +94,15 @@ export default function FestivalSection({ data, index }: Props) {
           />
           {editing && <ListControls path={`${basePath}.groups.${gi}.cards`} index={ci} count={groups[gi].cards.length} />}
         </div>
-        <EditableText
-          as="h4"
-          className={`font-heading uppercase mb-1.5 text-[17px] tracking-[0.02em] ${headingColor}`}
-          value={card.title}
-          path={`${cp}.title`}
-        />
+        <div className="flex items-start gap-2 mb-1.5">
+          {card.icon && <CardIconMark icon={card.icon} size={16} />}
+          <EditableText
+            as="h4"
+            className={`font-heading uppercase flex-1 text-[17px] tracking-[0.02em] ${headingColor}`}
+            value={card.title}
+            path={`${cp}.title`}
+          />
+        </div>
         <EditableText
           as="div"
           className={`font-body leading-[1.55] text-[14px] whitespace-pre-line ${bodyColor}`}
@@ -125,6 +163,16 @@ export default function FestivalSection({ data, index }: Props) {
                             value={card.title}
                             path={`${cp}.title`}
                           />
+                          <select
+                            value={card.icon ?? ''}
+                            onChange={e => editCtx?.setValue(`${cp}.icon`, e.target.value || undefined)}
+                            title="Icon shown before the title"
+                            aria-label="Card icon"
+                            className="bg-vr-cream/10 border border-vr-cream/25 rounded text-vr-cream font-micro text-[10px] uppercase tracking-wider px-1.5 py-1"
+                          >
+                            <option value="">No icon</option>
+                            {(Object.keys(CARD_ICONS) as CardIcon[]).map(k => <option key={k} value={k}>{k}</option>)}
+                          </select>
                           <ListControls path={`${gp}.cards`} index={ci} count={cards.length} />
                         </div>
                         <EditableText
@@ -136,7 +184,8 @@ export default function FestivalSection({ data, index }: Props) {
                         />
                       </div>
                     ) : (
-                      <div className="flex items-baseline gap-3">
+                      <div className="flex items-baseline gap-2.5">
+                        {card.icon && <CardIconMark icon={card.icon} />}
                         <h4 className={`font-heading uppercase flex-1 text-[15px] tracking-[0.04em] ${headingColor}`}>{card.title}</h4>
                         {card.meta && (
                           <div className={`font-heading text-[15px] shrink-0 ${dark ? 'text-vr-cream' : 'text-vr-forest'}`}>{card.meta}</div>

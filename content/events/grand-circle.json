@@ -650,31 +650,36 @@
                 "title": "Breakfast · Thu–Sun",
                 "eyebrow": "5:00 AM",
                 "body": "Starting at 5:00AM Thursday - Saturday and 7:00 AM on Sunday. Enjoy hot oatmeal, overnight oats, breakfast bars, muffins, whole fruit, coffee, hot tea, hot chocolate, water. No meal ticket required for registered runners. Non-runners can purchase breakfast tickets for $5/day.",
-                "imageUrl": ""
+                "imageUrl": "",
+                "icon": "coffee"
               },
               {
                 "title": "Dinner · Wed–Sat",
                 "eyebrow": "5:00 -8:00 PM",
                 "body": "At the Main Pavilion, Trailfest HQ. One dinner meal ticket per person, presented when entering the main buffet line. Registered runners get one ticket per event night. Additional meal tickets are available to purchase for non-runners. $12/dinner ticket, $5/breakfast ticket or $15 for both breakfast and dinner per day. Please visit the Runner Services booth to purchase additional meals.",
-                "imageUrl": ""
+                "imageUrl": "",
+                "icon": "meal"
               },
               {
                 "title": "Evenings Around the Fire: The Elevated S'mores Station",
                 "eyebrow": "Nightly 7:00-9:00 PM",
                 "body": "Each day, after the running wraps up and the evening entertainment is in full swing, join us around the fire pits for the sweetest part of the day. We’re upgrading your traditional campfire snack with a nightly gourmet s’mores bar packed with fresh takes on the classic combo. From rich dark chocolates and flavored spreads to unexpected crunches complimented with both sweet and savory options, you’ll have plenty of options and unexpected twists to build your ultimate sweet creation.\nGrab a roasting stick, get creative with your concoctions, and relax with fellow runners as we wind down the day together.\nOur Elevated S’mores station will kick off around 7pm each night and run until about 9pm.",
-                "imageUrl": ""
+                "imageUrl": "",
+                "icon": "flame"
               },
               {
                 "title": "Runner Recovery Tent",
                 "eyebrow": "At each finish",
                 "body": "Each day at the race finish line, Thursday through Saturday: hot quesadillas, grilled cheese, sweet and salty snacks, and recovery beverages, while supplies last.",
-                "imageUrl": ""
+                "imageUrl": "",
+                "icon": "snack"
               },
               {
                 "title": "Beer Garden · Monster Brewing",
                 "eyebrow": "Thu–Sat",
                 "body": "Must be 21+ to enter the beer garden. Beer tickets can be purchased separately and valid ID is required to enter the beer garden. Hours will be 5pm-9pm Wednesday to Saturday. Non-alcoholic beer and sodas will also be available. ",
-                "imageUrl": ""
+                "imageUrl": "",
+                "icon": "beer"
               }
             ],
             "intro": "Dietary Restrictions: Runners who have selected a Vegetarian, Vegan or Gluten Free dietary restriction during registration will be given different color meal tickets to ensure they receive their special restriction-friendly meals. Please note that while we try our best, we cannot guarantee cross-contamination of gluten free surfaces. If you have a companion that needs a special dietary accommodation, please come speak to a staff member at the Runner Services tent."
@@ -722,56 +727,64 @@
                 "title": "Archie’s Food to Die For",
                 "body": "A great stationary food truck on the north side of Orderville, next to the ROAM Outdoor Adventures offices. ",
                 "url": "https://maps.app.goo.gl/KB3Qi3JRgvR4q1z4A",
-                "imageUrl": ""
+                "imageUrl": "",
+                "icon": "truck"
               },
               {
                 "eyebrow": "After Bryce · Thu",
                 "title": "The Shop Coffee Co",
                 "body": "In Orderville — awesome sandwiches, pastries, smoothies and drinks, caffeinated and otherwise.",
                 "url": "http://www.theshopcoffeeco.com/",
-                "imageUrl": ""
+                "imageUrl": "",
+                "icon": "coffee"
               },
               {
                 "eyebrow": "After Zion · Fri",
                 "title": "Edge of the World Brewery",
                 "body": "Hidden brewery with a great food menu. Looking to reopen late summer 2026 once the new building is finished.",
                 "url": "https://www.facebook.com/edgeoftheworldbrewery/",
-                "imageUrl": ""
+                "imageUrl": "",
+                "icon": "beer"
               },
               {
                 "eyebrow": "After Zion · Fri",
                 "title": "Sweet Sage Coffee Co",
                 "body": "Highly rated coffee and a straightforward breakfast and lunch menu.",
                 "url": "https://www.sweetsagecoffee.com/",
-                "imageUrl": ""
+                "imageUrl": "",
+                "icon": "coffee"
               },
               {
                 "eyebrow": "After Zion · Fri",
                 "title": "Water Canyon Wine Tasting",
                 "body": "Charcuterie and wine tastings.",
                 "url": "https://watercanyonwinery.com/hildale/",
-                "imageUrl": ""
+                "imageUrl": "",
+                "icon": "wine"
               },
               {
                 "eyebrow": "After Antelope · Sat",
                 "title": "BirdHouse",
                 "body": "Crew favourite. Awesome chicken.",
                 "url": "https://www.birdhouseaz.com/",
-                "imageUrl": ""
+                "imageUrl": "",
+                "icon": "meal"
               },
               {
                 "eyebrow": "After Antelope · Sat",
                 "title": "Grand Canyon Brewery",
                 "body": "Great local brewery with a very large menu.",
                 "url": "https://www.grandcanyonbrewery.com/locations",
-                "imageUrl": ""
+                "imageUrl": "",
+                "icon": "beer"
               },
               {
                 "eyebrow": "After Antelope · Sat",
                 "title": "Rustic Thistle",
                 "body": "Southern cuisine with local Navajo flair. Vegan and gluten-free options available.",
                 "url": "https://rusticthistleeats.com/",
-                "imageUrl": ""
+                "imageUrl": "",
+                "icon": "meal"
               }
             ]
           },
