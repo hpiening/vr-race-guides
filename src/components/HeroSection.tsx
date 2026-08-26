@@ -23,7 +23,7 @@ export default function HeroSection({ event, theme = 'classic' }: { event: Event
       style={customBg ? { backgroundColor: customBg } : undefined}
     >
       {event.heroImage && (
-        <div className="absolute inset-0">
+        <div className="tl-hero-photo absolute inset-0">
           <Image
             src={event.heroImage}
             alt={event.heroImageAlt || event.name}
@@ -101,7 +101,7 @@ function HeroTrailhead({ event }: { event: EventData }) {
       style={{ background: 'var(--tl-hero-grad)' }}
     >
       {event.heroImage && (
-        <div className="absolute inset-0">
+        <div className="tl-hero-photo absolute inset-0">
           <Image
             src={event.heroImage}
             alt={event.heroImageAlt || event.name}

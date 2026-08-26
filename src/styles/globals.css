@@ -321,8 +321,10 @@ body {
   /* Expand iframe placeholders */
   iframe { display: none !important; }
 
-  /* Keep colours readable — browsers strip backgrounds by default, override */
-  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  /* Let the browser drop backgrounds; the print block at the end of this file
+     sets white paper + dark ink explicitly. (This used to force `exact`, which
+     printed every dark section as a solid block of toner.) */
+  * { -webkit-print-color-adjust: economy; print-color-adjust: economy; }
 
   /* Prevent orphaned headings and keep cards/blocks from splitting mid-page */
   h2, h3, h4 { break-after: avoid; }
@@ -441,3 +443,67 @@ html { scroll-behavior: smooth; }
 }
 .btn-primary:hover { opacity: 0.9; }
 
+/* ─── Print / "Export PDF" — an onsite paper reference ───────────────────
+   The screen design is cream-on-dark. Printed as-is that floods a printer with
+   toner and reads badly, so print flips to a document: white paper, dark ink,
+   decorative photography dropped, functional maps kept. Deliberately explicit
+   about backgrounds and text colour rather than relying on the browser's
+   "background graphics" checkbox, which is off by default and would otherwise
+   leave cream text on white paper. */
+@media print {
+  html, body { background: #fff !important; }
+
+  /* Every section ground, card and pill goes to white paper... */
+  section, header, footer,
+  [class*="bg-vr-night"], [class*="bg-vr-deep"], [class*="bg-vr-forest"],
+  [class*="bg-vr-offwhite"], [class*="bg-vr-white"], [class*="bg-vr-cream"],
+  [class*="bg-vr-sky"] {
+    background-color: #fff !important;
+    background-image: none !important;
+    box-shadow: none !important;
+  }
+  /* ...and all type to ink. Category icons use `stroke`, not `color`, so they
+     keep their hue and stay the at-a-glance cue. */
+  body, body * { color: #191008 !important; }
+  .tl-link { text-decoration-color: rgba(25,16,8,0.5) !important; }
+
+  /* Hairlines drawn for dark grounds are invisible on white — give them ink. */
+  [class*="border-vr-cream"] { border-color: rgba(25,16,8,0.22) !important; }
+  [class*="border-vr-line"]  { border-color: rgba(25,16,8,0.3) !important; }
+
+  /* Decorative imagery off: the hero photo, section mood shots, performer
+     portraits, and the road-trip maps (that journey is over by the time this
+     guide is in someone's hand onsite). */
+  .tl-hero-photo,
+  .tl-expo-images,
+  .guide-welcome img,
+  #basecamp img, #meals img, #entertainment img,
+  footer img {
+    display: none !important;
+  }
+  /* Functional graphics stay: the HQ map, the campground map, course maps. */
+  #expo img, #camping img, #course-info img { display: block !important; }
+
+  /* Keep the event badge on the cover for identity. */
+  .tl-hero-shield { display: block !important; }
+
+  /* The screen headings are vw-based, which on a page becomes enormous. */
+  h1 { font-size: 26pt !important; line-height: 1.05 !important; }
+  h2 { font-size: 17pt !important; line-height: 1.1 !important; }
+  h3 { font-size: 12pt !important; }
+  h4 { font-size: 11pt !important; }
+
+  /* Tighter margins than the on-screen 104px section padding. */
+  section { padding: 18pt 30pt !important; }
+
+  /* Each schedule row and card should survive a page break intact. */
+  .tl-print-row, .tl-print-day, details, .rounded-lg { break-inside: avoid; }
+
+  /* Start each major section on a fresh page so someone onsite can flip to
+     "Courses" or "Campground" instead of hunting mid-page. Costs a few pages;
+     worth it for a reference document. */
+  section { break-before: page; }
+  section:first-of-type { break-before: auto; }
+  /* The dividers are hidden in print, so don't let them leave blank pages. */
+  .tl-photoband { break-before: avoid; break-after: avoid; }
+}

@@ -247,7 +247,7 @@ function ExpoTrailhead({ data, basePath, editing }: { data: EventData['sections'
               path={`${basePath}.imagesIntro`}
               placeholder="Images intro (optional)"
             />
-            <div className="grid gap-6 sm:grid-cols-2">
+            <div className="tl-expo-images grid gap-6 sm:grid-cols-2">
               {(data.images ?? []).map((img, i) => {
                 const ip = `${basePath}.images.${i}`
                 const ratio = img.ratio || '4 / 3'
