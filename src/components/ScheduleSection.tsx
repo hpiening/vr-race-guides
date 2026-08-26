@@ -1,5 +1,6 @@
 'use client'
 import { useState } from 'react'
+import { RichBody } from './trailhead/Shared'
 import { EventData } from '@/types/event'
 import { useEditOptional } from '@/lib/editContext'
 import EditableText from './edit/EditableText'
@@ -141,7 +142,7 @@ export default function ScheduleSection({ data, eventSlug, basePath = 'sections.
                     <span className="font-label text-vr-sky text-right" style={{ fontSize: '15px', letterSpacing: '0.04em' }}>{item.time}</span>
                     <div>
                       <div className="font-heading uppercase text-vr-cream leading-tight" style={{ fontSize: '15px', letterSpacing: '0.04em' }}>{item.label}</div>
-                      {item.note && <div className="text-vr-cream/60 mt-1" style={{ fontSize: '13px' }}>{item.note}</div>}
+                      {item.note && <div className="text-vr-cream/60 mt-1 whitespace-pre-line break-words" style={{ fontSize: '13px' }}><RichBody value={item.note} /></div>}
                     </div>
                   </div>
                 )
@@ -160,7 +161,7 @@ export default function ScheduleSection({ data, eventSlug, basePath = 'sections.
                     <span className="font-label text-vr-sky text-right text-sm">{item.time}</span>
                     <div>
                       <div className="font-heading uppercase text-vr-cream text-sm">{item.label}</div>
-                      {item.note && <div className="text-vr-cream/60 text-xs mt-0.5">{item.note}</div>}
+                      {item.note && <div className="text-vr-cream/60 text-xs mt-0.5 whitespace-pre-line break-words"><RichBody value={item.note} /></div>}
                     </div>
                   </div>
                 ))}
@@ -223,7 +224,7 @@ export default function ScheduleSection({ data, eventSlug, basePath = 'sections.
                       {item.label}
                     </p>
                     {item.note && (
-                      <p className="font-body text-sm text-vr-cream/55 mt-1 leading-relaxed">{item.note}</p>
+                      <p className="font-body text-sm text-vr-cream/55 mt-1 leading-relaxed whitespace-pre-line break-words"><RichBody value={item.note} /></p>
                     )}
                   </div>
                 </li>
@@ -245,7 +246,7 @@ export default function ScheduleSection({ data, eventSlug, basePath = 'sections.
                       <p className="font-label text-xs tracking-[0.2em] uppercase text-vr-floral mb-1">{item.time}</p>
                       <p className="font-heading text-base uppercase leading-tight text-vr-cream">{item.label}</p>
                       {item.note && (
-                        <p className="font-body text-sm text-vr-cream/55 mt-1 leading-relaxed">{item.note}</p>
+                        <p className="font-body text-sm text-vr-cream/55 mt-1 leading-relaxed whitespace-pre-line break-words"><RichBody value={item.note} /></p>
                       )}
                     </div>
                   </li>
