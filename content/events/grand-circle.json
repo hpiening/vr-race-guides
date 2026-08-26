@@ -205,6 +205,11 @@
               "time": "8:30 – 10:00 PM",
               "label": "Film Screening: Trail Running Film Festival",
               "kind": "entertainment"
+            },
+            {
+              "time": "10:00 PM ",
+              "label": "Quiet Hours Begin ",
+              "kind": "essential"
             }
           ]
         },
@@ -284,6 +289,11 @@
               "time": "8:30 – 10:00 PM",
               "label": "Star Gazing · Stellar Vista Observatory",
               "kind": "entertainment"
+            },
+            {
+              "time": "10:00 PM",
+              "label": "Quiet Hours Begin ",
+              "kind": "essential"
             }
           ]
         },
@@ -364,6 +374,11 @@
               "time": "8:30 – 10:00 PM",
               "label": "Film Screening: RunNation Film Festival",
               "kind": "entertainment"
+            },
+            {
+              "time": "10:00 PM ",
+              "label": "Quiet Hours Begin ",
+              "kind": "essential"
             }
           ]
         },
