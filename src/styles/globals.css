@@ -496,6 +496,14 @@ html { scroll-behavior: smooth; }
   /* Tighter margins than the on-screen 104px section padding. */
   section { padding: 18pt 30pt !important; }
 
+  /* Badges lose their fill on paper, which would leave a knocked-out glyph
+     invisible on white. Outline them instead — the print block above has
+     already forced the glyph itself to ink. */
+  .tl-badge {
+    border: 0.9pt solid #191008 !important;
+    border-radius: 2pt !important;
+  }
+
   /* Filled bars lose their fill on white paper, so the day header would read as
      plain text. A rule under it keeps it working as a header. */
   .tl-day-bar {

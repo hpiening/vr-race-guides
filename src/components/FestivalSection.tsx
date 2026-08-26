@@ -67,7 +67,7 @@ export default function FestivalSection({ data, index }: Props) {
           {editing && <ListControls path={`${basePath}.groups.${gi}.cards`} index={ci} count={groups[gi].cards.length} />}
         </div>
         <div className="flex items-start gap-2 mb-1.5">
-          {card.icon && <CardIconMark icon={card.icon} size={16} />}
+          {card.icon && <CardIconMark icon={card.icon} size={15} badge on={dark ? 'dark' : 'light'} />}
           <EditableText
             as="h4"
             className={`font-heading uppercase flex-1 text-[17px] tracking-[0.02em] ${headingColor}`}

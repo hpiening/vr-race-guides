@@ -212,7 +212,7 @@ function ExpoTrailhead({ data, basePath, editing }: { data: EventData['sections'
             {(data.infoBlocks ?? []).map((b, i) => (
               <div key={i} className="border border-vr-line bg-vr-white rounded-lg p-7">
                 <div className="flex items-start gap-2 mb-3">
-                  {b.icon && <CardIconMark icon={b.icon} size={18} />}
+                  {b.icon && <CardIconMark icon={b.icon} size={16} badge on="light" />}
                   <EditableText as="h3" className="font-heading uppercase text-vr-forest flex-1" value={b.heading} path={`${basePath}.infoBlocks.${i}.heading`} />
                   <ListControls path={`${basePath}.infoBlocks`} index={i} count={data.infoBlocks!.length} />
                 </div>

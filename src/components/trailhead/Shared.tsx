@@ -68,16 +68,51 @@ export const CARD_ICONS: Record<CardIcon, string> = {
   clock:    'M12 21a9 9 0 100-18 9 9 0 000 18zM12 7.6V12l3.4 2',
 }
 
-/** Small stroke icon for a card/accordion/group heading. */
-export function CardIconMark({ icon, size = 15, className = 'text-vr-sky' }: { icon: CardIcon; size?: number; className?: string }) {
-  return (
+/**
+ * Topic icon.
+ *
+ * `badge` renders the reference treatment: a solid rounded square with the
+ * pictogram knocked out of it, as used by the NPS French Info Guide, the NPS
+ * Zion Wilderness Guide and VR's own 2024 Grand Circle guide. `on` says what
+ * ground it sits on, so the badge inverts to stay high-contrast.
+ *
+ * Without `badge` it's the plain glyph, used where it already sits on a filled
+ * ground (inside a group label bar) or where a badge would be too heavy (the
+ * per-row schedule categories).
+ */
+export function CardIconMark({
+  icon,
+  size = 15,
+  className = 'text-vr-sky',
+  badge = false,
+  on = 'light',
+}: {
+  icon: CardIcon
+  size?: number
+  className?: string
+  badge?: boolean
+  on?: 'light' | 'dark'
+}) {
+  const glyph = (
     <svg
       width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden="true"
-      stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round"
-      className={`shrink-0 ${className}`}
+      stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"
+      className="shrink-0"
     >
       <path d={CARD_ICONS[icon]} />
     </svg>
+  )
+  if (!badge) return <span className={`shrink-0 inline-flex ${className}`}>{glyph}</span>
+  const box = Math.round(size * 1.85)
+  return (
+    <span
+      className={`tl-badge shrink-0 inline-flex items-center justify-center rounded-[3px] ${
+        on === 'light' ? 'bg-vr-forest text-vr-cream' : 'bg-vr-cream text-vr-forest'
+      }`}
+      style={{ width: box, height: box }}
+    >
+      {glyph}
+    </span>
   )
 }
 
@@ -196,7 +231,7 @@ export function Accordion({
         <details key={i} className={`${wrap} rounded-lg`}>
           <summary className="flex justify-between items-center gap-4 px-6 py-5">
             <span className="flex items-center gap-2.5 min-w-0">
-              {it.icon && <CardIconMark icon={it.icon} size={17} />}
+              {it.icon && <CardIconMark icon={it.icon} size={15} badge on="light" />}
               <span className="font-heading uppercase text-vr-forest" style={{ fontSize: '15px', letterSpacing: '0.04em' }}>{it.heading}</span>
             </span>
             <span className="tl-plus text-vr-sky font-light transition-transform duration-200" style={{ fontSize: '22px' }}>+</span>

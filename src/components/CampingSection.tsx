@@ -77,7 +77,7 @@ export default function CampingSection({ data, basePath = 'sections.camping' }: 
             {blocks.map((b, i) => (
               <div key={i} className="border border-vr-line bg-vr-white rounded-lg p-7">
                 <div className="flex items-start gap-2 mb-3">
-                  {b.icon && <CardIconMark icon={b.icon} size={18} />}
+                  {b.icon && <CardIconMark icon={b.icon} size={16} badge on="light" />}
                   <EditableText as="h3" className="font-heading uppercase text-vr-forest flex-1 text-[18px] tracking-[0.04em]" value={b.heading} path={`${basePath}.infoBlocks.${i}.heading`} />
                   <ListControls path={`${basePath}.infoBlocks`} index={i} count={blocks.length} />
                 </div>
