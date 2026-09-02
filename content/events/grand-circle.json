@@ -1396,5 +1396,14 @@
         }
       ]
     }
+  },
+  "alert": {
+    "enabled": true,
+    "level": "info",
+    "title": "GRAND CIRCLE RUNNERS",
+    "updated": "Updated Wednesday 2nd September",
+    "message": "Stay up to date on important race information throughout race week. If there are any updates or changes you need to know, we’ll communicate them by email and text. Opt into race-specific text alerts so you don’t miss an update.",
+    "linkLabel": "SIGN UP FOR SMS ALERTS HERE",
+    "linkUrl": "https://mailchi.mp/vacationraces/2h9armo228"
   }
 }
