@@ -43,6 +43,11 @@
         "logoUrl": "/images/uploads/1788454185806-logo-dip-tri-color-2-.png"
       },
       {
+        "name": "Neuma",
+        "logoUrl": "/images/uploads/1788454834177-neuma-poweredby-lockup1-blue-1-.png",
+        "url": "https://www.neuma.health/"
+      },
+      {
         "name": "All Day Sauna",
         "logoUrl": "/images/uploads/1788454191708-adsauna-badgelogo-v2-blue-1-.png"
       },
@@ -62,11 +67,6 @@
         "logoUrl": "/images/uploads/1788454720773-tin-primary-logo-full-color-1-.jpg"
       },
       {
-        "name": "Monster Brewing",
-        "logoUrl": "/images/uploads/1788454675243-mb-blk-2024.svg",
-        "url": "https://monsterbrewing.com"
-      },
-      {
         "name": "zICO",
         "logoUrl": "/images/uploads/1788454630752-zico-logo-deep-green-1-4-.png",
         "url": "https://zico.com/"
@@ -80,6 +80,11 @@
         "name": "KRF",
         "logoUrl": "/images/uploads/1788454144685-katesrealfood-logos-6-2-.png",
         "url": "https://katesrealfood.com/"
+      },
+      {
+        "name": "Monster Brewing",
+        "logoUrl": "/images/uploads/1788454675243-mb-blk-2024.svg",
+        "url": "https://monsterbrewing.com"
       },
       {
         "name": "Aloe up",
@@ -105,11 +110,6 @@
         "name": "Goodwipes",
         "logoUrl": "/images/uploads/1788454174616-goodwipes-logo-botanical-1-.png",
         "url": ""
-      },
-      {
-        "name": "Neuma",
-        "logoUrl": "/images/uploads/1788454834177-neuma-poweredby-lockup1-blue-1-.png",
-        "url": "https://www.neuma.health/"
       }
     ]
   },
