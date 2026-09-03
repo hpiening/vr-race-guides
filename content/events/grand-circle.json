@@ -714,7 +714,7 @@
                 "icon": "snack"
               },
               {
-                "title": "Beer Garden · Monster Brewing",
+                "title": "Beer Garden · sponsored by Monster Brewing",
                 "eyebrow": "Wed–Sat",
                 "body": "Must be 21+ to enter the beer garden. Beer tickets can be purchased separately and valid ID is required to enter the beer garden. Hours will be 5pm-9pm Wednesday to Saturday. Non-alcoholic beer and sodas will also be available. ",
                 "imageUrl": "",
@@ -831,7 +831,7 @@
             "icon": "truck"
           },
           {
-            "heading": "Beer Garden · sponsored by Monster Brewing",
+            "heading": "Beer Garden · Monster Brewing",
             "intro": "Monster Brewing takes over the beer garden. Tickets are purchased separately and valid ID is required. Open Wednesday–Saturday per the posted schedule. [monsterbrewing.com](https://monsterbrewing.com)  ",
             "layout": "cards",
             "cards": [
