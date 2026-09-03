@@ -28,7 +28,8 @@
       },
       {
         "name": "Gruns",
-        "url": "https://gruns.co/"
+        "url": "https://gruns.co/",
+        "logoUrl": "/images/uploads/1788454160112-gruns-yellow-3-.png"
       },
       {
         "name": "Runna",
@@ -47,11 +48,13 @@
       },
       {
         "name": "Make It Prsonal",
-        "url": "https://www.itab.us.com/product/vacation-races/"
+        "url": "https://www.itab.us.com/product/vacation-races/",
+        "logoUrl": "/images/uploads/1788454136820-full-horizontal-logo-black.png"
       },
       {
         "name": "Honey Stinger",
-        "url": "https://honeystinger.com"
+        "url": "https://honeystinger.com",
+        "logoUrl": "/images/uploads/1788454151453-hs-logosheet-rgb-black.png"
       },
       {
         "name": "Thats iT",
@@ -66,10 +69,6 @@
         "name": "Stellar Vista Observatory"
       },
       {
-        "name": "Wander Project",
-        "url": "https://www.wanderproject.org"
-      },
-      {
         "name": "zICO",
         "logoUrl": "",
         "url": "https://zico.com/"
@@ -81,7 +80,7 @@
       },
       {
         "name": "KRF",
-        "logoUrl": "",
+        "logoUrl": "/images/uploads/1788454144685-katesrealfood-logos-6-2-.png",
         "url": "https://katesrealfood.com/"
       },
       {
@@ -101,8 +100,13 @@
       },
       {
         "name": "Mount to Coast",
-        "logoUrl": "",
+        "logoUrl": "/images/uploads/1788454129032-brandmark-black-4x-8-2-.png",
         "url": "https://mounttocoast.com/"
+      },
+      {
+        "name": "Goodwipes",
+        "logoUrl": "/images/uploads/1788454174616-goodwipes-logo-botanical-1-.png",
+        "url": ""
       }
     ]
   },
