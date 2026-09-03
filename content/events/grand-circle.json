@@ -34,7 +34,8 @@
       },
       {
         "name": "Runna",
-        "url": "https://web.runna.com/en-GB/welcome?redirectUrl=https%3A%2F%2Fweb.runna.com%2Fredeem%3Fcode%3DVACATIONRUNNA"
+        "url": "https://web.runna.com/en-GB/welcome?redirectUrl=https%3A%2F%2Fweb.runna.com%2Fredeem%3Fcode%3DVACATIONRUNNA",
+        "logoUrl": "/images/uploads/1788454793616-wordmark-black-.png"
       },
       {
         "name": "Dip",
@@ -57,7 +58,8 @@
       },
       {
         "name": "Thats iT",
-        "url": "https://www.thatsitfruit.com/"
+        "url": "https://www.thatsitfruit.com/",
+        "logoUrl": "/images/uploads/1788454720773-tin-primary-logo-full-color-1-.jpg"
       },
       {
         "name": "Monster Brewing",
@@ -91,7 +93,7 @@
       },
       {
         "name": "Muscle Milk",
-        "logoUrl": "",
+        "logoUrl": "/images/uploads/1788454731962-download.png",
         "url": "https://www.musclemilk.com/"
       },
       {
