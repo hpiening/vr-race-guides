@@ -24,7 +24,8 @@
     "items": [
       {
         "name": "HotelPlanner",
-        "url": "https://vacationraces.hotelplanner.com"
+        "url": "https://vacationraces.hotelplanner.com",
+        "logoUrl": "/images/uploads/1788454499386-hotelplanner-horizontal-color-rgb-large-1000x135.png"
       },
       {
         "name": "Gruns",
@@ -39,10 +40,6 @@
         "name": "Dip",
         "url": "https://dipalready.com/",
         "logoUrl": "/images/uploads/1788454185806-logo-dip-tri-color-2-.png"
-      },
-      {
-        "name": "Elevated Legs",
-        "url": "https://elevatedlegs.com"
       },
       {
         "name": "All Day Sauna",
