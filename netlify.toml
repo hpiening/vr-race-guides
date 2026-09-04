@@ -15,3 +15,111 @@
   to = "/edit/"
   status = 301
   force = true
+
+# ─── Jump links for emails and socials ────────────────────────────────
+# guides.vacationraces.com/grand-circle/courses -> the Courses section of that
+# guide. `:guide` is a placeholder, so one rule covers every guide. Aliases are
+# included where someone writing an email might reasonably guess differently
+# (dining/meals, courses/course, explore/experiences).
+# 302 rather than 301 so section ids can be renamed later without the old
+# target being cached in someone's browser forever.
+
+[[redirects]]
+  from = "/:guide/schedule"
+  to = "/:guide/#schedule"
+  status = 302
+
+[[redirects]]
+  from = "/:guide/check-in"
+  to = "/:guide/#expo"
+  status = 302
+
+[[redirects]]
+  from = "/:guide/expo"
+  to = "/:guide/#expo"
+  status = 302
+
+[[redirects]]
+  from = "/:guide/camping"
+  to = "/:guide/#camping"
+  status = 302
+
+[[redirects]]
+  from = "/:guide/campground"
+  to = "/:guide/#camping"
+  status = 302
+
+[[redirects]]
+  from = "/:guide/basecamp"
+  to = "/:guide/#basecamp"
+  status = 302
+
+[[redirects]]
+  from = "/:guide/meals"
+  to = "/:guide/#meals"
+  status = 302
+
+[[redirects]]
+  from = "/:guide/dining"
+  to = "/:guide/#meals"
+  status = 302
+
+[[redirects]]
+  from = "/:guide/entertainment"
+  to = "/:guide/#entertainment"
+  status = 302
+
+[[redirects]]
+  from = "/:guide/performers"
+  to = "/:guide/#entertainment"
+  status = 302
+
+[[redirects]]
+  from = "/:guide/courses"
+  to = "/:guide/#course-info"
+  status = 302
+
+[[redirects]]
+  from = "/:guide/course"
+  to = "/:guide/#course-info"
+  status = 302
+
+[[redirects]]
+  from = "/:guide/course-info"
+  to = "/:guide/#course-info"
+  status = 302
+
+[[redirects]]
+  from = "/:guide/race-info"
+  to = "/:guide/#post-race"
+  status = 302
+
+[[redirects]]
+  from = "/:guide/race-morning"
+  to = "/:guide/#race-morning"
+  status = 302
+
+[[redirects]]
+  from = "/:guide/spectators"
+  to = "/:guide/#spectators"
+  status = 302
+
+[[redirects]]
+  from = "/:guide/explore"
+  to = "/:guide/#experiences"
+  status = 302
+
+[[redirects]]
+  from = "/:guide/experiences"
+  to = "/:guide/#experiences"
+  status = 302
+
+[[redirects]]
+  from = "/:guide/faqs"
+  to = "/:guide/#faqs"
+  status = 302
+
+[[redirects]]
+  from = "/:guide/faq"
+  to = "/:guide/#faqs"
+  status = 302

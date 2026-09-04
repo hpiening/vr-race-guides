@@ -260,7 +260,10 @@ export function ActionLink({ href, label }: { href: string; label: string }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center gap-1.5 mt-4 font-label text-sm font-bold tracking-[0.1em] uppercase text-vr-forest bg-vr-sky/25 hover:bg-vr-sky/40 border border-vr-sky/50 rounded-lg px-5 py-2.5 transition-colors"
+      // `flex w-fit` not `inline-flex`: inside an accordion body this sits in a
+      // run of text, and inline-flex let it wrap into the middle of a sentence.
+      // Block-level puts it on its own line; w-fit keeps it hugging its label.
+      className="flex w-fit items-center gap-1.5 mt-4 font-label text-sm font-bold tracking-[0.1em] uppercase text-vr-forest bg-vr-sky/25 hover:bg-vr-sky/40 border border-vr-sky/50 rounded-lg px-5 py-2.5 transition-colors"
     >
       {label}
       <span aria-hidden="true">↗</span>

@@ -1368,7 +1368,14 @@
           "imageUrl": "/images/uploads/1788452661157-screenshot-2026-09-03-at-10.24.07-am.png"
         }
       ],
-      "activities": [],
+      "activities": [
+        {
+          "name": "Train with Runna",
+          "description": "Personalized training for your next Vacation Races event. Download now and unlock two free weeks!",
+          "discountCode": "VACATIONRUNNA",
+          "url": "https://web.runna.com/en-GB/welcome?utm_source=Vacation%20Races%20New"
+        }
+      ],
       "sights": [],
       "restaurantsHeading": "Eat & Drink in Kanab",
       "restaurantsIntro": "Where to eat in Kanab itself. For the spots along each day’s drive home, see On the Drive Back in Meals & Dining. Hours, menus and availability change: confirm directly with each business before you go.",
