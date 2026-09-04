@@ -719,6 +719,54 @@
       },
       {
         "enabled": true,
+        "id": "contests",
+        "navLabel": "Contests",
+        "eyebrow": "Dress the part",
+        "heading": "Prepare for Festival Contests",
+        "tone": "darkest",
+        "intro": "Each morning at the start line, we’re spicing things up with a themed costume contest. Show up dressed for the day’s theme for a chance to win some fun prizes and bragging rights.",
+        "imageUrl": "/images/events/grand-circle-contests.jpg",
+        "groups": [
+          {
+            "heading": "The Daily Themes",
+            "icon": "award",
+            "layout": "cards",
+            "intro": "Bring your creativity, rally your crew, and don’t hold back — the trail is your runway.",
+            "cards": [
+              {
+                "eyebrow": "Race day 1 · Bryce · Thu, Oct 1",
+                "title": "Favorite Color Day",
+                "icon": "palette",
+                "body": "Go head-to-toe in your favorite color — matching tutus, colored tights, painted nails, or a full color-coordinated fit. Bonus points for creativity (and sparkle).",
+                "imageUrl": ""
+              },
+              {
+                "eyebrow": "Race day 2 · Zion · Fri, Oct 2",
+                "title": "Fun Headwear Day",
+                "icon": "hat",
+                "body": "Bring your best — or weirdest — hat, headband, or headpiece. Funny hats, costume wigs, antlers: if it goes on your head, it’s fair game.",
+                "imageUrl": ""
+              },
+              {
+                "eyebrow": "Race day 3 · Antelope Canyon · Sat, Oct 3",
+                "title": "Favorite National Park Day",
+                "icon": "map",
+                "body": "Celebrate your favorite national park through your outfit — think park-inspired colors, patches, wildlife prints, or a DIY look based on your go-to trail.",
+                "imageUrl": ""
+              }
+            ]
+          }
+        ],
+        "infoBlocks": [
+          {
+            "heading": "How It Works",
+            "icon": "camera",
+            "body": "Want to enter? Find our photographers at the start line each morning and have them snap a photo of your look. Those photos go up on social, where event attendees and the Vacation Races community vote on their favorites, bracket style. From there, the VR team selects the winners from the top contenders, with results announced at the award ceremony each night."
+          }
+        ]
+      },
+      {
+        "enabled": true,
         "id": "meals",
         "navLabel": "Meals",
         "eyebrow": "Catered every night",

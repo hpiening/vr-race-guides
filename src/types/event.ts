@@ -133,7 +133,7 @@ export type CardIcon =
   | 'truck' | 'pin' | 'snack' | 'ticket' | 'info'
   | 'music' | 'person' | 'sparkle' | 'stars' | 'hands' | 'timer'
   | 'firstaid' | 'award' | 'shower' | 'drop' | 'recycle' | 'bag'
-  | 'camera' | 'bus' | 'map' | 'tent' | 'film' | 'clock'
+  | 'camera' | 'bus' | 'map' | 'tent' | 'film' | 'clock' | 'palette' | 'hat'
 
 /** A single card inside a Festival card group. */
 export interface FeatureCard {
