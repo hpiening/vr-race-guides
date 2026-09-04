@@ -55,6 +55,11 @@
   status = 302
 
 [[redirects]]
+  from = "/:guide/contests"
+  to = "/:guide/#contests"
+  status = 302
+
+[[redirects]]
   from = "/:guide/meals"
   to = "/:guide/#meals"
   status = 302
