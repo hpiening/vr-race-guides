@@ -11,7 +11,7 @@
   "heroBgColor": "#22110A",
   "accentColor": "#F89F44",
   "favicon": "/images/events/grand-circle-favicon.png",
-  "shieldImage": "/images/events/grand-circle-shield.png",
+  "shieldImage": "/images/events/grand-circle-shield.svg",
   "logo": "/images/vr-logo.png",
   "logoAlt": "Vacation Races",
   "photoBands": {
