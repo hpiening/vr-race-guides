@@ -1422,6 +1422,12 @@
           "description": "Personalized training for your next Vacation Races event. Download now and unlock two free weeks!",
           "discountCode": "VACATIONRUNNA",
           "url": "https://web.runna.com/en-GB/welcome?utm_source=Vacation%20Races%20New"
+        },
+        {
+          "name": "EXPLORE WITH KANAB TOUR COMPANY",
+          "description": "Take your Kanab adventure beyond the race course with unforgettable tours through Southern Utah’s red-rock landscapes, slot canyons, and hidden gems. Get 15% off!",
+          "url": "https://kanabtourcompany.com/",
+          "discountCode": "GRANDCIRCLETRAILFEST"
         }
       ],
       "sights": [],
