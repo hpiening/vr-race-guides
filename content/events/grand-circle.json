@@ -479,27 +479,27 @@
       "images": [
         {
           "title": "St. George · SGU · ~80 mi",
-          "imageUrl": "/images/events/grand-circle-roadtrip-sgu.png",
+          "imageUrl": "/images/events/grand-circle-roadtrip-sgu.webp",
           "ratio": "4 / 5",
-          "url": "/images/events/grand-circle-roadtrip-sgu.png"
+          "url": "/images/events/grand-circle-roadtrip-sgu.webp"
         },
         {
           "title": "Las Vegas · LAS · ~200 mi",
-          "imageUrl": "/images/events/grand-circle-roadtrip-las.png",
+          "imageUrl": "/images/events/grand-circle-roadtrip-las.webp",
           "ratio": "4 / 5",
-          "url": "/images/events/grand-circle-roadtrip-las.png"
+          "url": "/images/events/grand-circle-roadtrip-las.webp"
         },
         {
           "title": "Salt Lake City · SLC · ~300 mi",
-          "imageUrl": "/images/events/grand-circle-roadtrip-slc.png",
+          "imageUrl": "/images/events/grand-circle-roadtrip-slc.webp",
           "ratio": "4 / 5",
-          "url": "/images/events/grand-circle-roadtrip-slc.png"
+          "url": "/images/events/grand-circle-roadtrip-slc.webp"
         },
         {
           "title": "Phoenix · PHX · ~350 mi",
-          "imageUrl": "/images/events/grand-circle-roadtrip-phx.png",
+          "imageUrl": "/images/events/grand-circle-roadtrip-phx.webp",
           "ratio": "4 / 5",
-          "url": "/images/events/grand-circle-roadtrip-phx.png"
+          "url": "/images/events/grand-circle-roadtrip-phx.webp"
         }
       ],
       "infoBlocks": [
@@ -1044,7 +1044,7 @@
                 "eyebrow": "Keynote · Wed, Sep 30 · 6:00–7:30 PM",
                 "body": "Our 2026 keynote speaker opens the festival on Wednesday evening, before the welcome orientation.",
                 "url": "https://keiradamato.com/",
-                "imageUrl": "/images/events/grand-circle-keira-damato.jpg"
+                "imageUrl": "/images/events/grand-circle-keira-damato.webp"
               },
               {
                 "title": "Pueblo Enchantment Dancers",
@@ -1058,7 +1058,7 @@
                 "eyebrow": "Fri, Oct 2 · 6–7 PM",
                 "body": "A Native American performing arts company from Page, Arizona — Grass Dance, Jingle Dress Dance, Northern Traditional, and the world-famous Hoop Dance.",
                 "url": "https://red-heritage.com/",
-                "imageUrl": "/images/events/grand-circle-red-heritage.jpg"
+                "imageUrl": "/images/events/grand-circle-red-heritage.webp"
               }
             ],
             "icon": "person"
@@ -1071,25 +1071,25 @@
                 "title": "Fox & Bones",
                 "eyebrow": "Thu, Oct 1 · 7–8 PM",
                 "url": "https://foxandbones.com/",
-                "imageUrl": "/images/events/grand-circle-fox-and-bones.jpg"
+                "imageUrl": "/images/events/grand-circle-fox-and-bones.webp"
               },
               {
                 "title": "The Alpines",
                 "eyebrow": "Fri, Oct 2 · 7–8 PM",
                 "url": "https://www.thealpinesmusic.com/",
-                "imageUrl": "/images/events/grand-circle-the-alpines.jpg"
+                "imageUrl": "/images/events/grand-circle-the-alpines.webp"
               },
               {
                 "title": "Sophia Rankin & The Sound",
                 "eyebrow": "Sat, Oct 3 · 5:30–6:30 PM",
                 "url": "https://www.sophiarankin.com/",
-                "imageUrl": "/images/events/grand-circle-sophia-rankin.jpg"
+                "imageUrl": "/images/events/grand-circle-sophia-rankin.webp"
               },
               {
                 "title": "Alicia Stockman",
                 "eyebrow": "Sat, Oct 3 · 6:30–7:30 PM",
                 "url": "https://aliciastockman.com/",
-                "imageUrl": "/images/events/grand-circle-alicia-stockman.jpg"
+                "imageUrl": "/images/events/grand-circle-alicia-stockman.webp"
               }
             ],
             "icon": "music"

@@ -6,7 +6,7 @@
   "name": "Mount Rushmore Half Marathon",
   "tagline": "Saturday, September 12, 2026",
   "dates": "Keystone, South Dakota",
-  "heroImage": "/images/events/mount-rushmore-hero.jpg",
+  "heroImage": "/images/events/mount-rushmore-hero.webp",
   "heroImageAlt": "The Mount Rushmore carving of four presidents in the granite of the Black Hills, South Dakota",
   "heroBgColor": "#1C1F18",
   "accentColor": "#7BADAC",
@@ -14,9 +14,9 @@
   "shieldImage": "/images/events/mount-rushmore-shield.png",
   "logo": "/images/vr-logo.png",
   "photoBands": {
-    "onCourse": "/images/events/mount-rushmore-band.jpg",
-    "raceMorning": "/images/events/mount-rushmore-band.jpg",
-    "postRace": "/images/events/mount-rushmore-band.jpg"
+    "onCourse": "/images/events/mount-rushmore-band.webp",
+    "raceMorning": "/images/events/mount-rushmore-band.webp",
+    "postRace": "/images/events/mount-rushmore-band.webp"
   },
   "footerImage": "/images/events/mount-rushmore-footer.jpg",
   "partners": {
@@ -464,11 +464,11 @@
       "images": [
         {
           "title": "Spectator Parking",
-          "imageUrl": "/images/events/mount-rushmore-spectator-parking.jpg"
+          "imageUrl": "/images/events/mount-rushmore-spectator-parking.webp"
         },
         {
           "title": "Finish Line",
-          "imageUrl": "/images/events/mount-rushmore-finish-line.jpg"
+          "imageUrl": "/images/events/mount-rushmore-finish-line.webp"
         }
       ]
     },
