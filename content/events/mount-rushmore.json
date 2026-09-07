@@ -24,12 +24,12 @@
     "items": [
       {
         "name": "Hotel Planner",
-        "logoUrl": "/images/uploads/1783459296194-unknown.jpeg",
+        "logoUrl": "/images/uploads/1783459296194-unknown.webp",
         "url": "https://vacationraces.hotelplanner.com"
       },
       {
         "name": "Gruns",
-        "logoUrl": "/images/uploads/1785778010266-gruns-yellow-1-.png",
+        "logoUrl": "/images/uploads/1785778010266-gruns-yellow-1-.webp",
         "url": "https://gruns.co/"
       },
       {
@@ -39,7 +39,7 @@
       },
       {
         "name": "Dip",
-        "logoUrl": "/images/uploads/1785778081491-logo-dip-tri-color-1-.png",
+        "logoUrl": "/images/uploads/1785778081491-logo-dip-tri-color-1-.webp",
         "url": "https://dipalready.com/"
       },
       {
@@ -49,37 +49,37 @@
       },
       {
         "name": "Honey Stinger",
-        "logoUrl": "/images/uploads/1783445311591-hs-logosheet-rgb-black.png",
+        "logoUrl": "/images/uploads/1783445311591-hs-logosheet-rgb-black.webp",
         "url": "https://honeystinger.com"
       },
       {
         "name": "That's it",
-        "logoUrl": "/images/uploads/1785778161167-tin-primary-logo-full-color.jpg",
+        "logoUrl": "/images/uploads/1785778161167-tin-primary-logo-full-color.webp",
         "url": "https://www.thatsitfruit.com/"
       },
       {
         "name": "Zico",
-        "logoUrl": "/images/uploads/1785778166355-zico-logo-deep-green-1-3-.png",
+        "logoUrl": "/images/uploads/1785778166355-zico-logo-deep-green-1-3-.webp",
         "url": "https://zico.com/"
       },
       {
         "name": "Runseek",
-        "logoUrl": "/images/uploads/1785778251130-runseeklogo-1-.png",
+        "logoUrl": "/images/uploads/1785778251130-runseeklogo-1-.webp",
         "url": "https://www.runseekadventures.com/"
       },
       {
         "name": "Siete",
-        "logoUrl": "/images/uploads/1785778234298-siete-logo-1-.png",
+        "logoUrl": "/images/uploads/1785778234298-siete-logo-1-.webp",
         "url": "https://sietefoods.com/"
       },
       {
         "name": "KRF",
-        "logoUrl": "/images/uploads/1785778229260-katesrealfood-logos-6-1-.png",
+        "logoUrl": "/images/uploads/1785778229260-katesrealfood-logos-6-1-.webp",
         "url": "https://katesrealfood.com/"
       },
       {
         "name": "Bobos",
-        "logoUrl": "/images/uploads/1785778399112-bobos-logo-wordmark-1-.png",
+        "logoUrl": "/images/uploads/1785778399112-bobos-logo-wordmark-1-.webp",
         "url": "https://eatbobos.com/"
       },
       {
@@ -89,7 +89,7 @@
       },
       {
         "name": "Sawyer",
-        "logoUrl": "/images/uploads/1785778391124-sawyer-logo-cyan-1-.png",
+        "logoUrl": "/images/uploads/1785778391124-sawyer-logo-cyan-1-.webp",
         "url": "https://www.sawyer.com/"
       },
       {
@@ -99,7 +99,7 @@
       },
       {
         "name": "Mount to Coast",
-        "logoUrl": "/images/uploads/1785778351128-brandmark-black-4x-8-1-.png",
+        "logoUrl": "/images/uploads/1785778351128-brandmark-black-4x-8-1-.webp",
         "url": "https://mounttocoast.com/"
       }
     ]
@@ -107,7 +107,7 @@
   "sections": {
     "welcome": {
       "enabled": true,
-      "imageUrl": "/images/uploads/1786457966860-screenshot-2026-08-11-at-8.19.15-am.png",
+      "imageUrl": "/images/uploads/1786457966860-screenshot-2026-08-11-at-8.19.15-am.webp",
       "heading": "Welcome to the \nBlack Hills",
       "body": "We hope your visit to the Black Hills is a memorable one — and that you make the time to explore Mount Rushmore National Memorial and the surrounding Black Hills National Forest, right on our doorstep. We try to capture the essence of running through a landscape of granite spires and towering ponderosa pines, and we want you to have fun while you're here. Please respect and follow the guidelines of our race, the National Park Service, and other local authorities.",
       "quote": "There are no words that can tell the hidden spirit of the wilderness.",
@@ -278,7 +278,7 @@
       "eyebrow": "Stay with us",
       "heading": "VR Campground",
       "overview": "The most fun place to stay during race weekend is the official Vacation Races Campground! The Vacation Races campground will be next door to the Ghost Canyon Getaway (the start of the race) in a large, open grassy field.\n\nAs luck would have it, we have found a property owner with a perfect location for the campground, as it is next to the start line, within only a few hundred yards with lots of space. If you'd like to see it for yourself, look up Ghost Canyon Getaway on Google Maps; it is the field immediately east of the primary venue. You'll be able to wake up just mere steps from your start line, and then shuttles will return you from the finish back to the campground!\n\nThere is plenty of space for campers, but remember that this is primitive camping and will be treated like a large group site. You will have neighbors and make new friends.\n\nWe will provide toilets and water. You can sleep in your car, tent, hammock, an RV (no hookups), or rent a tent from us for an additional charge. Whichever you choose, you'll need to reserve a spot. Campsites do not include cots, sleeping bags, pillows, headlamps, cooking stoves, or supplies. Please also note that campfires, fire pits and wood fires of any kind are prohibited on this property. Propane stoves are okay. Please be mindful. ",
-      "imageUrl": "/images/uploads/1786714511684-screenshot-2026-08-14-at-7.34.41-am.png",
+      "imageUrl": "/images/uploads/1786714511684-screenshot-2026-08-14-at-7.34.41-am.webp",
       "bookingUrl": "https://www.letsdothis.com/us",
       "bookingLabel": "Reserve your campsite",
       "infoBlocks": [
@@ -447,8 +447,8 @@
           "body": "At the aid station near Mile 3, there will be a clothing drop bin where you may leave items you no longer wish to carry. After the final runner passes, all clothing will be transported to the finish area.\n \nPLEASE NOTE if you are a faster finisher, there will be a wait before that clothing arrives. Any unclaimed items will be donated, so we recommend only dropping clothing you are comfortable leaving behind if you do not want to wait.\n\nItems found elsewhere on the course will not be collected or returned and remain the responsibility of the runner. Please help keep the course clean — NO LITTERING."
         }
       ],
-      "parkingMapImageUrl": "/images/uploads/1786648794991-rushmore-parking-and-shuttles.jpg",
-      "dropOffImageUrl": "/images/uploads/1786648808025-rushmore-runner-dropoff.jpg",
+      "parkingMapImageUrl": "/images/uploads/1786648794991-rushmore-parking-and-shuttles.webp",
+      "dropOffImageUrl": "/images/uploads/1786648808025-rushmore-runner-dropoff.webp",
       "eyebrow": "Getting to the"
     },
     "spectators": {
@@ -578,7 +578,7 @@
         "partner": "HotelPlanner",
         "description": "You're officially in for Mount Rushmore race weekend — now lock in your home base. HotelPlanner is our official lodging partner, offering exclusive runner rates near the Expo, Start, and Finish, plus 24/7 support if plans change. Book early to snag the best rates and make the most of your time in Keystone, SD.",
         "url": "https://vacationraces.hotelplanner.com/Search/?seid=9C93C9DE75FCC1ADCE0912789F0DC246&city=Ghost+Canyon+Getaway+13577+Ghost+Canyon+Rd%2C+Hermosa%2C+SD+57744&indate=09/11/2026&outdate=09/13/2026&numrooms=1&kw=MountRushmoreHalfMarathon&sc=Vacation-Races&currency=USD&locale=en_US&_ga=2.2576182.742229691.1785769714-746449431.1774446451#search/Ghost%20Canyon%20Getaway%2013577%20Ghost%20Canyon%20Rd%2C%20Hermosa%2C%20SD%2057744/43.8461019/-103.3415198/09-11-2026/09-13-2026/default/ASC/ASC/ASC/0/none/none/none/0/0/0/0/None/NaN/0/none/none/0/5/none/none/none/1/0/0/0/1/1/results/0/",
-        "imageUrl": "/images/uploads/1785776878775-screenshot-2026-08-03-at-11.07.51-am.png"
+        "imageUrl": "/images/uploads/1785776878775-screenshot-2026-08-03-at-11.07.51-am.webp"
       },
       "activities": [
         {
@@ -596,7 +596,7 @@
           "difficulty": "Easy",
           "elevation": "Walk the Presidential Trail beneath the 60-foot faces you glimpsed from the course — the closest views in the park.",
           "url": "https://www.nps.gov/thingstodo/walk-the-presidential-trail.htm",
-          "imageUrl": "/images/uploads/1785776947591-screenshot-2026-08-03-at-11.08.55-am.png"
+          "imageUrl": "/images/uploads/1785776947591-screenshot-2026-08-03-at-11.08.55-am.webp"
         },
         {
           "name": "Custer State Park",
@@ -604,7 +604,7 @@
           "difficulty": "Scenic",
           "elevation": "Bison herds, pronghorn, and wild burros roam this sprawling park just south of the course.",
           "url": "https://www.custerresorts.com/activities/scenic-drives/wildlife-loop",
-          "imageUrl": "/images/uploads/1785777065400-screenshot-2026-08-03-at-11.10.57-am.png"
+          "imageUrl": "/images/uploads/1785777065400-screenshot-2026-08-03-at-11.10.57-am.webp"
         },
         {
           "name": "Needles Highway",
@@ -612,7 +612,7 @@
           "difficulty": "Scenic drive",
           "elevation": "A jaw-dropping drive through granite spires and one-lane rock tunnels on SD-87.",
           "url": "https://www.travelsouthdakota.com/trip-ideas/story/needles-highway-scenic-drive",
-          "imageUrl": "/images/uploads/1785777111071-screenshot-2026-08-03-at-11.11.44-am.png"
+          "imageUrl": "/images/uploads/1785777111071-screenshot-2026-08-03-at-11.11.44-am.webp"
         },
         {
           "name": "Sylvan Lake Shore trail",
@@ -620,7 +620,7 @@
           "difficulty": "Easy",
           "elevation": "Clear water ringed by granite in Custer State Park — the \"crown jewel\" and an easy post-race stroll.",
           "url": "https://www.alltrails.com/trail/us/south-dakota/sylvan-lake-shore-trail--4",
-          "imageUrl": "/images/uploads/1785777211398-screenshot-2026-08-03-at-11.13.23-am.png"
+          "imageUrl": "/images/uploads/1785777211398-screenshot-2026-08-03-at-11.13.23-am.webp"
         },
         {
           "name": "Crazy Horse Memorial",
@@ -628,7 +628,7 @@
           "difficulty": "Half day",
           "elevation": "The world's largest mountain carving in progress, honoring the Lakota leader Crazy Horse.",
           "url": "https://crazyhorsememorial.org/",
-          "imageUrl": "/images/uploads/1785777269378-screenshot-2026-08-03-at-11.14.22-am.png"
+          "imageUrl": "/images/uploads/1785777269378-screenshot-2026-08-03-at-11.14.22-am.webp"
         },
         {
           "name": "Badlands National Park",
@@ -636,7 +636,7 @@
           "difficulty": "Day trip",
           "elevation": "Otherworldly striped spires and buttes east of the Black Hills — a stunning day trip.",
           "url": "https://www.nps.gov/badl/",
-          "imageUrl": "/images/uploads/1785777333138-badlands-national-park.jpg"
+          "imageUrl": "/images/uploads/1785777333138-badlands-national-park.webp"
         }
       ],
       "restaurantsHeading": "Eat & Drink in Keystone",

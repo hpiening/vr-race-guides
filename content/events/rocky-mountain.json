@@ -20,12 +20,12 @@
     "items": [
       {
         "name": "Hotel Planner",
-        "logoUrl": "/images/uploads/1783459296194-unknown.jpeg",
+        "logoUrl": "/images/uploads/1783459296194-unknown.webp",
         "url": "https://vacationraces.hotelplanner.com"
       },
       {
         "name": "Grüns",
-        "logoUrl": "/images/uploads/1783446169877-gruns-yellow.png",
+        "logoUrl": "/images/uploads/1783446169877-gruns-yellow.webp",
         "url": "https://gruns.co"
       },
       {
@@ -35,7 +35,7 @@
       },
       {
         "name": "Dip",
-        "logoUrl": "/images/uploads/1783444700983-logo-dip-tri-color.png",
+        "logoUrl": "/images/uploads/1783444700983-logo-dip-tri-color.webp",
         "url": "https://dipalready.com"
       },
       {
@@ -45,37 +45,37 @@
       },
       {
         "name": "Neuma",
-        "logoUrl": "/images/uploads/1783444860053-neuma-poweredby-lockup1-blue.png",
+        "logoUrl": "/images/uploads/1783444860053-neuma-poweredby-lockup1-blue.webp",
         "url": "https://www.neuma.health/"
       },
       {
         "name": "Honey Stinger",
-        "logoUrl": "/images/uploads/1783445311591-hs-logosheet-rgb-black.png",
+        "logoUrl": "/images/uploads/1783445311591-hs-logosheet-rgb-black.webp",
         "url": "https://honeystinger.com"
       },
       {
         "name": "That's It",
-        "logoUrl": "/images/uploads/1783445844993-tin-primary-logo-full-color.jpg",
+        "logoUrl": "/images/uploads/1783445844993-tin-primary-logo-full-color.webp",
         "url": "https://www.thatsitfruit.com"
       },
       {
         "name": "Zico",
-        "logoUrl": "/images/uploads/1783562152168-zico-logo-deep-green-1-1-.png",
+        "logoUrl": "/images/uploads/1783562152168-zico-logo-deep-green-1-1-.webp",
         "url": "https://zico.com/"
       },
       {
         "name": "Runseek",
-        "logoUrl": "/images/uploads/1783446082812-runseeklogo.png",
+        "logoUrl": "/images/uploads/1783446082812-runseeklogo.webp",
         "url": "https://www.runseekadventures.com"
       },
       {
         "name": "Siete",
-        "logoUrl": "/images/uploads/1783445217625-siete-logo.png",
+        "logoUrl": "/images/uploads/1783445217625-siete-logo.webp",
         "url": "https://sietefoods.com"
       },
       {
         "name": "Kate's Real Food",
-        "logoUrl": "/images/uploads/1783445928460-katesrealfood-logos-6.png",
+        "logoUrl": "/images/uploads/1783445928460-katesrealfood-logos-6.webp",
         "url": "https://katesrealfood.com"
       },
       {
@@ -85,7 +85,7 @@
       },
       {
         "name": "Sawyer",
-        "logoUrl": "/images/uploads/1783562330348-sawyer-logo-dark-1-.png",
+        "logoUrl": "/images/uploads/1783562330348-sawyer-logo-dark-1-.webp",
         "url": "https://www.sawyer.com/"
       },
       {
@@ -100,7 +100,7 @@
       },
       {
         "name": "Wander Project",
-        "logoUrl": "/images/uploads/1783459294335-unknown.png",
+        "logoUrl": "/images/uploads/1783459294335-unknown.webp",
         "url": "https://www.wanderproject.org"
       },
       {
@@ -201,7 +201,7 @@
       "locationMapUrl": "https://www.google.com/maps/place/380+Community+Dr,+Estes+Park,+CO+80517/@40.3710761,-105.498488,17z",
       "locationLat": 40.3710761,
       "locationLng": -105.498488,
-      "mapImageUrl": "/images/uploads/1783714877851-rocky-expo-parking-and-5k-staging.jpg",
+      "mapImageUrl": "/images/uploads/1783714877851-rocky-expo-parking-and-5k-staging.webp",
       "hours": [
         {
           "label": "Race Expo Hours",
@@ -328,7 +328,7 @@
       "enabled": true,
       "navLabel": "Half Marathon Info",
       "timelineLabel": "Morning Schedule",
-      "parkingMapImageUrl": "/images/uploads/1783714915261-rocky-parking-layout-2026.jpg",
+      "parkingMapImageUrl": "/images/uploads/1783714915261-rocky-parking-layout-2026.webp",
       "parkingOptions": [
         {
           "name": "Ball Fields (Primary Lot)",
@@ -618,7 +618,7 @@
         "partner": "HotelPlanner",
         "description": "You're officially in for the Rocky Mountain race weekend — now lock in your home base. HotelPlanner is our official lodging partner, offering exclusive rates for runners, friends, and family, plus 24/7 support if plans change. The page is set up with race weekend dates and lodging near the Expo, Start Line, and Finish Line. Book early to snag the best rates and make the most of your time in Estes Park.",
         "url": "https://vacationraces.hotelplanner.com/evt/2D076CC97B6248BFA68534519E4AD110",
-        "imageUrl": "/images/uploads/1783622180484-1fc10a6cd4c1f764a0c90bc6a24d004eb72b46fd.jpg"
+        "imageUrl": "/images/uploads/1783622180484-1fc10a6cd4c1f764a0c90bc6a24d004eb72b46fd.webp"
       },
       "activities": [
         {
@@ -677,7 +677,7 @@
           "elevation": "2,838 ft",
           "difficulty": "Strenuous",
           "url": "https://www.alltrails.com/trail/us/colorado/hallett-peak",
-          "imageUrl": "/images/uploads/1783446589904-images-4.jpeg"
+          "imageUrl": "/images/uploads/1783446589904-images-4.webp"
         }
       ],
       "sights": [

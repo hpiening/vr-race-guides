@@ -22,12 +22,12 @@
     "items": [
       {
         "name": "Hotel Planner",
-        "logoUrl": "/images/uploads/1783459296194-unknown.jpeg",
+        "logoUrl": "/images/uploads/1783459296194-unknown.webp",
         "url": "https://vacationraces.hotelplanner.com"
       },
       {
         "name": "Gruns",
-        "logoUrl": "/images/uploads/1784816680715-gruns-yellow-2-.png",
+        "logoUrl": "/images/uploads/1784816680715-gruns-yellow-2-.webp",
         "url": "https://gruns.co/?srsltid=AfmBOopGv6pHuL4yEgFpM0A6BVnp_lYSpE9zYwYfK9rxltfkDdtHBbRh&_ga=2.176706661.1311739219.1784564163-746449431.1774446451"
       },
       {
@@ -37,7 +37,7 @@
       },
       {
         "name": "Dip",
-        "logoUrl": "/images/uploads/1784816674902-logo-dip-tri-color-1-.png",
+        "logoUrl": "/images/uploads/1784816674902-logo-dip-tri-color-1-.webp",
         "url": "https://dipalready.com/"
       },
       {
@@ -47,37 +47,37 @@
       },
       {
         "name": "Neuma",
-        "logoUrl": "/images/uploads/1784816834457-neuma-poweredby-lockup1-blue.png",
+        "logoUrl": "/images/uploads/1784816834457-neuma-poweredby-lockup1-blue.webp",
         "url": "https://www.neuma.health/"
       },
       {
         "name": "Honey Stinger",
-        "logoUrl": "/images/uploads/1783445311591-hs-logosheet-rgb-black.png",
+        "logoUrl": "/images/uploads/1783445311591-hs-logosheet-rgb-black.webp",
         "url": "https://honeystinger.com"
       },
       {
         "name": "That's It",
-        "logoUrl": "/images/uploads/1784816876193-tin-primary-logo-full-color.jpg",
+        "logoUrl": "/images/uploads/1784816876193-tin-primary-logo-full-color.webp",
         "url": "https://www.thatsitfruit.com/"
       },
       {
         "name": "Zico",
-        "logoUrl": "/images/uploads/1784817131241-zico-logo-deep-green-1-3-.png",
+        "logoUrl": "/images/uploads/1784817131241-zico-logo-deep-green-1-3-.webp",
         "url": "https://zico.com/"
       },
       {
         "name": "Runseek",
-        "logoUrl": "/images/uploads/1784817127040-runseeklogo-1-.png",
+        "logoUrl": "/images/uploads/1784817127040-runseeklogo-1-.webp",
         "url": "https://www.runseekadventures.com/"
       },
       {
         "name": "Siete",
-        "logoUrl": "/images/uploads/1784817123509-siete-logo-1-.png",
+        "logoUrl": "/images/uploads/1784817123509-siete-logo-1-.webp",
         "url": "https://sietefoods.com/"
       },
       {
         "name": "KRF",
-        "logoUrl": "/images/uploads/1784817137679-katesrealfood-logos-6-1-.png",
+        "logoUrl": "/images/uploads/1784817137679-katesrealfood-logos-6-1-.webp",
         "url": "https://katesrealfood.com/"
       },
       {
@@ -87,17 +87,17 @@
       },
       {
         "name": "Sawyer",
-        "logoUrl": "/images/uploads/1784817354308-sawyer-logo-cyan-1-.png",
+        "logoUrl": "/images/uploads/1784817354308-sawyer-logo-cyan-1-.webp",
         "url": "https://www.sawyer.com/"
       },
       {
         "name": "Muscle Milk",
-        "logoUrl": "/images/uploads/1784817507089-screenshot-2026-07-23-at-8.38.19-am.png",
+        "logoUrl": "/images/uploads/1784817507089-screenshot-2026-07-23-at-8.38.19-am.webp",
         "url": "https://www.musclemilk.com/"
       },
       {
         "name": "Mount to Coast",
-        "logoUrl": "/images/uploads/1784817463454-brandmark-black-4x-8-1-.png",
+        "logoUrl": "/images/uploads/1784817463454-brandmark-black-4x-8-1-.webp",
         "url": "https://mounttocoast.com/"
       },
       {
@@ -467,8 +467,8 @@
           "body": "The course is fully paved and is wheelchair and stroller accessible — just be mindful of other participants and stay to the right when possible. Dogs are not allowed on course, as our insurance does not cover them, but they're welcome to cheer you on from the finish line with the rest of your crew."
         }
       ],
-      "parkingMapImageUrl": "/images/uploads/1785863161349-2026-smoky-parking.jpg",
-      "dropOffImageUrl": "/images/uploads/1786039622973-smoky-start-line-staging-and-runner-drop-off.jpg"
+      "parkingMapImageUrl": "/images/uploads/1785863161349-2026-smoky-parking.webp",
+      "dropOffImageUrl": "/images/uploads/1786039622973-smoky-start-line-staging-and-runner-drop-off.webp"
     },
     "spectators": {
       "enabled": true,
@@ -628,7 +628,7 @@
         "partner": "HotelPlanner",
         "description": "You're officially in for Great Smoky race weekend — now lock in your home base. HotelPlanner is our official lodging partner, offering exclusive runner rates near the Expo, Start, and Finish, plus 24/7 support if plans change. Book early to snag the best rates and make the most of your time in Townsend, TN.",
         "url": "https://vacationraces.hotelplanner.com/Search/?seid=9B29DFAB37DBDEEAA1E68AA99972A313&city=Talley+Ho+Inn+8314+TN-73%2C+Townsend%2C+TN+37882&indate=08/28/2026&outdate=08/30/2026&numrooms=1&kw=GreatSmokyMountainsHalf&5K&sc=Vacation-Races&currency=USD&locale=en_US#search/Talley%20Ho%20Inn%208314%20TN73%2C%20Townsend%2C%20TN%2037882/35.6780135/-83.7254134/08-28-2026/08-30-2026/default/ASC/ASC/ASC/0/none/none/none/0/0/0/0/None/0/0/none/none/0/5/none/none/none/1/0/0/0/1/1/results/0/",
-        "imageUrl": "/images/uploads/1784734989085-30a5be70567ff7729c75ead74e1f7981c2d48de2.jpg"
+        "imageUrl": "/images/uploads/1784734989085-30a5be70567ff7729c75ead74e1f7981c2d48de2.webp"
       },
       "activities": [
         {
@@ -650,7 +650,7 @@
           "elevation": "",
           "difficulty": "Moderate",
           "url": "https://www.alltrails.com/trail/us/tennessee/abrams-falls-trail",
-          "imageUrl": "/images/uploads/1784815584311-screenshot-2026-07-23-at-8.05.21-am.png"
+          "imageUrl": "/images/uploads/1784815584311-screenshot-2026-07-23-at-8.05.21-am.webp"
         },
         {
           "name": "Cades Cove Loop",
@@ -658,7 +658,7 @@
           "elevation": "",
           "difficulty": "Easy ",
           "url": "https://www.alltrails.com/trail/us/tennessee/cades-cove-loop-road",
-          "imageUrl": "/images/uploads/1784815579617-screenshot-2026-07-23-at-8.05.44-am.png"
+          "imageUrl": "/images/uploads/1784815579617-screenshot-2026-07-23-at-8.05.44-am.webp"
         },
         {
           "name": "Chimney Tops",
@@ -666,7 +666,7 @@
           "elevation": "",
           "difficulty": "Hard",
           "url": "https://www.alltrails.com/trail/us/tennessee/chimney-tops-trail",
-          "imageUrl": "/images/uploads/1784815575885-screenshot-2026-07-23-at-8.06.02-am.png"
+          "imageUrl": "/images/uploads/1784815575885-screenshot-2026-07-23-at-8.06.02-am.webp"
         },
         {
           "name": "Laurel Falls and Cove Mountain",
@@ -674,7 +674,7 @@
           "elevation": "",
           "difficulty": "Moderate",
           "url": "https://www.alltrails.com/trail/us/tennessee/laurel-falls-trail",
-          "imageUrl": "/images/uploads/1784817594391-screenshot-2026-07-23-at-8.39.23-am.png"
+          "imageUrl": "/images/uploads/1784817594391-screenshot-2026-07-23-at-8.39.23-am.webp"
         },
         {
           "name": "Kuwohi Observation Tower Trail",
@@ -682,7 +682,7 @@
           "elevation": "",
           "difficulty": "Moderate",
           "url": "https://www.alltrails.com/trail/us/north-carolina/clingmans-dome-observation-tower-trail",
-          "imageUrl": "/images/uploads/1784815774921-screenshot-2026-07-23-at-8.09.27-am.png"
+          "imageUrl": "/images/uploads/1784815774921-screenshot-2026-07-23-at-8.09.27-am.webp"
         },
         {
           "name": "Cataract Falls",
@@ -690,7 +690,7 @@
           "elevation": "",
           "difficulty": "Easy",
           "url": "https://www.alltrails.com/trail/us/tennessee/cataract-falls--2",
-          "imageUrl": "/images/uploads/1784817589260-screenshot-2026-07-23-at-8.39.39-am.png"
+          "imageUrl": "/images/uploads/1784817589260-screenshot-2026-07-23-at-8.39.39-am.webp"
         }
       ],
       "restaurants": [

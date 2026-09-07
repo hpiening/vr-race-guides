@@ -43,7 +43,51 @@ async function authHeader(): Promise<Record<string, string>> {
  * name), so no sha needed. The guide's JSON still needs saving afterwards to point
  * at the returned path.
  */
-export async function uploadImage(file: File): Promise<string> {
+/**
+ * Shrink an image in the browser before it's committed.
+ *
+ * The /edit uploads were the site's entire bandwidth problem: macOS screenshots
+ * go in as ~2,200px PNGs at 3-7 MB each, and 88% of every image byte the site
+ * served was one of these. A single guide page reached 47 MB, which at Netlify's
+ * metered bandwidth was costing real money every month.
+ *
+ * Re-encodes to WebP at MAX_DIM on the long edge. Returns the original File
+ * untouched if anything goes wrong (an unsupported format, a decode failure, or
+ * a result that isn't actually smaller) so an upload never fails because of
+ * compression.
+ */
+const MAX_DIM = 1800
+const WEBP_QUALITY = 0.82
+
+async function downscaleForUpload(file: File): Promise<File> {
+  // SVG is vector and already small; GIF may be animated and would lose it.
+  if (/^image\/(svg|gif)/.test(file.type)) return file
+  if (!/^image\//.test(file.type)) return file
+  try {
+    const bitmap = await createImageBitmap(file)
+    const scale = Math.min(1, MAX_DIM / Math.max(bitmap.width, bitmap.height))
+    const w = Math.max(1, Math.round(bitmap.width * scale))
+    const h = Math.max(1, Math.round(bitmap.height * scale))
+    const canvas = document.createElement('canvas')
+    canvas.width = w
+    canvas.height = h
+    const ctx = canvas.getContext('2d')
+    if (!ctx) return file
+    ctx.drawImage(bitmap, 0, 0, w, h)
+    bitmap.close?.()
+    const blob = await new Promise<Blob | null>(res =>
+      canvas.toBlob(res, 'image/webp', WEBP_QUALITY),
+    )
+    if (!blob || blob.size >= file.size) return file
+    const base = file.name.replace(/\.[^.]+$/, '')
+    return new File([blob], `${base}.webp`, { type: 'image/webp' })
+  } catch {
+    return file // HEIC and friends land here — upload as-is rather than failing
+  }
+}
+
+export async function uploadImage(original: File): Promise<string> {
+  const file = await downscaleForUpload(original)
   const headers = { ...(await authHeader()), 'Content-Type': 'application/json' }
   const bytes = new Uint8Array(await file.arrayBuffer())
   let binary = ''

@@ -25,61 +25,61 @@
       {
         "name": "HotelPlanner",
         "url": "https://vacationraces.hotelplanner.com",
-        "logoUrl": "/images/uploads/1788454499386-hotelplanner-horizontal-color-rgb-large-1000x135.png"
+        "logoUrl": "/images/uploads/1788454499386-hotelplanner-horizontal-color-rgb-large-1000x135.webp"
       },
       {
         "name": "Gruns",
         "url": "https://gruns.co/",
-        "logoUrl": "/images/uploads/1788454160112-gruns-yellow-3-.png"
+        "logoUrl": "/images/uploads/1788454160112-gruns-yellow-3-.webp"
       },
       {
         "name": "Runna",
         "url": "https://www.runna.com/",
-        "logoUrl": "/images/uploads/1788454793616-wordmark-black-.png"
+        "logoUrl": "/images/uploads/1788454793616-wordmark-black-.webp"
       },
       {
         "name": "Dip",
         "url": "https://dipalready.com/",
-        "logoUrl": "/images/uploads/1788454185806-logo-dip-tri-color-2-.png"
+        "logoUrl": "/images/uploads/1788454185806-logo-dip-tri-color-2-.webp"
       },
       {
         "name": "Neuma",
-        "logoUrl": "/images/uploads/1788455293593-neuma-poweredby-lockup1-blue-1-.png",
+        "logoUrl": "/images/uploads/1788455293593-neuma-poweredby-lockup1-blue-1-.webp",
         "url": "https://www.neuma.health/"
       },
       {
         "name": "All Day Sauna",
-        "logoUrl": "/images/uploads/1788454191708-adsauna-badgelogo-v2-blue-1-.png",
+        "logoUrl": "/images/uploads/1788454191708-adsauna-badgelogo-v2-blue-1-.webp",
         "url": "https://alldaysaunaco.com/"
       },
       {
         "name": "Make It Prsonal",
         "url": "https://www.itab.us.com/product/vacation-races/",
-        "logoUrl": "/images/uploads/1788454136820-full-horizontal-logo-black.png"
+        "logoUrl": "/images/uploads/1788454136820-full-horizontal-logo-black.webp"
       },
       {
         "name": "Honey Stinger",
         "url": "https://honeystinger.com",
-        "logoUrl": "/images/uploads/1788454151453-hs-logosheet-rgb-black.png"
+        "logoUrl": "/images/uploads/1788454151453-hs-logosheet-rgb-black.webp"
       },
       {
         "name": "Thats iT",
         "url": "https://www.thatsitfruit.com/",
-        "logoUrl": "/images/uploads/1788454720773-tin-primary-logo-full-color-1-.jpg"
+        "logoUrl": "/images/uploads/1788454720773-tin-primary-logo-full-color-1-.webp"
       },
       {
         "name": "zICO",
-        "logoUrl": "/images/uploads/1788454630752-zico-logo-deep-green-1-4-.png",
+        "logoUrl": "/images/uploads/1788454630752-zico-logo-deep-green-1-4-.webp",
         "url": "https://zico.com/"
       },
       {
         "name": "Siete",
-        "logoUrl": "/images/uploads/1788454681699-768px-siete.logo.circle.design.3in-noborder.png",
+        "logoUrl": "/images/uploads/1788454681699-768px-siete.logo.circle.design.3in-noborder.webp",
         "url": "https://sietefoods.com/"
       },
       {
         "name": "KRF",
-        "logoUrl": "/images/uploads/1788454144685-katesrealfood-logos-6-2-.png",
+        "logoUrl": "/images/uploads/1788454144685-katesrealfood-logos-6-2-.webp",
         "url": "https://katesrealfood.com/"
       },
       {
@@ -94,7 +94,7 @@
       },
       {
         "name": "Sawyer",
-        "logoUrl": "/images/uploads/1788454611167-sawyer-logo-dark-2-.png",
+        "logoUrl": "/images/uploads/1788454611167-sawyer-logo-dark-2-.webp",
         "url": "https://www.sawyer.com/"
       },
       {
@@ -104,7 +104,7 @@
       },
       {
         "name": "Mount to Coast",
-        "logoUrl": "/images/uploads/1788454129032-brandmark-black-4x-8-2-.png",
+        "logoUrl": "/images/uploads/1788454129032-brandmark-black-4x-8-2-.webp",
         "url": "https://mounttocoast.com/"
       },
       {
@@ -118,7 +118,7 @@
     "welcome": {
       "enabled": true,
       "heading": "Welcome to the|Grand Circle",
-      "imageUrl": "/images/uploads/1787244301300-screenshot-2026-08-20-at-10.44.47-am.png",
+      "imageUrl": "/images/uploads/1787244301300-screenshot-2026-08-20-at-10.44.47-am.webp",
       "body": "Festival HQ is at Jacob Hamblin Park in Kanab, Utah. You’ll check in here, pick up your race packet, find your tent, and settle in for three days of fun and finish lines. Each morning you head out to a different corner of the Colorado Plateau — the hoodoos of Bryce Canyon, the mesa rims above Zion, and the slot canyons near Antelope Canyon — and each afternoon you come back to the same basecamp for food, recovery, music, and films.",
       "quote": "Be excellent to each other.",
       "quoteAttribution": "The Trailfest camping rule",
@@ -459,7 +459,7 @@
       "locationMapUrl": "https://maps.app.goo.gl/twREFW6h6C5bHFfb7",
       "locationLat": 37.0521,
       "locationLng": -112.5248,
-      "mapImageUrl": "/images/uploads/1788734322713-2026-grand-circle-participant-site-map.png",
+      "mapImageUrl": "/images/uploads/1788734322713-2026-grand-circle-participant-site-map.webp",
       "hours": [
         {
           "label": "Race Expo & Bib Pickup",
@@ -532,7 +532,7 @@
       "eyebrow": "Sleep at the",
       "heading": "VR Campground",
       "overview": "Campground check-in begins on Wednesday, September 30 from 12:00 – 7:00 PM at the booth by the baseball fields on the east side of the park. You will be able to pull up close by and unload your vehicle. There will be shared wagons to help transport your belongings to your site. Please plan to move your car quickly to make room for other campers arriving. \nCan’t make it before 7pm on Wednesday? After-hours check-in is available — look for instructions at the booth. Sites are first come, first served: you’ll be given a flag at check-in to write your name on, then pick your tent or site and place the flag in the ground outside the tent to claim it.\n\n**Field 1** is for participants bringing their own tent. **Fields 2 & 3** will be set-up with 4-person and 6-person tents for those who reserved one in advance. Reserved an RV or car/van site? Signs and staff will direct you where to park — please remember there are no hook-ups. ",
-      "imageUrl": "/images/uploads/1787245295675-screenshot-2026-08-20-at-11.01.12-am.png",
+      "imageUrl": "/images/uploads/1787245295675-screenshot-2026-08-20-at-11.01.12-am.webp",
       "bookingUrl": "",
       "bookingLabel": "",
       "infoBlocks": [
@@ -567,7 +567,7 @@
         "heading": "Festival Village",
         "tone": "dark",
         "intro": "The festival kicks off around 4:00 PM with yoga, but you can start your recovery earlier with massage appointments starting at 2pm. Get in line for a massage and lean into the festival, or go explore on your own for a few hours and come back for dinner, music, and films. Non-runners don’t need a festival pass to join in on the fun.",
-        "imageUrl": "/images/uploads/1787245447885-screenshot-2026-08-20-at-11.03.55-am.png",
+        "imageUrl": "/images/uploads/1787245447885-screenshot-2026-08-20-at-11.03.55-am.webp",
         "groups": [
           {
             "heading": "Active Clinics",
@@ -578,28 +578,28 @@
                 "eyebrow": "Thu, Oct 1 · 5–6 PM · New",
                 "body": "With Donna Bronson of Bronco Entertainment. No experience needed.",
                 "url": "https://www.broncoentertainment.com/",
-                "imageUrl": "/images/uploads/1788361369104-donna-bronson2.png",
+                "imageUrl": "/images/uploads/1788361369104-donna-bronson2.webp",
                 "icon": "music"
               },
               {
                 "title": "Tai Chi",
                 "eyebrow": "Fri, Oct 2 · 5–6 PM",
                 "body": "With Terri Henry of Vibration Oasis, board-certified through the Tai Chi for Health Institute. A moving meditation for balance and recovery.",
-                "imageUrl": "/images/uploads/1788445009477-screenshot-2026-09-03-at-8.16.35-am.png",
+                "imageUrl": "/images/uploads/1788445009477-screenshot-2026-09-03-at-8.16.35-am.webp",
                 "icon": "person"
               },
               {
                 "title": "Sound Bath",
                 "eyebrow": "Sat, Oct 3 · 5–6 PM",
                 "body": "Pure Healing Resonance by Carmella — aromatherapy, grounding breathwork, and ten quartz crystal bowls.",
-                "imageUrl": "/images/uploads/1788361602280-carmella1.jpg",
+                "imageUrl": "/images/uploads/1788361602280-carmella1.webp",
                 "icon": "sparkle"
               },
               {
                 "title": "Star Gazing",
                 "eyebrow": "Fri, Oct 2 · 8:30–10 PM",
                 "body": "Stargazing with Stellar Vista Observatory. Bring your curiosity (and questions about the universe) and see the Andromeda Galaxy, Hercules Star Cluster, Saturn, and more through high-power telescopes. SVO’s astronomers are excited to share the sky with you.",
-                "imageUrl": "/images/uploads/1788362121783-screenshot-2026-09-02-at-9.15.00-am.png",
+                "imageUrl": "/images/uploads/1788362121783-screenshot-2026-09-02-at-9.15.00-am.webp",
                 "icon": "stars"
               }
             ],
@@ -613,7 +613,7 @@
                 "title": "Massage",
                 "eyebrow": "Daily · 2–8 PM · Free",
                 "body": "Free 20-minute massages every day, with the option to pay for a longer session. First come, first served — hop on the waiting list.",
-                "imageUrl": "/images/uploads/1788444894575-screenshot-2026-09-03-at-8.14.41-am.png",
+                "imageUrl": "/images/uploads/1788444894575-screenshot-2026-09-03-at-8.14.41-am.webp",
                 "icon": "hands"
               },
               {
@@ -621,14 +621,14 @@
                 "eyebrow": "Daily · 2–8 PM · Free",
                 "body": "Hot/cold leg compression therapy to help you relax and recover. **Ten minutes each day is free**, compliments of Vacation Races — need an extra boost? Add 10 more minutes for $10, 20 for $15, or 30 for $20. @elevatedlegs",
                 "url": "https://elevatedlegs.com",
-                "imageUrl": "/images/uploads/1788361490290-elevated-legs2.jpeg",
+                "imageUrl": "/images/uploads/1788361490290-elevated-legs2.webp",
                 "icon": "timer"
               },
               {
                 "title": "Sauna",
                 "eyebrow": "All Day Sauna · Free",
                 "body": "We’re partnered with All Day Sauna Co. to bring next-level post-race recovery to race weekend —because the work doesn’t stop when you cross the finish line.  \n\nA mobile sauna on site all day, free to use. Bring a towel you don’t mind getting sweaty and keep sessions reasonable so everyone gets a turn. And if you want to keep the benefits going long after race weekend, use code **VACATIONRACES** to save up to $150 on your own sauna from All Day Sauna Co.",
-                "imageUrl": "/images/uploads/1788445388480-screenshot-2026-09-03-at-8.22.46-am.png",
+                "imageUrl": "/images/uploads/1788445388480-screenshot-2026-09-03-at-8.22.46-am.webp",
                 "icon": "flame",
                 "url": "https://alldaysaunaco.com/?srsltid=AfmBOoqWvENfBsAfDpEeHKlgiqe2gnYiHfqFyQy6gljaxKoNNeZqEwjo&utm_source=Vacation+Races+New&utm_campaign=14989a4a2e-EMAIL_CAMPAIGN_2026_06_01_04_15&utm_medium=email&utm_term=0_-14989a4a2e-579528251&mc_cid=14989a4a2e&mc_eid=c314a27872"
               },
@@ -636,7 +636,7 @@
                 "title": "Yoga with Tiffany Smith",
                 "eyebrow": "Thu–Sat · 45 minutes",
                 "body": "Two instructor-led sessions each afternoon after the race, 4:00–4:45 PM and 5:00–5:45 PM. Bring your own yoga mat or use one of VR’s mats (limited quantities). Additional recovery tools such as foam rollers are available in the recovery area for self-guided work.",
-                "imageUrl": "/images/uploads/1788444723088-screenshot-2026-09-03-at-8.11.54-am.png",
+                "imageUrl": "/images/uploads/1788444723088-screenshot-2026-09-03-at-8.11.54-am.webp",
                 "icon": "person"
               },
               {
@@ -773,7 +773,7 @@
         "heading": "Meals & Dining",
         "tone": "light",
         "intro": "Dinner is served nightly from 5pm-8pm at the Main Pavilion. Grab and go breakfast is available at the concession window at the Main Pavilion every race morning. There will be a runner recovery tent with light recovery foods and some hot food options waiting at each finish line. Lunch is on you — Kanab has more incredible food options than a three-day weekend can cover. Check out our suggestions below! \n\n[Full Participant Culinary Guide](https://motivsports.sharepoint.com/:b:/s/vacationracesevents/IQAl65gPWtGtTbvcgniuCib-ASk1ePRJb2G7F8ig6nUsk3k?e=TfCagr)",
-        "imageUrl": "/images/uploads/1787245245742-screenshot-2026-08-20-at-11.00.34-am.png",
+        "imageUrl": "/images/uploads/1787245245742-screenshot-2026-08-20-at-11.00.34-am.webp",
         "groups": [
           {
             "heading": "Dining at a Glance",
@@ -1033,7 +1033,7 @@
         "heading": "Performers",
         "tone": "darkest",
         "intro": "Keynotes, live music, Indigenous performances, and two film festivals — all included with your registration.",
-        "imageUrl": "/images/uploads/1787246145500-screenshot-2026-08-20-at-11.15.24-am.png",
+        "imageUrl": "/images/uploads/1787246145500-screenshot-2026-08-20-at-11.15.24-am.webp",
         "groups": [
           {
             "heading": "Keynote & Indigenous Performances",
@@ -1405,7 +1405,7 @@
           "difficulty": "",
           "elevation": "Kanab sits within reach of three adjacent National Parks, two National Monuments, a Navajo Tribal Park, and Lake Powell.",
           "url": "https://www.visitsouthernutah.com/play/",
-          "imageUrl": "/images/uploads/1788453395028-test-autosync-1000079-1744388105772-0.jpg"
+          "imageUrl": "/images/uploads/1788453395028-test-autosync-1000079-1744388105772-0.webp"
         },
         {
           "name": "Stay at Camp",
@@ -1413,7 +1413,7 @@
           "difficulty": "",
           "elevation": "Yoga classes, lawn games, massage therapists, local vendors and shops — plenty to do for anyone not heading out on the trails.",
           "url": "",
-          "imageUrl": "/images/uploads/1788452661157-screenshot-2026-09-03-at-10.24.07-am.png"
+          "imageUrl": "/images/uploads/1788452661157-screenshot-2026-09-03-at-10.24.07-am.webp"
         }
       ],
       "activities": [
