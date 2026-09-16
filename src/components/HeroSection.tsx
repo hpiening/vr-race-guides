@@ -97,7 +97,7 @@ function HeroTrailhead({ event }: { event: EventData }) {
   const editing = !!useEditOptional()?.editing
   return (
     <header
-      className="relative flex flex-col justify-end overflow-hidden min-h-[78vh] md:min-h-[82vh]"
+      className="tl-hero relative flex flex-col justify-end overflow-hidden min-h-[78vh] md:min-h-[82vh]"
       style={{ background: 'var(--tl-hero-grad)' }}
     >
       {event.heroImage && (

@@ -329,7 +329,7 @@ body {
   /* Prevent orphaned headings and keep cards/blocks from splitting mid-page */
   h2, h3, h4 { break-after: avoid; }
   li, dd, figure, blockquote, details, .rounded-lg, .rounded-xl { break-inside: avoid; }
-  img { break-inside: avoid; max-width: 100% !important; height: auto !important; }
+  img { break-inside: avoid; max-width: 100% !important; }
 
   /* Shrink the oversized hero badge on the cover page */
   .tl-hero-shield { height: 110px !important; }
@@ -343,8 +343,6 @@ body {
      and the address below it remain. */
   .map-embed-frame { display: none !important; }
 
-  /* Give the Welcome note its own page in the exported PDF. */
-  .guide-welcome { break-before: page; break-after: page; }
 }
 
 /* ─── Trailhead theme — native <details> accordions ─────────────── */
@@ -375,8 +373,9 @@ html { scroll-behavior: smooth; }
      open/closed state, and drop the +/× affordance. */
   [data-theme='trailhead'] details > *:not(summary) { display: block !important; }
   [data-theme='trailhead'] .tl-plus { display: none !important; }
-  /* Photo-band placeholders & decorative watermarks add nothing on paper. */
-  [data-theme='trailhead'] .tl-photoband,
+  /* The hatched "photo to come" placeholder and the 7%-opacity watermark are
+     the only two things that genuinely don't belong on paper. Photo bands and
+     real photographs are handled in the print block at the end of this file. */
   [data-theme='trailhead'] .tl-photoph,
   [data-theme='trailhead'] .tl-watermark { display: none !important; }
 }
@@ -445,11 +444,26 @@ html { scroll-behavior: smooth; }
 
 /* ─── Print / "Export PDF" — an onsite paper reference ───────────────────
    The screen design is cream-on-dark. Printed as-is that floods a printer with
-   toner and reads badly, so print flips to a document: white paper, dark ink,
-   decorative photography dropped, functional maps kept. Deliberately explicit
-   about backgrounds and text colour rather than relying on the browser's
-   "background graphics" checkbox, which is off by default and would otherwise
-   leave cream text on white paper. */
+   toner, so body copy flips to a document: white paper, dark ink. Deliberately
+   explicit about backgrounds and text colour rather than relying on the
+   browser's "background graphics" checkbox, which is off by default and would
+   otherwise leave cream text on white paper.
+
+   The first draft of this took "flip to a document" too far: it dropped every
+   photograph and forced every last glyph to black, which produced a fifty-page
+   black-and-white document with nine pictures in it — and a blank box wherever
+   a hidden photo had been, because the frame keeps its aspect ratio when the
+   image inside it goes. So: photographs and maps all print, and colour is
+   spent deliberately on the cover and on the things a runner scans for. */
+
+@page {
+  size: letter;
+  /* Pinned, so the export is the same document whatever the print dialog's
+     margin setting happens to be — this guide gets passed around and printed
+     on whatever is to hand onsite. */
+  margin: 11mm 10mm 13mm;
+}
+
 @media print {
   html, body { background: #fff !important; }
 
@@ -462,8 +476,9 @@ html { scroll-behavior: smooth; }
     background-image: none !important;
     box-shadow: none !important;
   }
-  /* ...and all type to ink. Category icons use `stroke`, not `color`, so they
-     keep their hue and stay the at-a-glance cue. */
+  /* ...and all type to ink. Anything that should keep its colour overrides
+     this below; every one of those selectors carries a class, so it wins on
+     specificity over `body *`. */
   body, body * { color: #191008 !important; }
   .tl-link { text-decoration-color: rgba(25,16,8,0.5) !important; }
 
@@ -471,56 +486,200 @@ html { scroll-behavior: smooth; }
   [class*="border-vr-cream"] { border-color: rgba(25,16,8,0.22) !important; }
   [class*="border-vr-line"]  { border-color: rgba(25,16,8,0.3) !important; }
 
-  /* Decorative imagery off: the hero photo, section mood shots, performer
-     portraits, and the road-trip maps (that journey is over by the time this
-     guide is in someone's hand onsite). */
-  .tl-hero-photo,
-  .tl-expo-images,
-  .guide-welcome img,
-  #basecamp img, #meals img, #entertainment img,
-  footer img {
-    display: none !important;
+  /* ── Imagery ──────────────────────────────────────────────────────────
+     Everything real prints: the cover shot, the welcome photo, clinic and
+     performer portraits, the road-trip maps, the HQ and campground maps,
+     course maps, partner logos. Photographs carry their own colour, and are
+     most of the reason the printed guide looks like the guide. */
+  img {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
   }
-  /* Functional graphics stay: the HQ map, the campground map, course maps. */
-  #expo img, #camping img, #course-info img { display: block !important; }
+  /* No single picture should own a page. A PhotoFrame in a card is already
+     sized by its column; these are the full-width ones. */
+  .guide-welcome img { max-height: 58mm !important; width: auto !important; }
+  #expo img, #camping img { max-height: 108mm !important; object-fit: contain !important; }
 
-  /* Keep the event badge on the cover for identity. */
-  .tl-hero-shield { display: block !important; }
+  /* ── The cover ────────────────────────────────────────────────────────
+     The one page that prints exactly as designed — hero photograph, the scrim
+     that keeps the title legible over it, cream type, and the event badge.
+     `exact` is what makes it print with "Background graphics" unticked. */
+  header.tl-hero,
+  header.tl-hero * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  header.tl-hero {
+    background: var(--tl-hero-grad) !important;
+    min-height: 90vh !important;
+    break-after: page;
+  }
+  header.tl-hero h1,
+  header.tl-hero p,
+  header.tl-hero span,
+  header.tl-hero div { color: rgb(var(--vr-cream-rgb)) !important; }
+  .tl-hero-shield { display: block !important; height: clamp(90px, 15vh, 150px) !important; }
 
-  /* The screen headings are vw-based, which on a page becomes enormous. */
+  /* ── Colour that earns its place ──────────────────────────────────────
+     Body copy stays ink on white: forty pages of reversed-out colour is
+     unreadable and empties a cartridge. Colour goes where it helps someone
+     find their place — the script eyebrows, the filled day and group bars,
+     the schedule's category rules, and the card badges. */
+  .font-accent,
+  [class*="text-vr-sky"],
+  [class*="text-vr-floral"],
+  [class*="text-vr-sandstone"] {
+    color: rgb(var(--vr-sky-rgb)) !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .tl-day-bar, .tl-label-bar {
+    background: rgb(var(--vr-pine-rgb)) !important;
+    border-radius: 3pt !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .tl-day-bar, .tl-day-bar *,
+  .tl-label-bar, .tl-label-bar * { color: rgb(var(--vr-cream-rgb)) !important; }
+
+  /* Badges kept their fill this time, so the knocked-out glyph still reads. */
+  .tl-badge {
+    background: rgb(var(--vr-pine-rgb)) !important;
+    border-radius: 2pt !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  .tl-badge, .tl-badge * { color: rgb(var(--vr-cream-rgb)) !important; }
+
+  /* The schedule's coloured left rule is the at-a-glance category cue, and
+     the legend above it is meaningless without it. */
+  .tl-print-row, .tl-print-day {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+
+  /* ── Section divider bands ────────────────────────────────────────────
+     These were hidden, which is why an "On the Course" or "Post Race" page
+     arrived with no title plate. Printed at the head of the section they
+     introduce, they work as running dividers. */
+  [data-theme='trailhead'] .tl-photoband {
+    display: block !important;
+    padding: 9mm 0 !important;
+    break-before: page;
+    break-after: avoid;
+    break-inside: avoid;
+    border: none !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  /* The band belongs to the section under it, so don't let that section's
+     own page break split the two apart. */
+  .tl-photoband + section { break-before: avoid !important; }
+  /* With a photo: keep the darkening scrim so the title reads over it. */
+  .tl-photoband > div[class*="bg-vr-night"] {
+    background: rgba(var(--vr-night-rgb) / 0.55) !important;
+  }
+  /* Without one: a flat brand bar, not the diagonal hatch, which prints as mud. */
+  .tl-photoband > div[class*="opacity-"] {
+    background: rgb(var(--vr-pine-rgb)) !important;
+    opacity: 1 !important;
+  }
+  .tl-photoband h2 {
+    color: rgb(var(--vr-cream-rgb)) !important;
+    font-size: 21pt !important;
+  }
+
+  /* ── Type sizes ───────────────────────────────────────────────────────
+     The screen headings are vw-based, which on a page becomes enormous. */
   h1 { font-size: 26pt !important; line-height: 1.05 !important; }
   h2 { font-size: 17pt !important; line-height: 1.1 !important; }
   h3 { font-size: 12pt !important; }
   h4 { font-size: 11pt !important; }
+  header.tl-hero h1 { font-size: 34pt !important; }
 
-  /* Tighter margins than the on-screen 104px section padding. */
-  section { padding: 18pt 30pt !important; }
+  /* @page now provides the gutter, so the section padding is only the gap
+     between a section's rule and its content. */
+  section { padding: 10pt 0 !important; }
 
-  /* Badges lose their fill on paper, which would leave a knocked-out glyph
-     invisible on white. Outline them instead — the print block above has
-     already forced the glyph itself to ink. */
-  .tl-badge {
-    border: 0.9pt solid #191008 !important;
-    border-radius: 2pt !important;
-  }
-
-  /* Filled bars lose their fill on white paper, so the day header would read as
-     plain text. A rule under it keeps it working as a header. */
-  .tl-day-bar {
-    border-bottom: 1.5pt solid #191008 !important;
-    border-radius: 0 !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
-  }
-
-  /* Each schedule row and card should survive a page break intact. */
-  .tl-print-row, .tl-print-day, details, .rounded-lg { break-inside: avoid; }
-
-  /* Start each major section on a fresh page so someone onsite can flip to
-     "Courses" or "Campground" instead of hunting mid-page. Costs a few pages;
-     worth it for a reference document. */
+  /* ── Page breaks ──────────────────────────────────────────────────────
+     Start each major section on a fresh page so someone onsite can flip to
+     "Courses" or "Campground" instead of hunting mid-page. */
   section { break-before: page; }
   section:first-of-type { break-before: auto; }
-  /* The dividers are hidden in print, so don't let them leave blank pages. */
-  .tl-photoband { break-before: avoid; break-after: avoid; }
+  /* The welcome note is the first section, so it needs to beat the rule
+     above — and it reads as one piece, so it shouldn't be split in half. */
+  .guide-welcome {
+    break-before: page !important;
+    break-inside: avoid;
+  }
+  /* The page box is narrower than Tailwind's `md` breakpoint, so every md:
+     grid collapses to a single column in print. Mostly that's fine and reads
+     well on paper — but it doubled the height of the welcome note and pushed
+     its closing paragraph onto a page of its own. Restore the design's two
+     columns for this one section, which is meant to be read as a whole. */
+  [data-theme='trailhead'] .guide-welcome > div {
+    display: grid !important;
+    grid-template-columns: 0.8fr 1.2fr !important;
+    gap: 7mm !important;
+    align-items: start !important;
+  }
+  /* The welcome carries its on-screen 18px body into the PDF, a third bigger
+     than the 11pt the rest of the document sets — which is what actually
+     pushed the closing note onto a page of its own. */
+  .guide-welcome [class*="font-body"] {
+    font-size: 11pt !important;
+    line-height: 1.55 !important;
+  }
+
+  /* A heading must never be the last thing on a page. `break-after: avoid`
+     on the <h3> itself does nothing when the heading is boxed inside a bar
+     or an eyebrow wrapper — the break falls after the WRAPPER — which is how
+     Recovery / Dinner Menus / Beer Garden / Zion / Where to eat all ended up
+     stranded at a page foot with their content overleaf. */
+  h2, h3, h4 { break-after: avoid !important; }
+  /* `break-after: avoid` is the correct property and Chrome ignores it between
+     siblings, so the heading is held to its content the way print stylesheets
+     have always had to do it: extend the heading's own box down over the space
+     the first lines of content will take, forbid a break inside that box, then
+     pull the following content back up by the same amount so nothing moves on
+     the page. If there isn't 24mm left below the heading, the whole heading
+     goes over with its content instead of being stranded. */
+  .tl-keep-next {
+    display: block !important;
+    break-inside: avoid;
+    break-after: avoid;
+  }
+  .tl-keep-next::after {
+    content: '';
+    display: block;
+    height: 38mm;
+    margin-bottom: -38mm;
+  }
+  /* The course name sits in a flex column inside a grid cell. Both establish
+     a block formatting context, so the ::after's negative margin can't
+     collapse out and the box never grows — the reserve has to be padding
+     here. Safe because this one has no margin of its own to preserve; its
+     spacing comes from the flex `gap`. */
+  #course-info .tl-keep-next {
+    padding-bottom: 38mm !important;
+    margin-bottom: -38mm !important;
+  }
+  #course-info .tl-keep-next::after { display: none; }
+
+  /* Keep small units whole, but let a long card split rather than jump to the
+     next page and leave the foot of this one empty — that was the hole under
+     Shuttles and Volunteers. */
+  .tl-print-row, .tl-print-day, .tl-badge, figure, blockquote { break-inside: avoid; }
+  /* Cards stay whole. Splitting one leaves its bottom border alone at the top
+     of the next page, which reads as a fault rather than as a page break. */
+  .rounded-lg, .rounded-xl, details, li, dd { break-inside: avoid; }
+  /* The exception: the tall single-column info blocks — Shuttles, Volunteers,
+     the camping notes. Keeping those whole is what made one jump to the next
+     page and leave the foot of the previous one empty. */
+  #expo .rounded-lg, #camping .rounded-lg { break-inside: auto; }
+  /* ...but not a card that is mostly a picture. Needs the id in the selector
+     to outrank the rule above. */
+  #expo .tl-expo-images .rounded-lg { break-inside: avoid; }
+  /* EditableText renders body copy into divs, so this can't be p/li only. */
+  p, li, div { orphans: 3; widows: 3; }
 }

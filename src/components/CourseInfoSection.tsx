@@ -215,7 +215,7 @@ function CourseInfoTrailhead({ data, basePath, editing }: { data: EventData['sec
             </div>
             )}
             <div className="flex flex-col gap-4">
-              <EditableText as="div" className="font-heading uppercase text-vr-cream text-[20px] tracking-[0.02em]" value={d.name} path={`${basePath}.distances.${i}.name`} />
+              <EditableText as="div" className="tl-keep-next font-heading uppercase text-vr-cream text-[20px] tracking-[0.02em]" value={d.name} path={`${basePath}.distances.${i}.name`} />
               {editing ? (
                 <div className="space-y-1">
                   <EditableText as="div" className="font-micro text-xs text-vr-cream/75" value={d.stats ?? ''} path={`${basePath}.distances.${i}.stats`} placeholder="Fallback stats string" />

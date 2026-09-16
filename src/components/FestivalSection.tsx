@@ -94,8 +94,8 @@ export default function FestivalSection({ data, index }: Props) {
 
     return (
       <div key={gi} className="mb-11">
-        <div className="flex items-stretch gap-2 mb-[18px]">
-          <div className={`flex items-center gap-2.5 flex-1 min-w-0 px-4 py-2.5 rounded ${barBg}`}>
+        <div className="tl-keep-next flex items-stretch gap-2 mb-[18px]">
+          <div className={`tl-label-bar flex items-center gap-2.5 flex-1 min-w-0 px-4 py-2.5 rounded ${barBg}`}>
             {group.icon && <CardIconMark icon={group.icon} size={17} className={barText} />}
             <EditableText
               as="h3"

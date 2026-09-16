@@ -248,7 +248,7 @@ function ExpoTrailhead({ data, basePath, editing }: { data: EventData['sections'
             Each slot is an editable image control in /edit. */}
         {((data.images && data.images.length > 0) || editing) && (
           <div className="mt-14">
-            <div className="leading-[0.9] mb-2">
+            <div className="tl-keep-next leading-[0.9] mb-2">
               <span className="font-accent text-vr-sky" style={{ fontSize: 'clamp(18px,2vw,24px)' }}>
                 <EditableText as="span" value={data.imagesHeading ?? ''} path={`${basePath}.imagesHeading`} placeholder="Images heading (optional)" />
               </span>

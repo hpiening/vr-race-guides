@@ -176,7 +176,7 @@ export default function ExperiencesSection({ data, basePath = 'sections.experien
 
 /* ── Trailhead view (renders in both view + edit mode) ── */
 function ExperiencesTrailhead({ data, basePath, editing }: { data: EventData['sections']['experiences']; basePath: string; editing: boolean }) {
-  const subhead = 'font-heading uppercase text-vr-forest mb-[18px] text-[16px] tracking-[0.06em]'
+  const subhead = 'tl-keep-next font-heading uppercase text-vr-forest mb-[18px] text-[16px] tracking-[0.06em]'
   return (
     <section id="experiences" className="bg-vr-offwhite px-6 md:px-12 py-20 md:py-[104px]">
       <div className="max-w-[1180px] mx-auto">
@@ -332,7 +332,7 @@ function ExperiencesTrailhead({ data, basePath, editing }: { data: EventData['se
         {/* Restaurants */}
         {(data.restaurants.length > 0 || editing) && (
           <>
-            <div className="mt-16 mb-3.5">
+            <div className="tl-keep-next mt-16 mb-3.5">
               <div className="leading-[0.9]"><span className="font-accent text-vr-sky" style={{ fontSize: 'clamp(20px,2.2vw,28px)' }}>Where to eat</span></div>
               <h2 className="font-display uppercase text-vr-forest leading-[0.9] m-0" style={{ fontSize: 'clamp(34px,4.6vw,60px)' }}><EditableText as="span" value={data.restaurantsHeading || 'Restaurants in Estes Park'} path={`${basePath}.restaurantsHeading`} /></h2>
             </div>
