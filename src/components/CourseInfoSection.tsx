@@ -157,10 +157,11 @@ function CourseInfoTrailhead({ data, basePath, editing }: { data: EventData['sec
     <section id="course-info" className="relative bg-vr-deep overflow-hidden px-6 md:px-12 py-20 md:py-[104px]">
       <div className="max-w-[1180px] mx-auto">
         <div className="mb-10">
-          {/* Skip the "The course" eyebrow when the heading already says "course"
-              (redundant, e.g. "Course Info"); keep it for headings like "5K Info". */}
-          {!/course/i.test(data.heading || 'Course Info') && (
-            <div className="leading-[0.9]"><span className="font-accent text-vr-sky" style={{ fontSize: 'clamp(20px,2.2vw,28px)' }}>The course</span></div>
+          {/* An explicit `eyebrow` always wins. Otherwise skip the default
+              "The course" when the heading already says "course" (redundant,
+              e.g. "Course Info"); keep it for headings like "5K Info". */}
+          {(data.eyebrow || !/course/i.test(data.heading || 'Course Info')) && (
+            <div className="leading-[0.9]"><span className="font-accent text-vr-sky" style={{ fontSize: 'clamp(20px,2.2vw,28px)' }}>{data.eyebrow || 'The course'}</span></div>
           )}
           <h2 className="font-display uppercase text-vr-cream leading-[0.9] mt-0.5 m-0" style={{ fontSize: 'clamp(40px,5.6vw,76px)' }}>
             <EditableText as="span" value={data.heading || 'Course Info'} path={`${basePath}.heading`} />
@@ -292,6 +293,16 @@ function CourseInfoTrailhead({ data, basePath, editing }: { data: EventData['sec
         })}
 
         {(data.schedule && data.schedule.length > 0 || editing) && (
+          <>
+          {(data.scheduleHeading || editing) && (
+            <EditableText
+              as="h3"
+              className="font-heading uppercase text-vr-cream mb-4 text-[16px] tracking-[0.06em]"
+              value={data.scheduleHeading ?? ''}
+              path={`${basePath}.scheduleHeading`}
+              placeholder="Heading (optional)"
+            />
+          )}
           <div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4 mb-10">
             {(data.schedule ?? []).map((item, i) => (
               <div key={i} className="bg-vr-cream/5 border border-vr-cream/10 rounded-lg p-5">
@@ -305,6 +316,7 @@ function CourseInfoTrailhead({ data, basePath, editing }: { data: EventData['sec
             ))}
             <div className="col-span-full"><AddButton path={`${basePath}.schedule`} item={{ time: '', label: 'New item' }} label="Add schedule item" /></div>
           </div>
+          </>
         )}
 
         {editing ? (

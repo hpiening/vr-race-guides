@@ -162,7 +162,7 @@ export default function ScheduleSection({ data, eventSlug, basePath = 'sections.
         {watermark}
         <div className="relative z-10 max-w-[880px] mx-auto text-center">
           <div className="leading-[0.9]">
-            <span className="font-accent text-vr-sky" style={{ fontSize: 'clamp(20px,2.2vw,28px)' }}>Race weekend</span>
+            <span className="font-accent text-vr-sky" style={{ fontSize: 'clamp(20px,2.2vw,28px)' }}>{data.eyebrow || 'Race weekend'}</span>
           </div>
           <h2 className="font-display uppercase text-vr-cream leading-[0.9] mt-0.5 mb-10" style={{ fontSize: 'clamp(40px,6vw,80px)' }}>Schedule</h2>
 

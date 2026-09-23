@@ -167,16 +167,46 @@ export interface CardGroup {
 }
 
 /**
+ * Which seam of the fixed section order a Festival section renders at — each
+ * value means "immediately after that section". The engine's order is shared by
+ * every guide, so a design needing a block somewhere other than the default
+ * seam pins it here (Joshua Tree's mandatory-light callout sits between Welcome
+ * and Schedule; its Course Records panel follows the course).
+ */
+export type FestivalSlot =
+  | 'welcome'
+  | 'schedule'
+  | 'expo'
+  | 'course-info'
+  | 'race-morning'
+  | 'spectators'
+  | 'post-race'
+  | 'experiences'
+
+/**
  * Optional extra content section for festival-style events — e.g. Grand Circle
  * Trailfest's Basecamp / Meals / Entertainment, which have no home in the
- * single-race section set. Each entry renders as its own <section> between
- * Camping and On-the-Course, with its own sticky-nav entry. Guides with no
- * `festival` array are completely unaffected.
+ * single-race section set. Each entry renders as its own <section>, by default
+ * between Camping and On-the-Course, with its own sticky-nav entry. Guides with
+ * no `festival` array are completely unaffected.
  */
 export interface FestivalSectionData {
   enabled: boolean
   /** Anchor id + nav target. Must be unique and URL-safe (e.g. 'basecamp'). */
   id: string
+  /**
+   * Where the section renders — see FestivalSlot. Absent = 'expo' (after
+   * Camping, before the On-the-Course band), which is where every festival
+   * section rendered before this field existed, so existing guides are
+   * unchanged.
+   */
+  slot?: FestivalSlot
+  /**
+   * Keep the section out of the sticky nav, for blocks the design deliberately
+   * leaves out of the nav strip (Joshua Tree's Course Records and Zero Waste).
+   * Absent/false = a nav entry, as before.
+   */
+  hideFromNav?: boolean
   /** Sticky-nav label. */
   navLabel: string
   /** Italic accent eyebrow above the heading. */
@@ -299,6 +329,8 @@ export interface EventData {
     welcome?: WelcomeData
     schedule: {
       enabled: boolean
+      /** Optional italic eyebrow above the heading. Defaults to "Race weekend". */
+      eyebrow?: string
       days: ScheduleDay[]
       /** Optional faint full-section background photo (Trailhead). */
       backgroundImage?: string
@@ -360,9 +392,20 @@ export interface EventData {
       enabled: boolean
       heading?: string
       navLabel?: string
+      /**
+       * Optional italic eyebrow above the heading. Absent = the engine's own
+       * rule (show "The course" unless the heading already says "course").
+       */
+      eyebrow?: string
       /** Optional lead paragraph under the heading (Trailhead). */
       intro?: string
       schedule?: ScheduleItem[]
+      /**
+       * Optional heading above the `schedule` card grid. Joshua Tree uses that
+       * grid for its mile-by-mile terrain table, which the design titles
+       * "Terrain, Mile by Mile". Absent = no heading, as before.
+       */
+      scheduleHeading?: string
       distances: CourseDistance[]
       strollerPolicy: string
       dogPolicy: string

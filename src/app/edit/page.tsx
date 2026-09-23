@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useState, useCallback } from 'react'
-import { EventData } from '@/types/event'
+import { EventData, FestivalSlot } from '@/types/event'
 import { EditProvider } from '@/lib/editContext'
 import FormatToolbar from '@/components/edit/FormatToolbar'
 import { getIdentity, readJson, commitJson } from '@/lib/gitGateway'
@@ -132,6 +132,17 @@ export default function EditPage() {
 
   const theme: 'classic' | 'trailhead' = data.theme === 'trailhead' ? 'trailhead' : 'classic'
 
+  // Festival sections render at the seam named by their `slot` (default 'expo').
+  // Mirrors [slug]/page.tsx so the editor and the published page cannot drift.
+  // Unlike the public page this ignores `enabled` — the editor shows every
+  // section so it can be switched on — and ignores `hideFromNav`, which only
+  // affects the nav strip.
+  const editFestivals = (slot: FestivalSlot) =>
+    (data.sections.festival ?? [])
+      .map((f, i) => ({ f, i }))
+      .filter(({ f }) => (f.slot ?? 'expo') === slot)
+      .map(({ f, i }) => <FestivalSection key={f.id || i} data={f} index={i} theme={theme} />)
+
   return (
     <div className="pt-14">
       {/* Save bar */}
@@ -174,19 +185,26 @@ export default function EditPage() {
         <AlertBanner alert={data.alert} slug={slug} />
         <HeroSection event={data} theme={theme} />
         {data.sections.welcome && <WelcomeSection data={data.sections.welcome} basePath="sections.welcome" theme={theme} />}
+        {editFestivals('welcome')}
         {data.sections.schedule && <ScheduleSection data={data.sections.schedule} eventSlug={slug} basePath="sections.schedule" theme={theme} />}
+        {editFestivals('schedule')}
         {data.sections.expo && <ExpoSection data={data.sections.expo} basePath="sections.expo" theme={theme} />}
         {data.sections.camping && <CampingSection data={data.sections.camping} basePath="sections.camping" theme={theme} />}
-        {(data.sections.festival ?? []).map((f, i) => <FestivalSection key={f.id || i} data={f} index={i} theme={theme} />)}
+        {editFestivals('expo')}
         {theme === 'trailhead' && data.sections.courseInfo && <PhotoBand title="On the Course" image={data.photoBands?.onCourse} imagePath="photoBands.onCourse" />}
         {data.sections.courseInfo && <CourseInfoSection data={data.sections.courseInfo} basePath="sections.courseInfo" theme={theme} />}
+        {editFestivals('course-info')}
         {theme === 'trailhead' && data.sections.raceMorning && <PhotoBand title="Race Morning" image={data.photoBands?.raceMorning} imagePath="photoBands.raceMorning" />}
         {data.sections.raceMorning && <RaceMorningSection data={data.sections.raceMorning} basePath="sections.raceMorning" theme={theme} />}
+        {editFestivals('race-morning')}
         {data.sections.spectators && <SpectatorsSection data={data.sections.spectators} basePath="sections.spectators" theme={theme} />}
+        {editFestivals('spectators')}
         {theme === 'trailhead' && data.sections.postRace && <PhotoBand title="Post Race" image={data.photoBands?.postRace} imagePath="photoBands.postRace" />}
         {data.sections.postRace && <PostRaceSection data={data.sections.postRace} basePath="sections.postRace" theme={theme} />}
+        {editFestivals('post-race')}
         {data.sections.challengeEvents && <ChallengeEventsSection data={data.sections.challengeEvents} basePath="sections.challengeEvents" theme={theme} />}
         {data.sections.experiences && <ExperiencesSection data={data.sections.experiences} basePath="sections.experiences" theme={theme} />}
+        {editFestivals('experiences')}
         {data.sections.faqs && <FAQSection data={data.sections.faqs} basePath="sections.faqs" theme={theme} />}
         {data.partners && <PartnersSection data={data.partners} basePath="partners" theme={theme} />}
         </div>

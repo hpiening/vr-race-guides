@@ -10,6 +10,11 @@ interface MapEmbedProps {
 }
 
 export default function MapEmbed({ lat, lng, label, mapsUrl, zoom = 15, dark = true }: MapEmbedProps) {
+  // No coordinates yet (a venue whose pin hasn't been supplied) => no map.
+  // Rendering anyway put a marker at 0,0 — a blank map of the Gulf of Guinea —
+  // which looks like a broken embed rather than missing data. The Google Maps
+  // button still works because it uses the address URL, not the coordinates.
+  const hasCoords = Boolean(lat) && Boolean(lng)
   const buf = zoom >= 15 ? 0.012 : 0.025
   const embedSrc =
     `https://www.openstreetmap.org/export/embed.html` +
@@ -35,26 +40,30 @@ export default function MapEmbed({ lat, lng, label, mapsUrl, zoom = 15, dark = t
 
   return (
     <div className="flex flex-col gap-3">
-      <div className="map-embed-frame aspect-[4/3] w-full rounded-lg overflow-hidden border border-vr-forest/10">
-        <iframe
-          title={label}
-          src={embedSrc}
-          width="100%"
-          height="100%"
-          style={{ border: 0 }}
-          loading="lazy"
-          className="rounded-lg"
-        />
-      </div>
+      {hasCoords && (
+        <div className="map-embed-frame aspect-[4/3] w-full rounded-lg overflow-hidden border border-vr-forest/10">
+          <iframe
+            title={label}
+            src={embedSrc}
+            width="100%"
+            height="100%"
+            style={{ border: 0 }}
+            loading="lazy"
+            className="rounded-lg"
+          />
+        </div>
+      )}
       <div className="flex gap-2">
         <a href={mapsUrl} target="_blank" rel="noopener noreferrer" className={btnGoogle}>
           {pinIcon}
           Google Maps
         </a>
-        <a href={appleMapsUrl} target="_blank" rel="noopener noreferrer" className={btnApple}>
-          {pinIcon}
-          Apple Maps
-        </a>
+        {hasCoords && (
+          <a href={appleMapsUrl} target="_blank" rel="noopener noreferrer" className={btnApple}>
+            {pinIcon}
+            Apple Maps
+          </a>
+        )}
       </div>
     </div>
   )

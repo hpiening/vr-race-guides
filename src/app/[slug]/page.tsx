@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import fs from 'fs'
 import path from 'path'
-import { EventData } from '@/types/event'
+import { EventData, FestivalSlot } from '@/types/event'
 import type { SearchItem } from '@/components/SearchBar'
 import HeroSection from '@/components/HeroSection'
 import StickyNav from '@/components/StickyNav'
@@ -161,19 +161,34 @@ export default async function EventPage({ params }: { params: { slug: string } }
   const searchIndex = buildSearchIndex(event)
   const theme: 'classic' | 'trailhead' = event.theme === 'trailhead' ? 'trailhead' : 'classic'
 
+  // Festival sections are pinned to a seam of the fixed section order by their
+  // `slot` (default 'expo' = after Camping, where they have always rendered).
+  // Nav and render order are both derived from it, so they cannot drift.
+  const festivals = (sections.festival ?? []).map((f, i) => ({ f, i })).filter(({ f }) => f.enabled)
+  const festivalsAt = (slot: FestivalSlot) => festivals.filter(({ f }) => (f.slot ?? 'expo') === slot)
+  const renderFestivals = (slot: FestivalSlot) =>
+    festivalsAt(slot).map(({ f, i }) => <FestivalSection key={f.id} data={f} index={i} theme={theme} />)
+  const navFestivals = (slot: FestivalSlot) =>
+    festivalsAt(slot).filter(({ f }) => !f.hideFromNav).map(({ f }) => ({ id: f.id, label: f.navLabel }))
+
   const navItems = [
+    ...navFestivals('welcome'),
     sections.schedule.enabled             && { id: 'schedule',          label: 'Schedule' },
+    ...navFestivals('schedule'),
     sections.expo.enabled                 && { id: 'expo',              label: sections.expo.navLabel || 'Expo' },
     sections.camping?.enabled             && { id: 'camping',           label: 'Campground' },
-    ...(sections.festival ?? [])
-      .filter(f => f.enabled)
-      .map(f => ({ id: f.id, label: f.navLabel })),
+    ...navFestivals('expo'),
     sections.courseInfo.enabled           && { id: 'course-info',       label: sections.courseInfo.navLabel || 'Course Info' },
+    ...navFestivals('course-info'),
     sections.raceMorning.enabled          && { id: 'race-morning',      label: sections.raceMorning.navLabel || 'Race Morning' },
+    ...navFestivals('race-morning'),
     sections.spectators.enabled           && { id: 'spectators',        label: 'Spectators' },
+    ...navFestivals('spectators'),
     sections.postRace.enabled             && { id: 'post-race',         label: sections.postRace.navLabel || 'Post-Race' },
+    ...navFestivals('post-race'),
     sections.challengeEvents?.enabled     && { id: 'challenge-events',  label: 'Challenge Events' },
     sections.experiences.enabled          && { id: 'experiences',       label: sections.experiences.navLabel || 'Experiences' },
+    ...navFestivals('experiences'),
     sections.faqs.enabled                 && { id: 'faqs',              label: 'FAQs' },
   ].filter(Boolean) as { id: string; label: string }[]
 
@@ -188,19 +203,26 @@ export default async function EventPage({ params }: { params: { slug: string } }
       {!isTrail && <StickyNav items={navItems} theme={theme} />}
       <main>
         {sections.welcome?.enabled        && <WelcomeSection     data={sections.welcome} theme={theme} />}
+        {renderFestivals('welcome')}
         {sections.schedule.enabled        && <ScheduleSection    data={sections.schedule} eventSlug={event.slug} theme={theme} />}
+        {renderFestivals('schedule')}
         {sections.expo.enabled            && <ExpoSection        data={sections.expo} theme={theme} />}
         {sections.camping?.enabled        && <CampingSection     data={sections.camping} theme={theme} />}
-        {(sections.festival ?? []).map((f, i) => f.enabled && <FestivalSection key={f.id} data={f} index={i} theme={theme} />)}
+        {renderFestivals('expo')}
         {isTrail && sections.courseInfo.enabled && <PhotoBand title="On the Course" image={event.photoBands?.onCourse} />}
         {sections.courseInfo.enabled      && <CourseInfoSection  data={sections.courseInfo} theme={theme} />}
+        {renderFestivals('course-info')}
         {isTrail && sections.raceMorning.enabled && <PhotoBand title="Race Morning" image={event.photoBands?.raceMorning} />}
         {sections.raceMorning.enabled     && <RaceMorningSection data={sections.raceMorning} theme={theme} />}
+        {renderFestivals('race-morning')}
         {sections.spectators.enabled      && <SpectatorsSection  data={sections.spectators} theme={theme} />}
+        {renderFestivals('spectators')}
         {isTrail && sections.postRace.enabled && <PhotoBand title="Post Race" image={event.photoBands?.postRace} />}
         {sections.postRace.enabled        && <PostRaceSection    data={sections.postRace} theme={theme} />}
+        {renderFestivals('post-race')}
         {sections.challengeEvents?.enabled && <ChallengeEventsSection data={sections.challengeEvents!} theme={theme} />}
         {sections.experiences.enabled     && <ExperiencesSection data={sections.experiences} theme={theme} />}
+        {renderFestivals('experiences')}
         {sections.faqs.enabled            && <FAQSection         data={sections.faqs} theme={theme} />}
         {event.partners?.enabled          && <PartnersSection    data={event.partners} theme={theme} />}
       </main>
