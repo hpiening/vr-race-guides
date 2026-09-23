@@ -1,0 +1,843 @@
+{
+  "slug": "joshua-tree",
+  "theme": "trailhead",
+  "brand": "joshua-tree",
+  "name": "Joshua Tree Half Marathon",
+  "tagline": "Explore Joshua Tree by day — run it at night.",
+  "dates": "Saturday, November 7, 2026 · 13.1 Miles · 6:00 PM Start",
+  "heroImage": "",
+  "heroImageAlt": "Runners on the night course outside Joshua Tree",
+  "accentColor": "#B98FD0",
+  "shieldImage": "/images/events/joshua-tree-shield.png",
+  "favicon": "/images/events/joshua-tree-favicon.png",
+  "hidden": true,
+  "photoBands": {
+    "onCourse": "",
+    "postRace": ""
+  },
+  "footerImage": "",
+  "partners": {
+    "enabled": true,
+    "items": [
+      {
+        "name": "29 Palms (Presenting)",
+        "logoUrl": "",
+        "url": ""
+      },
+      {
+        "name": "Tortoise Rock Casino",
+        "logoUrl": "",
+        "url": ""
+      },
+      {
+        "name": "RESET Hotel",
+        "logoUrl": "",
+        "url": "https://www.stayreset.com"
+      },
+      {
+        "name": "Honey Stinger",
+        "logoUrl": "",
+        "url": ""
+      },
+      {
+        "name": "FinisherPix",
+        "logoUrl": "",
+        "url": ""
+      },
+      {
+        "name": "HotelPlanner",
+        "logoUrl": "",
+        "url": ""
+      },
+      {
+        "name": "Runna",
+        "logoUrl": "",
+        "url": ""
+      },
+      {
+        "name": "Wander Project",
+        "logoUrl": "",
+        "url": ""
+      },
+      {
+        "name": "+ Vendors to confirm",
+        "logoUrl": "",
+        "url": ""
+      }
+    ]
+  },
+  "sections": {
+    "welcome": {
+      "enabled": true,
+      "heading": "Welcome to the|Mojave",
+      "body": "This is a night race. Running through the desert outside Joshua Tree under the stars and the moon, with the quiet of the night, deep canyons in the distance, silhouetted buttes, and the twinkling desert all around, is an experience unlike any other race on our calendar. New for 2026: the start line, finish line, and expo are all at the RESET Hotel in Twentynine Palms, on an entirely new course.\n\nThe Mojave rewards preparation. Temperatures drop quickly after sunset, the sand gets deeper the further you go, and your light is the only thing between you and the dark. Come ready, run smart, and take a moment somewhere past mile 7 to switch off your headlamp and look up — there are few darker skies in Southern California.",
+      "closing": "See you under the stars! — The Vacation Races Team",
+      "note": "Note to runners: All of the following information is subject to change. If changes occur due to unforeseen circumstances, adjustments will be made to satisfy local permitting requirements while still delivering a top-tier running experience. We will inform runners of any changes as soon as they are finalized so participants can comfortably prepare for their Vacation Races experience.",
+      "imageUrl": ""
+    },
+    "schedule": {
+      "enabled": true,
+      "backgroundImage": "",
+      "days": [
+        {
+          "id": "day-1",
+          "label": "Race Day",
+          "date": "Saturday, November 7 · All times PT · Schedule subject to change",
+          "items": [
+            {
+              "time": "12:00 PM",
+              "label": "Race Expo & Bib Pickup Open"
+            },
+            {
+              "time": "3:00 PM",
+              "label": "Margarita Truck Opens"
+            },
+            {
+              "time": "4:30 PM",
+              "label": "All Cars Parked · Start Line Prize Raffle Begins",
+              "highlight": false
+            },
+            {
+              "time": "4:45 PM",
+              "label": "“Show Your Glow” Costume Contest Raffle"
+            },
+            {
+              "time": "5:00 PM",
+              "label": "Expo Closes · Last Call for Bib Pickup"
+            },
+            {
+              "time": "5:30 PM",
+              "label": "Pacers Line Up"
+            },
+            {
+              "time": "5:45 PM",
+              "label": "Runners Line Up · Gear Check Last Call",
+              "highlight": false
+            },
+            {
+              "time": "5:55 PM",
+              "label": "National Anthem"
+            },
+            {
+              "time": "6:00 PM",
+              "label": "Race Starts · Waves Every Few Minutes",
+              "highlight": true
+            },
+            {
+              "time": "6:20 PM",
+              "label": "Parking Lot Access Closes"
+            },
+            {
+              "time": "8:45 PM",
+              "label": "Awards Ceremony"
+            },
+            {
+              "time": "10:00 PM",
+              "label": "Course Closes · 4-Hour Cutoff"
+            }
+          ]
+        }
+      ],
+      "eyebrow": "Race day"
+    },
+    "expo": {
+      "enabled": true,
+      "navLabel": "Expo",
+      "eyebrow": "Before the start",
+      "heading": "Expo & Activities",
+      "date": "Saturday, November 7 · 12:00 PM – 5:00 PM",
+      "locationName": "RESET Hotel",
+      "locationAddress": "7000 Split Rock Ave, Twentynine Palms, CA 92277",
+      "locationMapUrl": "https://www.google.com/maps/search/?api=1&query=RESET+Hotel+7000+Split+Rock+Ave+Twentynine+Palms+CA+92277",
+      "locationLat": 0,
+      "locationLng": 0,
+      "mapImageUrl": "",
+      "hours": [
+        {
+          "label": "Race Expo & Bib Pickup",
+          "time": "12:00 PM – 5:00 PM"
+        }
+      ],
+      "notes": [
+        "The expo runs at RESET from 12:00 PM to 5:00 PM on race day. Pick up your bib, your race shirt, any headlamp or reusable cup add-ons, and settle in for the afternoon before the 6:00 PM start."
+      ],
+      "infoBlocks": [
+        {
+          "heading": "Bib Pickup",
+          "icon": "ticket",
+          "body": "**At the race expo** — 12:00 PM to 5:00 PM on Saturday. Bring a photo ID. Someone else can collect your packet with a photo of your ID.\n\n**Shipped to your house** — $50 fee, available as an add-on in Let's Do This until 2 months before the event.\n\n**Add-ons** — headlamps and reusable cups are collected at bib pickup, side by side."
+        },
+        {
+          "heading": "Earn Race Credits",
+          "icon": "hands",
+          "body": "Sign up for a volunteer shift to support runners and earn a $50 / $100 race credit toward a future Vacation Races event. We'll reach out before race day to help you choose a shift."
+        }
+      ]
+    },
+    "festival": [
+      {
+        "enabled": true,
+        "id": "mandatory-light",
+        "slot": "welcome",
+        "navLabel": "Mandatory Gear",
+        "tone": "darkest",
+        "eyebrow": "Mandatory gear",
+        "heading": "Carry a Personal Light",
+        "intro": "**At least 1 personal light option is mandatory for all runners.** This can include headlamps, chest lamps, waist lamps, or hand torches. Relying on a phone light is NOT recommended. Remember extra batteries!\n\nRunners who added a headlamp as a registration add-on pick it up at bib pickup, next to reusable cup pickup. Runners without a light will not be permitted to start.",
+        "imageUrl": "",
+        "groups": [
+          {
+            "heading": "Your options",
+            "icon": "sparkle",
+            "layout": "cards",
+            "cards": [
+              {
+                "title": "Headlamp",
+                "body": "Hands free · Recommended"
+              },
+              {
+                "title": "Chest lamp",
+                "body": "Wide beam on sand"
+              },
+              {
+                "title": "Waist lamp",
+                "body": "Low angle · Shows ruts"
+              },
+              {
+                "title": "Hand torch",
+                "body": "Bring spare batteries"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "enabled": true,
+        "id": "reset-hotel",
+        "slot": "schedule",
+        "navLabel": "RESET Hotel",
+        "tone": "light",
+        "eyebrow": "New for 2026 · Start, finish & expo",
+        "heading": "RESET Hotel",
+        "intro": "Everything happens in one place this year. Runners staying at RESET are steps from the start line, the finish line, and the expo — roll out of your room and onto the course.\n\nRESET is a modern desert hotel set on 180 acres of open landscape just minutes from Joshua Tree National Park. Each of the 65 rooms opens to a private patio facing the desert. After your race, cool off in the heated saltwater pool, recharge with the sauna and cold plunge, kick back on your private patio overlooking the desert, and end the day with guided stargazing under some of Southern California’s darkest skies. RESET was designed to help you slow down and soak it all in.\n\n7000 Split Rock Ave, Twentynine Palms, CA 92277 · [stayreset.com](https://www.stayreset.com)",
+        "imageUrl": "",
+        "groups": [
+          {
+            "heading": "At a glance",
+            "icon": "info",
+            "layout": "cards",
+            "cards": [
+              {
+                "title": "180",
+                "body": "Acres"
+              },
+              {
+                "title": "65",
+                "body": "Rooms · Private Patios"
+              },
+              {
+                "title": "1",
+                "body": "Venue · Start, Finish & Expo"
+              },
+              {
+                "title": "Sauna",
+                "body": "Cold Plunge & Saltwater Pool"
+              }
+            ]
+          }
+        ],
+        "infoBlocks": [
+          {
+            "heading": "Hotel Guests Only",
+            "icon": "info",
+            "body": "The bar and pool at RESET are for hotel guests only and are not open to all runners. Please plan accordingly if you are staying elsewhere in Twentynine Palms."
+          },
+          {
+            "heading": "Stargazing at RESET",
+            "icon": "stars",
+            "body": "Guided night-sky viewing at the hotel — details being confirmed with RESET. Space held here for times, booking, and meeting point.\n\n[CONFIRM] Stargazing times, booking route and meeting point (Josh with the hotel)."
+          }
+        ]
+      },
+      {
+        "enabled": true,
+        "id": "activities",
+        "slot": "expo",
+        "hideFromNav": true,
+        "tone": "dark",
+        "eyebrow": "On the day",
+        "heading": "Race Day Activities",
+        "intro": "",
+        "groups": [
+          {
+            "heading": "At the expo",
+            "icon": "sparkle",
+            "layout": "cards",
+            "cards": [
+              {
+                "eyebrow": "Pre-race costume contest · Raffle 4:45 PM",
+                "title": "Show Your Glow",
+                "icon": "sparkle",
+                "body": "Neon outfits and glow sticks. Dress up, get seen in the dark, and enter the raffle at 4:45 PM at the start line.\n\n[CONFIRM] Select merch items tied to the contest, including glow items."
+              },
+              {
+                "eyebrow": "Opens 3:00 PM · Open through race closure",
+                "title": "Margarita Truck",
+                "icon": "truck",
+                "body": "Alcohol served from 3:00 PM and open through the end of the race. Bring ID.\n\n[CONFIRM] Vendor name."
+              },
+              {
+                "eyebrow": "Free for runners",
+                "title": "Face Painting",
+                "icon": "palette",
+                "body": "A face and body painting artist will be at the expo, free for all runners — glow up before you head to the line. In 2025 the artist was on site from 2:00 to 7:00 PM.\n\n[CONFIRM] Vendor name."
+              },
+              {
+                "eyebrow": "Live music",
+                "title": "DJ Gravity One",
+                "icon": "music",
+                "body": "Los Angeles veteran DJ with 20+ years behind the decks — clubs, commercial radio, and an instructor at Scratch DJ Academy. In 2025 he played the finish line from 6:00 to 10:00 PM.\n\n[CONFIRM] 2026 booking and set times."
+              },
+              {
+                "eyebrow": "12:00 PM – 10:00 PM",
+                "title": "Merch Tent",
+                "icon": "bag",
+                "body": "Beach hoodies, tees, sweatshirts, tanks, water bottles, stickers, hats, bags and posters, plus limited glow and light-up items. Glow gear sells out fast — come early for the best selection.\n\n[CONFIRM] Contest-linked merch and any spend promotions."
+              },
+              {
+                "eyebrow": "To confirm",
+                "title": "Vendor List",
+                "icon": "info",
+                "body": "Vendor list pending. Space held to shout out every 2026 expo vendor by name once the full list is confirmed.\n\n[CONFIRM] Full 2026 vendor list (Kristin)."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "enabled": true,
+        "id": "records",
+        "slot": "course-info",
+        "hideFromNav": true,
+        "tone": "light",
+        "eyebrow": "New course, clean slate",
+        "heading": "Course Records Reset",
+        "intro": "Because 2026 runs an entirely new course, the 2025 records no longer apply. Every category goes back to record open — 2026 is the first shot at setting a mark on this course. The perk is unchanged: **the record holder races free every year their record stands**, until someone else breaks it.\n\nOverall and Masters awards are available for Male, Female, and Non-Binary runners. Overall and Masters placings are taken on gun time, so line up at the front of the Blue wave if you are competing for them.",
+        "groups": [
+          {
+            "heading": "2026 records",
+            "icon": "award",
+            "layout": "cards",
+            "cards": [
+              {
+                "title": "Overall Male",
+                "body": "Record open"
+              },
+              {
+                "title": "Overall Female",
+                "body": "Record open"
+              },
+              {
+                "title": "Overall Non-Binary",
+                "body": "Record open"
+              },
+              {
+                "title": "Masters Male",
+                "body": "Record open"
+              },
+              {
+                "title": "Masters Female",
+                "body": "Record open"
+              },
+              {
+                "title": "Masters Non-Binary",
+                "body": "Record open"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "enabled": true,
+        "id": "parking",
+        "slot": "course-info",
+        "navLabel": "Parking",
+        "tone": "dark",
+        "eyebrow": "Getting there",
+        "heading": "Parking & Shuttles",
+        "intro": "**Plan not final — space held.** The 2026 parking plan is still being finalised with the operations team and is expected shortly. Shuttles have not yet been determined. This section will be replaced with the confirmed plan, a map, and shuttle times before the guide goes out.\n\n[CONFIRM] Final parking plan, parking map and shuttle arrangements (operations).",
+        "imageUrl": "",
+        "groups": [
+          {
+            "heading": "Known so far",
+            "icon": "map",
+            "layout": "rows",
+            "cards": [
+              {
+                "eyebrow": "Parking",
+                "title": "Tortoise Rock Casino",
+                "body": ""
+              },
+              {
+                "eyebrow": "Parking",
+                "title": "Side streets around the expo",
+                "body": ""
+              },
+              {
+                "eyebrow": "Limited",
+                "title": "Expo and finish line",
+                "body": ""
+              },
+              {
+                "eyebrow": "To be determined",
+                "title": "Shuttles",
+                "body": ""
+              }
+            ]
+          }
+        ],
+        "infoBlocks": [
+          {
+            "heading": "Timings & Drop-Off",
+            "icon": "clock",
+            "body": "All cars should be parked **no later than 4:30 PM**. Access to the parking lot closes at 6:20 PM to allow the race to begin. Arrive early to avoid the rush and give yourself time to get ready.\n\nDropping a runner off? Follow the drop-off signs and drop your runner no later than 4:30 PM. If you plan to stay and wait, park with the rest of event traffic."
+          }
+        ]
+      },
+      {
+        "enabled": true,
+        "id": "packing",
+        "slot": "spectators",
+        "navLabel": "Packing",
+        "tone": "dark",
+        "eyebrow": "Desert, at night",
+        "heading": "What to Pack",
+        "intro": "Sand, dust, and a temperature drop after sunset. Pack for all three — and check your batteries before you leave home.",
+        "groups": [
+          {
+            "heading": "Required",
+            "icon": "bag",
+            "layout": "rows",
+            "cards": [
+              {
+                "eyebrow": "Mandatory",
+                "title": "A personal light",
+                "body": "Headlamp, chest lamp, waist lamp, or hand torch. Phone lights are not recommended. Bring extra batteries."
+              },
+              {
+                "eyebrow": "Mandatory",
+                "title": "Hydration system",
+                "body": "Reusable bottle, collapsible cup, or hydration pack. This is a cup-free race."
+              },
+              {
+                "eyebrow": "Mandatory",
+                "title": "Your bib",
+                "body": "Worn on the front of your body, clearly visible."
+              }
+            ]
+          },
+          {
+            "heading": "Recommended",
+            "icon": "snack",
+            "layout": "cards",
+            "cards": [
+              {
+                "title": "Trail shoes",
+                "body": ""
+              },
+              {
+                "title": "Gaiters",
+                "body": ""
+              },
+              {
+                "title": "Reflective gear",
+                "body": ""
+              },
+              {
+                "title": "Buff, bandana or scarf",
+                "body": ""
+              },
+              {
+                "title": "Layers as temps drop",
+                "body": ""
+              },
+              {
+                "title": "Personal nutrition",
+                "body": ""
+              },
+              {
+                "title": "Offline course map",
+                "body": ""
+              },
+              {
+                "title": "Glow items for the contest",
+                "body": ""
+              }
+            ]
+          }
+        ],
+        "infoBlocks": [
+          {
+            "heading": "Why gaiters and a buff",
+            "icon": "info",
+            "body": "Gaiters keep sand and rocks out of your shoes; a buff keeps dust out of your lungs. Dust isn't a major problem on course, but with this many runners on sandy roads it kicks up."
+          }
+        ]
+      },
+      {
+        "enabled": true,
+        "id": "zero-waste",
+        "slot": "post-race",
+        "hideFromNav": true,
+        "tone": "dark",
+        "eyebrow": "As nature lovers",
+        "heading": "Zero Waste",
+        "intro": "We're committed to keeping our events sustainable and minimizing our impact on the desert. Here's how you can help.",
+        "groups": [
+          {
+            "heading": "Cup-free racing",
+            "icon": "drop",
+            "layout": "rows",
+            "intro": "Coolers of water and electrolyte drink are available at all aid stations, but cups are not provided on course or at the finish. To stay hydrated, bring one of:",
+            "cards": [
+              {
+                "eyebrow": "Bring",
+                "title": "A reusable water bottle",
+                "body": ""
+              },
+              {
+                "eyebrow": "Bring",
+                "title": "A reusable collapsible cup",
+                "body": "Request one when you sign up, collect it at bib pickup."
+              },
+              {
+                "eyebrow": "Bring",
+                "title": "A refillable hydration pack",
+                "body": ""
+              }
+            ]
+          },
+          {
+            "heading": "Sort your waste",
+            "icon": "recycle",
+            "layout": "cards",
+            "intro": "You'll see three containers at our events. Please sort disposable items into the right one — and avoid putting organic and compostable items in the wrong bin.",
+            "cards": [
+              {
+                "title": "Compost",
+                "body": "Organic goods: banana and orange peels and most food items, without the wrapper."
+              },
+              {
+                "title": "Recycle",
+                "body": "Paper, aluminum, cardboard, steel and glass. Empty liquids into the compost bin first."
+              },
+              {
+                "title": "Landfill",
+                "body": "Everything else: used gel packets, non-recyclable wrappers, styrofoam. Empty food matter first."
+              }
+            ]
+          }
+        ],
+        "infoBlocks": [
+          {
+            "heading": "Wander Project",
+            "icon": "hands",
+            "body": "Official non-profit of Vacation Races. Turn your miles into impact. Raise $1,000 through the Charity Bib program and your race entry is waived. Tax-deductible donations are distributed by annual grant to initiatives in the communities that host our events."
+          }
+        ]
+      }
+    ],
+    "raceMorning": {
+      "enabled": false,
+      "parkingOptions": [],
+      "shuttleDetails": [],
+      "dropOffNote": ""
+    },
+    "courseInfo": {
+      "enabled": true,
+      "navLabel": "Course",
+      "heading": "The Course",
+      "intro": "An entirely new 13.1-mile loop starting and finishing at the RESET Hotel. You'll run dirt road, a short paved stretch, and long sections of sand trail — some of it deep — before finishing on road. Gaiters and trail shoes are recommended, a personal light is mandatory, and there are plenty of spots along the way worth stopping for a look at the sky.",
+      "distances": [
+        {
+          "name": "Half Marathon",
+          "mapUrl": "https://ridewithgps.com/routes/53736539",
+          "embedUrl": "",
+          "mapImageUrl": "",
+          "statTiles": [
+            {
+              "value": "13.1",
+              "label": "Miles · Loop"
+            },
+            {
+              "value": "6:00 PM",
+              "label": "Night Start"
+            },
+            {
+              "value": "5",
+              "label": "Aid Stations"
+            },
+            {
+              "value": "4 hr",
+              "label": "Cutoff · 18 min/mile"
+            }
+          ]
+        }
+      ],
+      "schedule": [
+        {
+          "time": "0 – 3.1",
+          "label": "Dirt road",
+          "note": "Runners keep to the right-hand shoulder heading out to the sand trail."
+        },
+        {
+          "time": "~3.1",
+          "label": "Short paved section",
+          "note": "Then back onto trail."
+        },
+        {
+          "time": "4.7 – 5.9",
+          "label": "Sand trail",
+          "note": "Rockier surface."
+        },
+        {
+          "time": "5.9 – 10",
+          "label": "Sand trail continues",
+          "note": ""
+        },
+        {
+          "time": "7.5 – 10",
+          "label": "Deeper sand",
+          "note": "Expect deeper sand through here."
+        },
+        {
+          "time": "10 – 13.1",
+          "label": "Finish on road",
+          "note": ""
+        }
+      ],
+      "aidStations": "There are five aid stations on course, stocked with restrooms, water, electrolytes, and Honey Stinger gels.",
+      "recoveryFood": "At the finish line there's a snack pack of recovery snacks, plus bananas, chocolate milk, water and Gnarly Hydrate.",
+      "strollerPolicy": "Loose and deep sand makes this course unsuitable for strollers.",
+      "dogPolicy": "Dogs are not allowed on course, as our insurance does not cover them, but they're welcome at the finish with the rest of your crew.",
+      "infoBlocks": [
+        {
+          "heading": "Aid Stations",
+          "icon": "drop",
+          "body": "There are five aid stations on course, stocked with restrooms, water, electrolytes, and Honey Stinger gels. Miles 5 and 7 also have oranges and bananas, and an EMT is stationed at mile 7. This race is cup-free — bring a reusable bottle, collapsible cup, or hydration pack to fill up."
+        },
+        {
+          "heading": "Running at Night",
+          "icon": "sparkle",
+          "body": "A personal light is mandatory and reflective gear is strongly encouraged. The course is well marked, but you are responsible for staying alert, following directions, keeping to the right-hand shoulder on the dirt road section, and remaining on course — leaving the course is grounds for disqualification. Dust can kick up with this many runners on sandy roads, so a buff or bandana is useful if you're sensitive to it."
+        },
+        {
+          "heading": "Stargazing on Course",
+          "icon": "stars",
+          "body": "There are plenty of spots along the course for stargazing. If you're not chasing a time, step to the side of the trail, switch off your light for a minute, and let your eyes adjust — this is one of the darkest skies you'll ever run under."
+        },
+        {
+          "heading": "Starting Waves",
+          "icon": "timer",
+          "body": "A wave start keeps the course from overcrowding as runners move from wide road onto narrower dirt road. Look at the colour in the top-left corner of your bib and follow the signs at the start; waves are grouped by the finish time you gave at registration (if you didn't give one, you were placed at random). Grouping is not a reflection of performance — start in whichever wave suits your ability. If you are a slower runner or a walker, do not start in the first wave. Expect a pause of a few minutes between waves."
+        },
+        {
+          "heading": "Pacers",
+          "icon": "person",
+          "body": "Pacers line up at the start around 5:30 PM, running in 10-minute intervals from a 1:40 pace up to 2:30, plus 2:45, 3:00 and 3:30 pacers. Line up near the pacer matching your expected finish time."
+        },
+        {
+          "heading": "Gear Check",
+          "icon": "bag",
+          "body": "Pick up a gear-check bag at the start line if you want one — a white plastic bag you can fill with anything you'd like transported to the finish. Permanent markers are available to write your name and bib number. Avoid putting valuables or car keys in your bag. Bags are available at the finish as soon as the first runner crosses. Unclaimed bags are held for a week and then donated; email info@vacationraces.com to claim yours after the event."
+        },
+        {
+          "heading": "Clothing on Course & No Littering",
+          "icon": "recycle",
+          "body": "There's a bin for loose clothing at the first aid station, and those items are brought to the finish near gear check once the last runner has passed — so you may have to wait for them. Anything else found along the course will not be brought to the finish. Clothing not picked up by 11:00 PM is no longer claimable. Please don't drop trash or personal items anywhere other than the designated aid-station bins."
+        },
+        {
+          "heading": "Recovery Snack Pack",
+          "icon": "snack",
+          "body": "At the finish line there's a snack pack of recovery snacks, plus bananas, chocolate milk, water and Gnarly Hydrate. Please help yourself to one food box, one chocolate milk and one banana per runner."
+        },
+        {
+          "heading": "Time Limit",
+          "icon": "clock",
+          "body": "The half marathon has a 4-hour time limit, about 18 minutes per mile. Walkers are welcome and should keep this pace in mind. We ask for understanding and immediate cooperation if we deem it unsafe and need to pull a runner from the course."
+        },
+        {
+          "heading": "Strollers, Wheelchairs & Dogs",
+          "icon": "info",
+          "body": "Loose and deep sand makes this course unsuitable for strollers. Dogs are not allowed on course, as our insurance does not cover them, but they're welcome at the finish with the rest of your crew."
+        }
+      ],
+      "eyebrow": "Brand new for 2026",
+      "scheduleHeading": "Terrain, Mile by Mile"
+    },
+    "spectators": {
+      "enabled": true,
+      "notes": "Unfortunately, this is not a very spectator-friendly course. Because of the added dust vehicle traffic may cause, as well as adding unnecessary danger at night, we discourage spectators from driving near the course to watch runners. Spectators are encouraged to be at the finish line to cheer on all our runners.\n\nSpectators can park in the same lots as runners and walk to the finish area.",
+      "warnings": [
+        "Cheer Zone — New for 2026. Presented by Tortoise Rock Casino and positioned right in front of the casino, the cheer zone is the one place on course built for supporters — noise, lights, and a lift when you need it.",
+        "Runners only — The runner recovery area is for runners only. Please do not enter it or partake of runners' food and recovery supplies. The medical tent is for athletes only."
+      ],
+      "images": []
+    },
+    "postRace": {
+      "enabled": true,
+      "navLabel": "Post-Race",
+      "eyebrow": "Post-race",
+      "heading": "Information",
+      "finishLineInfo": "Cross the line, grab your victory snacks and a refill, and collect your finisher medal — awarded to everyone who finishes. Stick around for the awards ceremony at 8:45 PM, and if you're staying at RESET, the sauna and cold plunge are a short walk away.",
+      "courseRecords": [],
+      "infoSections": [
+        {
+          "heading": "Awards & Age Divisions",
+          "icon": "award",
+          "body": "Place medals go to the top 5 male, female, and non-binary runners overall, and to the Masters 40+ group. The top 5 in each age group also receive a place medal: 11 and younger, 12–14, 15–19, 20–24, 25–29, 30–34, 35–39, 40–44, 45–49, 50–54, 55–59, 60–64, 65–69, 70–74, 75 and older. We do not yet offer non-binary age-group awards. Finisher medals for everyone who finishes. Missed the ceremony? You can request to have your place medal shipped to you."
+        },
+        {
+          "heading": "Timing & Waves",
+          "icon": "timer",
+          "body": "Overall and Masters awards are based on gun time — if you're competing for those spots, line up at the front of the Blue wave for the 6:00 PM start. All age-division and team awards are based on chip time. Your chip time doesn't start until you cross the line, so please be courteous to others at the start.\n\n[CONFIRM] The event site currently states chip time with a first-wave requirement, while the 2025 race guide states gun time — operations to confirm which applies for 2026."
+        },
+        {
+          "heading": "Your Timing Chip",
+          "icon": "timer",
+          "body": "Your timing chip is on the back of your bib and looks like a sticker — do not fold your bib. No chip means no recorded time. The chip is disposable after the race; keep it or throw it away."
+        },
+        {
+          "heading": "Live Tracking",
+          "icon": "pin",
+          "body": "Live tracking is powered by Brooksee, so friends and family can follow your race in real time — no phone or watch needed. Brooksee estimates your position between checkpoints from pacing data for accurate updates and predicted finish times."
+        },
+        {
+          "heading": "Medical Area & Lost Property",
+          "icon": "firstaid",
+          "body": "The medical area at the finish is for athletes only; family members should wait outside for updates. There is no official lost and found — found items are held for 14 days and then donated. A post-race survey will be emailed to you after the event; we read every one."
+        },
+        {
+          "heading": "Results",
+          "icon": "award",
+          "body": "Live results are hosted online. Results are not official until all runners have crossed the finish line and the event director has reviewed them. Because age-group winners are based on chip time, it's possible to cross the line before someone in your age group and still finish with a slower time. Questions about your placement? Email timing@brooksee.com."
+        },
+        {
+          "heading": "Race Photos",
+          "icon": "camera",
+          "body": "FinisherPix will be onsite. Photos are available 24–48 hours after the event; pre-order and they're sent to you digitally a few days after the race. Keep your bib visible on the front of your body so we can identify you. Share your race with us using **#JTHalf**."
+        },
+        {
+          "heading": "Race Swag & Merchandise",
+          "icon": "bag",
+          "body": "The official race shirt is picked up at the expo upon check-in, and the official race medal is awarded at the finish line. Exclusive race merchandise is available at the expo and near the finish. When possible, we'll add remaining merch to our online store after the race."
+        },
+        {
+          "heading": "Personalize Your Medal · iTab",
+          "icon": "award",
+          "body": "An iTab is a custom engraved plate with your name and finishing time that clips onto your medal ribbon. Pre-order before race day and it's sent to you automatically after you finish. Missed the pre-order? Order later for $15, including postage and packaging."
+        }
+      ]
+    },
+    "experiences": {
+      "enabled": true,
+      "navLabel": "Explore",
+      "eyebrow": "Make a weekend of it",
+      "heading": "Explore Joshua Tree",
+      "lodging": {
+        "partner": "RESET & HotelPlanner",
+        "description": "Stay at RESET and you're at the start, finish, and expo. Twentynine Palms also has boutique hotels, historic desert inns, national brands, vacation rentals and RV stays — HotelPlanner has discounted race-weekend rates and 24/7 support.",
+        "url": "https://www.hotelplanner.com",
+        "imageUrl": ""
+      },
+      "activities": [],
+      "hikesHeading": "Hikes & Adventures",
+      "hikes": [
+        {
+          "name": "Hidden Valley",
+          "distance": "1 mi loop",
+          "difficulty": "Easy",
+          "elevation": "Follow the path between rock walls and through a narrow gap to a sandy valley floor once rumored to hide cattle rustlers. There's no wrong way to explore it.",
+          "url": "",
+          "imageUrl": ""
+        },
+        {
+          "name": "Keys Ranch Tours",
+          "distance": "Guided tour",
+          "difficulty": "90 min",
+          "elevation": "A National Historic Site in a remote rocky canyon, accessible only by guided walking tour. Tickets must be bought in person the same day at the Oasis Visitor Center in Twentynine Palms from 8:30 AM.",
+          "url": "",
+          "imageUrl": ""
+        },
+        {
+          "name": "Barker Dam",
+          "distance": "1.5 mi",
+          "difficulty": "Easy",
+          "elevation": "Built in 1900 for cattle and mining, the dam now collects rainwater for birds, bighorn sheep and rattlesnakes — keep your distance. Wear closed-toe shoes; cacti line the trail.",
+          "url": "",
+          "imageUrl": ""
+        },
+        {
+          "name": "Boy Scout Trail",
+          "distance": "Out & back",
+          "difficulty": "Easy",
+          "elevation": "A mostly flat route along the edge of the Wonderland of Rocks, passing Joshua tree forests, boulder fields and sandy washes. A marked turnoff at 1.25 miles leads to Willow Hole.",
+          "url": "",
+          "imageUrl": ""
+        },
+        {
+          "name": "Lost Palms Oasis",
+          "distance": "7.2 mi",
+          "difficulty": "Strenuous",
+          "elevation": "From Cottonwood Spring, the trail climbs southeast through scrub desert and rocky gullies. A spur at 3.3 miles overlooks the palms; the climb out is strenuous — allow 5–6 hours.",
+          "url": "",
+          "imageUrl": ""
+        },
+        {
+          "name": "Stargazing",
+          "distance": "After dark",
+          "difficulty": "At RESET",
+          "elevation": "Guided stargazing under some of Southern California's darkest skies, hosted at RESET. Details to be confirmed with the hotel.",
+          "url": "",
+          "imageUrl": ""
+        }
+      ],
+      "sights": [],
+      "restaurants": [],
+      "parkNote": "The race start and finish are outside the park and do not require a park pass. If you plan to visit Joshua Tree National Park, check nps.gov for entry fees and conditions before you go."
+    },
+    "faqs": {
+      "enabled": true,
+      "items": [
+        {
+          "question": "Do I really need my own light?",
+          "answer": "Yes. At least one personal light is mandatory for all runners — headlamp, chest lamp, waist lamp, or hand torch. A phone light is not sufficient. Bring extra batteries. If you added a headlamp at registration, collect it at bib pickup."
+        },
+        {
+          "question": "Where are the start, finish and expo?",
+          "answer": "All three are at the RESET Hotel, 7000 Split Rock Ave, Twentynine Palms, CA 92277 — a new venue for 2026. If you're staying at RESET, you're already there."
+        },
+        {
+          "question": "Can I use the pool and bar at RESET?",
+          "answer": "The bar and pool at RESET are for hotel guests only. Runners staying elsewhere are welcome at the expo, start and finish areas."
+        },
+        {
+          "question": "Is the course the same as last year?",
+          "answer": "No. 2026 is an entirely new course, starting and finishing at RESET. Because of that, all course records reset — every category is open, and the first runner to set a record races free every year it stands."
+        },
+        {
+          "question": "How sandy is it, really?",
+          "answer": "Sandy. You're on sand trail from roughly mile 4.7 to mile 10, and it gets deeper between miles 7.5 and 10. Trail shoes and gaiters are recommended. The first 3.1 miles are dirt road and the last 3.1 are road."
+        },
+        {
+          "question": "Can someone else pick up my race packet?",
+          "answer": "Yes, as long as they have a photo of your ID."
+        },
+        {
+          "question": "Can my family watch me on course?",
+          "answer": "This is not a very spectator-friendly course, and we discourage driving near it at night. The cheer zone in front of Tortoise Rock Casino and the finish line are the two places to be."
+        }
+      ]
+    }
+  }
+}

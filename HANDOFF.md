@@ -33,6 +33,7 @@ A Next.js 14 static site that renders digital Race Day Guides for Vacation Races
 | `content/events/rocky-mountain.json` | `rocky-mountain` | Live, complete |
 | `content/events/great-smoky.json` | `great-smoky` | Live (`brand: smoky`) |
 | `content/events/mount-rushmore.json` | `mount-rushmore` | Built 2026-07-24 (`brand: rushmore`), `hidden:true` until race-ready — pending RideWithGPS route + photos |
+| `content/events/joshua-tree.json` | `joshua-tree` | Built 2026-09-22 (`brand: joshua-tree`), `hidden:true` pending sign-off — see the build note below |
 
 Events with `"hidden": true` are excluded from the homepage index (`src/app/page.tsx` filters them).
 
@@ -244,6 +245,106 @@ git push
 
 Netlify auto-builds. Check build status at: https://app.netlify.com
 
+---
+
+## Joshua Tree Half Marathon — built 2026-09-22
+
+Sat **7 November 2026**, 6:00 PM PT start, 13.1 mi, 4-hour cutoff. Start/finish/expo all at the
+**RESET Hotel**, Twentynine Palms — a new venue *and* an entirely new course for 2026. It is a
+night race, so the guide leads on the mandatory personal-light requirement.
+
+Built from the Claude Design bundle in `…\Vacation Races\Joshua Tree\Joshua Tree Guide\`.
+**The `.dc.html` comp was the content spec** — its copy was already written from the 2025 guide
+plus the 2026 changes brief, with its own "to confirm" flags. Copy was carried across verbatim.
+Shipped `hidden:true`. ⚠️ `hidden` only removes a guide from the homepage listing — the page is
+still publicly served and indexable.
+
+### New engine capability: positionable Festival sections
+
+The comp needs five blocks at seams the fixed section order does not offer. Rather than make the
+shared components brand-conditional, `FestivalSectionData` gained two optional fields:
+
+- **`slot`** — which seam the section renders at (`welcome` · `schedule` · `expo` · `course-info` ·
+  `race-morning` · `spectators` · `post-race` · `experiences`; each means *immediately after that
+  section*). **Absent = `'expo'`**, which is where every festival section already rendered, so
+  existing guides are untouched.
+- **`hideFromNav`** — keep a section out of the sticky nav, for blocks the design deliberately
+  leaves out of the nav strip.
+
+Nav order and render order are both derived from `slot` in `[slug]/page.tsx`, so they cannot drift,
+and `edit/page.tsx` mirrors it via `editFestivals()`.
+
+Joshua Tree's seven festival sections: `mandatory-light` (welcome) · `reset-hotel` (schedule) ·
+`activities` (expo) · `records` (course-info) · `parking` (course-info) · `packing` (spectators) ·
+`zero-waste` (post-race). `records` and `zero-waste` are `hideFromNav`, matching the comp's nav.
+
+### Four more additive engine fields (defaults preserve current behaviour)
+
+| Field | Why |
+|---|---|
+| `schedule.eyebrow` | hardcoded "Race weekend"; the comp says "Race day" (one-day race) |
+| `courseInfo.eyebrow` | hardcoded, and *suppressed* when the heading says "course" — so "Brand new for 2026" could not be set |
+| `courseInfo.scheduleHeading` | the schedule card grid had no heading; JT uses it for "Terrain, Mile by Mile" |
+| — | **`MapEmbed` now hides the map when `lat`/`lng` are unset.** It previously rendered a marker at 0,0 — a blank map of the Gulf of Guinea. Latent for any guide with no venue pin; JT is currently the only one. The Google Maps button still works (it uses the address URL). |
+
+### Brand
+
+Scoped `[data-brand='joshua-tree']` in `globals.css` — plum-black `#0E0617` / mid plum `#2A1436` /
+ink `#2B1430` / accent lilac `#B98FD0` on paper `#F7EFE2`. Values are the handoff's token table,
+confirmed by sampling the shield (`#3A1445`, `#F4E2CC`, `#D1B6D7` are its dominant colours).
+`--tl-hero-scrim` and `--tl-row-highlight` were retinted too — both default to literal Rocky
+Mountain green/teal and make a new brand look subtly wrong if left.
+
+Assets: `joshua-tree-shield.png` (900×900, 49 KB), `-icon.png` (the watermark — a Joshua tree
+silhouette extracted from the shield, 58 KB), `-favicon.png` (96×96, fitted not squashed).
+
+### Deviations from the comp — deliberate, do not "correct" them back
+
+- **Hero meta** is one line (`date · distance · start`); the comp has three items including the
+  venue. The engine has a single `dates` field, and the full four-fact string wrapped and orphaned
+  the diamond bullet. The venue has its own nav item, section, expo block and FAQ.
+- **Terrain table** renders as the course section's card grid, not a `<table>`. It stays visible
+  rather than being buried in an accordion, which matters on a sandy night course.
+- **Parking** is a festival section, not `raceMorning` (disabled). `raceMorning` has no intro slot
+  for the "plan not final" warning the comp leads with, and it folds heading and nav label into one
+  field — the comp wants "Parking & Shuttles" / "Parking".
+- **Course records** sit in their own section after the course (comp), so `postRace.courseRecords`
+  is deliberately `[]`.
+- Light-type mosaic renders 3-up + 1, not the comp's 2×2 (engine grid).
+- The comp's post-race tag pills (Finisher medal / FinisherPix / Live results / iTab / #JTHalf) have
+  no engine slot and were dropped.
+- Spectators eyebrow reads "For"; the comp has "Cheer zone &". Still hardcoded.
+
+### Open — 7 `[CONFIRM]` markers on the page, plus
+
+1. **RideWithGPS route** — `distances[0].embedUrl` is empty *on purpose*. The interim route
+   (`ridewithgps.com/routes/53736539`) does **not** finish back at RESET and must be regenerated.
+   Paste the new URL in `/edit` and both the embed and the printed map rebuild themselves.
+2. **Parking plan, map and shuttles** — not final; the section holds space for them.
+3. **Awards timing conflict** — the 2025 guide says overall/Masters on **gun time**; the event
+   website says chip time with a first-wave requirement. The guide uses gun time and flags the
+   conflict inline, as the design did. **Operations to settle before publication.**
+4. **Vendor names** — margarita truck, face painter, DJ Gravity One 2026 booking, full vendor list,
+   contest-linked merch, final partner list.
+5. **Stargazing at RESET** — times/booking/meeting point with the hotel.
+6. **Venue coordinates** — `expo.locationLat/Lng` are `0`, so no map renders. Set them and it
+   appears. Not invented.
+7. **Photography** — every image is an empty slot: hero, RESET, both photo bands, lodging, six
+   Explore cards, the mandatory-light artwork, parking map. RESET photos are in a client Dropbox
+   folder (link in the changes brief); race photography from VR. All uploadable from `/edit`.
+
+### Verified
+
+`tsc` + `next build` clean. Rendered and read the whole page at 1440px: nav matches the comp's list
+exactly, section order matches, 0 broken images, no raw markdown leaking, no horizontal overflow,
+fonts load with no errors, and exactly one tinted schedule row (the 6:00 PM start — the engine
+auto-highlights any label containing "start", which would also have caught two other rows, so
+`highlight` is set explicitly). Print PDF renders 29 pages with every accordion body forced open.
+**The other five guides were rebuilt from a clean tree and their rendered markup is byte-identical**
+— the only difference anywhere is seven empty arrays in React's serialised payload, one per new slot.
+
+Not verified: mobile below ~500px (Chrome enforces a ~500 CSS px minimum window here), and no
+live-site check — this has not been pushed.
 ---
 
 ## Known issues / backlog

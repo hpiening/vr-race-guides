@@ -28,6 +28,7 @@ const GUIDES = [
   { slug: 'mount-rushmore', name: 'Mount Rushmore' },
   { slug: 'grand-teton', name: 'Grand Teton' },
   { slug: 'grand-circle', name: 'Grand Circle Trailfest' },
+  { slug: 'joshua-tree', name: 'Joshua Tree' },
 ]
 
 type SaveState = 'idle' | 'saving' | 'saved' | 'error'

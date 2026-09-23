@@ -266,6 +266,54 @@
   --tl-row-highlight:      rgba(248,159,68,0.13);
 }
 
+/* ─── Joshua Tree Half Marathon brand (night desert / plum + lilac) ────────
+   Re-themes the Trailhead engine per event. Applied via `data-brand="joshua-tree"`
+   on the guide wrapper (set from EventData.brand). Only the color CHANNELS and
+   the decorative gradients change — layout/components are identical to Rocky
+   Mountain. Values are the Joshua Tree design handoff's token table, sampled
+   from the 2026 event shield. Dark-token role map (green → Joshua Tree):
+     vr-night  #1a2f23 → #0E0617  deepest plum-black (schedule/FAQ, bands, footer)
+     vr-deep   #264533 → #2A1436  mid plum (expo, course, spectators)
+     vr-forest #313832 → #2B1430  ink (body text on paper + dark panels on light)
+     vr-pine   #003F2D → #0E0617  sticky nav (the design uses the deepest tone)
+     vr-sky    #7BADAC → #B98FD0  accent lilac (eyebrows, rules, stats, links)
+     vr-floral #da8165 → #B98FD0  (single accent across the brand)
+   Light tokens: paper #F7EFE2, cards #FFFFFF, hairline #e3d3c6.
+   This is a NIGHT race and the design is dark-first — the glows read as
+   headlamp/night-sky light, so keep them subtle. */
+[data-brand='joshua-tree'] {
+  --vr-night-rgb:     14 6 23;     /* #0E0617 deepest — schedule/FAQ, bands, footer, nav */
+  --vr-deep-rgb:      42 20 54;    /* #2A1436 mid plum — course/expo + cards on dark */
+  --vr-forest-rgb:    43 20 48;    /* #2B1430 ink — body text on paper, dark panels */
+  --vr-pine-rgb:      14 6 23;     /* #0E0617 sticky nav */
+  --vr-sky-rgb:       185 143 208; /* #B98FD0 accent lilac (all accent text/elements) */
+  --vr-floral-rgb:    185 143 208; /* #B98FD0 */
+  --vr-sandstone-rgb: 217 191 234; /* #D9BFEA link hover */
+  --vr-earth-rgb:     110 88 120;  /* #6E5878 muted plum */
+  --vr-mid-rgb:       110 88 120;  /* #6E5878 body grey on light */
+  --vr-cream-rgb:     245 231 211; /* #F5E7D3 text on dark + accordion fills on dark */
+  --vr-white-rgb:     255 255 255; /* #FFFFFF light cards */
+  --vr-offwhite-rgb:  247 239 226; /* #F7EFE2 light section ground */
+  --vr-line-rgb:      227 211 198; /* #e3d3c6 hairline on light cards */
+
+  /* Keep the hex vars in sync for the few inline `var(--vr-*)` color usages. */
+  --vr-forest: #2B1430;
+  --vr-sky:    #B98FD0;
+  --vr-floral: #B98FD0;
+  --vr-cream:  #F5E7D3;
+
+  --tl-hero-grad:      radial-gradient(125% 95% at 72% 8%,#3A1F4E 0%,#170C23 46%,#0E0617 100%);
+  --tl-band-stripe:    repeating-linear-gradient(135deg,#2A1436,#2A1436 16px,#170C23 16px,#170C23 32px);
+  --tl-hatch-dark:     repeating-linear-gradient(135deg,#3A1C48,#3A1C48 14px,#2A1436 14px,#2A1436 28px);
+  --tl-challenge-grad: linear-gradient(140deg,#2A1436,#0E0617);
+  /* Plum retint of the default ramp. The hero is a gradient rather than a photo
+     here, so the default shape is right — only the green cast had to go. If a
+     bright hero photo lands later, this needs ramping harder (see grand-circle). */
+  --tl-hero-scrim:     linear-gradient(180deg,rgba(14,6,23,0.12) 0%,rgba(14,6,23,0) 38%,rgba(14,6,23,0.6) 100%);
+  /* The 6:00 PM start row, tinted in the brand's accent rather than the default teal. */
+  --tl-row-highlight:  rgba(185,143,208,0.14);
+}
+
 /* ─── Base ───────────────────────────────────────────────────── */
 
 *, *::before, *::after {
