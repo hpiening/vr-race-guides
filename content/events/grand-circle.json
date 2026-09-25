@@ -350,9 +350,10 @@
           "date": "Saturday, October 3",
           "items": [
             {
-              "time": "5:00 - 5:30 AM",
+              "time": "4:45 - 5:30 AM",
               "label": "Grab & Go Breakfast Service ",
-              "kind": "food"
+              "kind": "food",
+              "note": "Please note earlier load time for Day 3"
             },
             {
               "time": "5:00 - 5:30 AM",
