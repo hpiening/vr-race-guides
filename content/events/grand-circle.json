@@ -351,15 +351,15 @@
           "items": [
             {
               "time": "4:45 - 5:30 AM",
-              "label": "Grab & Go Breakfast Service ",
-              "kind": "food",
-              "note": "Please note earlier load time for Day 3"
+              "label": "Shuttle Loading",
+              "note": "Shuttles from HQ require an upgraded shuttle pass. Please note earlier load time for Day 3",
+              "kind": "essential"
             },
             {
               "time": "5:00 - 5:30 AM",
-              "label": "Shuttle Loading",
-              "note": "Shuttles from HQ require an upgraded shuttle pass",
-              "kind": "essential"
+              "label": "Grab & Go Breakfast Service ",
+              "kind": "food",
+              "note": ""
             },
             {
               "time": "6:30 AM",
