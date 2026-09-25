@@ -131,7 +131,7 @@
       "days": [
         {
           "id": "day-0",
-          "label": "Day 1 · Expo",
+          "label": "Welcome Day · Expo",
           "date": "Wednesday, September 30",
           "items": [
             {
@@ -176,7 +176,7 @@
         },
         {
           "id": "day-1",
-          "label": "Day 2 · Bryce Canyon",
+          "label": "Day 1 · Bryce Canyon",
           "date": "Thursday, October 1",
           "items": [
             {
@@ -261,7 +261,7 @@
         },
         {
           "id": "day-2",
-          "label": "Day 3 · Zion",
+          "label": "Day 2 · Zion",
           "date": "Friday, October 2",
           "items": [
             {
@@ -346,7 +346,7 @@
         },
         {
           "id": "day-3",
-          "label": "Day 4 · Antelope Canyon",
+          "label": "Day 3 · Antelope Canyon",
           "date": "Saturday, October 3",
           "items": [
             {
@@ -431,7 +431,7 @@
         },
         {
           "id": "day-4",
-          "label": "Day 5 · Departure",
+          "label": "Departure Day",
           "date": "Sunday, October 4",
           "items": [
             {
