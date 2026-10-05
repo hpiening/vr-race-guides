@@ -853,6 +853,27 @@
           "url": "https://www.lacopinekitchen.com/",
           "address": "848 Old Woman Springs Rd, Yucca Valley, CA 92284",
           "phone": "(760) 289-8537"
+        },
+        {
+          "name": "The Dez",
+          "description": "Cozy sandwich shop serving quality coffee and diverse grab-and-go meals.",
+          "url": "https://thedezfinefood.com/",
+          "address": "61675 29 Palms Hwy 3 Joshua Tree, CA 92252",
+          "phone": "(760) 974-9747"
+        },
+        {
+          "name": "SBR29",
+          "description": "Casual desert restaurant featuring signature burgers and live music in a lively atmosphere.",
+          "url": "https://www.instagram.com/sbr29palms/",
+          "address": "73511 29 Palms Hwy, Twentynine Palms, CA 92277",
+          "phone": "(760) 800-1009"
+        },
+        {
+          "name": "The Jelly Donut",
+          "description": "Local donut shop serving fresh, handmade donuts.",
+          "url": "https://jellydonut29.wordpress.com/",
+          "address": "56153 29 Palms Hwy, Yucca Valley, CA 92284",
+          "phone": "(760) 365-9508"
         }
       ],
       "parkNote": "The race start and finish are outside the park and do not require a park pass. If you plan to visit Joshua Tree National Park, check nps.gov for entry fees and conditions before you go.",
