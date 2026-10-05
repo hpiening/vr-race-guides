@@ -714,9 +714,19 @@
           "body": "Your timing chip is on the back of your bib and looks like a sticker — do not fold your bib. No chip means no recorded time. The chip is disposable after the race; keep it or throw it away."
         },
         {
-          "heading": "Live Tracking",
+          "heading": "Live Tracking & Results",
           "icon": "pin",
-          "body": "Live tracking is powered by Brooksee, so friends and family can follow your race in real time — no phone or watch needed. Brooksee estimates your position between checkpoints from pacing data for accurate updates and predicted finish times."
+          "body": "Live tracking is powered by Laurel, so friends and family can follow your race in real time — no phone or watch needed. Laurel estimates your position between checkpoints from pacing data for accurate updates and predicted finish times.",
+          "links": [
+            {
+              "label": "Tracking ",
+              "url": "https://track.brooksee.com/track?h=jtr"
+            },
+            {
+              "label": "Results",
+              "url": "https://www.brooksee.com/jtr/results"
+            }
+          ]
         },
         {
           "heading": "Medical Area & Lost Property",
