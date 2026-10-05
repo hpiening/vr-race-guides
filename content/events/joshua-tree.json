@@ -65,6 +65,11 @@
         "url": "https://www.thatsitfruit.com/"
       },
       {
+        "name": "zico",
+        "logoUrl": "/images/uploads/1791227878991-zico-logo-deep-green-1-5-.webp",
+        "url": "https://zico.com/"
+      },
+      {
         "name": "Siete",
         "logoUrl": "/images/uploads/1791227130328-768px-siete.logo.circle.design.3in-noborder-1-.webp",
         "url": "https://sietefoods.com/"
@@ -85,6 +90,11 @@
         "url": "https://therunnerbar.com/"
       },
       {
+        "name": "Make it personal",
+        "logoUrl": "/images/uploads/1791227209895-full-horizontal-logo-black-1-.webp",
+        "url": "https://makeitpersonal.io/"
+      },
+      {
         "name": "Mount to Coast",
         "logoUrl": "/images/uploads/1791227176342-brandmark-black-4x-8-3-.webp",
         "url": "https://mounttocoast.com/"
@@ -95,9 +105,9 @@
         "url": "https://motherf.com/"
       },
       {
-        "name": "Make it personal",
-        "logoUrl": "/images/uploads/1791227209895-full-horizontal-logo-black-1-.webp",
-        "url": "https://makeitpersonal.io/"
+        "name": "all day sauna",
+        "logoUrl": "/images/uploads/1791227259357-adsauna-badgelogo-v2-blue-2-.webp",
+        "url": "https://alldaysaunaco.com/"
       },
       {
         "name": "Goodwipes",
@@ -105,12 +115,7 @@
         "url": "https://www.goodwipes.com/"
       },
       {
-        "name": "all day sauna",
-        "logoUrl": "/images/uploads/1791227259357-adsauna-badgelogo-v2-blue-2-.webp",
-        "url": "https://alldaysaunaco.com/"
-      },
-      {
-        "name": "New partner",
+        "name": "aloe up",
         "logoUrl": "/images/uploads/1791227311602-aloe-black.webp",
         "url": "https://aloeup.com/"
       },
