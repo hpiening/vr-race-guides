@@ -753,7 +753,13 @@
         {
           "heading": "Race Swag & Merchandise",
           "icon": "bag",
-          "body": "The official race shirt is picked up at the expo upon check-in, and the official race medal is awarded at the finish line. Exclusive race merchandise is available at the expo and near the finish. When possible, we'll add remaining merch to our online store after the race."
+          "body": "The official race shirt is picked up at the expo upon check-in, and the official race medal is awarded at the finish line. Exclusive race merchandise is available at the expo and near the finish. When possible, we'll add remaining merch to our online store after the race.",
+          "links": [
+            {
+              "label": "SHOPE RACE MERCHANDISE",
+              "url": "https://store.vacationraces.com/collections/joshua-tree-half-marathon"
+            }
+          ]
         },
         {
           "heading": "Personalize Your Medal · iTab",
