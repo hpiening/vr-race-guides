@@ -80,6 +80,11 @@
         "url": "https://alldaysaunaco.com/"
       },
       {
+        "name": "Mother F",
+        "logoUrl": "/images/uploads/1791227195264-mother-f-logo-v3-1-1-.webp",
+        "url": "https://motherf.com/"
+      },
+      {
         "name": "SportPharm",
         "logoUrl": "/images/uploads/1791227138472-final-sportpharm-logo-white-13-1-.webp",
         "url": "https://sportpharm.com/"
@@ -105,11 +110,6 @@
         "url": "https://mounttocoast.com/"
       },
       {
-        "name": "Mother F",
-        "logoUrl": "/images/uploads/1791227195264-mother-f-logo-v3-1-1-.webp",
-        "url": "https://motherf.com/"
-      },
-      {
         "name": "Goodwipes",
         "logoUrl": "/images/uploads/1791227244784-goodwipes-logo-botanical-2-.webp",
         "url": "https://www.goodwipes.com/"
@@ -123,6 +123,11 @@
         "name": "Muscle Milk",
         "logoUrl": "/images/uploads/1791227340131-full-logo-1.svg",
         "url": "https://www.musclemilk.com/"
+      },
+      {
+        "name": "krf",
+        "logoUrl": "/images/uploads/1791228279967-katesrealfood-logos-6-3-.webp",
+        "url": "https://katesrealfood.com/"
       }
     ]
   },
