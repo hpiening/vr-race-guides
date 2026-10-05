@@ -85,14 +85,29 @@
         "url": "https://motherf.com/"
       },
       {
+        "name": "krf",
+        "logoUrl": "/images/uploads/1791228279967-katesrealfood-logos-6-3-.webp",
+        "url": "https://katesrealfood.com/"
+      },
+      {
         "name": "SportPharm",
         "logoUrl": "/images/uploads/1791227138472-final-sportpharm-logo-white-13-1-.webp",
         "url": "https://sportpharm.com/"
       },
       {
+        "name": "aloe up",
+        "logoUrl": "/images/uploads/1791227311602-aloe-black.webp",
+        "url": "https://aloeup.com/"
+      },
+      {
         "name": "Sawyer",
         "logoUrl": "/images/uploads/1791227157933-sawyer-logo-cyan-2-.webp",
         "url": "https://www.sawyer.com/"
+      },
+      {
+        "name": "Muscle Milk",
+        "logoUrl": "/images/uploads/1791227340131-full-logo-1.svg",
+        "url": "https://www.musclemilk.com/"
       },
       {
         "name": "Runner Bar",
@@ -113,21 +128,6 @@
         "name": "Goodwipes",
         "logoUrl": "/images/uploads/1791227244784-goodwipes-logo-botanical-2-.webp",
         "url": "https://www.goodwipes.com/"
-      },
-      {
-        "name": "aloe up",
-        "logoUrl": "/images/uploads/1791227311602-aloe-black.webp",
-        "url": "https://aloeup.com/"
-      },
-      {
-        "name": "Muscle Milk",
-        "logoUrl": "/images/uploads/1791227340131-full-logo-1.svg",
-        "url": "https://www.musclemilk.com/"
-      },
-      {
-        "name": "krf",
-        "logoUrl": "/images/uploads/1791228279967-katesrealfood-logos-6-3-.webp",
-        "url": "https://katesrealfood.com/"
       }
     ]
   },
