@@ -808,7 +808,7 @@
         },
         {
           "name": "Boy Scout Trail",
-          "distance": "8 mi Out & back",
+          "distance": "8 mi point to point",
           "difficulty": "Moderate",
           "elevation": "A mostly flat route along the edge of the Wonderland of Rocks, passing Joshua tree forests, boulder fields and sandy washes. A marked turnoff at 1.25 miles leads to Willow Hole.",
           "url": "https://www.alltrails.com/trail/us/california/boy-scout-trail--8",
@@ -819,15 +819,15 @@
           "distance": "7.2 mi",
           "difficulty": "Strenuous",
           "elevation": "From Cottonwood Spring, the trail climbs southeast through scrub desert and rocky gullies. A spur at 3.3 miles overlooks the palms; the climb out is strenuous — allow 5–6 hours.",
-          "url": "",
-          "imageUrl": ""
+          "url": "https://www.nps.gov/places/lost-palms-oasis-trailhead.htm",
+          "imageUrl": "/images/uploads/1791209388928-screenshot-2026-10-05-at-8.09.38-am.webp"
         },
         {
           "name": "Stargazing",
           "distance": "After dark",
           "difficulty": "At RESET",
           "elevation": "Guided stargazing under some of Southern California's darkest skies, hosted at RESET. Details to be confirmed with the hotel.",
-          "url": "",
+          "url": "https://www.nps.gov/thingstodo/stargazing-at-joshua-tree.htm",
           "imageUrl": ""
         }
       ],
