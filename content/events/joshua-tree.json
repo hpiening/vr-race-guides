@@ -120,14 +120,14 @@
         "url": "https://therunnerbar.com/"
       },
       {
-        "name": "Make it personal",
-        "logoUrl": "/images/uploads/1791227209895-full-horizontal-logo-black-1-.webp",
-        "url": "https://makeitpersonal.io/"
-      },
-      {
         "name": "Goodwipes",
         "logoUrl": "/images/uploads/1791227244784-goodwipes-logo-botanical-2-.webp",
         "url": "https://www.goodwipes.com/"
+      },
+      {
+        "name": "Make it personal",
+        "logoUrl": "/images/uploads/1791227209895-full-horizontal-logo-black-1-.webp",
+        "url": "https://makeitpersonal.io/"
       }
     ]
   },
