@@ -281,10 +281,10 @@
             "layout": "cards",
             "cards": [
               {
-                "eyebrow": "Pre-race costume contest · Raffle 4:45 PM",
-                "title": "Show Your Glow",
-                "icon": "sparkle",
-                "body": "Neon outfits and glow sticks. Dress up, get seen in the dark, and enter the raffle at 4:45 PM at the start line.\n\n[CONFIRM] Select merch items tied to the contest, including glow items."
+                "eyebrow": "Free for runners",
+                "title": "Face Painting",
+                "icon": "palette",
+                "body": "A face and body painting artist will be at the expo, free for all runners — glow up before you head to the line. In 2025 the artist was on site from 2:00 to 7:00 PM.\n\n[CONFIRM] Vendor name."
               },
               {
                 "eyebrow": "Opens 3:00 PM · Open through race closure",
@@ -293,10 +293,10 @@
                 "body": "Alcohol served from 3:00 PM and open through the end of the race. Bring ID.\n\n[CONFIRM] Vendor name."
               },
               {
-                "eyebrow": "Free for runners",
-                "title": "Face Painting",
-                "icon": "palette",
-                "body": "A face and body painting artist will be at the expo, free for all runners — glow up before you head to the line. In 2025 the artist was on site from 2:00 to 7:00 PM.\n\n[CONFIRM] Vendor name."
+                "eyebrow": "Pre-race costume contest · Raffle 4:45 PM",
+                "title": "Show Your Glow",
+                "icon": "sparkle",
+                "body": "Neon outfits and glow sticks. Dress up, get seen in the dark, and enter the raffle at 4:45 PM at the start line.\n\n[CONFIRM] Select merch items tied to the contest, including glow items."
               },
               {
                 "eyebrow": "Live music",
