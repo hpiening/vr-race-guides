@@ -828,25 +828,31 @@
           "difficulty": "At RESET",
           "elevation": "Guided stargazing under some of Southern California's darkest skies, hosted at RESET. Details to be confirmed with the hotel.",
           "url": "https://www.nps.gov/thingstodo/stargazing-at-joshua-tree.htm",
-          "imageUrl": ""
+          "imageUrl": "/images/uploads/1791209449629-screenshot-2026-10-05-at-8.10.40-am.webp"
         }
       ],
       "sights": [],
       "restaurants": [
         {
-          "name": "New restaurant",
-          "description": "",
-          "url": ""
+          "name": "Pappy & harriets",
+          "description": "Classic American fare amid rustic Western decor, plus extras including BBQ & live music.",
+          "url": "https://pappyandharriets.com/",
+          "address": "53688 Pioneertown Rd, Pioneertown, CA 92268",
+          "phone": "(760) 228-2222"
         },
         {
-          "name": "New restaurant",
-          "description": "",
-          "url": ""
+          "name": "Kitchen in the Desert",
+          "description": "Charming cafe preparing New American fare with a Caribbean influence, plus juices & smoothies.",
+          "url": "https://www.kitd29.com/",
+          "address": "6427 Mesquite Ave, Twentynine Palms, CA 92277",
+          "phone": "(760) 865-0245"
         },
         {
-          "name": "New restaurant",
-          "description": "",
-          "url": ""
+          "name": "La Copine",
+          "description": "Chic indoor-outdoor restaurant offering New American cuisine amid minimalist black & white decor.",
+          "url": "https://www.lacopinekitchen.com/",
+          "address": "848 Old Woman Springs Rd, Yucca Valley, CA 92284",
+          "phone": "(760) 289-8537"
         }
       ],
       "parkNote": "The race start and finish are outside the park and do not require a park pass. If you plan to visit Joshua Tree National Park, check nps.gov for entry fees and conditions before you go.",
