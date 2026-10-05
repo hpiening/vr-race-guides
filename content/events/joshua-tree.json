@@ -731,7 +731,13 @@
         {
           "heading": "Medical Area & Lost Property",
           "icon": "firstaid",
-          "body": "The medical area at the finish is for athletes only; family members should wait outside for updates. There is no official lost and found — found items are held for 14 days and then donated. A post-race survey will be emailed to you after the event; we read every one."
+          "body": "The medical area at the finish is for athletes only; family members should wait outside for updates. \n\nLost and found items will be held at the Merchandise Booth. If you have lost an item, please submit a request [here.](https://vacationraces.fillout.com/t/dmnGubJfxtus?id=) We will hold onto lost items and unclaimed gear check bags for one week only, so be sure to reach out as soon as possible.\n\nA bin for extra clothing will be available at the first aid station. Again, this is the only official clothing drop and any clothing left scattered along the course will be considered trash which may be discarded or donated. **Unclaimed clothing from aid station 1 drop (near mile 3) will be donated immediately after the race.**",
+          "links": [
+            {
+              "label": "FILL OUT THE LOST & FOUND FORM",
+              "url": "https://vacationraces.fillout.com/t/dmnGubJfxtus?id="
+            }
+          ]
         },
         {
           "heading": "Results",
