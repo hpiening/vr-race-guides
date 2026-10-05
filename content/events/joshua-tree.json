@@ -193,19 +193,23 @@
             "cards": [
               {
                 "title": "Headlamp",
-                "body": "Hands free · Recommended"
+                "body": "Hands free · Recommended",
+                "imageUrl": "/images/uploads/1791205997924-nathan-running-headlamp-1-.webp"
               },
               {
                 "title": "Chest lamp",
-                "body": "Wide beam on sand"
+                "body": "Wide beam on sand",
+                "imageUrl": "/images/uploads/1791206005316-screenshot-2026-10-05-at-7.12.18-am.webp"
               },
               {
                 "title": "Waist lamp",
-                "body": "Low angle · Shows ruts"
+                "body": "Low angle · Shows ruts",
+                "imageUrl": "/images/uploads/1791206087606-screenshot-2026-10-05-at-7.14.40-am.webp"
               },
               {
                 "title": "Hand torch",
-                "body": "Bring spare batteries"
+                "body": "Bring spare batteries",
+                "imageUrl": "/images/uploads/1791206045523-screenshot-2026-10-05-at-7.13.54-am.webp"
               }
             ]
           }
