@@ -762,9 +762,15 @@
           ]
         },
         {
-          "heading": "Personalize Your Medal · iTab",
+          "heading": "Personalize Your Medal ",
           "icon": "award",
-          "body": "An iTab is a custom engraved plate with your name and finishing time that clips onto your medal ribbon. Pre-order before race day and it's sent to you automatically after you finish. Missed the pre-order? Order later for $15, including postage and packaging."
+          "body": "Our partner, Make It Personal, provides custom-engraved plates with your name and finishing time that clips onto your medal ribbon.\nYou can pre-order before race day; they will be sent to you automatically after your finish. If you missed out, you can still order one later. They cost just $15, including shipping, and can be ordered below.",
+          "links": [
+            {
+              "label": "ORDER ITAB",
+              "url": "https://shop.makeitpersonal.io/products/itab?year=2026&event=Joshua+Tree+Half+Marathon"
+            }
+          ]
         }
       ]
     },
