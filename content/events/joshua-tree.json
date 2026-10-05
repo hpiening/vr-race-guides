@@ -281,6 +281,12 @@
             "layout": "cards",
             "cards": [
               {
+                "eyebrow": "12:00 PM – 10:00 PM",
+                "title": "Merch Tent",
+                "icon": "bag",
+                "body": "Beach hoodies, tees, sweatshirts, tanks, water bottles, stickers, hats, bags and posters, plus limited glow and light-up items. Glow gear sells out fast — come early for the best selection.\n\n[CONFIRM] Contest-linked merch and any spend promotions."
+              },
+              {
                 "eyebrow": "Free for runners",
                 "title": "Face Painting",
                 "icon": "palette",
@@ -303,12 +309,6 @@
                 "title": "DJ Gravity One",
                 "icon": "music",
                 "body": "Los Angeles veteran DJ with 20+ years behind the decks — clubs, commercial radio, and an instructor at Scratch DJ Academy. In 2025 he played the finish line from 6:00 to 10:00 PM.\n\n[CONFIRM] 2026 booking and set times."
-              },
-              {
-                "eyebrow": "12:00 PM – 10:00 PM",
-                "title": "Merch Tent",
-                "icon": "bag",
-                "body": "Beach hoodies, tees, sweatshirts, tanks, water bottles, stickers, hats, bags and posters, plus limited glow and light-up items. Glow gear sells out fast — come early for the best selection.\n\n[CONFIRM] Contest-linked merch and any spend promotions."
               },
               {
                 "eyebrow": "To confirm",
