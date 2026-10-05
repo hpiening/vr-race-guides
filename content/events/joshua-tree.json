@@ -106,6 +106,10 @@
               "label": "Expo Closes · Last Call for Bib Pickup"
             },
             {
+              "time": "5:20 PM",
+              "label": "Parking Lot Access Closes"
+            },
+            {
               "time": "5:30 PM",
               "label": "Pacers Line Up"
             },
@@ -122,10 +126,6 @@
               "time": "6:00 PM",
               "label": "Race Starts · Waves Every Few Minutes",
               "highlight": true
-            },
-            {
-              "time": "6:20 PM",
-              "label": "Parking Lot Access Closes"
             },
             {
               "time": "8:45 PM",
