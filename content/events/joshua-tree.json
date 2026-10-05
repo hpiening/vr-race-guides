@@ -877,7 +877,8 @@
         }
       ],
       "parkNote": "The race start and finish are outside the park and do not require a park pass. If you plan to visit Joshua Tree National Park, check nps.gov for entry fees and conditions before you go.",
-      "restaurantsIntro": "A few of the popular local food and drink spots in and around Twentynine Palms"
+      "restaurantsIntro": "A few of the popular local food and drink spots in and around Twentynine Palms",
+      "restaurantsHeading": "Restaurants"
     },
     "faqs": {
       "enabled": true,
