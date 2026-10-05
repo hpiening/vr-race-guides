@@ -716,7 +716,7 @@
         {
           "heading": "Live Tracking & Results",
           "icon": "pin",
-          "body": "Live tracking is powered by Laurel, so friends and family can follow your race in real time — no phone or watch needed. Laurel estimates your position between checkpoints from pacing data for accurate updates and predicted finish times.",
+          "body": "Live tracking is powered by Laurel, so friends and family can follow your race in real time — no phone or watch needed. Laurel estimates your position between checkpoints from pacing data for accurate updates and predicted finish times.\n\nLive results are hosted online. Results are not official until all runners have crossed the finish line and the event director has reviewed them. Because age-group winners are based on chip time, it's possible to cross the line before someone in your age group and still finish with a slower time. Questions about your placement? Email timing@brooksee.com.",
           "links": [
             {
               "label": "Tracking ",
@@ -740,14 +740,15 @@
           ]
         },
         {
-          "heading": "Results",
-          "icon": "award",
-          "body": "Live results are hosted online. Results are not official until all runners have crossed the finish line and the event director has reviewed them. Because age-group winners are based on chip time, it's possible to cross the line before someone in your age group and still finish with a slower time. Questions about your placement? Email timing@brooksee.com."
-        },
-        {
           "heading": "Race Photos",
           "icon": "camera",
-          "body": "FinisherPix will be onsite. Photos are available 24–48 hours after the event; pre-order and they're sent to you digitally a few days after the race. Keep your bib visible on the front of your body so we can identify you. Share your race with us using **#JTHalf**."
+          "body": "FinisherPix will be onsite. Photos are available 24–48 hours after the event; pre-order and they're sent to you digitally a few days after the race. Keep your bib visible on the front of your body so we can identify you. Share your race with us using **#JoshuaTreeHalf**.",
+          "links": [
+            {
+              "label": "HALF MARATHON PHOTOS",
+              "url": "http://finisherpix.com/en/event/10958"
+            }
+          ]
         },
         {
           "heading": "Race Swag & Merchandise",
