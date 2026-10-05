@@ -75,8 +75,33 @@
         "url": ""
       },
       {
-        "name": "New partner",
-        "logoUrl": "",
+        "name": "Mother F",
+        "logoUrl": "/images/uploads/1791227195264-mother-f-logo-v3-1-1-.webp",
+        "url": ""
+      },
+      {
+        "name": "Make it personal",
+        "logoUrl": "/images/uploads/1791227209895-full-horizontal-logo-black-1-.webp",
+        "url": ""
+      },
+      {
+        "name": "Gruns",
+        "logoUrl": "/images/uploads/1791227233060-gruns-yellow-4-.webp",
+        "url": ""
+      },
+      {
+        "name": "Goodwipes",
+        "logoUrl": "/images/uploads/1791227244784-goodwipes-logo-botanical-2-.webp",
+        "url": ""
+      },
+      {
+        "name": "Dip",
+        "logoUrl": "/images/uploads/1791227252652-logo-dip-tri-color-3-.webp",
+        "url": ""
+      },
+      {
+        "name": "all day sauna",
+        "logoUrl": "/images/uploads/1791227259357-adsauna-badgelogo-v2-blue-2-.webp",
         "url": ""
       }
     ]
