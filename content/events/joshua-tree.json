@@ -787,32 +787,32 @@
           "distance": "1 mi loop",
           "difficulty": "Easy",
           "elevation": "Follow the path between rock walls and through a narrow gap to a sandy valley floor once rumored to hide cattle rustlers. There's no wrong way to explore it.",
-          "url": "",
-          "imageUrl": ""
+          "url": "https://www.alltrails.com/trail/us/california/hidden-valley--3",
+          "imageUrl": "/images/uploads/1791209136211-screenshot-2026-10-05-at-8.05.28-am.webp"
         },
         {
           "name": "Keys Ranch Tours",
           "distance": "Guided tour",
           "difficulty": "90 min",
           "elevation": "A National Historic Site in a remote rocky canyon, accessible only by guided walking tour. Tickets must be bought in person the same day at the Oasis Visitor Center in Twentynine Palms from 8:30 AM.",
-          "url": "",
-          "imageUrl": ""
+          "url": "https://www.nps.gov/jotr/planyourvisit/ranchtour.htm",
+          "imageUrl": "/images/uploads/1791209172382-screenshot-2026-10-05-at-8.06.05-am.webp"
         },
         {
           "name": "Barker Dam",
           "distance": "1.5 mi",
           "difficulty": "Easy",
           "elevation": "Built in 1900 for cattle and mining, the dam now collects rainwater for birds, bighorn sheep and rattlesnakes — keep your distance. Wear closed-toe shoes; cacti line the trail.",
-          "url": "",
-          "imageUrl": ""
+          "url": "https://www.nps.gov/places/barker-dam-trailhead.htm",
+          "imageUrl": "/images/uploads/1791209218890-screenshot-2026-10-05-at-8.06.50-am.webp"
         },
         {
           "name": "Boy Scout Trail",
-          "distance": "Out & back",
-          "difficulty": "Easy",
+          "distance": "8 mi Out & back",
+          "difficulty": "Moderate",
           "elevation": "A mostly flat route along the edge of the Wonderland of Rocks, passing Joshua tree forests, boulder fields and sandy washes. A marked turnoff at 1.25 miles leads to Willow Hole.",
-          "url": "",
-          "imageUrl": ""
+          "url": "https://www.alltrails.com/trail/us/california/boy-scout-trail--8",
+          "imageUrl": "/images/uploads/1791209311896-screenshot-2026-10-05-at-8.08.16-am.webp"
         },
         {
           "name": "Lost Palms Oasis",
@@ -832,8 +832,25 @@
         }
       ],
       "sights": [],
-      "restaurants": [],
-      "parkNote": "The race start and finish are outside the park and do not require a park pass. If you plan to visit Joshua Tree National Park, check nps.gov for entry fees and conditions before you go."
+      "restaurants": [
+        {
+          "name": "New restaurant",
+          "description": "",
+          "url": ""
+        },
+        {
+          "name": "New restaurant",
+          "description": "",
+          "url": ""
+        },
+        {
+          "name": "New restaurant",
+          "description": "",
+          "url": ""
+        }
+      ],
+      "parkNote": "The race start and finish are outside the park and do not require a park pass. If you plan to visit Joshua Tree National Park, check nps.gov for entry fees and conditions before you go.",
+      "restaurantsIntro": "A few of the popular local food and drink spots in and around Twentynine Palms"
     },
     "faqs": {
       "enabled": true,
