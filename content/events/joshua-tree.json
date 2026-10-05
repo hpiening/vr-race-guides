@@ -544,13 +544,7 @@
             ]
           }
         ],
-        "infoBlocks": [
-          {
-            "heading": "Wander Project",
-            "icon": "hands",
-            "body": "Official non-profit of Vacation Races. Turn your miles into impact. Raise $1,000 through the Charity Bib program and your race entry is waived. Tax-deductible donations are distributed by annual grant to initiatives in the communities that host our events."
-          }
-        ]
+        "infoBlocks": []
       }
     ],
     "raceMorning": {
