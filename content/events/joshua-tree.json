@@ -21,8 +21,9 @@
     "items": [
       {
         "name": "29 Palms (Presenting)",
-        "logoUrl": "/images/uploads/1791227085996-images-1.webp",
-        "url": "https://visit29.org/"
+        "logoUrl": "/images/events/joshua-tree-29palms.webp",
+        "url": "https://visit29.org/",
+        "presenting": true
       },
       {
         "name": "HotelPlanner",
@@ -844,7 +845,14 @@
         "url": "https://vacationraces.hotelplanner.com/Search/?seid=1A9A08C7BD0355996192A3353545CAA8&city=7000+Split+Rock+Ave%2C+Twentynine+Palms%2C+CA+92277&indate=11/06/2026&outdate=11/08/2026&numrooms=1&kw=JoshuaTreeHalfMarathon&sc=Vacation-Races&currency=USD&locale=en_US#search/7000%20Split%20Rock%20Ave%2C%20Twentynine%20Palms%2C%20CA%2092277/34.1255977/-116.0602096/11-06-2026/11-08-2026/default/ASC/ASC/ASC/0/none/none/none/0/0/0/0/None/0/0/none/none/0/5/none/none/none/1/0/0/0/1/1/results/0/",
         "imageUrl": "/images/uploads/1791208685247-dji-0008.webp"
       },
-      "activities": [],
+      "activities": [
+        {
+          "name": "Train with Runna",
+          "description": "Personalized training for your next Vacation Races event. Download now and unlock two free weeks!",
+          "discountCode": "VACATIONRUNNA",
+          "url": "https://web.runna.com/en-GB/welcome?utm_source=Vacation%20Races%20New"
+        }
+      ],
       "hikesHeading": "Hikes & Adventures",
       "hikes": [
         {

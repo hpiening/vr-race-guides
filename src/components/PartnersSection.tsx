@@ -12,42 +12,87 @@ type Props = { data: NonNullable<EventData['partners']>; basePath?: string; them
 const NEW_PARTNER = { name: 'New partner', logoUrl: '', url: '' }
 
 export default function PartnersSection({ data, basePath = 'partners', theme = 'classic' }: Props) {
-  const editing = !!useEditOptional()?.editing
+  const editCtx = useEditOptional()
+  const editing = !!editCtx?.editing
   const items = data.items ?? []
 
   // ── Trailhead view (renders in both view + edit mode) ──
   if (theme === 'trailhead') {
+    // Keep the ORIGINAL index on every item: it is the edit path, so splitting
+    // the list must not renumber anything.
+    const indexed = items.map((p, i) => ({ p, i }))
+    const featured = indexed.filter(({ p }) => p.presenting)
+    const rest = indexed.filter(({ p }) => !p.presenting)
+
+    const card = ({ p, i }: { p: typeof items[number]; i: number }, big: boolean) => {
+      const pp = `${basePath}.items.${i}`
+      const logo = p.logoUrl ? (
+        /* eslint-disable-next-line @next/next/no-img-element */
+        <img
+          src={p.logoUrl}
+          alt={p.name}
+          className={`${big ? 'max-h-[104px]' : 'max-h-[56px]'} max-w-full w-auto object-contain`}
+        />
+      ) : (
+        <span className={`font-micro uppercase text-vr-forest/45 tracking-[0.06em] ${big ? 'text-[15px]' : 'text-[12px]'}`}>{p.name}</span>
+      )
+      return (
+        <div
+          key={i}
+          className={`bg-vr-white border rounded-lg flex flex-col items-center justify-center text-center gap-2 ${
+            big
+              ? 'min-h-[168px] border-[#d6c6ae] px-10 py-7 shadow-[0_1px_3px_rgba(43,20,48,0.06)]'
+              : 'min-h-[100px] border-[#e0d4c0] p-3'
+          }`}
+        >
+          {editing ? (
+            <div className="w-full flex flex-col gap-1 items-stretch text-left">
+              <div className="flex items-center gap-1">
+                <EditableText as="div" className="font-micro uppercase text-[12px] tracking-[0.06em] flex-1" value={p.name} path={`${pp}.name`} placeholder="Partner name" />
+                <ListControls path={`${basePath}.items`} index={i} count={items.length} />
+              </div>
+              <EditableImage path={`${pp}.logoUrl`} label="Logo" />
+              <EditableUrl path={`${pp}.url`} label="Website link" />
+              <label className="flex items-center gap-1.5 font-micro text-[10px] uppercase tracking-wider text-vr-forest/70 mt-1">
+                <input
+                  type="checkbox"
+                  checked={!!p.presenting}
+                  onChange={e => editCtx?.setValue(`${pp}.presenting`, e.target.checked || undefined)}
+                />
+                Presenting partner
+              </label>
+            </div>
+          ) : p.url ? (
+            <a href={p.url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full h-full">{logo}</a>
+          ) : logo}
+        </div>
+      )
+    }
+
     return (
       <section className="bg-vr-offwhite px-6 md:px-12 py-20 md:py-24 border-t border-[#e6dccb]">
         <div className="max-w-[1180px] mx-auto text-center">
           <TrailHeader center eyebrow="Proudly supported by" title="Our Partners" className="mb-10" />
-          <div className="grid gap-3.5" style={{ gridTemplateColumns: 'repeat(auto-fill,minmax(170px,1fr))' }}>
-            {items.map((partner, i) => {
-              const pp = `${basePath}.items.${i}`
-              const logo = partner.logoUrl ? (
-                /* eslint-disable-next-line @next/next/no-img-element */
-                <img src={partner.logoUrl} alt={partner.name} className="max-h-[56px] max-w-full w-auto object-contain" />
-              ) : (
-                <span className="font-micro uppercase text-vr-forest/45 text-[12px] tracking-[0.06em]">{partner.name}</span>
-              )
-              return (
-                <div key={i} className="min-h-[100px] bg-vr-white border border-[#e0d4c0] rounded-lg flex flex-col items-center justify-center text-center gap-2 p-3">
-                  {editing ? (
-                    <div className="w-full flex flex-col gap-1 items-stretch text-left">
-                      <div className="flex items-center gap-1">
-                        <EditableText as="div" className="font-micro uppercase text-[12px] tracking-[0.06em] flex-1" value={partner.name} path={`${pp}.name`} placeholder="Partner name" />
-                        <ListControls path={`${basePath}.items`} index={i} count={items.length} />
-                      </div>
-                      <EditableImage path={`${pp}.logoUrl`} label="Logo" />
-                      <EditableUrl path={`${pp}.url`} label="Website link" />
-                    </div>
-                  ) : partner.url ? (
-                    <a href={partner.url} target="_blank" rel="noopener noreferrer" className="flex items-center justify-center w-full h-full">{logo}</a>
-                  ) : logo}
-                </div>
-              )
-            })}
-          </div>
+
+          {/* Presenting sponsor: alone, centred, above everything else. */}
+          {featured.length > 0 && (
+            <div className="mb-10">
+              <p className="font-micro font-bold uppercase text-vr-forest/55 mb-3.5" style={{ fontSize: '10px', letterSpacing: '0.22em' }}>
+                {featured.length > 1 ? 'Presenting partners' : 'Presenting partner'}
+              </p>
+              <div className="flex flex-wrap justify-center gap-4">
+                {featured.map(entry => (
+                  <div key={entry.i} className="w-full max-w-[380px]">{card(entry, true)}</div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {rest.length > 0 && (
+            <div className="grid gap-3.5" style={{ gridTemplateColumns: 'repeat(auto-fill,minmax(170px,1fr))' }}>
+              {rest.map(entry => card(entry, false))}
+            </div>
+          )}
           <div className="mt-4"><AddButton path={`${basePath}.items`} item={NEW_PARTNER} label="Add partner" /></div>
         </div>
       </section>

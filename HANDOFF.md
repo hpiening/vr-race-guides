@@ -345,6 +345,31 @@ auto-highlights any label containing "start", which would also have caught two o
 
 Not verified: mobile below ~500px (Chrome enforces a ~500 CSS px minimum window here), and no
 live-site check — this has not been pushed.
+### Presenting partner (added 2026-10-06)
+
+Race-team feedback on Joshua Tree: add the Runna callout, put the 29 Palms logo in the hero as
+presenting sponsor (as the 2025 printed guide does), and give it its own prominence in the partner
+grid. All three are driven by ONE optional flag so there is a single source of truth:
+
+```jsonc
+{ "name": "29 Palms", "logoUrl": "...", "url": "...", "presenting": true }
+```
+
+- **Hero** renders a white "PRESENTED BY" tile under the date line. The tile is white on purpose:
+  sponsor marks are dark artwork with no alpha and would vanish on the dark hero. The 2025 guide
+  solves it the same way.
+- **Partners** pulls flagged partners out of the grid and renders them centred above it under a
+  "Presenting partner" label, at roughly double logo height.
+- There is a **"Presenting partner" checkbox per partner in /edit**, so the team can move it.
+
+Absent the flag nothing changes — verified: every other guide renders exactly its JSON partner
+count with neither label. NB the grid card classes were reordered when the card renderer was
+extracted, so other guides' HTML differs textually from before even though it renders identically.
+
+The 29 Palms upload was a 447x447 square that was **47% white padding**, which is why it read small.
+A trimmed copy lives at `public/images/events/joshua-tree-29palms.webp` and the partner points at
+it; the team's original upload is untouched in `uploads/` and re-uploading from /edit overrides it.
+
 ---
 
 ## Known issues / backlog

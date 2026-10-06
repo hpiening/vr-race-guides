@@ -323,7 +323,18 @@ export interface EventData {
   footerImage?: string
   partners?: {
     enabled: boolean
-    items: Array<{ name: string; logoUrl?: string; url?: string }>
+    items: Array<{
+      name: string
+      logoUrl?: string
+      url?: string
+      /**
+       * Presenting partner. Shown on its own, centred and larger, above the
+       * main logo grid, and as a "Presented by" lockup in the hero — the
+       * treatment the printed guides give the presenting sponsor. Absent =
+       * an ordinary partner in the grid, which is every other guide today.
+       */
+      presenting?: boolean
+    }>
   }
   sections: {
     welcome?: WelcomeData

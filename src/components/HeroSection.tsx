@@ -95,6 +95,9 @@ export default function HeroSection({ event, theme = 'classic' }: { event: Event
 /* ── Trailhead hero — cinematic radial gradient, inset frame, editorial type ── */
 function HeroTrailhead({ event }: { event: EventData }) {
   const editing = !!useEditOptional()?.editing
+  // The presenting sponsor is read off the partner list rather than stored
+  // twice, so the hero and the partners section can never disagree.
+  const presentingPartner = (event.partners?.enabled ? event.partners.items : []).find(p => p.presenting)
   return (
     <header
       className="tl-hero relative flex flex-col justify-end overflow-hidden min-h-[78vh] md:min-h-[82vh]"
@@ -164,6 +167,35 @@ function HeroTrailhead({ event }: { event: EventData }) {
             <span className="bg-vr-sky inline-block" style={{ width: 5, height: 5, transform: 'rotate(45deg)' }} />
             <EditableText as="span" value={event.dates} path="dates" />
           </div>
+
+          {/* Presenting sponsor lockup, as the printed guides carry it. The
+              logo sits on a white tile because sponsor marks are dark artwork
+              on white and would otherwise vanish into a dark hero. Driven by
+              `presenting` on a partner, so there is one source of truth and no
+              guide without one is affected. */}
+          {presentingPartner?.logoUrl && (() => {
+            const lockup = (
+              <>
+                <span className="font-micro font-bold uppercase text-vr-forest/55" style={{ fontSize: '9px', letterSpacing: '0.22em' }}>
+                  Presented by
+                </span>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={presentingPartner.logoUrl}
+                  alt={presentingPartner.name}
+                  className="h-11 md:h-14 w-auto object-contain"
+                />
+              </>
+            )
+            const shell = 'mt-8 inline-flex flex-col items-center gap-1.5 bg-white rounded-lg px-5 py-3 w-fit'
+            return presentingPartner.url && !editing ? (
+              <a href={presentingPartner.url} target="_blank" rel="noopener noreferrer" className={`${shell} transition-opacity hover:opacity-90`}>
+                {lockup}
+              </a>
+            ) : (
+              <div className={shell}>{lockup}</div>
+            )
+          })()}
 
           {editing && (
             <div className="mt-8 max-w-md grid gap-4 rounded-lg bg-vr-night/70 border border-vr-cream/20 p-4">
