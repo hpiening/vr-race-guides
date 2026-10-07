@@ -19,7 +19,14 @@ export default function FAQSection({ data, basePath = 'sections.faqs', theme = '
   if (theme === 'trailhead') {
     return (
       <section id="faqs" className="bg-vr-forest px-6 md:px-12 py-20 md:py-[104px]">
-        <div className="max-w-[880px] mx-auto">
+        {/* The 880px measure is LEFT-aligned inside the standard 1180px content
+            column, not centred on the page. Centring it indented the whole
+            section ~150px further right than every other section on the page,
+            which is what Augment flagged on Joshua Tree. The design spec is
+            explicit: left-aligned throughout except Schedule, Partners, Footer
+            and the photo bands. */}
+        <div className="max-w-[1180px] mx-auto">
+          <div className="max-w-[880px]">
           <TrailHeader dark eyebrow="Good to know" title="FAQs" className="mb-10" />
           {editing ? (
             <div className="flex flex-col gap-3">
@@ -47,6 +54,7 @@ export default function FAQSection({ data, basePath = 'sections.faqs', theme = '
               ))}
             </div>
           )}
+          </div>
         </div>
       </section>
     )

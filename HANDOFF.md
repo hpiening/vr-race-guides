@@ -370,6 +370,31 @@ The 29 Palms upload was a 447x447 square that was **47% white padding**, which i
 A trimmed copy lives at `public/images/events/joshua-tree-29palms.webp` and the partner points at
 it; the team's original upload is untouched in `uploads/` and re-uploading from /edit overrides it.
 
+### Augment review fixes (2026-10-07)
+
+**FAQs were indented ~160px further right than every other section.** The Trailhead FAQ block used
+`max-w-[880px] mx-auto`, i.e. its 880px measure was centred on the PAGE, while every other section
+uses `max-w-[1180px]`. The 880px measure is now left-aligned inside the standard 1180px column, so
+the FAQ heading starts on the same left edge as Explore, Post-Race and the rest (measured: 121px on
+both Joshua Tree and Rocky Mountain, matching the Explore heading exactly).
+
+This is a **shared-component change — it shifts the FAQ section left on all five other guides too.**
+That is the intended reading of the design spec ("left-aligned throughout except Schedule, Partners,
+Footer and photo bands") and it makes each guide internally consistent rather than divergent, but it
+is a visible change to live guides. One-line revert if it is not wanted.
+
+**The Joshua Tree watermark cactus was cut off in the ASSET, not the layout.** Worth remembering,
+because the obvious diagnosis is wrong: measuring the rendered hero shows the watermark sits ~57px
+inside the frame at every width and is clipped only at the bottom, which is the deliberate
+`bottom-[-4%]` bleed. The cut was baked into `joshua-tree-icon.png` — the silhouette was extracted
+from the shield by taking a fixed 36%-of-width region BEFORE finding the connected component, so a
+branch reaching past 36% was sliced flat at the region edge.
+
+Re-extracted by scanning components across the full mask above the ground line and **choosing the
+largest component that touches no region edge** — an edge-touching silhouette is one the shield
+artwork itself crops (the right-hand tree runs off the badge). Generalisable rule for pulling a mark
+out of a badge: never pre-crop, and reject components that touch an edge.
+
 ---
 
 ## Known issues / backlog
