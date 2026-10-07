@@ -136,7 +136,7 @@
     "welcome": {
       "enabled": true,
       "heading": "Welcome to the|Mojave",
-      "body": "This is a night race. Running through the desert outside Joshua Tree under the stars and the moon, with the quiet of the night, deep canyons in the distance, silhouetted buttes, and the twinkling desert all around, is an experience unlike any other race on our calendar. New for 2026: the start line, finish line, and expo are all at the RESET Hotel in Twentynine Palms, on an entirely new course.\n\nThe Mojave rewards preparation. Temperatures drop quickly after sunset, the sand gets deeper the further you go, and your light is the only thing between you and the dark. Come ready, run smart, and take a moment somewhere past mile 7 to switch off your headlamp and look up — there are few darker skies in Southern California.",
+      "body": "This is a night race. Running through the desert outside Joshua Tree under the stars and moon, surrounded by quiet desert, distant canyons, and silhouetted buttes, is an experience unlike any other race on our calendar.\nNew for 2026, the start line, finish line, and expo are all located at the RESET Hotel in Twentynine Palms, with an entirely new course to explore.\nThe Mojave rewards preparation. Temperatures drop quickly after sunset, the sand gets deeper the farther you go, and your light is the only thing between you and the dark. Come ready, run smart, and take a moment somewhere past mile 7 to switch off your headlamp and look up. There are few darker skies in Southern California.",
       "closing": "See you under the stars! — The Vacation Races Team",
       "note": "Note to runners: All of the following information is subject to change. If changes occur due to unforeseen circumstances, adjustments will be made to satisfy local permitting requirements while still delivering a top-tier running experience. We will inform runners of any changes as soon as they are finalized so participants can comfortably prepare for their Vacation Races experience.",
       "imageUrl": "/images/uploads/1791205754023-joshuatree-25-1-5.webp"
@@ -366,9 +366,9 @@
               },
               {
                 "eyebrow": "Pre-race costume contest · Raffle 4:45 PM",
-                "title": "Show Your Glow",
+                "title": "GLOW BIG OR GO HOME.",
                 "icon": "sparkle",
-                "body": "Neon outfits and glow sticks. Dress up, get seen in the dark, and enter the raffle at 4:45 PM at the start line.\n\n[CONFIRM] Select merch items tied to the contest, including glow items."
+                "body": "You’re running through the desert in the dark. Might as well make it a rave.  In addition to Joshua Tree race merchandise, the Merch Store will have a limited stash of glow + light-up gear to get you race-night ready — including light-up tutus, glow scrunchies, headbands, and more.  Limited quantities available. When the glow is gone, it’s gone."
               },
               {
                 "eyebrow": "Live music",
@@ -654,34 +654,42 @@
       ],
       "schedule": [
         {
-          "time": "0 – 3.1",
-          "label": "Dirt road",
+          "time": "0 – 1.9",
+          "label": "Paved or Sidewalk",
           "note": "Runners keep to the right-hand shoulder heading out to the sand trail."
         },
         {
-          "time": "~3.1",
-          "label": "Short paved section",
+          "time": "1.9 - 3.1",
+          "label": "Dirt Road",
           "note": "Then back onto trail."
         },
         {
-          "time": "4.7 – 5.9",
+          "time": "3.1 - 4.3",
           "label": "Sand trail",
           "note": "Rockier surface."
         },
         {
-          "time": "5.9 – 10",
-          "label": "Sand trail continues",
+          "time": "4.3 – 4.8",
+          "label": "Paved road",
           "note": ""
         },
         {
-          "time": "7.5 – 10",
-          "label": "Deeper sand",
-          "note": "Expect deeper sand through here."
+          "time": "4.8 - 7.1",
+          "label": "Dirt Road and Trail Combo",
+          "note": ""
         },
         {
-          "time": "10 – 13.1",
-          "label": "Finish on road",
+          "time": "7.1 - 7.7",
+          "label": "Softer, Deeper Sand",
           "note": ""
+        },
+        {
+          "time": "7.7- 10.3",
+          "label": "Dirt Road and Trail"
+        },
+        {
+          "time": "10.3- Finish",
+          "label": "Road "
         }
       ],
       "aidStations": "There are five aid stations on course, stocked with restrooms, water, electrolytes, and Honey Stinger gels.",
@@ -692,7 +700,7 @@
         {
           "heading": "Aid Stations",
           "icon": "drop",
-          "body": "There are five aid stations on course, stocked with restrooms, water, electrolytes, and Honey Stinger gels. Miles 5 and 7 also have oranges and bananas, and an EMT is stationed at mile 7. This race is cup-free — bring a reusable bottle, collapsible cup, or hydration pack to fill up."
+          "body": "There are five aid stations on course, stocked with restrooms, water, electrolytes, and Honey Stinger gels. Miles 5 and 7 also have oranges and bananas, and an EMT is stationed at mile 5 and mile 9. This race is cup-free — bring a reusable bottle, collapsible cup, or hydration pack to fill up."
         },
         {
           "heading": "Running at Night",
@@ -707,7 +715,7 @@
         {
           "heading": "Starting Waves",
           "icon": "timer",
-          "body": "A wave start keeps the course from overcrowding as runners move from wide road onto narrower dirt road. Look at the colour in the top-left corner of your bib and follow the signs at the start; waves are grouped by the finish time you gave at registration (if you didn't give one, you were placed at random). Grouping is not a reflection of performance — start in whichever wave suits your ability. If you are a slower runner or a walker, do not start in the first wave. Expect a pause of a few minutes between waves."
+          "body": "A wave start keeps the course from overcrowding as runners move from wide road onto narrower dirt road. Look at the color in the top-left corner of your bib and follow the signs at the start; waves are grouped by the finish time you gave at registration (if you didn't give one, you were placed at random). Grouping is not a reflection of performance — start in whichever wave suits your ability. If you are a slower runner or a walker, do not start in the first wave. Expect a pause of a few minutes between waves."
         },
         {
           "heading": "Pacers",
@@ -727,7 +735,7 @@
         {
           "heading": "Recovery Snack Pack ",
           "icon": "snack",
-          "body": "At the finish line recovery area we will have snack bags (full of recovery snacks), bananas, and chocolate milk, as well as water, ZICO coconut water and electrolytes. Please help yourself to one snack bag, chocolate milk, and banana per runner. Snacks are for runners only. No spectators, please."
+          "body": "At the finish line recovery area we will have snack bags (full of recovery snacks), bananas, and chocolate milk, as well as water, ZICO coconut water and electrolytes. Please help yourself to one snack bag, Muscle Milk, and banana per runner. Snacks are for runners only. No spectators, please."
         },
         {
           "heading": "Time Limit",
@@ -826,7 +834,7 @@
         {
           "heading": "Personalize Your Medal ",
           "icon": "award",
-          "body": "Our partner, Make It Personal, provides custom-engraved plates with your name and finishing time that clips onto your medal ribbon.\nYou can pre-order before race day; they will be sent to you automatically after your finish. If you missed out, you can still order one later. They cost just $15, including shipping, and can be ordered below.",
+          "body": "Our partner, Make It Personal, offers iTABs, custom-engraved plates featuring your name and finish time that attach to your medal ribbon. You can add an iTAB before race day, and it will be mailed to the shipping address provided during registration approximately two weeks after the race. If you didn’t pre-order one, you can still order one after the event. iTABs are $15, including shipping, and can be ordered below. ",
           "links": [
             {
               "label": "ORDER ITAB",
