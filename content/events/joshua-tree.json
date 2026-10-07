@@ -231,7 +231,7 @@
         {
           "heading": "Bib Pickup",
           "icon": "ticket",
-          "body": "**At the race expo** — 12:00 PM to 5:00 PM on Saturday. Bring a photo ID. Someone else can collect your packet with a photo of your ID.\n\n**Shipped to your house** — available as an add-on in Let's Do This until 2 months before the event.\n\n**Add-ons** — headlamps and reusable cups are collected at bib pickup."
+          "body": "Bib pickup will be available at the race expo on Saturday from 12:00 PM–5:00 PM. Please bring a photo ID to pick up your race packet. \n\nIf you’re unable to pick it up yourself, someone else may pick it up for you as long as they have a photo of your ID. \n\nIf you purchased a headlamp or reusable cup during registration,  "
         },
         {
           "heading": "Earn Race Credits",
@@ -251,7 +251,7 @@
         "tone": "darkest",
         "eyebrow": "Mandatory gear",
         "heading": "Carry a Personal Light",
-        "intro": "**At least 1 personal light option is mandatory for all runners.** This can include headlamps, chest lamps, waist lamps, or hand torches. Relying on a phone light is NOT recommended. Remember extra batteries!\n\nRunners who added a headlamp as a registration add-on pick it up at bib pickup, next to reusable cup pickup. Runners without a light will not be permitted to start.",
+        "intro": "**At least one personal light option is mandatory for all runners.** This can include headlamps, chest lamps, waist lamps, or hand torches. Relying on a phone light is NOT sufficient. Remember extra batteries!\n\nRunners who added a headlamp as a registration add-on can  pick it up at bib pickup, next to reusable cup pickup. Runners without a light will not be permitted to start.",
         "imageUrl": "/images/uploads/1791205834054-joshua-tree-d4r9489.webp",
         "groups": [
           {
@@ -342,7 +342,7 @@
         "intro": "",
         "groups": [
           {
-            "heading": "At the expo",
+            "heading": "Festival Activities",
             "icon": "sparkle",
             "layout": "cards",
             "cards": [
@@ -472,7 +472,7 @@
           {
             "heading": "Timings & Drop-Off",
             "icon": "clock",
-            "body": "All cars should be parked **no later than 4:30 PM**. Access to the parking lot closes at 6:20 PM to allow the race to begin. Arrive early to avoid the rush and give yourself time to get ready.\n\nDropping a runner off? Follow the drop-off signs and drop your runner no later than 4:30 PM. If you plan to stay and wait, park with the rest of event traffic."
+            "body": "All cars should be parked **no later than 5:20 PM**. Access to the parking lot closes at 5:20 PM to allow the race to begin. Arrive early to avoid the rush and give yourself time to get ready.\n\nDropping a runner off? Follow the drop-off signs and drop your runner no later than 5:20 PM. If you plan to stay and wait, park with the rest of event traffic."
           }
         ]
       },
@@ -715,7 +715,7 @@
         {
           "heading": "Gear Check",
           "icon": "bag",
-          "body": "Gear check is available at the start line — the last call for gear check is at 6:45 AM. Fill a gear-check bag with anything you'd like transported to the finish; write your name and bib number on it. **Avoid putting valuables or car keys in your bag.** Bags will be available for pickup near the finish line."
+          "body": "Gear check is available at the start line — the last call for gear check is at 5:45 AM. Fill a gear-check bag with anything you'd like transported to the finish; write your name and bib number on it. **Avoid putting valuables or car keys in your bag.** Bags will be available for pickup near the finish line."
         },
         {
           "heading": "Clothing on Course & No Littering",
