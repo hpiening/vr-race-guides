@@ -575,12 +575,14 @@
               {
                 "eyebrow": "Bring",
                 "title": "A reusable water bottle",
-                "body": ""
+                "body": "",
+                "meta": ""
               },
               {
                 "eyebrow": "Bring",
                 "title": "A reusable collapsible cup",
-                "body": "Request one when you sign up, collect it at bib pickup."
+                "body": "Request one when you sign up, collect it at bib pickup.",
+                "meta": "Available to add on during registration, and pick up at the expo."
               },
               {
                 "eyebrow": "Bring",
@@ -766,7 +768,7 @@
         {
           "heading": "Timing & Waves",
           "icon": "timer",
-          "body": "Overall and Masters awards are based on gun time — if you're competing for those spots, line up at the front of the Blue wave for the 6:00 PM start. All age-division and team awards are based on chip time. Your chip time doesn't start until you cross the line, so please be courteous to others at the start."
+          "body": "Place medals are awarded to the top five Male, Female, and Non-Binary finishers, Overall, as well as the top five Male, Female, and Non-Binary Masters (40+) finishers. Age-group place medals are awarded to the top five Male and Female finishers in each of the following divisions: 11 and under, 12–14, 15–19, 20–24, 25–29, 30–34, 35–39, 40–44, 45–49, 50–54, 55–59, 60–64, 65–69, 70–74, and 75+. Non-Binary age-group awards are not currently offered. All runners who complete the race receive a finisher medal. If you earn a place medal but are unable to attend the awards ceremony, you can request to have your medal shipped to you. Place medals are awarded to the top five Male, Female, and Non-Binary finishers Overall, as well as the top five Male, Female, and Non-Binary Masters (40+) finishers. Age-group place medals are awarded to the top five Male and Female finishers in each of the following divisions: 11 and under, 12–14, 15–19, 20–24, 25–29, 30–34, 35–39, 40–44, 45–49, 50–54, 55–59, 60–64, 65–69, 70–74, and 75+. Non-Binary age-group awards are not currently offered. All runners who complete the race receive a finisher medal. If you earn a place medal but are unable to attend the awards ceremony, you can request to have your medal shipped to you. "
         },
         {
           "heading": "Your Timing Chip",
@@ -789,7 +791,7 @@
           ]
         },
         {
-          "heading": "Medical Area & Lost Property",
+          "heading": "Medical Area & Lost and Found",
           "icon": "firstaid",
           "body": "The medical area at the finish is for athletes only; family members should wait outside for updates. \n\nLost and found items will be held at the Merchandise Booth. If you have lost an item, please submit a request [here.](https://vacationraces.fillout.com/t/dmnGubJfxtus?id=) We will hold onto lost items and unclaimed gear check bags for one week only, so be sure to reach out as soon as possible.\n\nA bin for extra clothing will be available at the first aid station. Again, this is the only official clothing drop and any clothing left scattered along the course will be considered trash which may be discarded or donated. **Unclaimed clothing from aid station 1 drop (near mile 3) will be donated immediately after the race.**",
           "links": [
@@ -816,7 +818,7 @@
           "body": "The official race shirt is picked up at the expo upon check-in, and the official race medal is awarded at the finish line. Exclusive race merchandise is available at the expo and near the finish. When possible, we'll add remaining merch to our online store after the race.",
           "links": [
             {
-              "label": "SHOPE RACE MERCHANDISE",
+              "label": "SHOP RACE MERCHANDISE",
               "url": "https://store.vacationraces.com/collections/joshua-tree-half-marathon"
             }
           ]
