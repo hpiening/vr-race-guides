@@ -394,7 +394,7 @@
         "tone": "light",
         "eyebrow": "New course, clean slate",
         "heading": "Course Records Reset",
-        "intro": "Because 2026 runs an entirely new course, the 2025 records no longer apply. Every category goes back to record open — 2026 is the first shot at setting a mark on this course. The perk is unchanged: **the record holder races free every year their record stands**, until someone else breaks it.\n\nOverall and Masters awards are available for Male, Female, and Non-Binary runners. Overall and Masters placings are taken on gun time, so line up at the front of the Blue wave if you are competing for them.",
+        "intro": "Because 2026 features an entirely new course, previous course records no longer apply. That means 2026 is your chance to set the first record on the new course! \n\nAnd the perk remains the same: course record holders race free every year their record stands, until someone breaks it. \n\nOverall and Masters awards are available for Male, Female, and Non-Binary runners. Placings are based on gun time, so if you’re competing for an Overall or Masters award, be sure to line up at the front of the Blue wave. ",
         "groups": [
           {
             "heading": "2026 records",
@@ -623,7 +623,7 @@
       "enabled": true,
       "navLabel": "Course",
       "heading": "The Course",
-      "intro": "An entirely new 13.1-mile loop starting and finishing at the RESET Hotel. You'll run dirt road, a short paved stretch, and long sections of sand trail — some of it deep — before finishing on road. Gaiters and trail shoes are recommended, a personal light is mandatory, and there are plenty of spots along the way worth stopping for a look at the sky.",
+      "intro": "An entirely new 13.1-mile loop starting and finishing at the RESET Hotel. You’ll run on dirt roads, a short paved stretch, and long sections of sand trail. Gaiters and trail shoes are recommended, a personal light is mandatory, and there are plenty of spots along the way worth stopping for a look at the sky.",
       "distances": [
         {
           "name": "Half Marathon",
