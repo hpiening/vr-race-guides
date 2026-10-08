@@ -74,7 +74,7 @@ export default function FAQSection({ data, basePath = 'sections.faqs', theme = '
                     {editing ? (
                       <EditableText as="span" value={item.question} path={`${itemsPath}.${i}.question`} />
                     ) : (
-                      <button className="w-full text-left" onClick={() => setOpen(open === i ? null : i)}>
+                      <button className="w-full text-left" aria-expanded={open === i} onClick={() => setOpen(open === i ? null : i)}>
                         {item.question}
                       </button>
                     )}

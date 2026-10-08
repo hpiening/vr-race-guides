@@ -1,3 +1,4 @@
+import GuideAnalytics from '@/components/GuideAnalytics'
 import { notFound } from 'next/navigation'
 import fs from 'fs'
 import path from 'path'
@@ -197,6 +198,7 @@ export default async function EventPage({ params }: { params: { slug: string } }
   return (
     <div data-theme={theme} data-brand={event.brand || undefined}>
       <AlertBanner alert={event.alert} slug={event.slug} />
+      <GuideAnalytics slug={event.slug} />
       {/* Trailhead: nav sits above the hero. Classic: hero first, nav below. */}
       {isTrail && <StickyNav items={navItems} theme={theme} />}
       <HeroSection event={event} theme={theme} />
