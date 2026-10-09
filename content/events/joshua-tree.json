@@ -448,32 +448,32 @@
         "tone": "dark",
         "eyebrow": "Getting there",
         "heading": "Parking & Shuttles",
-        "intro": "**Plan not final — space held.** The 2026 parking plan is still being finalised with the operations team and is expected shortly. Shuttles have not yet been determined. This section will be replaced with the confirmed plan, a map, and shuttle times before the guide goes out.\n\n[CONFIRM] Final parking plan, parking map and shuttle arrangements (operations).",
+        "intro": "Runners can park at RESET, on the neighboring streets, or at Tortoise Rock Casino. A shuttle will take runners from Tortoise Rock Casino to the race venue. More parking details will be added. The they are, we’ll update this guide, the website and race emails with the details.",
         "imageUrl": "",
         "groups": [
           {
-            "heading": "Known so far",
+            "heading": "Confirmed Parking Locations ",
             "icon": "map",
             "layout": "rows",
             "cards": [
               {
                 "eyebrow": "Parking",
-                "title": "Tortoise Rock Casino",
+                "title": "TORTOISE ROCK CASINO",
                 "body": ""
               },
               {
                 "eyebrow": "Parking",
-                "title": "Side streets around the expo",
+                "title": "NEIGHBORING STREETS AROUND THE EXPO",
                 "body": ""
               },
               {
-                "eyebrow": "Limited",
+                "eyebrow": "Parking",
                 "title": "Expo and finish line",
                 "body": ""
               },
               {
-                "eyebrow": "To be determined",
-                "title": "Shuttles",
+                "eyebrow": "Shuttle",
+                "title": "CASINO TO RACE VENUE",
                 "body": ""
               }
             ]
