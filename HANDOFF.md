@@ -395,6 +395,29 @@ largest component that touches no region edge** — an edge-touching silhouette 
 artwork itself crops (the right-hand tree runs off the badge). Generalisable rule for pulling a mark
 out of a badge: never pre-crop, and reject components that touch an edge.
 
+### Joshua Tree course map embedded (2026-10-09)
+
+The RideWithGPS route is in: `embeds?type=route&id=53736539&metricUnits=false&sampleGraph=true`.
+This was the guide's last blocking gap — the embed had been left deliberately empty because the
+interim route did not finish back at RESET.
+
+Verified before embedding, rather than taken on trust: the route is public (`visibility: 0`, every
+endpoint 200 without the `?via=` share token, so the token is not carried into the page), named
+"2026 Joshua Tree Half Marathon Route", 13.24 mi, `locality: Twentynine Palms`, and RideWithGPS
+itself classifies it `track_type: loop` with start and finish 344 m apart. `surface:
+mostly_unpaved` / `unpaved_pct: 69` independently corroborates the guide's dirt-and-sand terrain
+table. The printed PDF map was rendered and shows the closed loop with start/finish together.
+
+**`metricUnits=false` matters and is easy to miss.** Omitting the parameter does NOT give imperial
+— the embed defaults to metric, so the course panel read "21.3 km" on a race the rest of the page
+quotes in miles. With the flag it reads 13.2 mi / +772 ft.
+**The other three US guides are all currently showing kilometres** — `rocky-mountain` omits the
+parameter and `mount-rushmore` / `great-smoky` explicitly pass `metricUnits=true`. Not changed
+here, but it looks wrong on a US race and is a one-line fix per guide.
+
+Nothing extra is needed for print: `rwgStaticMap()` derives `routes/<id>/full.png` from the embed
+URL. All `[CONFIRM]` markers on this guide are now resolved (the team cleared the rest via /edit).
+
 ---
 
 ## Known issues / backlog

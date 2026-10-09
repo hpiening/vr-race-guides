@@ -635,7 +635,7 @@
         {
           "name": "Half Marathon",
           "mapUrl": "https://ridewithgps.com/routes/53736539",
-          "embedUrl": "",
+          "embedUrl": "https://ridewithgps.com/embeds?type=route&id=53736539&metricUnits=false&sampleGraph=true",
           "mapImageUrl": "",
           "statTiles": [
             {
