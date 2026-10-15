@@ -451,7 +451,7 @@
         "tone": "dark",
         "eyebrow": "Getting there",
         "heading": "Parking & Shuttles",
-        "intro": "Runners can park at RESET, on the neighboring streets, or at Tortoise Rock Casino. A shuttle will take runners from Tortoise Rock Casino to the race venue. Additional parking and shuttle details coming soon. We’ll update this guide, the website and race emails with the details.",
+        "intro": "Runners can park at RESET, on the neighboring streets, or at Tortoise Rock Casino. A shuttle will take runners from Tortoise Rock Casino to the race venue. \nAll cars should be parked **no later than 5:15 PM**. The last shuttles will leave from the secondary parking lots at 5:30 to allow the race to begin on time. Arrive early to avoid the rush and give yourself time to get ready.",
         "imageUrl": "",
         "groups": [
           {
@@ -484,9 +484,9 @@
         ],
         "infoBlocks": [
           {
-            "heading": "Timings & Drop-Off",
+            "heading": "Runner Drop Off",
             "icon": "clock",
-            "body": "All cars should be parked **no later than 5:20 PM**. Access to the parking lot closes at 5:20 PM to allow the race to begin. Arrive early to avoid the rush and give yourself time to get ready.\n\nDropping a runner off? Follow the drop-off signs and drop your runner no later than 5:20 PM. If you plan to stay and wait, park with the rest of event traffic."
+            "body": "Dropping a runner off? Follow the drop-off signs and drop your runner no later than 5:15 PM. If you plan to stay and wait, park with the rest of event traffic. Runnerdrop-offf will be at the RESET hotel. Follow signs and crew member instructions to the runner drop off zone. Please be prepared to drop off your runner quickly and exit the lot to avoid traffic congestion. All runners should be dropped off no later than 5:15pm in order to facilitate an on time start. "
           }
         ]
       },
