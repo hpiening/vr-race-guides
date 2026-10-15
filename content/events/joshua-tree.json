@@ -380,23 +380,34 @@
               {
                 "title": "Runner bar ",
                 "body": "Stop by the Runner Bar booth for your new go-to long-run fuel. Runner Bar is real-food energy, created by runners for the miles that ask more of you. Whether you’re chasing a PR, exploring a new trail, or simply showing up for yourself, swing by to taste the difference and fuel your next adventure.",
-                "imageUrl": ""
+                "imageUrl": "",
+                "eyebrow": "Runner Snacks"
               },
               {
                 "title": "SportPharm",
                 "body": "Visit the SportPharm booth to meet a trusted pharmacy partner for athletes and sports medicine professionals. SportPharm™ offers innovative over-the-counter (OTC) and prescription-only (RX) topical pain-relief solutions designed to support recovery, performance, and movement. From everyday soreness to training demands, stop by to learn how they help athletes feel and perform their best.",
-                "imageUrl": ""
+                "imageUrl": "",
+                "eyebrow": "Runner Recovery"
               },
               {
                 "title": "Breathe 4 U",
-                "body": "Recreational aromatherapy infused oxygen bar for performance enhancement, recovery or fun!"
+                "body": "Recreational aromatherapy infused oxygen bar for performance enhancement, recovery or fun!",
+                "eyebrow": "Runner Recovery"
               },
               {
                 "title": "JT Desert Drifters",
                 "body": "JT Desert Drifters be serving hand dipped cod fish and chips, fish tacos, chicken sandwiches with choice of house made sauce - ranch, Korean bbq, hot honey bbq, 100% beef burgers, tallow fries, garden burgers. All items are fresh and made to order.",
-                "url": "www.jtdesertdrifters.com"
+                "url": "www.jtdesertdrifters.com",
+                "eyebrow": "Food Truck"
               }
             ]
+          }
+        ],
+        "infoBlocks": [
+          {
+            "heading": "Night Sky Viewing ",
+            "body": "Are we alone in the Universe? Join astronomer Dr Gary Blackwood, retired NASA /JPL, for an entertaining laser-guided night sky tour under the dark moonless sky. You'll see the Milky Way, the stars of the autumn zodiac, and enjoy the star lore of native American and ancient cultures from around the world. View the rings of Saturn and distant galaxies through high-powered telescopes. Learn about current NASA missions that are searching for extraterrestrial life in the Galaxy.",
+            "icon": "stars"
           }
         ]
       },
