@@ -78,7 +78,7 @@ export default function PartnersSection({ data, basePath = 'partners', theme = '
           {featured.length > 0 && (
             <div className="mb-10">
               <p className="font-micro font-bold uppercase text-vr-forest/55 mb-3.5" style={{ fontSize: '10px', letterSpacing: '0.22em' }}>
-                {featured.length > 1 ? 'Presenting partners' : 'Presenting partner'}
+                {featured.length > 1 ? 'Presenting sponsors' : 'Presenting sponsor'}
               </p>
               <div className="flex flex-wrap justify-center gap-4">
                 {featured.map(entry => (

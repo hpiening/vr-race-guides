@@ -333,6 +333,53 @@
       },
       {
         "enabled": true,
+        "id": "show-your-glow",
+        "slot": "expo",
+        "navLabel": "Show Your Glow",
+        "hideFromNav": true,
+        "tone": "darkest",
+        "eyebrow": "Pre-race costume contest · Raffle 4:45 PM",
+        "heading": "Show Your Glow",
+        "intro": "**GLOW BIG OR GO HOME.**\n\nYou’re running through the desert in the dark. Might as well make it a rave.\n\nShow Your Glow is our pre-race costume contest, and we want to see your brightest look. Roll up in neon, glow sticks, light-up accessories, or whatever makes you impossible to miss after sunset. The more creative, the better.",
+        "imageUrl": "/images/events/joshua-tree-show-your-glow.webp",
+        "groups": [
+          {
+            "heading": "How it works",
+            "icon": "sparkle",
+            "layout": "cards",
+            "cards": [
+              {
+                "eyebrow": "4:45 PM",
+                "title": "Contest & raffle",
+                "body": "The costume contest and raffle kick off at 4:45 PM, before the race."
+              },
+              {
+                "eyebrow": "Judging",
+                "title": "Vacation Races team",
+                "body": "Winners are selected by the Vacation Races team."
+              },
+              {
+                "eyebrow": "Prizes",
+                "title": "Swag & merch",
+                "body": "Prizes are Vacation Races swag and merch."
+              }
+            ]
+          },
+          {
+            "heading": "Need to stock up?",
+            "icon": "bag",
+            "layout": "cards",
+            "cards": [
+              {
+                "title": "Glow + light-up gear at the Merch Store",
+                "body": "In addition to Joshua Tree race merchandise, the Merch Store will have a limited stash of glow + light-up gear to get you race-night ready, including light-up tutus, glow scrunchies, headbands, and more. Limited quantities available. When the glow is gone, it’s gone."
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "enabled": true,
         "id": "activities",
         "slot": "expo",
         "hideFromNav": true,
@@ -364,12 +411,6 @@
                 "title": "Margarita Truck",
                 "icon": "truck",
                 "body": "Alcohol served from 3:00 PM and open through the end of the race. Bring ID."
-              },
-              {
-                "eyebrow": "Pre-race costume contest · Raffle 4:45 PM",
-                "title": "GLOW BIG OR GO HOME.",
-                "icon": "sparkle",
-                "body": "You’re running through the desert in the dark. Might as well make it a rave.  In addition to Joshua Tree race merchandise, the Merch Store will have a limited stash of glow + light-up gear to get you race-night ready — including light-up tutus, glow scrunchies, headbands, and more.  Limited quantities available. When the glow is gone, it’s gone."
               },
               {
                 "eyebrow": "Live music",
@@ -639,6 +680,18 @@
           }
         ],
         "infoBlocks": []
+      },
+      {
+        "enabled": true,
+        "id": "visit-29-palms",
+        "slot": "experiences",
+        "navLabel": "29 Palms",
+        "hideFromNav": true,
+        "tone": "light",
+        "eyebrow": "From our presenting sponsor",
+        "heading": "Spend the Weekend With Us in 29 Palms!",
+        "intro": "Visit 29 Palms is proud to be the presenting sponsor of the Joshua Tree Half Marathon and looks forward to welcoming runners, friends, and families to the City of Twentynine Palms this November!\n\nFuel up for your adventure at our great [local restaurants](https://visit29.org/eat-drink/), browse downtown’s [unique shops](https://visit29.org/see-and-do/shopping/), and discover colorful murals, [local galleries](https://visit29.org/see-and-do/arts-culture-history/), and [attractions](https://visit29.org/see-and-do/) that celebrate our desert’s history and creative spirit. From Saturday morning’s 29 Palms Certified Farmers Market to the annual Joshua Tree National Park Art Exposition at the 29 Palms Art Gallery, race weekend offers plenty to explore and enjoy. Check out our [events calendar](https://visit29.org/events/) for more happenings during your stay!\n\nReady for more desert adventure? 29 Palms is home to [Joshua Tree National Park’s](https://www.nps.gov/jotr/index.htm) north entrance, just minutes from downtown. Before heading into the park, visit the Joshua Tree National Park Visitor Center in Freedom Plaza. Its award-winning *Universal Threads* museum exhibit shares the stories, cultures, and enduring connections to the land of the park’s Native American Tribal communities.\n\n**Come early, stay the weekend, and let your desert adventure go beyond the finish line!**\n\nStill looking for a place to stay? We’re ready to welcome you! Explore our wide variety of unique [places to stay](https://visit29.org/stay/) and plan your weekend in 29 Palms.",
+        "imageUrl": "/images/events/joshua-tree-29palms-welcome.webp"
       }
     ],
     "raceMorning": {

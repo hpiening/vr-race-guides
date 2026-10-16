@@ -418,6 +418,32 @@ here, but it looks wrong on a US race and is a one-line fix per guide.
 Nothing extra is needed for print: `rwgStaticMap()` derives `routes/<id>/full.png` from the embed
 URL. All `[CONFIRM]` markers on this guide are now resolved (the team cleared the rest via /edit).
 
+### Joshua Tree — Steph's amends, 12 Oct (built 2026-10-13)
+
+**Show Your Glow is now its own section** (`show-your-glow`, slot `expo`, rendering before Race Day
+Activities) with the full copy Steph supplied: the GLOW BIG OR GO HOME lead, a "How it works" trio
+(4:45 PM contest/raffle, VR team judges, swag + merch prizes) and the Merch Store glow-gear note.
+⚠️ The team had already pasted a partial "GLOW BIG OR GO HOME." card into the Race Day Activities
+grid via /edit — that card was **moved, not duplicated**. Check for this before adding any section
+built from copy the client has also sent to the team directly.
+
+**Visit 29 Palms** (`visit-29-palms`, slot `experiences`) renders directly under Explore with the
+sponsor copy and all seven visit29.org / nps.gov links.
+
+Both are `hideFromNav` — the nav strip already carries 11 items and truncates at 1440px. Flip the
+flag if either should appear.
+
+**Photo crops matter here.** FestivalSection renders `imageUrl` in a **21:9** frame with
+object-cover, and both photos Steph sent are 3:2, so ~57% of the height is discarded. Centre-crop
+was wrong for both: it clipped the raised arms on the costume group and cut "Twentynine Palms" in
+half on the welcome sign. Crops were simulated at three biases each and eyeballed on a contact
+sheet first — costume shot **bias 0.30**, welcome sign **bias 0.70**. WebP @1800px, 107 KB / 283 KB.
+
+**Terminology is unresolved and the page is currently inconsistent:** Steph's copy calls 29 Palms the
+**title sponsor**, while the hero says "Presented by" and the partner grid says "Presenting partner"
+(the 2025 printed guide's wording). The new section uses her words; the hero and grid were left
+alone pending her answer.
+
 ---
 
 ## Known issues / backlog
