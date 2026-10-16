@@ -165,7 +165,8 @@
             },
             {
               "time": "4:45 PM",
-              "label": "Start Line Prize Raffle and “Show Your Glow” Costume Contest Raffle"
+              "label": "Start Line Prize Raffle and “Show Your Glow” Costume Contest Raffle",
+              "highlight": false
             },
             {
               "time": "5:00 PM",
@@ -422,24 +423,28 @@
                 "title": "Runner bar ",
                 "body": "Stop by the Runner Bar booth for your new go-to long-run fuel. Runner Bar is real-food energy, created by runners for the miles that ask more of you. Whether you’re chasing a PR, exploring a new trail, or simply showing up for yourself, swing by to taste the difference and fuel your next adventure.",
                 "imageUrl": "",
-                "eyebrow": "Runner Snacks"
+                "eyebrow": "Runner Snacks",
+                "icon": "snack"
               },
               {
                 "title": "SportPharm",
                 "body": "Visit the SportPharm booth to meet a trusted pharmacy partner for athletes and sports medicine professionals. SportPharm™ offers innovative over-the-counter (OTC) and prescription-only (RX) topical pain-relief solutions designed to support recovery, performance, and movement. From everyday soreness to training demands, stop by to learn how they help athletes feel and perform their best.",
                 "imageUrl": "",
-                "eyebrow": "Runner Recovery"
+                "eyebrow": "Runner Recovery",
+                "icon": "firstaid"
               },
               {
                 "title": "Breathe 4 U",
                 "body": "Recreational aromatherapy infused oxygen bar for performance enhancement, recovery or fun!",
-                "eyebrow": "Runner Recovery"
+                "eyebrow": "Runner Recovery",
+                "icon": "drop"
               },
               {
                 "title": "JT Desert Drifters",
                 "body": "JT Desert Drifters be serving hand dipped cod fish and chips, fish tacos, chicken sandwiches with choice of house made sauce - ranch, Korean bbq, hot honey bbq, 100% beef burgers, tallow fries, garden burgers. All items are fresh and made to order.",
                 "url": "www.jtdesertdrifters.com",
-                "eyebrow": "Food Truck"
+                "eyebrow": "Food Truck",
+                "icon": "meal"
               }
             ]
           }
@@ -515,7 +520,7 @@
               {
                 "eyebrow": "RESET Hotel",
                 "title": "Expo, start line and finish line",
-                "body": "The RESET Hotel is the location of the expo, start line, and finish line. We will have limited parking here. The actual RESET Hotel parking lot is strictly for hotel guests. There is a dedicated dirt lot for runners, as well as parallel parking on surrounding streets around the hotel. This will act for the primary parking for packet pick up and for the participants on race evening."
+                "body": "The RESET Hotel is the location of the expo, start line, and finish line. We will have limited parking here. The actual RESET Hotel parking lot is strictly for hotel guests. There is a dedicated dirt lot for runners, as well as parallel parking on surrounding streets around the hotel. This will act for the primary parking for packet pick up and for the participants on race evening.\n\n[Open in Google Maps](https://www.google.com/maps/search/?api=1&query=RESET+Hotel+7000+Split+Rock+Ave+Twentynine+Palms+CA+92277)"
               }
             ]
           },
@@ -527,12 +532,12 @@
               {
                 "eyebrow": "~1.5 miles",
                 "title": "Tortoise Rock Casino",
-                "body": "About 1.5 miles away from shuttle drop off at RESET hotel."
+                "body": "About 1.5 miles away from shuttle drop off at RESET hotel.\n\n[Open in Google Maps](https://www.google.com/maps/search/?api=1&query=Tortoise+Rock+Casino+Twentynine+Palms+CA)"
               },
               {
                 "eyebrow": "~1 mile",
                 "title": "Community Center Parking",
-                "body": "About 1 mile away from shuttle drop off at RESET Hotel."
+                "body": "About 1 mile away from shuttle drop off at RESET Hotel.\n\n[Open in Google Maps](https://www.google.com/maps/search/?api=1&query=Twentynine+Palms+Community+Center+Twentynine+Palms+CA)"
               }
             ]
           }

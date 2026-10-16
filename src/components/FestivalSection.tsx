@@ -394,6 +394,9 @@ export default function FestivalSection({ data, index }: Props) {
                     {(Object.keys(CARD_ICONS) as CardIcon[]).map(k => <option key={k} value={k}>{k}</option>)}
                   </select>
                 </div>
+                <div className="mt-3">
+                  <EditableImage path={`${basePath}.infoBlocks.${i}.imageUrl`} label="Image (optional)" compact />
+                </div>
                 <EditableText as="div" className="font-micro text-xs uppercase text-vr-mid mt-2" value={b.linkLabel ?? ''} path={`${basePath}.infoBlocks.${i}.linkLabel`} placeholder="Button label (optional)" />
                 <EditableUrl path={`${basePath}.infoBlocks.${i}.linkUrl`} label="Button URL (optional)" />
               </div>
@@ -409,6 +412,11 @@ export default function FestivalSection({ data, index }: Props) {
               body: (
                 <>
                   <RichBody value={b.body} />
+                  {b.imageUrl && (
+                    <div className="mt-4 rounded-lg overflow-hidden border border-vr-forest/15 max-w-[620px]">
+                      <PhotoFrame src={b.imageUrl} label={b.heading} ratio={b.imageRatio || '16 / 9'} />
+                    </div>
+                  )}
                   {b.linkLabel && b.linkUrl && (
                     <ActionLink href={b.linkUrl} label={b.linkLabel} />
                   )}

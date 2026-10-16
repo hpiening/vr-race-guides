@@ -284,22 +284,22 @@
 [data-brand='joshua-tree'] {
   --vr-night-rgb:     14 6 23;     /* #0E0617 deepest — schedule/FAQ, bands, footer, nav */
   --vr-deep-rgb:      42 20 54;    /* #2A1436 mid plum — course/expo + cards on dark */
-  --vr-forest-rgb:    43 20 48;    /* #2B1430 ink — body text on paper, dark panels */
+  --vr-forest-rgb:    49 56 50;    /* #313832 — Augment, 15 Oct: dark font, not purple */
   --vr-pine-rgb:      14 6 23;     /* #0E0617 sticky nav */
-  --vr-sky-rgb:       185 143 208; /* #B98FD0 accent lilac (all accent text/elements) */
-  --vr-floral-rgb:    185 143 208; /* #B98FD0 */
-  --vr-sandstone-rgb: 217 191 234; /* #D9BFEA link hover */
-  --vr-earth-rgb:     110 88 120;  /* #6E5878 muted plum */
-  --vr-mid-rgb:       110 88 120;  /* #6E5878 body grey on light */
+  --vr-sky-rgb:       123 173 172; /* #7BADAC — Augment, 15 Oct: the lilac is not a brand colour */
+  --vr-floral-rgb:    123 173 172; /* #7BADAC */
+  --vr-sandstone-rgb: 169 207 206; /* #A9CFCE link hover (lighter sky) */
+  --vr-earth-rgb:     107 112 104; /* #6B7068 muted grey-green */
+  --vr-mid-rgb:       107 112 104; /* #6B7068 body grey on light */
   --vr-cream-rgb:     245 231 211; /* #F5E7D3 text on dark + accordion fills on dark */
   --vr-white-rgb:     255 255 255; /* #FFFFFF light cards */
   --vr-offwhite-rgb:  247 239 226; /* #F7EFE2 light section ground */
   --vr-line-rgb:      227 211 198; /* #e3d3c6 hairline on light cards */
 
   /* Keep the hex vars in sync for the few inline `var(--vr-*)` color usages. */
-  --vr-forest: #2B1430;
-  --vr-sky:    #B98FD0;
-  --vr-floral: #B98FD0;
+  --vr-forest: #313832;
+  --vr-sky:    #7BADAC;
+  --vr-floral: #7BADAC;
   --vr-cream:  #F5E7D3;
 
   --tl-hero-grad:      radial-gradient(125% 95% at 72% 8%,#3A1F4E 0%,#170C23 46%,#0E0617 100%);
@@ -311,8 +311,19 @@
      bright hero photo lands later, this needs ramping harder (see grand-circle). */
   --tl-hero-scrim:     linear-gradient(180deg,rgba(14,6,23,0.12) 0%,rgba(14,6,23,0) 38%,rgba(14,6,23,0.6) 100%);
   /* The 6:00 PM start row, tinted in the brand's accent rather than the default teal. */
-  --tl-row-highlight:  rgba(185,143,208,0.14);
+  --tl-row-highlight:  rgba(123,173,172,0.14);
 }
+
+/* Joshua Tree: keep the plum section grounds.
+   Augment asked for #313832 dark FONT (done via --vr-forest-rgb above), but
+   that token also paints the Schedule and FAQ grounds and the dark button
+   fills, which would turn two sections grey-green among plum ones. These pin
+   the background uses back to the brand plum #2B1430. Scoped to this brand, so
+   no other guide is touched. */
+[data-brand='joshua-tree'] .bg-vr-forest     { background-color: rgb(43 20 48); }
+[data-brand='joshua-tree'] .bg-vr-forest\/90 { background-color: rgb(43 20 48 / 0.9); }
+[data-brand='joshua-tree'] .bg-vr-forest\/10 { background-color: rgb(43 20 48 / 0.1); }
+[data-brand='joshua-tree'] .bg-vr-forest\/5  { background-color: rgb(43 20 48 / 0.05); }
 
 /* ─── Base ───────────────────────────────────────────────────── */
 

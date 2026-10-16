@@ -66,6 +66,14 @@ export interface InfoBlock {
   body: string
   linkLabel?: string
   linkUrl?: string
+  /**
+   * Optional image inside the accordion body, below the copy — e.g. Joshua
+   * Tree's Night Sky Viewing session. Uploadable from /edit. Currently
+   * rendered by FestivalSection; other accordions ignore it until wired.
+   */
+  imageUrl?: string
+  /** Frame for `imageUrl`. Defaults to 16/9. */
+  imageRatio?: string
 }
 
 export interface Hike {
