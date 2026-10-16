@@ -224,6 +224,24 @@ export interface FestivalSectionData {
   groups?: CardGroup[]
   /** Accordions at the foot of the section. */
   infoBlocks?: InfoBlock[]
+  /**
+   * Titled images below the groups — the same slot pattern as `expo.images[]`.
+   * For diagrams that must be seen whole rather than cropped into the section's
+   * 21:9 `imageUrl` frame: Joshua Tree's annotated parking and drop-off site
+   * maps, which are 8:5. `ratio` overrides the default frame, `url` opens the
+   * full-size file, and `body` carries a line of copy under the title.
+   */
+  images?: Array<{
+    title: string
+    body?: string
+    imageUrl?: string
+    ratio?: string
+    url?: string
+  }>
+  /** Optional heading above `images[]`. */
+  imagesHeading?: string
+  /** Optional lead line under `imagesHeading`. */
+  imagesIntro?: string
 }
 
 export interface CampingData {

@@ -313,6 +313,65 @@ export default function FestivalSection({ data, index }: Props) {
           <div className="mb-10"><AddButton path={`${basePath}.groups`} item={EMPTY_GROUP} label="Add card group" /></div>
         )}
 
+        {/* Titled images (annotated site maps). Mirrors expo.images[]: a two-up
+            grid, so an 800px-wide map renders at roughly 570px and stays sharp
+            rather than being upscaled. */}
+        {((data.images && data.images.length > 0) || editing) && (
+          <div className="mb-11">
+            {(data.imagesHeading || editing) && (
+              <div className="tl-keep-next leading-[0.9] mb-2">
+                <span className="font-accent text-vr-sky" style={{ fontSize: 'clamp(18px,2vw,24px)' }}>
+                  <EditableText as="span" value={data.imagesHeading ?? ''} path={`${basePath}.imagesHeading`} placeholder="Images heading (optional)" />
+                </span>
+              </div>
+            )}
+            <EditableText
+              as="div"
+              className={`font-body leading-[1.6] max-w-[620px] mb-7 text-[16px] ${bodyColor}`}
+              value={data.imagesIntro ?? ''}
+              path={`${basePath}.imagesIntro`}
+              placeholder="Images intro (optional)"
+            />
+            <div className="grid gap-6 sm:grid-cols-2">
+              {(data.images ?? []).map((img, i) => {
+                const ip = `${basePath}.images.${i}`
+                const ratio = img.ratio || '4 / 3'
+                const frame = (
+                  <div className={`rounded-lg overflow-hidden ${dark ? 'border border-vr-cream/20' : 'border border-vr-line bg-vr-white'}`}>
+                    <PhotoFrame src={img.imageUrl} label={img.title || 'Photo'} ratio={ratio} dark={dark} />
+                  </div>
+                )
+                return (
+                  <div key={i}>
+                    <div className="flex items-start gap-2 mb-1.5">
+                      <EditableText as="h3" className={`font-heading uppercase flex-1 text-[16px] tracking-[0.04em] ${headingColor}`} value={img.title} path={`${ip}.title`} placeholder="Image title" />
+                      {editing && <ListControls path={`${basePath}.images`} index={i} count={data.images!.length} />}
+                    </div>
+                    <EditableText
+                      as="div"
+                      className={`font-body leading-[1.55] text-[14px] mb-3 whitespace-pre-line ${bodyColor}`}
+                      value={img.body ?? ''}
+                      path={`${ip}.body`}
+                      placeholder="Caption (optional)"
+                    />
+                    {editing ? (
+                      <>
+                        <EditableImage path={`${ip}.imageUrl`} label={`${img.title || 'Photo'} image`} ratio={ratio} />
+                        <EditableUrl path={`${ip}.url`} label="Full-size / link URL (optional)" />
+                      </>
+                    ) : img.url ? (
+                      <a href={img.url} target="_blank" rel="noopener noreferrer" className="block transition-opacity hover:opacity-90">{frame}</a>
+                    ) : frame}
+                  </div>
+                )
+              })}
+              {editing && (
+                <div className="sm:col-span-2"><AddButton path={`${basePath}.images`} item={{ title: 'New image', imageUrl: '' }} label="Add image" /></div>
+              )}
+            </div>
+          </div>
+        )}
+
         {/* Accordions: flattened to cards while editing so the text stays reachable. */}
         {editing ? (
           <div className="flex flex-col gap-3">

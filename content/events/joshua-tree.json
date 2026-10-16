@@ -508,38 +508,79 @@
         "imageUrl": "",
         "groups": [
           {
-            "heading": "Confirmed Parking and Shuttle Locations ",
-            "icon": "map",
+            "heading": "Primary parking",
+            "icon": "pin",
             "layout": "rows",
             "cards": [
               {
-                "eyebrow": "Parking",
-                "title": "TORTOISE ROCK CASINO",
-                "body": ""
+                "eyebrow": "RESET Hotel",
+                "title": "Expo, start line and finish line",
+                "body": "The RESET Hotel is the location of the expo, start line, and finish line. We will have limited parking here. The actual RESET Hotel parking lot is strictly for hotel guests. There is a dedicated dirt lot for runners, as well as parallel parking on surrounding streets around the hotel. This will act for the primary parking for packet pick up and for the participants on race evening."
+              }
+            ]
+          },
+          {
+            "heading": "Secondary parking with shuttles",
+            "icon": "bus",
+            "layout": "rows",
+            "cards": [
+              {
+                "eyebrow": "~1.5 miles",
+                "title": "Tortoise Rock Casino",
+                "body": "About 1.5 miles away from shuttle drop off at RESET hotel."
               },
               {
-                "eyebrow": "Parking",
-                "title": "NEIGHBORING STREETS AROUND THE EXPO",
-                "body": ""
-              },
-              {
-                "eyebrow": "Parking",
-                "title": "Expo and finish line",
-                "body": ""
-              },
-              {
-                "eyebrow": "Shuttle",
-                "title": "CASINO TO RACE VENUE",
-                "body": ""
+                "eyebrow": "~1 mile",
+                "title": "Community Center Parking",
+                "body": "About 1 mile away from shuttle drop off at RESET Hotel."
               }
             ]
           }
         ],
-        "infoBlocks": [
+        "infoBlocks": [],
+        "imagesHeading": "Parking maps",
+        "imagesIntro": "Tap a map to open it full size.",
+        "images": [
           {
-            "heading": "Runner Drop Off",
-            "icon": "clock",
-            "body": "Dropping a runner off? Follow the drop-off signs and drop your runner no later than 5:15 PM. If you plan to stay and wait, park with the rest of event traffic. Runnerdrop-offf will be at the RESET hotel. Follow signs and crew member instructions to the runner drop off zone. Please be prepared to drop off your runner quickly and exit the lot to avoid traffic congestion. All runners should be dropped off no later than 5:15pm in order to facilitate an on time start. "
+            "title": "RESET Hotel — primary parking",
+            "body": "Shuttle unloading, porto placement, parking and the start/finish line set-up.",
+            "imageUrl": "/images/events/joshua-tree-parking-reset.webp",
+            "ratio": "800 / 501",
+            "url": "/images/events/joshua-tree-parking-reset.webp"
+          },
+          {
+            "title": "Tortoise Rock Casino",
+            "body": "Shuttle loading, porto placement and parking layout. About 1.5 miles from RESET.",
+            "imageUrl": "/images/events/joshua-tree-parking-tortoise-rock.webp",
+            "ratio": "800 / 498",
+            "url": "/images/events/joshua-tree-parking-tortoise-rock.webp"
+          },
+          {
+            "title": "Community Center, Cactus Dr",
+            "body": "About 350 spots, with shuttle loading on Tamarisk Ave. About 1 mile from RESET.",
+            "imageUrl": "/images/events/joshua-tree-parking-community-center.webp",
+            "ratio": "800 / 500",
+            "url": "/images/events/joshua-tree-parking-community-center.webp"
+          }
+        ]
+      },
+      {
+        "enabled": true,
+        "id": "runner-drop-off",
+        "slot": "course-info",
+        "navLabel": "Drop Off",
+        "hideFromNav": true,
+        "tone": "darkest",
+        "eyebrow": "Getting there",
+        "heading": "Runner Drop Off",
+        "intro": "Dropping a runner off? Follow the drop-off signs and drop your runner no later than 5:15 PM. If you plan to stay and wait, park with the rest of event traffic. Runner drop-off will be at the RESET hotel. Follow signs and crew member instructions to the runner drop off zone. Please be prepared to drop off your runner quickly and exit the lot to avoid traffic congestion. All runners should be dropped off no later than 5:15pm in order to facilitate an on time start. ",
+        "images": [
+          {
+            "title": "Shuttle & runner drop-off zone",
+            "body": "The drop-off zone and the route from there to the start line.",
+            "imageUrl": "/images/events/joshua-tree-drop-off.webp",
+            "ratio": "800 / 502",
+            "url": "/images/events/joshua-tree-drop-off.webp"
           }
         ]
       },
