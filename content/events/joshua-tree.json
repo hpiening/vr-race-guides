@@ -166,7 +166,8 @@
             {
               "time": "5:00 PM",
               "label": "All Cars Parked for Start",
-              "highlight": false
+              "highlight": false,
+              "note": "Last shuttle departs the lots at "
             },
             {
               "time": "5:00 PM",
