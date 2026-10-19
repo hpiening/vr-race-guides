@@ -444,6 +444,12 @@
                 "url": "www.jtdesertdrifters.com",
                 "eyebrow": "Food Truck",
                 "icon": "meal"
+              },
+              {
+                "title": "Book Your 2027 Race",
+                "body": "Thinking about 2027 event registration already? Make sure you visit the Event booth onsite at the expo for the lowest offered pricing!",
+                "eyebrow": "Future Events",
+                "url": "https://www.vacationraces.com/calendar"
               }
             ]
           }
