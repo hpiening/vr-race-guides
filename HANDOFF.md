@@ -471,6 +471,23 @@ and the text at its real sizes and positions, with `public/fonts/Mongoose-Black.
 Scale Condensed since PIL cannot load the repo's woff2 faces. Script in the session scratchpad as
 `mock_scrim.py`. **Every guide that gains a bright hero photo will need this check.**
 
+### Joshua Tree watermark: the real illustration (2026-10-19)
+
+`joshua-tree-icon.png` is now the event-specific illustration Augment asked for — a stippled
+engraved-style Joshua tree, supplied 827x1188 RGBA with a transparent background — replacing the
+silhouette I had extracted from the shield.
+
+**It had to be recoloured, and that matters.** The artwork is deep plum `#381A41`; the engine paints
+the watermark at 7% opacity over grounds that are themselves plum (`#2B1430` schedule/FAQ). Composited
+at 7% it was *completely invisible* — delivering the request would have changed nothing on screen.
+Re-tinted to cream `#F5E7D3` (alpha preserved, `quantize(FASTOCTREE)`) it reads as the intended faint
+ghost. 96 KB.
+
+Worth knowing for the next guide: Grand Circle (`#9F251C` on dark brown) and Mount Rushmore
+(`#293623` on `#313832`) both use their artwork's own colour, so the house convention is the artwork
+as-is — but both of those are near-invisible too. **Composite any new watermark at 7% against its
+actual section ground before accepting it.**
+
 ---
 
 ## Known issues / backlog
