@@ -5,15 +5,15 @@
   "name": "Joshua Tree Half Marathon",
   "tagline": "Explore Joshua Tree by day — run it at night.",
   "dates": "Saturday, November 7, 2026 · 13.1 Miles · 6:00 PM Start",
-  "heroImage": "",
-  "heroImageAlt": "Runners on the night course outside Joshua Tree",
+  "heroImage": "/images/events/joshua-tree-hero.webp",
+  "heroImageAlt": "The Joshua Tree Half Marathon finish line at night, lit by neon light trails",
   "accentColor": "#B98FD0",
   "shieldImage": "/images/events/joshua-tree-shield.png",
   "favicon": "/images/events/joshua-tree-favicon.png",
   "hidden": true,
   "photoBands": {
-    "onCourse": "",
-    "postRace": ""
+    "onCourse": "/images/events/joshua-tree-band-course.webp",
+    "postRace": "/images/events/joshua-tree-band-postrace.webp"
   },
   "footerImage": "",
   "partners": {

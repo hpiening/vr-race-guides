@@ -309,7 +309,11 @@
   /* Plum retint of the default ramp. The hero is a gradient rather than a photo
      here, so the default shape is right — only the green cast had to go. If a
      bright hero photo lands later, this needs ramping harder (see grand-circle). */
-  --tl-hero-scrim:     linear-gradient(180deg,rgba(14,6,23,0.12) 0%,rgba(14,6,23,0) 38%,rgba(14,6,23,0.6) 100%);
+  /* Ramped hard for the night finish-line hero photo: the cyan light trails
+     sit exactly where the cream headline and the accent tagline fall, and the
+     default ramp (transparent to 38%, 60% at the base) left both washed out.
+     Compared against two alternatives on the real photo before choosing. */
+  --tl-hero-scrim:     linear-gradient(180deg,rgba(14,6,23,0.20) 0%,rgba(14,6,23,0.05) 28%,rgba(14,6,23,0.62) 62%,rgba(14,6,23,0.92) 100%);
   /* The 6:00 PM start row, tinted in the brand's accent rather than the default teal. */
   --tl-row-highlight:  rgba(123,173,172,0.14);
 }

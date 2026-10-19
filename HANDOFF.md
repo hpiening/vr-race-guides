@@ -444,6 +444,33 @@ sheet first — costume shot **bias 0.30**, welcome sign **bias 0.70**. WebP @18
 (the 2025 printed guide's wording). The new section uses her words; the hero and grid were left
 alone pending her answer.
 
+### Joshua Tree hero photo + photo bands (2026-10-19)
+
+Augment asked for a scenic landscape hero like the other guides and for the photo bands' diagonal
+stripes to become landscape images. Steph supplied the photography on 16 Oct.
+
+- **Hero** — `JoshuaTree_25-1.jpg`, a night finish-line long-exposure with neon light trails.
+  7952x4473 / 37 MB source, shipped at 2000x1125 WebP q80 = **304 KB** (other guides' heroes are
+  743-951 KB). `next.config.js` sets `images: {unoptimized: true}` for `output:'export'`, so the
+  file we ship is exactly what the browser downloads.
+- **On the Course band** — `JoshuaTree_25-1-5.jpg`, runners' headlamps strung through the desert at
+  dusk. Cropped to **16:5** (the ratio PhotoBand's own editor control hints) at centre bias, 2000x625
+  = 237 KB. The band renders ~6:1, so object-cover crops the middle of that again.
+- **Post Race band** — `JoshuaTree_25-1-2.jpg`, a moonlit Joshua tree against a starry sky. Same
+  16:5 centre crop, 2000x625 = 280 KB. Both bands now carry photos; the diagonal-stripe texture is
+  gone from this guide.
+
+**The hero scrim had to be ramped, again.** `--tl-hero-scrim`'s default (transparent to 38%, 60% at
+the base) left the cream headline and the accent tagline washed out, because the photo's bright cyan
+light trails fall exactly where that text sits. Now
+`rgba(14,6,23,.20) 0% -> .05 28% -> .62 62% -> .92 100%`.
+
+Worth reusing: rather than rebuilding to try each candidate (~4 min a go), the candidates were
+mocked in PIL against the real photo — object-cover crop to the header box, the 22px inset frame,
+and the text at its real sizes and positions, with `public/fonts/Mongoose-Black.otf` standing in for
+Scale Condensed since PIL cannot load the repo's woff2 faces. Script in the session scratchpad as
+`mock_scrim.py`. **Every guide that gains a bright hero photo will need this check.**
+
 ---
 
 ## Known issues / backlog
