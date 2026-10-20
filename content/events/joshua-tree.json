@@ -446,7 +446,8 @@
                 "title": "Book Your 2027 Race",
                 "body": "Thinking about 2027 event registration already? Make sure you visit the Event booth onsite at the expo for the lowest offered pricing, an excusive on-site discount, and some free merch! ",
                 "eyebrow": "Future Events",
-                "url": "https://www.vacationraces.com/calendar"
+                "url": "https://www.vacationraces.com/calendar",
+                "icon": "ticket"
               }
             ]
           }

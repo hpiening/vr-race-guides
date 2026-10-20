@@ -200,7 +200,7 @@ export default function EditPage() {
         {editFestivals('race-morning')}
         {data.sections.spectators && <SpectatorsSection data={data.sections.spectators} basePath="sections.spectators" theme={theme} />}
         {editFestivals('spectators')}
-        {theme === 'trailhead' && data.sections.postRace && <PhotoBand title="Post Race" image={data.photoBands?.postRace} imagePath="photoBands.postRace" />}
+        {theme === 'trailhead' && data.sections.postRace && <PhotoBand title="Post-Race" image={data.photoBands?.postRace} imagePath="photoBands.postRace" />}
         {data.sections.postRace && <PostRaceSection data={data.sections.postRace} basePath="sections.postRace" theme={theme} />}
         {editFestivals('post-race')}
         {data.sections.challengeEvents && <ChallengeEventsSection data={data.sections.challengeEvents} basePath="sections.challengeEvents" theme={theme} />}

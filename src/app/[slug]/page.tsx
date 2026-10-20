@@ -219,7 +219,7 @@ export default async function EventPage({ params }: { params: { slug: string } }
         {renderFestivals('race-morning')}
         {sections.spectators.enabled      && <SpectatorsSection  data={sections.spectators} theme={theme} />}
         {renderFestivals('spectators')}
-        {isTrail && sections.postRace.enabled && <PhotoBand title="Post Race" image={event.photoBands?.postRace} />}
+        {isTrail && sections.postRace.enabled && <PhotoBand title="Post-Race" image={event.photoBands?.postRace} />}
         {sections.postRace.enabled        && <PostRaceSection    data={sections.postRace} theme={theme} />}
         {renderFestivals('post-race')}
         {sections.challengeEvents?.enabled && <ChallengeEventsSection data={sections.challengeEvents!} theme={theme} />}
