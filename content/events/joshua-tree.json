@@ -513,7 +513,7 @@
         "tone": "dark",
         "eyebrow": "Getting there",
         "heading": "Parking & Shuttles",
-        "intro": "Runners can park at RESET, on the neighboring streets, or at Tortoise Rock Casino. A shuttle will take runners to/from Tortoise Rock Casino and the Community Center to the race venue, and return them to their vehicles after the race.\nAll cars should be parked **no later than 5:00 PM**. The last shuttles will leave from the secondary parking lots at 5:10 PM to allow the race to begin on time. Arrive early to avoid the rush and give yourself time to get ready.",
+        "intro": "Runners can park at RESET or on the neighboring streets until those spots fill up, likely by around 4:00 PM. After that, runners and spectators should park at one of three satellite lots: Tortoise Rock Casino, Freedom Plaza or Twentynine Palms Junior High School. Shuttles run from all three lots to the race venue starting at 2:00 PM, and they’ll bring runners and spectators back to their vehicles after the race.  All cars should be parked no later than 5:00 PM. The final shuttles to the start line leave the satellite lots at 5:10 PM, so don’t miss them or you may miss the race. Arrive early to avoid the rush and give yourself time to get ready.",
         "imageUrl": "",
         "groups": [
           {
@@ -529,21 +529,26 @@
             ]
           },
           {
-            "heading": "Secondary parking with shuttles",
+            "heading": "Satelite Parking Shuttles",
             "icon": "bus",
             "layout": "rows",
             "cards": [
               {
                 "eyebrow": "~1.5 miles",
                 "title": "Tortoise Rock Casino",
-                "body": "About 1.5 miles away from shuttle drop off at RESET hotel.\n\n[Open in Google Maps](https://www.google.com/maps/search/?api=1&query=Tortoise+Rock+Casino+Twentynine+Palms+CA)"
+                "body": "About 1.5 miles away from shuttle drop off at RESET hotel.\n\n[Open in Google Maps](https://www.google.com/maps/place/Tortoise+Rock+Casino/@34.1195937,-116.0512129,1184m/data=!3m2!1e3!4b1!4m6!3m5!1s0x80dabf173deafd09:0x5735009143362836!8m2!3d34.1195937!4d-116.0512129!16s%2Fg%2F1ptwv3s5c!5m1!1e1?entry=tts&g_ep=EgoyMDI2MTAyMC4wIPu8ASoASAFQAw%3D%3D&skid=1743dbab-6368-4f26-a021-41e69d596788)"
               },
               {
                 "eyebrow": "~1 mile",
-                "title": "Community Center Parking",
-                "body": "About 1 mile away from shuttle drop off at RESET Hotel.\n\n[Open in Google Maps](https://www.google.com/maps/search/?api=1&query=Twentynine+Palms+Community+Center+Twentynine+Palms+CA)"
+                "title": "Freedom Plaza ",
+                "body": "About 1 mile away from shuttle drop off at RESET Hotel.\n\n[Open in Google Maps](https://www.google.com/maps/place/Freedom+Plaza/@34.1345173,-116.0595708,754m/data=!3m2!1e3!4b1!4m6!3m5!1s0x80dac73fe8c94329:0x1c575bc606c1cc07!8m2!3d34.1345173!4d-116.0569959!16s%2Fg%2F11skpfv9wx!5m1!1e1?entry=tts&g_ep=EgoyMDI2MTAyMC4wIPu8ASoASAFQAw%3D%3D&skid=94f2d041-94ed-4df3-9894-23f0769eb129)"
+              },
+              {
+                "title": "Twentynine Palms Junior High School",
+                "body": "About 3 miles away from shuttle drop off at RESET hotel.\n\n[Open in Google Maps] https://www.google.com/maps/place/Twentynine+Palms+Junior+High+School/@34.1515917,-116.044925,1231m/data=!3m1!1e3!4m7!3m6!1s0x80dab900464aeb95:0xbf6310d7b3373d7d!8m2!3d34.153807!4d-116.0372997!15sCiN0d2VudHluaW5lIHBhbG1zIGp1bmlvciBoaWdoIHNjaG9vbJIBDW1pZGRsZV9zY2hvb2zgAQA!16s%2Fg%2F11lmhnkvyc!5m1!1e1?entry=tts&g_ep=EgoyMDI2MTAyMC4wIPu8ASoASAFQAw%3D%3D&skid=19b703ae-9b88-4abf-a597-fec07bb9da19"
               }
-            ]
+            ],
+            "intro": "Parking near the RESET hotel and surrounding streets will be available throughout the expo and will likely remain available until around 4pm when people start to arrive for the race. Once the spots closest to the hotel fill up, runners and spectators will need to park at the satellite lots at the Tortoise Rock Casino, Freedom Plaza and the Twentynine Palms Junior High School.\n\nShuttles from each of these lots will start running at 2pm. Final shuttles to take runners to the start line from the satellite lots will depart at 5:10pm. You should plan to park your vehicle no later than 5:00pm in order to ensure you're on that final shuttle to the race start. Please do not miss that final shuttle departure from the satellite lot, or you may miss the race.\n\nShuttles will begin operating round trip to bring spectators to the finish line at the RESET Hotel at 6:30pm. Once the spectator shuttles begin, they will also be bringing runners and spectators back to their vehicles once they finish the race. All shuttles will stop at all three satellite lots, so spectators and returning runners can hop onto any shuttle from the RESET Hotel.  "
           }
         ],
         "infoBlocks": [],
